@@ -62,6 +62,7 @@ async function fixture(t) {
     "docs/index.html",
     "docs/styles.css",
     "docs/app.js",
+    "docs/assets/favicon.svg",
   ])
     await copyFile(resolve(ROOT, path), resolve(root, path));
   // Reuse an actual public editorial asset; tests never fetch images or source URLs.
