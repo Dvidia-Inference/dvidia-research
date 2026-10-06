@@ -3,7 +3,7 @@
   "title": "Evaluation and provenance",
   "kicker": "Reproducible evidence",
   "summary": "Test episode readback, original-to-derivative lineage and split integrity using small, auditable fixtures.",
-  "status": "scoping",
+  "status": "evaluating",
   "cover": "assets/evaluation-provenance.webp",
   "imageAlt": "AI editorial illustration of a notebook with contact-sheet photos; not a completed validation result.",
   "updated": "2026-10-06",
@@ -68,6 +68,12 @@
       "text": "Do grounded temporal annotations reduce false completion labels, and what evidence should gate a robot-tested skill release?",
       "state": "open",
       "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/5"
+    },
+    {
+      "id": "ep-05",
+      "text": "Can visual checks detect caption mistakes and missing state changes on a held-out human-referenced set?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/5"
     }
   ],
   "milestones": [
@@ -86,6 +92,10 @@
     {
       "label": "Independent result review",
       "done": false
+    },
+    {
+      "label": "Five-clip image API feasibility run published (not accuracy)",
+      "done": true
     }
   ],
   "firstTask": {

@@ -1,6 +1,8 @@
 # From Skillspace to robot skill
 
-**Source review and proposal · 6 October 2026 · Experiments not run**
+**Source review and proposal · 6 October 2026 · Graduation experiment not run**
+
+Follow-up: the [Clef image feasibility pilot](Clef%20and%20grounded%20video%20observations.md) has now run on five public excerpts. It does not complete the 40-episode accuracy protocol below.
 
 A Skillspace can become the home for a skill's learning history. More uploaded videos do not, by themselves, establish a better policy. We need evidence that new demonstrations add useful coverage, survive quality checks, and improve held-out performance on a specified robot.
 
