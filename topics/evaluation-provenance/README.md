@@ -27,6 +27,7 @@ RLDS describes episode boundaries and optional action fields [rlds2026schema]. L
 1. **ep-01** — Can independent environments reproduce identical inventories, grouped splits and supported episode readback?
 2. **ep-02** — Which corruptions and duplicated derivatives evade a small provenance validator?
 3. **ep-03** — How much does recording-level leakage change the selected evaluation metric?
+4. **ep-04** — Do grounded temporal annotations reduce false completion labels, and what evidence should gate a robot-tested skill release? See the [Argus review and graduation proposal](../../reports/From%20Skillspace%20to%20robot%20skill.md) and [proposed pilot](experiments/0002-skill-graduation.md).
 
 ## First small experiment
 
