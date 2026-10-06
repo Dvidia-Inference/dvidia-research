@@ -96,6 +96,10 @@ function makeCard(topic) {
   const updated = node("time", "", `Updated ${dateLabel(topic.updated)}`);
   updated.dateTime = topic.updated;
   meta.append(updated);
+  const progress = node("div", "milestone-track");
+  progress.setAttribute("aria-hidden", "true");
+  for (const milestone of topic.milestones)
+    progress.append(node("span", milestone.done ? "is-complete" : ""));
   const first = node("div", "first-task");
   first.append(
     node("p", "first-task-label", "A first contribution"),
@@ -175,6 +179,7 @@ function makeCard(topic) {
     title,
     node("p", "topic-summary", topic.summary),
     meta,
+    progress,
     first,
     actions,
     details,

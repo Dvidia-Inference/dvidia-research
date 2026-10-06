@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5f3ec" />
+    <meta name="theme-color" content="#f7f6f2" />
     <meta
       name="description"
       content="An open research notebook for physical skills. Explore questions about demonstrations, skill relations, evaluation and grounding, then contribute a small, reproducible next step."
     />
-    <title>DVIDIA Research — Pick a question</title>
+    <title>DVIDIA Research · Human skills. Open questions.</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <meta property="og:url" content="https://dvidia-inference.github.io/dvidia-research/" />
-    <meta property="og:title" content="DVIDIA Research — Pick a question" />
+    <meta property="og:title" content="DVIDIA Research · Human skills. Open questions." />
     <meta property="og:description" content="Four open investigations into physical skills. Explore the sources, pick a question and contribute a reproducible next step." />
     <meta property="og:image" content="https://dvidia-inference.github.io/dvidia-research/assets/capture-quality.webp" />
     <meta property="og:image:alt" content="AI editorial illustration of a person recording a hands-on demonstration." />
@@ -23,28 +23,14 @@
     <a class="skip-link" href="#main">Skip to research</a>
     <header class="site-header wrap">
       <a class="wordmark" href="./" aria-label="DVIDIA Research home">
-        <svg
-          class="wordmark-icon"
-          width="29"
-          height="29"
-          viewBox="0 0 32 32"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M4 10h24v12H4zM9 10v12m14-12v12M9 16h14"
-            stroke="currentColor"
-            stroke-width="2"
-          />
-          <path d="M12 5h8m-8 22h8" stroke="currentColor" stroke-width="2" />
-        </svg>
-        <span>DVIDIA <span class="wordmark-sub">Research</span></span>
+        <img class="wordmark-icon" src="./assets/favicon.svg" width="40" height="40" alt="" />
+        <span class="wordmark-copy">DVIDIA <span class="wordmark-sub">Open research</span></span>
       </a>
       <nav aria-label="Main navigation">
-        <a href="#topics">Topics</a>
-        <a href="#contribute">Contribute</a>
+        <a href="#topics" class="nav-current">Research</a>
+        <a href="https://dvidia.org/" class="platform-link">Dvidia.org <span aria-hidden="true">↗</span></a>
         <a
-          class="github-link"
+          class="github-link button button-secondary"
           href="https://github.com/Dvidia-Inference/dvidia-research"
           >GitHub <span aria-hidden="true">↗</span></a
         >
@@ -55,66 +41,46 @@
       <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">
-            <span class="ink-dot" aria-hidden="true"></span> Open notes on
-            physical skills
+            DVIDIA RESEARCH <span aria-hidden="true">/</span> BUILT IN THE OPEN
           </p>
           <h1 id="hero-title">
-            Pick a question.<br /><em>Make it clearer.</em>
+            Human skills.<br />Open questions.
           </h1>
           <p class="hero-intro">
-            How do useful demonstrations become skills we can understand, test
-            and build on? This is a shared place to work through that question,
-            one small investigation at a time.
+            Help turn human demonstrations into evidence we can test,
+            share and build on. One useful question at a time.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#topics"
-              >Find your first question <span aria-hidden="true">↓</span></a
+              >Explore the questions <span aria-hidden="true">↓</span></a
             >
             <a
               class="text-link"
               href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/reports/Physical%20skill%20research%20agenda.md"
-              >Read the research agenda <span aria-hidden="true">↗</span></a
+              >Our research direction <span aria-hidden="true">↗</span></a
             >
           </div>
           <p class="hero-note">
             You do not need a complete answer to contribute.
           </p>
         </div>
-        <aside class="notebook" aria-labelledby="notebook-title">
-          <div class="notebook-top">
-            <span>FIELD NOTES</span><span aria-hidden="true">01 — ∞</span>
+        <figure class="research-visual">
+          <img src="./assets/capture-quality.webp" width="960" height="640"
+            alt="AI editorial illustration of a person using a chest-mounted camera to record folding fabric."
+            fetchpriority="high" decoding="async" />
+          <div class="visual-grain" aria-hidden="true"></div>
+          <span class="visual-corner corner-top" aria-hidden="true"></span>
+          <span class="visual-corner corner-bottom" aria-hidden="true"></span>
+          <span class="visual-label">A DEMONSTRATION IS THE BEGINNING</span>
+          <figcaption>AI illustration</figcaption>
+          <div class="research-path" aria-label="Research path: capture, describe, test">
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3V9Z"/></svg>Capture</span>
+            <span class="path-arrow" aria-hidden="true">→</span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="19" r="2"/><path d="m7 6 10 1M6 8l5 9m7-8-5 8"/></svg>Describe</span>
+            <span class="path-arrow" aria-hidden="true">→</span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg>Test</span>
           </div>
-          <h2 id="notebook-title">A useful place <br />to start.</h2>
-          <ol>
-            <li>
-              <span>01</span>
-              <div>
-                Find a gap.<small
-                  >Choose a question you can make smaller.</small
-                >
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                Check what exists.<small
-                  >Read a source or reproduce an example.</small
-                >
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                Leave a trail.<small
-                  >Share the method, limits and evidence.</small
-                >
-              </div>
-            </li>
-          </ol>
-          <p>
-            Open questions first. <br />Claims only when the evidence is there.
-          </p>
-        </aside>
+        </figure>
       </section>
 
       <section
@@ -124,12 +90,12 @@
       >
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Choose a thread</p>
-            <h2 id="topics-title">Questions worth working on.</h2>
+            <p class="eyebrow">The research library</p>
+            <h2 id="topics-title">Find your next question.</h2>
           </div>
           <p>
-            Each topic has its own notes, sources and next step. Start where
-            your curiosity meets something you can check.
+            Four starting points. Sources, open questions and a clear next step
+            in every topic.
           </p>
         </div>
         <div class="catalog-tools" id="catalog-tools" hidden>
@@ -251,10 +217,8 @@
       </aside>
     </main>
     <footer class="site-footer wrap">
-      <a class="wordmark" href="./"
-        >DVIDIA <span class="wordmark-sub">Research</span></a
-      >
-      <p>A working notebook. Built in the open.</p>
+      <a class="wordmark" href="https://dvidia.org/">DVIDIA <span class="footer-tag">Research</span></a>
+      <p>Human skill. Open intelligence.</p>
       <a href="https://github.com/Dvidia-Inference/dvidia-research"
         >View the repository <span aria-hidden="true">↗</span></a
       >
