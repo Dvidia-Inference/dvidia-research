@@ -1,0 +1,1071 @@
+{
+  "schemaVersion": 1,
+  "recipe": "gemma-clef-source-windows-v1",
+  "startedAt": "2026-10-06T13:53:07.443Z",
+  "preregistrationSha256": "8468995f14ad8c52bcbad11bd523f161e7d48b036ef61ea23dd279927c77db20",
+  "scope": "Engineering feasibility on five fixed public three-second excerpts, not accuracy or full-video evaluation.",
+  "budget": {
+    "maximumCalls": 20,
+    "maximumUsd": 1,
+    "reservedUsdPerAttempt": 0.03
+  },
+  "sources": [
+    {
+      "id": "onion",
+      "source": {
+        "sha256": "100e25698ee99e99dc648c41d9864144e312f0fce7c07dc9a7b06b487b9a2a5f",
+        "bytes": 209273,
+        "durationSeconds": 3,
+        "width": 960,
+        "height": 540
+      },
+      "timing": {
+        "timeBase": "1/12288",
+        "startPts": "0",
+        "rotationDegrees": 0,
+        "transform": "ffmpeg-autorotate;display-matrix=65536,0,0,0,65536,0,0,0,1073741824;scale-max-side=512;sample-aspect=1:1"
+      },
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "authors": "Taher Panbiharwala and Zainab Barwaniwala",
+      "publisherPage": "https://huggingface.co/datasets/TaherPanbiharwala/EgoAnnotate/blob/156d13adaee4110cf63e54fa940ec16ff199d12f/videos/GX010072.mp4",
+      "fullOriginalHashVerified": false,
+      "frames": [
+        {
+          "id": "f0",
+          "pts": "0",
+          "seconds": 0,
+          "sha256": "9fba8e88dc9f025842754f33a43099711b275d4dfc75212f5bc3b5361be87365",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f24",
+          "pts": "12288",
+          "seconds": 1,
+          "sha256": "5af04dcce5fd031e67bf41df7b1ff5dfe957d2595228ab3c1beabb6f1cea1a57",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f48",
+          "pts": "24576",
+          "seconds": 2,
+          "sha256": "6bcd51e4b0b6aef0596c8f4cf4c3c4739831be7993bcc7c545a2b047c9d3b880",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f71",
+          "pts": "36352",
+          "seconds": 2.9583333333333335,
+          "sha256": "ad05dc3ce1860fc00ec048f27071ddbcea2421c932b7555a0cf557c90b83f988",
+          "width": 512,
+          "height": 288
+        }
+      ],
+      "windows": [
+        {
+          "id": "w1",
+          "startSeconds": 0,
+          "endSeconds": 3,
+          "frameIds": [
+            "f0",
+            "f24",
+            "f48",
+            "f71"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "melon",
+      "source": {
+        "sha256": "f32cf75d28602d169b4f302830ba633a351ac890596887c54c8e928efcf2650e",
+        "bytes": 298547,
+        "durationSeconds": 3,
+        "width": 960,
+        "height": 540
+      },
+      "timing": {
+        "timeBase": "1/12288",
+        "startPts": "0",
+        "rotationDegrees": 0,
+        "transform": "ffmpeg-autorotate;display-matrix=65536,0,0,0,65536,0,0,0,1073741824;scale-max-side=512;sample-aspect=1:1"
+      },
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "authors": "Taher Panbiharwala and Zainab Barwaniwala",
+      "publisherPage": "https://huggingface.co/datasets/TaherPanbiharwala/EgoAnnotate/blob/156d13adaee4110cf63e54fa940ec16ff199d12f/videos/GX010076.mp4",
+      "fullOriginalHashVerified": false,
+      "frames": [
+        {
+          "id": "f0",
+          "pts": "0",
+          "seconds": 0,
+          "sha256": "ff0335cb8adf1ae640e9947013843b41e658a58c9d9c4e4fdaa9840bb080dc07",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f24",
+          "pts": "12288",
+          "seconds": 1,
+          "sha256": "883a4b245d5d92541654c1feaedfe9fdb1b7c76f1dbc5497cc429c101df496db",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f48",
+          "pts": "24576",
+          "seconds": 2,
+          "sha256": "6041d6cd3f4f65539a2fb617b2428807aeeb07317cda8f21ac2a9ffab3d752ef",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f71",
+          "pts": "36352",
+          "seconds": 2.9583333333333335,
+          "sha256": "53e4dd4eb518331c7a2bad8600b7b1b81e33de119df3fab2a49c2d2a8ead39a1",
+          "width": 512,
+          "height": 288
+        }
+      ],
+      "windows": [
+        {
+          "id": "w1",
+          "startSeconds": 0,
+          "endSeconds": 3,
+          "frameIds": [
+            "f0",
+            "f24",
+            "f48",
+            "f71"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shirt",
+      "source": {
+        "sha256": "8392c62f4e9590a15745311746114c2b6355e24c60fa87fef68e834f20762113",
+        "bytes": 468174,
+        "durationSeconds": 3,
+        "width": 960,
+        "height": 540
+      },
+      "timing": {
+        "timeBase": "1/12288",
+        "startPts": "0",
+        "rotationDegrees": 0,
+        "transform": "ffmpeg-autorotate;display-matrix=65536,0,0,0,65536,0,0,0,1073741824;scale-max-side=512;sample-aspect=1:1"
+      },
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "authors": "Taher Panbiharwala and Zainab Barwaniwala",
+      "publisherPage": "https://huggingface.co/datasets/TaherPanbiharwala/EgoAnnotate/blob/156d13adaee4110cf63e54fa940ec16ff199d12f/videos/GX010079.mp4",
+      "fullOriginalHashVerified": false,
+      "frames": [
+        {
+          "id": "f0",
+          "pts": "0",
+          "seconds": 0,
+          "sha256": "d38a8b815df56b8addc8f87e7ddd4a5ae1606cf7568b4911f3e866eea953d366",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f24",
+          "pts": "12288",
+          "seconds": 1,
+          "sha256": "2633f3001ac76a03f19c3beafeeb174e6875ee4aad223b33e39ed2deadd44b28",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f48",
+          "pts": "24576",
+          "seconds": 2,
+          "sha256": "c3fb895194f57e56105224e16318ca17f12d25933b502e8ae8505e72bfeb2cd7",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f71",
+          "pts": "36352",
+          "seconds": 2.9583333333333335,
+          "sha256": "5c371685fe27affe598af7c7ec0cc3ecc82cb82f8bbe24ac3c45fab122cfda72",
+          "width": 512,
+          "height": 288
+        }
+      ],
+      "windows": [
+        {
+          "id": "w1",
+          "startSeconds": 0,
+          "endSeconds": 3,
+          "frameIds": [
+            "f0",
+            "f24",
+            "f48",
+            "f71"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jeans",
+      "source": {
+        "sha256": "95845362951b3f78b7b731691df6d472bf176ced4b07ecef4d99d0b8a21da3e2",
+        "bytes": 538358,
+        "durationSeconds": 3,
+        "width": 960,
+        "height": 540
+      },
+      "timing": {
+        "timeBase": "1/12288",
+        "startPts": "0",
+        "rotationDegrees": 0,
+        "transform": "ffmpeg-autorotate;display-matrix=65536,0,0,0,65536,0,0,0,1073741824;scale-max-side=512;sample-aspect=1:1"
+      },
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "authors": "Taher Panbiharwala and Zainab Barwaniwala",
+      "publisherPage": "https://huggingface.co/datasets/TaherPanbiharwala/EgoAnnotate/blob/156d13adaee4110cf63e54fa940ec16ff199d12f/videos/GX010081.mp4",
+      "fullOriginalHashVerified": false,
+      "frames": [
+        {
+          "id": "f0",
+          "pts": "0",
+          "seconds": 0,
+          "sha256": "7ce4116ea39b92a411125e9079ff43896273978d3d0ca1398b724db8c6c369af",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f24",
+          "pts": "12288",
+          "seconds": 1,
+          "sha256": "0602f17c0261c1a09aebe478472a605fa1ac49a019297ba2b9781254c5b9a7cb",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f48",
+          "pts": "24576",
+          "seconds": 2,
+          "sha256": "aa006fb1610ab8c6ec7d035dbd23eec11335e08c384be59551bedc4c6d6455cd",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f71",
+          "pts": "36352",
+          "seconds": 2.9583333333333335,
+          "sha256": "42a406ffe263cc8d088e82e339dc058456e628677a949353ccc16498cb5782aa",
+          "width": 512,
+          "height": 288
+        }
+      ],
+      "windows": [
+        {
+          "id": "w1",
+          "startSeconds": 0,
+          "endSeconds": 3,
+          "frameIds": [
+            "f0",
+            "f24",
+            "f48",
+            "f71"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pack",
+      "source": {
+        "sha256": "87a67e5b10f124a65df7d669086d4a9b2cb7ae25a5d758594b9b3aa7b0938f4c",
+        "bytes": 394403,
+        "durationSeconds": 3,
+        "width": 960,
+        "height": 540
+      },
+      "timing": {
+        "timeBase": "1/12288",
+        "startPts": "0",
+        "rotationDegrees": 0,
+        "transform": "ffmpeg-autorotate;display-matrix=65536,0,0,0,65536,0,0,0,1073741824;scale-max-side=512;sample-aspect=1:1"
+      },
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "authors": "Taher Panbiharwala and Zainab Barwaniwala",
+      "publisherPage": "https://huggingface.co/datasets/TaherPanbiharwala/EgoAnnotate/blob/156d13adaee4110cf63e54fa940ec16ff199d12f/videos/GX010087.mp4",
+      "fullOriginalHashVerified": false,
+      "frames": [
+        {
+          "id": "f0",
+          "pts": "0",
+          "seconds": 0,
+          "sha256": "21143151c908b65901fc6fcd2815592a5bbfdc1c99327010c18346ac77469ab3",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f24",
+          "pts": "12288",
+          "seconds": 1,
+          "sha256": "e1b82e790b40a51838ce0fbd675e4fc5eff319184cfb3e6cf84f016b4d3454e3",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f48",
+          "pts": "24576",
+          "seconds": 2,
+          "sha256": "a055f12f442db2ea2e2028126e4b00e423511760faa6a3221d45cdf3ebed0780",
+          "width": 512,
+          "height": 288
+        },
+        {
+          "id": "f71",
+          "pts": "36352",
+          "seconds": 2.9583333333333335,
+          "sha256": "f61338eeb2410ac0f1b78aa0a6d82d5d627a6e8ef07ad9f84edcb842157d5701",
+          "width": 512,
+          "height": 288
+        }
+      ],
+      "windows": [
+        {
+          "id": "w1",
+          "startSeconds": 0,
+          "endSeconds": 3,
+          "frameIds": [
+            "f0",
+            "f24",
+            "f48",
+            "f71"
+          ]
+        }
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "index": 1,
+      "clip": "onion",
+      "windowId": "w1",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:07.449Z",
+      "durationMs": 29025,
+      "usage": {
+        "inputTokens": 1310,
+        "outputTokens": 101
+      },
+      "estimatedUsd": 0.00016130000000000002,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"description\": \"A person uses a knife to cut something on a pink cutting board placed on a white countertop. A two-burner portable stove is visible to the left of the cutting board.\", \"endingFrameId\": null, \"endingVisible\": false, \"objects\": [\"pink cutting board\", \"knife\", \"two-burner stove\", \"white countertop\"], \"outcome\": \"unknown\", \"tags\": [\"cutting\", \"knife\", \"pink board\", \"stove\", \"countertop\"]}"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1310,
+          "completion_tokens": 101,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 14.663636207580566
+        }
+      }
+    },
+    {
+      "index": 2,
+      "clip": "onion",
+      "windowId": "w1",
+      "model": "@cf/cloudflare/clef-flash",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:36.476Z",
+      "durationMs": 1448,
+      "usage": {
+        "inputTokens": 1203,
+        "outputTokens": 0
+      },
+      "estimatedUsd": 0.00010826999999999999,
+      "response": {
+        "model": "clef-flash",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "probabilities": {
+              "supported": 0.7518,
+              "unclear": 0.1118,
+              "contradicted": 0.1364
+            },
+            "confidence": 0.3944
+          },
+          "outcome": {
+            "type": "choice",
+            "choice": "unknown",
+            "probabilities": {
+              "success": 0.0796,
+              "failure": 0.0693,
+              "unknown": 0.8511
+            },
+            "confidence": 0.6031
+          },
+          "ending": {
+            "type": "choice",
+            "choice": "unclear",
+            "probabilities": {
+              "clear": 0.1074,
+              "unclear": 0.8926
+            },
+            "confidence": 0.6164
+          }
+        },
+        "usage": {
+          "input_tokens": 1203,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 3,
+      "clip": "melon",
+      "windowId": "w1",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:37.936Z",
+      "durationMs": 4081,
+      "usage": {
+        "inputTokens": 1309,
+        "outputTokens": 149
+      },
+      "estimatedUsd": 0.00017559999999999999,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"description\": \"A person's hands are visible on a white countertop. One hand holds a knife with a red handle, and the other hand holds a slice of watermelon on a small plate. In the background, there is a two-burner gas stove, two white bowls, and a tray with various items.\", \"endingFrameId\": null, \"endingVisible\": false, \"objects\": [\"person's hands\", \"knife with red handle\", \"watermelon slice\", \"small plate\", \"two-burner gas stove\", \"white bowls\", \"tray\"], \"outcome\": \"unknown\", \"tags\": [\"watermelon\", \"cutting\", \"countertop\", \"hands\", \"knife\", \"stove\", \"bowls\"]}"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1309,
+          "completion_tokens": 149,
+          "total_tokens": 1458,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 15.96363639831543
+        }
+      }
+    },
+    {
+      "index": 4,
+      "clip": "melon",
+      "windowId": "w1",
+      "model": "@cf/cloudflare/clef-flash",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:42.018Z",
+      "durationMs": 2825,
+      "usage": {
+        "inputTokens": 1228,
+        "outputTokens": 0
+      },
+      "estimatedUsd": 0.00011051999999999999,
+      "response": {
+        "model": "clef-flash",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "probabilities": {
+              "supported": 0.8823,
+              "unclear": 0.062,
+              "contradicted": 0.0557
+            },
+            "confidence": 0.6782
+          },
+          "outcome": {
+            "type": "choice",
+            "choice": "unknown",
+            "probabilities": {
+              "success": 0.1425,
+              "failure": 0.1254,
+              "unknown": 0.7321
+            },
+            "confidence": 0.358
+          },
+          "ending": {
+            "type": "choice",
+            "choice": "unclear",
+            "probabilities": {
+              "clear": 0.1824,
+              "unclear": 0.8176
+            },
+            "confidence": 0.4035
+          }
+        },
+        "usage": {
+          "input_tokens": 1228,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 5,
+      "clip": "shirt",
+      "windowId": "w1",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:44.851Z",
+      "durationMs": 3762,
+      "usage": {
+        "inputTokens": 1309,
+        "outputTokens": 139
+      },
+      "estimatedUsd": 0.0001726,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"description\": \"A person's hands are placed on a white t-shirt lying on a white table. In the second frame, one hand reaches toward the t-shirt. In the third frame, the person's hand is touching the t-shirt. In the final frame, the person's hands are positioned on either side of the t-shirt.\", \"endingFrameId\": null, \"endingVisible\": false, \"objects\": [\"white t-shirt\", \"white table\", \"person's hands\"], \"outcome\": \"unknown\", \"tags\": [\"hands on t-shirt\", \"white table\", \"white shirt\", \"person's hands\"]}"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1309,
+          "completion_tokens": 139,
+          "total_tokens": 1448,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 15.690908432006836
+        }
+      }
+    },
+    {
+      "index": 6,
+      "clip": "shirt",
+      "windowId": "w1",
+      "model": "@cf/cloudflare/clef-flash",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:48.615Z",
+      "durationMs": 1726,
+      "usage": {
+        "inputTokens": 1230,
+        "outputTokens": 0
+      },
+      "estimatedUsd": 0.00011070000000000001,
+      "response": {
+        "model": "clef-flash",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "probabilities": {
+              "supported": 0.754,
+              "unclear": 0.1205,
+              "contradicted": 0.1255
+            },
+            "confidence": 0.3982
+          },
+          "outcome": {
+            "type": "choice",
+            "choice": "unknown",
+            "probabilities": {
+              "success": 0.1474,
+              "failure": 0.121,
+              "unknown": 0.7316
+            },
+            "confidence": 0.3573
+          },
+          "ending": {
+            "type": "choice",
+            "choice": "unclear",
+            "probabilities": {
+              "clear": 0.2272,
+              "unclear": 0.7728
+            },
+            "confidence": 0.2978
+          }
+        },
+        "usage": {
+          "input_tokens": 1230,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 7,
+      "clip": "jeans",
+      "windowId": "w1",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:50.347Z",
+      "durationMs": 5378,
+      "usage": {
+        "inputTokens": 1309,
+        "outputTokens": 139
+      },
+      "estimatedUsd": 0.0001726,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"description\": \"A person's hands are visible on a white surface. In the first frame, the hands are near the bottom of a pair of light blue jeans laid flat. In the second frame, the hands are positioned on the sides of the jeans. In the third frame, the hands are grasping the edges of the jeans. In the final frame, the hands are holding the sides of the jeans.\", \"endingFrameId\": null, \"endingVisible\": false, \"objects\": [\"light blue jeans\", \"white surface\", \"person's hands\"], \"outcome\": \"unknown\", \"tags\": [\"jeans\", \"hands\", \"white surface\", \"holding\"]}"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1309,
+          "completion_tokens": 139,
+          "total_tokens": 1448,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 15.690908432006836
+        }
+      }
+    },
+    {
+      "index": 8,
+      "clip": "jeans",
+      "windowId": "w1",
+      "model": "@cf/cloudflare/clef-flash",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:55.726Z",
+      "durationMs": 1458,
+      "usage": {
+        "inputTokens": 1245,
+        "outputTokens": 0
+      },
+      "estimatedUsd": 0.00011205,
+      "response": {
+        "model": "clef-flash",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "probabilities": {
+              "supported": 0.8962,
+              "unclear": 0.059,
+              "contradicted": 0.0448
+            },
+            "confidence": 0.7131
+          },
+          "outcome": {
+            "type": "choice",
+            "choice": "unknown",
+            "probabilities": {
+              "success": 0.1658,
+              "failure": 0.0668,
+              "unknown": 0.7674
+            },
+            "confidence": 0.4313
+          },
+          "ending": {
+            "type": "choice",
+            "choice": "unclear",
+            "probabilities": {
+              "clear": 0.2019,
+              "unclear": 0.7981
+            },
+            "confidence": 0.3554
+          }
+        },
+        "usage": {
+          "input_tokens": 1245,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "index": 9,
+      "clip": "pack",
+      "windowId": "w1",
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "status": "received",
+      "startedAt": "2026-10-06T13:53:57.190Z",
+      "durationMs": 7918,
+      "usage": {
+        "inputTokens": 1309,
+        "outputTokens": 137
+      },
+      "estimatedUsd": 0.000172,
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "message": {
+              "content": "{\"description\": \"A person's hands are on a white table. In the first frame, the hands are near a small clear container and a blue tray with yellow items. In the second and third frames, one hand reaches toward the blue tray. In the final frame, the hands are positioned near the blue tray and the clear container.\", \"endingFrameId\": null, \"endingVisible\": false, \"objects\": [\"white table\", \"clear container\", \"blue tray\", \"yellow items\", \"hands\"], \"outcome\": \"unknown\", \"tags\": [\"hands on table\", \"blue tray\", \"clear container\", \"white table\", \"yellow objects\"]}"
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1309,
+          "completion_tokens": 137,
+          "total_tokens": 1446,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "neurons": 15.63636302947998
+        }
+      }
+    },
+    {
+      "index": 10,
+      "clip": "pack",
+      "windowId": "w1",
+      "model": "@cf/cloudflare/clef-flash",
+      "status": "received",
+      "startedAt": "2026-10-06T13:54:05.110Z",
+      "durationMs": 1704,
+      "usage": {
+        "inputTokens": 1230,
+        "outputTokens": 0
+      },
+      "estimatedUsd": 0.00011070000000000001,
+      "response": {
+        "model": "clef-flash",
+        "answers": {
+          "support": {
+            "type": "choice",
+            "choice": "supported",
+            "probabilities": {
+              "supported": 0.8326,
+              "unclear": 0.0962,
+              "contradicted": 0.0712
+            },
+            "confidence": 0.5612
+          },
+          "outcome": {
+            "type": "choice",
+            "choice": "unknown",
+            "probabilities": {
+              "success": 0.0978,
+              "failure": 0.0978,
+              "unknown": 0.8044
+            },
+            "confidence": 0.4992
+          },
+          "ending": {
+            "type": "choice",
+            "choice": "unclear",
+            "probabilities": {
+              "clear": 0.1634,
+              "unclear": 0.8366
+            },
+            "confidence": 0.4532
+          }
+        },
+        "usage": {
+          "input_tokens": 1230,
+          "output_tokens": 0
+        }
+      }
+    }
+  ],
+  "annotations": [
+    {
+      "clip": "onion",
+      "status": "complete",
+      "segment": {
+        "windowId": "w1",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "description": "A person uses a knife to cut something on a pink cutting board placed on a white countertop. A two-burner portable stove is visible to the left of the cutting board.",
+        "objects": [
+          "pink cutting board",
+          "knife",
+          "two-burner stove",
+          "white countertop"
+        ],
+        "tags": [
+          "cutting",
+          "knife",
+          "pink board",
+          "stove",
+          "countertop"
+        ],
+        "outcome": "unknown",
+        "check": "supported",
+        "frameIds": [
+          "f0",
+          "f24",
+          "f48",
+          "f71"
+        ],
+        "models": {
+          "caption": "@cf/google/gemma-4-26b-a4b-it",
+          "check": "@cf/cloudflare/clef-flash"
+        },
+        "usage": {
+          "inputTokens": 2513,
+          "outputTokens": 101,
+          "estimatedUsd": 0.00026957
+        },
+        "reviewState": "unreviewed"
+      }
+    },
+    {
+      "clip": "melon",
+      "status": "complete",
+      "segment": {
+        "windowId": "w1",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "description": "A person's hands are visible on a white countertop. One hand holds a knife with a red handle, and the other hand holds a slice of watermelon on a small plate. In the background, there is a two-burner gas stove, two white bowls, and a tray with various items.",
+        "objects": [
+          "person's hands",
+          "knife with red handle",
+          "watermelon slice",
+          "small plate",
+          "two-burner gas stove",
+          "white bowls",
+          "tray"
+        ],
+        "tags": [
+          "watermelon",
+          "cutting",
+          "countertop",
+          "hands",
+          "knife",
+          "stove",
+          "bowls"
+        ],
+        "outcome": "unknown",
+        "check": "supported",
+        "frameIds": [
+          "f0",
+          "f24",
+          "f48",
+          "f71"
+        ],
+        "models": {
+          "caption": "@cf/google/gemma-4-26b-a4b-it",
+          "check": "@cf/cloudflare/clef-flash"
+        },
+        "usage": {
+          "inputTokens": 2537,
+          "outputTokens": 149,
+          "estimatedUsd": 0.00028612
+        },
+        "reviewState": "unreviewed"
+      }
+    },
+    {
+      "clip": "shirt",
+      "status": "complete",
+      "segment": {
+        "windowId": "w1",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "description": "A person's hands are placed on a white t-shirt lying on a white table. In the second frame, one hand reaches toward the t-shirt. In the third frame, the person's hand is touching the t-shirt. In the final frame, the person's hands are positioned on either side of the t-shirt.",
+        "objects": [
+          "white t-shirt",
+          "white table",
+          "person's hands"
+        ],
+        "tags": [
+          "hands on t-shirt",
+          "white table",
+          "white shirt",
+          "person's hands"
+        ],
+        "outcome": "unknown",
+        "check": "supported",
+        "frameIds": [
+          "f0",
+          "f24",
+          "f48",
+          "f71"
+        ],
+        "models": {
+          "caption": "@cf/google/gemma-4-26b-a4b-it",
+          "check": "@cf/cloudflare/clef-flash"
+        },
+        "usage": {
+          "inputTokens": 2539,
+          "outputTokens": 139,
+          "estimatedUsd": 0.0002833
+        },
+        "reviewState": "unreviewed"
+      }
+    },
+    {
+      "clip": "jeans",
+      "status": "complete",
+      "segment": {
+        "windowId": "w1",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "description": "A person's hands are visible on a white surface. In the first frame, the hands are near the bottom of a pair of light blue jeans laid flat. In the second frame, the hands are positioned on the sides of the jeans. In the third frame, the hands are grasping the edges of the jeans. In the final frame, the hands are holding the sides of the jeans.",
+        "objects": [
+          "light blue jeans",
+          "white surface",
+          "person's hands"
+        ],
+        "tags": [
+          "jeans",
+          "hands",
+          "white surface",
+          "holding"
+        ],
+        "outcome": "unknown",
+        "check": "supported",
+        "frameIds": [
+          "f0",
+          "f24",
+          "f48",
+          "f71"
+        ],
+        "models": {
+          "caption": "@cf/google/gemma-4-26b-a4b-it",
+          "check": "@cf/cloudflare/clef-flash"
+        },
+        "usage": {
+          "inputTokens": 2554,
+          "outputTokens": 139,
+          "estimatedUsd": 0.00028464999999999995
+        },
+        "reviewState": "unreviewed"
+      }
+    },
+    {
+      "clip": "pack",
+      "status": "complete",
+      "segment": {
+        "windowId": "w1",
+        "startSeconds": 0,
+        "endSeconds": 3,
+        "description": "A person's hands are on a white table. In the first frame, the hands are near a small clear container and a blue tray with yellow items. In the second and third frames, one hand reaches toward the blue tray. In the final frame, the hands are positioned near the blue tray and the clear container.",
+        "objects": [
+          "white table",
+          "clear container",
+          "blue tray",
+          "yellow items",
+          "hands"
+        ],
+        "tags": [
+          "hands on table",
+          "blue tray",
+          "clear container",
+          "white table",
+          "yellow objects"
+        ],
+        "outcome": "unknown",
+        "check": "supported",
+        "frameIds": [
+          "f0",
+          "f24",
+          "f48",
+          "f71"
+        ],
+        "models": {
+          "caption": "@cf/google/gemma-4-26b-a4b-it",
+          "check": "@cf/cloudflare/clef-flash"
+        },
+        "usage": {
+          "inputTokens": 2539,
+          "outputTokens": 137,
+          "estimatedUsd": 0.0002827
+        },
+        "reviewState": "unreviewed"
+      }
+    }
+  ],
+  "limitations": [
+    "Small nonrandom existing public example set; no held-out validation or calibrated correctness probabilities.",
+    "Four sparse still images cannot establish continuous movement, audio, safety, workmanship or whole-task success.",
+    "Timestamps reference these exact local excerpt bytes; full upstream original checksums were not established.",
+    "Outcome is only the sampled local action ending; disagreement or missing ending evidence becomes unknown.",
+    "Provider scores retained as raw model diagnostics are uncalibrated; they are not exposed in annotation confidence.",
+    "Costs are estimates from reported usage and documented rates, not a provider invoice; failed/unknown-usage attempts keep a conservative reservation.",
+    "The separate synthetic text-only Clef probe establishes typed text-decision compatibility only. This image pilot is not a head-to-head comparison with JEV or trained temporal models; no shared labeled evaluation or calibrated metrics were run. The proposed larger human-reference pilot remains outstanding."
+  ],
+  "finishedAt": "2026-10-06T13:54:06.817Z",
+  "totals": {
+    "calls": 10,
+    "completeWindows": 5,
+    "failedWindows": 0,
+    "knownInputTokens": 12682,
+    "knownOutputTokens": 665,
+    "knownEstimatedUsd": 0.00140634,
+    "callsWithMissingUsage": 0,
+    "conservativeReservedUsd": 0.3,
+    "otherKnownFeasibilityCalls": 1,
+    "otherKnownFeasibilityCallsNote": "Parent performed one prior synthetic text-only Clef schema probe. Its usage is separate from the 10 image-pilot calls and image cost totals."
+  },
+  "priceSources": [
+    {
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "url": "https://developers.cloudflare.com/workers-ai/models/gemma-4-26b-a4b-it/",
+      "usdPerMillionInputTokens": 0.1,
+      "usdPerMillionOutputTokens": 0.3
+    },
+    {
+      "model": "@cf/cloudflare/clef-flash",
+      "url": "https://developers.cloudflare.com/workers-ai/models/clef-flash/",
+      "usdPerMillionInputTokens": 0.09,
+      "usdPerMillionOutputTokens": 0
+    }
+  ],
+  "latencySummary": {
+    "@cf/google/gemma-4-26b-a4b-it": {
+      "calls": 5,
+      "medianMs": 5378,
+      "minMs": 3762,
+      "maxMs": 29025,
+      "totalMs": 50164
+    },
+    "@cf/cloudflare/clef-flash": {
+      "calls": 5,
+      "medianMs": 1704,
+      "minMs": 1448,
+      "maxMs": 2825,
+      "totalMs": 9161
+    }
+  },
+  "postRunAssistantVisualReview": {
+    "reviewedAt": "2026-10-06T13:57:12.612365+00:00",
+    "reviewer": "AI assistant visual inspection after all model outputs were frozen; not a human annotation",
+    "humanReview": "pending",
+    "method": "Inspect a chronological contact sheet of all 20 exact model-input frames; compare literal image content with returned captions. No benchmark score or correctness percentage assigned.",
+    "findings": [
+      {
+        "clip": "onion",
+        "observation": "The pink object appears to be a plate, while the caption calls it a cutting board. Clef still reports supported; model agreement did not establish object accuracy."
+      },
+      {
+        "clip": "melon",
+        "observation": "Knife and watermelon are visible. The caption is mostly object inventory and does not capture the visible cutting progression."
+      },
+      {
+        "clip": "shirt",
+        "observation": "The final sampled frame shows an edge of the shirt folded inward. The caption describes hand positions but misses that state change."
+      },
+      {
+        "clip": "jeans",
+        "observation": "The final sampled frame shows a lengthwise folded shape compared with the opening spread legs. The caption mostly describes holding the sides; its light-blue color description is uncertain."
+      },
+      {
+        "clip": "pack",
+        "observation": "A hand visibly moves a yellow item away from the blue tray toward the clear container. The caption describes reaching and positions without identifying this transfer."
+      }
+    ],
+    "conclusion": "Both image APIs and bounded schemas worked. Conservative unknown endings avoid an unsupported whole-task success claim, but this first recipe underdescribes useful visible action changes, and the independent checker can agree with an inaccurate caption. Further action/state-change evaluation and human review are required before accuracy claims."
+  }
+}

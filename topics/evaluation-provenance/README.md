@@ -2,7 +2,7 @@
 
 **Question:** Test episode readback, original-to-derivative lineage and split integrity using small, auditable fixtures.
 
-Status: **scoping** · Updated 6 October 2026 · Results: **not run**
+Status: **evaluating** · Updated 6 October 2026 · Results: **image feasibility run complete; reference accuracy and provenance baselines not run**
 
 [Open a research question](https://github.com/Dvidia-Inference/dvidia-research/issues/new?template=research-question.yml) · [Baseline protocol](experiments/0001-baseline.md) · [Bibliography](references.bib)
 
@@ -48,7 +48,7 @@ All sample sizes, thresholds and resource ceilings here are proposed. See the [f
 
 ## Results
 
-**Not run.** Source review is complete; no experiment, validation claim or independent reproduction is complete. Add measured results and their limitations only after execution.
+The [five-clip Clef feasibility run](../../reports/Clef%20and%20grounded%20video%20observations.md) completed ten image calls for an estimated $0.00140634. It exposed caption omissions and a checker-agreed object error. [Raw results and preregistration](runs/2026-10-06-clef-feasibility/) are available; independent review and the original baselines remain outstanding.
 
 [ramos2021rlds]: https://arxiv.org/abs/2111.02767
 [rlds2026schema]: https://github.com/google-research/rlds
