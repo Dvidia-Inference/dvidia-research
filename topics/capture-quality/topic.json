@@ -1,0 +1,89 @@
+{
+  "id": "capture-quality",
+  "title": "Capture quality",
+  "kicker": "Visible evidence",
+  "summary": "Test whether hands, relevant objects and state changes are actually observable in a POV demonstration.",
+  "status": "scoping",
+  "cover": "assets/capture-quality.webp",
+  "imageAlt": "AI editorial illustration of hands and objects framed by a POV camera; not experimental evidence.",
+  "updated": "2026-10-06",
+  "sources": [
+    {
+      "id": "zhang2020hands",
+      "title": "MediaPipe Hands: On-device Real-time Hand Tracking",
+      "url": "https://arxiv.org/abs/2006.10214",
+      "type": "paper",
+      "year": 2020
+    },
+    {
+      "id": "google2026hands",
+      "title": "Hand landmarks detection guide (documentation accessed 2026)",
+      "url": "https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker",
+      "type": "docs",
+      "year": 2026
+    },
+    {
+      "id": "ego4d2026fho",
+      "title": "FHO Overview (documentation accessed 2026)",
+      "url": "https://ego4d-data.org/docs/tutorials/FHO_Overview/",
+      "type": "docs",
+      "year": 2026
+    },
+    {
+      "id": "mediapipe2026license",
+      "title": "MediaPipe source license (accessed 2026)",
+      "url": "https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE",
+      "type": "code",
+      "year": 2026
+    },
+    {
+      "id": "ego4d2026access",
+      "title": "Ego4D Start Here and license access (accessed 2026)",
+      "url": "https://ego4d-data.org/docs/start-here/",
+      "type": "docs",
+      "year": 2026
+    }
+  ],
+  "questions": [
+    {
+      "id": "cq-01",
+      "text": "When does visible-hand detection accept footage whose relevant object interaction is obscured?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/1"
+    },
+    {
+      "id": "cq-02",
+      "text": "Do simple image-quality features improve agreement with human observability labels?",
+      "state": "open",
+      "issueUrl": null
+    },
+    {
+      "id": "cq-03",
+      "text": "What sampling rate preserves useful evidence without degrading sustained capture?",
+      "state": "open",
+      "issueUrl": null
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Primary sources reviewed",
+      "done": true
+    },
+    {
+      "label": "Pilot protocol reviewed",
+      "done": false
+    },
+    {
+      "label": "Baseline executed and artifacts published",
+      "done": false
+    },
+    {
+      "label": "Independent result review",
+      "done": false
+    }
+  ],
+  "firstTask": {
+    "title": "Draft and double-annotate a 12-clip observability pilot",
+    "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/1"
+  }
+}

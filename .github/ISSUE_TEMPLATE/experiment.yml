@@ -1,0 +1,43 @@
+name: Experiment proposal or result
+description: Make an experiment reproducible, including inconclusive results.
+title: "[Experiment] "
+labels: ["experiment", "status:scoping"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic and question
+      description: Link the topic folder and existing issue.
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis and baseline
+      description: State the competing explanation and what changes between conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data, provenance and split
+      description: Public identifiers and licenses only. Do not attach private footage, credentials or personal information. State consent requirements and split leakage checks.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method and budget
+      description: Versions, hardware, seeds, commands, metrics, compute ceiling and stop condition.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results or expected evidence
+      description: Separate reported source results, your measured results and hypotheses. Include denominators and failure cases; leave results empty until measured.
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Reproduction artifacts
+      description: Link a pull request, config, public logs or a small synthetic fixture.

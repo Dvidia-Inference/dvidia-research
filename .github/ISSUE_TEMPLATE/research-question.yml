@@ -1,0 +1,36 @@
+name: Research question
+description: Pick up an open question or propose a testable one.
+title: "[Question] "
+labels: ["question", "status:scoping"]
+body:
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options: [capture-quality, skill-relations, evaluation-provenance, physical-grounding, new topic]
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What question should we answer?
+      placeholder: A specific uncertainty, not a promised result.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources
+      description: Link papers, official code or data cards. Include a section or revision when available.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What evidence would answer it?
+      placeholder: Baseline, comparison, metric and a useful negative result.
+    validations:
+      required: true
+  - type: textarea
+    id: help
+    attributes:
+      label: How would you like to help?
+      placeholder: I can audit the references, design the measurement, or run a bounded experiment.

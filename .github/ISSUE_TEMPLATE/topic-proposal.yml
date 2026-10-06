@@ -1,0 +1,31 @@
+name: New research topic
+description: Propose a focused question that could improve physical-skill learning.
+title: "[Topic] "
+labels: ["topic-proposal", "status:scoping"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Working title
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Why this question matters to DVIDIA
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources and unknowns
+      description: Link original work, record what is still uncertain and identify license questions.
+    validations:
+      required: true
+  - type: textarea
+    id: first
+    attributes:
+      label: Smallest useful contribution
+      description: A bounded task someone can finish without private data or a large training budget.
+    validations:
+      required: true

@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/Dvidia-Inference/dvidia-research",
+  "topics": [
+    {
+      "id": "capture-quality",
+      "title": "Capture quality",
+      "kicker": "Visible evidence",
+      "summary": "Test whether hands, relevant objects and state changes are actually observable in a POV demonstration.",
+      "status": "scoping",
+      "cover": "assets/capture-quality.webp",
+      "imageAlt": "AI editorial illustration of hands and objects framed by a POV camera; not experimental evidence.",
+      "updated": "2026-10-06",
+      "sources": [
+        {
+          "id": "zhang2020hands",
+          "title": "MediaPipe Hands: On-device Real-time Hand Tracking",
+          "url": "https://arxiv.org/abs/2006.10214",
+          "type": "paper",
+          "year": 2020
+        },
+        {
+          "id": "google2026hands",
+          "title": "Hand landmarks detection guide (documentation accessed 2026)",
+          "url": "https://developers.google.com/edge/mediapipe/solutions/vision/hand_landmarker",
+          "type": "docs",
+          "year": 2026
+        },
+        {
+          "id": "ego4d2026fho",
+          "title": "FHO Overview (documentation accessed 2026)",
+          "url": "https://ego4d-data.org/docs/tutorials/FHO_Overview/",
+          "type": "docs",
+          "year": 2026
+        },
+        {
+          "id": "mediapipe2026license",
+          "title": "MediaPipe source license (accessed 2026)",
+          "url": "https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE",
+          "type": "code",
+          "year": 2026
+        },
+        {
+          "id": "ego4d2026access",
+          "title": "Ego4D Start Here and license access (accessed 2026)",
+          "url": "https://ego4d-data.org/docs/start-here/",
+          "type": "docs",
+          "year": 2026
+        }
+      ],
+      "questions": [
+        {
+          "id": "cq-01",
+          "text": "When does visible-hand detection accept footage whose relevant object interaction is obscured?",
+          "state": "open",
+          "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/1"
+        },
+        {
+          "id": "cq-02",
+          "text": "Do simple image-quality features improve agreement with human observability labels?",
+          "state": "open",
+          "issueUrl": null
+        },
+        {
+          "id": "cq-03",
+          "text": "What sampling rate preserves useful evidence without degrading sustained capture?",
+          "state": "open",
+          "issueUrl": null
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Primary sources reviewed",
+          "done": true
+        },
+        {
+          "label": "Pilot protocol reviewed",
+          "done": false
+        },
+        {
+          "label": "Baseline executed and artifacts published",
+          "done": false
+        },
+        {
+          "label": "Independent result review",
+          "done": false
+        }
+      ],
+      "firstTask": {
+        "title": "Draft and double-annotate a 12-clip observability pilot",
+        "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/1"
+      }
+    },
+    {
+      "id": "skill-relations",
+      "title": "Skill relations",
+      "kicker": "Events with evidence",
+      "summary": "Calibrate hand–object relations, then test temporal event graphs whose claims point back to video intervals.",
+      "status": "scoping",
+      "cover": "assets/skill-relations.webp",
+      "imageAlt": "AI editorial illustration of POV hands pouring from a pitcher into a blue mug; not experimental evidence.",
+      "updated": "2026-10-06",
+      "sources": [
+        {
+          "id": "neau2026relateanything",
+          "title": "RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs",
+          "url": "https://arxiv.org/abs/2609.12552",
+          "type": "paper",
+          "year": 2026
+        },
+        {
+          "id": "maelic2026code",
+          "title": "Maelic/RelateAnything",
+          "url": "https://github.com/Maelic/RelateAnything",
+          "type": "code",
+          "year": 2026
+        },
+        {
+          "id": "maelic2026model",
+          "title": "relsgg-vits16plus model card",
+          "url": "https://huggingface.co/maelic/relsgg-vits16plus",
+          "type": "docs",
+          "year": 2026
+        },
+        {
+          "id": "ram2026access",
+          "title": "RAM: Relate-Anything-Model (undated repository, accessed 2026)",
+          "url": "https://github.com/EvolvingLMMs-Lab/RelateAnything",
+          "type": "code",
+          "year": 2026
+        },
+        {
+          "id": "ji2019actiongenome",
+          "title": "Action Genome: Actions as Composition of Spatio-temporal Scene Graphs",
+          "url": "https://arxiv.org/abs/1912.06992",
+          "type": "paper",
+          "year": 2019
+        }
+      ],
+      "questions": [
+        {
+          "id": "sr-01",
+          "text": "Which hand–object relations can be calibrated on held-out POV clips while abstaining on ambiguous evidence?",
+          "state": "open",
+          "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/4"
+        },
+        {
+          "id": "sr-02",
+          "text": "How much error comes from supplied regions and track identities rather than relation scoring?",
+          "state": "open",
+          "issueUrl": null
+        },
+        {
+          "id": "sr-03",
+          "text": "Do simple temporal rules reduce false events without hiding short interactions or missing steps?",
+          "state": "open",
+          "issueUrl": null
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Primary sources reviewed",
+          "done": true
+        },
+        {
+          "label": "Pilot protocol reviewed",
+          "done": false
+        },
+        {
+          "label": "Baseline executed and artifacts published",
+          "done": false
+        },
+        {
+          "label": "Independent result review",
+          "done": false
+        }
+      ],
+      "firstTask": {
+        "title": "Define four relations and audit a 20-frame model run",
+        "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/4"
+      }
+    },
+    {
+      "id": "evaluation-provenance",
+      "title": "Evaluation and provenance",
+      "kicker": "Reproducible evidence",
+      "summary": "Test episode readback, original-to-derivative lineage and split integrity using small, auditable fixtures.",
+      "status": "scoping",
+      "cover": "assets/evaluation-provenance.webp",
+      "imageAlt": "AI editorial illustration of a notebook with contact-sheet photos; not a completed validation result.",
+      "updated": "2026-10-06",
+      "sources": [
+        {
+          "id": "ramos2021rlds",
+          "title": "RLDS: an Ecosystem to Generate, Share and Use Datasets in Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2111.02767",
+          "type": "paper",
+          "year": 2021
+        },
+        {
+          "id": "rlds2026schema",
+          "title": "RLDS dataset schema (repository accessed 2026)",
+          "url": "https://github.com/google-research/rlds",
+          "type": "code",
+          "year": 2026
+        },
+        {
+          "id": "lerobot2026v3",
+          "title": "LeRobotDataset v3.0 (documentation accessed 2026)",
+          "url": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3",
+          "type": "docs",
+          "year": 2026
+        },
+        {
+          "id": "gebru2021datasheets",
+          "title": "Datasheets for Datasets",
+          "url": "https://arxiv.org/abs/1803.09010v8",
+          "type": "paper",
+          "year": 2021
+        },
+        {
+          "id": "lerobot2026license",
+          "title": "LeRobot source license and third-party notices (accessed 2026)",
+          "url": "https://github.com/huggingface/lerobot/blob/main/LICENSE",
+          "type": "code",
+          "year": 2026
+        }
+      ],
+      "questions": [
+        {
+          "id": "ep-01",
+          "text": "Can independent environments reproduce identical inventories, grouped splits and supported episode readback?",
+          "state": "open",
+          "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/2"
+        },
+        {
+          "id": "ep-02",
+          "text": "Which corruptions and duplicated derivatives evade a small provenance validator?",
+          "state": "open",
+          "issueUrl": null
+        },
+        {
+          "id": "ep-03",
+          "text": "How much does recording-level leakage change the selected evaluation metric?",
+          "state": "open",
+          "issueUrl": null
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Primary sources reviewed",
+          "done": true
+        },
+        {
+          "label": "Pilot protocol reviewed",
+          "done": false
+        },
+        {
+          "label": "Baseline executed and artifacts published",
+          "done": false
+        },
+        {
+          "label": "Independent result review",
+          "done": false
+        }
+      ],
+      "firstTask": {
+        "title": "Design a five-episode fixture with three deliberate faults",
+        "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/2"
+      }
+    },
+    {
+      "id": "physical-grounding",
+      "title": "Physical grounding",
+      "kicker": "Signals beyond appearance",
+      "summary": "Measure whether state/contact evidence and controlled synthetic augmentation improve a defined physical-skill task.",
+      "status": "scoping",
+      "cover": "assets/physical-grounding.webp",
+      "imageAlt": "AI editorial illustration of a robotic gripper with tactile pads touching a soft block; not physical validation.",
+      "updated": "2026-10-06",
+      "sources": [
+        {
+          "id": "trex2026paper",
+          "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
+          "url": "https://arxiv.org/html/2606.17055v1",
+          "type": "paper",
+          "year": 2026
+        },
+        {
+          "id": "trex2026data",
+          "title": "T-Rex public dataset card",
+          "url": "https://huggingface.co/datasets/zekaiwang/trex_dataset",
+          "type": "docs",
+          "year": 2026
+        },
+        {
+          "id": "gr00t2025n1",
+          "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+          "url": "https://arxiv.org/html/2503.14734v1",
+          "type": "paper",
+          "year": 2025
+        },
+        {
+          "id": "nvidia2025motion",
+          "title": "Building a Synthetic Motion Generation Pipeline for Humanoid Robot Learning",
+          "url": "https://developer.nvidia.com/blog/building-a-synthetic-motion-generation-pipeline-for-humanoid-robot-learning/",
+          "type": "docs",
+          "year": 2025
+        },
+        {
+          "id": "nvidia2026blueprint",
+          "title": "Synthetic manipulation motion generation blueprint (repository accessed 2026)",
+          "url": "https://github.com/NVIDIA-Omniverse-blueprints/synthetic-manipulation-motion-generation",
+          "type": "code",
+          "year": 2026
+        }
+      ],
+      "questions": [
+        {
+          "id": "pg-01",
+          "text": "Do temporal state descriptions and measured contact descriptors improve retrieval across held-out objects?",
+          "state": "open",
+          "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/3"
+        },
+        {
+          "id": "pg-02",
+          "text": "Which failures require physical sensing rather than additional RGB labels?",
+          "state": "open",
+          "issueUrl": null
+        },
+        {
+          "id": "pg-03",
+          "text": "Does controlled synthetic augmentation improve held-out simulated completion under equal training budgets?",
+          "state": "open",
+          "issueUrl": null
+        }
+      ],
+      "milestones": [
+        {
+          "label": "Primary sources reviewed",
+          "done": true
+        },
+        {
+          "label": "Public-subset and annotation pilot reviewed",
+          "done": false
+        },
+        {
+          "label": "Retrieval baseline executed and artifacts published",
+          "done": false
+        },
+        {
+          "label": "Independent review before simulator expansion",
+          "done": false
+        }
+      ],
+      "firstTask": {
+        "title": "Audit a capped public T-Rex subset for state-aware retrieval",
+        "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/3"
+      }
+    }
+  ]
+}

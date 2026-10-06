@@ -1,0 +1,89 @@
+{
+  "id": "physical-grounding",
+  "title": "Physical grounding",
+  "kicker": "Signals beyond appearance",
+  "summary": "Measure whether state/contact evidence and controlled synthetic augmentation improve a defined physical-skill task.",
+  "status": "scoping",
+  "cover": "assets/physical-grounding.webp",
+  "imageAlt": "AI editorial illustration of a robotic gripper with tactile pads touching a soft block; not physical validation.",
+  "updated": "2026-10-06",
+  "sources": [
+    {
+      "id": "trex2026paper",
+      "title": "T-Rex: Tactile-Reactive Dexterous Manipulation",
+      "url": "https://arxiv.org/html/2606.17055v1",
+      "type": "paper",
+      "year": 2026
+    },
+    {
+      "id": "trex2026data",
+      "title": "T-Rex public dataset card",
+      "url": "https://huggingface.co/datasets/zekaiwang/trex_dataset",
+      "type": "docs",
+      "year": 2026
+    },
+    {
+      "id": "gr00t2025n1",
+      "title": "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots",
+      "url": "https://arxiv.org/html/2503.14734v1",
+      "type": "paper",
+      "year": 2025
+    },
+    {
+      "id": "nvidia2025motion",
+      "title": "Building a Synthetic Motion Generation Pipeline for Humanoid Robot Learning",
+      "url": "https://developer.nvidia.com/blog/building-a-synthetic-motion-generation-pipeline-for-humanoid-robot-learning/",
+      "type": "docs",
+      "year": 2025
+    },
+    {
+      "id": "nvidia2026blueprint",
+      "title": "Synthetic manipulation motion generation blueprint (repository accessed 2026)",
+      "url": "https://github.com/NVIDIA-Omniverse-blueprints/synthetic-manipulation-motion-generation",
+      "type": "code",
+      "year": 2026
+    }
+  ],
+  "questions": [
+    {
+      "id": "pg-01",
+      "text": "Do temporal state descriptions and measured contact descriptors improve retrieval across held-out objects?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/3"
+    },
+    {
+      "id": "pg-02",
+      "text": "Which failures require physical sensing rather than additional RGB labels?",
+      "state": "open",
+      "issueUrl": null
+    },
+    {
+      "id": "pg-03",
+      "text": "Does controlled synthetic augmentation improve held-out simulated completion under equal training budgets?",
+      "state": "open",
+      "issueUrl": null
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Primary sources reviewed",
+      "done": true
+    },
+    {
+      "label": "Public-subset and annotation pilot reviewed",
+      "done": false
+    },
+    {
+      "label": "Retrieval baseline executed and artifacts published",
+      "done": false
+    },
+    {
+      "label": "Independent review before simulator expansion",
+      "done": false
+    }
+  ],
+  "firstTask": {
+    "title": "Audit a capped public T-Rex subset for state-aware retrieval",
+    "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/3"
+  }
+}

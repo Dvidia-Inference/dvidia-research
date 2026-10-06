@@ -1,0 +1,16 @@
+{
+  "name": "dvidia-research",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An open research notebook for applied physical skills.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test scripts/catalog.test.mjs",
+    "build": "node scripts/build-catalog.mjs",
+    "validate": "node scripts/validate.mjs",
+    "check": "npm run build && npm run validate"
+  }
+}

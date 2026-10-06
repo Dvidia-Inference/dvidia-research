@@ -1,0 +1,89 @@
+{
+  "id": "skill-relations",
+  "title": "Skill relations",
+  "kicker": "Events with evidence",
+  "summary": "Calibrate hand–object relations, then test temporal event graphs whose claims point back to video intervals.",
+  "status": "scoping",
+  "cover": "assets/skill-relations.webp",
+  "imageAlt": "AI editorial illustration of POV hands pouring from a pitcher into a blue mug; not experimental evidence.",
+  "updated": "2026-10-06",
+  "sources": [
+    {
+      "id": "neau2026relateanything",
+      "title": "RelateAnything: Real-Time Open-Vocabulary Relation Prediction From Any Inputs",
+      "url": "https://arxiv.org/abs/2609.12552",
+      "type": "paper",
+      "year": 2026
+    },
+    {
+      "id": "maelic2026code",
+      "title": "Maelic/RelateAnything",
+      "url": "https://github.com/Maelic/RelateAnything",
+      "type": "code",
+      "year": 2026
+    },
+    {
+      "id": "maelic2026model",
+      "title": "relsgg-vits16plus model card",
+      "url": "https://huggingface.co/maelic/relsgg-vits16plus",
+      "type": "docs",
+      "year": 2026
+    },
+    {
+      "id": "ram2026access",
+      "title": "RAM: Relate-Anything-Model (undated repository, accessed 2026)",
+      "url": "https://github.com/EvolvingLMMs-Lab/RelateAnything",
+      "type": "code",
+      "year": 2026
+    },
+    {
+      "id": "ji2019actiongenome",
+      "title": "Action Genome: Actions as Composition of Spatio-temporal Scene Graphs",
+      "url": "https://arxiv.org/abs/1912.06992",
+      "type": "paper",
+      "year": 2019
+    }
+  ],
+  "questions": [
+    {
+      "id": "sr-01",
+      "text": "Which hand–object relations can be calibrated on held-out POV clips while abstaining on ambiguous evidence?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/4"
+    },
+    {
+      "id": "sr-02",
+      "text": "How much error comes from supplied regions and track identities rather than relation scoring?",
+      "state": "open",
+      "issueUrl": null
+    },
+    {
+      "id": "sr-03",
+      "text": "Do simple temporal rules reduce false events without hiding short interactions or missing steps?",
+      "state": "open",
+      "issueUrl": null
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Primary sources reviewed",
+      "done": true
+    },
+    {
+      "label": "Pilot protocol reviewed",
+      "done": false
+    },
+    {
+      "label": "Baseline executed and artifacts published",
+      "done": false
+    },
+    {
+      "label": "Independent result review",
+      "done": false
+    }
+  ],
+  "firstTask": {
+    "title": "Define four relations and audit a 20-frame model run",
+    "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/4"
+  }
+}
