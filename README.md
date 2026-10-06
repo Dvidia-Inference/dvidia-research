@@ -4,7 +4,7 @@ Small, reproducible studies of what makes a physical demonstration useful: visib
 
 **Status: scoping. No experiments have run.** This repository contains source reviews, open questions and proposed protocols. It does not claim trained robot skills, validated transfer or measured improvements.
 
-[Browse the research site](https://dvidia-inference.github.io/dvidia-research/) *(deployment pending)* · [Read the research agenda](reports/Physical%20skill%20research%20agenda.md) · [Start contributing](CONTRIBUTING.md)
+[Browse the research site](https://dvidia-inference.github.io/dvidia-research/) · [Read the research agenda](reports/Physical%20skill%20research%20agenda.md) · [Start contributing](CONTRIBUTING.md)
 
 ## Choose a question
 
