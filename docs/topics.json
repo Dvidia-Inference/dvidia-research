@@ -198,13 +198,6 @@
           "year": 2021
         },
         {
-          "id": "rlds2026schema",
-          "title": "RLDS dataset schema (repository accessed 2026)",
-          "url": "https://github.com/google-research/rlds",
-          "type": "code",
-          "year": 2026
-        },
-        {
           "id": "lerobot2026v3",
           "title": "LeRobotDataset v3.0 (documentation accessed 2026)",
           "url": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3",
@@ -219,9 +212,16 @@
           "year": 2021
         },
         {
-          "id": "lerobot2026license",
-          "title": "LeRobot source license and third-party notices (accessed 2026)",
-          "url": "https://github.com/huggingface/lerobot/blob/main/LICENSE",
+          "id": "li2026argus",
+          "title": "Argus: An Open-Source Annotator for Robotics Data",
+          "url": "https://pantheon.inc/research/argus",
+          "type": "essay",
+          "year": 2026
+        },
+        {
+          "id": "pantheon2026argus",
+          "title": "Argus source at reviewed revision (accessed 2026)",
+          "url": "https://github.com/Pantheon-Industries-Inc/argus/tree/6c99686a3d93027c517f02f37f24b5b68532e12a",
           "type": "code",
           "year": 2026
         }
@@ -244,6 +244,12 @@
           "text": "How much does recording-level leakage change the selected evaluation metric?",
           "state": "open",
           "issueUrl": null
+        },
+        {
+          "id": "ep-04",
+          "text": "Do grounded temporal annotations reduce false completion labels, and what evidence should gate a robot-tested skill release?",
+          "state": "open",
+          "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/5"
         }
       ],
       "milestones": [
