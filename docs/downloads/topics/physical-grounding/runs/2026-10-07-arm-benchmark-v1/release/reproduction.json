@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "source_imported_from_extracted_bundle": true,
+  "archive_sha256": "e2b9f734ae03e3c751935dc97333cfa51a4d572e26ef8a0373bf9a84c28b7804",
+  "final_source_hashes": {
+    "arm_env.py": "e4af9b75364a568284b1e6d96469deacf498dd87a60b067fa5e310fe15c54c00",
+    "arm_policy.py": "d6d53d87703fb8608390092309285afb6a2c8fd3103a7abd77668be85469eab3",
+    "env.py": "929c1d8c3c4cafe0054c633ee5f3e51c551dd6b26ae014ab1ea9219b58eca8e4"
+  },
+  "protocol_sha256": "b537ea78e004a0258ffca891dfd10cff8a283249f712f1503d7afd7caa591f05",
+  "preinstalled_dependencies": true,
+  "physical_robot_ready": false,
+  "checks": [
+    {
+      "case_id": "dev-00",
+      "success": true,
+      "exact_control_steps_final_state_metrics_diagnostics_match": true
+    },
+    {
+      "case_id": "dev-10",
+      "success": true,
+      "exact_control_steps_final_state_metrics_diagnostics_match": true
+    },
+    {
+      "case_id": "dev-16",
+      "success": true,
+      "exact_control_steps_final_state_metrics_diagnostics_match": true
+    }
+  ],
+  "all_match": true,
+  "manifest_file_hashes_checked": 85,
+  "scope": "Repeats three visible development cases, excluding wall timing. No fresh heldout or cross-platform qualification.",
+  "network_guard": {
+    "enabled": true,
+    "scope": "Python socket calls during rollouts/training after dependency imports; not native C or installation",
+    "guard_self_test_passed": true,
+    "attempted_calls": []
+  }
+}

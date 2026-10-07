@@ -1,0 +1,8 @@
+{
+  "platform": "macOS sandbox-exec",
+  "policy": "(version 1) (allow default) (deny network*)",
+  "native_connect_self_test": "libc connect to 127.0.0.1:9 denied before rollouts",
+  "errno": 1,
+  "passed": true,
+  "scope": "Installed runtime only. Repeats three qualified scenes under process-level denial; no air-gapped dependency installation or other OS qualification."
+}

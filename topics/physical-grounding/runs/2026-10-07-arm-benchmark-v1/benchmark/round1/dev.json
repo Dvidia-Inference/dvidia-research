@@ -1,0 +1,5488 @@
+{
+  "schema_version": 1,
+  "label": "round1",
+  "split": "dev",
+  "protocol_sha256": "b537ea78e004a0258ffca891dfd10cff8a283249f712f1503d7afd7caa591f05",
+  "snapshot": {
+    "label": "round1",
+    "files": {
+      "arm_env.py": "7903f74e163827a03509fb2eb2429aa1b1b2feb8233cf11c6af8b03649780e7f",
+      "arm_policy.py": "bf6c74491e29d83db8c93c06a5995f31c3425c6c14174b038ebc5294f603485c",
+      "env.py": "929c1d8c3c4cafe0054c633ee5f3e51c551dd6b26ae014ab1ea9219b58eca8e4"
+    },
+    "exact_original_sources": true
+  },
+  "system": {
+    "utc": "2026-10-07T09:18:26.161340+00:00",
+    "system": "Darwin",
+    "macos": "26.5.2",
+    "kernel_release": "25.5.0",
+    "architecture": "arm64",
+    "processor": "Apple M5",
+    "logical_cpus": 10,
+    "memory_bytes": "25769803776",
+    "python": "3.12.9",
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "installed_packages": {
+      "websockets": "17.2",
+      "numpy": "2.5.3",
+      "etils": "1.14.0",
+      "mujoco": "3.15.0",
+      "PyOpenGL": "3.1.10",
+      "pip": "25.0",
+      "absl-py": "2.5.0",
+      "fsspec": "2026.9.0",
+      "typing_extensions": "4.16.0",
+      "zipp": "4.1.1",
+      "glfw": "2.10.2"
+    }
+  },
+  "timing_scope": "Single-world instrumented CPU episode: compilation, reset/settling, controller/IK, native stepping, observations and control-cadence diagnostics; excludes interpreter startup, imports, source copying, JSON I/O, installation, rendering and web UI. No GPU measurement or real-robot transfer claim.",
+  "metric_sampling": "Native joint/force/contact diagnostic maxima sampled after each20ms control step; env max pad force tracks1ms substeps. Sampled maxima are not continuous physical force peaks.",
+  "records": [
+    {
+      "case_id": "dev-00",
+      "group": "nominal",
+      "case_sha256": "b83c99a2ebd0ce746ba019373fa65b1ecd2bc439cd40e9d187e5aaf6a93fdcd8",
+      "seed": 100,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 133,
+        "descend": 91,
+        "close": 11,
+        "lift": 74,
+        "transfer": 106,
+        "place": 72,
+        "release": 10,
+        "retreat": 66,
+        "verify": 3
+      },
+      "simulated_seconds": 11.309999999999171,
+      "control_steps": 566,
+      "setup_seconds": 0.025791832944378257,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 100,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 11.309999999999171,
+        "steps": 566,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.1288081232281844,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.9055434385840053,
+        "target_distance": 0.000247825964729621,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "final_object_position": [
+        0.5402270280694467,
+        0.09990098815699923,
+        0.30999147829693713
+      ],
+      "metrics": {
+        "samples": 566,
+        "max_abs_joint_velocity_rad_s": [
+          0.17099631529497447,
+          0.3283794165659418,
+          0.5466782893094365,
+          0.0021219527291082836,
+          0.4317042654165272,
+          0.19269093985933441
+        ],
+        "max_abs_actuator_force": [
+          0.1888203583371748,
+          2.289005977481736,
+          1.2624768298294384,
+          0.003426483144444851,
+          0.12783013454201608,
+          0.025652606470235817,
+          0.8434748053810797,
+          0.8543698329992653
+        ],
+        "max_abs_native_ctrl": [
+          0.5887875517290331,
+          1.3148181306703803,
+          1.6590890009347519,
+          7.307076625227211e-05,
+          0.47201055210345083,
+          0.5888242635426965,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5887841518122648,
+          1.311749065580913,
+          1.6613897241753623,
+          7.311755705842616e-05,
+          0.47133076150557457,
+          0.5888242640903013
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.03341642203067897,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03870181888817236,
+          0.07999966938369737
+        ],
+        "joint_position_min_rad": [
+          -0.5971603554777438,
+          -1.31183712325094,
+          0.6047667340582844,
+          -2.3666648818514557e-05,
+          -0.47142743335824566,
+          -0.18311038835403912
+        ],
+        "joint_position_max_rad": [
+          0.18310986248678918,
+          -0.7435758735973917,
+          1.6610634604091081,
+          4.6809527537998154e-05,
+          0.1966542400967801,
+          0.5955328055189717
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.8881628767490601,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0006801675131109247,
+        "retained_lift_control_samples": 185,
+        "max_object_displacement_m": 0.21592659052478777,
+        "max_object_linear_speed_m_s": 0.08295895562288129,
+        "max_object_angular_speed_rad_s": 0.09407700480378682,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.00041349895701181527,
+          0.00015111554081533723,
+          0.0017110092543096145
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.002113354508765042,
+      "control_latency_p95_seconds": 0.0032217499683611095,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.33221554197371,
+      "simulated_seconds_per_wall_second": 8.489617215576938
+    },
+    {
+      "case_id": "dev-01",
+      "group": "nominal",
+      "case_sha256": "7c49a11a4115a332e89dfae17b66aa3f0efbc15a1a7fe41a571422bfe85eb1fd",
+      "seed": 101,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "retreat",
+      "stage_control_ticks": {
+        "approach": 95,
+        "descend": 87,
+        "close": 11,
+        "lift": 72,
+        "transfer": 252,
+        "place": 75,
+        "release": 10,
+        "retreat": 66
+      },
+      "simulated_seconds": 13.359999999998035,
+      "control_steps": 668,
+      "setup_seconds": 0.012025041971355677,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 101,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 13.359999999998035,
+        "steps": 668,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12979088804682115,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.8681405831778914,
+        "target_distance": 0.0004945651376420392,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.24999999579878157,
+          -0.18000000178568318,
+          0.3049914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.25,
+            -0.18,
+            0.305
+          ],
+          "target_position": [
+            0.48,
+            0.18,
+            0.305
+          ],
+          "object_half_size": [
+            0.015,
+            0.015,
+            0.015
+          ],
+          "object_mass": 0.02,
+          "object_friction": 0.4,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "8a43fe7707ab578e945d3712a47cc188609d9cee5271ac74806fd9dc84bd7765"
+      },
+      "final_object_position": [
+        0.4801887827306703,
+        0.17954296265300473,
+        0.3049914782969373
+      ],
+      "metrics": {
+        "samples": 668,
+        "max_abs_joint_velocity_rad_s": [
+          0.234520804985475,
+          0.3218365820211031,
+          0.5493089651834516,
+          0.0024948272124117226,
+          0.38733245796473725,
+          0.32330018444161146
+        ],
+        "max_abs_actuator_force": [
+          0.1779677065445071,
+          2.0008007971565576,
+          1.1614017017923857,
+          0.005022867941249911,
+          0.1268764378161933,
+          0.04294882286519197,
+          0.8957134612322903,
+          0.89475731795878
+        ],
+        "max_abs_native_ctrl": [
+          0.6240314161878446,
+          1.7205751958138116,
+          2.1127286915545005,
+          0.00012426294910141878,
+          0.5499325985417037,
+          0.6240317165353546,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.624031417415468,
+          1.718838756274518,
+          2.1149452916632447,
+          0.00012451349623470782,
+          0.5492527773346366,
+          0.6240317142128546
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.023446296865574177,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.029207581117534392,
+          0.07999967899155655
+        ],
+        "joint_position_min_rad": [
+          -0.6240316839931842,
+          -1.718531616728384,
+          0.9028875001980452,
+          -1.313287745117497e-05,
+          -0.5494234523317465,
+          -0.35877002448915785
+        ],
+        "joint_position_max_rad": [
+          0.35876897851696654,
+          -0.8865365963633496,
+          2.114570066424213,
+          5.655552026382506e-05,
+          0.19359356862810517,
+          0.6240303139004456
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.48146838327161623,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.00042183929991809434,
+        "retained_lift_control_samples": 332,
+        "max_object_displacement_m": 0.435688946800999,
+        "max_object_linear_speed_m_s": 0.07910166669336864,
+        "max_object_angular_speed_rad_s": 0.13807145955805863,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.00029772457542048825,
+          0.0006402053930188445,
+          0.002474953773307975
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.002412479487247765,
+      "control_latency_p95_seconds": 0.003825799952028319,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.8442435000324622,
+      "simulated_seconds_per_wall_second": 7.244162714827447
+    },
+    {
+      "case_id": "dev-02",
+      "group": "nominal",
+      "case_sha256": "383749304e2deb3906100cea51c9dcd5e985c748e57c9b3297fde431e2d7efee",
+      "seed": 102,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 276,
+        "descend": 94,
+        "close": 11,
+        "lift": 76,
+        "transfer": 220,
+        "place": 65,
+        "release": 10,
+        "retreat": 66,
+        "verify": 6
+      },
+      "simulated_seconds": 16.468999999997145,
+      "control_steps": 824,
+      "setup_seconds": 0.011326415929943323,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 102,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 16.468999999997145,
+        "steps": 824,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12429906783944794,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.2307738304982925,
+        "target_distance": 0.0008779066308119737,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.5,
+          "table_object": 1.5,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.2599999963675131,
+          0.18000000006244615,
+          0.3149914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.26,
+            0.18,
+            0.315
+          ],
+          "target_position": [
+            0.54,
+            -0.07,
+            0.315
+          ],
+          "object_half_size": [
+            0.025,
+            0.025,
+            0.025
+          ],
+          "object_mass": 0.08,
+          "object_friction": 1.5,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "109ac3bfef361436e1ad9e1a56b034f8100b16ad21ca68aee91fd2dbbc2ab7ef"
+      },
+      "final_object_position": [
+        0.5403616955824997,
+        -0.06920011017096055,
+        0.31499147829693724
+      ],
+      "metrics": {
+        "samples": 824,
+        "max_abs_joint_velocity_rad_s": [
+          0.23789587813947072,
+          0.32447454177276797,
+          0.5587159061960068,
+          0.0027342139440775584,
+          0.4403912864228963,
+          0.30644933843788996
+        ],
+        "max_abs_actuator_force": [
+          0.19503960803822906,
+          2.5164467789440437,
+          1.4229278994395713,
+          0.008819099163000117,
+          0.1574612505799564,
+          0.04098321363898805,
+          0.8895473959904932,
+          0.9274714072532833
+        ],
+        "max_abs_native_ctrl": [
+          0.6055445457801245,
+          1.7535881936384057,
+          2.0832706051737757,
+          0.00013649782968468954,
+          0.5493031003280625,
+          0.6055443888109682,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.6055445457723045,
+          1.7519446724273195,
+          2.085486620462141,
+          0.00013726679330999204,
+          0.5486233335840949,
+          0.605544388367588
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.04333025406435704,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.04862496803307896,
+          0.07999939553979073
+        ],
+        "joint_position_min_rad": [
+          -0.5979567167564498,
+          -1.7517930014896728,
+          0.6239374309311356,
+          -6.549259463952978e-05,
+          -0.5487386208020036,
+          -0.6055423824895481
+        ],
+        "joint_position_max_rad": [
+          0.6055424370876757,
+          -0.7632248324917631,
+          2.085024542668272,
+          8.600557145155577e-05,
+          0.19605863024867198,
+          0.5967875274009321
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.4482069985103274,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.000722306597559647,
+        "retained_lift_control_samples": 295,
+        "max_object_displacement_m": 0.3847601739594957,
+        "max_object_linear_speed_m_s": 0.09250352207243324,
+        "max_object_angular_speed_rad_s": 0.09484500347023928,
+        "jaw_contact_sliding_mu": [
+          1.5
+        ],
+        "table_contact_sliding_mu": [
+          1.5
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0007553060072312823,
+          0.0005520062367605216,
+          0.004342547483042081
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0017501250258646905,
+      "control_latency_p95_seconds": 0.0026730937650427215,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.6022233749972656,
+      "simulated_seconds_per_wall_second": 10.27884142560662
+    },
+    {
+      "case_id": "dev-03",
+      "group": "nominal",
+      "case_sha256": "1182717572faff0f98dfb34adf67b3a61051effa8755f20545161afa276d9c8c",
+      "seed": 103,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 137,
+        "descend": 93,
+        "close": 11,
+        "lift": 77,
+        "transfer": 195,
+        "place": 70,
+        "release": 10,
+        "retreat": 67,
+        "verify": 6
+      },
+      "simulated_seconds": 13.31599999999806,
+      "control_steps": 666,
+      "setup_seconds": 0.008685125038027763,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 103,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 13.31599999999806,
+        "steps": 666,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12181285153718624,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.1178927717069387,
+        "target_distance": 0.00048721710981379697,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.5400000000704337,
+          -0.09000000454507144,
+          0.31499147829693863
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.54,
+            -0.09,
+            0.315
+          ],
+          "target_position": [
+            0.28,
+            0.1,
+            0.315
+          ],
+          "object_half_size": [
+            0.02,
+            0.015,
+            0.025
+          ],
+          "object_mass": 0.06,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "0bec4d516fd2bd1f8e0081ed1eccef7a7a6afc643a6b39f5e263ffa94aa5d369"
+      },
+      "final_object_position": [
+        0.2804857808172433,
+        0.09996360095783288,
+        0.31499147829693713
+      ],
+      "metrics": {
+        "samples": 666,
+        "max_abs_joint_velocity_rad_s": [
+          0.17242766314358107,
+          0.3802785455009745,
+          0.7140342973191642,
+          0.0019786296051194975,
+          0.46560386635660633,
+          0.20879438462210223
+        ],
+        "max_abs_actuator_force": [
+          0.2043436862881549,
+          2.0540656690438936,
+          1.3807710332039846,
+          0.003239575793936334,
+          0.13883375881877313,
+          0.027946026893182818,
+          1.0350577891476993,
+          0.9716070712144038
+        ],
+        "max_abs_native_ctrl": [
+          0.5874927010965657,
+          1.7595961893218308,
+          2.1507900405745874,
+          6.383671150231071e-05,
+          0.5492859691644334,
+          0.5875383468924998,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5874936233959116,
+          1.7579779838936624,
+          2.153007239904508,
+          6.384637673784247e-05,
+          0.5486061106148673,
+          0.5875383511104076
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.03268915005820692,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03850931679393915,
+          0.07999960094232199
+        ],
+        "joint_position_min_rad": [
+          -0.59683476835004,
+          -1.7568985400548158,
+          0.45309191610918603,
+          -2.6960000830527293e-05,
+          -0.5485486857514899,
+          -0.3430217739394973
+        ],
+        "joint_position_max_rad": [
+          0.3430211769578271,
+          -0.7510428142566788,
+          2.1527772863626606,
+          6.72374453097485e-05,
+          0.2998479497192063,
+          0.5950188109796639
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.44310145994518435,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0007912920453466035,
+        "retained_lift_control_samples": 272,
+        "max_object_displacement_m": 0.3348954421154601,
+        "max_object_linear_speed_m_s": 0.08223804817765955,
+        "max_object_angular_speed_rad_s": 0.19295319070563738,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0006872146947741187,
+          0.0003102514156707453,
+          0.0027830450438058874
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015287710120901465,
+      "control_latency_p95_seconds": 0.0018629897967912257,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.0705555829918012,
+      "simulated_seconds_per_wall_second": 12.438401341838633
+    },
+    {
+      "case_id": "dev-04",
+      "group": "nominal",
+      "case_sha256": "16c8ea46f3d51dceb1932920715be8346dff480bc0f131c8853084a5968c8b50",
+      "seed": 104,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 280,
+        "descend": 91,
+        "close": 11,
+        "lift": 77,
+        "transfer": 245,
+        "place": 70,
+        "release": 10,
+        "retreat": 67,
+        "verify": 3
+      },
+      "simulated_seconds": 17.074999999997885,
+      "control_steps": 854,
+      "setup_seconds": 0.0072732080006971955,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 104,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 17.074999999997885,
+        "steps": 854,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12300950797906318,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.097633108457724,
+        "target_distance": 0.00048098916437806457,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.2,
+          "table_object": 1.2,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.45999999978609696,
+          0.2000000031104825,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.2,
+            0.31
+          ],
+          "target_position": [
+            0.31,
+            -0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.015,
+            0.025,
+            0.02
+          ],
+          "object_mass": 0.06,
+          "object_friction": 1.2,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "36e626b9ee765c3a1562110e3a42346f8acd3f607596071d2e0fb3aba2a9e8cf"
+      },
+      "final_object_position": [
+        0.3104419812380963,
+        -0.17981044646667266,
+        0.3099914782969371
+      ],
+      "metrics": {
+        "samples": 854,
+        "max_abs_joint_velocity_rad_s": [
+          0.1981227384267521,
+          0.21634371676074857,
+          0.37754921103544137,
+          0.003580143292306121,
+          0.3552263290714407,
+          0.19057949539336752
+        ],
+        "max_abs_actuator_force": [
+          0.19659603230537925,
+          1.830245292018617,
+          1.3120267581350618,
+          0.013770224846120832,
+          0.13751170932312462,
+          0.02550208445937585,
+          0.9240936375253557,
+          0.8949730440037116
+        ],
+        "max_abs_native_ctrl": [
+          0.588587911002787,
+          1.5492231695781171,
+          1.9238969472086707,
+          5.35251182963541e-05,
+          0.5326613928505367,
+          0.5886253356920139,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5885845112134575,
+          1.546927135478557,
+          1.9261348762499029,
+          5.338977094777371e-05,
+          0.5319815327614817,
+          0.5886253374846823
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.02346221163472217,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.029225952645382983,
+          0.07999962983501577
+        ],
+        "joint_position_min_rad": [
+          -0.5971095972172661,
+          -1.5462925066738615,
+          0.900270535029241,
+          -5.973701907587846e-05,
+          -0.5319144781467051,
+          -0.4101289157958138
+        ],
+        "joint_position_max_rad": [
+          0.4101300408029585,
+          -0.9263379273998639,
+          1.9258537487938658,
+          1.9670890146116935e-05,
+          0.19743009271809805,
+          0.595453290713523
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.6537074933261386,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0004145271648718601,
+        "retained_lift_control_samples": 323,
+        "max_object_displacement_m": 0.41694711873899276,
+        "max_object_linear_speed_m_s": 0.08286576634287014,
+        "max_object_angular_speed_rad_s": 0.29535944193575375,
+        "jaw_contact_sliding_mu": [
+          1.2
+        ],
+        "table_contact_sliding_mu": [
+          1.2
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0002741690584768808,
+          0.00023533401718903169,
+          0.0034673770073864185
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0018024789751507342,
+      "control_latency_p95_seconds": 0.002324198314454403,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.505188874900341,
+      "simulated_seconds_per_wall_second": 11.344091286303472
+    },
+    {
+      "case_id": "dev-05",
+      "group": "nominal",
+      "case_sha256": "d6b7152245344eb4212fa0c8888dff7a33a92d46a92473587eba7b617f640c73",
+      "seed": 105,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "retreat",
+      "stage_control_ticks": {
+        "approach": 262,
+        "descend": 87,
+        "close": 11,
+        "lift": 71,
+        "transfer": 124,
+        "place": 74,
+        "release": 10,
+        "retreat": 67
+      },
+      "simulated_seconds": 14.115999999997616,
+      "control_steps": 706,
+      "setup_seconds": 0.00889704201836139,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 105,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 14.115999999997616,
+        "steps": 706,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.1237433039874794,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.9051416090481923,
+        "target_distance": 0.0005046525004622761,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.5300000000074967,
+          0.14999999628034694,
+          0.3049914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.53,
+            0.15,
+            0.305
+          ],
+          "target_position": [
+            0.32,
+            0.14,
+            0.305
+          ],
+          "object_half_size": [
+            0.025,
+            0.02,
+            0.015
+          ],
+          "object_mass": 0.02,
+          "object_friction": 0.4,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "954774dbdff7298be493718f873df839cd2973950b9389ef02dd720f5191515d"
+      },
+      "final_object_position": [
+        0.32033272480412933,
+        0.14037933590855184,
+        0.3049914782969372
+      ],
+      "metrics": {
+        "samples": 706,
+        "max_abs_joint_velocity_rad_s": [
+          0.15997519949075767,
+          0.4357597153988237,
+          0.760991526890275,
+          0.002570189300396478,
+          0.48430170973805164,
+          0.20335648095960554
+        ],
+        "max_abs_actuator_force": [
+          0.20016438963537553,
+          2.0403814218121283,
+          1.237591359225405,
+          0.01088726367157423,
+          0.11595173220493749,
+          0.027213956146070473,
+          0.8221808747557207,
+          0.8457678769457218
+        ],
+        "max_abs_native_ctrl": [
+          0.5878214913651035,
+          1.5689735100697804,
+          1.959568262415309,
+          1.774211082454046e-05,
+          0.5380419121675266,
+          0.5878627979921227,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5878192372150254,
+          1.566742821799962,
+          1.9618001977823916,
+          1.7725833956754406e-05,
+          0.537362065653392,
+          0.5878628004066226
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.0434040222347154,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.048613196149076,
+          0.07999959788612415
+        ],
+        "joint_position_min_rad": [
+          -0.5969162515724685,
+          -1.5645028051525927,
+          0.49370590313146634,
+          -2.5757507256714373e-05,
+          -0.5373363355377931,
+          -0.41241009488589936
+        ],
+        "joint_position_max_rad": [
+          0.41240926619253665,
+          -0.736751123664943,
+          1.961607842094392,
+          3.173555012727476e-05,
+          0.262440469310562,
+          0.595148491576282
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.6354971948474075,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0007328418139636044,
+        "retained_lift_control_samples": 201,
+        "max_object_displacement_m": 0.23494110626688544,
+        "max_object_linear_speed_m_s": 0.07908472060778954,
+        "max_object_angular_speed_rad_s": 0.14482022655925725,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0003999818712107639,
+          0.0003561674260800507,
+          0.0015134255713912803
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015523125184699893,
+      "control_latency_p95_seconds": 0.0019227609154768288,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.163021874963306,
+      "simulated_seconds_per_wall_second": 12.137346944091645
+    },
+    {
+      "case_id": "dev-06",
+      "group": "nominal",
+      "case_sha256": "e5b15f96bf8aef03cec039ffe07a27c586d5139f9377a176381be3b20215e26e",
+      "seed": 106,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 54,
+        "descend": 94,
+        "close": 11,
+        "lift": 77,
+        "transfer": 219,
+        "place": 64,
+        "release": 10,
+        "retreat": 66,
+        "verify": 6
+      },
+      "simulated_seconds": 12.006999999998785,
+      "control_steps": 601,
+      "setup_seconds": 0.007364958059042692,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 106,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 12.006999999998785,
+        "steps": 601,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12360669353573439,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.4439005035978196,
+        "target_distance": 0.0008714417965356413,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 1.0,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.3199999957684508,
+          -0.1999999982435131,
+          0.31499147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.32,
+            -0.2,
+            0.315
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.315
+          ],
+          "object_half_size": [
+            0.0175,
+            0.0225,
+            0.025
+          ],
+          "object_mass": 0.08,
+          "object_friction": 1.0,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "d3a24db499ab1992a725bbfe185d6a27de4a6ce10c75218f14fad9ce6c181ee6"
+      },
+      "final_object_position": [
+        0.5404975643230153,
+        0.09928462042957008,
+        0.3149914782969368
+      ],
+      "metrics": {
+        "samples": 601,
+        "max_abs_joint_velocity_rad_s": [
+          0.19494858098920215,
+          0.3148129234757936,
+          0.5763286783691268,
+          0.002859311339014938,
+          0.4621575748059644,
+          0.2636038205126964
+        ],
+        "max_abs_actuator_force": [
+          0.2156996907796156,
+          2.537758927329719,
+          1.4265239254112885,
+          0.005966556083287107,
+          0.15121390090305198,
+          0.03501029974601266,
+          1.2326067072208566,
+          1.2404905315313304
+        ],
+        "max_abs_native_ctrl": [
+          0.5980353989875055,
+          1.4708725956269506,
+          1.8485244561629142,
+          0.00011497875480743744,
+          0.5188059545864904,
+          0.5980411700513663,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5980341389360189,
+          1.4683156054695758,
+          1.850778068751168,
+          0.00011556619087045307,
+          0.5181261542301746,
+          0.598041169627257
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.025335232085078832,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03289416167170251,
+          0.0799991719085924
+        ],
+        "joint_position_min_rad": [
+          -0.5995000933349569,
+          -1.46624138774199,
+          0.5755267553614054,
+          -5.146684588506869e-05,
+          -0.5182315098912592,
+          -0.18310929451967028
+        ],
+        "joint_position_max_rad": [
+          0.18310883351120305,
+          -0.7436104881581354,
+          1.8503772288904328,
+          7.821383510076064e-05,
+          0.19310043609630617,
+          0.5992170079897542
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.7337586122580102,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0011274888708579847,
+        "retained_lift_control_samples": 294,
+        "max_object_displacement_m": 0.3817283879797019,
+        "max_object_linear_speed_m_s": 0.09148028969946244,
+        "max_object_angular_speed_rad_s": 0.1894596018672297,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          1.0
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.00044326569253672066,
+          0.0004928885467819638,
+          0.004369200010662377
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015417078975588083,
+      "control_latency_p95_seconds": 0.0019203330157324672,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 0.9627234580693766,
+      "simulated_seconds_per_wall_second": 12.471909663526164
+    },
+    {
+      "case_id": "dev-07",
+      "group": "nominal",
+      "case_sha256": "60f3d1c65314dccf33091eb3d43258288f23db445365d2e1e56aa5bfe78aad4f",
+      "seed": 107,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 216,
+        "descend": 89,
+        "close": 11,
+        "lift": 74,
+        "transfer": 187,
+        "place": 72,
+        "release": 10,
+        "retreat": 67,
+        "verify": 2
+      },
+      "simulated_seconds": 14.54299999999738,
+      "control_steps": 728,
+      "setup_seconds": 0.0070734170731157064,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 107,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 14.54299999999738,
+        "steps": 728,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12360145655217736,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.0135129007468464,
+        "target_distance": 0.00042584376626865516,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.5,
+          "table_object": 1.5,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.5499999999591854,
+          0.05999999455321243,
+          0.3074914782969388
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.55,
+            0.06,
+            0.3075
+          ],
+          "target_position": [
+            0.35,
+            -0.18,
+            0.3075
+          ],
+          "object_half_size": [
+            0.0225,
+            0.015,
+            0.0175
+          ],
+          "object_mass": 0.04,
+          "object_friction": 1.5,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "05cf7f563a49f6ebd30b8f0ceda72e46d461748088c74434965fd5398bac8226"
+      },
+      "final_object_position": [
+        0.3504233666717993,
+        -0.18004506611871848,
+        0.3074914782969371
+      ],
+      "metrics": {
+        "samples": 728,
+        "max_abs_joint_velocity_rad_s": [
+          0.16645841424638075,
+          0.3359159149660499,
+          0.6328165039636346,
+          0.0026410786555677327,
+          0.46628246593072686,
+          0.2087836055816919
+        ],
+        "max_abs_actuator_force": [
+          0.20443007719231332,
+          2.0497598644627715,
+          1.2620838232777771,
+          0.008661996484418365,
+          0.12733894887769281,
+          0.02794172189886268,
+          0.8305108633554985,
+          0.8824710648451752
+        ],
+        "max_abs_native_ctrl": [
+          0.5874954069176972,
+          1.4134289786053325,
+          1.7815798069056588,
+          4.699645687432396e-05,
+          0.5039718666199149,
+          0.5875389210034799,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5874941985777703,
+          1.4106840474925388,
+          1.7838477582160308,
+          4.710575009282239e-05,
+          0.5032920163119567,
+          0.5875389242351902
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.038425833875437285,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.043637835473433514,
+          0.07999961659647165
+        ],
+        "joint_position_min_rad": [
+          -0.5968342766206225,
+          -1.4085283737436518,
+          0.4425915597220835,
+          -4.652241954522229e-05,
+          -0.5032591808432478,
+          -0.10866107493039139
+        ],
+        "joint_position_max_rad": [
+          0.10866096677700968,
+          -0.7260936420113915,
+          1.7836524319454115,
+          3.341424385959553e-05,
+          0.2895003489504242,
+          0.5950190346890576
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.7914716262563484,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0007174775137937904,
+        "retained_lift_control_samples": 265,
+        "max_object_displacement_m": 0.3262708929008834,
+        "max_object_linear_speed_m_s": 0.08198716086294476,
+        "max_object_angular_speed_rad_s": 0.17074808803493607,
+        "jaw_contact_sliding_mu": [
+          1.5
+        ],
+        "table_contact_sliding_mu": [
+          1.5
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0003948408200905029,
+          0.0002676468957991049,
+          0.0024997207323553816
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0014856035122647882,
+      "control_latency_p95_seconds": 0.001829924964113161,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.1212776250904426,
+      "simulated_seconds_per_wall_second": 12.970026044017722
+    },
+    {
+      "case_id": "dev-08",
+      "group": "nominal",
+      "case_sha256": "5dd3d0a7fc38d44fec78c0e64e1928a363cfbb709ec3d81d79205dea56768be1",
+      "seed": 108,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "retreat",
+      "stage_control_ticks": {
+        "approach": 253,
+        "descend": 88,
+        "close": 11,
+        "lift": 78,
+        "transfer": 201,
+        "place": 65,
+        "release": 10,
+        "retreat": 66
+      },
+      "simulated_seconds": 15.436999999996884,
+      "control_steps": 772,
+      "setup_seconds": 0.008195000002160668,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 108,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 15.436999999996884,
+        "steps": 772,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.1233543146049435,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.4434015484041658,
+        "target_distance": 0.0005565168380587195,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000008779905,
+          0.1600000024735627,
+          0.3049914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.16,
+            0.305
+          ],
+          "target_position": [
+            0.5,
+            -0.16,
+            0.305
+          ],
+          "object_half_size": [
+            0.02,
+            0.025,
+            0.015
+          ],
+          "object_mass": 0.08,
+          "object_friction": 0.4,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "8063c4d5152130d697c497a800c54c4b2b94596491edd286e1e5324735ae1ca7"
+      },
+      "final_object_position": [
+        0.5004440316938645,
+        -0.15966462822649546,
+        0.3049914782969373
+      ],
+      "metrics": {
+        "samples": 772,
+        "max_abs_joint_velocity_rad_s": [
+          0.18731731649947622,
+          0.20406454430078116,
+          0.3694261507564429,
+          0.003933632403694887,
+          0.4057316971484601,
+          0.24187846522792736
+        ],
+        "max_abs_actuator_force": [
+          0.2327258067246305,
+          2.413237982750161,
+          1.4134349669313337,
+          0.00963087384068246,
+          0.1508167036177781,
+          0.03218335351349211,
+          1.2129892843084331,
+          1.239838334102238
+        ],
+        "max_abs_native_ctrl": [
+          0.589718093229616,
+          1.4517634549062395,
+          1.70143231178614,
+          0.00010328885365416868,
+          0.48370211087486004,
+          0.5897507805846749,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.589713993512341,
+          1.4491348299337468,
+          1.7037218282103797,
+          0.0001035485190676269,
+          0.4830223433199848,
+          0.5897507803112716
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.030400019292224675,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03794450060765987,
+          0.07999972705791403
+        ],
+        "joint_position_min_rad": [
+          -0.5973954954915168,
+          -1.4490144294303884,
+          0.8107104843765934,
+          -8.581222471878424e-05,
+          -0.48315394716868615,
+          -0.3985215214115971
+        ],
+        "joint_position_max_rad": [
+          0.39852093561493457,
+          -0.8406496017223994,
+          1.7032867429262337,
+          2.365394294831557e-05,
+          0.19662243776194097,
+          0.5959031539581147
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.7509855705696118,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0010592383921552984,
+        "retained_lift_control_samples": 277,
+        "max_object_displacement_m": 0.35336373666755966,
+        "max_object_linear_speed_m_s": 0.08919753270069869,
+        "max_object_angular_speed_rad_s": 0.10073130698639104,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.00028391734676536107,
+          0.00021863878863456754,
+          0.0035056214429443067
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015105835045687854,
+      "control_latency_p95_seconds": 0.0020538269018288693,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.251348583959043,
+      "simulated_seconds_per_wall_second": 12.336290780908529
+    },
+    {
+      "case_id": "dev-09",
+      "group": "nominal",
+      "case_sha256": "64b49d0351750abcb26186ab6ee33c00940b0e749a78afbc5e777e4d27f48d22",
+      "seed": 109,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 72,
+        "descend": 94,
+        "close": 11,
+        "lift": 77,
+        "transfer": 132,
+        "place": 70,
+        "release": 10,
+        "retreat": 67,
+        "verify": 6
+      },
+      "simulated_seconds": 10.775999999999467,
+      "control_steps": 539,
+      "setup_seconds": 0.009462375077418983,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 109,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 10.775999999999467,
+        "steps": 539,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12239093726015315,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.9867106938125328,
+        "target_distance": 0.0006392455432124152,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.2,
+          "table_object": 1.2,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4800000000448965,
+          -0.1800000047072077,
+          0.31499147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.18,
+            0.315
+          ],
+          "target_position": [
+            0.26,
+            -0.17,
+            0.315
+          ],
+          "object_half_size": [
+            0.025,
+            0.015,
+            0.025
+          ],
+          "object_mass": 0.06,
+          "object_friction": 1.2,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "95e1e9f6b68387d1858b29662138f82e7e410aedead6759ddb1af84baac9933d"
+      },
+      "final_object_position": [
+        0.2604140778952613,
+        -0.1704869309414587,
+        0.314991478296937
+      ],
+      "metrics": {
+        "samples": 539,
+        "max_abs_joint_velocity_rad_s": [
+          0.1511795886595577,
+          0.30463884807680003,
+          0.5246987336155922,
+          0.0035458899558870435,
+          0.39748124866255247,
+          0.20043529358603573
+        ],
+        "max_abs_actuator_force": [
+          0.1960490218052655,
+          1.8757729998419563,
+          1.3319981253418973,
+          0.014540575753336477,
+          0.13803206339015617,
+          0.026828097434119513,
+          0.8571790951705314,
+          0.9172985575546253
+        ],
+        "max_abs_native_ctrl": [
+          0.5879926354802565,
+          1.7108092104454222,
+          2.1034170447697007,
+          3.9206435421633974e-05,
+          0.5497974968203363,
+          0.5880372702699003,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.587994337733729,
+          1.7090342592113081,
+          2.1056316587869794,
+          3.918869191674888e-05,
+          0.5491176413466919,
+          0.5880372746971023
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.04331226052739772,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.04862364954585935,
+          0.07999952678078853
+        ],
+        "joint_position_min_rad": [
+          -0.5969617306615412,
+          -1.7078246023733445,
+          0.7813108969211648,
+          -4.9091516409709714e-05,
+          -0.5490669674306828,
+          0.35877118888609033
+        ],
+        "joint_position_max_rad": [
+          -0.3587783755448302,
+          -0.886779606101479,
+          2.105433466845536,
+          2.0284556663878673e-05,
+          0.19864214622308118,
+          0.5952182425614501
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.49217539762665563,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.000714534766833481,
+        "retained_lift_control_samples": 209,
+        "max_object_displacement_m": 0.24402909319436836,
+        "max_object_linear_speed_m_s": 0.08606537057874634,
+        "max_object_angular_speed_rad_s": 0.2760450391677533,
+        "jaw_contact_sliding_mu": [
+          1.2
+        ],
+        "table_contact_sliding_mu": [
+          1.2
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0008111630737950848,
+          0.00034672561351206665,
+          0.00216254015495293
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0018505000043660402,
+      "control_latency_p95_seconds": 0.002401842002291232,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.02644487505313,
+      "simulated_seconds_per_wall_second": 10.498371867696926
+    },
+    {
+      "case_id": "dev-10",
+      "group": "nominal",
+      "case_sha256": "8dec8a3902d1a4973f24f6023906b2d4f2120600be5cb6f25f9ad6704cb46425",
+      "seed": 110,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "retreat",
+      "stage_control_ticks": {
+        "approach": 193,
+        "descend": 88,
+        "close": 11,
+        "lift": 76,
+        "transfer": 142,
+        "place": 65,
+        "release": 10,
+        "retreat": 66
+      },
+      "simulated_seconds": 13.010999999998228,
+      "control_steps": 651,
+      "setup_seconds": 0.008810000028461218,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 110,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 13.010999999998228,
+        "steps": 651,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12550107517593911,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.3988810847377238,
+        "target_distance": 0.0003241410706611742,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30999999997354044,
+          0.04999999714236478,
+          0.3049914782969388
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.31,
+            0.05,
+            0.305
+          ],
+          "target_position": [
+            0.52,
+            0.18,
+            0.305
+          ],
+          "object_half_size": [
+            0.015,
+            0.02,
+            0.015
+          ],
+          "object_mass": 0.08,
+          "object_friction": 0.4,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "0acea15277f1c70398e61e36fb0ac12ffa3ba7315919537d307c856782d552c0"
+      },
+      "final_object_position": [
+        0.5202351228897774,
+        0.17977703802797554,
+        0.3049914782969371
+      ],
+      "metrics": {
+        "samples": 651,
+        "max_abs_joint_velocity_rad_s": [
+          0.2249364415660325,
+          0.3971616906941025,
+          0.6693937129314951,
+          0.0021036390020035176,
+          0.4515914291194369,
+          0.2057517420750571
+        ],
+        "max_abs_actuator_force": [
+          0.16823877266607212,
+          2.549575632139863,
+          1.4194573242979232,
+          0.004022957113270904,
+          0.1567170082761109,
+          0.027359264785220105,
+          1.2926026385809837,
+          1.2626012146686016
+        ],
+        "max_abs_native_ctrl": [
+          0.5916366775135248,
+          1.6987456045254774,
+          2.0913670579008885,
+          5.472140083845016e-05,
+          0.5495646131464216,
+          0.5916623368913159,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5916324124793012,
+          1.696921386580137,
+          2.09358652174653,
+          5.444709365203319e-05,
+          0.5488849048812077,
+          0.5916623382585653
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.02025674349251788,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.02786376121158996,
+          0.0799994678770662
+        ],
+        "joint_position_min_rad": [
+          -0.5978803538470966,
+          -1.695082892546325,
+          0.6204246197536667,
+          -1.7137707667339857e-05,
+          -0.5490343024473111,
+          -0.3332436668130424
+        ],
+        "joint_position_max_rad": [
+          0.3332431813604431,
+          -0.7389671976553308,
+          2.093113940326061,
+          2.3396469668950373e-05,
+          0.1956531090502405,
+          0.5966672441522765
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.5049171074536751,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0011020593727397922,
+        "retained_lift_control_samples": 218,
+        "max_object_displacement_m": 0.26661173611418093,
+        "max_object_linear_speed_m_s": 0.09233295826829817,
+        "max_object_angular_speed_rad_s": 0.2311277284297735,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0008387777714146116,
+          0.0004134186982043264,
+          0.0037357813355496927
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015917089767754078,
+      "control_latency_p95_seconds": 0.0024017500109039247,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.1826444580219686,
+      "simulated_seconds_per_wall_second": 11.00161583791613
+    },
+    {
+      "case_id": "dev-11",
+      "group": "nominal",
+      "case_sha256": "8990d764a999c74f57f123b508afd9d268de7da4ee23310bc42833b2ff5ec9a3",
+      "seed": 111,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 240,
+        "descend": 93,
+        "close": 11,
+        "lift": 71,
+        "transfer": 180,
+        "place": 75,
+        "release": 10,
+        "retreat": 67,
+        "verify": 6
+      },
+      "simulated_seconds": 15.055999999997095,
+      "control_steps": 753,
+      "setup_seconds": 0.008791166008450091,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 111,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 15.055999999997095,
+        "steps": 753,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12489341410887678,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.906564970113743,
+        "target_distance": 0.00038185873540896496,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.5099999994463776,
+          0.12000000188810474,
+          0.3149914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.51,
+            0.12,
+            0.315
+          ],
+          "target_position": [
+            0.3,
+            -0.1,
+            0.315
+          ],
+          "object_half_size": [
+            0.025,
+            0.025,
+            0.025
+          ],
+          "object_mass": 0.02,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "608bcb498761a176e7acd2732a6a3205f15ad3e18239a8f7537f19e713d378d4"
+      },
+      "final_object_position": [
+        0.3003513427585504,
+        -0.1001493376724046,
+        0.314991478296937
+      ],
+      "metrics": {
+        "samples": 753,
+        "max_abs_joint_velocity_rad_s": [
+          0.19243944001162488,
+          0.2913427510133763,
+          0.4983103076698396,
+          0.0013866626793336892,
+          0.3720505786298795,
+          0.2022887264102887
+        ],
+        "max_abs_actuator_force": [
+          0.19942132324314343,
+          1.9252504353005406,
+          1.1611874600667988,
+          0.002647907844877618,
+          0.1150244851302169,
+          0.027070955561342203,
+          0.8689430241222764,
+          0.8495605517580387
+        ],
+        "max_abs_native_ctrl": [
+          0.5878856206684623,
+          1.6905194046562682,
+          2.08324016611344,
+          4.65392813038878e-05,
+          0.5492697522823208,
+          0.5879265227212307,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5878831904645685,
+          1.6886788630138032,
+          2.0854554550913242,
+          4.654618138941921e-05,
+          0.5485899025055375,
+          0.5879265249342283
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.043433235468261576,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.048613112404758206,
+          0.07999980314928128
+        ],
+        "joint_position_min_rad": [
+          -0.5969324007468653,
+          -1.6874266405098899,
+          0.702944282719187,
+          -4.7386840595062236e-05,
+          -0.5485604691497546,
+          -0.23109069453744085
+        ],
+        "joint_position_max_rad": [
+          0.23109057267465352,
+          -0.844815074206434,
+          2.0852953698801513,
+          2.6690129149452302e-05,
+          0.19803159046326482,
+          0.5951739630170997
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.5125733594901103,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0007284984603769902,
+        "retained_lift_control_samples": 258,
+        "max_object_displacement_m": 0.31973438838595986,
+        "max_object_linear_speed_m_s": 0.07764067973278777,
+        "max_object_angular_speed_rad_s": 0.14108760604687387,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.00034236510029900247,
+          0.0004472374993915035,
+          0.0019381157666000792
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015496250707656145,
+      "control_latency_p95_seconds": 0.0018727001501247288,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.2077696659835055,
+      "simulated_seconds_per_wall_second": 12.465953090266396
+    },
+    {
+      "case_id": "dev-12",
+      "group": "nominal",
+      "case_sha256": "79ad1caef501a873a72e18595f0d724c3214dc2a62cb8612f3876fae040f8978",
+      "seed": 112,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 150,
+        "descend": 90,
+        "close": 11,
+        "lift": 73,
+        "transfer": 162,
+        "place": 72,
+        "release": 10,
+        "retreat": 66,
+        "verify": 3
+      },
+      "simulated_seconds": 12.728999999998384,
+      "control_steps": 637,
+      "setup_seconds": 0.0072536669904366136,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 112,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 12.728999999998384,
+        "steps": 637,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.1302034907950701,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.9719125873454227,
+        "target_distance": 0.00016054753453205843,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.27000000020428266,
+          -0.039999996734558216,
+          0.3099914782969388
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.27,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            -0.11,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "b17e550f138669f96a0e82edf21e26dba5ba1b3092b2c69be79c8af39a857f8e"
+      },
+      "final_object_position": [
+        0.5401512300112257,
+        -0.11005322006318977,
+        0.30999147829693696
+      ],
+      "metrics": {
+        "samples": 637,
+        "max_abs_joint_velocity_rad_s": [
+          0.2015047289932531,
+          0.3977917125454909,
+          0.6372189525701314,
+          0.0008248632181034557,
+          0.42455972732741537,
+          0.18632118223129296
+        ],
+        "max_abs_actuator_force": [
+          0.13494026965719286,
+          2.30242434691786,
+          1.2767720320430271,
+          0.001869567642623953,
+          0.14104570423635465,
+          0.024780837799971422,
+          0.8835303367735952,
+          0.861036535711726
+        ],
+        "max_abs_native_ctrl": [
+          0.5941239972115359,
+          1.8500674954760552,
+          2.234490388222893,
+          3.873496028710914e-05,
+          0.5412460278796885,
+          0.5941414894235483,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5941204631114348,
+          1.848737041844781,
+          2.2367164422991515,
+          3.887319901335844e-05,
+          0.5405663099205962,
+          0.5941414906444803
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.03335456249881337,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03870203250518121,
+          0.07999969579293933
+        ],
+        "joint_position_min_rad": [
+          -0.5985097231483666,
+          -1.847525798486792,
+          0.5848587366146543,
+          -1.392449688078902e-05,
+          -0.5407130027293701,
+          0.14707810330090013
+        ],
+        "joint_position_max_rad": [
+          -0.1470803387305826,
+          -0.7354277140736918,
+          2.236308880608427,
+          3.913916405501397e-05,
+          0.1964930874534847,
+          0.5976582158194269
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.3524742015132081,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0006903196975686546,
+        "retained_lift_control_samples": 240,
+        "max_object_displacement_m": 0.29687618778661373,
+        "max_object_linear_speed_m_s": 0.0902272170340704,
+        "max_object_angular_speed_rad_s": 0.09859512326492237,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0005864496537764108,
+          9.891953966644634e-05,
+          0.0023291577207582015
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0014759580371901393,
+      "control_latency_p95_seconds": 0.0019014671444892877,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.0019682919373736,
+      "simulated_seconds_per_wall_second": 12.703994829403234
+    },
+    {
+      "case_id": "dev-13",
+      "group": "nominal",
+      "case_sha256": "3765129d54c201bc68b200627ba4982d7424fbcc14067e96c90d0a26d464b39c",
+      "seed": 113,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 273,
+        "descend": 91,
+        "close": 11,
+        "lift": 74,
+        "transfer": 229,
+        "place": 71,
+        "release": 10,
+        "retreat": 66,
+        "verify": 3
+      },
+      "simulated_seconds": 16.551999999997246,
+      "control_steps": 828,
+      "setup_seconds": 0.007933457964099944,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 113,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 16.551999999997246,
+        "steps": 828,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12745846014736456,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.0215816908593975,
+        "target_distance": 0.0005314481912811062,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.5,
+          "table_object": 1.5,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.3299999957250152,
+          0.19000000180869625,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.33,
+            0.19,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.15,
+            0.31
+          ],
+          "object_half_size": [
+            0.015,
+            0.0175,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 1.5,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "a51a19007b48a2d1801c86e49c4d712ac821607532f1f21e5d289b9a057d270b"
+      },
+      "final_object_position": [
+        0.5203153602345222,
+        -0.14957231731029302,
+        0.30999147829693696
+      ],
+      "metrics": {
+        "samples": 828,
+        "max_abs_joint_velocity_rad_s": [
+          0.20364070298556725,
+          0.276323662397479,
+          0.4521642501962352,
+          0.0024110495014125124,
+          0.40495253967283124,
+          0.2621299868923553
+        ],
+        "max_abs_actuator_force": [
+          0.1996005780660255,
+          2.2513293380927166,
+          1.2561659983948914,
+          0.004098283712748207,
+          0.130285311307496,
+          0.034839654746505744,
+          0.8956132992452184,
+          0.8948856395930238
+        ],
+        "max_abs_native_ctrl": [
+          0.5905516452457137,
+          1.565794954284257,
+          1.8345461977729616,
+          0.0001024784495578716,
+          0.515892502548077,
+          0.5905811345844284,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5905473293369025,
+          1.5635393390544865,
+          1.8368008934667972,
+          0.00010277589233586647,
+          0.5152127221125304,
+          0.5905811357996398
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.023445430135981216,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.02922211463386499,
+          0.07999952304921104
+        ],
+        "joint_position_min_rad": [
+          -0.5976059324496644,
+          -1.5634134303396245,
+          0.6779109066881869,
+          -4.963713445660744e-05,
+          -0.5153567993185872,
+          -0.522403762296052
+        ],
+        "joint_position_max_rad": [
+          0.5224022235705005,
+          -0.7768375733236749,
+          1.8363988787393302,
+          2.3542000061414516e-05,
+          0.19641593594929976,
+          0.5962350642428739
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.6365865696603756,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0004177181130091807,
+        "retained_lift_control_samples": 307,
+        "max_object_displacement_m": 0.39888288012877104,
+        "max_object_linear_speed_m_s": 0.08366732484270598,
+        "max_object_angular_speed_rad_s": 0.12074720797701456,
+        "jaw_contact_sliding_mu": [
+          1.5
+        ],
+        "table_contact_sliding_mu": [
+          1.5
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.00035426934300714086,
+          0.0004341128280787865,
+          0.0029886527064595936
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015843750443309546,
+      "control_latency_p95_seconds": 0.0019259665685240177,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.3606928329681978,
+      "simulated_seconds_per_wall_second": 12.164391256394676
+    },
+    {
+      "case_id": "dev-14",
+      "group": "actuator_stress",
+      "case_sha256": "30d794369c0222262b64cdb038212066c27517b11a94b9477428b079c600d28d",
+      "seed": 114,
+      "control": "placement",
+      "success": false,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "horizon",
+      "failure_category": "failed_retained_lift",
+      "terminal_stage": "lift",
+      "stage_control_ticks": {
+        "approach": 98,
+        "descend": 91,
+        "close": 14,
+        "lift": 697
+      },
+      "simulated_seconds": 17.999999999999016,
+      "control_steps": 900,
+      "setup_seconds": 0.010084957932122052,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 114,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": true,
+        "lift_seen": false,
+        "max_object_lift": 4.7056504926645815e-05,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.8013955322855226,
+        "target_distance": 0.21572467541061285,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000022183175,
+          -0.09999999801803257,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 0.15,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.1,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.08,
+          "object_friction": 0.4,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 0.15,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "00d7baffd31cc7ea917820a5f2868b88f9478d46870d3b85df3a837a1e74dee9"
+      },
+      "final_object_position": [
+        0.41923373269927205,
+        -0.1000348608985499,
+        0.30999147829693724
+      ],
+      "metrics": {
+        "samples": 900,
+        "max_abs_joint_velocity_rad_s": [
+          0.16520485977439117,
+          0.13705932204280363,
+          0.2650593032918691,
+          0.0012109800687630597,
+          0.30323534843520994,
+          0.18944832379953866
+        ],
+        "max_abs_actuator_force": [
+          0.1903102539314574,
+          1.5139559519656132,
+          1.0844974122604185,
+          0.004613009624488451,
+          0.1166961059584466,
+          0.02535132226490333,
+          0.15,
+          0.15
+        ],
+        "max_abs_native_ctrl": [
+          0.5886553410331135,
+          1.2776161805523816,
+          1.6146736837005449,
+          1.179184616459262e-05,
+          0.45909695818734986,
+          0.5886928617547108,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5886522796188368,
+          1.2744326602420752,
+          1.6169878982086983,
+          1.1631373165542997e-05,
+          0.4584171360338719,
+          0.5886928635236286
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.030920000000000003,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03092,
+          0.07999869664953878
+        ],
+        "joint_position_min_rad": [
+          -0.597126872766853,
+          -1.2741179521510386,
+          0.9061544163469768,
+          -2.3881023238911464e-05,
+          -0.4584490428056413,
+          0.23374317521168134
+        ],
+        "joint_position_max_rad": [
+          -0.2337431752116817,
+          -1.1030801136789126,
+          1.616816780131661,
+          1.3053653598400093e-05,
+          0.19637327781885458,
+          0.5954802823688822
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          27,
+          30
+        ],
+        "min_joint_limit_margin_rad": 0.9258820478489616,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0004394475023594196,
+        "retained_lift_control_samples": 0,
+        "max_object_displacement_m": 0.0007903473737660004,
+        "max_object_linear_speed_m_s": 0.013586154511293108,
+        "max_object_angular_speed_rad_s": 0.4792493953283958,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": null,
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          0.15,
+          0.15
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015081249875947833,
+      "control_latency_p95_seconds": 0.0022982750786468375,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.5444031249498948,
+      "simulated_seconds_per_wall_second": 11.654988072225631
+    },
+    {
+      "case_id": "dev-15",
+      "group": "actuator_stress",
+      "case_sha256": "1973924b2dfa4d6a042b04499da93ceba7cfbde535fde37eebdfb2d25c11e3a2",
+      "seed": 115,
+      "control": "placement",
+      "success": false,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "horizon",
+      "failure_category": "failed_release",
+      "terminal_stage": "place",
+      "stage_control_ticks": {
+        "approach": 210,
+        "descend": 91,
+        "close": 13,
+        "lift": 79,
+        "transfer": 160,
+        "place": 347
+      },
+      "simulated_seconds": 17.999999999999016,
+      "control_steps": 900,
+      "setup_seconds": 0.008793957997113466,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 115,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.10255120214633284,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.7893325052176411,
+        "target_distance": 0.13337995852961265,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.5,
+          "table_object": 1.5,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4700000000010851,
+          0.07999999670339003,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 0.3,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.47,
+            0.08,
+            0.31
+          ],
+          "target_position": [
+            0.31,
+            -0.14,
+            0.31
+          ],
+          "object_half_size": [
+            0.025,
+            0.0175,
+            0.02
+          ],
+          "object_mass": 0.08,
+          "object_friction": 1.5,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 0.3,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "57be725f570af6f262ac1afe2ed19f84e5cf3a6fc9a66a2465ae9693f803655a"
+      },
+      "final_object_position": [
+        0.3960539895476814,
+        -0.0380935519818824,
+        0.30999147829693724
+      ],
+      "metrics": {
+        "samples": 900,
+        "max_abs_joint_velocity_rad_s": [
+          0.1990941470152893,
+          0.1995479785414736,
+          0.33007790554613414,
+          0.0024462529855753127,
+          0.34308123704944493,
+          0.19672614982282544
+        ],
+        "max_abs_actuator_force": [
+          0.20166360772132083,
+          1.7701777616578056,
+          1.357251691613385,
+          0.008821072360398422,
+          0.14463824640785106,
+          0.0263249214021144,
+          0.3,
+          0.3
+        ],
+        "max_abs_native_ctrl": [
+          0.5882192590205425,
+          1.5993529511682554,
+          1.9945189963808014,
+          6.0120888444975995e-05,
+          0.5424584545290767,
+          0.5882584842464013,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5882163434207718,
+          1.5972044884882461,
+          1.9967461775777786,
+          5.98840298285324e-05,
+          0.5417786215290767,
+          0.5882584864046175
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.03984,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03984,
+          0.07999880345363165
+        ],
+        "joint_position_min_rad": [
+          -0.5970165107196634,
+          -1.5935162264521276,
+          0.9048703337554856,
+          -4.618407329895542e-05,
+          -0.5417786215290745,
+          -0.16859668838597605
+        ],
+        "joint_position_max_rad": [
+          0.1685969885100654,
+          -1.0116389226927267,
+          1.9966255645299988,
+          2.229196513128642e-05,
+          0.19751569797316124,
+          0.5953066533472308
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          30,
+          84
+        ],
+        "min_joint_limit_margin_rad": 0.6064837735478725,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0014256144739826719,
+        "retained_lift_control_samples": 98,
+        "max_object_displacement_m": 0.15057721511355157,
+        "max_object_linear_speed_m_s": 1.0591112909763598,
+        "max_object_angular_speed_rad_s": 20.666006685157146,
+        "jaw_contact_sliding_mu": [
+          1.5
+        ],
+        "table_contact_sliding_mu": [
+          1.5
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0003267680613754931,
+          0.0007799085146385672,
+          0.029293148797235047
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          0.3,
+          0.3
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0014964370056986809,
+      "control_latency_p95_seconds": 0.0033756625081878154,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.6427086250623688,
+      "simulated_seconds_per_wall_second": 10.957512321648405
+    },
+    {
+      "case_id": "dev-16",
+      "group": "actuator_stress",
+      "case_sha256": "d9aa9d7c69e49cf9d5addf4289eba6fd7d808d9457c9c9ba44f443a4732c587d",
+      "seed": 116,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 70,
+        "descend": 93,
+        "close": 12,
+        "lift": 77,
+        "transfer": 180,
+        "place": 65,
+        "release": 10,
+        "retreat": 66,
+        "verify": 6
+      },
+      "simulated_seconds": 11.576999999999023,
+      "control_steps": 579,
+      "setup_seconds": 0.008706458960659802,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 116,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 11.576999999999023,
+        "steps": 579,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.1222071757900286,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.0496245003283715,
+        "target_distance": 0.0012568293154191592,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015892985,
+          -0.15000000325691776,
+          0.3149914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 40.0,
+          "jaw_actuator_force_limit_n": 0.8,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.15,
+            0.315
+          ],
+          "target_position": [
+            0.5,
+            0.12,
+            0.315
+          ],
+          "object_half_size": [
+            0.015,
+            0.025,
+            0.025
+          ],
+          "object_mass": 0.08,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 0.8,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "84c8cc850b47e49d0cc0eb09c56bc55809bf6074ea02cdfe8ad68234be1ae64b"
+      },
+      "final_object_position": [
+        0.5003549565695878,
+        0.11879436608276793,
+        0.3149914782969372
+      ],
+      "metrics": {
+        "samples": 579,
+        "max_abs_joint_velocity_rad_s": [
+          0.19297911899887268,
+          0.2596026245523846,
+          0.4584706889789659,
+          0.003001731166453105,
+          0.38724058632159486,
+          0.2605106326475821
+        ],
+        "max_abs_actuator_force": [
+          0.21831582469897626,
+          2.359147825986554,
+          1.4085710377580085,
+          0.005992750435662435,
+          0.15408528645881603,
+          0.034720839999693,
+          0.8,
+          0.8
+        ],
+        "max_abs_native_ctrl": [
+          0.592601786547454,
+          1.458695014957732,
+          1.8345466966492627,
+          0.00011363641331552268,
+          0.5158922496753161,
+          0.5926243455486391,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5925978738785088,
+          1.4560981132287023,
+          1.8368028990318503,
+          0.00011399710880627203,
+          0.5152124671902546,
+          0.5926243467886336
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.024042828730795596,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.02875624513928806,
+          0.07999930288849656
+        ],
+        "joint_position_min_rad": [
+          -0.5981246307906144,
+          -1.454027097905854,
+          0.8780769714032609,
+          -3.575164784462854e-05,
+          -0.5153152289345779,
+          -0.23554295990732418
+        ],
+        "joint_position_max_rad": [
+          0.23554253176493245,
+          -0.8809097719977503,
+          1.8364146023518333,
+          7.618618214497599e-05,
+          0.19438650401964735,
+          0.5970517810034983
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          170,
+          3
+        ],
+        "min_joint_limit_margin_rad": 0.7459729020941461,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0006465955551219179,
+        "retained_lift_control_samples": 255,
+        "max_object_displacement_m": 0.3208090853266954,
+        "max_object_linear_speed_m_s": 0.08900386088122268,
+        "max_object_angular_speed_rad_s": 0.14574103608132866,
+        "jaw_contact_sliding_mu": [
+          1.0
+        ],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0005227130233650956,
+          0.0008731337746349377,
+          0.004673276432255069
+        ],
+        "actuator_force_caps": [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          0.8,
+          0.8
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.00174391595646739,
+      "control_latency_p95_seconds": 0.00235176666174084,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.0627384999534115,
+      "simulated_seconds_per_wall_second": 10.893554717841253
+    },
+    {
+      "case_id": "dev-17",
+      "group": "actuator_stress",
+      "case_sha256": "93f013f3b321a33003ede3f71a4533938c516a9ed4521da7550b9258a9cf5a4b",
+      "seed": 117,
+      "control": "placement",
+      "success": false,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "horizon",
+      "failure_category": "failed_grasp",
+      "terminal_stage": "approach",
+      "stage_control_ticks": {
+        "approach": 900
+      },
+      "simulated_seconds": 17.999999999999016,
+      "control_steps": 900,
+      "setup_seconds": 0.009770083939656615,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 117,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 1.6653345369377348e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.1920937301093228,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.40000000007847447,
+          -3.650548948032196e-09,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 0.5,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.4,
+            0.0,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            0.15,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 0.5,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "7eec8e7b4023cad19fd24e89c20dfc67740d19da12364e144dfa6b5c8ce99cc7"
+      },
+      "final_object_position": [
+        0.4000000000775677,
+        -3.6443672068521428e-09,
+        0.30999147829693724
+      ],
+      "metrics": {
+        "samples": 900,
+        "max_abs_joint_velocity_rad_s": [
+          0.7121094793415274,
+          4.25632783992054,
+          2.455198839022037,
+          0.8618837311134809,
+          1.6577341647504498,
+          0.9938679471607115
+        ],
+        "max_abs_actuator_force": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.8376034116912514,
+          0.76824320085864
+        ],
+        "max_abs_native_ctrl": [
+          0.7105238558631393,
+          1.5821310582616515,
+          1.6803219360671475,
+          0.4368989720605691,
+          2.357557348863905,
+          0.6260205391150561,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.7105248889946323,
+          1.58,
+          1.6788952389648226,
+          0.43676717822999256,
+          2.356877206730308,
+          0.6260196795765426
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.08,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.07881133883570898,
+          0.08080091507051966
+        ],
+        "joint_position_min_rad": [
+          -0.709627338800394,
+          -0.3504110587379334,
+          0.5750737071747946,
+          -0.4316058028848191,
+          -2.356563315805283,
+          -0.3602985887327188
+        ],
+        "joint_position_max_rad": [
+          0.1438885324908241,
+          1.6148616838830478,
+          1.6541151519729747,
+          0.0525316254343638,
+          0.16909283354513346,
+          0.6146573523964315
+        ],
+        "actuator_saturation_samples": [
+          18,
+          793,
+          794,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": -0.01486168388304776,
+        "max_contact_count_sampled": 5,
+        "max_contact_penetration_m_sampled": 5.1916635050237815e-05,
+        "retained_lift_control_samples": 0,
+        "max_object_displacement_m": 6.247892995587125e-12,
+        "max_object_linear_speed_m_s": 5.534444083863377e-13,
+        "max_object_angular_speed_rad_s": 3.611117558638064e-11,
+        "jaw_contact_sliding_mu": [],
+        "table_contact_sliding_mu": [
+          0.8
+        ],
+        "retained_object_minus_tcp_range_world_m": null,
+        "actuator_force_caps": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.0015315625350922346,
+      "control_latency_p95_seconds": 0.0022015184746123845,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.5620271669467911,
+      "simulated_seconds_per_wall_second": 11.52348715879419
+    },
+    {
+      "case_id": "dev-18",
+      "group": "actuator_stress",
+      "case_sha256": "51bf6f72c35a949fdd54838365878030a91f681683cf957b1071fe2c311339b0",
+      "seed": 118,
+      "control": "placement",
+      "success": false,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "horizon",
+      "failure_category": "failed_retained_lift",
+      "terminal_stage": "lift",
+      "stage_control_ticks": {
+        "approach": 103,
+        "descend": 94,
+        "close": 11,
+        "lift": 692
+      },
+      "simulated_seconds": 17.999999999999016,
+      "control_steps": 900,
+      "setup_seconds": 0.012014167034067214,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 118,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": true,
+        "lift_seen": false,
+        "max_object_lift": 0.0003668631791560739,
+        "grasp_contacts": {
+          "left": 4,
+          "right": 4
+        },
+        "pad_normal_forces": {
+          "left": 0.982174370798862,
+          "right": 1.0500307050797524
+        },
+        "table_contacts": 2,
+        "max_pad_normal_force": 1.5200888274113078,
+        "target_distance": 0.3868728347499253,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.2,
+          "table_object": 1.2,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.5199999998414501,
+          -0.15000000325691254,
+          0.3149914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 2.0,
+          "jaw_actuator_force_limit_n": 15.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.52,
+            -0.15,
+            0.315
+          ],
+          "target_position": [
+            0.3,
+            0.15,
+            0.315
+          ],
+          "object_half_size": [
+            0.025,
+            0.025,
+            0.025
+          ],
+          "object_mass": 0.08,
+          "object_friction": 1.2,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 2.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "68bc66444c0218ba031efd3c28c8dfde114f21360156883c8d674252b530f8f8"
+      },
+      "final_object_position": [
+        0.5385487928716521,
+        -0.15457348592788875,
+        0.31523527994977935
+      ],
+      "metrics": {
+        "samples": 900,
+        "max_abs_joint_velocity_rad_s": [
+          0.15373234247376527,
+          0.21186563782807596,
+          0.45073019811879045,
+          0.0012466880172321752,
+          0.4126496574407152,
+          0.202176624150071
+        ],
+        "max_abs_actuator_force": [
+          0.19820357635975938,
+          2.0,
+          1.123486490319948,
+          0.004621495904777151,
+          0.12661520286291505,
+          0.02706752312106886,
+          1.0140651258888749,
+          1.5172220839186368
+        ],
+        "max_abs_native_ctrl": [
+          0.5878879625678795,
+          1.09830781473407,
+          1.014822529858057,
+          4.769768370812227e-06,
+          0.2719058448627028,
+          0.5879332729465627,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.5878899650514717,
+          1.0946314218772204,
+          1.0173083648194285,
+          4.878838153635482e-06,
+          0.2725849058427306,
+          0.5879332752925481
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.03993285123731705,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.04826798040954211,
+          0.07999834471558628
+        ],
+        "joint_position_min_rad": [
+          -0.597015041661646,
+          -1.098662458654616,
+          0.527038721571925,
+          -5.0194734007741815e-05,
+          -0.24055847224938093,
+          0.27999076568337256
+        ],
+        "joint_position_max_rad": [
+          -0.2799687940049774,
+          -0.694051847384876,
+          1.0170717437249641,
+          2.803655589066456e-05,
+          0.2697800202538135,
+          0.595176552313177
+        ],
+        "actuator_saturation_samples": [
+          0,
+          793,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 1.101337541345384,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.0008916785826696822,
+        "retained_lift_control_samples": 0,
+        "max_object_displacement_m": 0.019105860510977266,
+        "max_object_linear_speed_m_s": 0.00961786408062035,
+        "max_object_angular_speed_rad_s": 0.14419692879577253,
+        "jaw_contact_sliding_mu": [
+          1.2
+        ],
+        "table_contact_sliding_mu": [
+          1.2
+        ],
+        "retained_object_minus_tcp_range_world_m": null,
+        "actuator_force_caps": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          15.0,
+          15.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.002097812481224537,
+      "control_latency_p95_seconds": 0.0031873937754426152,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 2.1102142500458285,
+      "simulated_seconds_per_wall_second": 8.529939554530115
+    },
+    {
+      "case_id": "dev-19",
+      "group": "actuator_stress",
+      "case_sha256": "c71a6a55a399e589cb8f331ad5ad6c3ba165d982fb0e9a9831f5ec10648d3db2",
+      "seed": 119,
+      "control": "placement",
+      "success": true,
+      "trace_enabled": false,
+      "status": "completed",
+      "reason": "success",
+      "failure_category": "success",
+      "terminal_stage": "verify",
+      "stage_control_ticks": {
+        "approach": 275,
+        "descend": 92,
+        "close": 11,
+        "lift": 75,
+        "transfer": 221,
+        "place": 69,
+        "release": 10,
+        "retreat": 66,
+        "verify": 5
+      },
+      "simulated_seconds": 16.467999999997144,
+      "control_steps": 824,
+      "setup_seconds": 0.008662999956868589,
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 119,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 16.467999999997144,
+        "steps": 824,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12565809451716964,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.057159577342495,
+        "target_distance": 0.0007582462681145497,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.2,
+          "table_object": 1.2,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.27000000007530306,
+          0.1800000039635157,
+          0.31249147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "action_contract": {
+          "independent_commands": 7,
+          "physical_robot_joints": 8,
+          "hinge_target_units": "rad",
+          "jaw_gap_units": "m",
+          "joint_limits": [
+            [
+              -2.6,
+              2.6
+            ],
+            [
+              -2.2,
+              1.6
+            ],
+            [
+              -2.7,
+              2.7
+            ],
+            [
+              -3.0,
+              3.0
+            ],
+            [
+              -2.8,
+              2.8
+            ],
+            [
+              -3.1,
+              3.1
+            ]
+          ],
+          "jaw_gap_limits": [
+            0.0,
+            0.08
+          ],
+          "joint_torque_limit_nm": 5.0,
+          "jaw_actuator_force_limit_n": 2.0,
+          "ik_orientation": "fixed identity rotation; XYZ position goal only",
+          "force_observation": "summed native per-pad normal contact forces, N; not actuator force"
+        },
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.27,
+            0.18,
+            0.3125
+          ],
+          "target_position": [
+            0.5,
+            -0.12,
+            0.3125
+          ],
+          "object_half_size": [
+            0.02,
+            0.015,
+            0.0225
+          ],
+          "object_mass": 0.06,
+          "object_friction": 1.2,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0.0,
+          "joint_torque_limit": 5.0,
+          "jaw_force_limit": 2.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "bb4d722ecd5b37170019ae05eb0e689f28df67ca84df5bae2c6f947d3d2aa705"
+      },
+      "final_object_position": [
+        0.5002050689073341,
+        -0.11927006060050757,
+        0.3124914782969372
+      ],
+      "metrics": {
+        "samples": 824,
+        "max_abs_joint_velocity_rad_s": [
+          0.23219836652571718,
+          0.2453311643413915,
+          0.38788217883116,
+          0.002930959604029386,
+          0.38129433115320505,
+          0.3066284038437192
+        ],
+        "max_abs_actuator_force": [
+          0.1935536124851467,
+          2.24423923015064,
+          1.324135751585004,
+          0.0057543937324638335,
+          0.14578736282457072,
+          0.04080363764082051,
+          0.8629639891347676,
+          0.8650011859293896
+        ],
+        "max_abs_native_ctrl": [
+          0.5917404201826207,
+          1.7261939674879023,
+          2.053025357363895,
+          0.00012990816076829243,
+          0.547758799132109,
+          0.5917657019869474,
+          0.04,
+          0.04
+        ],
+        "max_abs_commanded_joint_target_rad": [
+          0.591736147258423,
+          1.7244621452636246,
+          2.055245431266728,
+          0.0001304280995842848,
+          0.5470790395460666,
+          0.5917657020413762
+        ],
+        "commanded_gripper_width_min_max_m": [
+          0.03339446083706762,
+          0.08
+        ],
+        "actual_gripper_width_min_max_m": [
+          0.03910201836962534,
+          0.08000002096769204
+        ],
+        "joint_position_min_rad": [
+          -0.5979062294043445,
+          -1.7243133369323054,
+          0.8884991079913905,
+          -5.711266902849519e-05,
+          -0.547235850658251,
+          -0.5880025239477291
+        ],
+        "joint_position_max_rad": [
+          0.5880004305699946,
+          -0.8808633269364344,
+          2.0547381326813667,
+          5.5768368322265596e-05,
+          0.19607012340768584,
+          0.5967085585208851
+        ],
+        "actuator_saturation_samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "min_joint_limit_margin_rad": 0.4756866630676948,
+        "max_contact_count_sampled": 12,
+        "max_contact_penetration_m_sampled": 0.000493845378751314,
+        "retained_lift_control_samples": 298,
+        "max_object_displacement_m": 0.3868296292326361,
+        "max_object_linear_speed_m_s": 0.08498599667349105,
+        "max_object_angular_speed_rad_s": 0.08000870071349075,
+        "jaw_contact_sliding_mu": [
+          1.2
+        ],
+        "table_contact_sliding_mu": [
+          1.2
+        ],
+        "retained_object_minus_tcp_range_world_m": [
+          0.0004882955818168999,
+          0.0004879728904343822,
+          0.002986471410569902
+        ],
+        "actuator_force_caps": [
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          2.0,
+          2.0
+        ],
+        "actuator_units": [
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N*m",
+          "N",
+          "N"
+        ]
+      },
+      "control_latency_p50_seconds": 0.001542770944070071,
+      "control_latency_p95_seconds": 0.0019573500147089364,
+      "model": {
+        "nq": 15,
+        "nv": 14,
+        "nu": 8,
+        "nmocap": 0,
+        "neq": 0
+      },
+      "warning_counts": {},
+      "episode_wall_seconds": 1.3358388330088928,
+      "simulated_seconds_per_wall_second": 12.327834461065944
+    }
+  ],
+  "rejection_checks": [
+    {
+      "id": "reject-radial",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Placement lies outside the raised-tool radial reach envelope (0.56 m)",
+      "passed": true
+    },
+    {
+      "id": "reject-small-object",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "Object full dimensions must lie in [0.03, 0.05] m",
+      "passed": true
+    },
+    {
+      "id": "reject-heavy-object",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "object_mass must lie in [0.02, 0.08]",
+      "passed": true
+    },
+    {
+      "id": "reject-zero-jaw-force",
+      "rejected": true,
+      "exception": "ValueError",
+      "message": "jaw_force_limit must be finite and positive",
+      "passed": true
+    },
+    {
+      "id": "unsupported-orientation",
+      "rejected": true,
+      "exception": "TypeError",
+      "message": "ArmConfig.__init__() got an unexpected keyword argument 'object_quaternion'",
+      "passed": true
+    },
+    {
+      "id": "unsupported-obstacles",
+      "rejected": true,
+      "exception": "TypeError",
+      "message": "ArmConfig.__init__() got an unexpected keyword argument 'obstacles'",
+      "passed": true
+    },
+    {
+      "id": "unsupported-deformable",
+      "rejected": true,
+      "exception": "TypeError",
+      "message": "ArmConfig.__init__() got an unexpected keyword argument 'deformable'",
+      "passed": true
+    }
+  ],
+  "summary": {
+    "successes": 16,
+    "cases": 20,
+    "groups": {
+      "actuator_stress": {
+        "successes": 2,
+        "cases": 6,
+        "failure_categories": {
+          "failed_retained_lift": 2,
+          "failed_release": 1,
+          "success": 2,
+          "failed_grasp": 1
+        }
+      },
+      "nominal": {
+        "successes": 14,
+        "cases": 14,
+        "failure_categories": {
+          "success": 14
+        }
+      }
+    },
+    "reasons": {
+      "success": 16,
+      "horizon": 4
+    },
+    "episode_wall_seconds": 26.89024904090911,
+    "simulated_seconds": 295.8019999999636
+  },
+  "harness_sha256": "fb45a71039f3203132b04cd007ba1af553e587aab8918eaaf383a366c0e65075",
+  "harness_provenance": "Exact contemporaneous measurement harness archived before reporting extensions."
+}
