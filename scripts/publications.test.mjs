@@ -35,13 +35,22 @@ test("publication attribution remains intentionally empty", async () => {
   const catalog = JSON.parse(await readFile(resolve(ROOT, "publications.json")));
   validatePublications(catalog);
   assert.equal(catalog.contributor, null);
-  assert.equal(catalog.publications.length, 6);
+  assert.ok(catalog.publications.length >= 6);
   assert.throws(() => validatePublications({ ...catalog, contributor: { name: "Someone" } }), /intentionally unset/);
+});
+
+test("publication dates support new research entries and reject impossible calendar days", async () => {
+  const catalog = JSON.parse(await readFile(resolve(ROOT, "publications.json")));
+  const withDate = date => ({ ...catalog, publications: catalog.publications.map((p, i) => i ? p : { ...p, date }) });
+  assert.doesNotThrow(() => validatePublications(withDate("2027-03-01")));
+  assert.doesNotThrow(() => validatePublications(withDate("2028-02-29")));
+  assert.throws(() => validatePublications(withDate("2027-02-29")), /Invalid publication date/);
 });
 
 test("all generated readers, assets, downloads and fragments resolve without JavaScript", async () => {
   const built = await buildPublications();
-  assert.equal(built.pages.length, 11);
+  const catalog = JSON.parse(await readFile(resolve(ROOT, "publications.json")));
+  assert.equal(built.pages.length, catalog.publications.length + 5);
   for (const page of built.pages) {
     const path = resolve(DOCS, page.path);
     const html = await readFile(path, "utf8");
@@ -66,8 +75,8 @@ test("all generated readers, assets, downloads and fragments resolve without Jav
     }
   }
   const rss = await readFile(resolve(DOCS, "feed.xml"), "utf8");
-  assert.equal([...rss.matchAll(/<item>/g)].length, 6);
-  assert.equal([...rss.matchAll(/<guid isPermaLink="true">/g)].length, 6);
+  assert.equal([...rss.matchAll(/<item>/g)].length, catalog.publications.length);
+  assert.equal([...rss.matchAll(/<guid isPermaLink="true">/g)].length, catalog.publications.length);
 });
 
 test("published benchmark source matches its recorded SHA and 54-trial evidence", async () => {
@@ -80,6 +89,34 @@ test("published benchmark source matches its recorded SHA and 54-trial evidence"
   const offline = JSON.parse(await readFile(resolve(run, "results/offline-check/socket-policy.json")));
   assert.equal(offline.air_gapped_wheel_install_tested, false);
   assert.deepEqual(offline.attempted_operations, []);
+});
+
+test("published cable product source matches its measured skill manifest and offline evidence", async () => {
+  const root = resolve(ROOT, "topics/physical-grounding/runs/2026-10-07-cable-env");
+  const manifest = JSON.parse(await readFile(resolve(root, "release-v0/manifest.json")));
+  for (const [name, expected] of Object.entries(manifest.files)) {
+    if (!name.startsWith("code/simlab/")) continue;
+    const bytes = await readFile(resolve(root, name.slice("code/".length)));
+    assert.equal(bytes.length, expected.bytes, name);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), expected.sha256, name);
+  }
+  const result = JSON.parse(await readFile(resolve(root, "release-v0/run.json")));
+  assert.equal(createHash("sha256").update(await readFile(resolve(root, "release-v0/run.json"))).digest("hex"), manifest.files["run.json"].sha256);
+  assert.equal(result.scope, "simulation-only");
+  assert.equal(result.summary.episodes, 10);
+  assert.equal(result.summary.successes, 10);
+  const report = result.qualification_protocol;
+  assert.equal(report.comparisons.feedback.summary.successes, 10);
+  assert.equal(report.comparisons.zero.summary.successes, 0);
+  assert.equal(report.comparisons.release.summary.successes, 0);
+  assert.equal(report.physical_evidence, null);
+  assert.equal(report.gpu_measurements, null);
+  assert.deepEqual(report.network_guard.attempted_calls, []);
+  const offline = JSON.parse(await readFile(resolve(root, "native-offline/native-policy.json")));
+  assert.equal(offline.passed, true);
+  assert.equal(offline.errno, 1);
+  const reproduced = JSON.parse(await readFile(resolve(root, "release-v0/reproduction.json")));
+  assert.equal(reproduced.exact_trace_and_final_info_match, true);
 });
 
 test("generated publication output is deterministic and excludes local session data", async () => {

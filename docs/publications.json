@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "offline-cable-training-environment",
+      "title": "Offline cable training environment",
+      "source": "reports/Offline cable training environment.md",
+      "date": "2026-10-07",
+      "type": "Product prototype and local qualification",
+      "status": "CPU simulation-only · Controller search and frozen evaluation executed",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "The first runnable product loop combines an anchored cable environment, local controller-parameter search, frozen evaluation, offline replay and a manifest-backed skill pack. The selected controller and a fixed feedback baseline both completed 10/10 held-out simulated episodes; zero-force and release controls completed 0/10. A native macOS network-denial run completed 3/3 additional episodes. Ideal endpoint attachment and privileged state bound the result; physical rope calibration, gripping, sensors and GPU throughput remain untested."
+    },
+    {
       "slug": "fast-accurate-robot-training-simulation",
       "title": "Fast accurate robot training simulation",
       "source": "reports/Fast accurate robot training simulation.md",
