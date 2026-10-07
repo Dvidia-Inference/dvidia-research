@@ -6,12 +6,26 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "skillspace-arm-installation",
+      "title": "Installing a Skillspace on a simulated arm",
+      "source": "reports/Installing a Skillspace on a simulated arm.md",
+      "date": "2026-10-07",
+      "type": "Product prototype and native contact qualification",
+      "status": "Public skill link to authored adapter · 6/6 scene placements",
+      "topics": [
+        "physical-grounding",
+        "skill-relations",
+        "evaluation-provenance"
+      ],
+      "abstract": "The first link-to-arm product path installs an existing DVIDIA placement envelope, binds a local authored controller to one simulated arm, and reuses it in independently grounded scenes. Native jaw contacts carry a free box; six layouts complete, while no-motion and identical joint commands with open jaws each complete zero of six. Installed execution passes process-level offline checks. Task metadata contains no learned policy; perception, cup geometry, full arm collisions and physical qualification remain open."
+    },
+    {
       "slug": "offline-cable-training-environment",
       "title": "Offline cable training environment",
       "source": "reports/Offline cable training environment.md",
       "date": "2026-10-07",
       "type": "Product prototype and local qualification",
-      "status": "CPU simulation-only \u00b7 Controller search and frozen evaluation executed",
+      "status": "CPU simulation-only · Controller search and frozen evaluation executed",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
@@ -24,12 +38,12 @@
       "source": "reports/Fast accurate robot training simulation.md",
       "date": "2026-10-07",
       "type": "Decision report and local experiment",
-      "status": "54 CPU fixture trials \u00b7 GPU and physical transfer untested",
+      "status": "54 CPU fixture trials · GPU and physical transfer untested",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
       ],
-      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance\u2013accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
+      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance–accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
     },
     {
       "slug": "grok-robotics-research-on-x",
@@ -37,7 +51,7 @@
       "source": "reports/Grok robotics research on X.md",
       "date": "2026-10-07",
       "type": "Source review and thesis comparison",
-      "status": "Primary sources checked \u00b7 Experiments proposed",
+      "status": "Primary sources checked · Experiments proposed",
       "topics": [
         "skill-relations",
         "physical-grounding"
@@ -50,7 +64,7 @@
       "source": "reports/Spatially grounded downloadable robot skills.md",
       "date": "2026-10-07",
       "type": "Research synthesis and proposed experiments",
-      "status": "Source review \u00b7 DVIDIA experiments not run",
+      "status": "Source review · DVIDIA experiments not run",
       "topics": [
         "skill-relations",
         "physical-grounding",
@@ -64,7 +78,7 @@
       "source": "reports/Clef and grounded video observations.md",
       "date": "2026-10-06",
       "type": "Engineering feasibility pilot",
-      "status": "Five licensed excerpts \u00b7 Accuracy evaluation outstanding",
+      "status": "Five licensed excerpts · Accuracy evaluation outstanding",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
@@ -83,7 +97,7 @@
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot\u2019s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
+      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot’s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
     },
     {
       "slug": "physical-skill-research-agenda",

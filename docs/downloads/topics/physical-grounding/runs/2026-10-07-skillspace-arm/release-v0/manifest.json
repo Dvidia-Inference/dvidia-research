@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "task": "ArmPickPlace-v0",
+  "scope": "simulation-only",
+  "status": "authored_adapter_with_recorded_simulation_evidence",
+  "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+  "adapter_id": "contact-pick-place-box-v0",
+  "source_has_robot_policy": false,
+  "physical_robot_ready": false,
+  "summary": {
+    "successes": 6,
+    "episodes": 18,
+    "simulated_seconds": 289.89999999997985,
+    "episode_wall_seconds": 13.607119331369177,
+    "by_policy": {
+      "placement": {
+        "successes": 6,
+        "episodes": 6,
+        "simulated_seconds": 73.89999999999168,
+        "episode_wall_seconds": 3.91412145702634
+      },
+      "idle": {
+        "successes": 0,
+        "episodes": 6,
+        "simulated_seconds": 107.99999999999409,
+        "episode_wall_seconds": 4.776218706043437
+      },
+      "replay_open_jaw": {
+        "successes": 0,
+        "episodes": 6,
+        "simulated_seconds": 107.99999999999409,
+        "episode_wall_seconds": 4.916779168299399
+      }
+    }
+  },
+  "limitations": [
+    "Authored simulation controller; the source Skillspace envelope contains no learned robot policy.",
+    "One original arm profile, privileged simulator observations, rigid box proxy for placement skills.",
+    "Native jaw/object/table contacts; arm links and palm are collision-excluded.",
+    "No camera perception, physical arm calibration, selfcollision, cup/handle, cable tying or broad skill qualification.",
+    "Installation may fetch one public JSON envelope; installed execution and replay can run offline."
+  ],
+  "files": {
+    "README.md": "52834d6a7ce417879f1c924b5792a19bf4cca7575d75923d6e238c56e676c96d",
+    "evidence/grounding.json": "1a5956173cefe659559fb0e273ebb2071a6fcbe7a64792075750221927fde892",
+    "evidence/run.json": "f48888ce02eb09b5f2c7747bd77d26b4a88ce7050cc39269479d67735f6727c8",
+    "evidence/source.json": "16b4e1ef0f3799345c1d18ce9f1da83b072863ab00ce30a83424080fb467d4ec",
+    "requirements.lock.txt": "5a435f5b6e4ebcdb78fa12ec223b9c09d972daca6008700e854255664f6fb2a4",
+    "simlab/LICENSE": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1",
+    "simlab/__init__.py": "e710fdac4ab49a1ccea99179928b827a2d1cfde23d230dcfeb9e48a2cd258c14",
+    "simlab/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "simlab/arm_env.py": "395d9b7ab2fc09458081d8fae162ec701adcd8b944e65a171c7184deb45e5fb3",
+    "simlab/arm_native_offline_check.py": "37ec414189bd1c379eeaa8c444667739fe97dcdc0a6677e4e58bf9cbde942275",
+    "simlab/arm_pack.py": "350964fe0636d7e07cbc50441bd70c233cdd57f8b2ad8876dd01f74ce2f11241",
+    "simlab/arm_policy.py": "6cb7d9644b6eda2f79e4253a37fe33b5942f736ca341756fb8b968dfb0a255b2",
+    "simlab/arm_qualify.py": "e89dffc46994a5b9c41c30f76d295910ef3e15a361bdd67ec8fcbfeb02d5382f",
+    "simlab/arm_runner.py": "db5d65883126ae9318d4c8ea541e14dc1ac7f5d9d8c756b05fb783a4fcb202f4",
+    "simlab/cli.py": "f2b82eb89d617fd8033de44248b138b9166d2f10600484aeae8225332fbd4ccb",
+    "simlab/env.py": "929c1d8c3c4cafe0054c633ee5f3e51c551dd6b26ae014ab1ea9219b58eca8e4",
+    "simlab/installer.py": "f590898da30a96af15d9da792d6631a1fa73af832a8dc3fba10bdff2c7d8fb10",
+    "simlab/native_offline_check.py": "f550f650a1e7fdaeff38c0aec07782df7cf456e20663c7fba6cede8510e9120e",
+    "simlab/pack.py": "885e973907499a505fef4d28ac6bb5eb2b2dbba498efc94d9e6c8125b9bd52f9",
+    "simlab/place_cup.skill.json": "23f27bea18abdf54ffd8a123fc099036ab7ee81fcd44714c894f5d1b12720a15",
+    "simlab/policies.py": "f52071d8af4ffa215c0c5ac57a7591e12e9e17b834b4bfb2a1705e7e0a7f5154",
+    "simlab/qualify.py": "2f9566f9c550723cbf96342e075e68dc291446c4fbd3935cec9d333371ab1457",
+    "simlab/requirements.lock.txt": "5a435f5b6e4ebcdb78fa12ec223b9c09d972daca6008700e854255664f6fb2a4",
+    "simlab/skillspace.py": "34b651609358ae9a58b9a610545ce7b85b83fb3d6c699613414ff8e0ea457b3c",
+    "simlab/studio.html": "ac10f95d610bf8816cb1760b09a77295f56a1566c8e169dc79a91efd5dcffd12",
+    "simlab/studio.py": "d0ed528c5d69e8aa319d2f850c3310814342cd46622aa063c3b2043b14a45c83",
+    "simlab/viewer.py": "2fc396aaace350c0fa795fdd907dff96179fcb919116d3d5f1a7b3fa9392376d"
+  }
+}

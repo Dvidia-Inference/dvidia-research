@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import test from "node:test";
+import { gunzipSync } from "node:zlib";
 import { buildPublications, renderMarkdown, ROOT, safeUrl, validatePublications } from "./build-papers.mjs";
 
 const DOCS = resolve(ROOT, "docs");
@@ -117,6 +118,42 @@ test("published cable product source matches its measured skill manifest and off
   assert.equal(offline.errno, 1);
   const reproduced = JSON.parse(await readFile(resolve(root, "release-v0/reproduction.json")));
   assert.equal(reproduced.exact_trace_and_final_info_match, true);
+});
+
+test("published arm adapter binds exact source, contact outcomes and offline reproduction", async () => {
+  const root = resolve(ROOT, "topics/physical-grounding/runs/2026-10-07-skillspace-arm");
+  const manifest = JSON.parse(await readFile(resolve(root, "release-v0/manifest.json")));
+  const result = JSON.parse(gunzipSync(await readFile(resolve(root, "release-v0/run.json.gz"))));
+  assert.equal(manifest.scope, "simulation-only");
+  assert.equal(manifest.physical_robot_ready, false);
+  assert.equal(manifest.source_has_robot_policy, false);
+  for (const [name, expected] of Object.entries(manifest.files)) {
+    const path = name.startsWith("simlab/") ? resolve(root, name) : name.startsWith("evidence/") ? resolve(root, "release-v0", name.slice(9)) : null;
+    if (!path || name === "evidence/run.json" || name === "README.md") continue;
+    assert.equal(createHash("sha256").update(await readFile(path)).digest("hex"), expected, name);
+  }
+  assert.equal(createHash("sha256").update(gunzipSync(await readFile(resolve(root, "release-v0/run.json.gz")))).digest("hex"), manifest.files["evidence/run.json"]);
+  assert.equal(result.skill.source_sha256, createHash("sha256").update(await readFile(resolve(root, "release-v0/source.json"))).digest("hex"));
+  assert.equal(result.summary.by_policy.placement.successes, 6);
+  assert.equal(result.summary.by_policy.idle.successes, 0);
+  assert.equal(result.summary.by_policy.replay_open_jaw.successes, 0);
+  assert.equal(new Set(result.episodes.map(e => e.scene_id)).size, 6);
+  for (const episode of result.episodes.filter(e => e.policy === "placement")) {
+    assert.equal(episode.final_info.success, true);
+    assert.equal(episode.final_info.grasp_seen, true);
+    assert.equal(episode.final_info.lift_seen, true);
+    assert.deepEqual(episode.final_info.warnings, []);
+    assert.equal(episode.final_info.grasp_contacts.left + episode.final_info.grasp_contacts.right, 0);
+    assert.ok(episode.final_info.table_contacts > 0);
+    assert.ok(episode.final_info.max_object_lift >= .055);
+  }
+  const offline = JSON.parse(await readFile(resolve(root, "native-offline/native-policy.json")));
+  assert.equal(offline.passed, true);
+  assert.equal(offline.errno, 1);
+  const reproduced = JSON.parse(await readFile(resolve(root, "release-v0/reproduction.json")));
+  assert.equal(reproduced.source_imported_from_extracted_bundle, true);
+  assert.equal(reproduced.exact_trace_actions_final_info_match, true);
+  for (const file of await files(root)) assert.ok((await stat(file)).size < 25 * 1024 * 1024, file);
 });
 
 test("generated publication output is deterministic and excludes local session data", async () => {
