@@ -1,0 +1,3129 @@
+{
+  "task": "ArmPickPlace-v0",
+  "scope": "simulation-only",
+  "hardware": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.12.9",
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3"
+  },
+  "summary": {
+    "successes": 6,
+    "episodes": 18,
+    "simulated_seconds": 289.89999999997985,
+    "episode_wall_seconds": 13.607119331369177,
+    "by_policy": {
+      "placement": {
+        "successes": 6,
+        "episodes": 6,
+        "simulated_seconds": 73.89999999999168,
+        "episode_wall_seconds": 3.91412145702634
+      },
+      "idle": {
+        "successes": 0,
+        "episodes": 6,
+        "simulated_seconds": 107.99999999999409,
+        "episode_wall_seconds": 4.776218706043437
+      },
+      "replay_open_jaw": {
+        "successes": 0,
+        "episodes": 6,
+        "simulated_seconds": 107.99999999999409,
+        "episode_wall_seconds": 4.916779168299399
+      }
+    }
+  },
+  "timing_scope": "Episode wall clock includes model compilation, reset/settling, IK/controller, native physics, observations and traces; excludes installation, web UI, process startup and output I/O. No GPU benchmark.",
+  "protocol": {
+    "name": "frozen-six-layout-placement-v0",
+    "seeds": [
+      400,
+      401,
+      402,
+      403,
+      404,
+      405
+    ],
+    "scenes": [
+      {
+        "id": "default",
+        "object_position": [
+          0.42,
+          -0.04,
+          0.31
+        ],
+        "target_position": [
+          0.54,
+          0.1,
+          0.31
+        ]
+      },
+      {
+        "id": "cross_right",
+        "object_position": [
+          0.38,
+          0.09,
+          0.31
+        ],
+        "target_position": [
+          0.52,
+          -0.09,
+          0.31
+        ]
+      },
+      {
+        "id": "cross_left",
+        "object_position": [
+          0.48,
+          -0.12,
+          0.31
+        ],
+        "target_position": [
+          0.37,
+          0.09,
+          0.31
+        ]
+      },
+      {
+        "id": "forward",
+        "object_position": [
+          0.35,
+          -0.08,
+          0.31
+        ],
+        "target_position": [
+          0.54,
+          0.08,
+          0.31
+        ]
+      },
+      {
+        "id": "reverse",
+        "object_position": [
+          0.46,
+          0.1,
+          0.31
+        ],
+        "target_position": [
+          0.36,
+          -0.1,
+          0.31
+        ]
+      },
+      {
+        "id": "wide",
+        "object_position": [
+          0.3,
+          -0.15,
+          0.31
+        ],
+        "target_position": [
+          0.5,
+          0.18,
+          0.31
+        ]
+      }
+    ],
+    "controller": "same authored controller; no parameter training",
+    "negative_control": "Replay identical joint target commands with jaws held open; no object state edits.",
+    "selection": "Scene protocol fixed in source before this evaluation; small bounded simulation study."
+  },
+  "limitations": [
+    "Authored simulation controller; the source Skillspace envelope contains no learned robot policy.",
+    "One original arm profile, privileged simulator observations, rigid box proxy for placement skills.",
+    "Native jaw/object/table contacts; arm links and palm are collision-excluded.",
+    "No camera perception, physical arm calibration, selfcollision, cup/handle, cable tying or broad skill qualification.",
+    "Installation may fetch one public JSON envelope; installed execution and replay can run offline."
+  ],
+  "episodes": [
+    {
+      "seed": 400,
+      "policy": "placement",
+      "success": true,
+      "reason": "success",
+      "final_distance": 0.0002862948097583906,
+      "simulated_seconds": 11.309999999999171,
+      "episode_wall_seconds": 0.642286124988459,
+      "setup_seconds": 0.014417625032365322,
+      "control_latency_p50_seconds": 0.001080208458006382,
+      "control_latency_p95_seconds": 0.0015997602604329586,
+      "simulated_seconds_per_wall_second": 17.608974505252462,
+      "control_steps": 566,
+      "reward": 1.1841045919207631,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 400,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.18439088673052137,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 400,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 11.309999999999171,
+        "steps": 566,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12888431537193734,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.6113886813382758,
+        "target_distance": 0.0002862948097583906,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "scene_id": "default"
+    },
+    {
+      "seed": 400,
+      "policy": "idle",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.18439088673452475,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.928927208064124,
+      "setup_seconds": 0.007484375033527613,
+      "control_latency_p50_seconds": 0.0009191670105792582,
+      "control_latency_p95_seconds": 0.0015534496807958925,
+      "simulated_seconds_per_wall_second": 19.377191069159075,
+      "control_steps": 900,
+      "reward": -4.003380960071468e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 400,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.18439088673052137,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 400,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 3.3306690738754696e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.18439088673452475,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "scene_id": "default"
+    },
+    {
+      "seed": 400,
+      "policy": "replay_open_jaw",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.18439088673440412,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.8634222920518368,
+      "setup_seconds": 0.005889708991162479,
+      "control_latency_p50_seconds": 0.0009115415159612894,
+      "control_latency_p95_seconds": 0.001161949709057808,
+      "simulated_seconds_per_wall_second": 20.847272725868375,
+      "control_steps": 900,
+      "reward": -3.882755228445944e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 400,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.18439088673052137,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 400,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.18439088673440412,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.4200000002042822,
+          -0.03999999673455797,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.42,
+            -0.04,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2fbdf0f987f862da58495b0aef594eac8c03c601a2d9490643b23b80fe89ad41"
+      },
+      "scene_id": "default"
+    },
+    {
+      "seed": 401,
+      "policy": "placement",
+      "success": true,
+      "reason": "success",
+      "final_distance": 0.0004001095323778411,
+      "simulated_seconds": 13.355999999998037,
+      "episode_wall_seconds": 0.738930291030556,
+      "setup_seconds": 0.006179833086207509,
+      "control_latency_p50_seconds": 0.0010702084982767701,
+      "control_latency_p95_seconds": 0.0014304771786555646,
+      "simulated_seconds_per_wall_second": 18.074776690194913,
+      "control_steps": 668,
+      "reward": 1.227634978082459,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 401,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22803508761483676,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000018374086,
+          0.09000000322870635,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.09,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "06a2639116798aecb2ebfb8b52c873690bcbd1bebc8e6d0e404d9e6f0b3c8b57"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 401,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 13.355999999998037,
+        "steps": 668,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12815347400938681,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.6074140054963362,
+        "target_distance": 0.0004001095323778411,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000018374086,
+          0.09000000322870635,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.09,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "06a2639116798aecb2ebfb8b52c873690bcbd1bebc8e6d0e404d9e6f0b3c8b57"
+      },
+      "scene_id": "cross_right"
+    },
+    {
+      "seed": 401,
+      "policy": "idle",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.2280350876204795,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.7713305830257013,
+      "setup_seconds": 0.005402500042691827,
+      "control_latency_p50_seconds": 0.0008317704778164625,
+      "control_latency_p95_seconds": 0.000980684772366658,
+      "simulated_seconds_per_wall_second": 23.336297556607114,
+      "control_steps": 900,
+      "reward": -5.642736278232974e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 401,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22803508761483676,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000018374086,
+          0.09000000322870635,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.09,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "06a2639116798aecb2ebfb8b52c873690bcbd1bebc8e6d0e404d9e6f0b3c8b57"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 401,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 1.6653345369377348e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.2280350876204795,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000018374086,
+          0.09000000322870635,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.09,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "06a2639116798aecb2ebfb8b52c873690bcbd1bebc8e6d0e404d9e6f0b3c8b57"
+      },
+      "scene_id": "cross_right"
+    },
+    {
+      "seed": 401,
+      "policy": "replay_open_jaw",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.22803508762038868,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.8249195840908214,
+      "setup_seconds": 0.004946542088873684,
+      "control_latency_p50_seconds": 0.0008586039766669273,
+      "control_latency_p95_seconds": 0.0011958705261349675,
+      "simulated_seconds_per_wall_second": 21.820308727228937,
+      "control_steps": 900,
+      "reward": -5.551920034818636e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 401,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22803508761483676,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000018374086,
+          0.09000000322870635,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.09,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "06a2639116798aecb2ebfb8b52c873690bcbd1bebc8e6d0e404d9e6f0b3c8b57"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 401,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 1.6653345369377348e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22803508762038868,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.38000000018374086,
+          0.09000000322870635,
+          0.30999147829693885
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.38,
+            0.09,
+            0.31
+          ],
+          "target_position": [
+            0.52,
+            -0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "06a2639116798aecb2ebfb8b52c873690bcbd1bebc8e6d0e404d9e6f0b3c8b57"
+      },
+      "scene_id": "cross_right"
+    },
+    {
+      "seed": 402,
+      "policy": "placement",
+      "success": true,
+      "reason": "success",
+      "final_distance": 0.00035282827156375165,
+      "simulated_seconds": 11.333999999999158,
+      "episode_wall_seconds": 0.5672361659817398,
+      "setup_seconds": 0.005027625011280179,
+      "control_latency_p50_seconds": 0.001027792110107839,
+      "control_latency_p95_seconds": 0.0011855499469675124,
+      "simulated_seconds_per_wall_second": 19.981095493766553,
+      "control_steps": 567,
+      "reward": 1.2367125667701417,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 402,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.23706539504170562,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.48000000015500166,
+          -0.12000000337990512,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.12,
+            0.31
+          ],
+          "target_position": [
+            0.37,
+            0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2c176a162a3ac0a472f3d4d7c1618b64e936adefbc1700d807dbac0b289d3409"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 402,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 11.333999999999158,
+        "steps": 567,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.124081266864903,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.6106354897624153,
+        "target_distance": 0.00035282827156375165,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.48000000015500166,
+          -0.12000000337990512,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.12,
+            0.31
+          ],
+          "target_position": [
+            0.37,
+            0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2c176a162a3ac0a472f3d4d7c1618b64e936adefbc1700d807dbac0b289d3409"
+      },
+      "scene_id": "cross_left"
+    },
+    {
+      "seed": 402,
+      "policy": "idle",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.2370653950366419,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.7535420410567895,
+      "setup_seconds": 0.004998874966986477,
+      "control_latency_p50_seconds": 0.0008035204955376685,
+      "control_latency_p95_seconds": 0.000988022272940725,
+      "simulated_seconds_per_wall_second": 23.887187468339906,
+      "control_steps": 900,
+      "reward": 5.063727215315339e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 402,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.23706539504170562,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.48000000015500166,
+          -0.12000000337990512,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.12,
+            0.31
+          ],
+          "target_position": [
+            0.37,
+            0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2c176a162a3ac0a472f3d4d7c1618b64e936adefbc1700d807dbac0b289d3409"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 402,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 1.6653345369377348e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.2370653950366419,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.48000000015500166,
+          -0.12000000337990512,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.12,
+            0.31
+          ],
+          "target_position": [
+            0.37,
+            0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2c176a162a3ac0a472f3d4d7c1618b64e936adefbc1700d807dbac0b289d3409"
+      },
+      "scene_id": "cross_left"
+    },
+    {
+      "seed": 402,
+      "policy": "replay_open_jaw",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.23706539503680316,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.7642012090655044,
+      "setup_seconds": 0.00494783406611532,
+      "control_latency_p50_seconds": 0.0008183330064639449,
+      "control_latency_p95_seconds": 0.0009806024143472311,
+      "simulated_seconds_per_wall_second": 23.554006178569296,
+      "control_steps": 900,
+      "reward": 4.902467320988535e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 402,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.23706539504170562,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.48000000015500166,
+          -0.12000000337990512,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.12,
+            0.31
+          ],
+          "target_position": [
+            0.37,
+            0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2c176a162a3ac0a472f3d4d7c1618b64e936adefbc1700d807dbac0b289d3409"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 402,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 1.6653345369377348e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.23706539503680316,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.48000000015500166,
+          -0.12000000337990512,
+          0.3099914782969389
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.48,
+            -0.12,
+            0.31
+          ],
+          "target_position": [
+            0.37,
+            0.09,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "2c176a162a3ac0a472f3d4d7c1618b64e936adefbc1700d807dbac0b289d3409"
+      },
+      "scene_id": "cross_left"
+    },
+    {
+      "seed": 403,
+      "policy": "placement",
+      "success": true,
+      "reason": "success",
+      "final_distance": 0.000329102764761287,
+      "simulated_seconds": 11.590999999999015,
+      "episode_wall_seconds": 0.6161619999911636,
+      "setup_seconds": 0.0052045839838683605,
+      "control_latency_p50_seconds": 0.0010288340272381902,
+      "control_latency_p95_seconds": 0.0012569641636218873,
+      "simulated_seconds_per_wall_second": 18.811611232379214,
+      "control_steps": 580,
+      "reward": 1.2480657465069822,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 403,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.24839484927174335,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015411553,
+          -0.08000000353336417,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.08,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.08,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "72aa0e27419ec0f9ceadc07a2859b109808c36d81b64e71960e391bc7d0e38c1"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 403,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 11.590999999999015,
+        "steps": 580,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12896120822561669,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.6279205591518218,
+        "target_distance": 0.000329102764761287,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015411553,
+          -0.08000000353336417,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.08,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.08,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "72aa0e27419ec0f9ceadc07a2859b109808c36d81b64e71960e391bc7d0e38c1"
+      },
+      "scene_id": "forward"
+    },
+    {
+      "seed": 403,
+      "policy": "idle",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.2483948492778613,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.7823899579234421,
+      "setup_seconds": 0.00494079093914479,
+      "control_latency_p50_seconds": 0.0008280210313387215,
+      "control_latency_p95_seconds": 0.0011099458555690943,
+      "simulated_seconds_per_wall_second": 23.0064302560493,
+      "control_steps": 900,
+      "reward": -6.117939488348156e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 403,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.24839484927174335,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015411553,
+          -0.08000000353336417,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.08,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.08,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "72aa0e27419ec0f9ceadc07a2859b109808c36d81b64e71960e391bc7d0e38c1"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 403,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 3.3306690738754696e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.2483948492778613,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015411553,
+          -0.08000000353336417,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.08,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.08,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "72aa0e27419ec0f9ceadc07a2859b109808c36d81b64e71960e391bc7d0e38c1"
+      },
+      "scene_id": "forward"
+    },
+    {
+      "seed": 403,
+      "policy": "replay_open_jaw",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.24839484927786165,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.8182696660514921,
+      "setup_seconds": 0.004890291020274162,
+      "control_latency_p50_seconds": 0.0008616044651716948,
+      "control_latency_p95_seconds": 0.0011869964306242763,
+      "simulated_seconds_per_wall_second": 21.99763812198595,
+      "control_steps": 900,
+      "reward": -6.1183003108311595e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 403,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.24839484927174335,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015411553,
+          -0.08000000353336417,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.08,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.08,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "72aa0e27419ec0f9ceadc07a2859b109808c36d81b64e71960e391bc7d0e38c1"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 403,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.24839484927786165,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.35000000015411553,
+          -0.08000000353336417,
+          0.30999147829693857
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.35,
+            -0.08,
+            0.31
+          ],
+          "target_position": [
+            0.54,
+            0.08,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "72aa0e27419ec0f9ceadc07a2859b109808c36d81b64e71960e391bc7d0e38c1"
+      },
+      "scene_id": "forward"
+    },
+    {
+      "seed": 404,
+      "policy": "placement",
+      "success": true,
+      "reason": "success",
+      "final_distance": 0.0003297844138246607,
+      "simulated_seconds": 13.593999999997905,
+      "episode_wall_seconds": 0.6844325410202146,
+      "setup_seconds": 0.005055165966041386,
+      "control_latency_p50_seconds": 0.000948166532907635,
+      "control_latency_p95_seconds": 0.0012114014243707056,
+      "simulated_seconds_per_wall_second": 19.861709058623514,
+      "control_steps": 680,
+      "reward": 1.2232770114113305,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 404,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22360679582515505,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.46000000044592976,
+          0.09999999744346799,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.1,
+            0.31
+          ],
+          "target_position": [
+            0.36,
+            -0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "6702b32f6125fcdbe65cabfaa47951404f3694f83b53d46f546e0832d142e2df"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 404,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 13.593999999997905,
+        "steps": 680,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12465005382416378,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.6003089213633297,
+        "target_distance": 0.0003297844138246607,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.46000000044592976,
+          0.09999999744346799,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.1,
+            0.31
+          ],
+          "target_position": [
+            0.36,
+            -0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "6702b32f6125fcdbe65cabfaa47951404f3694f83b53d46f546e0832d142e2df"
+      },
+      "scene_id": "reverse"
+    },
+    {
+      "seed": 404,
+      "policy": "idle",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.22360679582933574,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.79080008296296,
+      "setup_seconds": 0.004971624934114516,
+      "control_latency_p50_seconds": 0.0008094789809547365,
+      "control_latency_p95_seconds": 0.0010557247092947363,
+      "simulated_seconds_per_wall_second": 22.761757854851048,
+      "control_steps": 900,
+      "reward": -4.180683577104105e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 404,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22360679582515505,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.46000000044592976,
+          0.09999999744346799,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.1,
+            0.31
+          ],
+          "target_position": [
+            0.36,
+            -0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "6702b32f6125fcdbe65cabfaa47951404f3694f83b53d46f546e0832d142e2df"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 404,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 4.440892098500626e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22360679582933574,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.46000000044592976,
+          0.09999999744346799,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.1,
+            0.31
+          ],
+          "target_position": [
+            0.36,
+            -0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "6702b32f6125fcdbe65cabfaa47951404f3694f83b53d46f546e0832d142e2df"
+      },
+      "scene_id": "reverse"
+    },
+    {
+      "seed": 404,
+      "policy": "replay_open_jaw",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.22360679582898266,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.7739569590194151,
+      "setup_seconds": 0.005098458961583674,
+      "control_latency_p50_seconds": 0.0008174580289050937,
+      "control_latency_p95_seconds": 0.001071626809425652,
+      "simulated_seconds_per_wall_second": 23.257107246383036,
+      "control_steps": 900,
+      "reward": -3.82760489969769e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 404,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22360679582515505,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.46000000044592976,
+          0.09999999744346799,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.1,
+            0.31
+          ],
+          "target_position": [
+            0.36,
+            -0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "6702b32f6125fcdbe65cabfaa47951404f3694f83b53d46f546e0832d142e2df"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 404,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.22360679582898266,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.46000000044592976,
+          0.09999999744346799,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.46,
+            0.1,
+            0.31
+          ],
+          "target_position": [
+            0.36,
+            -0.1,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "6702b32f6125fcdbe65cabfaa47951404f3694f83b53d46f546e0832d142e2df"
+      },
+      "scene_id": "reverse"
+    },
+    {
+      "seed": 405,
+      "policy": "placement",
+      "success": true,
+      "reason": "success",
+      "final_distance": 0.00043674634503465114,
+      "simulated_seconds": 12.714999999998392,
+      "episode_wall_seconds": 0.6650743340142071,
+      "setup_seconds": 0.0051423750119283795,
+      "control_latency_p50_seconds": 0.0010449375258758664,
+      "control_latency_p95_seconds": 0.0013206767907831818,
+      "simulated_seconds_per_wall_second": 19.118163714504096,
+      "control_steps": 636,
+      "reward": 1.385438879388436,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 405,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.3858756257334707,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30000000276319727,
+          -0.14999999934523794,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.3,
+            -0.15,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "82cb4dcaf9b6ba951c86516cb978fbe7c3a50cfb2ecfb03e7b1b40a68cff9945"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 405,
+        "reason": "success",
+        "success": true,
+        "valid": true,
+        "simulation_time": 12.714999999998392,
+        "steps": 636,
+        "dwell_elapsed": 0.25000000000000017,
+        "grasp_seen": true,
+        "lift_seen": true,
+        "max_object_lift": 0.12773119946639627,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 1.602003343787234,
+        "target_distance": 0.00043674634503465114,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30000000276319727,
+          -0.14999999934523794,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.3,
+            -0.15,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "82cb4dcaf9b6ba951c86516cb978fbe7c3a50cfb2ecfb03e7b1b40a68cff9945"
+      },
+      "scene_id": "wide"
+    },
+    {
+      "seed": 405,
+      "policy": "idle",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.385875625729108,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.7492288330104202,
+      "setup_seconds": 0.004885416012257338,
+      "control_latency_p50_seconds": 0.0007987499702721834,
+      "control_latency_p95_seconds": 0.0009575083386152982,
+      "simulated_seconds_per_wall_second": 24.02470274358578,
+      "control_steps": 900,
+      "reward": 4.362676886415784e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 405,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.3858756257334707,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30000000276319727,
+          -0.14999999934523794,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.3,
+            -0.15,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "82cb4dcaf9b6ba951c86516cb978fbe7c3a50cfb2ecfb03e7b1b40a68cff9945"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 405,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 3.3306690738754696e-16,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.385875625729108,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30000000276319727,
+          -0.14999999934523794,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.3,
+            -0.15,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "82cb4dcaf9b6ba951c86516cb978fbe7c3a50cfb2ecfb03e7b1b40a68cff9945"
+      },
+      "scene_id": "wide"
+    },
+    {
+      "seed": 405,
+      "policy": "replay_open_jaw",
+      "success": false,
+      "reason": "horizon",
+      "final_distance": 0.38587562572902734,
+      "simulated_seconds": 17.999999999999016,
+      "episode_wall_seconds": 0.8720094580203295,
+      "setup_seconds": 0.004923583008348942,
+      "control_latency_p50_seconds": 0.0008870000019669533,
+      "control_latency_p95_seconds": 0.0011872020841110493,
+      "simulated_seconds_per_wall_second": 20.641977944669694,
+      "control_steps": 900,
+      "reward": 4.4433345891548015e-12,
+      "reset_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 405,
+        "reason": "running",
+        "success": false,
+        "valid": true,
+        "simulation_time": 0.0,
+        "steps": 0,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.3858756257334707,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30000000276319727,
+          -0.14999999934523794,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.3,
+            -0.15,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "82cb4dcaf9b6ba951c86516cb978fbe7c3a50cfb2ecfb03e7b1b40a68cff9945"
+      },
+      "final_info": {
+        "task_id": "ArmPickPlace-v0",
+        "arm_profile": "dvidia-authored-6dof-parallel-jaw-v0",
+        "adapter_id": "contact-pick-place-box-v0",
+        "seed": 405,
+        "reason": "horizon",
+        "success": false,
+        "valid": true,
+        "simulation_time": 17.999999999999016,
+        "steps": 900,
+        "dwell_elapsed": 0.0,
+        "grasp_seen": false,
+        "lift_seen": false,
+        "max_object_lift": 0.0,
+        "grasp_contacts": {
+          "left": 0,
+          "right": 0
+        },
+        "pad_normal_forces": {
+          "left": 0.0,
+          "right": 0.0
+        },
+        "table_contacts": 4,
+        "max_pad_normal_force": 0.0,
+        "target_distance": 0.38587562572902734,
+        "warnings": [],
+        "lift_dwell_elapsed": 0.0,
+        "effective_sliding_friction": {
+          "jaw_object": 1.0,
+          "table_object": 0.8,
+          "mixing": "maximum at equal geom priority"
+        },
+        "initial_object_position": [
+          0.30000000276319727,
+          -0.14999999934523794,
+          0.3099914782969386
+        ],
+        "qualification": "simulation-only",
+        "observations": "privileged simulator state",
+        "actuation": "six bounded joint position servos and two bounded jaw servos",
+        "object_profile": "rigid box; unqualified proxy for cup skills",
+        "collision_profile": "jaws/object/table enabled; arm links and palm collision-excluded; no selfcollision qualification",
+        "config": {
+          "timestep": 0.001,
+          "control_dt": 0.02,
+          "horizon": 18.0,
+          "settle_time": 0.4,
+          "object_position": [
+            0.3,
+            -0.15,
+            0.31
+          ],
+          "target_position": [
+            0.5,
+            0.18,
+            0.31
+          ],
+          "object_half_size": [
+            0.02,
+            0.02,
+            0.02
+          ],
+          "object_mass": 0.04,
+          "object_friction": 0.8,
+          "table_height": 0.29,
+          "position_tolerance": 0.025,
+          "dwell_seconds": 0.25,
+          "scene_jitter": 0,
+          "joint_torque_limit": 40.0,
+          "jaw_force_limit": 15.0,
+          "gravity": 9.81
+        },
+        "engine": "3.15.0",
+        "scene_sha256": "82cb4dcaf9b6ba951c86516cb978fbe7c3a50cfb2ecfb03e7b1b40a68cff9945"
+      },
+      "scene_id": "wide"
+    }
+  ]
+}

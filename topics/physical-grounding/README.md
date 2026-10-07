@@ -1,5 +1,9 @@
 # Physical grounding
 
+## Skillspace link to articulated arm — 7 October 2026
+
+[Installing a Skillspace on a simulated arm](../../reports/Installing%20a%20Skillspace%20on%20a%20simulated%20arm.md) publishes a one-click local installer, authored placement adapter and native articulated-arm environment. The same controller completes 6/6 changed layouts; no-motion and replayed joint commands with jaws held open each complete 0/6. Three layouts repeat successfully under native network denial. [Local product guide and source](runs/2026-10-07-skillspace-arm/PRODUCT.md). DVIDIA metadata provides task identity, not a learned policy; the box proxy, privileged state and collision-excluded arm links bound the result.
+
 ## Runnable cable environment — 7 October 2026
 
 [Offline cable training environment](../../reports/Offline%20cable%20training%20environment.md) publishes the first practice-to-pack prototype: native CPU cable dynamics, local controller search, frozen simulated evaluation, replay and hashed export. The selected controller and fixed feedback baseline both completed 10/10 held-out episodes; zero-force and release controls completed 0/10. Search did not improve held-out completion. A separate native macOS network-denial check completed 3/3 additional episodes. [Runnable archive and instructions](runs/2026-10-07-cable-env/README.md). Ideal endpoint attachment and privileged state remain explicit; this is not the retrieval baseline, physical gripping, calibrated rope accuracy or GPU qualification.
