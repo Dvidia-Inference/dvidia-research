@@ -1,0 +1,128 @@
+{
+  "actuation_profile": "cartesian_endpoint_force_v0",
+  "config": {
+    "anchor_height": 0.7,
+    "bend": 100000.0,
+    "contact_friction": 0.5,
+    "control_dt": 0.02,
+    "density": 1000.0,
+    "dwell": 0.2,
+    "force_limit": 2.0,
+    "gravity": 9.81,
+    "horizon": 6.0,
+    "joint_damping": 0.03,
+    "rope_length": 0.5,
+    "rope_nodes": 21,
+    "rope_radius": 0.004,
+    "settle_time": 1.0,
+    "target_jitter": 0.005,
+    "target_offset": [
+      0.06,
+      0.05,
+      0.04
+    ],
+    "timestep": 0.001,
+    "tolerance": 0.025,
+    "twist": 100000.0,
+    "variation_fraction": 0.08,
+    "workspace_radius_factor": 1.1
+  },
+  "dependency_versions": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "python": "3.12.9"
+  },
+  "files": {
+    "LICENSE": {
+      "bytes": 1076,
+      "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
+    },
+    "README.md": {
+      "bytes": 582,
+      "sha256": "71bd2463efa114ba28f787027c810da9441b84a4baea933087cf43b1483c1171"
+    },
+    "code/simlab/LICENSE": {
+      "bytes": 1076,
+      "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
+    },
+    "code/simlab/__init__.py": {
+      "bytes": 167,
+      "sha256": "e710fdac4ab49a1ccea99179928b827a2d1cfde23d230dcfeb9e48a2cd258c14"
+    },
+    "code/simlab/__main__.py": {
+      "bytes": 30,
+      "sha256": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+    },
+    "code/simlab/cli.py": {
+      "bytes": 13664,
+      "sha256": "f2b82eb89d617fd8033de44248b138b9166d2f10600484aeae8225332fbd4ccb"
+    },
+    "code/simlab/env.py": {
+      "bytes": 26684,
+      "sha256": "929c1d8c3c4cafe0054c633ee5f3e51c551dd6b26ae014ab1ea9219b58eca8e4"
+    },
+    "code/simlab/native_offline_check.py": {
+      "bytes": 2539,
+      "sha256": "f550f650a1e7fdaeff38c0aec07782df7cf456e20663c7fba6cede8510e9120e"
+    },
+    "code/simlab/pack.py": {
+      "bytes": 4681,
+      "sha256": "885e973907499a505fef4d28ac6bb5eb2b2dbba498efc94d9e6c8125b9bd52f9"
+    },
+    "code/simlab/policies.py": {
+      "bytes": 1552,
+      "sha256": "f52071d8af4ffa215c0c5ac57a7591e12e9e17b834b4bfb2a1705e7e0a7f5154"
+    },
+    "code/simlab/qualify.py": {
+      "bytes": 5487,
+      "sha256": "2f9566f9c550723cbf96342e075e68dc291446c4fbd3935cec9d333371ab1457"
+    },
+    "code/simlab/requirements.lock.txt": {
+      "bytes": 159,
+      "sha256": "5a435f5b6e4ebcdb78fa12ec223b9c09d972daca6008700e854255664f6fb2a4"
+    },
+    "code/simlab/viewer.py": {
+      "bytes": 15258,
+      "sha256": "2fc396aaace350c0fa795fdd907dff96179fcb919116d3d5f1a7b3fa9392376d"
+    },
+    "policy.json": {
+      "bytes": 120,
+      "sha256": "bcadde486f18ca6267e548e94bf7210eb9d5509a01b5ea789f8d1d6bb5e6510d"
+    },
+    "requirements.lock.txt": {
+      "bytes": 159,
+      "sha256": "5a435f5b6e4ebcdb78fa12ec223b9c09d972daca6008700e854255664f6fb2a4"
+    },
+    "run.json": {
+      "bytes": 1089917,
+      "sha256": "f66d5dc2d38708f26adab1b8211f702db673210d91df5b44f9deef16e4fa9e12"
+    }
+  },
+  "observation_profile": "privileged_simulator_state_v0",
+  "physical_evidence": null,
+  "qualification": {
+    "episodes": 10,
+    "scope": "fixed simulated seed suite; no physical or GPU qualification",
+    "seeds": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209
+    ],
+    "successes": 10,
+    "training_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "schema_version": 1,
+  "status": "simulation-only",
+  "task": "CableEndReach-v0"
+}

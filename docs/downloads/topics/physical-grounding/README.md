@@ -1,5 +1,9 @@
 # Physical grounding
 
+## Runnable cable environment — 7 October 2026
+
+[Offline cable training environment](../../reports/Offline%20cable%20training%20environment.md) publishes the first practice-to-pack prototype: native CPU cable dynamics, local controller search, frozen simulated evaluation, replay and hashed export. The selected controller and fixed feedback baseline both completed 10/10 held-out episodes; zero-force and release controls completed 0/10. Search did not improve held-out completion. A separate native macOS network-denial check completed 3/3 additional episodes. [Runnable archive and instructions](runs/2026-10-07-cable-env/README.md). Ideal endpoint attachment and privileged state remain explicit; this is not the retrieval baseline, physical gripping, calibrated rope accuracy or GPU qualification.
+
 ## Recorded contact fixture — 7 October 2026
 
 The separate [native CPU contact fixture](runs/2026-10-07-contact-fixture/) records 54 deterministic trials across 18 cases and three repeats. [The decision report](../../reports/Fast%20accurate%20robot%20training%20simulation.md) explains why endpoint agreement does not establish fingertip-force fidelity, and why coarse timesteps can miss collisions. Benchmark source, pinned dependencies, per-trial JSON, an independent AI-assisted code review and a bounded Python-network denial check are published. This fixture does not execute the retrieval baseline below or validate rope materials, GPU training or physical robot transfer.
