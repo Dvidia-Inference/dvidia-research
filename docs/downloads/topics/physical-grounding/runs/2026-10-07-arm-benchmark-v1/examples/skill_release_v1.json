@@ -1,0 +1,42 @@
+{
+  "kind": "dvidia.skill-release-proposal",
+  "schema_version": 1,
+  "status": "draft",
+  "release": {
+    "id": "place_cup",
+    "version": "0.1.0-draft.1",
+    "previous_manifest_sha256": null
+  },
+  "task": {
+    "id": "place_cup",
+    "family": "rigid_pick_place",
+    "goal": "Place an explicitly grounded rigid object on the mark.",
+    "distribution": "Source metadata only. No controller, training dataset, held-out evaluation or hardware qualification is claimed by this draft."
+  },
+  "artifacts": [
+    {
+      "id": "place-cup-source",
+      "role": "source",
+      "path": "simlab/place_cup.skill.json",
+      "sha256": "23f27bea18abdf54ffd8a123fc099036ab7ee81fcd44714c894f5d1b12720a15",
+      "bytes": 332
+    }
+  ],
+  "dependencies": [],
+  "stages": {
+    "source": {
+      "artifact_ids": [
+        "place-cup-source"
+      ],
+      "source_kind": "metadata",
+      "modalities": [
+        "task_text"
+      ]
+    },
+    "curated_dataset": null,
+    "grounded_scenario": null,
+    "executable": null,
+    "evaluation": null,
+    "hardware_qualification": null
+  }
+}

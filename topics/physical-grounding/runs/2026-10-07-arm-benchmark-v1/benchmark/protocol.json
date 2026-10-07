@@ -1,0 +1,1491 @@
+{
+  "schema_version": 1,
+  "name": "authored-arm-engineering-v1",
+  "engine": "MuJoCo 3.15.0",
+  "dev": [
+    {
+      "id": "dev-00",
+      "group": "nominal",
+      "seed": 100,
+      "config": {
+        "object_position": [
+          0.42,
+          -0.04,
+          0.31
+        ],
+        "target_position": [
+          0.54,
+          0.1,
+          0.31
+        ],
+        "object_half_size": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "object_mass": 0.04,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-01",
+      "group": "nominal",
+      "seed": 101,
+      "config": {
+        "object_position": [
+          0.25,
+          -0.18,
+          0.305
+        ],
+        "target_position": [
+          0.48,
+          0.18,
+          0.305
+        ],
+        "object_half_size": [
+          0.015,
+          0.015,
+          0.015
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-02",
+      "group": "nominal",
+      "seed": 102,
+      "config": {
+        "object_position": [
+          0.26,
+          0.18,
+          0.315
+        ],
+        "target_position": [
+          0.54,
+          -0.07,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-03",
+      "group": "nominal",
+      "seed": 103,
+      "config": {
+        "object_position": [
+          0.54,
+          -0.09,
+          0.315
+        ],
+        "target_position": [
+          0.28,
+          0.1,
+          0.315
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.025
+        ],
+        "object_mass": 0.06,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-04",
+      "group": "nominal",
+      "seed": 104,
+      "config": {
+        "object_position": [
+          0.46,
+          0.2,
+          0.31
+        ],
+        "target_position": [
+          0.31,
+          -0.18,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.025,
+          0.02
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.2,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-05",
+      "group": "nominal",
+      "seed": 105,
+      "config": {
+        "object_position": [
+          0.53,
+          0.15,
+          0.305
+        ],
+        "target_position": [
+          0.32,
+          0.14,
+          0.305
+        ],
+        "object_half_size": [
+          0.025,
+          0.02,
+          0.015
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-06",
+      "group": "nominal",
+      "seed": 106,
+      "config": {
+        "object_position": [
+          0.32,
+          -0.2,
+          0.315
+        ],
+        "target_position": [
+          0.54,
+          0.1,
+          0.315
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.025
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.0,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-07",
+      "group": "nominal",
+      "seed": 107,
+      "config": {
+        "object_position": [
+          0.55,
+          0.06,
+          0.3075
+        ],
+        "target_position": [
+          0.35,
+          -0.18,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.015,
+          0.0175
+        ],
+        "object_mass": 0.04,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-08",
+      "group": "nominal",
+      "seed": 108,
+      "config": {
+        "object_position": [
+          0.38,
+          0.16,
+          0.305
+        ],
+        "target_position": [
+          0.5,
+          -0.16,
+          0.305
+        ],
+        "object_half_size": [
+          0.02,
+          0.025,
+          0.015
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-09",
+      "group": "nominal",
+      "seed": 109,
+      "config": {
+        "object_position": [
+          0.48,
+          -0.18,
+          0.315
+        ],
+        "target_position": [
+          0.26,
+          -0.17,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.015,
+          0.025
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.2,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-10",
+      "group": "nominal",
+      "seed": 110,
+      "config": {
+        "object_position": [
+          0.31,
+          0.05,
+          0.305
+        ],
+        "target_position": [
+          0.52,
+          0.18,
+          0.305
+        ],
+        "object_half_size": [
+          0.015,
+          0.02,
+          0.015
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-11",
+      "group": "nominal",
+      "seed": 111,
+      "config": {
+        "object_position": [
+          0.51,
+          0.12,
+          0.315
+        ],
+        "target_position": [
+          0.3,
+          -0.1,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-12",
+      "group": "nominal",
+      "seed": 112,
+      "config": {
+        "object_position": [
+          0.27,
+          -0.04,
+          0.31
+        ],
+        "target_position": [
+          0.54,
+          -0.11,
+          0.31
+        ],
+        "object_half_size": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "object_mass": 0.04,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-13",
+      "group": "nominal",
+      "seed": 113,
+      "config": {
+        "object_position": [
+          0.33,
+          0.19,
+          0.31
+        ],
+        "target_position": [
+          0.52,
+          -0.15,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.04,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-14",
+      "group": "actuator_stress",
+      "seed": 114,
+      "config": {
+        "object_position": [
+          0.42,
+          -0.1,
+          0.31
+        ],
+        "target_position": [
+          0.5,
+          0.1,
+          0.31
+        ],
+        "object_half_size": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.4,
+        "jaw_force_limit": 0.15,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-15",
+      "group": "actuator_stress",
+      "seed": 115,
+      "config": {
+        "object_position": [
+          0.47,
+          0.08,
+          0.31
+        ],
+        "target_position": [
+          0.31,
+          -0.14,
+          0.31
+        ],
+        "object_half_size": [
+          0.025,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.5,
+        "jaw_force_limit": 0.3,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-16",
+      "group": "actuator_stress",
+      "seed": 116,
+      "config": {
+        "object_position": [
+          0.35,
+          -0.15,
+          0.315
+        ],
+        "target_position": [
+          0.5,
+          0.12,
+          0.315
+        ],
+        "object_half_size": [
+          0.015,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.8,
+        "jaw_force_limit": 0.8,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-17",
+      "group": "actuator_stress",
+      "seed": 117,
+      "config": {
+        "object_position": [
+          0.4,
+          0.0,
+          0.31
+        ],
+        "target_position": [
+          0.52,
+          0.15,
+          0.31
+        ],
+        "object_half_size": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "object_mass": 0.04,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 0.5,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-18",
+      "group": "actuator_stress",
+      "seed": 118,
+      "config": {
+        "object_position": [
+          0.52,
+          -0.15,
+          0.315
+        ],
+        "target_position": [
+          0.3,
+          0.15,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.2,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 2.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "dev-19",
+      "group": "actuator_stress",
+      "seed": 119,
+      "config": {
+        "object_position": [
+          0.27,
+          0.18,
+          0.3125
+        ],
+        "target_position": [
+          0.5,
+          -0.12,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.2,
+        "jaw_force_limit": 2.0,
+        "joint_torque_limit": 5.0,
+        "scene_jitter": 0.0
+      }
+    }
+  ],
+  "heldout": [
+    {
+      "id": "held-00",
+      "group": "nominal",
+      "seed": 10001,
+      "config": {
+        "object_position": [
+          0.286489,
+          0.07023,
+          0.31
+        ],
+        "target_position": [
+          0.313055,
+          -0.167262,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-01",
+      "group": "nominal",
+      "seed": 10002,
+      "config": {
+        "object_position": [
+          0.543698,
+          -0.05486,
+          0.305
+        ],
+        "target_position": [
+          0.485343,
+          0.132488,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-02",
+      "group": "nominal",
+      "seed": 10003,
+      "config": {
+        "object_position": [
+          0.330389,
+          0.040335,
+          0.3125
+        ],
+        "target_position": [
+          0.460472,
+          -0.066059,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.03,
+        "object_friction": 1.3,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-03",
+      "group": "nominal",
+      "seed": 10004,
+      "config": {
+        "object_position": [
+          0.273477,
+          0.088708,
+          0.3075
+        ],
+        "target_position": [
+          0.389456,
+          0.130039,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.02,
+          0.0175
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.0,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-04",
+      "group": "nominal",
+      "seed": 10005,
+      "config": {
+        "object_position": [
+          0.479987,
+          -0.07001,
+          0.315
+        ],
+        "target_position": [
+          0.374889,
+          -0.089508,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.04,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-05",
+      "group": "nominal",
+      "seed": 10006,
+      "config": {
+        "object_position": [
+          0.311584,
+          -0.026862,
+          0.31
+        ],
+        "target_position": [
+          0.341355,
+          0.082751,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.7,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-06",
+      "group": "nominal",
+      "seed": 10007,
+      "config": {
+        "object_position": [
+          0.34475,
+          -0.144561,
+          0.305
+        ],
+        "target_position": [
+          0.366919,
+          0.18832,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-07",
+      "group": "nominal",
+      "seed": 10008,
+      "config": {
+        "object_position": [
+          0.391518,
+          0.10062,
+          0.3125
+        ],
+        "target_position": [
+          0.387591,
+          -0.168008,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.03,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-08",
+      "group": "nominal",
+      "seed": 10009,
+      "config": {
+        "object_position": [
+          0.466577,
+          0.101466,
+          0.3075
+        ],
+        "target_position": [
+          0.469425,
+          -0.051228,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.02,
+          0.0175
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.3,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-09",
+      "group": "nominal",
+      "seed": 10010,
+      "config": {
+        "object_position": [
+          0.538777,
+          0.011174,
+          0.315
+        ],
+        "target_position": [
+          0.262906,
+          -0.193377,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.04,
+        "object_friction": 1.0,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-10",
+      "group": "nominal",
+      "seed": 10011,
+      "config": {
+        "object_position": [
+          0.371648,
+          0.035935,
+          0.31
+        ],
+        "target_position": [
+          0.262368,
+          -0.016261,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-11",
+      "group": "nominal",
+      "seed": 10012,
+      "config": {
+        "object_position": [
+          0.289709,
+          0.188798,
+          0.305
+        ],
+        "target_position": [
+          0.407033,
+          -0.135999,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 0.7,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-12",
+      "group": "nominal",
+      "seed": 10013,
+      "config": {
+        "object_position": [
+          0.529945,
+          -0.005655,
+          0.3125
+        ],
+        "target_position": [
+          0.307068,
+          -0.098932,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.03,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-13",
+      "group": "nominal",
+      "seed": 10014,
+      "config": {
+        "object_position": [
+          0.434252,
+          -0.087452,
+          0.3075
+        ],
+        "target_position": [
+          0.337714,
+          -0.156706,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.02,
+          0.0175
+        ],
+        "object_mass": 0.08,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-14",
+      "group": "nominal",
+      "seed": 10015,
+      "config": {
+        "object_position": [
+          0.308816,
+          0.005211,
+          0.315
+        ],
+        "target_position": [
+          0.378693,
+          0.14961,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.04,
+        "object_friction": 1.3,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-15",
+      "group": "nominal",
+      "seed": 10016,
+      "config": {
+        "object_position": [
+          0.253755,
+          0.153531,
+          0.31
+        ],
+        "target_position": [
+          0.519127,
+          -0.169306,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 1.0,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-16",
+      "group": "nominal",
+      "seed": 10017,
+      "config": {
+        "object_position": [
+          0.535216,
+          0.082147,
+          0.305
+        ],
+        "target_position": [
+          0.35014,
+          -0.149707,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-17",
+      "group": "nominal",
+      "seed": 10018,
+      "config": {
+        "object_position": [
+          0.373122,
+          -0.172726,
+          0.3125
+        ],
+        "target_position": [
+          0.485297,
+          -0.040365,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.03,
+        "object_friction": 0.7,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-18",
+      "group": "nominal",
+      "seed": 10019,
+      "config": {
+        "object_position": [
+          0.306634,
+          -0.075046,
+          0.3075
+        ],
+        "target_position": [
+          0.448238,
+          -0.155934,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.02,
+          0.0175
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.4,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-19",
+      "group": "nominal",
+      "seed": 10020,
+      "config": {
+        "object_position": [
+          0.405453,
+          0.169566,
+          0.315
+        ],
+        "target_position": [
+          0.396749,
+          -0.1558,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.04,
+        "object_friction": 1.5,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-20",
+      "group": "nominal",
+      "seed": 10021,
+      "config": {
+        "object_position": [
+          0.260904,
+          0.165401,
+          0.31
+        ],
+        "target_position": [
+          0.530761,
+          0.106122,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 1.3,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-21",
+      "group": "nominal",
+      "seed": 10022,
+      "config": {
+        "object_position": [
+          0.406923,
+          -0.145413,
+          0.305
+        ],
+        "target_position": [
+          0.267138,
+          0.162728,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.0,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-22",
+      "group": "nominal",
+      "seed": 10023,
+      "config": {
+        "object_position": [
+          0.454271,
+          -0.08574,
+          0.3125
+        ],
+        "target_position": [
+          0.261943,
+          0.047148,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.03,
+        "object_friction": 0.8,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-23",
+      "group": "nominal",
+      "seed": 10024,
+      "config": {
+        "object_position": [
+          0.49101,
+          0.021776,
+          0.3075
+        ],
+        "target_position": [
+          0.390214,
+          0.008373,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.02,
+          0.0175
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.7,
+        "jaw_force_limit": 15.0,
+        "joint_torque_limit": 40.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-24",
+      "group": "actuator_stress",
+      "seed": 10025,
+      "config": {
+        "object_position": [
+          0.427378,
+          -0.132477,
+          0.315
+        ],
+        "target_position": [
+          0.505867,
+          0.052408,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.04,
+        "object_friction": 0.4,
+        "jaw_force_limit": 0.12,
+        "joint_torque_limit": 0.75,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-25",
+      "group": "actuator_stress",
+      "seed": 10026,
+      "config": {
+        "object_position": [
+          0.532208,
+          0.078891,
+          0.31
+        ],
+        "target_position": [
+          0.314537,
+          -0.125429,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 1.5,
+        "jaw_force_limit": 0.25,
+        "joint_torque_limit": 2.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-26",
+      "group": "actuator_stress",
+      "seed": 10027,
+      "config": {
+        "object_position": [
+          0.536178,
+          -0.022799,
+          0.305
+        ],
+        "target_position": [
+          0.355684,
+          0.010497,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.3,
+        "jaw_force_limit": 0.5,
+        "joint_torque_limit": 5.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-27",
+      "group": "actuator_stress",
+      "seed": 10028,
+      "config": {
+        "object_position": [
+          0.271258,
+          -0.040269,
+          0.3125
+        ],
+        "target_position": [
+          0.289147,
+          0.08975,
+          0.3125
+        ],
+        "object_half_size": [
+          0.02,
+          0.015,
+          0.0225
+        ],
+        "object_mass": 0.03,
+        "object_friction": 1.0,
+        "jaw_force_limit": 1.0,
+        "joint_torque_limit": 10.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-28",
+      "group": "actuator_stress",
+      "seed": 10029,
+      "config": {
+        "object_position": [
+          0.543153,
+          0.109392,
+          0.3075
+        ],
+        "target_position": [
+          0.4801,
+          -0.129262,
+          0.3075
+        ],
+        "object_half_size": [
+          0.0225,
+          0.02,
+          0.0175
+        ],
+        "object_mass": 0.08,
+        "object_friction": 0.8,
+        "jaw_force_limit": 0.12,
+        "joint_torque_limit": 0.75,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-29",
+      "group": "actuator_stress",
+      "seed": 10030,
+      "config": {
+        "object_position": [
+          0.302482,
+          0.194105,
+          0.315
+        ],
+        "target_position": [
+          0.414219,
+          -0.106755,
+          0.315
+        ],
+        "object_half_size": [
+          0.025,
+          0.025,
+          0.025
+        ],
+        "object_mass": 0.04,
+        "object_friction": 0.7,
+        "jaw_force_limit": 0.25,
+        "joint_torque_limit": 2.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-30",
+      "group": "actuator_stress",
+      "seed": 10031,
+      "config": {
+        "object_position": [
+          0.471222,
+          0.112264,
+          0.31
+        ],
+        "target_position": [
+          0.345643,
+          0.094276,
+          0.31
+        ],
+        "object_half_size": [
+          0.015,
+          0.0175,
+          0.02
+        ],
+        "object_mass": 0.02,
+        "object_friction": 0.4,
+        "jaw_force_limit": 0.5,
+        "joint_torque_limit": 5.0,
+        "scene_jitter": 0.0
+      }
+    },
+    {
+      "id": "held-31",
+      "group": "actuator_stress",
+      "seed": 10032,
+      "config": {
+        "object_position": [
+          0.416429,
+          -0.043476,
+          0.305
+        ],
+        "target_position": [
+          0.349206,
+          0.117167,
+          0.305
+        ],
+        "object_half_size": [
+          0.0175,
+          0.0225,
+          0.015
+        ],
+        "object_mass": 0.06,
+        "object_friction": 1.5,
+        "jaw_force_limit": 1.0,
+        "joint_torque_limit": 10.0,
+        "scene_jitter": 0.0
+      }
+    }
+  ],
+  "rejection_probes": [
+    {
+      "id": "reject-radial",
+      "override": {
+        "object_position": [
+          0.6,
+          0.2,
+          0.31
+        ]
+      },
+      "exception": "ValueError"
+    },
+    {
+      "id": "reject-small-object",
+      "override": {
+        "object_half_size": [
+          0.01,
+          0.02,
+          0.02
+        ]
+      },
+      "exception": "ValueError"
+    },
+    {
+      "id": "reject-heavy-object",
+      "override": {
+        "object_mass": 0.1
+      },
+      "exception": "ValueError"
+    },
+    {
+      "id": "reject-zero-jaw-force",
+      "override": {
+        "jaw_force_limit": 0.0
+      },
+      "exception": "ValueError"
+    },
+    {
+      "id": "unsupported-orientation",
+      "override": {
+        "object_quaternion": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "exception": "TypeError"
+    },
+    {
+      "id": "unsupported-obstacles",
+      "override": {
+        "obstacles": []
+      },
+      "exception": "TypeError"
+    },
+    {
+      "id": "unsupported-deformable",
+      "override": {
+        "deformable": true
+      },
+      "exception": "TypeError"
+    }
+  ],
+  "counts": {
+    "dev": 20,
+    "heldout": 32,
+    "rejection_probes": 7
+  },
+  "selection": "Fixed dev layouts and independently generated deterministic heldout layouts; no scene jitter. Different seed numbers alone are not coverage.",
+  "tuning_rule": "Only development outcomes may guide two engineering rounds. Freeze final exact source before one baseline-versus-final heldout comparison. No heldout feedback tuning.",
+  "success_rule": "Environment gate unchanged: loaded bilateral/table-free >=55mm lift retained100ms; released jaws; TCP>=100mm above object; table support, target tolerance, linear/angular settling and250ms default dwell.",
+  "physics_scope": "Rigid axis-aligned boxes at reset, upright tool goal; no obstacle/selfcollision, cup handle, perception, deformable, orientation-generalization or physical-transfer qualification.",
+  "contact_law": "Equal-priority geom max mixing: jaw mu=max(1,object_friction), table mu=max(.8,object_friction). Raw friction below floors is not low-friction grasp coverage.",
+  "input": "Six joint position targets in radians plus one jaw opening width in metres; two physical jaw joints receive width/2. Actuator values are not an inferred demonstration.",
+  "controls": "Idle holds initial six joint targets with jaws open; replay-open uses identical recorded joint-target tape while forcing jaws open. Both retain native bounded servos.",
+  "timing_scope": "Single-world instrumented CPU episode: compilation, reset/settling, controller/IK, native stepping, observations and control-cadence diagnostics; excludes interpreter startup, imports, source copying, JSON I/O, installation, rendering and web UI. No GPU measurement or real-robot transfer claim.",
+  "metric_sampling": "Native joint/force/contact diagnostic maxima sampled after each20ms control step; env max pad force tracks1ms substeps. Sampled maxima are not continuous physical force peaks."
+}

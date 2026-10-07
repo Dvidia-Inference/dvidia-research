@@ -1,5 +1,9 @@
 # Physical grounding
 
+## Paired arm benchmark and Skillspace evolution — 7 October 2026
+
+[Skillspace arm benchmarks and evolution](../../reports/Skillspace%20arm%20benchmarks%20and%20evolution.md) publishes two development revisions and their frozen comparison. Development completion rises from 14/20 to 17/20, while held-out completion falls from 30/32 to 29/32: nominal remains 24/24 and actuator stress falls from 6/8 to 5/8. Observed instrumented CPU throughput falls from 12.28× to 11.39×. These results support explicit inputs, feedback and failure reporting; they do not establish better overall completion or calibrated physics. [Protocol and measurements](runs/2026-10-07-arm-benchmark-v1/benchmark/RESULTS.md), [source release](runs/2026-10-07-arm-benchmark-v1/release/simlab-v0.3.zip), [browser-run replay](runs/2026-10-07-arm-benchmark-v1/demo/replay.html). The proposed release inspector keeps draft simulation/hardware readiness false; future tasks require their own evidence.
+
 ## Skillspace link to articulated arm — 7 October 2026
 
 [Installing a Skillspace on a simulated arm](../../reports/Installing%20a%20Skillspace%20on%20a%20simulated%20arm.md) publishes a one-click local installer, authored placement adapter and native articulated-arm environment. The same controller completes 6/6 changed layouts; no-motion and replayed joint commands with jaws held open each complete 0/6. Three layouts repeat successfully under native network denial. [Local product guide and source](runs/2026-10-07-skillspace-arm/PRODUCT.md). DVIDIA metadata provides task identity, not a learned policy; the box proxy, privileged state and collision-excluded arm links bound the result.

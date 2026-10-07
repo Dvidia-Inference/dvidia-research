@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "skillspace-arm-benchmarks",
+      "title": "Skillspace arm benchmarks and evolution",
+      "source": "reports/Skillspace arm benchmarks and evolution.md",
+      "date": "2026-10-07",
+      "type": "Paired simulation benchmark and product assessment",
+      "status": "Mixed held-out result · 30/32 baseline, 29/32 updated",
+      "topics": [
+        "physical-grounding",
+        "skill-relations",
+        "evaluation-provenance"
+      ],
+      "abstract": "Two controller revisions improve development completion from 14/20 to 17/20, but the frozen paired test declines from 30/32 to 29/32: both pass all 24 normal-strength cases while actuator-stress completion falls from 6/8 to 5/8. Instrumented CPU throughput also declines. We publish the regression, unchanged contact and success rules, exact controller snapshots, richer physical inputs, runtime-bound installation and a proposed staged Skillspace contract. Contact forces and penetration remain uncalibrated; learned perception and physical qualification are open."
+    },
+    {
       "slug": "skillspace-arm-installation",
       "title": "Installing a Skillspace on a simulated arm",
       "source": "reports/Installing a Skillspace on a simulated arm.md",

@@ -1,0 +1,57 @@
+{
+  "v0": {
+    "successes": 30,
+    "cases": 32,
+    "groups": {
+      "actuator_stress": {
+        "successes": 6,
+        "cases": 8,
+        "failure_categories": {
+          "failed_grasp": 2,
+          "success": 6
+        }
+      },
+      "nominal": {
+        "successes": 24,
+        "cases": 24,
+        "failure_categories": {
+          "success": 24
+        }
+      }
+    },
+    "reasons": {
+      "success": 30,
+      "horizon": 2
+    },
+    "episode_wall_seconds": 33.95611328771338,
+    "simulated_seconds": 417.09399999995134
+  },
+  "final": {
+    "successes": 29,
+    "cases": 32,
+    "groups": {
+      "actuator_stress": {
+        "successes": 5,
+        "cases": 8,
+        "failure_categories": {
+          "failed_grasp": 2,
+          "success": 5,
+          "failed_release": 1
+        }
+      },
+      "nominal": {
+        "successes": 24,
+        "cases": 24,
+        "failure_categories": {
+          "success": 24
+        }
+      }
+    },
+    "reasons": {
+      "success": 29,
+      "horizon": 3
+    },
+    "episode_wall_seconds": 38.0122980006272,
+    "simulated_seconds": 432.8739999999481
+  }
+}
