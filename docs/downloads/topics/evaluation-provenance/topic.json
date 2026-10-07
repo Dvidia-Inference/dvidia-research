@@ -1,0 +1,105 @@
+{
+  "id": "evaluation-provenance",
+  "title": "Evaluation and provenance",
+  "kicker": "Reproducible evidence",
+  "summary": "Test episode readback, original-to-derivative lineage and split integrity using small, auditable fixtures.",
+  "status": "evaluating",
+  "cover": "assets/evaluation-provenance.webp",
+  "imageAlt": "AI editorial illustration of a notebook with contact-sheet photos; not a completed validation result.",
+  "updated": "2026-10-06",
+  "sources": [
+    {
+      "id": "ramos2021rlds",
+      "title": "RLDS: an Ecosystem to Generate, Share and Use Datasets in Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2111.02767",
+      "type": "paper",
+      "year": 2021
+    },
+    {
+      "id": "lerobot2026v3",
+      "title": "LeRobotDataset v3.0 (documentation accessed 2026)",
+      "url": "https://huggingface.co/docs/lerobot/lerobot-dataset-v3",
+      "type": "docs",
+      "year": 2026
+    },
+    {
+      "id": "gebru2021datasheets",
+      "title": "Datasheets for Datasets",
+      "url": "https://arxiv.org/abs/1803.09010v8",
+      "type": "paper",
+      "year": 2021
+    },
+    {
+      "id": "li2026argus",
+      "title": "Argus: An Open-Source Annotator for Robotics Data",
+      "url": "https://pantheon.inc/research/argus",
+      "type": "essay",
+      "year": 2026
+    },
+    {
+      "id": "pantheon2026argus",
+      "title": "Argus source at reviewed revision (accessed 2026)",
+      "url": "https://github.com/Pantheon-Industries-Inc/argus/tree/6c99686a3d93027c517f02f37f24b5b68532e12a",
+      "type": "code",
+      "year": 2026
+    }
+  ],
+  "questions": [
+    {
+      "id": "ep-01",
+      "text": "Can independent environments reproduce identical inventories, grouped splits and supported episode readback?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/2"
+    },
+    {
+      "id": "ep-02",
+      "text": "Which corruptions and duplicated derivatives evade a small provenance validator?",
+      "state": "open",
+      "issueUrl": null
+    },
+    {
+      "id": "ep-03",
+      "text": "How much does recording-level leakage change the selected evaluation metric?",
+      "state": "open",
+      "issueUrl": null
+    },
+    {
+      "id": "ep-04",
+      "text": "Do grounded temporal annotations reduce false completion labels, and what evidence should gate a robot-tested skill release?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/5"
+    },
+    {
+      "id": "ep-05",
+      "text": "Can visual checks detect caption mistakes and missing state changes on a held-out human-referenced set?",
+      "state": "open",
+      "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/5"
+    }
+  ],
+  "milestones": [
+    {
+      "label": "Primary sources reviewed",
+      "done": true
+    },
+    {
+      "label": "Pilot protocol reviewed",
+      "done": false
+    },
+    {
+      "label": "Baseline executed and artifacts published",
+      "done": false
+    },
+    {
+      "label": "Independent result review",
+      "done": false
+    },
+    {
+      "label": "Five-clip image API feasibility run published (not accuracy)",
+      "done": true
+    }
+  ],
+  "firstTask": {
+    "title": "Design a five-episode fixture with three deliberate faults",
+    "issueUrl": "https://github.com/Dvidia-Inference/dvidia-research/issues/2"
+  }
+}

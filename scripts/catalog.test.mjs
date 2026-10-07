@@ -59,13 +59,18 @@ async function fixture(t) {
   for (const path of [
     "scripts/validate.mjs",
     "scripts/build-catalog.mjs",
-    "docs/index.html",
     "docs/styles.css",
     "docs/app.js",
     "docs/assets/favicon.svg",
     "docs/assets/capture-quality.webp",
   ])
     await copyFile(resolve(ROOT, path), resolve(root, path));
+  // Catalog checks own a minimal independent site; publication tests cover the
+  // complete generated journal and its paper/feed/download links.
+  await writeFile(
+    resolve(root, "docs/index.html"),
+    '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Catalog fixture</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head><body><main><h1>Catalog fixture</h1></main></body></html>\n',
+  );
   // Reuse an actual public editorial asset; tests never fetch images or source URLs.
   await copyFile(
     resolve(ROOT, "docs/assets/capture-quality.webp"),
