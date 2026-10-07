@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "blocked_operations": [
+    "socket.socket",
+    "socket.create_connection",
+    "socket.getaddrinfo"
+  ],
+  "attempted_operations": [],
+  "guard_self_test_passed": true,
+  "scope": "Python socket construction, connection helpers and DNS only; native C network calls are not intercepted",
+  "packages_preinstalled": true,
+  "air_gapped_wheel_install_tested": false
+}

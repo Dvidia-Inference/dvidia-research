@@ -1,6 +1,6 @@
 # Turn Physical Footage Into Testable Evidence
 
-DVIDIA should test the usefulness of its evidence before expanding collection volume. The immediate opportunity is to make demonstrations easier to inspect, compare and reproduce, then measure whether added structure or physical signals help a defined task. Sam Padilla's 5 October essay provides a strategic prompt; the technical sources support narrower, testable questions. **No experiment in this repository has run**, and neither customer demand nor robot transfer has been established. Four contributor-sized studies cover capture quality, relations over time, provenance and physical grounding.
+DVIDIA should test the usefulness of its evidence before expanding collection volume. The immediate opportunity is to make demonstrations easier to inspect, compare and reproduce, then measure whether added structure or physical signals help a defined task. Sam Padilla's 5 October essay provides a strategic prompt; the technical sources support narrower, testable questions. **The four baseline protocols proposed in this agenda have not run**, and neither customer demand nor robot transfer has been established. Four contributor-sized studies cover capture quality, relations over time, provenance and physical grounding.
 
 ## The essay motivates a hypothesis, not a market forecast
 

@@ -113,6 +113,7 @@ async function localLinks(source, path) {
   ];
   for (let url of urls) {
     url = url.replace(/^<|>$/g, "");
+    if (url === "mailto:hello@dvidia.org") continue;
     if (url.startsWith("#")) continue;
     if (/^https:\/\//i.test(url)) {
       safeUrl(url, `${relative(ROOT, path)} link`);
@@ -313,7 +314,8 @@ export async function validateRepository() {
     await file(resolve(ROOT, path));
   const html = await readFile(resolve(ROOT, "docs/index.html"), "utf8");
   await localLinks(html, resolve(ROOT, "docs/index.html"));
-  if (/<(?:script|link)\b[^>]*(?:src|href)=["']https?:/i.test(html))
+  if (/<script\b[^>]*src=["']https?:/i.test(html) ||
+      /<link\b(?=[^>]*rel=["'](?:stylesheet|preload)["'])(?=[^>]*href=["']https?:)[^>]*>/i.test(html))
     fail("docs/index.html: external scripts, styles or fonts are not allowed.");
   const app = await readFile(resolve(ROOT, "docs/app.js"), "utf8");
   if (/\.(?:innerHTML|outerHTML)\s*=|insertAdjacentHTML\s*\(/.test(app))

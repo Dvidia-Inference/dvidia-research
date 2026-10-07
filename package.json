@@ -8,9 +8,12 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test scripts/catalog.test.mjs",
-    "build": "node scripts/build-catalog.mjs",
+    "test": "node --test scripts/*.test.mjs",
+    "build": "node scripts/build-catalog.mjs && node scripts/build-papers.mjs",
     "validate": "node scripts/validate.mjs",
     "check": "npm run build && npm run validate"
+  },
+  "devDependencies": {
+    "marked": "17.0.1"
   }
 }

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "publisher": "DVIDIA",
+  "contact": "hello@dvidia.org",
+  "follow": "https://x.com/IAMMRRIVR",
+  "contributor": null,
+  "publications": [
+    {
+      "slug": "fast-accurate-robot-training-simulation",
+      "title": "Fast accurate robot training simulation",
+      "source": "reports/Fast accurate robot training simulation.md",
+      "date": "2026-10-07",
+      "type": "Decision report and local experiment",
+      "status": "54 CPU fixture trials · GPU and physical transfer untested",
+      "topics": ["physical-grounding", "evaluation-provenance"],
+      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance–accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
+    },
+    {
+      "slug": "grok-robotics-research-on-x",
+      "title": "Grok robotics research on X",
+      "source": "reports/Grok robotics research on X.md",
+      "date": "2026-10-07",
+      "type": "Source review and thesis comparison",
+      "status": "Primary sources checked · Experiments proposed",
+      "topics": ["skill-relations", "physical-grounding"],
+      "abstract": "Three Grok 4.7 research passes surface observation-to-action, synthetic-practice and reusable-repair ideas. Independent primary-source checks compare those findings with our thesis: observation supplies goals and state, language retrieves a skill, spatial expectations guide attention, and executable feedback with evaluation establishes competence. X posts remain discovery leads. No universal demonstration count or arbitrary-robot transfer follows from the reviewed results."
+    },
+    {
+      "slug": "spatially-grounded-downloadable-robot-skills",
+      "title": "Spatially grounded downloadable robot skills",
+      "source": "reports/Spatially grounded downloadable robot skills.md",
+      "date": "2026-10-07",
+      "type": "Research synthesis and proposed experiments",
+      "status": "Source review · DVIDIA experiments not run",
+      "topics": ["skill-relations", "physical-grounding", "evaluation-provenance"],
+      "abstract": "A synthesis of learning from human demonstrations, language-conditioned spatial attention, simulation expansion and robot-specific skill delivery. Spatial priors can accelerate inspection but do not determine contact state or control. The proposed downloadable skill packages a controller, initiation and termination conditions, compatible sensing and hardware, recovery behavior and measured evidence. Separate experiments would test attention, data coverage, feedback and transfer."
+    },
+    {
+      "slug": "clef-and-grounded-video-observations",
+      "title": "Clef and grounded video observations",
+      "source": "reports/Clef and grounded video observations.md",
+      "date": "2026-10-06",
+      "type": "Engineering feasibility pilot",
+      "status": "Five licensed excerpts · Accuracy evaluation outstanding",
+      "topics": ["capture-quality", "evaluation-provenance", "skill-relations"],
+      "abstract": "A preregistered image-API feasibility run processed five licensed three-second POV excerpts using four timestamped frames, a Gemma caption and a Clef-flash check. All five completed at a price-derived inference estimate of $0.00140634. Post-run inspection found an object error accepted by the checker and omitted state changes. API and schema compatibility were demonstrated; annotation accuracy and whole-task success were not."
+    },
+    {
+      "slug": "from-skillspace-to-robot-skill",
+      "title": "From Skillspace to robot skill",
+      "source": "reports/From Skillspace to robot skill.md",
+      "date": "2026-10-06",
+      "type": "Source review and implementation proposal",
+      "status": "Graduation and robot training not run",
+      "topics": ["evaluation-provenance", "skill-relations"],
+      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot’s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
+    },
+    {
+      "slug": "physical-skill-research-agenda",
+      "title": "Turn physical footage into testable evidence",
+      "source": "reports/Physical skill research agenda.md",
+      "date": "2026-10-06",
+      "type": "Research agenda",
+      "status": "Four baseline protocols proposed",
+      "topics": ["capture-quality", "skill-relations", "evaluation-provenance", "physical-grounding"],
+      "abstract": "A research agenda covering visible capture evidence, relations over time, evaluation provenance and physical grounding. Each question has a bounded protocol and a failure condition. The aim is to measure whether structure and physical signals improve a defined task before scaling collection. Strategic opinions, author-reported results and our untested proposals are kept distinct."
+    }
+  ]
+}

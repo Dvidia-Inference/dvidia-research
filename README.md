@@ -2,9 +2,9 @@
 
 Small, reproducible studies of what makes a physical demonstration useful: visible evidence, defensible relationships, traceable data and measured physical grounding.
 
-**Status: scoping. No experiments have run.** This repository contains source reviews, open questions and proposed protocols. It does not claim trained robot skills, validated transfer or measured improvements.
+**Status: source reviews and bounded local experiments.** Five licensed POV excerpts have been processed in an image-API feasibility pilot, and 54 native CPU contact-fixture trials have been recorded. The original baseline protocols, GPU training and physical robot transfer remain unrun.
 
-[Browse the research site](https://dvidia-inference.github.io/dvidia-research/) · [Read the research agenda](reports/Physical%20skill%20research%20agenda.md) · [Start contributing](CONTRIBUTING.md)
+[Browse the research site](https://research.dvidia.org/) · [Read the research agenda](reports/Physical%20skill%20research%20agenda.md) · [Start contributing](CONTRIBUTING.md)
 
 ## Choose a question
 
@@ -20,6 +20,10 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest study
 
+[Fast accurate robot training simulation](reports/Fast%20accurate%20robot%20training%20simulation.md) translates observation-to-skill research into an offline training-environment design. The published [contact fixture](topics/physical-grounding/runs/2026-10-07-contact-fixture/) contains byte-identical benchmark code and recorded outputs for 54 CPU trials. Contact-force fidelity, deformable calibration, GPU throughput and physical transfer remain separate gates.
+
+[Grok robotics research on X](reports/Grok%20robotics%20research%20on%20X.md) checks the initial thesis against primary literature. [Spatially grounded downloadable robot skills](reports/Spatially%20grounded%20downloadable%20robot%20skills.md) sets out the proposed controller, compatibility and evaluation contract.
+
 [Clef and grounded video observations](reports/Clef%20and%20grounded%20video%20observations.md): five licensed POV excerpts processed, with actual costs, timings and important caption/checker failures. This is an engineering feasibility result; the separate 40-episode accuracy pilot still needs its reference set.
 
 [From Skillspace to robot skill](reports/From%20Skillspace%20to%20robot%20skill.md) reviews Argus and proposes a measurable path from accepted videos to robot-tested releases. Includes a current implementation gap analysis, DOF compatibility requirements and an unrun [annotation pilot](topics/evaluation-provenance/experiments/0002-skill-graduation.md).
@@ -34,15 +38,18 @@ The four [starter issues](https://github.com/Dvidia-Inference/dvidia-research/is
 
 ## Preview and maintain the site
 
-Use Node.js 22 or newer; there are no package dependencies to install.
+Use Node.js 22 or newer. The pinned build-time Markdown parser is installed by `npm ci`; readers require no JavaScript or external font service.
 
 ```sh
+npm ci --ignore-scripts
 npm run check
 npm test
 python3 -m http.server 8201 --directory docs
 ```
 
-Open `http://localhost:8201`. Edit each topic's metadata and bibliography, then run `npm run build` to regenerate `docs/topics.json`. Commit both the source edits and generated catalog. GitHub Pages serves `docs/` from `main`; the validation workflow checks references, metadata, safe links and deterministic output.
+Open `http://localhost:8201`. Edit report Markdown and `publications.json` for publications; edit topic metadata and bibliographies for questions. `npm run build` generates the topic catalog, six publication readers, four topic readers, portable downloads, RSS and sitemap. Commit source edits and generated output. The static `docs/` directory supports the custom research subdomain and a subfolder preview through relative links. Validation checks references, safe links, source provenance and deterministic output.
+
+The journal lists actual research footprints and distinguishes source reviews, proposed protocols and executed fixtures. DVIDIA is the publisher and `hello@dvidia.org` is the team contact. Individual contributor attribution is intentionally empty pending confirmation; `@IAMMRRIVR` is a general follow link, not an asserted author identity. Raw authenticated research sessions, environment files and private execution paths are excluded from the public archive.
 
 ## Read claims at their actual scope
 
