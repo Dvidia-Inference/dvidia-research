@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "archive_sha256": "0b7d11b0dcae5d4d8fe4de2a62680970f604b43a61c328596815f634868242aa",
+  "source_imported_from_extracted_bundle": true,
+  "manifest_file_hashes_checked": 89,
+  "runtime": {
+    "kind": "hybrid-distilled-placement-runtime",
+    "files_sha256": {
+      "arm_env.py": "e4af9b75364a568284b1e6d96469deacf498dd87a60b067fa5e310fe15c54c00",
+      "arm_policy.py": "d6d53d87703fb8608390092309285afb6a2c8fd3103a7abd77668be85469eab3",
+      "arm_runner.py": "affb5812b6a395f6cca9cb4e900af2ef28162e7ff1e52a51bd29b789daa98df1",
+      "env.py": "929c1d8c3c4cafe0054c633ee5f3e51c551dd6b26ae014ab1ea9219b58eca8e4",
+      "skillspace.py": "34b651609358ae9a58b9a610545ce7b85b83fb3d6c699613414ff8e0ea457b3c",
+      "cli.py": "f2b82eb89d617fd8033de44248b138b9166d2f10600484aeae8225332fbd4ccb",
+      "installer.py": "d3a2c5a4913920c52beef89df9954494b89fd0becb08bb4847264dae48d3761c",
+      "arm_distill.py": "14640f91ec9c91d10a405fa56eb21bda8b55b285854ce2b5859a71d1ffd06ea1",
+      "skill_capsule.py": "ecb7dbd60d3a11f40bf65c4520f024b449c0d63f9ae27c601c9c9fe17b32e6a0",
+      "capsule_installer.py": "60bb1652cae830fd03ae6eaa5e10150c957be13e1dc630a5631c1a2692ae37ec"
+    },
+    "dependencies": {
+      "mujoco": "3.15.0",
+      "numpy": "2.5.3"
+    },
+    "action_contract": "six joint targets in radians; symmetric gripper width in metres"
+  },
+  "preinstalled_dependencies": true,
+  "physical_robot_ready": false,
+  "qualification_status": "validated_simulation_scene",
+  "student_success": true,
+  "open_jaw_control_success": false,
+  "repeat_success": true,
+  "native_network_denial": {
+    "connection_return": -1,
+    "errno": 1,
+    "expected_errno": 1
+  },
+  "exact_control_steps_final_state_metrics_actions_trace_match": true,
+  "scope": "Extracted-source reproduction of one known default scene under native macOS network denial. Timing excluded; preinstalled dependencies; no unseen/hardware/cross-platform claim."
+}

@@ -1,5 +1,9 @@
 # Physical grounding
 
+## Installable learned movement capsule — 7 October 2026
+
+[Skill capsule acquisition and optimization](../../reports/Skill%20capsule%20acquisition%20and%20optimization.md) packages a learned CPU movement head inside an authored placement supervisor. A new frozen evaluation preserves teacher/student 7/8 outcomes, with no overall speedup. The local lab imports the JSON capsule, qualifies the exact scene with native placement and an identical-command/open-jaw control, and runs without retraining. Changed inputs require another test. [Source and evidence](runs/2026-10-07-skill-capsule-v1/README.md), [capsule](runs/2026-10-07-skill-capsule-v1/simlab/placement_candidate.skill.json), [browser-run replay](runs/2026-10-07-skill-capsule-v1/demo/replay.html). The capsule does not supply video learning or physical qualification.
+
 ## Paired arm benchmark and Skillspace evolution — 7 October 2026
 
 [Skillspace arm benchmarks and evolution](../../reports/Skillspace%20arm%20benchmarks%20and%20evolution.md) publishes two development revisions and their frozen comparison. Development completion rises from 14/20 to 17/20, while held-out completion falls from 30/32 to 29/32: nominal remains 24/24 and actuator stress falls from 6/8 to 5/8. Observed instrumented CPU throughput falls from 12.28× to 11.39×. These results support explicit inputs, feedback and failure reporting; they do not establish better overall completion or calibrated physics. [Protocol and measurements](runs/2026-10-07-arm-benchmark-v1/benchmark/RESULTS.md), [source release](runs/2026-10-07-arm-benchmark-v1/release/simlab-v0.3.zip), [browser-run replay](runs/2026-10-07-arm-benchmark-v1/demo/replay.html). The proposed release inspector keeps draft simulation/hardware readiness false; future tasks require their own evidence.
