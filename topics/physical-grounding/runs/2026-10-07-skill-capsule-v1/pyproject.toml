@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dvidia-simlab"
+version = "0.4.0"
+description = "Offline simulation tasks, measured rollouts and simulation-only skill packs"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+dependencies = ["mujoco==3.15.0", "numpy==2.5.3"]
+
+[project.scripts]
+dvidia-simlab = "simlab.cli:main"
+dvidia-skill-lab = "simlab.studio:main"
+dvidia-arm = "simlab.arm_runner:main"
+dvidia-skill-capsule = "simlab.capsule_installer:main"
+
+[tool.setuptools.packages.find]
+include = ["simlab*"]
+
+[tool.setuptools.package-data]
+simlab = ["requirements.lock.txt", "LICENSE", "studio.html", "place_cup.skill.json", "arm_benchmark_summary.json", "placement_candidate.skill.json"]
