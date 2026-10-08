@@ -1,5 +1,13 @@
 # Physical grounding
 
+[Skillspace footage training pipeline](../../reports/Skillspace%20footage%20training%20pipeline.md)
+introduces the separate public [DVIDIA Training](https://github.com/Dvidia-Inference/dvidia-training)
+repository: CPU footage intake, connected source groups, measured visual fitting,
+optional aligned movement training and simulation capsule export. Hardware guidance,
+installation tools and synthetic examples are included. One exact native scene passes
+with a failed open-jaw control; human-video action recovery and shoe competence remain
+unestablished. [Release and evidence](runs/2026-10-08-footage-pipeline-v1/README.md).
+
 ## Installable learned movement capsule — 7 October 2026
 
 [Skill capsule acquisition and optimization](../../reports/Skill%20capsule%20acquisition%20and%20optimization.md) packages a learned CPU movement head inside an authored placement supervisor. A new frozen evaluation preserves teacher/student 7/8 outcomes, with no overall speedup. The local lab imports the JSON capsule, qualifies the exact scene with native placement and an identical-command/open-jaw control, and runs without retraining. Changed inputs require another test. [Source and evidence](runs/2026-10-07-skill-capsule-v1/README.md), [capsule](runs/2026-10-07-skill-capsule-v1/simlab/placement_candidate.skill.json), [browser-run replay](runs/2026-10-07-skill-capsule-v1/demo/replay.html). The capsule does not supply video learning or physical qualification.

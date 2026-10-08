@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "skillspace-footage-training",
+      "title": "Skillspace footage training pipeline",
+      "source": "reports/Skillspace footage training pipeline.md",
+      "date": "2026-10-08",
+      "type": "Product implementation and measured synthetic pilot",
+      "status": "Public CPU package \u00b7 one native scene qualified \u00b7 simulation-only",
+      "topics": [
+        "capture-quality",
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "The public Dvidia-Inference/dvidia-training repository provides a standalone CPU pipeline that audits Skillspace media, freezes grouped splits and exports inspectable artifacts. Ten synthetic six-second clips train a visual predictor with a 0.5106-second median pipeline time across three repeats on one macOS host. Aligned native simulator telemetry supplies 4,029 training labels for a learned joint-delta head, evaluated on one held-out recording. Its capsule passes native placement qualification in that recording's exact scene; identical joint targets with open jaws fail. Installation and hardware guides accompany the package. Human-video action recovery, shoe organization, demonstration sufficiency, independent scene generalization and physical robot competence remain unestablished."
+    },
+    {
       "slug": "skill-capsule-acquisition",
       "title": "Skill capsule acquisition and optimization",
       "source": "reports/Skill capsule acquisition and optimization.md",
