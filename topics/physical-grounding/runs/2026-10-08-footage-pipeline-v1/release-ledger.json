@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "dvidia.training-release-ledger",
+  "repository": "https://github.com/Dvidia-Inference/dvidia-training",
+  "source_commit": "1718c3b7791114649f037150b08153927d5eff5b",
+  "code_license": "MIT",
+  "footage_license": "MIT",
+  "footage_origin": "Authored synthetic schematic recordings and native simulator telemetry; no human or private footage.",
+  "pilot_scope": "Small CPU software pilot; one exact native held-out scene, no physical robot qualification.",
+  "runs": [
+    {
+      "id": "lab-native-integration-first",
+      "status": "failed_export",
+      "reason": "New trainer initially wrote movement_model.json while the orchestrator expected movement_head.json; no capsule or completed download was produced.",
+      "test_use": "Synthetic fixture verification; no architecture or weight tuning followed this integration failure."
+    },
+    {
+      "id": "standalone-visual",
+      "status": "complete",
+      "path": "visual-training/run.json",
+      "evidence": "Clean base package install without MuJoCo; actual encoded clips and verified data-only result."
+    },
+    {
+      "id": "standalone-native",
+      "status": "complete",
+      "path": "native-training/run.json",
+      "evidence": "Optional engine environment; actual aligned native supervision, candidate capsule, separate one-scene qualification and identical-target open-jaw control."
+    }
+  ],
+  "qualification_receipt": "qualification/qualification.json",
+  "hardware_minimum_verified": false,
+  "historical_studies": "Earlier releases and frozen studies were preserved; these fixtures are synthetic product integration checks.",
+  "software_checks": {
+    "tested_runtime_commit": "d1f0cbcfb296432b4ad0338dfd75e3f285b62d84",
+    "workflow_url": "https://github.com/Dvidia-Inference/dvidia-training/actions/runs/37740260434",
+    "conclusion": "success",
+    "jobs_passed": 8,
+    "visual_platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "python_versions": [
+      "3.12",
+      "3.13"
+    ],
+    "native_arm_scope": "Linux synthetic one-scene pilot",
+    "container_scope": "Linux Docker actual example/training/inspection under --network none",
+    "release_changes_after_test": "Documentation only; runtime and tests unchanged."
+  },
+  "release_url": "https://github.com/Dvidia-Inference/dvidia-training/releases/tag/v0.1.0"
+}
