@@ -6,6 +6,21 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "robotics-research-pipeline",
+      "title": "Robotics research pipeline",
+      "source": "reports/Robotics research pipeline.md",
+      "date": "2026-10-09",
+      "type": "Architecture proposal and staged validation roadmap",
+      "status": "Architecture proposal \u00b7 current simulation alpha \u00b7 hardware unqualified",
+      "topics": [
+        "capture-quality",
+        "skill-relations",
+        "evaluation-provenance",
+        "physical-grounding"
+      ],
+      "abstract": "An updated architecture connects immutable Skillspace recordings, reviewed task-label proposals and synchronized measured telemetry to grouped datasets, separate visual and motor learners, and a proposed local state supervisor. The implemented CPU baseline retains authored phases, gripper decisions and recovery around its learned joint-delta head. New annotation and supervisor pilots, fresh frozen confirmation, physics calibration and compatible skill-installation gates define the next milestones. Automatic labeling, learned supervision, human-video action recovery and physical arm qualification remain unestablished; this publication adds no new training or hardware result."
+    },
+    {
       "slug": "skillspace-footage-training",
       "title": "Skillspace footage training pipeline",
       "source": "reports/Skillspace footage training pipeline.md",
