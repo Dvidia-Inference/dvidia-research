@@ -1,5 +1,9 @@
 # Physical grounding
 
+## Robotics research pipeline — 9 October 2026
+
+[Robotics research pipeline](../../reports/Robotics%20research%20pipeline.md) connects footage review, synchronized measured state, separate visual and movement training, frozen simulation evaluation and versioned skill installation. Its diagram identifies current simulation components, proposed automatic labeling and learned task decisions, and the outstanding physical qualification gate. The proposed supervisor consumes recent joint, gripper and contact evidence; it does not equate a close command with a successful grasp. The new annotation-labor pilot is a companion to the existing graduation proposal. Both new experiments are **not run**. Existing recorded benchmarks retain their original protocols and claims.
+
 [Skillspace footage training pipeline](../../reports/Skillspace%20footage%20training%20pipeline.md)
 introduces the separate public [DVIDIA Training](https://github.com/Dvidia-Inference/dvidia-training)
 repository: CPU footage intake, connected source groups, measured visual fitting,

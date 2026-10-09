@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="1672" viewBox="0 0 440 1672" role="img" aria-labelledby="pipeline-title pipeline-description">
+  <title id="pipeline-title">DVIDIA robotics research pipeline: footage and robot evidence to an installable, qualified skill</title>
+  <desc id="pipeline-description">Current Skillspace ingestion and source-grouped datasets support a CPU visual diagnostic and a telemetry-trained movement candidate with an authored supervisor. Proposed stages add reviewed automatic labels, richer synchronized measured state, and a learned task supervisor. The visual diagnostic is not a motor policy. Current movement candidates pass through frozen simulation evaluation and a versioned simulation capsule. Local hardware qualification and compatible physical execution remain unqualified. Runtime failures and corrections return as new reviewed recordings and new candidate versions; accepted test evidence remains frozen. Solid borders identify current components; dashed borders identify proposed or unqualified components. Each component also has a written status.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#343430" stroke-width="1.4"/></marker>
+    <style>
+      text{fill:#262623;font-family:Arial,Helvetica,sans-serif}
+      .title{font-family:Georgia,"Times New Roman",serif;font-size:27px}
+      .subtitle{font-size:16px;fill:#595953}
+      .label{font-size:14px;letter-spacing:.4px;font-weight:700}
+      .heading{font-size:20px;font-weight:600;letter-spacing:-.3px}
+      .body{font-size:16px;fill:#494943}
+      .note{font-size:14px;fill:#595953}
+      .card{fill:#fdfdfb;stroke:#77776e;stroke-width:1.3}
+      .planned{stroke-dasharray:5 4}
+      .line{fill:none;stroke:#343430;stroke-width:1.3;marker-end:url(#arrow)}
+      .rule{stroke:#d2d2c9;stroke-width:1}
+    </style>
+  </defs>
+  <rect width="440" height="1672" fill="#fdfdfb"/>
+  <text x="40" y="25" class="label">DVIDIA · RESEARCH ARCHITECTURE</text>
+  <text x="40" y="63" class="title">From evidence to a skill.</text>
+  <text x="40" y="89" class="subtitle">Current tools and the next research steps</text>
+  <line x1="40" y1="111" x2="73" y2="111" stroke="#77776e" stroke-width="1.3"/>
+  <text x="82" y="116" class="note">Current</text>
+  <line x1="180" y1="111" x2="213" y2="111" stroke="#77776e" stroke-width="1.3" stroke-dasharray="5 4"/>
+  <text x="222" y="116" class="note">Proposed / unqualified</text>
+
+  <rect x="40" y="140" width="360" height="84" class="card"/>
+  <text x="56" y="160" class="label">CURRENT · SOURCE INGEST</text>
+  <text x="56" y="187" class="heading">Skillspace originals</text>
+  <text x="56" y="210" class="body">Footage · context · rights · source lineage</text>
+  <path d="M220 224 V242" class="line" stroke-dasharray="5 4"/>
+  <path d="M40 182 H22 V533 H34" class="line"/>
+
+  <rect x="40" y="248" width="360" height="90" class="card planned"/>
+  <text x="56" y="268" class="label">PROPOSED · OPTIONAL ANNOTATION</text>
+  <text x="56" y="295" class="heading">Label proposals → human review</text>
+  <text x="56" y="318" class="body">Task spans · objects · outcomes · unknowns</text>
+  <path d="M220 338 V356" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="362" width="360" height="100" class="card planned"/>
+  <text x="56" y="382" class="label">PROPOSED · RICHER RECORDING CONTRACT</text>
+  <text x="56" y="409" class="heading">Add synchronized robot evidence</text>
+  <text x="56" y="432" class="body">Recorded actions + measured robot state</text>
+  <text x="56" y="452" class="note">Video alone does not provide robot actions.</text>
+  <path d="M220 462 V480" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="486" width="360" height="100" class="card"/>
+  <text x="56" y="506" class="label">CURRENT CORE · PLANNED LABEL EXTENSION</text>
+  <text x="56" y="533" class="heading">Versioned episode dataset</text>
+  <text x="56" y="556" class="body">Hashes · whole-source train / test groups</text>
+  <text x="56" y="576" class="note">Proposed: reviewed labels + sensor timing.</text>
+
+  <text x="40" y="620" class="label">THREE TRAINING LANES</text>
+  <path d="M220 586 V599 H22 V900" fill="none" stroke="#343430" stroke-width="1.3"/>
+  <path d="M22 682 H34" class="line"/>
+  <path d="M22 792 H34" class="line"/>
+  <path d="M22 902 H34" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="640" width="360" height="88" class="card"/>
+  <text x="56" y="660" class="label">A · CURRENT</text>
+  <text x="56" y="687" class="heading">CPU visual diagnostic</text>
+  <text x="56" y="710" class="body">Next-frame prediction. Not a motor skill.</text>
+
+  <rect x="40" y="750" width="360" height="88" class="card"/>
+  <text x="56" y="770" class="label">B · CURRENT SIMULATION CANDIDATE</text>
+  <text x="56" y="797" class="heading">Telemetry movement head</text>
+  <text x="56" y="820" class="body">Authored task phases, goals and gripper</text>
+  <path d="M400 794 H419 V958 H220 V976" class="line"/>
+
+  <rect x="40" y="860" width="360" height="88" class="card planned"/>
+  <text x="56" y="880" class="label">C · PROPOSED CANDIDATE</text>
+  <text x="56" y="907" class="heading">Learned state / task supervisor</text>
+  <text x="56" y="930" class="body">Phase · local goal · gripper · retry / abstain</text>
+  <path d="M400 904 H419" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="982" width="360" height="94" class="card"/>
+  <text x="56" y="1002" class="label">CURRENT · SIMULATION EVALUATION</text>
+  <text x="56" y="1029" class="heading">Frozen qualification tests</text>
+  <text x="56" y="1052" class="body">Nominal · stress · matched control cases</text>
+  <text x="56" y="1070" class="note">A new candidate needs fresh confirmation.</text>
+  <path d="M220 1076 V1094" class="line"/>
+
+  <rect x="40" y="1100" width="360" height="94" class="card"/>
+  <text x="56" y="1120" class="label">CURRENT · SIMULATION-SCOPED RELEASE</text>
+  <text x="56" y="1147" class="heading">Versioned install capsule</text>
+  <text x="56" y="1170" class="body">Model · robot adapter · evidence receipt</text>
+  <text x="56" y="1188" class="note">Full sensor / capability manifest proposed.</text>
+  <path d="M220 1194 V1212" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="1218" width="360" height="94" class="card planned"/>
+  <text x="56" y="1238" class="label">REQUIRED · HARDWARE UNQUALIFIED</text>
+  <text x="56" y="1265" class="heading">Local hardware qualification</text>
+  <text x="56" y="1288" class="body">Calibrated sensors · compatible robot</text>
+  <text x="56" y="1306" class="note">Physical transfer has not been demonstrated.</text>
+  <path d="M220 1312 V1330" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="1336" width="360" height="94" class="card planned"/>
+  <text x="56" y="1356" class="label">PROPOSED · AFTER QUALIFICATION</text>
+  <text x="56" y="1383" class="heading">Compatible arm execution</text>
+  <text x="56" y="1406" class="body">Task intent + fresh measured state</text>
+  <text x="56" y="1424" class="note">Fast robot controller enforces local limits.</text>
+  <path d="M220 1430 V1448" class="line" stroke-dasharray="5 4"/>
+
+  <rect x="40" y="1454" width="360" height="104" class="card planned"/>
+  <text x="56" y="1474" class="label">PROPOSED · FEEDBACK TO NEW RECORDINGS</text>
+  <text x="56" y="1501" class="heading">Failures, corrections and traces</text>
+  <text x="56" y="1524" class="body">Review → new dataset → new candidate</text>
+  <text x="56" y="1546" class="note">Accepted test evidence stays frozen.</text>
+  <path d="M400 1506 H431 V137 H220" class="line" stroke-dasharray="5 4"/>
+
+  <line x1="40" y1="1590" x2="400" y2="1590" class="rule"/>
+  <text x="40" y="1618" class="note">Installability depends on robot compatibility,</text>
+  <text x="40" y="1639" class="note">calibration and the tested operating envelope.</text>
+  <text x="40" y="1662" class="label">RESEARCH.DVIDIA.ORG · 9 OCTOBER 2026</text>
+</svg>
