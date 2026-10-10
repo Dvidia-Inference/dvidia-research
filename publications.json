@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "dvidia-observation-lab",
+      "title": "DVIDIA Observation Lab pilot",
+      "source": "reports/DVIDIA Observation Lab pilot.md",
+      "date": "2026-10-10",
+      "type": "Local observation workflow and engineering feasibility pilot",
+      "status": "Six public excerpts processed \u00b7 accuracy not assessed \u00b7 no robot actions",
+      "topics": [
+        "capture-quality",
+        "evaluation-provenance",
+        "physical-grounding"
+      ],
+      "abstract": "DVIDIA Observation Lab supplies a local detector and palm-observation workflow with sampled timestamps, source/model provenance, editable timeline revisions and saved-review export. Two engineering attempts each process the same six public excerpts: 19 seconds and 38 sampled frames. Processing takes 4.835 and 4.635 seconds on one warm macOS ARM64 machine, excluding model setup, UI and human review. Software and browser checks establish integration; independent annotation accuracy, correction time, complete cup-placement coverage, depth, action learning and hardware competence remain unmeasured."
+    },
+    {
       "slug": "robotics-research-pipeline",
       "title": "Robotics research pipeline",
       "source": "reports/Robotics research pipeline.md",
