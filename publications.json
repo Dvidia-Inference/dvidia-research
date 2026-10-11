@@ -9,15 +9,15 @@
       "slug": "dvidia-observation-lab",
       "title": "DVIDIA Observation Lab pilot",
       "source": "reports/DVIDIA Observation Lab pilot.md",
-      "date": "2026-10-10",
+      "date": "2026-10-11",
       "type": "Local observation workflow and engineering feasibility pilot",
-      "status": "Local review release \u00b7 causal motion source alpha \u00b7 real accuracy not assessed",
+      "status": "Local review release \u00b7 motion and actuator source pilots \u00b7 hardware unqualified",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
         "physical-grounding"
       ],
-      "abstract": "DVIDIA Observation Lab supplies local sampled object/palm proposals, provenance, timeline revisions and review export. Two engineering attempts each process six public excerpts: 19 seconds and 38 frames; annotation accuracy remains unmeasured. A separate source alpha adds manually seeded causal image tracking, pixel speed and short-horizon forecasts. Six authored cases cover 720 frames and 24 source seconds, processed in 1.454 seconds on one offline CPU run. Occlusion and low-texture losses remain visible; the worst 500 ms direction-change forecast misses by 89.975 pixels. The v0.1 release and hosted review demo remain separate. Real-scene motion accuracy, calibrated metric speed, live robot latency and hardware competence are unestablished."
+      "abstract": "DVIDIA Observation Lab supplies local object/palm proposals, reviewed timeline revisions and separate causal image-motion forecasts; real annotation and motion accuracy remain unmeasured. A new CPU pilot learns next-20-ms joint/jaw deltas from current native state and issued commands. Twelve seeded groups retain 36 recordings with 8/2/2 train/development/test grouping; 4,553 test transitions are not independent robot trials. The 6,438-byte action model computes at 0.207 ms p95 on one host and improves RMSE, while jaw MAE/worst error regress against persistence and an initial opening is substantially overpredicted. These are privileged simulator measurements and model-only timings. A proposed shoe capture plan has no footage or executed shoe benchmark. The v0.1 release and hosted synthetic review demo remain separate; no shoe policy, physical adapter, validated shoe physics or hardware qualification is established."
     },
     {
       "slug": "robotics-research-pipeline",
