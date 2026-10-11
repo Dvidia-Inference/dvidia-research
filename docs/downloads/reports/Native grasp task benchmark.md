@@ -82,3 +82,5 @@ The product opportunity is the loop connecting reviewed skill-space evidence, bo
 Run the benchmark using the [installation and evaluation guide](https://github.com/Dvidia-Inference/dvidia-training/blob/ac920cbf70147a7edeb0c706a9b71047f318e12f/docs/native-task-benchmark.md). The implementation and review are available in [GitHub PR #11](https://github.com/Dvidia-Inference/dvidia-training/pull/11).
 
 Published by **DVIDIA** · [hello@dvidia.org](mailto:hello@dvidia.org) · [@iammrriver on X](https://x.com/iammrriver)
+
+The [public Robot Simulation Lab](https://huggingface.co/spaces/Dvidia/robot-simulation-lab) also provides separate unloaded PiPER and SO-101 receipts and installation instructions. [Browser acceptance evidence](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-11-native-grasp/replay-browser/acceptance.json) checks the recorded task replay on desktop and narrow screens.

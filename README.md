@@ -35,9 +35,10 @@ controller is authored; shoe physics and physical transfer remain unqualified.
 
 [Hardware matched robot simulation](reports/Hardware%20matched%20robot%20simulation.md)
 now includes an [interactive 3D arm/gripper replay](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-11-hardware-reference/replay/)
-and the [upcoming hardware support map](https://github.com/Dvidia-Inference/dvidia-training/blob/93fc549a370cdd448b49380c5beff3b2641c2795/docs/hardware-roadmap.md).
-YAM, OpenArm, PiPER, ARX X5 and PAROL6 are planned targets, with separate simulator,
-adapter and benchmark gates. The replay displays frozen native poses and geometry;
+and the [hardware support map](https://github.com/Dvidia-Inference/dvidia-training/blob/928fed79eca09a1a5081aae7720ab78c2e5b817c/docs/hardware-roadmap.md).
+PiPER and SO-101 have runnable CPU simulation profiles with unloaded numerical
+receipts; their object-task and physical adapter qualification remain open.
+YAM, OpenArm, ARX X5 and PAROL6 remain planned integration targets. The replay displays frozen native poses and geometry;
 it adds no live physics, learned skill or physical-fidelity result.
 
 [DVIDIA Observation Lab pilot](reports/DVIDIA%20Observation%20Lab%20pilot.md) publishes our local video detection and review workflow: sampled object/palm proposals, editable timeline revisions and JSON export. Each recorded engineering run completed six public excerpts (19 seconds and 38 sampled frames); independent annotation accuracy remains unmeasured. [Read the paper](https://research.dvidia.org/papers/dvidia-observation-lab/), [install the versioned open-source release](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/observation-lab-v0.1.0), or [try the synthetic browser review demo](https://huggingface.co/spaces/Dvidia/observation-lab). The hosted demo uses authored clips and boxes; real detection runs locally with separately provisioned upstream models. No action captions, validated depth or robot skill are established.
@@ -90,3 +91,7 @@ The [agenda](reports/Physical%20skill%20research%20agenda.md) responds to Sam Pa
 Citation keys such as `zhang2020hands` are local to each topic's `references.bib`; the same keys appear in `topic.json`. Topic prose links keys to primary URLs. Living documents use an explicitly labelled access year when a publication date is unavailable. Cite original work for its findings and [CITATION.cff](CITATION.cff) for these protocols. Record an immutable revision when actually running code or using a dataset.
 
 Original writing and metadata use [CC BY 4.0](LICENSE); original code uses [MIT](LICENSE-CODE). Referenced code, checkpoints, media and datasets keep their own terms. Repository openness does not establish permission to redistribute a cited dataset.
+
+## Robot simulation library
+
+[Public Robot Simulation Lab](https://huggingface.co/spaces/Dvidia/robot-simulation-lab) combines the recorded UR5e contact task with separate PiPER and SO-101 CPU mechanics receipts. [Run the open-source profiles locally](https://github.com/Dvidia-Inference/dvidia-training/blob/928fed79eca09a1a5081aae7720ab78c2e5b817c/docs/robot-simulation-library.md). Additional profile support does not transfer task or hardware qualification.
