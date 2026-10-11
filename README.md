@@ -26,6 +26,13 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[Hardware matched robot simulation](reports/Hardware%20matched%20robot%20simulation.md)
+now includes an [interactive 3D arm/gripper replay](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-11-hardware-reference/replay/)
+and the [upcoming hardware support map](https://github.com/Dvidia-Inference/dvidia-training/blob/93fc549a370cdd448b49380c5beff3b2641c2795/docs/hardware-roadmap.md).
+YAM, OpenArm, PiPER, ARX X5 and PAROL6 are planned targets, with separate simulator,
+adapter and benchmark gates. The replay displays frozen native poses and geometry;
+it adds no live physics, learned skill or physical-fidelity result.
+
 [DVIDIA Observation Lab pilot](reports/DVIDIA%20Observation%20Lab%20pilot.md) publishes our local video detection and review workflow: sampled object/palm proposals, editable timeline revisions and JSON export. Each recorded engineering run completed six public excerpts (19 seconds and 38 sampled frames); independent annotation accuracy remains unmeasured. [Read the paper](https://research.dvidia.org/papers/dvidia-observation-lab/), [install the versioned open-source release](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/observation-lab-v0.1.0), or [try the synthetic browser review demo](https://huggingface.co/spaces/Dvidia/observation-lab). The hosted demo uses authored clips and boxes; real detection runs locally with separately provisioned upstream models. No action captions, validated depth or robot skill are established.
 
 The [image-motion source alpha](https://github.com/Dvidia-Inference/dvidia-training/pull/7) adds manually seeded causal image tracking, pixel speed, short-horizon forecasts and local replay. Its six authored cases cover 720 frames and process in 1.454 seconds for 24 source seconds on one CPU run; occlusion/low-texture losses and an 89.975 px worst 500 ms reversal forecast remain explicit. [Exact source, benchmark and installation](https://github.com/Dvidia-Inference/dvidia-training/blob/ade2b541d8ca4a785bbd1effdfd33eb2a306f150/docs/motion-observations.md). The v0.1 release/Space remain separate; real-scene accuracy, metric speed, live robot latency and the full v0.2 are not established.

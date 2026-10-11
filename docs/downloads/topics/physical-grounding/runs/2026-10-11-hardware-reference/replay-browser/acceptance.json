@@ -1,0 +1,15 @@
+{
+  "scope": "Native recorded 3D replay workflow acceptance; not physical accuracy, task success or live reaction timing",
+  "checks": [
+    "Native visual groups and active collision proxies are separate; six joints and recorded-replay scope are visible",
+    "Joint and gripper readouts exactly follow the selected measured row",
+    "Keyboard orbit and camera presets alter the rendered 3D view",
+    "Playback, overlays and pause work; paused unchanged scenes stop requesting renders",
+    "Desktop, phone and landscape layouts have no horizontal overflow and preserve 44px controls",
+    "Missing motion/step combinations are withheld rather than causing a replay error",
+    "Malformed body layout and unavailable WebGL2 fail visibly without fabricated geometry",
+    "Browsers without DecompressionStream use exact uncompressed local binaries"
+  ],
+  "errors": [],
+  "remote": []
+}
