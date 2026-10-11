@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "hardware-matched-robot-simulation",
+      "title": "Hardware matched robot simulation",
+      "source": "reports/Hardware matched robot simulation.md",
+      "date": "2026-10-11",
+      "type": "Pinned mechanics implementation and CPU numerical benchmark",
+      "status": "18/18 numerical runs valid · physical fidelity unmeasured",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A separate UR5e/Robotiq reference preserves pinned geometry, inertias, moving-link collision proxies and coupled gripper structure: fourteen modeled coordinates and seven commands. Eighteen deterministic unloaded motion/closure runs are numerically valid; at a 1 ms step, CPU physics throughput measures 40.80–47.29 simulated seconds per measured stepping wall second on one host, excluding loading, sensing, rendering, policy and real actuation. Adjacent timestep comparisons and a matched static overlap expose numerical sensitivity and collision participation. A pure-Python paired trace scorer measures joint, tool and jaw mismatch without automatic qualification. Left/right five-finger references are separately audited; LeRobot collection with an original DVIDIA policy is proposed. Serial calibration, physical response, shoe task learning and bimanual execution remain unmeasured."
+    },
+    {
       "slug": "dvidia-observation-lab",
       "title": "DVIDIA Observation Lab pilot",
       "source": "reports/DVIDIA Observation Lab pilot.md",
