@@ -6,18 +6,32 @@
   "contributor": null,
   "publications": [
     {
-      "slug": "hardware-matched-robot-simulation",
-      "title": "Hardware matched robot simulation",
-      "source": "reports/Hardware matched robot simulation.md",
+      "slug": "native-grasp-task-benchmark",
+      "title": "Native grasp task benchmark",
+      "source": "reports/Native grasp task benchmark.md",
       "date": "2026-10-11",
-      "type": "Pinned mechanics implementation and CPU numerical benchmark",
-      "status": "18/18 numerical runs valid · physical fidelity unmeasured",
+      "type": "Native contact task implementation and authored baseline",
+      "status": "6/6 simulated placements \u00b7 controls 0/12 \u00b7 real-time and hardware unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "A separate UR5e/Robotiq reference preserves pinned geometry, inertias, moving-link collision proxies and coupled gripper structure: fourteen modeled coordinates and seven commands. Eighteen deterministic unloaded motion/closure runs are numerically valid; at a 1 ms step, CPU physics throughput measures 40.80–47.29 simulated seconds per measured stepping wall second on one host, excluding loading, sensing, rendering, policy and real actuation. Adjacent timestep comparisons and a matched static overlap expose numerical sensitivity and collision participation. A pure-Python paired trace scorer measures joint, tool and jaw mismatch without automatic qualification. Left/right five-finger references are separately audited; LeRobot collection with an original DVIDIA policy is proposed. Serial calibration, physical response, shoe task learning and bimanual execution remain unmeasured. An offline 3D mesh replay now exposes the recorded arm/gripper poses without rerunning physics. YAM, OpenArm, PiPER, ARX X5 and PAROL6 are upcoming profiles; their DVIDIA integration and skill qualification remain unimplemented."
+      "abstract": "A pinned six-axis arm and coupled gripper complete 6/6 frozen synthetic rigid-block placements, while matched recorded-arm/open-jaw and hold controls complete 0/12. Native contact must produce grasp, sustained lift, retained carry, release and settled placement with tool retreat. All 18 attempts and timing traces remain in the receipt; one placement takes 29.51 wall seconds for 20 simulated seconds and misses 251 of 1,000 computation windows, so real-time operation is not established. An offline 3D mesh replay exposes the recorded motion. The authored privileged-state baseline provides a benchmark for a future compact DVIDIA action policy, not a learned footage-to-action model, validated shoe simulation or physical robot qualification."
+    },
+    {
+      "slug": "hardware-matched-robot-simulation",
+      "title": "Hardware matched robot simulation",
+      "source": "reports/Hardware matched robot simulation.md",
+      "date": "2026-10-11",
+      "type": "Pinned mechanics implementation and CPU numerical benchmark",
+      "status": "18/18 numerical runs valid \u00b7 physical fidelity unmeasured",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A separate UR5e/Robotiq reference preserves pinned geometry, inertias, moving-link collision proxies and coupled gripper structure: fourteen modeled coordinates and seven commands. Eighteen deterministic unloaded motion/closure runs are numerically valid; at a 1 ms step, CPU physics throughput measures 40.80\u201347.29 simulated seconds per measured stepping wall second on one host, excluding loading, sensing, rendering, policy and real actuation. Adjacent timestep comparisons and a matched static overlap expose numerical sensitivity and collision participation. A pure-Python paired trace scorer measures joint, tool and jaw mismatch without automatic qualification. Left/right five-finger references are separately audited; LeRobot collection with an original DVIDIA policy is proposed. Serial calibration, physical response, shoe task learning and bimanual execution remain unmeasured. An offline 3D mesh replay now exposes the recorded arm/gripper poses without rerunning physics. YAM, OpenArm, PiPER, ARX X5 and PAROL6 are upcoming profiles; their DVIDIA integration and skill qualification remain unimplemented."
     },
     {
       "slug": "dvidia-observation-lab",
@@ -25,7 +39,7 @@
       "source": "reports/DVIDIA Observation Lab pilot.md",
       "date": "2026-10-11",
       "type": "Local observation workflow and engineering feasibility pilot",
-      "status": "Local review release · motion and actuator source pilots · hardware unqualified",
+      "status": "Local review release \u00b7 motion and actuator source pilots \u00b7 hardware unqualified",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
@@ -39,7 +53,7 @@
       "source": "reports/Robotics research pipeline.md",
       "date": "2026-10-09",
       "type": "Architecture proposal and staged validation roadmap",
-      "status": "Architecture proposal · current simulation alpha · hardware unqualified",
+      "status": "Architecture proposal \u00b7 current simulation alpha \u00b7 hardware unqualified",
       "topics": [
         "capture-quality",
         "skill-relations",
@@ -54,7 +68,7 @@
       "source": "reports/Skillspace footage training pipeline.md",
       "date": "2026-10-08",
       "type": "Product implementation and measured synthetic pilot",
-      "status": "Public CPU package · one native scene qualified · simulation-only",
+      "status": "Public CPU package \u00b7 one native scene qualified \u00b7 simulation-only",
       "topics": [
         "capture-quality",
         "physical-grounding",
@@ -68,7 +82,7 @@
       "source": "reports/Skill capsule acquisition and optimization.md",
       "date": "2026-10-07",
       "type": "Learned movement artifact and installation prototype",
-      "status": "Simulation-only · teacher/student 7/8 · no overall speedup",
+      "status": "Simulation-only \u00b7 teacher/student 7/8 \u00b7 no overall speedup",
       "topics": [
         "physical-grounding",
         "skill-relations",
@@ -82,7 +96,7 @@
       "source": "reports/Skillspace arm benchmarks and evolution.md",
       "date": "2026-10-07",
       "type": "Paired simulation benchmark and product assessment",
-      "status": "Mixed held-out result · 30/32 baseline, 29/32 updated",
+      "status": "Mixed held-out result \u00b7 30/32 baseline, 29/32 updated",
       "topics": [
         "physical-grounding",
         "skill-relations",
@@ -96,7 +110,7 @@
       "source": "reports/Installing a Skillspace on a simulated arm.md",
       "date": "2026-10-07",
       "type": "Product prototype and native contact qualification",
-      "status": "Public skill link to authored adapter · 6/6 scene placements",
+      "status": "Public skill link to authored adapter \u00b7 6/6 scene placements",
       "topics": [
         "physical-grounding",
         "skill-relations",
@@ -110,7 +124,7 @@
       "source": "reports/Offline cable training environment.md",
       "date": "2026-10-07",
       "type": "Product prototype and local qualification",
-      "status": "CPU simulation-only · Controller search and frozen evaluation executed",
+      "status": "CPU simulation-only \u00b7 Controller search and frozen evaluation executed",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
@@ -123,12 +137,12 @@
       "source": "reports/Fast accurate robot training simulation.md",
       "date": "2026-10-07",
       "type": "Decision report and local experiment",
-      "status": "54 CPU fixture trials · GPU and physical transfer untested",
+      "status": "54 CPU fixture trials \u00b7 GPU and physical transfer untested",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
       ],
-      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance–accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
+      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance\u2013accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
     },
     {
       "slug": "grok-robotics-research-on-x",
@@ -136,7 +150,7 @@
       "source": "reports/Grok robotics research on X.md",
       "date": "2026-10-07",
       "type": "Source review and thesis comparison",
-      "status": "Primary sources checked · Experiments proposed",
+      "status": "Primary sources checked \u00b7 Experiments proposed",
       "topics": [
         "skill-relations",
         "physical-grounding"
@@ -149,7 +163,7 @@
       "source": "reports/Spatially grounded downloadable robot skills.md",
       "date": "2026-10-07",
       "type": "Research synthesis and proposed experiments",
-      "status": "Source review · DVIDIA experiments not run",
+      "status": "Source review \u00b7 DVIDIA experiments not run",
       "topics": [
         "skill-relations",
         "physical-grounding",
@@ -163,7 +177,7 @@
       "source": "reports/Clef and grounded video observations.md",
       "date": "2026-10-06",
       "type": "Engineering feasibility pilot",
-      "status": "Five licensed excerpts · Accuracy evaluation outstanding",
+      "status": "Five licensed excerpts \u00b7 Accuracy evaluation outstanding",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
@@ -182,7 +196,7 @@
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot’s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
+      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot\u2019s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
     },
     {
       "slug": "physical-skill-research-agenda",

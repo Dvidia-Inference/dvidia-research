@@ -26,6 +26,13 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[Native grasp task benchmark](reports/Native%20grasp%20task%20benchmark.md) gives
+the pinned six-axis reference a free-object contact task and matched controls.
+Frozen scenario plans, complete attempt records and an
+[offline 3D replay](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-11-native-grasp/replay/)
+provide the next test environment for our own small action policy. The current
+controller is authored; shoe physics and physical transfer remain unqualified.
+
 [Hardware matched robot simulation](reports/Hardware%20matched%20robot%20simulation.md)
 now includes an [interactive 3D arm/gripper replay](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-11-hardware-reference/replay/)
 and the [upcoming hardware support map](https://github.com/Dvidia-Inference/dvidia-training/blob/93fc549a370cdd448b49380c5beff3b2641c2795/docs/hardware-roadmap.md).
