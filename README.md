@@ -35,9 +35,11 @@ controller is authored; shoe physics and physical transfer remain unqualified.
 
 [Hardware matched robot simulation](reports/Hardware%20matched%20robot%20simulation.md)
 now includes an [interactive 3D arm/gripper replay](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-11-hardware-reference/replay/)
-and the [hardware support map](https://github.com/Dvidia-Inference/dvidia-training/blob/928fed79eca09a1a5081aae7720ab78c2e5b817c/docs/hardware-roadmap.md).
+and the [hardware support map](https://github.com/Dvidia-Inference/dvidia-training/blob/c9a72584b4f35c38ad2616894f56da719bba0182/docs/hardware-roadmap.md).
 PiPER and SO-101 have runnable CPU simulation profiles with unloaded numerical
-receipts; their object-task and physical adapter qualification remain open.
+receipts. PiPER also has a bounded authored block-task pilot: nominal placement
+2/2, low-friction placement 0/1, and both controls 0/3, with all nine attempts retained.
+Learned task and physical adapter qualification remain open; SO-101 object-task work is upcoming.
 YAM, OpenArm, ARX X5 and PAROL6 remain planned integration targets. The replay displays frozen native poses and geometry;
 it adds no live physics, learned skill or physical-fidelity result.
 
