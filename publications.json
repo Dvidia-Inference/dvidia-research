@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-grip-validation-and-recovery",
+      "title": "PiPER grip validation and recovery",
+      "source": "reports/PiPER grip validation and recovery.md",
+      "date": "2026-10-11",
+      "type": "Paired authored controller experiment and complete confirmation receipt",
+      "status": "Moderate-friction regression \u00b7 baseline 4/6, guarded 2/6 \u00b7 hardware unqualified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A slow test lift and bounded supported retry add recorded acquisition decisions to the pinned PiPER contact pilot, but completion regresses: at moderate friction baseline completes 2/2 and guarded completes 0/2. Both complete 2/2 normal cases; neither completes the two low-friction cases. All 30 attempts remain numerically valid, including 18 failed controls and full-duration aborts. Four qualification decisions are followed by a brief independent following window, yet two tasks still fail; no successful recovery or overall improvement is demonstrated. Actual motion continues after hold requests, and 53/30,000 computation windows exceed 20 ms. Complete compressed receipts, original model notices and pinned offline inspection preserve the evidence. Authored privileged-state simulation establishes no detector accuracy, learned shoe skill, calibrated contact or physical robot qualification."
+    },
+    {
       "slug": "native-grasp-task-benchmark",
       "title": "Native grasp task benchmark",
       "source": "reports/Native grasp task benchmark.md",

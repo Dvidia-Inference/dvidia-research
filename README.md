@@ -26,6 +26,15 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[PiPER grip validation and recovery](reports/PiPER%20grip%20validation%20and%20recovery.md)
+adds a slow test lift, measured hold and one supported retry, but **moderate-friction
+completion regresses from baseline 2/2 to guarded 0/2**. Normal cases both pass
+2/2; low-friction cases both fail 0/2. No successful recovery or overall completion
+improvement is demonstrated. All 30 full attempts and 53 missed computation
+windows remain in the [complete confirmation receipt](topics/physical-grounding/runs/2026-10-11-piper-grip/README.md).
+The authored privileged-state experiment supplies decision evidence for the next
+policy study; it establishes no detector accuracy or physical qualification.
+
 [Native grasp task benchmark](reports/Native%20grasp%20task%20benchmark.md) gives
 the pinned six-axis reference a free-object contact task and matched controls.
 Frozen scenario plans, complete attempt records and an
