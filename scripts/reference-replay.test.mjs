@@ -155,7 +155,7 @@ test("3D replay seals downloadable artifacts and retains upstream license notice
   assert.match(notices, /three/i); assert.match(notices, /MIT/i);
 });
 
-test("research exposes recorded 3D replay and keeps all five hardware additions upcoming", async () => {
+test("research exposes recorded 3D replay and distinguishes runnable profiles from qualification", async () => {
   // Read source and render Markdown without rebuilding docs: another test file
   // owns publication generation, so this check never races its directory writes.
   const [paper, homepage] = await Promise.all([
@@ -163,8 +163,11 @@ test("research exposes recorded 3D replay and keeps all five hardware additions 
     readFile(resolve(ROOT, "scripts/build-papers.mjs"), "utf8")
   ]);
   const rendered = renderMarkdown(paper).html;
-  for (const target of ["YAM", "OpenArm", "PiPER", "ARX X5", "PAROL6"]) assert.ok(rendered.includes(target), target);
-  assert.match(paper, /all five additions remain upcoming/i);
+  for (const target of ["YAM", "OpenArm", "PiPER", "ARX X5", "PAROL6", "SO-101"]) assert.ok(rendered.includes(target), target);
+  assert.match(paper, /PiPER now has a pinned CPU simulation profile; YAM, OpenArm, ARX X5 and PAROL6 remain upcoming/i);
+  assert.match(paper, /SO-101[\s\S]*pinned CPU simulation is now runnable; its object-task and physical adapter qualification remain open/i);
+  assert.match(paper, /All five still need their own object-task qualification and physical adapter evidence/i);
+  assert.doesNotMatch(paper, /all five additions remain upcoming|SO-101 remains the accessible planned entry profile/i);
   const replayPath = "downloads/topics/physical-grounding/runs/2026-10-11-hardware-reference/replay/index.html";
   assert.ok(rendered.includes(replayPath));
   assert.ok(homepage.includes(replayPath));
