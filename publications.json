@@ -11,13 +11,13 @@
       "source": "reports/DVIDIA Observation Lab pilot.md",
       "date": "2026-10-10",
       "type": "Local observation workflow and engineering feasibility pilot",
-      "status": "Six public excerpts processed \u00b7 accuracy not assessed \u00b7 no robot actions",
+      "status": "Local review release \u00b7 causal motion source alpha \u00b7 real accuracy not assessed",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
         "physical-grounding"
       ],
-      "abstract": "DVIDIA Observation Lab supplies a local detector and palm-observation workflow with sampled timestamps, source/model provenance, editable timeline revisions and saved-review export. Two engineering attempts each process the same six public excerpts: 19 seconds and 38 sampled frames. Processing takes 4.835 and 4.635 seconds on one warm macOS ARM64 machine, excluding model setup, UI and human review. Software and browser checks establish integration; independent annotation accuracy, correction time, complete cup-placement coverage, depth, action learning and hardware competence remain unmeasured."
+      "abstract": "DVIDIA Observation Lab supplies local sampled object/palm proposals, provenance, timeline revisions and review export. Two engineering attempts each process six public excerpts: 19 seconds and 38 frames; annotation accuracy remains unmeasured. A separate source alpha adds manually seeded causal image tracking, pixel speed and short-horizon forecasts. Six authored cases cover 720 frames and 24 source seconds, processed in 1.454 seconds on one offline CPU run. Occlusion and low-texture losses remain visible; the worst 500 ms direction-change forecast misses by 89.975 pixels. The v0.1 release and hosted review demo remain separate. Real-scene motion accuracy, calibrated metric speed, live robot latency and hardware competence are unestablished."
     },
     {
       "slug": "robotics-research-pipeline",
