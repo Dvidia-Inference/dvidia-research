@@ -164,9 +164,9 @@ test("research exposes recorded 3D replay and distinguishes runnable profiles fr
   ]);
   const rendered = renderMarkdown(paper).html;
   for (const target of ["YAM", "OpenArm", "PiPER", "ARX X5", "PAROL6", "SO-101"]) assert.ok(rendered.includes(target), target);
-  assert.match(paper, /PiPER now has a pinned CPU simulation profile; YAM, OpenArm, ARX X5 and PAROL6 remain upcoming/i);
+  assert.match(paper, /PiPER now has a pinned CPU simulation profile and a bounded authored block-task pilot; YAM, OpenArm, ARX X5 and PAROL6 remain upcoming/i);
   assert.match(paper, /SO-101[\s\S]*pinned CPU simulation is now runnable; its object-task and physical adapter qualification remain open/i);
-  assert.match(paper, /All five still need their own object-task qualification and physical adapter evidence/i);
+  assert.match(paper, /All five still need physical adapter evidence/i);
   assert.doesNotMatch(paper, /all five additions remain upcoming|SO-101 remains the accessible planned entry profile/i);
   const replayPath = "downloads/topics/physical-grounding/runs/2026-10-11-hardware-reference/replay/index.html";
   assert.ok(rendered.includes(replayPath));
