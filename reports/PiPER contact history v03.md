@@ -128,3 +128,5 @@ writing follows this repository's publication license.
 
 *Published by DVIDIA. Contact [hello@dvidia.org](mailto:hello@dvidia.org) and follow
 [@iammrriver](https://x.com/iammrriver).*
+
+The follow-up [contact recovery v0.4 study](PiPER%20contact%20recovery%20v04.md) diagnoses these six acquisition failures and compares carry changes separately from the decision to repeat a supported grasp. The complete original v0.3 evidence above remains unchanged.

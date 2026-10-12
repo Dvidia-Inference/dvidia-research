@@ -26,6 +26,18 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[PiPER contact recovery v0.4](reports/PiPER%20contact%20recovery%20v04.md)
+traces all six earlier failures to acquisition under the pinned position servo
+and tests carry recovery separately from avoiding an unchanged supported retry.
+Fresh confirmation retains **84 valid attempts**, with **4/12 completed placements in
+every mode and 0/48 negative-control successes**. Two resumed placements finish
+2.440–2.640 simulated seconds sooner while keeping their original settling holds.
+Four failed acquisitions reach refusal 2.88–2.90 seconds sooner; no completion is
+gained or lost. Fresh layouts expose two held-but-too-low resume failures in every
+mode, alongside six acquisition failures. The [complete receipt](topics/physical-grounding/runs/2026-10-11-piper-recovery-v04/README.md)
+retains every attempt and all 84,000 raw computation durations; hardware remains
+unqualified.
+
 [PiPER contact history v0.3](reports/PiPER%20contact%20history%20v03.md)
 compares original motion, an identical acquisition probe without carry monitoring,
 and causal contact history with requested slowdown, closed reassessment and resume.
