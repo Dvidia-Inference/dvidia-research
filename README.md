@@ -26,6 +26,18 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[PiPER contact history v0.3](reports/PiPER%20contact%20history%20v03.md)
+compares original motion, an identical acquisition probe without carry monitoring,
+and causal contact history with requested slowdown, closed reassessment and resume.
+History completes **6/12** placements versus **4/12** for both original and
+probe-only motion; all **48 negative controls fail**. Four tasks complete after
+closed reassessment/resume, while all six supported acquisition retries fail.
+Only four of five resume windows meet the independent low absolute tool-speed
+criterion; recorded motion and each attempt’s timing maximum/miss count remain visible.
+The [complete confirmation receipt](topics/physical-grounding/runs/2026-10-11-piper-contact-v03/README.md)
+retains all 84 planned attempts; the source-snapshotted development appendix remains
+separate. Privileged simulation is not detector accuracy or physical qualification.
+
 [PiPER grip validation and recovery](reports/PiPER%20grip%20validation%20and%20recovery.md)
 adds a slow test lift, measured hold and one supported retry, but **moderate-friction
 completion regresses from baseline 2/2 to guarded 0/2**. Normal cases both pass
