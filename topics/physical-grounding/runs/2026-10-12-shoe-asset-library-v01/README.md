@@ -2,11 +2,11 @@
 
 Frozen benchmark source: [`441ee2871620104246ab9caeb89825f12a14b889`](https://github.com/Dvidia-Inference/dvidia-training/tree/441ee2871620104246ab9caeb89825f12a14b889).
 
-Publication and installation-guide source: [`45bef6315c9632b33915e1ce993babd2926b8f7d`](https://github.com/Dvidia-Inference/dvidia-training/tree/45bef6315c9632b33915e1ce993babd2926b8f7d).
+Publication and installation-guide source: [`d291ee11f28b0d3c7a0b9ed062174e46fe764d15`](https://github.com/Dvidia-Inference/dvidia-training/tree/d291ee11f28b0d3c7a0b9ed062174e46fe764d15).
 
-Corrected viewer source: [`17a7c81784362697f09757712efbe00d98743501`](https://github.com/Dvidia-Inference/dvidia-training/tree/17a7c81784362697f09757712efbe00d98743501). The later documentation correction makes the all-family export command explicit; native previews and the original benchmark are retained without rerunning their physics.
+Browser JavaScript source: [`17a7c81784362697f09757712efbe00d98743501`](https://github.com/Dvidia-Inference/dvidia-training/tree/17a7c81784362697f09757712efbe00d98743501). The publication updates HTML navigation to explicit `index.html` links for static hosting; the JavaScript, native recordings and original benchmark are retained without rerunning physics.
 
-The [viewer build receipt](viewer-build.json) records the corrected browser bundle and updated seals. All native geometry, motion, descriptors and notices remain byte-identical. `execution.json` retains the original preview byte counts; `library/library-integrity.json` identifies the current 64 files totaling 21,197,720 bytes.
+The [viewer build receipt](viewer-build.json) records the corrected browser bundle. The later [navigation build receipt](navigation-build.json) binds the published HTML and updated seals. All native geometry, motion, descriptors and notices remain byte-identical. `execution.json` retains the original preview byte counts; `library/library-integrity.json` identifies the current 64 files totaling 21,197,840 bytes.
 
 - Six original MIT rigid shoe proxies: trainer, ankle-boot and slipper left/right pairs.
 - UR5e/Robotiq, PiPER and SO-101 native scenes, portable descriptors and local 3D previews.
@@ -36,7 +36,7 @@ Across 27,000 native `mj_step` calls, median **8.50 µs**, p95 **15.75 µs**, p9
 
 These are synthetic rigid proxies with untested mass/contact assumptions. Native loading, gravity and passive support do not establish shoe grasping, deformation, learned competence or physical transfer. Geometry is intentionally outside the held robot's immediate contacts; reachability and graspability are unqualified.
 
-See the [installation and scene-loading guide](https://github.com/Dvidia-Inference/dvidia-training/blob/45bef6315c9632b33915e1ce993babd2926b8f7d/docs/asset-library.md) and [benchmark protocol](https://github.com/Dvidia-Inference/dvidia-training/blob/441ee2871620104246ab9caeb89825f12a14b889/docs/asset-library-benchmark-protocol.md). Fetch UR5e into a fresh root first, then add PiPER and SO-101. After provisioning:
+See the [installation and scene-loading guide](https://github.com/Dvidia-Inference/dvidia-training/blob/d291ee11f28b0d3c7a0b9ed062174e46fe764d15/docs/asset-library.md) and [benchmark protocol](https://github.com/Dvidia-Inference/dvidia-training/blob/441ee2871620104246ab9caeb89825f12a14b889/docs/asset-library-benchmark-protocol.md). Fetch UR5e into a fresh root first, then add PiPER and SO-101. After provisioning:
 
 ```sh
 dvidia-assets benchmark --assets ./robot-assets --seed 612047 --repeats 3 --source-commit 441ee2871620104246ab9caeb89825f12a14b889 --output ./asset-benchmark

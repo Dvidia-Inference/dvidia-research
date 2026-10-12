@@ -43,7 +43,7 @@ particular, the retained 6.7047-second attempt prevents treating the median as a
 worst-case latency bound. Rendering, physical sensing, transport and actuator
 response are outside these timings. A short passive scene does not establish
 training throughput or a real-time robot control guarantee.</p>
-<p>The downloadable library contains <strong>64 files totaling 21,197,720 bytes</strong>,
+<p>The downloadable library contains <strong>64 files totaling 21,197,840 bytes</strong>,
 including all three recorded native previews, their original license notices,
 portable scene descriptors and the complete benchmark. Initial pinned robot
 downloads and installed dependencies require additional storage.</p>
@@ -54,18 +54,20 @@ downloads and installed dependencies require additional storage.</p>
 <p>The frozen benchmark runtime is
 <a href="https://github.com/Dvidia-Inference/dvidia-training/tree/441ee2871620104246ab9caeb89825f12a14b889"><code>441ee2871620104246ab9caeb89825f12a14b889</code></a>.
 The publication and installation guide use the source revision
-<a href="https://github.com/Dvidia-Inference/dvidia-training/tree/45bef6315c9632b33915e1ce993babd2926b8f7d"><code>45bef6315c9632b33915e1ce993babd2926b8f7d</code></a>.
-The corrected viewer was built from the preceding source revision
+<a href="https://github.com/Dvidia-Inference/dvidia-training/tree/d291ee11f28b0d3c7a0b9ed062174e46fe764d15"><code>d291ee11f28b0d3c7a0b9ed062174e46fe764d15</code></a>.
+The browser JavaScript was built from the earlier source revision
 <a href="https://github.com/Dvidia-Inference/dvidia-training/tree/17a7c81784362697f09757712efbe00d98743501"><code>17a7c81784362697f09757712efbe00d98743501</code></a>.
-The later documentation correction makes the all-family export command explicit;
-it changes neither the recorded previews nor the benchmark.
-The publication preserves the original benchmark without rerunning its physics.
+The publication updates HTML navigation to explicit <code>index.html</code> links for static
+hosting while preserving that JavaScript and the native recordings. No physics
+benchmark was rerun.
 The <a href="../../downloads/topics/physical-grounding/runs/2026-10-12-shoe-asset-library-v01/viewer-build.json">viewer build receipt</a>
-records the corrected browser bundle and updated file seals. Native geometry,
-motion, scene descriptors and license notices remain byte-identical to the frozen
-exports. The original execution receipt retains its original preview byte counts;
-the current library seal identifies the published viewer files.
-The <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/45bef6315c9632b33915e1ce993babd2926b8f7d/docs/asset-library.md">installation and loading guide</a>
+records the corrected browser bundle; the subsequent
+<a href="../../downloads/topics/physical-grounding/runs/2026-10-12-shoe-asset-library-v01/navigation-build.json">navigation build receipt</a>
+binds the published HTML and updated seals. Native geometry, motion, scene
+descriptors and license notices remain byte-identical to the frozen exports.
+The original execution receipt retains its original preview byte counts; the
+current library seal identifies the published viewer files.
+The <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/d291ee11f28b0d3c7a0b9ed062174e46fe764d15/docs/asset-library.md">installation and loading guide</a>
 explains provisioning the three robot profiles and opening a local preview. The
 <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/441ee2871620104246ab9caeb89825f12a14b889/docs/asset-library-benchmark-protocol.md">benchmark protocol</a>
 defines the exact support, gravity and unexpected-contact criteria.</p>
