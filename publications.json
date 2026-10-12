@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-reliability-v05",
+      "title": "PiPER placement reliability v0.5",
+      "source": "reports/PiPER reliability v05.md",
+      "date": "2026-10-12",
+      "type": "Frozen paired reliability experiment with complete native evidence",
+      "status": "23/36 revised grasp \u00b7 15/36 v0.4 \u00b7 8 gained, none lost \u00b7 hardware unqualified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "Three frozen fresh PiPER cohorts retain 252 numerically valid attempts and 144 failed negative controls. A fixed diagonal grasp with bounded pose planning completes 23/36 placements versus 15/36 for frozen v0.4 and 18/36 with second-lift recovery alone: eight gained completions and none lost. The fifteen shared successes are 0.772 simulated seconds slower on average. Three lift-only second probes qualify and finish their tasks; the full grasp candidate needs none. Twelve low-friction acquisitions and one later retention failure remain. Every trajectory, native task outcome and raw computation duration is retained, including 1,035 windows exceeding 20 ms and a 3.082-second outlier on a loaded host. Native mechanics and scoring remain unchanged. Separate development keeps 200 earlier attempts, including discarded regressions. Authored privileged simulation establishes no learned skill, real-time guarantee or physical qualification."
+    },
+    {
       "slug": "piper-contact-recovery-v04",
       "title": "PiPER contact recovery v0.4",
       "source": "reports/PiPER contact recovery v04.md",
