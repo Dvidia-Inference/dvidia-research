@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "shoe-asset-library-v01",
+      "title": "Reusable shoe asset library v0.1",
+      "source": "reports/Shoe asset library v01.md",
+      "date": "2026-10-12",
+      "type": "Versioned native scene assets and frozen passive-contact benchmark",
+      "status": "Six shoe proxies · three arms · support 27/27, disabled table 0/27 · manipulation unqualified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "Six original MIT rigid shoe proxies compose with the pinned UR5e/Robotiq, PiPER and SO-101 models through versioned scene descriptors and offline native 3D previews. A frozen 54-attempt test records 27/27 supported pairs and 0/27 support successes when table collisions are disabled; all 54 gravity checks pass without numerical warnings. No loaded non-table shoe contacts appear in the 20 ms samples, which cannot rule out shorter transients. All sampled trajectories and 27,000 native-step durations remain available. On one Apple M5 host, 54 simulated seconds take 12.3616 wall seconds including fresh model construction; the slowest attempt takes 6.7047 seconds. Geometry and physical properties are authored assumptions. Loading, gravity and passive support do not establish shoe grasping, calibrated deformation, a learned policy or hardware transfer."
+    },
+    {
       "slug": "piper-reliability-v05",
       "title": "PiPER placement reliability v0.5",
       "source": "reports/PiPER reliability v05.md",
