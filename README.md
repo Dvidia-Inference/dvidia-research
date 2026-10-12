@@ -26,6 +26,17 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[PiPER placement reliability v0.5](reports/PiPER%20reliability%20v05.md)
+completes **23/36 placements**, versus **15/36** for frozen v0.4 and **18/36**
+with second lift alone. Three fresh cohorts retain **252 valid attempts** and
+**0/144 negative-control successes**. The revised grasp gains eight completions
+and loses none, while shared successful tasks average **0.772 simulated seconds
+slower**. Twelve low-friction acquisitions and one retention failure remain.
+All raw timing is retained, including 1,035 windows exceeding 20 ms on a loaded
+host. The [complete evidence](topics/physical-grounding/runs/2026-10-12-piper-reliability-v05/README.md)
+keeps the unchanged task rules and separate development history; physical
+qualification remains open.
+
 [PiPER contact recovery v0.4](reports/PiPER%20contact%20recovery%20v04.md)
 traces all six earlier failures to acquisition under the pinned position servo
 and tests carry recovery separately from avoiding an unchanged supported retry.

@@ -108,6 +108,8 @@ The next acquisition experiment needs an alternative that can actually change th
 
 The next sensing experiment needs controlled noise, latency and missing observations, with unknown states retained and measured native motion used as reference. Physical calibration is still required before transferring speed, force or safety claims.
 
+A later [v0.5 reliability comparison](https://research.dvidia.org/papers/piper-reliability-v05/) tests a bounded second lift and fixed alternative grasp on three separately frozen fresh cohorts. It completes 23/36 placements versus 15/36 for the matched v0.4 controller, with eight gains and no losses, while shared successes take longer. Those new cohorts and their remaining failures are separate from this v0.4 result.
+
 Original DVIDIA code and the pinned PiPER model retain their MIT terms. This research writing is CC BY 4.0 under the repository’s publication license.
 
 *Published by DVIDIA. Contact [hello@dvidia.org](mailto:hello@dvidia.org) and follow [@iammrriver](https://x.com/iammrriver).*
