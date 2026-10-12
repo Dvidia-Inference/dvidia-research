@@ -80,6 +80,12 @@ Complete raw state and command records use deterministic compressed JSON with bo
 
 ## What this adds to Skillspace
 
+The follow-up [contact history v0.3 comparison](https://research.dvidia.org/papers/piper-contact-history-v03/)
+separates the shared test lift from later intervention through a probe-only ablation.
+Its own fresh cohort preserves the original scorer and records requested slowdown,
+closed reassessment and resume separately from eventual completion. The earlier
+regression and full receipt remain part of the record.
+
 This authored decision primitive distinguishes contact, load-bearing acquisition, slip, supported retry and an incomplete task. Those distinctions can become recorded supervision and benchmark cases for a compact learned DVIDIA policy. The present experiment does not train that policy from human footage and does not improve overall completion.
 
 The next useful experiment preregisters probe-only versus probe-plus-abort on fresh paired scenes, separating the probe’s motion from the intervention. A subsequent graded response can slow movement, hold closed and reassess using drift rate and persistent bilateral contact rather than accumulated displacement alone. Separately introduce a genuinely recoverable grasp misalignment to test whether opening/recentering fixes it. Keep a fresh frozen cohort and the same independent success rules; do not retune on these confirmation scenes and call the result confirmation. Require at least one demonstrated recovery that completes the task before promoting recovery as a product capability.
