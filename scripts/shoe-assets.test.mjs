@@ -68,22 +68,34 @@ test("shoe library retains all sealed native assets, three previews and their li
   }
   const provenance = await json(resolve(LIBRARY, "provenance.json"));
   const viewerBuild = await json(resolve(RUN, "viewer-build.json"));
+  const navigationBuild = await json(resolve(RUN, "navigation-build.json"));
   privacy(provenance);
   privacy(viewerBuild);
+  privacy(navigationBuild);
   assert.match(provenance.source_commit, /^[0-9a-f]{40}$/);
-  assert.equal(provenance.source_commit, "45bef6315c9632b33915e1ce993babd2926b8f7d");
+  assert.equal(provenance.source_commit, "d291ee11f28b0d3c7a0b9ed062174e46fe764d15");
   assert.equal(provenance.benchmark_source_commit, BENCHMARK);
   assert.equal(viewerBuild.source_commit, "17a7c81784362697f09757712efbe00d98743501");
   assert.equal(viewerBuild.benchmark_source_commit, BENCHMARK);
+  assert.equal(navigationBuild.schema,"dvidia.asset-library-static-navigation/v1");
+  assert.equal(navigationBuild.source_commit,provenance.source_commit);
+  assert.equal(navigationBuild.viewer_source_commit,viewerBuild.source_commit);
+  assert.equal(navigationBuild.benchmark_source_commit,BENCHMARK);
   assert.equal(provenance.physical_robot_ready, false);
   assert.equal(provenance.learned_policy, false);
   assert.deepEqual(provenance.robots, ROBOTS);
   for (const [index, robot] of ROBOTS.entries()) {
     const root = resolve(LIBRARY, "previews", robot);
     await verifySeal(root, "preview-integrity.json", "dvidia.asset-preview-integrity/v1", index===0?19:17);
-    assert.equal(sha(await readFile(resolve(root,"preview-integrity.json"))),viewerBuild.previews[robot].corrected_integrity_sha256);
+    assert.equal(sha(await readFile(resolve(root,"preview-integrity.json"))),navigationBuild.previews[robot].current_integrity_sha256);
+    assert.equal(navigationBuild.previews[robot].previous_integrity_sha256,viewerBuild.previews[robot].corrected_integrity_sha256);
+    assert.equal(navigationBuild.previews[robot].all_other_preview_files_byte_identical,true);
     assert.equal(viewerBuild.previews[robot].native_geometry_motion_and_descriptors_byte_identical,true);
     assert.equal(sha(await readFile(resolve(root,"asset_library.bundle.js"))),viewerBuild.installed_module_sha256["asset_library.bundle.js"]);
+    const html=await readFile(resolve(root,"index.html"));
+    assert.equal(sha(html),navigationBuild.html_sha256);
+    for(const target of ROBOTS)assert.ok(html.toString("utf8").includes('href="../'+target+'/index.html"'));
+    assert.ok(html.toString("utf8").includes('href="../../index.html"'));
     const scene = await json(resolve(root, "scene.json"));
     const model = await json(resolve(root, "model.json"));
     const motion = await json(resolve(root, "motion.json"));
@@ -214,7 +226,7 @@ test("shoe publication exposes source and evidence while preserving the limited 
     assert.ok(paper.includes(phrase),phrase);
   let publishedBytes=0;
   for(const name of await inventory(LIBRARY))publishedBytes+=(await readFile(resolve(LIBRARY,name))).length;
-  assert.equal(publishedBytes,21197720);
+  assert.equal(publishedBytes,21197840);
   assert.ok(paper.includes(publishedBytes.toLocaleString("en-US")));
   assert.ok(readme.includes(publishedBytes.toLocaleString("en-US")));
   assert.ok(paper.includes("No real specimen was scanned, weighed or mechanically calibrated"));
@@ -222,6 +234,8 @@ test("shoe publication exposes source and evidence while preserving the limited 
   assert.ok(paper.includes("https://dvidia-robot-simulation-lab.static.hf.space/asset-library/v01/index.html"));
   assert.ok(paper.includes("https://huggingface.co/spaces/Dvidia/robot-simulation-lab"));
   assert.ok(paper.includes("https://github.com/Dvidia-Inference/dvidia-training"));
+  assert.ok(paper.includes("navigation-build.json"));
+  assert.ok(readme.includes("navigation-build.json"));
   for(const text of [paper,readme,JSON.stringify(entry)])assert.ok(!/__[A-Z_]+__|RESULTS_PENDING|PERFORMANCE_PENDING|SOURCE_PENDING|TODO|TBD/.test(text));
   const build=await readFile(resolve(ROOT,"scripts/build-papers.mjs"),"utf8");
   assert.ok(build.includes("papers/shoe-asset-library-v01/index.html"));

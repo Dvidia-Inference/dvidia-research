@@ -77,7 +77,7 @@ worst-case latency bound. Rendering, physical sensing, transport and actuator
 response are outside these timings. A short passive scene does not establish
 training throughput or a real-time robot control guarantee.
 
-The downloadable library contains **64 files totaling 21,197,720 bytes**,
+The downloadable library contains **64 files totaling 21,197,840 bytes**,
 including all three recorded native previews, their original license notices,
 portable scene descriptors and the complete benchmark. Initial pinned robot
 downloads and installed dependencies require additional storage.
@@ -93,18 +93,20 @@ The next shoe-specific step is a feasible grasp and placement task on one select
 The frozen benchmark runtime is
 [`441ee2871620104246ab9caeb89825f12a14b889`](https://github.com/Dvidia-Inference/dvidia-training/tree/441ee2871620104246ab9caeb89825f12a14b889).
 The publication and installation guide use the source revision
-[`45bef6315c9632b33915e1ce993babd2926b8f7d`](https://github.com/Dvidia-Inference/dvidia-training/tree/45bef6315c9632b33915e1ce993babd2926b8f7d).
-The corrected viewer was built from the preceding source revision
+[`d291ee11f28b0d3c7a0b9ed062174e46fe764d15`](https://github.com/Dvidia-Inference/dvidia-training/tree/d291ee11f28b0d3c7a0b9ed062174e46fe764d15).
+The browser JavaScript was built from the earlier source revision
 [`17a7c81784362697f09757712efbe00d98743501`](https://github.com/Dvidia-Inference/dvidia-training/tree/17a7c81784362697f09757712efbe00d98743501).
-The later documentation correction makes the all-family export command explicit;
-it changes neither the recorded previews nor the benchmark.
-The publication preserves the original benchmark without rerunning its physics.
+The publication updates HTML navigation to explicit `index.html` links for static
+hosting while preserving that JavaScript and the native recordings. No physics
+benchmark was rerun.
 The [viewer build receipt](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-12-shoe-asset-library-v01/viewer-build.json)
-records the corrected browser bundle and updated file seals. Native geometry,
-motion, scene descriptors and license notices remain byte-identical to the frozen
-exports. The original execution receipt retains its original preview byte counts;
-the current library seal identifies the published viewer files.
-The [installation and loading guide](https://github.com/Dvidia-Inference/dvidia-training/blob/45bef6315c9632b33915e1ce993babd2926b8f7d/docs/asset-library.md)
+records the corrected browser bundle; the subsequent
+[navigation build receipt](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-12-shoe-asset-library-v01/navigation-build.json)
+binds the published HTML and updated seals. Native geometry, motion, scene
+descriptors and license notices remain byte-identical to the frozen exports.
+The original execution receipt retains its original preview byte counts; the
+current library seal identifies the published viewer files.
+The [installation and loading guide](https://github.com/Dvidia-Inference/dvidia-training/blob/d291ee11f28b0d3c7a0b9ed062174e46fe764d15/docs/asset-library.md)
 explains provisioning the three robot profiles and opening a local preview. The
 [benchmark protocol](https://github.com/Dvidia-Inference/dvidia-training/blob/441ee2871620104246ab9caeb89825f12a14b889/docs/asset-library-benchmark-protocol.md)
 defines the exact support, gravity and unexpected-contact criteria.
