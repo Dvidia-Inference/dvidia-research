@@ -5,18 +5,18 @@
   "original_benchmark_source_commit": "79ffdda1c0759bce1201ce3391c40403c385c39b",
   "physical_robot_ready": false,
   "learned_policy": false,
-  "scope": "Current branded compressed-delivery artifact with unchanged historical physics evidence and separately scoped delivery/branding checks.",
+  "scope": "Current editorial HTML over the retained branded compressed-delivery runtime, with unchanged historical physics evidence and separately scoped checks.",
   "groups": {
     "workstation": {
       "file_count": 100,
-      "scope": "Current export; source_commit applies to its loader/exporter and branded HTML."
+      "scope": "Current 100-file export; source_commit applies to retained runtime and editorial_source_commit applies to HTML."
     },
     "evidence": {
       "file_count": 42,
       "scope": "Unchanged original benchmark archive; original_benchmark_source_commit applies."
     },
     "delivery-evidence": {
-      "file_count": 30,
+      "file_count": 31,
       "scope": "Delivery/branding provenance, immutable earlier receipts and later functional checks; receipt-specific source bindings apply."
     },
     "original-publication-provenance.json": {
@@ -670,8 +670,8 @@
       "sha256": "51365a5a661d8062e28c66abc6bdb843ee410811f84b49d62c5878c265b3631f"
     },
     "workstation/index.html": {
-      "bytes": 87996,
-      "sha256": "a9e90c7f0067ae2086c05a2fc187de90cb8c74ce5b6f48f94a236b0fdf5c4931"
+      "bytes": 95169,
+      "sha256": "60b7faccb371988985fc92c25a5889cdd06425e4a15aa6379a46a9017c3f8fbc"
     },
     "workstation/licenses/agilex_piper/LICENSE": {
       "bytes": 1065,
@@ -699,7 +699,7 @@
     },
     "workstation/workstation-integrity.json": {
       "bytes": 14086,
-      "sha256": "a883fa4aa7e2e0f84af0ab4cd53842e0746b64dc2a45f075a9fa2b92b0bcb39c"
+      "sha256": "895493f02dac623447c76d8c65ad52a924b514dbbb8066370d8f0ef313800a89"
     },
     "workstation/workstation.bundle.js": {
       "bytes": 601342,
@@ -716,6 +716,10 @@
     "workstation/workstation_worker.bundle.js": {
       "bytes": 126857,
       "sha256": "09f804a5cda31bd576a351d09e5cfd99609bea56cc86f6013137d95c180af6ff"
+    },
+    "delivery-evidence/editorial-binding.json": {
+      "bytes": 1122,
+      "sha256": "29716039720e23d191193f7c025f082a535e621fb95217c0653862613685bca1"
     }
   },
   "file_count": 173,
@@ -723,5 +727,6 @@
   "inventory_excludes": [
     "README.md",
     "provenance.json"
-  ]
+  ],
+  "editorial_source_commit": "908dd1ed2ad6992c28b607d8b7a30565d3b46ee4"
 }

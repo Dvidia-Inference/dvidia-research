@@ -123,6 +123,54 @@ p,li{text-wrap:pretty}
 .site-footer p{margin:0}
 .site-footer nav{display:flex;flex-wrap:wrap;gap:8px 17px}
 .site-footer a{padding-block:5px}
+/* Focused editorial reader for the live PiPER study. Other papers keep their layout. */
+.workstation-reader .site-sidebar{padding-top:40px}
+.workstation-reader .brand{margin-bottom:46px}
+.workstation-reader .paper-section-nav{margin-bottom:40px}
+.workstation-reader .paper-section-nav a{padding-block:10px;font-size:12px}
+.workstation-reader .paper-section-nav a[aria-current="location"]{color:var(--ink);text-decoration:underline;text-decoration-color:currentColor}
+.workstation-reader .page-shell{padding-top:72px}
+.workstation-reader .paper{max-width:740px}
+.workstation-reader .paper-header{text-align:left;margin-bottom:30px}
+.workstation-reader .paper-header h1{max-width:650px;margin:0 0 20px;font-size:clamp(36px,4vw,52px);line-height:1.12;letter-spacing:-.035em}
+.workstation-reader .paper-meta{justify-content:flex-start;margin:0 0 20px}
+.workstation-reader .paper-deck{font-size:22px;line-height:1.5;margin:0 0 20px;max-width:30ch}
+.workstation-reader .paper-status{max-width:64ch;font:11px/1.85 var(--mono);color:var(--muted);margin:0 0 24px}
+.workstation-reader .paper-actions{font:12px/2 var(--sans);margin:0;display:flex;flex-wrap:wrap;gap:4px 10px}
+.workstation-reader .paper-actions a{padding-block:4px}
+.workstation-reader .paper-summary{margin-bottom:42px;padding-block:13px;border-block:1px solid var(--rule);font:12px/1.7 var(--mono);color:var(--muted)}
+.workstation-reader .paper-summary>summary{padding-block:4px;min-height:30px}
+.workstation-reader .paper-summary .paper-abstract{margin:20px 0 4px;padding:0;border:0;color:var(--ink);font:16px/1.75 var(--serif)}
+.workstation-reader .paper-summary .paper-abstract h2{font-size:16px}
+.workstation-reader .paper-body{font-size:18px;line-height:1.8}
+.workstation-reader .paper-body>h2{font-size:30px;margin-top:2.3em;letter-spacing:-.025em;font-weight:400;padding-top:18px;border-top:1px solid var(--rule)}
+.workstation-reader .paper-body>h2:first-child{border:0;padding-top:0;margin-top:0}
+.workstation-reader .paper-body>h3{font-size:21px;font-weight:400;margin-top:1.8em}
+.workstation-reader .paper-body figure{margin-block:32px}
+.workstation-reader .paper-body figure img{border:1px solid var(--rule)}
+.workstation-reader .paper-body figcaption{font:12px/1.7 var(--sans)}
+.workstation-reader .paper-body figure+p:has(em:only-child){font:14px/1.65 var(--serif);color:var(--muted);margin-top:-18px}
+@media(max-width:780px){
+.workstation-reader .site-sidebar{padding-top:18px}
+.workstation-reader .brand{margin-bottom:0}
+.workstation-reader .paper-section-nav{margin-bottom:20px}
+.workstation-reader .page-shell{padding-top:38px}
+.workstation-reader .paper-header h1{font-size:38px}
+.workstation-reader .paper-deck{font-size:20px}
+.workstation-reader .paper-body{font-size:17px}
+.workstation-reader .paper-body>h2{font-size:27px}
+.workstation-reader .paper-body>h3{font-size:20px}
+.workstation-reader .paper-summary{margin-bottom:32px}
+}
+@media(max-width:390px){.workstation-reader .paper-header h1{font-size:33px}}
+@media print{
+.workstation-reader .paper-summary{display:none}
+.workstation-reader .page-shell{padding:0}
+.workstation-reader .paper-header h1{font-size:22pt}
+.workstation-reader .paper-body{font-size:11pt;line-height:1.45}
+.workstation-reader .paper-body>h2{font-size:15pt}
+.workstation-reader .paper-body>h3{font-size:12pt}
+}
 @media(min-width:1600px){.page-shell{padding-top:76px}}
 @media(max-width:1100px){:root{--sidebar-width:225px}.site-sidebar{padding-inline:23px}.page-shell{padding:48px 35px 27px}.paper-header h1{font-size:34px}}
 @media(max-width:780px){
