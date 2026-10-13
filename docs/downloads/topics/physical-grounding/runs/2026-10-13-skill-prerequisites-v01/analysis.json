@@ -1,0 +1,18 @@
+{
+  "schema": "dvidia.prerequisites-result-analysis/v1",
+  "source_commit": "756306a2beda60ac54567971626080a56227e781",
+  "benchmark_sha256": "75601abac0ecaffd953267fe444aa4659163cb7a7f788d6b3e092c14737a0af8",
+  "attempts": 16,
+  "valid_attempts": 16,
+  "simulated_seconds_total": 108.39999999999763,
+  "native_execution_wall_seconds_total": 5.495752333896235,
+  "ratio_of_summed_simulation_to_native_execution_wall_seconds": 19.724324062315784,
+  "export_wall_seconds_total": 12.969508877024055,
+  "timing_scope": "Common outer run_case wall timer includes model construction, initialization, physics, authored control and recording. Separate export timer includes geometry extraction/compression and file writes. Process startup and final report write excluded. Shared-host observation; no real-time guarantee.",
+  "host_supplement": {
+    "cpu": "Apple M5",
+    "logical_cpus": 10,
+    "memory_bytes": 25769803776
+  },
+  "host_supplement_scope": "Machine configuration queried on the execution host immediately after the frozen run. Hardware minima not measured."
+}

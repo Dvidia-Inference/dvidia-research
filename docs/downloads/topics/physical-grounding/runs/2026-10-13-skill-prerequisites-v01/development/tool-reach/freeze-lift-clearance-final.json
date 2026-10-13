@@ -1,0 +1,100 @@
+{
+  "source_sha256": "812072388b518fb11999dafddd15655f3c750fa84fe09047c55a78c2b509e68f",
+  "tests_sha256": "6b5ce9c1c7e3c342600d22347f45c93223850ca5e529c4b2754acf6494aa2ebc",
+  "development": [
+    {
+      "id": "reach-dev-standard",
+      "shoe_x": 0.72,
+      "shoe_y": -0.1,
+      "mass": 0.3,
+      "friction": 0.6,
+      "tool_length": 0.35,
+      "lateral_error": 0.0,
+      "split": "development"
+    },
+    {
+      "id": "reach-dev-offset",
+      "shoe_x": 0.72,
+      "shoe_y": -0.12,
+      "mass": 0.3,
+      "friction": 0.7,
+      "tool_length": 0.35,
+      "lateral_error": 0.065,
+      "split": "development"
+    },
+    {
+      "id": "reach-dev-heavy",
+      "shoe_x": 0.73,
+      "shoe_y": -0.08,
+      "mass": 0.5,
+      "friction": 0.95,
+      "tool_length": 0.36,
+      "lateral_error": 0.0,
+      "split": "development"
+    },
+    {
+      "id": "reach-dev-miss-retry",
+      "shoe_x": 0.72,
+      "shoe_y": -0.1,
+      "mass": 0.3,
+      "friction": 0.6,
+      "tool_length": 0.35,
+      "lateral_error": 0.12,
+      "purpose": "development recovery branch coverage added after first pilot",
+      "split": "development"
+    },
+    {
+      "id": "reach-dev-short",
+      "shoe_x": 0.73,
+      "shoe_y": -0.1,
+      "mass": 0.3,
+      "friction": 0.6,
+      "tool_length": 0.16,
+      "lateral_error": 0.0,
+      "split": "development"
+    }
+  ],
+  "heldout": [
+    {
+      "id": "reach-heldout-light",
+      "shoe_x": 0.705,
+      "shoe_y": -0.09,
+      "mass": 0.22,
+      "friction": 0.45,
+      "tool_length": 0.34,
+      "lateral_error": 0.025,
+      "split": "heldout"
+    },
+    {
+      "id": "reach-heldout-offset",
+      "shoe_x": 0.725,
+      "shoe_y": -0.115,
+      "mass": 0.38,
+      "friction": 0.8,
+      "tool_length": 0.36,
+      "lateral_error": -0.075,
+      "split": "heldout"
+    },
+    {
+      "id": "reach-heldout-heavy",
+      "shoe_x": 0.735,
+      "shoe_y": -0.075,
+      "mass": 0.55,
+      "friction": 1.05,
+      "tool_length": 0.37,
+      "lateral_error": 0.035,
+      "split": "heldout"
+    },
+    {
+      "id": "reach-heldout-short",
+      "shoe_x": 0.72,
+      "shoe_y": -0.105,
+      "mass": 0.27,
+      "friction": 0.55,
+      "tool_length": 0.18,
+      "lateral_error": 0.015,
+      "split": "heldout"
+    }
+  ],
+  "note": "Verified final freeze before first heldout run. Uniform lift waypoint increased from0.20m to0.28m (no case-specificpolicy). Full500ms requires bilateralfingerforces, originheight>35mm, no tool orworldsupport. Development4/5retrievaland1/4retainedlift; othersretainedasfailures. Previousfalsepositive preserved as test. All7tests passed in3.531s. Heldout never run by simulation agent."
+}

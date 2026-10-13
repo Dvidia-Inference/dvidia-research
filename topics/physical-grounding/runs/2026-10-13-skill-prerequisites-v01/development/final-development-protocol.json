@@ -1,0 +1,280 @@
+{
+  "schema": "dvidia.skill-prerequisites/v1",
+  "scope": "Authored PiPER policies in native MuJoCo with synthetic rigid objects and privileged simulator observations. Browser replay uses recorded poses; no learned policy, hardware safety qualification or real-world transfer result.",
+  "split": "development",
+  "attempts": [
+    {
+      "id": "hinged-box-open-light-baseline",
+      "task": "hinged-box",
+      "policy": "baseline",
+      "case": {
+        "id": "open-light",
+        "lid_angle_deg": 112.0,
+        "lid_velocity_rad_s": 0.0,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-open-light-recovery",
+      "task": "hinged-box",
+      "policy": "recovery",
+      "case": {
+        "id": "open-light",
+        "lid_angle_deg": 112.0,
+        "lid_velocity_rad_s": 0.0,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-falling-light-baseline",
+      "task": "hinged-box",
+      "policy": "baseline",
+      "case": {
+        "id": "falling-light",
+        "lid_angle_deg": 72.0,
+        "lid_velocity_rad_s": -0.1,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-falling-light-recovery",
+      "task": "hinged-box",
+      "policy": "recovery",
+      "case": {
+        "id": "falling-light",
+        "lid_angle_deg": 72.0,
+        "lid_velocity_rad_s": -0.1,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-falling-heavy-baseline",
+      "task": "hinged-box",
+      "policy": "baseline",
+      "case": {
+        "id": "falling-heavy",
+        "lid_angle_deg": 65.0,
+        "lid_velocity_rad_s": -0.3,
+        "lid_mass_kg": 0.24,
+        "hinge_damping": 0.06,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-falling-heavy-recovery",
+      "task": "hinged-box",
+      "policy": "recovery",
+      "case": {
+        "id": "falling-heavy",
+        "lid_angle_deg": 65.0,
+        "lid_velocity_rad_s": -0.3,
+        "lid_mass_kg": 0.24,
+        "hinge_damping": 0.06,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-transient-closing-baseline",
+      "task": "hinged-box",
+      "policy": "baseline",
+      "case": {
+        "id": "transient-closing",
+        "lid_angle_deg": 108.0,
+        "lid_velocity_rad_s": -0.4,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      }
+    },
+    {
+      "id": "hinged-box-transient-closing-recovery",
+      "task": "hinged-box",
+      "policy": "recovery",
+      "case": {
+        "id": "transient-closing",
+        "lid_angle_deg": 108.0,
+        "lid_velocity_rad_s": -0.4,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-standard-baseline",
+      "task": "tool-reach",
+      "policy": "baseline",
+      "case": {
+        "id": "reach-dev-standard",
+        "shoe_x": 0.72,
+        "shoe_y": -0.1,
+        "mass": 0.3,
+        "friction": 0.6,
+        "tool_length": 0.35,
+        "lateral_error": 0.0,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-standard-recovery",
+      "task": "tool-reach",
+      "policy": "recovery",
+      "case": {
+        "id": "reach-dev-standard",
+        "shoe_x": 0.72,
+        "shoe_y": -0.1,
+        "mass": 0.3,
+        "friction": 0.6,
+        "tool_length": 0.35,
+        "lateral_error": 0.0,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-offset-baseline",
+      "task": "tool-reach",
+      "policy": "baseline",
+      "case": {
+        "id": "reach-dev-offset",
+        "shoe_x": 0.72,
+        "shoe_y": -0.12,
+        "mass": 0.3,
+        "friction": 0.7,
+        "tool_length": 0.35,
+        "lateral_error": 0.065,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-offset-recovery",
+      "task": "tool-reach",
+      "policy": "recovery",
+      "case": {
+        "id": "reach-dev-offset",
+        "shoe_x": 0.72,
+        "shoe_y": -0.12,
+        "mass": 0.3,
+        "friction": 0.7,
+        "tool_length": 0.35,
+        "lateral_error": 0.065,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-heavy-baseline",
+      "task": "tool-reach",
+      "policy": "baseline",
+      "case": {
+        "id": "reach-dev-heavy",
+        "shoe_x": 0.73,
+        "shoe_y": -0.08,
+        "mass": 0.5,
+        "friction": 0.95,
+        "tool_length": 0.36,
+        "lateral_error": 0.0,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-heavy-recovery",
+      "task": "tool-reach",
+      "policy": "recovery",
+      "case": {
+        "id": "reach-dev-heavy",
+        "shoe_x": 0.73,
+        "shoe_y": -0.08,
+        "mass": 0.5,
+        "friction": 0.95,
+        "tool_length": 0.36,
+        "lateral_error": 0.0,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-miss-retry-baseline",
+      "task": "tool-reach",
+      "policy": "baseline",
+      "case": {
+        "id": "reach-dev-miss-retry",
+        "shoe_x": 0.72,
+        "shoe_y": -0.1,
+        "mass": 0.3,
+        "friction": 0.6,
+        "tool_length": 0.35,
+        "lateral_error": 0.12,
+        "purpose": "development recovery branch coverage added after first pilot",
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-miss-retry-recovery",
+      "task": "tool-reach",
+      "policy": "recovery",
+      "case": {
+        "id": "reach-dev-miss-retry",
+        "shoe_x": 0.72,
+        "shoe_y": -0.1,
+        "mass": 0.3,
+        "friction": 0.6,
+        "tool_length": 0.35,
+        "lateral_error": 0.12,
+        "purpose": "development recovery branch coverage added after first pilot",
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-short-baseline",
+      "task": "tool-reach",
+      "policy": "baseline",
+      "case": {
+        "id": "reach-dev-short",
+        "shoe_x": 0.73,
+        "shoe_y": -0.1,
+        "mass": 0.3,
+        "friction": 0.6,
+        "tool_length": 0.16,
+        "lateral_error": 0.0,
+        "split": "development"
+      }
+    },
+    {
+      "id": "tool-reach-reach-dev-short-recovery",
+      "task": "tool-reach",
+      "policy": "recovery",
+      "case": {
+        "id": "reach-dev-short",
+        "shoe_x": 0.73,
+        "shoe_y": -0.1,
+        "mass": 0.3,
+        "friction": 0.6,
+        "tool_length": 0.16,
+        "lateral_error": 0.0,
+        "split": "development"
+      }
+    }
+  ],
+  "comparison": "Matched declared scene conditions. Tool baseline is a no-tool capability control; it is not a policy-only ablation.",
+  "split_scope": "Explicit parameter holdouts, not independent real-world reliability trials. No held-out tuning.",
+  "success_scope": "Task-specific completion. Safe abort, retrieval, and retained lift are reported separately.",
+  "timing_scope": "CPU wall time for native execution including initialization and recording; rendering, downloads and real sensor latency excluded.",
+  "source_commit": null,
+  "implementation_sha256": {
+    "prerequisite_benchmark.py": "079b768e806ee5aaa9c8f51c08917a632242e8ea0fe4d069df7eeb0373c032bc",
+    "hinged_shoebox.py": "9e9189b28bb0f97d699039168e8c5022df3afb34aadb0d9f8a04dc4592aaf2e9",
+    "tool_reach.py": "812072388b518fb11999dafddd15655f3c750fa84fe09047c55a78c2b509e68f",
+    "workstation.py": "2a6aa6686b5b273efcfb21156952df8ceca88d991674cd17df92f2dccc11b701",
+    "asset_library.py": "12520ca13b7806004be37a0d7e0d1e023c90410c1eba899296fdcd5b28fdc7f7",
+    "asset_catalog.json": "592f363389a96fef7f9223737aa72a2f1a74f400238924bf6790ec5bfd3302b7",
+    "robot_profiles.py": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d",
+    "prerequisite_lab.html": "7161523a9e3a1388dedf59d2a31344b8a6ae34f3fa5947365ea5b88bb6b56ee0",
+    "prerequisite_lab.js": "7394d13f0072fa9b527327070a533670404d0777dfcea0a7cd32d99e615a801f",
+    "prerequisite_lab.bundle.js": "cf7be122b0e979d21665be43f861703cfb481beb53f46e87dac29c8f592e7929"
+  }
+}

@@ -1,0 +1,970 @@
+[
+  {
+    "case": {
+      "id": "reach-dev-standard",
+      "shoe_x": 0.72,
+      "shoe_y": -0.1,
+      "mass": 0.3,
+      "friction": 0.6,
+      "tool_length": 0.35,
+      "lateral_error": 0.0,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "retrieval_success": true,
+      "grasp_attempted": true,
+      "retained_lift_success": false,
+      "shoe_displacement_x_m": 0.29972215644480027,
+      "final_shoe_position_m": [
+        0.4202778435551997,
+        -0.10420096410981065,
+        -0.00010773877981567237
+      ],
+      "peak_lift_m": 0.023370503045582858,
+      "recovery_attempts": 0,
+      "help_requested": true,
+      "peak_tool_shoe_force_n": 11.05007621641862,
+      "peak_tool_shoe_force_time_s": 3.027999999999888,
+      "tool_shoe_impulse_ns": 6.578579904450296,
+      "tool_shoe_contact_ticks": 1654,
+      "physics_timestep_s": 0.002,
+      "policy_interval_s": 0.02,
+      "max_joint_command_delta_rad": 0.0030000000000001137,
+      "max_tracking_error_m": 0.1787598450139535,
+      "simulation_seconds": 12.600000000000877,
+      "wall_seconds": 0.6874585000332445,
+      "solver_warnings": 0,
+      "native_steps": 6300,
+      "shoe_external_force_used": false,
+      "shoe_equality_constraints": 0,
+      "recovery_count": 0,
+      "intervention_count": 1,
+      "peak_contact_force_n": 18.595757817392215,
+      "contact_force_scope": "sum of normal shoe-to-robot/tool forces, excluding table",
+      "force_peak_by_phase_n": {
+        "settle": 0.0,
+        "approach_tool": 0.0,
+        "lower_tool": 11.05007621641862,
+        "pull_shoe": 4.827471275737896,
+        "verify_pull": 1.9070365200813042,
+        "clear_rake": 1.7898300876753142,
+        "grasp_approach": 18.039600444094937,
+        "close_jaws": 18.595757817392215,
+        "lift": 18.48436067814791
+      },
+      "policy_compute_p50_ms": 0.02145895268768072,
+      "policy_compute_p95_ms": 0.029647443443536755,
+      "policy_compute_max_ms": 0.07125013507902622,
+      "wall_includes_model_compile": true,
+      "retention_criterion": "shoe bottom >35 mm with both fingers contacting and tool force <0.01 N for final 500 ms",
+      "no_tool_baseline": false,
+      "tool_pre_equipped": true,
+      "outcome": "safe_abort",
+      "real_time_factor": 18.32837909399849
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "assumptions",
+        "message": "assumptions",
+        "pre_equipped_rigid_tool": true,
+        "privileged_observations": true,
+        "shoe_attachment": false,
+        "controller_reach_limit_x_m": 0.54,
+        "tool_acquisition_tested": false
+      },
+      {
+        "t": 0.0,
+        "type": "phase",
+        "message": "settle",
+        "name": "settle",
+        "target": [
+          0.36,
+          -0.06,
+          0.27
+        ]
+      },
+      {
+        "t": 0.4,
+        "type": "phase",
+        "message": "approach tool",
+        "name": "approach_tool",
+        "target": [
+          0.5349999772540484,
+          -0.10000005186998254,
+          0.25
+        ]
+      },
+      {
+        "t": 2.2,
+        "type": "phase",
+        "message": "lower tool",
+        "name": "lower_tool",
+        "target": [
+          0.5349999772540484,
+          -0.10000005186998254,
+          0.075
+        ]
+      },
+      {
+        "t": 3.2,
+        "type": "phase",
+        "message": "pull shoe",
+        "name": "pull_shoe",
+        "target": [
+          0.2,
+          -0.10000005186998254,
+          0.075
+        ]
+      },
+      {
+        "t": 6.2,
+        "type": "phase",
+        "message": "verify pull",
+        "name": "verify_pull",
+        "target": [
+          0.2,
+          -0.10000005186998254,
+          0.075
+        ]
+      },
+      {
+        "t": 6.6,
+        "type": "retrieval_check",
+        "message": "retrieval check",
+        "attempt": 1,
+        "retrieved": true,
+        "shoe_x_m": 0.4078708020417629,
+        "displacement_m": 0.31212919795823707
+      },
+      {
+        "t": 6.6,
+        "type": "phase",
+        "message": "clear rake",
+        "name": "clear_rake",
+        "target": [
+          0.24,
+          -0.1,
+          0.25
+        ]
+      },
+      {
+        "t": 7.8,
+        "type": "phase",
+        "message": "grasp approach",
+        "name": "grasp_approach",
+        "target": [
+          0.3623683512438824,
+          -0.10257939735199265,
+          0.06
+        ]
+      },
+      {
+        "t": 9.6,
+        "type": "phase",
+        "message": "close jaws",
+        "name": "close_jaws",
+        "target": [
+          0.3623683512438824,
+          -0.10257939735199265,
+          0.06
+        ]
+      },
+      {
+        "t": 10.6,
+        "type": "phase",
+        "message": "lift",
+        "name": "lift",
+        "target": [
+          0.3623683512438824,
+          -0.10257939735199265,
+          0.2
+        ]
+      },
+      {
+        "t": 12.6,
+        "type": "lift_check",
+        "message": "lift check",
+        "retained": false,
+        "shoe_bottom_z_m": -0.00010773877981567237
+      },
+      {
+        "t": 12.6,
+        "type": "help_requested",
+        "message": "retrieved but jaw lift not retained",
+        "reason": "retrieved_but_jaw_lift_not_retained"
+      }
+    ]
+  },
+  {
+    "case": {
+      "id": "reach-dev-offset",
+      "shoe_x": 0.72,
+      "shoe_y": -0.12,
+      "mass": 0.3,
+      "friction": 0.7,
+      "tool_length": 0.35,
+      "lateral_error": 0.065,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "retrieval_success": true,
+      "grasp_attempted": true,
+      "retained_lift_success": false,
+      "shoe_displacement_x_m": 0.2612782870923034,
+      "final_shoe_position_m": [
+        0.4587217129076966,
+        -0.18930362892497665,
+        -0.00010773877982265635
+      ],
+      "peak_lift_m": 0.0,
+      "recovery_attempts": 0,
+      "help_requested": true,
+      "peak_tool_shoe_force_n": 12.46821670872967,
+      "peak_tool_shoe_force_time_s": 2.939999999999898,
+      "tool_shoe_impulse_ns": 6.685808294064599,
+      "tool_shoe_contact_ticks": 1669,
+      "physics_timestep_s": 0.002,
+      "policy_interval_s": 0.02,
+      "max_joint_command_delta_rad": 0.0030000000000001137,
+      "max_tracking_error_m": 0.19314330346168415,
+      "simulation_seconds": 12.600000000000877,
+      "wall_seconds": 0.47063766699284315,
+      "solver_warnings": 0,
+      "native_steps": 6300,
+      "shoe_external_force_used": false,
+      "shoe_equality_constraints": 0,
+      "recovery_count": 0,
+      "intervention_count": 1,
+      "peak_contact_force_n": 21.9992979213769,
+      "contact_force_scope": "sum of normal shoe-to-robot/tool forces, excluding table",
+      "force_peak_by_phase_n": {
+        "settle": 0.0,
+        "approach_tool": 0.0,
+        "lower_tool": 12.46821670872967,
+        "pull_shoe": 4.0571838340473825,
+        "verify_pull": 1.277700254264877,
+        "clear_rake": 4.287867339109967,
+        "grasp_approach": 21.9992979213769,
+        "close_jaws": 20.770448021530047,
+        "lift": 18.692074329769607
+      },
+      "policy_compute_p50_ms": 0.021582935005426407,
+      "policy_compute_p95_ms": 0.02901249099522828,
+      "policy_compute_max_ms": 0.14016707427799702,
+      "wall_includes_model_compile": true,
+      "retention_criterion": "shoe bottom >35 mm with both fingers contacting and tool force <0.01 N for final 500 ms",
+      "no_tool_baseline": false,
+      "tool_pre_equipped": true,
+      "outcome": "safe_abort",
+      "real_time_factor": 26.772187786220012
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "assumptions",
+        "message": "assumptions",
+        "pre_equipped_rigid_tool": true,
+        "privileged_observations": true,
+        "shoe_attachment": false,
+        "controller_reach_limit_x_m": 0.54,
+        "tool_acquisition_tested": false
+      },
+      {
+        "t": 0.0,
+        "type": "phase",
+        "message": "settle",
+        "name": "settle",
+        "target": [
+          0.36,
+          -0.06,
+          0.27
+        ]
+      },
+      {
+        "t": 0.4,
+        "type": "phase",
+        "message": "approach tool",
+        "name": "approach_tool",
+        "target": [
+          0.5349999772540484,
+          -0.055000051869982594,
+          0.25
+        ]
+      },
+      {
+        "t": 2.2,
+        "type": "phase",
+        "message": "lower tool",
+        "name": "lower_tool",
+        "target": [
+          0.5349999772540484,
+          -0.055000051869982594,
+          0.075
+        ]
+      },
+      {
+        "t": 3.2,
+        "type": "phase",
+        "message": "pull shoe",
+        "name": "pull_shoe",
+        "target": [
+          0.2,
+          -0.055000051869982594,
+          0.075
+        ]
+      },
+      {
+        "t": 6.2,
+        "type": "phase",
+        "message": "verify pull",
+        "name": "verify_pull",
+        "target": [
+          0.2,
+          -0.055000051869982594,
+          0.075
+        ]
+      },
+      {
+        "t": 6.6,
+        "type": "retrieval_check",
+        "message": "retrieval check",
+        "attempt": 1,
+        "retrieved": true,
+        "shoe_x_m": 0.4351540001953862,
+        "displacement_m": 0.2848459998046138
+      },
+      {
+        "t": 6.6,
+        "type": "phase",
+        "message": "clear rake",
+        "name": "clear_rake",
+        "target": [
+          0.24,
+          -0.12,
+          0.25
+        ]
+      },
+      {
+        "t": 7.8,
+        "type": "phase",
+        "message": "grasp approach",
+        "name": "grasp_approach",
+        "target": [
+          0.38297528283866367,
+          -0.18727980233264688,
+          0.06
+        ]
+      },
+      {
+        "t": 9.6,
+        "type": "phase",
+        "message": "close jaws",
+        "name": "close_jaws",
+        "target": [
+          0.38297528283866367,
+          -0.18727980233264688,
+          0.06
+        ]
+      },
+      {
+        "t": 10.6,
+        "type": "phase",
+        "message": "lift",
+        "name": "lift",
+        "target": [
+          0.38297528283866367,
+          -0.18727980233264688,
+          0.2
+        ]
+      },
+      {
+        "t": 12.6,
+        "type": "lift_check",
+        "message": "lift check",
+        "retained": false,
+        "shoe_bottom_z_m": -0.00010773877982265635
+      },
+      {
+        "t": 12.6,
+        "type": "help_requested",
+        "message": "retrieved but jaw lift not retained",
+        "reason": "retrieved_but_jaw_lift_not_retained"
+      }
+    ]
+  },
+  {
+    "case": {
+      "id": "reach-dev-heavy",
+      "shoe_x": 0.73,
+      "shoe_y": -0.08,
+      "mass": 0.5,
+      "friction": 0.95,
+      "tool_length": 0.36,
+      "lateral_error": 0.0,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": true,
+    "valid": true,
+    "metrics": {
+      "retrieval_success": true,
+      "grasp_attempted": true,
+      "retained_lift_success": true,
+      "shoe_displacement_x_m": 0.3520603046027586,
+      "final_shoe_position_m": [
+        0.37793969539724137,
+        -0.0825296966758945,
+        0.08089707256967175
+      ],
+      "peak_lift_m": 0.08253411956382845,
+      "recovery_attempts": 0,
+      "help_requested": false,
+      "peak_tool_shoe_force_n": 12.453782931915448,
+      "peak_tool_shoe_force_time_s": 3.029999999999888,
+      "tool_shoe_impulse_ns": 12.284054234356146,
+      "tool_shoe_contact_ticks": 1788,
+      "physics_timestep_s": 0.002,
+      "policy_interval_s": 0.02,
+      "max_joint_command_delta_rad": 0.0030000000000001137,
+      "max_tracking_error_m": 0.1843889619002888,
+      "simulation_seconds": 12.600000000000877,
+      "wall_seconds": 0.4558997079730034,
+      "solver_warnings": 0,
+      "native_steps": 6300,
+      "shoe_external_force_used": false,
+      "shoe_equality_constraints": 0,
+      "recovery_count": 0,
+      "intervention_count": 0,
+      "peak_contact_force_n": 21.4922770207858,
+      "contact_force_scope": "sum of normal shoe-to-robot/tool forces, excluding table",
+      "force_peak_by_phase_n": {
+        "settle": 0.0,
+        "approach_tool": 0.0,
+        "lower_tool": 12.453782931915448,
+        "pull_shoe": 7.6678105854900895,
+        "verify_pull": 3.2493675319363358,
+        "clear_rake": 3.1572318218766404,
+        "grasp_approach": 19.785664400799455,
+        "close_jaws": 21.4922770207858,
+        "lift": 21.21525466186592
+      },
+      "policy_compute_p50_ms": 0.021582935005426407,
+      "policy_compute_p95_ms": 0.029606046155095097,
+      "policy_compute_max_ms": 0.06691599264740944,
+      "wall_includes_model_compile": true,
+      "retention_criterion": "shoe bottom >35 mm with both fingers contacting and tool force <0.01 N for final 500 ms",
+      "no_tool_baseline": false,
+      "tool_pre_equipped": true,
+      "outcome": "completed",
+      "real_time_factor": 27.63765753661549
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "assumptions",
+        "message": "assumptions",
+        "pre_equipped_rigid_tool": true,
+        "privileged_observations": true,
+        "shoe_attachment": false,
+        "controller_reach_limit_x_m": 0.54,
+        "tool_acquisition_tested": false
+      },
+      {
+        "t": 0.0,
+        "type": "phase",
+        "message": "settle",
+        "name": "settle",
+        "target": [
+          0.36,
+          -0.06,
+          0.27
+        ]
+      },
+      {
+        "t": 0.4,
+        "type": "phase",
+        "message": "approach tool",
+        "name": "approach_tool",
+        "target": [
+          0.5349999772540484,
+          -0.08000005186998262,
+          0.25
+        ]
+      },
+      {
+        "t": 2.2,
+        "type": "phase",
+        "message": "lower tool",
+        "name": "lower_tool",
+        "target": [
+          0.5349999772540484,
+          -0.08000005186998262,
+          0.075
+        ]
+      },
+      {
+        "t": 3.2,
+        "type": "phase",
+        "message": "pull shoe",
+        "name": "pull_shoe",
+        "target": [
+          0.2,
+          -0.08000005186998262,
+          0.075
+        ]
+      },
+      {
+        "t": 6.2,
+        "type": "phase",
+        "message": "verify pull",
+        "name": "verify_pull",
+        "target": [
+          0.2,
+          -0.08000005186998262,
+          0.075
+        ]
+      },
+      {
+        "t": 6.6,
+        "type": "retrieval_check",
+        "message": "retrieval check",
+        "attempt": 1,
+        "retrieved": true,
+        "shoe_x_m": 0.4078717092465147,
+        "displacement_m": 0.32212829075348526
+      },
+      {
+        "t": 6.6,
+        "type": "phase",
+        "message": "clear rake",
+        "name": "clear_rake",
+        "target": [
+          0.24,
+          -0.08,
+          0.25
+        ]
+      },
+      {
+        "t": 7.8,
+        "type": "phase",
+        "message": "grasp approach",
+        "name": "grasp_approach",
+        "target": [
+          0.36253795033351366,
+          -0.08002017215890292,
+          0.06
+        ]
+      },
+      {
+        "t": 9.6,
+        "type": "phase",
+        "message": "close jaws",
+        "name": "close_jaws",
+        "target": [
+          0.36253795033351366,
+          -0.08002017215890292,
+          0.06
+        ]
+      },
+      {
+        "t": 10.6,
+        "type": "phase",
+        "message": "lift",
+        "name": "lift",
+        "target": [
+          0.36253795033351366,
+          -0.08002017215890292,
+          0.2
+        ]
+      },
+      {
+        "t": 12.6,
+        "type": "lift_check",
+        "message": "lift check",
+        "retained": true,
+        "shoe_bottom_z_m": 0.08089707256967175
+      }
+    ]
+  },
+  {
+    "case": {
+      "id": "reach-dev-miss-retry",
+      "shoe_x": 0.72,
+      "shoe_y": -0.1,
+      "mass": 0.3,
+      "friction": 0.6,
+      "tool_length": 0.35,
+      "lateral_error": 0.12,
+      "purpose": "development recovery branch coverage added after first pilot",
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "retrieval_success": true,
+      "grasp_attempted": true,
+      "retained_lift_success": false,
+      "shoe_displacement_x_m": 0.30038557448704334,
+      "final_shoe_position_m": [
+        0.41961442551295663,
+        -0.10275280906429034,
+        -0.00010773877981869541
+      ],
+      "peak_lift_m": 0.026832985381554767,
+      "recovery_attempts": 1,
+      "help_requested": true,
+      "peak_tool_shoe_force_n": 9.416622715483278,
+      "peak_tool_shoe_force_time_s": 9.927999999999985,
+      "tool_shoe_impulse_ns": 6.6353236267789155,
+      "tool_shoe_contact_ticks": 1704,
+      "physics_timestep_s": 0.002,
+      "policy_interval_s": 0.02,
+      "max_joint_command_delta_rad": 0.0030000000000001137,
+      "max_tracking_error_m": 0.1789098311884191,
+      "simulation_seconds": 19.799999999999905,
+      "wall_seconds": 0.5870836668182164,
+      "solver_warnings": 0,
+      "native_steps": 9900,
+      "shoe_external_force_used": false,
+      "shoe_equality_constraints": 0,
+      "recovery_count": 1,
+      "intervention_count": 1,
+      "peak_contact_force_n": 18.562991689947523,
+      "contact_force_scope": "sum of normal shoe-to-robot/tool forces, excluding table",
+      "force_peak_by_phase_n": {
+        "settle": 0.0,
+        "approach_tool": 0.0,
+        "lower_tool": 9.416622715483278,
+        "pull_shoe": 4.533030400563526,
+        "verify_pull": 1.8068703804051267,
+        "release_tool": 0.0,
+        "clear_rake": 1.7871174448574774,
+        "grasp_approach": 18.241354141588296,
+        "close_jaws": 18.562991689947523,
+        "lift": 18.451808273810073
+      },
+      "policy_compute_p50_ms": 0.0213750172406435,
+      "policy_compute_p95_ms": 0.02716659801080823,
+      "policy_compute_max_ms": 0.05612499080598354,
+      "wall_includes_model_compile": true,
+      "retention_criterion": "shoe bottom >35 mm with both fingers contacting and tool force <0.01 N for final 500 ms",
+      "no_tool_baseline": false,
+      "tool_pre_equipped": true,
+      "outcome": "safe_abort",
+      "real_time_factor": 33.72602768410987
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "assumptions",
+        "message": "assumptions",
+        "pre_equipped_rigid_tool": true,
+        "privileged_observations": true,
+        "shoe_attachment": false,
+        "controller_reach_limit_x_m": 0.54,
+        "tool_acquisition_tested": false
+      },
+      {
+        "t": 0.0,
+        "type": "phase",
+        "message": "settle",
+        "name": "settle",
+        "target": [
+          0.36,
+          -0.06,
+          0.27
+        ]
+      },
+      {
+        "t": 0.4,
+        "type": "phase",
+        "message": "approach tool",
+        "name": "approach_tool",
+        "target": [
+          0.5349999772540484,
+          0.01999994813001746,
+          0.25
+        ]
+      },
+      {
+        "t": 2.2,
+        "type": "phase",
+        "message": "lower tool",
+        "name": "lower_tool",
+        "target": [
+          0.5349999772540484,
+          0.01999994813001746,
+          0.075
+        ]
+      },
+      {
+        "t": 3.2,
+        "type": "phase",
+        "message": "pull shoe",
+        "name": "pull_shoe",
+        "target": [
+          0.2,
+          0.01999994813001746,
+          0.075
+        ]
+      },
+      {
+        "t": 6.2,
+        "type": "phase",
+        "message": "verify pull",
+        "name": "verify_pull",
+        "target": [
+          0.2,
+          0.01999994813001746,
+          0.075
+        ]
+      },
+      {
+        "t": 6.6,
+        "type": "retrieval_check",
+        "message": "retrieval check",
+        "attempt": 1,
+        "retrieved": false,
+        "shoe_x_m": 0.7199999772822083,
+        "displacement_m": 2.2717791647863805e-08
+      },
+      {
+        "t": 6.6,
+        "type": "recovery",
+        "message": "insufficient retrieval",
+        "reason": "insufficient_retrieval",
+        "action": "recenter_and_retry"
+      },
+      {
+        "t": 6.6,
+        "type": "phase",
+        "message": "release tool",
+        "name": "release_tool",
+        "target": [
+          0.2,
+          0.01999994813001746,
+          0.22
+        ]
+      },
+      {
+        "t": 7.6,
+        "type": "phase",
+        "message": "approach tool",
+        "name": "approach_tool",
+        "target": [
+          0.5349999772874056,
+          -0.1000000520487508,
+          0.25
+        ]
+      },
+      {
+        "t": 9.4,
+        "type": "phase",
+        "message": "lower tool",
+        "name": "lower_tool",
+        "target": [
+          0.5349999772874056,
+          -0.1000000520487508,
+          0.075
+        ]
+      },
+      {
+        "t": 10.4,
+        "type": "phase",
+        "message": "pull shoe",
+        "name": "pull_shoe",
+        "target": [
+          0.2,
+          -0.1000000520487508,
+          0.075
+        ]
+      },
+      {
+        "t": 13.4,
+        "type": "phase",
+        "message": "verify pull",
+        "name": "verify_pull",
+        "target": [
+          0.2,
+          -0.1000000520487508,
+          0.075
+        ]
+      },
+      {
+        "t": 13.8,
+        "type": "retrieval_check",
+        "message": "retrieval check",
+        "attempt": 2,
+        "retrieved": true,
+        "shoe_x_m": 0.4078147517401504,
+        "displacement_m": 0.31218524825984956
+      },
+      {
+        "t": 13.8,
+        "type": "phase",
+        "message": "clear rake",
+        "name": "clear_rake",
+        "target": [
+          0.24,
+          -0.1,
+          0.25
+        ]
+      },
+      {
+        "t": 15.0,
+        "type": "phase",
+        "message": "grasp approach",
+        "name": "grasp_approach",
+        "target": [
+          0.36234148924137755,
+          -0.10138912400402929,
+          0.06
+        ]
+      },
+      {
+        "t": 16.8,
+        "type": "phase",
+        "message": "close jaws",
+        "name": "close_jaws",
+        "target": [
+          0.36234148924137755,
+          -0.10138912400402929,
+          0.06
+        ]
+      },
+      {
+        "t": 17.8,
+        "type": "phase",
+        "message": "lift",
+        "name": "lift",
+        "target": [
+          0.36234148924137755,
+          -0.10138912400402929,
+          0.2
+        ]
+      },
+      {
+        "t": 19.8,
+        "type": "lift_check",
+        "message": "lift check",
+        "retained": false,
+        "shoe_bottom_z_m": -0.00010773877981869541
+      },
+      {
+        "t": 19.8,
+        "type": "help_requested",
+        "message": "retrieved but jaw lift not retained",
+        "reason": "retrieved_but_jaw_lift_not_retained"
+      }
+    ]
+  },
+  {
+    "case": {
+      "id": "reach-dev-short",
+      "shoe_x": 0.73,
+      "shoe_y": -0.1,
+      "mass": 0.3,
+      "friction": 0.6,
+      "tool_length": 0.16,
+      "lateral_error": 0.0,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "retrieval_success": false,
+      "grasp_attempted": false,
+      "retained_lift_success": false,
+      "shoe_displacement_x_m": 2.2747198680228564e-08,
+      "final_shoe_position_m": [
+        0.7299999772528013,
+        -0.10000005188205825,
+        -0.00010773877980161322
+      ],
+      "peak_lift_m": 0.0,
+      "recovery_attempts": 0,
+      "help_requested": true,
+      "peak_tool_shoe_force_n": 0.0,
+      "peak_tool_shoe_force_time_s": 0.0,
+      "tool_shoe_impulse_ns": 0.0,
+      "tool_shoe_contact_ticks": 0,
+      "physics_timestep_s": 0.002,
+      "policy_interval_s": 0.02,
+      "max_joint_command_delta_rad": 7.239724460150754e-06,
+      "max_tracking_error_m": 0.006223209856926931,
+      "simulation_seconds": 1.0000000000000007,
+      "wall_seconds": 0.15362212504260242,
+      "solver_warnings": 0,
+      "native_steps": 500,
+      "shoe_external_force_used": false,
+      "shoe_equality_constraints": 0,
+      "recovery_count": 0,
+      "intervention_count": 1,
+      "peak_contact_force_n": 0.0,
+      "contact_force_scope": "sum of normal shoe-to-robot/tool forces, excluding table",
+      "force_peak_by_phase_n": {
+        "settle": 0.0,
+        "hold_for_help": 0.0
+      },
+      "policy_compute_p50_ms": 0.022791558876633644,
+      "policy_compute_p95_ms": 0.04439213080331682,
+      "policy_compute_max_ms": 0.060625141486525536,
+      "wall_includes_model_compile": true,
+      "retention_criterion": "shoe bottom >35 mm with both fingers contacting and tool force <0.01 N for final 500 ms",
+      "no_tool_baseline": false,
+      "tool_pre_equipped": true,
+      "outcome": "safe_abort",
+      "real_time_factor": 6.509479020178123
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "assumptions",
+        "message": "assumptions",
+        "pre_equipped_rigid_tool": true,
+        "privileged_observations": true,
+        "shoe_attachment": false,
+        "controller_reach_limit_x_m": 0.54,
+        "tool_acquisition_tested": false
+      },
+      {
+        "t": 0.0,
+        "type": "phase",
+        "message": "settle",
+        "name": "settle",
+        "target": [
+          0.36,
+          -0.06,
+          0.27
+        ]
+      },
+      {
+        "t": 0.4,
+        "type": "help_requested",
+        "message": "tool cannot reach far edge",
+        "reason": "tool_cannot_reach_far_edge",
+        "required_tcp_x_m": 0.7349999772540483
+      },
+      {
+        "t": 0.4,
+        "type": "phase",
+        "message": "hold for help",
+        "name": "hold_for_help",
+        "target": [
+          0.36,
+          -0.06,
+          0.27
+        ]
+      }
+    ]
+  }
+]
