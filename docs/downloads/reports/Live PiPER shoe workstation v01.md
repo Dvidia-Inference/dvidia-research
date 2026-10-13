@@ -177,7 +177,9 @@ These commands reproduce the delivery and branding revision linked above. Reprod
 
 ### Source, evidence and licensing
 
-The [editorial update binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/editorial-binding.json) records the source and file hashes for the clearer workstation text and layout. The research-site export changes its HTML and integrity entry; its other 98 runtime files remain byte-for-byte unchanged. This presentation update does not rerun or improve the physics benchmark.
+The [first editorial update binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/editorial-binding.json) records the source and file hashes for the clearer workstation text and layout. The research-site export changes its HTML and integrity entry; its other 98 runtime files remain byte-for-byte unchanged. This presentation update does not rerun or improve the physics benchmark.
+
+The [rendering follow-up binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/rendering-followup-binding.json) records one subsequent CSS change: a repeating 4 px radial gradient replaces the SVG turbulence background. The runtime and assets remain unchanged, and the first editorial binding remains an immutable record of its release. No new physics result or quantified rendering-speed improvement is claimed.
 
 The [current publication inventory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/provenance.json) binds 100 current export files, 42 unchanged original evidence files, separately scoped delivery/branding/editorial evidence and the [original publication inventory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/original-publication-provenance.json). That original inventory is preserved byte-for-byte and describes the earlier publication; the current inventory identifies the source revisions separately.
 
