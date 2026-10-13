@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "continuous-shoe-grip-v02",
+      "title": "From reaching a shoe to keeping hold",
+      "source": "reports/Continuous shoe grip v02.md",
+      "date": "2026-10-13",
+      "type": "Frozen native comparison with independent contact audit",
+      "status": "20/20 valid · 2/10 completed under both policies · 9 contact-loss alarms verified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A frozen twenty-attempt native MuJoCo comparison adds continuous acquisition checks and bounded lowering to the mounted-rake PiPER controller. Both policies complete the same 2/10 fresh cases: no gains or losses. Nine bilateral-contact-loss alarms follow a trace-verified native origin by 20–52 ms, median 30 ms; three acquisition failures are separate. Twelve supported lowering responses produce no additional completion. A non-finger-support gap remains unmonitored. Complete recorded trajectories, independent audit and development failures are public. Authored policies, synthetic contact and privileged observations establish no learned skill or physical robot qualification."
+    },
+    {
       "slug": "skill-prerequisites-v01",
       "title": "Skill prerequisites: access, reach and recovery",
       "source": "reports/Skill prerequisites v01.md",
