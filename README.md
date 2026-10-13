@@ -26,6 +26,20 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+
+[Live PiPER shoe workstation v0.1](reports/Live%20PiPER%20shoe%20workstation%20v01.md)
+lets readers drag a tool target, adjust the gripper and nudge a free rigid shoe
+while MuJoCo runs locally in the browser. Native physics, bounded authored
+control and live diagnostics now accompany the recorded asset previews.
+The final native run retains **20 valid attempts**, with **14/16** target trials
+passing and both high-target repetitions failing. Jaw, nudge, gravity and a
+600-second native hold pass. Development and native/browser comparisons remain
+separate. All fifteen development shoe-lift attempts failed;
+retained lifting, learned shoe skills and hardware transfer remain unqualified.
+[Open the live workstation](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/workstation/index.html)
+or [run the Hugging Face copy](https://dvidia-robot-simulation-lab.static.hf.space/workstation/v01/index.html).
+
+
 [PiPER placement reliability v0.5](reports/PiPER%20reliability%20v05.md)
 completes **23/36 placements**, versus **15/36** for frozen v0.4 and **18/36**
 with second lift alone. Three fresh cohorts retain **252 valid attempts** and

@@ -1,0 +1,249 @@
+{
+  "schema": "dvidia.workstation-benchmark-protocol/v1",
+  "attempts": [
+    {
+      "id": "home-0",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "left-0",
+      "kind": "tracking",
+      "target": [
+        0.32,
+        -0.16,
+        0.24
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "right-0",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        0.1,
+        0.25
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "near-0",
+      "kind": "tracking",
+      "target": [
+        0.27,
+        -0.04,
+        0.22
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "far-0",
+      "kind": "tracking",
+      "target": [
+        0.47,
+        -0.04,
+        0.24
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "high-0",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        -0.06,
+        0.32
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "low-0",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        -0.06,
+        0.12
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "shoe_approach-0",
+      "kind": "tracking",
+      "target": [
+        0.32,
+        -0.145,
+        0.16
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "home-1",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "left-1",
+      "kind": "tracking",
+      "target": [
+        0.32,
+        -0.16,
+        0.24
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "right-1",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        0.1,
+        0.25
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "near-1",
+      "kind": "tracking",
+      "target": [
+        0.27,
+        -0.04,
+        0.22
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "far-1",
+      "kind": "tracking",
+      "target": [
+        0.47,
+        -0.04,
+        0.24
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "high-1",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        -0.06,
+        0.32
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "low-1",
+      "kind": "tracking",
+      "target": [
+        0.36,
+        -0.06,
+        0.12
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "shoe_approach-1",
+      "kind": "tracking",
+      "target": [
+        0.32,
+        -0.145,
+        0.16
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "jaw_close_open",
+      "kind": "jaw",
+      "target": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "shoe_nudge",
+      "kind": "push",
+      "target": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "seconds": 4,
+      "jaw": 0.035
+    },
+    {
+      "id": "table_disabled",
+      "kind": "gravity_control",
+      "target": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "seconds": 2,
+      "jaw": 0.035
+    },
+    {
+      "id": "sustained_hold",
+      "kind": "stability",
+      "target": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "seconds": 10,
+      "jaw": 0.035
+    }
+  ],
+  "scope": "Authored target tracking, jaw travel, free-object support and numerical stability; no learned grasp policy",
+  "physics_dt_s": 0.002,
+  "control_dt_s": 0.02,
+  "tracking_position_tolerance_m": 0.005,
+  "tracking_orientation_tolerance_deg": 3.0,
+  "jaw_endpoint_tolerance_m": 0.002,
+  "push_impulse_ns": [
+    0,
+    0.12,
+    0
+  ],
+  "tracking_deadline_s": 4,
+  "sample_interval_s": 0.02,
+  "stability_sample_interval_s": 0.1,
+  "timing_scope": "Native Python control interval including ten physics steps, forward kinematics and diagnostic extraction; rendering and network excluded",
+  "repeats_scope": "Two deterministic resets per target; not independent real-world reliability trials",
+  "source_commit": null,
+  "implementation_sha256": {
+    "workstation.py": "37e27911a948d0d9a49c699f2752b1e55b2592f878d4e43c2b080acf9627d175",
+    "workstation_benchmark.py": "ce6f610944d31eb38df46e60ceded91902bec6fea163a2d59dab53cbea6e451c",
+    "asset_library.py": "12520ca13b7806004be37a0d7e0d1e023c90410c1eba899296fdcd5b28fdc7f7",
+    "asset_catalog.json": "592f363389a96fef7f9223737aa72a2f1a74f400238924bf6790ec5bfd3302b7",
+    "robot_profiles.py": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d"
+  }
+}

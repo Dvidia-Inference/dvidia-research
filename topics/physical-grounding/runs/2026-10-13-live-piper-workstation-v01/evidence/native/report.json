@@ -1,0 +1,105 @@
+{
+  "schema": "dvidia.workstation-benchmark/v1",
+  "source_commit": null,
+  "protocol_sha256": "8c2f4bb73634273f3312b600af91ef0c2cda783f2287202088243ac4b611f3b5",
+  "native_version": "3.15.0",
+  "physical_robot_ready": false,
+  "learned_policy": false,
+  "attempts": 20,
+  "valid_attempts": 20,
+  "tracking": {
+    "passed": 14,
+    "attempts": 16,
+    "worst_position_error_m": 0.031438520219167716,
+    "unmeasured_attempts": 0
+  },
+  "diagnostics": {
+    "jaw": {
+      "passed": true,
+      "position_error_m": 1.9335411353983192e-07,
+      "orientation_error_deg": 4.9958526792246095e-05,
+      "final_shoe_position_m": [
+        0.3199999772684795,
+        -0.14500005195833082,
+        -0.00010773877982026837
+      ],
+      "final_jaw_m": 0.03499995657693672,
+      "closed_jaw_m": 4.342303347769466e-08,
+      "peak_post_push_displacement_m": 0.0,
+      "controls_within_limits": true,
+      "simulated_seconds": 3.999999999999781,
+      "arm_environment_loaded_contact_samples": 0,
+      "maximum_arm_environment_normal_force_n": 0.0
+    },
+    "push": {
+      "passed": true,
+      "position_error_m": 8.118645412866185e-13,
+      "orientation_error_deg": 0.0,
+      "final_shoe_position_m": [
+        0.32004887131006216,
+        -0.1337743686802831,
+        -0.00010773877981797437
+      ],
+      "final_jaw_m": 0.03499999999998208,
+      "closed_jaw_m": null,
+      "peak_post_push_displacement_m": 0.011231632849190144,
+      "controls_within_limits": true,
+      "simulated_seconds": 3.999999999999781,
+      "arm_environment_loaded_contact_samples": 0,
+      "maximum_arm_environment_normal_force_n": 0.0
+    },
+    "gravity_control": {
+      "passed": true,
+      "position_error_m": 4.123364464742669e-13,
+      "orientation_error_deg": 0.0,
+      "final_shoe_position_m": [
+        0.32000013760662743,
+        -0.1449997129878496,
+        -0.8001077387798208
+      ],
+      "final_jaw_m": 0.03499999999997568,
+      "closed_jaw_m": null,
+      "peak_post_push_displacement_m": 0.0,
+      "controls_within_limits": true,
+      "simulated_seconds": 2.0000000000000013,
+      "arm_environment_loaded_contact_samples": 0,
+      "maximum_arm_environment_normal_force_n": 0.0
+    },
+    "stability": {
+      "passed": true,
+      "position_error_m": 3.5669380623677727e-13,
+      "orientation_error_deg": 0.0,
+      "final_shoe_position_m": [
+        0.31999998040574995,
+        -0.1450000669785205,
+        -0.00010773877982249044
+      ],
+      "final_jaw_m": 0.03499999999997683,
+      "closed_jaw_m": null,
+      "peak_post_push_displacement_m": 0.0,
+      "controls_within_limits": true,
+      "simulated_seconds": 599.9999999996356,
+      "arm_environment_loaded_contact_samples": 0,
+      "maximum_arm_environment_normal_force_n": 0.0
+    }
+  },
+  "timing": {
+    "wall_seconds": 21.969376417109743,
+    "compute_ms_p50": 0.419542,
+    "compute_ms_p95": 0.63579405,
+    "compute_ms_p99": 0.7772292500000043,
+    "compute_ms_max": 72.760875,
+    "intervals_over_20ms": 2,
+    "intervals": 33700
+  },
+  "host": {
+    "os": "Darwin",
+    "os_release": "25.5.0",
+    "machine": "arm64",
+    "logical_cpus": 10,
+    "peak_process_rss_bytes": 1071169536
+  },
+  "scope": "Authored target tracking, jaw travel, free-object support and numerical stability; no learned grasp policy",
+  "timing_scope": "Native Python control interval including ten physics steps, forward kinematics and diagnostic extraction; rendering and network excluded",
+  "sampling_scope": "Full qpos, ctrl, body poses and loaded contact diagnostics at 20 ms, or 100 ms for sustained hold; not an exhaustive every-physics-tick contact record"
+}
