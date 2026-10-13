@@ -107,11 +107,11 @@ All **61 eligible target commands** have a measured movement response; none is m
 
 Native control-interval timing includes differential IK, ten physics steps, forward kinematics and diagnostic extraction. It excludes browser rendering, network activity, sensing and real actuation. Browser measurements must identify their browser and rendering backend; a software-rendered test cannot be described as hardware GPU throughput. Timing tails and missed 20 ms intervals remain visible with the medians.
 
-The final live-workstation export contains **99 files totaling 48,281,487 bytes**. Initial package installation, separately retained benchmark evidence and the source asset cache require additional storage.
+The original benchmarked live-workstation export contains **99 files totaling 48,281,487 bytes**. Initial package installation, separately retained benchmark evidence and the source asset cache require additional storage.
 
 The exported folder contains all scene XML, pinned meshes, runtime JavaScript, MuJoCo WASM, compiled renderer geometry, catalog and license notices. Provision the package and assets once, then serve that folder locally for offline sessions. Keep its files together; opening only the HTML from a filesystem URL is not the supported serving path.
 
-The [installation guide](https://github.com/Dvidia-Inference/dvidia-training/blob/79ffdda1c0759bce1201ce3391c40403c385c39b/docs/live-workstation.md) includes setup, runtime rebuilding and benchmark commands. With the versioned package and PiPER assets provisioned:
+The [delivery installation guide](https://github.com/Dvidia-Inference/dvidia-training/blob/ba0da582fd46a58be181f8e940db069520045557/docs/live-workstation.md) includes setup, runtime rebuilding and benchmark commands. With the versioned package and PiPER assets provisioned:
 
 ```sh
 dvidia-workstation --assets ./robot-assets --output ./live-workstation
@@ -122,10 +122,34 @@ The output inventory and pinned upstream hashes can be checked locally:
 
 ```sh
 python -c "from dvidia_training.workstation import inspect_export; print(inspect_export('./live-workstation')['file_count'])"
-dvidia-workstation-benchmark --assets ./robot-assets --source-commit 79ffdda1c0759bce1201ce3391c40403c385c39b --output ./workstation-benchmark
+dvidia-workstation-benchmark --assets ./robot-assets --source-commit ba0da582fd46a58be181f8e940db069520045557 --output ./workstation-benchmark
 ```
 
+These commands use the delivery revision. Reproducing the original source-bound benchmark receipts requires checking out their original `79ffdda1c0759bce1201ce3391c40403c385c39b` revision.
+
 `inspect_export` checks bounded local files, original upstream notices and meshes, canonical native state, renderer geometry and hashes. It rejects external XML imports, unknown file paths and symlinks. It checks artifact consistency; recomputing a seal does not authenticate its publisher.
+
+## Public cold-start follow-up
+
+The [initial public-deployment observations](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/original-public-startup.json) exposed a startup problem that the local benchmark did not measure. Research-site checks did not reach native-ready within either a **120-second** allowance or an extended **600-second** allowance. The longer check was still requesting a pinned arm mesh at its deadline. Hugging Face checks also timed out at both allowances; their receipts recorded no worker errors, console errors, failed requests or HTTP error responses. These timed-out runs produced no simulated-state or control-response measurements.
+
+A [subsequent research-site run](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/original-public-completion.json), allowed up to 900 seconds, reached native-ready after **552.836 seconds** and passed the interaction and mobile-layout checks. This was a separate network session; it does not replace the earlier failures. One original 4,621,268-byte mesh took **95.116 seconds** to transfer in that session. The earlier **9.216-second** startup measurement belongs to a local HTTP session and did not describe public loading. Neither the failed public starts nor the eventual successful start measures the speed of physics execution after initialization.
+
+The revised worker fetches one gzip bundle containing the **same 84 native mesh files**, verifies the compressed payload and every decoded mesh against their declared hashes, and starts the same scene. The [independent package comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-package-check.json) checks every original mesh byte and all existing manifest fields. Canonical scene XML, compiled native model identity, MuJoCo WASM, renderer geometry and the UI bundle are unchanged; physics and controller settings are unchanged. The individual source meshes remain in the offline export for inspection and reuse.
+
+| Native mesh delivery | Original | Compressed follow-up |
+| --- | ---: | ---: |
+| Mesh payload bytes | 33,165,477 | **7,318,481** |
+| Mesh requests | 84 | **1** |
+| Reduction in mesh payload bytes | — | **77.93%** |
+
+This comparison concerns the native mesh payload, not all startup resources or total wire bytes. A [local request trace](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/network-local.json) observes one bundle request and zero individual mesh requests. Keeping both original meshes and the bundle increases the complete offline folder to **100 files totaling 55,602,211 bytes**. Fewer transfer bytes and requests are packaging improvements; they do not establish a public startup-time reduction until the revised hosted package is measured.
+
+The [revised local browser check](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/browser/browser-benchmark.json) reaches native-ready in **9.213 seconds**, then runs for **20.0043 wall seconds** with **20.006 simulated seconds**, a **1.000085 simulation/wall-time ratio** and **52.839 render calls/s**, without reported warnings or browser errors. This short check uses the recorded Apple M5 / headless Chromium 151 environment. It verifies the new loader and interaction locally; it does not replace the original ten-minute run or describe public-network loading. [Desktop and mobile acceptance](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/ui/acceptance.json) also passes after the delivery change.
+
+The [bundle-loaded native/WASM comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/wasm-parity.json) repeats 15,000 steps and 1,500 sampled states. Numerical and loaded-contact-count checks pass; **strict raw-contact-count parity still fails in 13/1,500 states**. The maximum TCP coordinate difference remains **4.623 × 10⁻¹⁴ m**. No new grasp or placement competence follows from the delivery change.
+
+Delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Its [separate source binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-source-binding.json) records the runtime source and all 100 export hashes. The original physics, parity and ten-minute local browser receipts remain unchanged in the sealed `evidence/` archive. The separate [delivery-evidence directory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/README.md) contains the new package inventory, failed public-startup summaries, eventual baseline completion, local delivery checks and their own provenance.
 
 ## The next Skillspace gate
 
@@ -135,7 +159,7 @@ Only then should a distilled shoe skill be compared with the authored baseline f
 
 ## Source, evidence and licensing
 
-Frozen source: [79ffdda1c0759bce1201ce3391c40403c385c39b](https://github.com/Dvidia-Inference/dvidia-training/tree/79ffdda1c0759bce1201ce3391c40403c385c39b). The [run archive](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/README.md) connects the complete benchmark, separate development traces, native/browser comparison and runtime validation receipts.
+Original benchmark source: [79ffdda1c0759bce1201ce3391c40403c385c39b](https://github.com/Dvidia-Inference/dvidia-training/tree/79ffdda1c0759bce1201ce3391c40403c385c39b). The [run archive](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/README.md) connects the complete benchmark, separate development traces, native/browser comparison and runtime validation receipts.
 
 The [source-binding receipt](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/source-binding.json) explains a provenance detail: the native run began immediately before its Git commit, so its original `source_commit` fields remain `null`. Every implementation hash recorded by that protocol matches `79ffdda1c0759bce1201ce3391c40403c385c39b`. The separate binding records this verification without rewriting the original protocol, attempt or result bytes.
 

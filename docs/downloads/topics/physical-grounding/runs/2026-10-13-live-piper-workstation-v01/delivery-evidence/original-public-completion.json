@@ -1,0 +1,126 @@
+{
+  "schema": "dvidia.workstation-public-startup-completion/v1",
+  "scope": "One subsequent successful public startup and functional acceptance run of the original individually fetched mesh delivery. It does not supersede earlier timed-out runs or measure the compressed delivery.",
+  "original_runtime_source_commit": "79ffdda1c0759bce1201ce3391c40403c385c39b",
+  "source_records": {
+    "cold-start.json": {
+      "sha256": "4c0ddd3cab7b0340ae9cf8af6d4a3bc9d4fc38ffe470b9cc727d06d7fb9775c8",
+      "bytes": 17067
+    },
+    "acceptance.json": {
+      "sha256": "86e7a27059681c55bee522022917f6b58af1aed6fdc2d47e9a8bbc3242f260ef",
+      "bytes": 1684
+    },
+    "full-load-network.json": {
+      "sha256": "7df08ea38f90e91364861c8b19672e0593cfdd4c4b6ff23cde6491d1246ffa1f",
+      "bytes": 116594
+    }
+  },
+  "initial_load_allowance_seconds": 900,
+  "cold_start_seconds": 552.836,
+  "acceptance": {
+    "passed": true,
+    "url": "https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/workstation/index.html",
+    "scope": "Headless browser visual and interaction acceptance; not a hardware performance benchmark.",
+    "pointerDrag": {
+      "start": [
+        0.36,
+        -0.06,
+        0.27
+      ],
+      "dragged": [
+        0.4180041504268661,
+        -0.06,
+        0.27
+      ]
+    },
+    "targetResponse": {
+      "criterion": "Native joints changed and error fell below 10 mm; not a final precision qualification.",
+      "error_m": 0.008684924563548371,
+      "tcp": [
+        0.36219377505361117,
+        -0.10157033494623317,
+        0.2365323185097905
+      ]
+    },
+    "shoeNudge": {
+      "before": [
+        0.31999997726705953,
+        -0.14500005195153196,
+        -0.00010773877982286644
+      ],
+      "after": [
+        0.32004887133563303,
+        -0.13377436869891696,
+        -0.00010847931617396276
+      ]
+    },
+    "pauseStable": true,
+    "blurredCoordinateDraftsPreserved": true,
+    "highTarget": {
+      "target": [
+        0.36,
+        -0.06,
+        0.32
+      ],
+      "error_m": 0.031450472635121435,
+      "simulated_seconds": 4.317999999999693,
+      "status": "Target not reached"
+    },
+    "receiptCommands": 17,
+    "receiptSamples": 133,
+    "layouts": [
+      {
+        "width": 1440,
+        "pixels": {
+          "wood": 231293,
+          "navy": 10666
+        },
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "pixels": {
+          "wood": 59865,
+          "navy": 2663
+        },
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "pixels": {
+          "wood": 37794,
+          "navy": 1867
+        },
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "responses": []
+  },
+  "network_resource_timing_totals": {
+    "page": {
+      "encoded_body_bytes": 3803038,
+      "decoded_body_bytes": 4437294,
+      "resource_timing_count": 6
+    },
+    "worker": {
+      "encoded_body_bytes": 35689928,
+      "decoded_body_bytes": 43574734,
+      "resource_timing_count": 87
+    },
+    "example_uncompressed_mesh": {
+      "resource": "/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/workstation/assets/link2_31.obj",
+      "encodedBodySize": 4621268,
+      "decodedBodySize": 4621268,
+      "transferSize": 4621568,
+      "duration_ms": 95116.39999985695
+    }
+  },
+  "limitations": [
+    "This is a separate run from the earlier 120-second and 600-second readiness timeouts.",
+    "Elapsed readiness is a single network/session observation, not a latency distribution.",
+    "Resource Timing body bytes exclude HTTP headers and are not total wire bytes.",
+    "Native controls and mobile layout acceptance begin only after startup succeeds."
+  ]
+}

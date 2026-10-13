@@ -2,7 +2,7 @@
 
 [Open the live workstation](workstation/index.html) · [Research report](../../../../reports/Live%20PiPER%20shoe%20workstation%20v01.md) · [Hugging Face](https://huggingface.co/spaces/Dvidia/robot-simulation-lab) · [GitHub implementation](https://github.com/Dvidia-Inference/dvidia-training/pull/17)
 
-Drag the tool target, actuate the native gripper and nudge a free rigid trainer. MuJoCo runs locally in the browser with 500Hz physics and 50Hz authored control. The 99-file export works offline after provisioning and local HTTP serving.
+Drag the tool target, actuate the native gripper and nudge a free rigid trainer. MuJoCo runs locally in the browser with 500Hz physics and 50Hz authored control. The complete export works offline after provisioning and local HTTP serving.
 
 **14/16 target attempts passed; 20/20 attempts were numerically valid.** Both high-target repeats failed. Jaw travel, shoe impulse, removed-table gravity and 600 simulated seconds of native holding passed. The 15 development grasp attempts all failed retained lift. This release does not contain a trained shoe-organizing policy or hardware qualification.
 
@@ -12,7 +12,11 @@ The [native/WASM comparison](evidence/parity/wasm-parity.json) passes numerical 
 
 [Complete evidence, failures and screenshots](evidence/README.md) · [Native report](evidence/native/report.json) · [Sealed simulator inventory](workstation/workstation-integrity.json) · [Source binding](evidence/source-binding.json)
 
-Frozen runtime: [79ffdda1c0759bce1201ce3391c40403c385c39b](https://github.com/Dvidia-Inference/dvidia-training/tree/79ffdda1c0759bce1201ce3391c40403c385c39b). Publication tooling and reproducible browser-check instructions are available in the linked PR. Source binding preserves the original receipt's null commit field and proves every recorded implementation hash matches the frozen revision.
+Original benchmark runtime: [79ffdda1c0759bce1201ce3391c40403c385c39b](https://github.com/Dvidia-Inference/dvidia-training/tree/79ffdda1c0759bce1201ce3391c40403c385c39b). Publication tooling and reproducible browser-check instructions are available in the linked PR. Source binding preserves the original receipt's null commit field and proves every recorded implementation hash matches the frozen revision.
+
+The original public deployments failed to reach native-ready within both 120-second and 600-second allowances. A subsequent research-site run completed startup in **552.836 seconds** and passed interaction and mobile-layout checks. The delivery follow-up combines the same 84 native meshes into one **7,318,481-byte** gzip bundle, **77.93% smaller** than their 33,165,477 original bytes; all original mesh files remain in the offline export. [Delivery follow-up evidence](delivery-evidence/README.md) preserves the failed and completed baseline runs, all 100 new export file hashes and separate loader checks. The revised local check reaches ready in **9.213 seconds**; revised public-network startup is not yet measured here. Original physics and controller behavior and the sealed benchmark archive remain unchanged.
+
+Delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Its [delivery source binding](delivery-evidence/delivery-source-binding.json) records all 100 files and confirms the 42 original evidence files remain byte-identical.
 
 Shoe material properties are synthetic assumptions. The visible laces and fabric are cosmetic; collision geometry remains rigid. GPU rendering, native CPU timing, state publication and actual robot latency are separate quantities.
 
