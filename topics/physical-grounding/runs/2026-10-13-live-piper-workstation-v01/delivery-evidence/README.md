@@ -1,5 +1,11 @@
 # Live workstation delivery follow-up
 
+Current source: [0c371381dbbf3a03d9d659680289ad45797e4935](https://github.com/Dvidia-Inference/dvidia-training/tree/0c371381dbbf3a03d9d659680289ad45797e4935). The current **100-file, 55,663,466-byte** export uses the official DVIDIA mark, favicon and IBM Plex Sans from the production website. [Branding source proof](branding/branding-source.json), [current export binding](branding-binding.json) and [final desktop/mobile acceptance](branding/ui-final/acceptance.json) record that correction.
+
+Only the HTML and its integrity entry change from the compressed delivery revision below. All 98 other files remain identical, including the native scene, 84 meshes, compressed bundle, engine, controller and renderer. The embedded IBM Plex Sans font retains its full SIL Open Font License. Final screenshots are in `branding/ui-final/`; earlier screenshots below are historical captures of the previous masthead.
+
+## Earlier delivery revision and unchanged benchmark evidence
+
 Delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Original benchmark source: `79ffdda1c0759bce1201ce3391c40403c385c39b`.
 
 The original individually fetched native meshes made public startup slow. The revised worker loads a single gzip bundle and verifies that it decodes to every original pinned mesh. The scene, original native state, physical parameters, authored controller, MuJoCo WASM and rendered geometry remain unchanged.

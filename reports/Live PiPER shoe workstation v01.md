@@ -8,9 +8,9 @@ DVIDIA research · 13 October 2026 · Live workstation v0.1
 
 This is an authored controller operating a native simulated arm. It uses the original catalog's rigid trainer and the pinned PiPER mechanics. **Retained shoe lifting remains unqualified: all fifteen development grasp attempts failed.** No trained shoe policy or physical robot connection is included.
 
-![DVIDIA live PiPER workstation with the arm, rigid trainer, native target controls and session measurements](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/ui-acceptance/workstation-1440.png)
+![DVIDIA live PiPER workstation with the arm, rigid trainer, native target controls and session measurements](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/ui-final/workstation-1440.png)
 
-*Desktop functional acceptance capture. The rendered shoe detail is visual styling over the declared rigid collision proxy.*
+*Desktop functional acceptance capture of the release with the official DVIDIA masthead. The rendered shoe detail is visual styling over the declared rigid collision proxy. Earlier benchmark screenshots retain their historical masthead.*
 
 ## What you can do
 
@@ -111,7 +111,7 @@ The original benchmarked live-workstation export contains **99 files totaling 48
 
 The exported folder contains all scene XML, pinned meshes, runtime JavaScript, MuJoCo WASM, compiled renderer geometry, catalog and license notices. Provision the package and assets once, then serve that folder locally for offline sessions. Keep its files together; opening only the HTML from a filesystem URL is not the supported serving path.
 
-The [delivery installation guide](https://github.com/Dvidia-Inference/dvidia-training/blob/ba0da582fd46a58be181f8e940db069520045557/docs/live-workstation.md) includes setup, runtime rebuilding and benchmark commands. With the versioned package and PiPER assets provisioned:
+The [delivery installation guide](https://github.com/Dvidia-Inference/dvidia-training/blob/0c371381dbbf3a03d9d659680289ad45797e4935/docs/live-workstation.md) includes setup, runtime rebuilding and benchmark commands. With the versioned package and PiPER assets provisioned:
 
 ```sh
 dvidia-workstation --assets ./robot-assets --output ./live-workstation
@@ -122,10 +122,10 @@ The output inventory and pinned upstream hashes can be checked locally:
 
 ```sh
 python -c "from dvidia_training.workstation import inspect_export; print(inspect_export('./live-workstation')['file_count'])"
-dvidia-workstation-benchmark --assets ./robot-assets --source-commit ba0da582fd46a58be181f8e940db069520045557 --output ./workstation-benchmark
+dvidia-workstation-benchmark --assets ./robot-assets --source-commit 0c371381dbbf3a03d9d659680289ad45797e4935 --output ./workstation-benchmark
 ```
 
-These commands use the delivery revision. Reproducing the original source-bound benchmark receipts requires checking out their original `79ffdda1c0759bce1201ce3391c40403c385c39b` revision.
+These commands use the current delivery and branding revision. Reproducing the original source-bound benchmark receipts requires checking out their original `79ffdda1c0759bce1201ce3391c40403c385c39b` revision.
 
 `inspect_export` checks bounded local files, original upstream notices and meshes, canonical native state, renderer geometry and hashes. It rejects external XML imports, unknown file paths and symlinks. It checks artifact consistency; recomputing a seal does not authenticate its publisher.
 
@@ -143,13 +143,15 @@ The revised worker fetches one gzip bundle containing the **same 84 native mesh 
 | Mesh requests | 84 | **1** |
 | Reduction in mesh payload bytes | — | **77.93%** |
 
-This comparison concerns the native mesh payload, not all startup resources or total wire bytes. A [local request trace](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/network-local.json) observes one bundle request and zero individual mesh requests. Keeping both original meshes and the bundle increases the complete offline folder to **100 files totaling 55,602,211 bytes**. Fewer transfer bytes and requests are packaging improvements; they do not establish a public startup-time reduction until the revised hosted package is measured.
+This comparison concerns the native mesh payload, not all startup resources or total wire bytes. A [local request trace](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/network-local.json) observes one bundle request and zero individual mesh requests. At the compressed-delivery revision, keeping both original meshes and the bundle increased the complete offline folder to **100 files totaling 55,602,211 bytes**. The current branding revision described below remains 100 files and totals **55,663,466 bytes**. Fewer transfer bytes and requests are packaging improvements; they do not establish a public startup-time reduction until the revised hosted package is measured.
 
 The [revised local browser check](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/browser/browser-benchmark.json) reaches native-ready in **9.213 seconds**, then runs for **20.0043 wall seconds** with **20.006 simulated seconds**, a **1.000085 simulation/wall-time ratio** and **52.839 render calls/s**, without reported warnings or browser errors. This short check uses the recorded Apple M5 / headless Chromium 151 environment. It verifies the new loader and interaction locally; it does not replace the original ten-minute run or describe public-network loading. [Desktop and mobile acceptance](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/ui/acceptance.json) also passes after the delivery change.
 
 The [bundle-loaded native/WASM comparison](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/wasm-parity.json) repeats 15,000 steps and 1,500 sampled states. Numerical and loaded-contact-count checks pass; **strict raw-contact-count parity still fails in 13/1,500 states**. The maximum TCP coordinate difference remains **4.623 × 10⁻¹⁴ m**. No new grasp or placement competence follows from the delivery change.
 
-Delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Its [separate source binding](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-source-binding.json) records the runtime source and all 100 export hashes. The original physics, parity and ten-minute local browser receipts remain unchanged in the sealed `evidence/` archive. The separate [delivery-evidence directory](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/README.md) contains the new package inventory, failed public-startup summaries, eventual baseline completion, local delivery checks and their own provenance.
+Historical compressed-delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Its [separate source binding](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-source-binding.json) records the runtime source and all 100 export hashes. The original physics, parity and ten-minute local browser receipts remain unchanged in the sealed `evidence/` archive. The separate [delivery-evidence directory](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/README.md) contains the new package inventory, failed public-startup summaries, eventual baseline completion, local delivery checks and their own provenance.
+
+The current release uses the existing official DVIDIA mark and favicon, with the unmodified IBM Plex Sans font and its full SIL Open Font License. [Branding provenance](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/branding-source.json) records the exact production-website source assets and their hashes. [Current source `0c371381dbbf3a03d9d659680289ad45797e4935`](https://github.com/Dvidia-Inference/dvidia-training/tree/0c371381dbbf3a03d9d659680289ad45797e4935) and its [separate branding binding](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding-binding.json) identify all **100 current export files**. Only the HTML and its integrity entry differ from the compressed-delivery package; the other 98 files, including the native scene, mesh bundle, controller and engine, are unchanged. [Final desktop/mobile checks](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/ui-final/acceptance.json) pass. The article's lead screenshot shows this official mark; earlier archived screenshots document their earlier revisions. No additional physics or skill benchmark is implied by this branding correction.
 
 ## The next Skillspace gate
 
@@ -165,6 +167,6 @@ The [source-binding receipt](../topics/physical-grounding/runs/2026-10-13-live-p
 
 [Installed-wheel validation](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/wheel-validation.json) confirms that all 99 files exported from the installed wheel match the frozen source export byte for byte. [Browser acceptance](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/ui-acceptance/acceptance.json) checks target dragging, actual native response, coordinate editing, jaw interaction, shoe nudge, pause/reset, receipts and the visible high-target failure. The 1440×1100 desktop and 390×900 / 320×900 mobile layouts show no horizontal overflow or browser/HTTP errors. These functional checks are separate from the final performance study.
 
-DVIDIA tooling, original shoe geometry and procedural visual details use MIT. The pinned PiPER simulation assets retain their upstream MIT notices. Three.js is MIT; MuJoCo is Apache-2.0 with dependency notices supplied in `workstation.third-party.txt`. These licenses do not establish that a complete hardware design is open source. Original DVIDIA research writing is CC BY 4.0.
+DVIDIA tooling, original shoe geometry and procedural visual details use MIT. The pinned PiPER simulation assets retain their upstream MIT notices. Three.js is MIT; the embedded IBM Plex Sans font retains SIL OFL 1.1; MuJoCo is Apache-2.0 with dependency notices supplied in `workstation.third-party.txt`. These licenses do not establish that a complete hardware design is open source. Original DVIDIA research writing is CC BY 4.0.
 
 Follow [@iammrriver](https://x.com/iammrriver) or contact [hello@dvidia.org](mailto:hello@dvidia.org).
