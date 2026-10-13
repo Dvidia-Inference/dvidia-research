@@ -10,3 +10,7 @@
 # Preserve exact generated MuJoCo/Three.js runtime bytes and upstream shaders.
 **/workstation/*.bundle.js -diff linguist-generated=true
 **/workstation/mujoco.wasm binary
+**/2026-10-13-live-piper-workstation-v01/workstation/assets/** -diff linguist-vendored=true
+**/2026-10-13-live-piper-workstation-v01/evidence/**/attempts.json -diff linguist-generated=true
+**/2026-10-13-live-piper-workstation-v01/evidence/browser/browser-raw-samples.json -diff linguist-generated=true
+**/2026-10-13-live-piper-workstation-v01/evidence/browser/session-receipt.json -diff linguist-generated=true
