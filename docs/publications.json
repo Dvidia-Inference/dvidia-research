@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "skill-prerequisites-v01",
+      "title": "Skill prerequisites: access, reach and recovery",
+      "source": "reports/Skill prerequisites v01.md",
+      "date": "2026-10-13",
+      "type": "Two native environments with authored policies and recorded benchmark evidence",
+      "status": "16/16 valid · 2 lid contacts avoided · 3/4 retrieval checkpoints · 0/4 retained tool lifts",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A frozen sixteen-attempt native MuJoCo study tests hinged shoe-box access and a mounted rake for an out-of-workspace shoe. Guarded access avoids two baseline lid collisions while task completion stays at 2/4; a transient withdrawal adds 0.70 simulated seconds without being necessary in its matched baseline. The mounted rake reaches an intermediate retrieval checkpoint in 3/4 cases, but all subsequent retained lifts fail and the short-tool case is deferred. All native traces and failures remain public. The browser replays recorded states; fresh physics runs locally. Privileged observations, synthetic contact and authored policies establish no learned skill or hardware qualification."
+    },
+    {
       "slug": "live-piper-shoe-workstation-v01",
       "title": "Live PiPER shoe workstation v0.1",
       "source": "reports/Live PiPER shoe workstation v01.md",

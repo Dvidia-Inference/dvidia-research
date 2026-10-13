@@ -1,0 +1,742 @@
+{
+  "source_sha256": "d79118bcac7aa2e5a69a6278640b9992a94327be16668a7ab4370e33421fe9fc",
+  "development_only": true,
+  "cases_frozen_before_tuning": true,
+  "heldout_not_executed": true,
+  "rows": [
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "open-light",
+        "lid_angle_deg": 112.0,
+        "lid_velocity_rad_s": 0.0,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      },
+      "policy": "baseline",
+      "success": true,
+      "valid": true,
+      "metrics": {
+        "outcome": "completed",
+        "task_success": true,
+        "inspection_waypoint_reached": true,
+        "return_completed": true,
+        "safe_abort": false,
+        "help_requested": false,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 0,
+        "missed_interventions": 0,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": false,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 0.0,
+        "peak_lid_robot_normal_force_n": 0.0,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 0.0,
+        "contact_duration_s": 0.0,
+        "hazard_duration_s": 0.0,
+        "first_hazard_s": null,
+        "first_intervention_s": null,
+        "first_command_s": null,
+        "first_contact_s": null,
+        "detection_time_s": null,
+        "command_time_s": null,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": null,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.11755587509833276,
+        "physics_realtime_factor": 51.03955880538255,
+        "decision_latency_p50_ms": 0.023124972358345985,
+        "decision_latency_p95_ms": 0.037667108699679375,
+        "decision_latency_max_ms": 0.07279193960130215,
+        "native_steps": 3000,
+        "terminal_phase": "done",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.82,
+          "type": "inspection_waypoint_reached",
+          "message": "Inspection waypoint held for 200 ms; no shoe grasp attempted."
+        },
+        {
+          "t": 1.6,
+          "type": "return_complete",
+          "message": "Arm returned from the box."
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "open-light",
+        "lid_angle_deg": 112.0,
+        "lid_velocity_rad_s": 0.0,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      },
+      "policy": "recovery",
+      "success": true,
+      "valid": true,
+      "metrics": {
+        "outcome": "completed",
+        "task_success": true,
+        "inspection_waypoint_reached": true,
+        "return_completed": true,
+        "safe_abort": false,
+        "help_requested": false,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 0,
+        "missed_interventions": 0,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": false,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 0.0,
+        "peak_lid_robot_normal_force_n": 0.0,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 0.0,
+        "contact_duration_s": 0.0,
+        "hazard_duration_s": 0.0,
+        "first_hazard_s": null,
+        "first_intervention_s": null,
+        "first_command_s": null,
+        "first_contact_s": null,
+        "detection_time_s": null,
+        "command_time_s": null,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": null,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.11266541690565646,
+        "physics_realtime_factor": 53.25502860406427,
+        "decision_latency_p50_ms": 0.021583866328001022,
+        "decision_latency_p95_ms": 0.02808310091495514,
+        "decision_latency_max_ms": 0.04295795224606991,
+        "native_steps": 3000,
+        "terminal_phase": "done",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.82,
+          "type": "inspection_waypoint_reached",
+          "message": "Inspection waypoint held for 200 ms; no shoe grasp attempted."
+        },
+        {
+          "t": 1.6,
+          "type": "return_complete",
+          "message": "Arm returned from the box."
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "falling-light",
+        "lid_angle_deg": 72.0,
+        "lid_velocity_rad_s": -0.1,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      },
+      "policy": "baseline",
+      "success": false,
+      "valid": true,
+      "metrics": {
+        "outcome": "failed",
+        "task_success": false,
+        "inspection_waypoint_reached": false,
+        "return_completed": false,
+        "safe_abort": false,
+        "help_requested": false,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 0,
+        "missed_interventions": 1,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": true,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 106.62740595938895,
+        "peak_lid_robot_normal_force_n": 106.62740595938895,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 131.6421465697744,
+        "contact_duration_s": 5.766,
+        "hazard_duration_s": 0.244,
+        "first_hazard_s": 0.0,
+        "first_intervention_s": null,
+        "first_command_s": null,
+        "first_contact_s": 0.23600000000000018,
+        "detection_time_s": 0.0,
+        "command_time_s": null,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": null,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.1307702090125531,
+        "physics_realtime_factor": 45.88200971234664,
+        "decision_latency_p50_ms": 0.023042084649205208,
+        "decision_latency_p95_ms": 0.02983398735523224,
+        "decision_latency_max_ms": 0.05587493069469929,
+        "native_steps": 3000,
+        "terminal_phase": "access",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.0,
+          "type": "hazard_started",
+          "message": "hazard started",
+          "lid_angle_rad": 1.2566370614359172,
+          "lid_velocity_rad_s": -0.1
+        },
+        {
+          "t": 0.236,
+          "type": "hazardous_contact",
+          "message": "Lid contacted the robot above the synthetic benchmark threshold.",
+          "normal_force_n": 65.38804644216548
+        },
+        {
+          "t": 0.246,
+          "type": "hazard_cleared",
+          "message": "hazard cleared",
+          "lid_angle_rad": 0.9083036008916495,
+          "lid_velocity_rad_s": 0.012961884161858273
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "falling-light",
+        "lid_angle_deg": 72.0,
+        "lid_velocity_rad_s": -0.1,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      },
+      "policy": "recovery",
+      "success": false,
+      "valid": true,
+      "metrics": {
+        "outcome": "safe_abort",
+        "task_success": false,
+        "inspection_waypoint_reached": false,
+        "return_completed": false,
+        "safe_abort": true,
+        "help_requested": true,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 1,
+        "missed_interventions": 0,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": false,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 0.0,
+        "peak_lid_robot_normal_force_n": 0.0,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 0.0,
+        "contact_duration_s": 0.0,
+        "hazard_duration_s": 0.234,
+        "first_hazard_s": 0.0,
+        "first_intervention_s": 0.0,
+        "first_command_s": 0.0,
+        "first_contact_s": null,
+        "detection_time_s": 0.0,
+        "command_time_s": 0.0,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": 0.0,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.23532358394004405,
+        "physics_realtime_factor": 25.496806990362032,
+        "decision_latency_p50_ms": 0.02374988980591297,
+        "decision_latency_p95_ms": 0.18316600471735,
+        "decision_latency_max_ms": 0.37420797161757946,
+        "native_steps": 3000,
+        "terminal_phase": "help",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.0,
+          "type": "hazard_started",
+          "message": "hazard started",
+          "lid_angle_rad": 1.2566370614359172,
+          "lid_velocity_rad_s": -0.1
+        },
+        {
+          "t": 0.0,
+          "type": "withdrawal_started",
+          "message": "Lid descending. Withdraw from the access path.",
+          "reason": "descending_lid_in_access_volume"
+        },
+        {
+          "t": 0.236,
+          "type": "hazard_cleared",
+          "message": "hazard cleared",
+          "lid_angle_rad": 0.9158914334923962,
+          "lid_velocity_rad_s": -2.6408554683013596
+        },
+        {
+          "t": 0.24,
+          "type": "withdrawal_complete",
+          "message": "Arm has reached the withdrawal waypoint."
+        },
+        {
+          "t": 0.52,
+          "type": "help_requested",
+          "message": "Box closed. Stop here and request help reopening it.",
+          "reason": "closed_box_requires_reopening"
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "falling-heavy",
+        "lid_angle_deg": 65.0,
+        "lid_velocity_rad_s": -0.3,
+        "lid_mass_kg": 0.24,
+        "hinge_damping": 0.06,
+        "split": "development"
+      },
+      "policy": "baseline",
+      "success": false,
+      "valid": true,
+      "metrics": {
+        "outcome": "failed",
+        "task_success": false,
+        "inspection_waypoint_reached": false,
+        "return_completed": false,
+        "safe_abort": false,
+        "help_requested": false,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 0,
+        "missed_interventions": 1,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": true,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 78.08906068234384,
+        "peak_lid_robot_normal_force_n": 78.08906068234384,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 146.86370475259014,
+        "contact_duration_s": 5.776,
+        "hazard_duration_s": 0.188,
+        "first_hazard_s": 0.0,
+        "first_intervention_s": null,
+        "first_command_s": null,
+        "first_contact_s": 0.18600000000000014,
+        "detection_time_s": 0.0,
+        "command_time_s": null,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": null,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.12151487497612834,
+        "physics_realtime_factor": 49.37667097281929,
+        "decision_latency_p50_ms": 0.02295803278684616,
+        "decision_latency_p95_ms": 0.03066682256758213,
+        "decision_latency_max_ms": 0.37804199382662773,
+        "native_steps": 3000,
+        "terminal_phase": "access",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.0,
+          "type": "hazard_started",
+          "message": "hazard started",
+          "lid_angle_rad": 1.1344640137963142,
+          "lid_velocity_rad_s": -0.3
+        },
+        {
+          "t": 0.186,
+          "type": "hazardous_contact",
+          "message": "Lid contacted the robot above the synthetic benchmark threshold.",
+          "normal_force_n": 26.151530842863185
+        },
+        {
+          "t": 0.19,
+          "type": "hazard_cleared",
+          "message": "hazard cleared",
+          "lid_angle_rad": 0.8371491876995186,
+          "lid_velocity_rad_s": -0.019273087339858063
+        },
+        {
+          "t": 0.202,
+          "type": "lid_robot_contact_cleared",
+          "message": "lid robot contact cleared",
+          "normal_force_n": 0.0
+        },
+        {
+          "t": 0.242,
+          "type": "hazardous_contact",
+          "message": "Lid contacted the robot above the synthetic benchmark threshold.",
+          "normal_force_n": 73.81484306984767
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "falling-heavy",
+        "lid_angle_deg": 65.0,
+        "lid_velocity_rad_s": -0.3,
+        "lid_mass_kg": 0.24,
+        "hinge_damping": 0.06,
+        "split": "development"
+      },
+      "policy": "recovery",
+      "success": false,
+      "valid": true,
+      "metrics": {
+        "outcome": "safe_abort",
+        "task_success": false,
+        "inspection_waypoint_reached": false,
+        "return_completed": false,
+        "safe_abort": true,
+        "help_requested": true,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 1,
+        "missed_interventions": 0,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": false,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 0.0,
+        "peak_lid_robot_normal_force_n": 0.0,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 0.0,
+        "contact_duration_s": 0.0,
+        "hazard_duration_s": 0.234,
+        "first_hazard_s": 0.0,
+        "first_intervention_s": 0.0,
+        "first_command_s": 0.0,
+        "first_contact_s": null,
+        "detection_time_s": 0.0,
+        "command_time_s": 0.0,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": 0.0,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.17632162501104176,
+        "physics_realtime_factor": 34.028724494932625,
+        "decision_latency_p50_ms": 0.02191588282585144,
+        "decision_latency_p95_ms": 0.028665876016020775,
+        "decision_latency_max_ms": 0.03774999640882015,
+        "native_steps": 3000,
+        "terminal_phase": "help",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.0,
+          "type": "hazard_started",
+          "message": "hazard started",
+          "lid_angle_rad": 1.1344640137963142,
+          "lid_velocity_rad_s": -0.3
+        },
+        {
+          "t": 0.0,
+          "type": "withdrawal_started",
+          "message": "Lid descending. Withdraw from the access path.",
+          "reason": "descending_lid_in_access_volume"
+        },
+        {
+          "t": 0.236,
+          "type": "hazard_cleared",
+          "message": "hazard cleared",
+          "lid_angle_rad": 0.6958756401357904,
+          "lid_velocity_rad_s": -3.124856133644688
+        },
+        {
+          "t": 0.24,
+          "type": "withdrawal_complete",
+          "message": "Arm has reached the withdrawal waypoint."
+        },
+        {
+          "t": 0.46,
+          "type": "help_requested",
+          "message": "Box closed. Stop here and request help reopening it.",
+          "reason": "closed_box_requires_reopening"
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "transient-closing",
+        "lid_angle_deg": 108.0,
+        "lid_velocity_rad_s": -0.4,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      },
+      "policy": "baseline",
+      "success": true,
+      "valid": true,
+      "metrics": {
+        "outcome": "completed",
+        "task_success": true,
+        "inspection_waypoint_reached": true,
+        "return_completed": true,
+        "safe_abort": false,
+        "help_requested": false,
+        "resumed_count": 0,
+        "recovery_count": 0,
+        "intervention_count": 0,
+        "missed_interventions": 1,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": false,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 0.0,
+        "peak_lid_robot_normal_force_n": 0.0,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 0.0,
+        "contact_duration_s": 0.0,
+        "hazard_duration_s": 0.02,
+        "first_hazard_s": 0.0,
+        "first_intervention_s": null,
+        "first_command_s": null,
+        "first_contact_s": null,
+        "detection_time_s": 0.0,
+        "command_time_s": null,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": null,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.11671662493608892,
+        "physics_realtime_factor": 51.4065584340278,
+        "decision_latency_p50_ms": 0.021665822714567184,
+        "decision_latency_p95_ms": 0.028166919946670532,
+        "decision_latency_max_ms": 0.06312504410743713,
+        "native_steps": 3000,
+        "terminal_phase": "done",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.0,
+          "type": "hazard_started",
+          "message": "hazard started",
+          "lid_angle_rad": 1.8849555921538759,
+          "lid_velocity_rad_s": -0.4
+        },
+        {
+          "t": 0.022,
+          "type": "hazard_cleared",
+          "message": "hazard cleared",
+          "lid_angle_rad": 1.8809830529002833,
+          "lid_velocity_rad_s": -0.008806841140305915
+        },
+        {
+          "t": 0.82,
+          "type": "inspection_waypoint_reached",
+          "message": "Inspection waypoint held for 200 ms; no shoe grasp attempted."
+        },
+        {
+          "t": 1.6,
+          "type": "return_complete",
+          "message": "Arm returned from the box."
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    },
+    {
+      "task": "hinged-shoebox",
+      "case": {
+        "id": "transient-closing",
+        "lid_angle_deg": 108.0,
+        "lid_velocity_rad_s": -0.4,
+        "lid_mass_kg": 0.12,
+        "hinge_damping": 0.025,
+        "split": "development"
+      },
+      "policy": "recovery",
+      "success": true,
+      "valid": true,
+      "metrics": {
+        "outcome": "recovered",
+        "task_success": true,
+        "inspection_waypoint_reached": true,
+        "return_completed": true,
+        "safe_abort": false,
+        "help_requested": false,
+        "resumed_count": 1,
+        "recovery_count": 1,
+        "intervention_count": 1,
+        "missed_interventions": 0,
+        "false_interventions": null,
+        "predicate_mismatch_interventions": 0,
+        "false_intervention_definition": "Not identifiable from the treated rollout alone. Compare this case against baseline: a withdrawal when baseline completes without contact is a counterfactual nuisance interruption, not proven necessary avoidance.",
+        "missed_intervention_definition": "At least one observed descending-lid predicate with no withdrawal command; this is guard coverage, not calibrated danger classification.",
+        "lid_robot_collision": false,
+        "other_environment_robot_collision": false,
+        "peak_contact_force_n": 0.0,
+        "peak_lid_robot_normal_force_n": 0.0,
+        "peak_other_environment_robot_force_n": 0.0,
+        "lid_robot_peak_force_time_integral_ns": 0.0,
+        "contact_duration_s": 0.0,
+        "hazard_duration_s": 0.02,
+        "first_hazard_s": 0.0,
+        "first_intervention_s": 0.0,
+        "first_command_s": 0.0,
+        "first_contact_s": null,
+        "detection_time_s": 0.0,
+        "command_time_s": 0.0,
+        "reaction_measurement_scope": "Privileged native predicate sampled at 2 ms; authored command at 20 ms. No sensor, transport or actuator-response latency included.",
+        "first_response_latency_s": 0.0,
+        "simulated_seconds": 5.999999999999561,
+        "wall_seconds": 0.11415624991059303,
+        "physics_realtime_factor": 52.55954014518478,
+        "decision_latency_p50_ms": 0.022249994799494743,
+        "decision_latency_p95_ms": 0.02945796586573124,
+        "decision_latency_max_ms": 0.04975008778274059,
+        "native_steps": 3000,
+        "terminal_phase": "done",
+        "failure_reason": null,
+        "solver_warnings": 0
+      },
+      "events": [
+        {
+          "t": 0.0,
+          "type": "hazard_started",
+          "message": "hazard started",
+          "lid_angle_rad": 1.8849555921538759,
+          "lid_velocity_rad_s": -0.4
+        },
+        {
+          "t": 0.0,
+          "type": "withdrawal_started",
+          "message": "Lid descending. Withdraw from the access path.",
+          "reason": "descending_lid_in_access_volume"
+        },
+        {
+          "t": 0.022,
+          "type": "hazard_cleared",
+          "message": "hazard cleared",
+          "lid_angle_rad": 1.8809830529002833,
+          "lid_velocity_rad_s": -0.008806841140305915
+        },
+        {
+          "t": 0.24,
+          "type": "withdrawal_complete",
+          "message": "Arm has reached the withdrawal waypoint."
+        },
+        {
+          "t": 0.52,
+          "type": "access_resumed",
+          "message": "Lid aperture stable. Resume the inspection waypoint."
+        },
+        {
+          "t": 1.54,
+          "type": "inspection_waypoint_reached",
+          "message": "Inspection waypoint held for 200 ms; no shoe grasp attempted."
+        },
+        {
+          "t": 2.32,
+          "type": "return_complete",
+          "message": "Arm returned from the box."
+        }
+      ],
+      "native_trace_columns": [
+        "t",
+        "lid_angle_rad",
+        "lid_velocity_rad_s",
+        "lid_robot_normal_force_n",
+        "risk",
+        "other_environment_robot_force_n"
+      ],
+      "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+[
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "open-light",
+      "lid_angle_deg": 112.0,
+      "lid_velocity_rad_s": 0.0,
+      "lid_mass_kg": 0.12,
+      "hinge_damping": 0.025,
+      "split": "development"
+    },
+    "policy": "baseline",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": true,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 0,
+      "missed_interventions": 0,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": false,
+      "peak_lid_robot_normal_force_n": 0.0,
+      "lid_robot_normal_impulse_ns": 0.0,
+      "contact_duration_s": 0.0,
+      "hazard_duration_s": 0.0,
+      "first_hazard_s": null,
+      "first_intervention_s": null,
+      "first_contact_s": null,
+      "first_response_latency_s": null,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.12049125018529594,
+      "physics_realtime_factor": 49.79614694654207,
+      "decision_latency_p50_ms": 0.023124972358345985,
+      "decision_latency_p95_ms": 0.03133295103907585,
+      "decision_latency_max_ms": 0.06595905870199203,
+      "native_steps": 3000,
+      "terminal_phase": "return",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.82,
+        "type": "inspection_waypoint_reached"
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "open-light",
+      "lid_angle_deg": 112.0,
+      "lid_velocity_rad_s": 0.0,
+      "lid_mass_kg": 0.12,
+      "hinge_damping": 0.025,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": true,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 0,
+      "missed_interventions": 0,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": false,
+      "peak_lid_robot_normal_force_n": 0.0,
+      "lid_robot_normal_impulse_ns": 0.0,
+      "contact_duration_s": 0.0,
+      "hazard_duration_s": 0.0,
+      "first_hazard_s": null,
+      "first_intervention_s": null,
+      "first_contact_s": null,
+      "first_response_latency_s": null,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.12166487495414913,
+      "physics_realtime_factor": 49.31579473747648,
+      "decision_latency_p50_ms": 0.023458153009414673,
+      "decision_latency_p95_ms": 0.035041943192481995,
+      "decision_latency_max_ms": 0.1538340002298355,
+      "native_steps": 3000,
+      "terminal_phase": "return",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.82,
+        "type": "inspection_waypoint_reached"
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "falling-light",
+      "lid_angle_deg": 72.0,
+      "lid_velocity_rad_s": -0.1,
+      "lid_mass_kg": 0.12,
+      "hinge_damping": 0.025,
+      "split": "development"
+    },
+    "policy": "baseline",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": false,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 0,
+      "missed_interventions": 1,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": true,
+      "peak_lid_robot_normal_force_n": 89.5647845086975,
+      "lid_robot_normal_impulse_ns": 150.8637536250206,
+      "contact_duration_s": 5.742,
+      "hazard_duration_s": 0.138,
+      "first_hazard_s": 0.0,
+      "first_intervention_s": null,
+      "first_contact_s": 0.2600000000000002,
+      "first_response_latency_s": null,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.11999979196116328,
+      "physics_realtime_factor": 50.00008668299525,
+      "decision_latency_p50_ms": 0.022625084966421127,
+      "decision_latency_p95_ms": 0.030708033591508865,
+      "decision_latency_max_ms": 0.048208050429821014,
+      "native_steps": 3000,
+      "terminal_phase": "access",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "hazard_started",
+        "lid_angle_rad": 1.2566370614359172,
+        "lid_velocity_rad_s": -0.1
+      },
+      {
+        "t": 0.138,
+        "type": "hazard_cleared",
+        "lid_angle_rad": 1.1609134345846146,
+        "lid_velocity_rad_s": -0.024061767664159184
+      },
+      {
+        "t": 0.26,
+        "type": "lid_robot_contact_started",
+        "normal_force_n": 61.97132905729567
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "falling-light",
+      "lid_angle_deg": 72.0,
+      "lid_velocity_rad_s": -0.1,
+      "lid_mass_kg": 0.12,
+      "hinge_damping": 0.025,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": false,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 1,
+      "missed_interventions": 0,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": false,
+      "peak_lid_robot_normal_force_n": 0.0,
+      "lid_robot_normal_impulse_ns": 0.0,
+      "contact_duration_s": 0.0,
+      "hazard_duration_s": 0.138,
+      "first_hazard_s": 0.0,
+      "first_intervention_s": 0.0,
+      "first_contact_s": null,
+      "first_response_latency_s": 0.0,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.1358823338523507,
+      "physics_realtime_factor": 44.155850358878446,
+      "decision_latency_p50_ms": 0.02312520518898964,
+      "decision_latency_p95_ms": 0.03395788371562958,
+      "decision_latency_max_ms": 0.12033316306769848,
+      "native_steps": 3000,
+      "terminal_phase": "withdraw",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "hazard_started",
+        "lid_angle_rad": 1.2566370614359172,
+        "lid_velocity_rad_s": -0.1
+      },
+      {
+        "t": 0.0,
+        "type": "withdrawal_started",
+        "reason": "descending_lid_in_access_volume"
+      },
+      {
+        "t": 0.138,
+        "type": "hazard_cleared",
+        "lid_angle_rad": 1.1609134345846146,
+        "lid_velocity_rad_s": -0.024061767664159184
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "falling-heavy",
+      "lid_angle_deg": 65.0,
+      "lid_velocity_rad_s": -0.3,
+      "lid_mass_kg": 0.24,
+      "hinge_damping": 0.06,
+      "split": "development"
+    },
+    "policy": "baseline",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": false,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 0,
+      "missed_interventions": 1,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": true,
+      "peak_lid_robot_normal_force_n": 103.51962858796713,
+      "lid_robot_normal_impulse_ns": 208.65397257080897,
+      "contact_duration_s": 5.744,
+      "hazard_duration_s": 0.008,
+      "first_hazard_s": 0.0,
+      "first_intervention_s": null,
+      "first_contact_s": 0.2580000000000002,
+      "first_response_latency_s": null,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.1187160408589989,
+      "physics_realtime_factor": 50.54076901979797,
+      "decision_latency_p50_ms": 0.022666994482278824,
+      "decision_latency_p95_ms": 0.028165988624095917,
+      "decision_latency_max_ms": 0.3753339406102896,
+      "native_steps": 3000,
+      "terminal_phase": "access",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "hazard_started",
+        "lid_angle_rad": 1.1344640137963142,
+        "lid_velocity_rad_s": -0.3
+      },
+      {
+        "t": 0.008,
+        "type": "hazard_cleared",
+        "lid_angle_rad": 1.133694360257956,
+        "lid_velocity_rad_s": -0.025777742997311236
+      },
+      {
+        "t": 0.258,
+        "type": "lid_robot_contact_started",
+        "normal_force_n": 85.43271098999122
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "falling-heavy",
+      "lid_angle_deg": 65.0,
+      "lid_velocity_rad_s": -0.3,
+      "lid_mass_kg": 0.24,
+      "hinge_damping": 0.06,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": false,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 1,
+      "missed_interventions": 0,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": false,
+      "peak_lid_robot_normal_force_n": 0.0,
+      "lid_robot_normal_impulse_ns": 0.0,
+      "contact_duration_s": 0.0,
+      "hazard_duration_s": 0.008,
+      "first_hazard_s": 0.0,
+      "first_intervention_s": 0.0,
+      "first_contact_s": null,
+      "first_response_latency_s": 0.0,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.13460470805875957,
+      "physics_realtime_factor": 44.57496388150373,
+      "decision_latency_p50_ms": 0.023042084649205208,
+      "decision_latency_p95_ms": 0.02970779314637184,
+      "decision_latency_max_ms": 0.05925004370510578,
+      "native_steps": 3000,
+      "terminal_phase": "withdraw",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "hazard_started",
+        "lid_angle_rad": 1.1344640137963142,
+        "lid_velocity_rad_s": -0.3
+      },
+      {
+        "t": 0.0,
+        "type": "withdrawal_started",
+        "reason": "descending_lid_in_access_volume"
+      },
+      {
+        "t": 0.008,
+        "type": "hazard_cleared",
+        "lid_angle_rad": 1.133694360257956,
+        "lid_velocity_rad_s": -0.025777742997311236
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "transient-closing",
+      "lid_angle_deg": 108.0,
+      "lid_velocity_rad_s": -0.4,
+      "lid_mass_kg": 0.12,
+      "hinge_damping": 0.025,
+      "split": "development"
+    },
+    "policy": "baseline",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": true,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 0,
+      "missed_interventions": 1,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": false,
+      "peak_lid_robot_normal_force_n": 0.0,
+      "lid_robot_normal_impulse_ns": 0.0,
+      "contact_duration_s": 0.0,
+      "hazard_duration_s": 0.022,
+      "first_hazard_s": 0.0,
+      "first_intervention_s": null,
+      "first_contact_s": null,
+      "first_response_latency_s": null,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.12173283379524946,
+      "physics_realtime_factor": 49.28826359280652,
+      "decision_latency_p50_ms": 0.022834166884422302,
+      "decision_latency_p95_ms": 0.029041897505521774,
+      "decision_latency_max_ms": 0.07333303801715374,
+      "native_steps": 3000,
+      "terminal_phase": "return",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "hazard_started",
+        "lid_angle_rad": 1.8849555921538759,
+        "lid_velocity_rad_s": -0.4
+      },
+      {
+        "t": 0.022,
+        "type": "hazard_cleared",
+        "lid_angle_rad": 1.8811125226077212,
+        "lid_velocity_rad_s": 0.0008487287045920979
+      },
+      {
+        "t": 0.82,
+        "type": "inspection_waypoint_reached"
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  },
+  {
+    "task": "hinged-shoebox",
+    "case": {
+      "id": "transient-closing",
+      "lid_angle_deg": 108.0,
+      "lid_velocity_rad_s": -0.4,
+      "lid_mass_kg": 0.12,
+      "hinge_damping": 0.025,
+      "split": "development"
+    },
+    "policy": "recovery",
+    "success": false,
+    "valid": true,
+    "metrics": {
+      "task_success": false,
+      "inspection_waypoint_reached": false,
+      "return_completed": false,
+      "safe_abort": false,
+      "help_requested": false,
+      "resumed_count": 0,
+      "intervention_count": 1,
+      "missed_interventions": 0,
+      "false_interventions": 0,
+      "false_intervention_definition": "withdrawals without the causal descending-lid predicate at the decision tick; not a counterfactual nuisance-stop rate",
+      "lid_robot_collision": false,
+      "peak_lid_robot_normal_force_n": 0.0,
+      "lid_robot_normal_impulse_ns": 0.0,
+      "contact_duration_s": 0.0,
+      "hazard_duration_s": 0.022,
+      "first_hazard_s": 0.0,
+      "first_intervention_s": 0.0,
+      "first_contact_s": null,
+      "first_response_latency_s": 0.0,
+      "simulated_seconds": 5.999999999999561,
+      "wall_seconds": 0.12087079207412899,
+      "physics_realtime_factor": 49.63978391338591,
+      "decision_latency_p50_ms": 0.023250002413988113,
+      "decision_latency_p95_ms": 0.03379187546670437,
+      "decision_latency_max_ms": 0.06962497718632221,
+      "native_steps": 3000,
+      "terminal_phase": "withdraw",
+      "failure_reason": null,
+      "solver_warnings": 0
+    },
+    "events": [
+      {
+        "t": 0.0,
+        "type": "hazard_started",
+        "lid_angle_rad": 1.8849555921538759,
+        "lid_velocity_rad_s": -0.4
+      },
+      {
+        "t": 0.0,
+        "type": "withdrawal_started",
+        "reason": "descending_lid_in_access_volume"
+      },
+      {
+        "t": 0.022,
+        "type": "hazard_cleared",
+        "lid_angle_rad": 1.8811125226077212,
+        "lid_velocity_rad_s": 0.0008487287045920979
+      }
+    ],
+    "native_trace_columns": [
+      "t",
+      "lid_angle_rad",
+      "lid_velocity_rad_s",
+      "lid_robot_normal_force_n",
+      "risk"
+    ],
+    "scope": "Authored PiPER shoe-box inspection-waypoint access with privileged native hinge and robot states. Synthetic rigid shoe/lid, uncalibrated contact. No learned policy, shoe retrieval, damage model or physical robot qualification."
+  }
+]
