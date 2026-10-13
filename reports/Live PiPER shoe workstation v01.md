@@ -161,6 +161,8 @@ Only then should a distilled shoe skill be compared with the authored baseline f
 
 ## Source, evidence and licensing
 
+The [current publication inventory](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/provenance.json) binds 100 current export files, 42 unchanged original evidence files, 30 delivery/branding evidence files and the [original publication inventory](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/original-publication-provenance.json). That original inventory is preserved byte-for-byte and describes the earlier publication; the current inventory identifies the source revisions separately.
+
 Original benchmark source: [79ffdda1c0759bce1201ce3391c40403c385c39b](https://github.com/Dvidia-Inference/dvidia-training/tree/79ffdda1c0759bce1201ce3391c40403c385c39b). The [run archive](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/README.md) connects the complete benchmark, separate development traces, native/browser comparison and runtime validation receipts.
 
 The [source-binding receipt](../topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/source-binding.json) explains a provenance detail: the native run began immediately before its Git commit, so its original `source_commit` fields remain `null`. Every implementation hash recorded by that protocol matches `79ffdda1c0759bce1201ce3391c40403c385c39b`. The separate binding records this verification without rewriting the original protocol, attempt or result bytes.

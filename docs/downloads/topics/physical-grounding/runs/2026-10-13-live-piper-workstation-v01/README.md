@@ -20,6 +20,8 @@ Historical compressed-delivery source: [ba0da582fd46a58be181f8e940db069520045557
 
 Current source: [0c371381dbbf3a03d9d659680289ad45797e4935](https://github.com/Dvidia-Inference/dvidia-training/tree/0c371381dbbf3a03d9d659680289ad45797e4935). The current **100-file, 55,663,466-byte** export restores the official DVIDIA mark, favicon and font. [Branding source proof](delivery-evidence/branding/branding-source.json), [current export binding](delivery-evidence/branding-binding.json) and [final desktop/mobile acceptance](delivery-evidence/branding/ui-final/acceptance.json) distinguish that correction from the untouched native benchmark and earlier delivery receipts. Earlier screenshots show the earlier masthead; current screenshots are in `delivery-evidence/branding/ui-final/`.
 
+[Current publication inventory](provenance.json) binds all 173 current artifact/evidence files, including the [unchanged original publication inventory](original-publication-provenance.json). The original inventory describes the first research publication at `768f0b69ece55e4363f465d201476c595bd7c3a5`; its original 141-file hashes remain historical records.
+
 Shoe material properties are synthetic assumptions. The visible laces and fabric are cosmetic; collision geometry remains rigid. GPU rendering, native CPU timing, state publication and actual robot latency are separate quantities.
 
 DVIDIA code and original assets: MIT. PiPER simulation assets and Three.js: MIT. Embedded IBM Plex Sans font: SIL OFL 1.1. MuJoCo: Apache-2.0 with dependency notices preserved in the export. Original research writing: CC BY 4.0.
