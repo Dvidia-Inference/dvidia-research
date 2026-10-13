@@ -1,0 +1,154 @@
+{
+  "schema": "dvidia.workstation-public-startup-observations/v1",
+  "scope": "Derived public-startup failure summary. Original bytes are retained locally; original SHA256 values identify those records. Absolute local stack-frame paths are omitted from this public derivative.",
+  "original_runtime_source_commit": "79ffdda1c0759bce1201ce3391c40403c385c39b",
+  "original_research_publication_commit": "768f0b69ece55e4363f465d201476c595bd7c3a5",
+  "original_huggingface_publication_commit": "d423f1d1851a831614cec141b004f657a14be19e",
+  "source_records": {
+    "research_startup_observations": {
+      "sha256": "9dcdd3f500bb28e1260b55585022e83d8ac0e780d5c42ffe379e723871022f09",
+      "bytes": 1928
+    },
+    "huggingface_120_second_failure": {
+      "sha256": "9ea2edcfeac7397abc29c5d8a06b0df310ff800f3daf0098c882ecdc322356f5",
+      "bytes": 1081
+    },
+    "huggingface_600_second_failure": {
+      "sha256": "d89899a4fd3baabb2b5c7c801a3c79394548fb433d2128e74a1bdefe8bfb763f",
+      "bytes": 1065
+    },
+    "huggingface_extended_test_override": {
+      "sha256": "2f614ba115928f407bba4cba0da9dceafb27010e47bf811f1588bb0b3928ea04",
+      "bytes": 516
+    }
+  },
+  "research_site": {
+    "scope": "Cold-load observations from public Chromium checks. No native-control pass claimed for timed-out runs.",
+    "url": "https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/workstation/index.html",
+    "attempts": [
+      {
+        "initial_load_allowance_seconds": 120,
+        "outcome": "timed_out_before_native_ready"
+      },
+      {
+        "initial_load_allowance_seconds": 600,
+        "outcome": "timed_out_before_native_ready",
+        "last_pending_resource": "assets/link5_7.obj",
+        "recorded_pending_sequence": [
+          {
+            "elapsed_seconds": 30,
+            "resources": [
+              "geometry.bin.gz",
+              "mujoco.wasm"
+            ]
+          },
+          {
+            "elapsed_seconds": 60,
+            "resources": [
+              "assets/base_link.stl"
+            ]
+          },
+          {
+            "elapsed_seconds": 120,
+            "resources": [
+              "assets/link2.stl"
+            ]
+          },
+          {
+            "elapsed_seconds": 240,
+            "resources": [
+              "assets/link2_31.obj"
+            ]
+          },
+          {
+            "elapsed_seconds": 330,
+            "resources": [
+              "assets/link3.stl"
+            ]
+          },
+          {
+            "elapsed_seconds": 450,
+            "resources": [
+              "assets/link3_18.obj"
+            ]
+          },
+          {
+            "elapsed_seconds": 540,
+            "resources": [
+              "assets/link4.stl"
+            ]
+          },
+          {
+            "elapsed_seconds": 570,
+            "resources": [
+              "assets/link5.stl"
+            ]
+          },
+          {
+            "elapsed_seconds": 600,
+            "resources": [
+              "assets/link5_7.obj"
+            ]
+          }
+        ]
+      }
+    ],
+    "interpretation": "Progressing native asset download exceeded the browser test allowance. This alone does not measure simulator execution speed or prove an engine initialization failure."
+  },
+  "huggingface": {
+    "url": "https://dvidia-robot-simulation-lab.static.hf.space/workstation/v01/index.html",
+    "attempts": [
+      {
+        "source_record": "huggingface_120_second_failure",
+        "initial_ready_allowance_seconds": 120,
+        "started_at": "2026-10-13T07:50:40.791Z",
+        "outcome": "timed_out_before_native_ready",
+        "reported_error": "page.waitForFunction: Timeout 120000ms exceeded.",
+        "local_stack_trace_omitted": true,
+        "worker_errors": [],
+        "console_errors": [],
+        "unexpected_requests": [],
+        "failed_requests": [],
+        "http_error_responses": [],
+        "probe_errors": [],
+        "sampled_states": 0,
+        "control_acknowledgements": 0,
+        "movement_response_measurements": 0
+      },
+      {
+        "source_record": "huggingface_600_second_failure",
+        "initial_ready_allowance_seconds": 600,
+        "started_at": "2026-10-13T07:59:03.311Z",
+        "outcome": "timed_out_before_native_ready",
+        "reported_error": "page.waitForFunction: Timeout 600000ms exceeded.",
+        "local_stack_trace_omitted": true,
+        "worker_errors": [],
+        "console_errors": [],
+        "unexpected_requests": [],
+        "failed_requests": [],
+        "http_error_responses": [],
+        "probe_errors": [],
+        "sampled_states": 0,
+        "control_acknowledgements": 0,
+        "movement_response_measurements": 0
+      }
+    ],
+    "extended_test_override": {
+      "original_test_sha256": "69b6ddf406d33de8f03d766bcff5d97ed2569742ac38ac1041d815cdb768efd3",
+      "temporary_test_sha256": "c41bf867e4b9145dee6a5e2721145829da6978528b1d3b5ce8ee29cf540855c3",
+      "changes": [
+        "Initial ready timeout changed from 120000 to 600000 milliseconds.",
+        "Added output-only main-document Resource Timing encoded/decoded byte measurements."
+      ],
+      "runtime_changed": false,
+      "first_timeout_preserved": "browser-failure.json",
+      "network_diagnostic_preserved": "network-diagnostic.json"
+    }
+  },
+  "limitations": [
+    "Neither allowance is a measured successful load-to-ready duration.",
+    "No simulation execution or controller performance is measured by a run that never reaches native-ready.",
+    "No recorded engine error does not prove eventual startup success.",
+    "These network observations are separate from the original 9.216-second local HTTP startup observation."
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "schema": "dvidia.workstation-browser-benchmark/v1",
+  "passed": true,
+  "passed_scope": "Functional UI acceptance and numerical validity; performance targets are reported separately.",
+  "functional_acceptance_passed": true,
+  "quantile_method": "Nearest-rank empirical quantiles; sample counts are reported for each distribution.",
+  "run_started_at": "2026-10-13T08:16:22.038Z",
+  "url": "http://127.0.0.1:8295/browser-delivery-v02/index.html",
+  "manifest_sha256": "f9d114ed584fbf3705210f9b9a165bffd530183cd586b9374bbaf458eb7718e6",
+  "native_scene_sha256": "3400d5e68731ce032358a538a67eb87e00a0613620553988d2f53c851641328b",
+  "engine": "MuJoCo 3.15.0 WASM",
+  "browser": "151.0.7922.34",
+  "browser_channel": "chromium",
+  "headless": true,
+  "requested_renderer": "device default",
+  "renderer": {
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "shading_language": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+    "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+    "hardware_concurrency": 10,
+    "device_memory_gib": 16
+  },
+  "renderer_classification": "renderer reported above; hardware backing not independently established",
+  "host": {
+    "os": "darwin 25.5.0 arm64",
+    "cpu": "Apple M5",
+    "logical_cpus": 10,
+    "ram_bytes": 25769803776
+  },
+  "viewport": {
+    "width": 1440,
+    "height": 1080,
+    "device_scale_factor": 1
+  },
+  "load_to_ready_ms": 9212.619375,
+  "controls": {
+    "target_motion_m": 0.004423512416745436,
+    "target_apply": true,
+    "gripper_closed_m": 0.009331353713192731,
+    "gripper_open_m": 0.025209206867549547,
+    "pause_preserved_sim_time": true,
+    "reset_restored_qpos": true,
+    "nudge_displacement_m": 0.005929972966332282,
+    "nudge_physical_response": true,
+    "receipt_export": true,
+    "receipt_retention": {
+      "sample_wall_interval_ms": 100,
+      "sample_limit": 3000,
+      "command_limit": 2000,
+      "received_states": 1313,
+      "samples_dropped": 0,
+      "commands_dropped": 0,
+      "note": "Bounded recent samples and commands; wall timestamps continue across reset. Simulation time restarts on reset. UI samples may omit intervening physics steps."
+    }
+  },
+  "numerical_validity": true,
+  "performance_targets": {
+    "render_30_to_60_fps_met": true,
+    "real_time_physics_met": true,
+    "note": "Performance depends on the recorded renderer, device and browser; failed targets do not change functional acceptance."
+  },
+  "stability": {
+    "requested_wall_seconds": 20,
+    "measured_wall_seconds": 20.004300000190735,
+    "simulated_seconds": 20.005999999999457,
+    "real_time_factor": 1.0000849817193656,
+    "physics_steps": 10003,
+    "lag_added_ms": 0,
+    "foreground_throughout": true,
+    "foreground_definition": "document.visibilityState remained visible in the isolated browser; headless runs have no OS-visible window.",
+    "warning_count": 0,
+    "native_state_samples": 178,
+    "cyclic_target_interval_seconds": 10,
+    "cyclic_target_commands": 2
+  },
+  "rendering": {
+    "render_invocations": 1057,
+    "render_invocations_per_second": 52.83863969196232,
+    "render_interval_ms": {
+      "count": 1056,
+      "p50": 16.700000047683716,
+      "p95": 33.700000047683716,
+      "p99": 35,
+      "min": 13.799999952316284,
+      "max": 36.30000019073486
+    },
+    "raf_callbacks_per_second": 59.987102772331866,
+    "raf_interval_ms": {
+      "count": 1199,
+      "p50": 16.69999999999709,
+      "p95": 18.100000000002183,
+      "p99": 18.600000000000364,
+      "min": 14.600000000000364,
+      "max": 18.700000000004366
+    },
+    "worker_states_per_second": 53.23855371044453,
+    "worker_state_interval_ms": {
+      "count": 1064,
+      "p50": 18.899999856948853,
+      "p95": 21.59999990463257,
+      "p99": 22.700000047683716,
+      "min": 1,
+      "max": 28.200000047683716
+    },
+    "target_30_to_60_render_fps_met": true,
+    "note": "RAF cadence, Three.js render invocations and worker-state delivery are separate measurements. Render invocations do not measure GPU presentation completion."
+  },
+  "response_latency": {
+    "measurement": "Main-thread command post to first received target echo, separately from first >=1 mm TCP movement projected toward the target.",
+    "stable_baseline": "At least 5 recent states within 350 ms, spread below 0.5 mm; commanded distance exceeds 5 mm.",
+    "response_timeout_ms": 5000,
+    "superseded_commands": "Unfinished responses remain missing when a newer target is issued.",
+    "all_target_commands": 3,
+    "stable_baseline_commands": 3,
+    "target_echo_ms": {
+      "count": 3,
+      "p50": 15.700000047683716,
+      "p95": 34.40000009536743,
+      "p99": 34.40000009536743,
+      "min": 14.400000095367432,
+      "max": 34.40000009536743
+    },
+    "physical_response_ms": {
+      "count": 3,
+      "p50": 53.30000019073486,
+      "p95": 56.200000047683716,
+      "p99": 56.200000047683716,
+      "min": 52.299999952316284,
+      "max": 56.200000047683716
+    },
+    "missing_physical_response": 0
+  },
+  "observed_worker_timing": {
+    "step_ms_p95": {
+      "count": 178,
+      "p50": 0.20000004768371582,
+      "p95": 0.20000004768371582,
+      "p99": 0.20000004768371582,
+      "min": 0.20000004768371582,
+      "max": 0.20000004768371582
+    },
+    "control_ms_p95": {
+      "count": 178,
+      "p50": 0.20000004768371582,
+      "p95": 0.20000004768371582,
+      "p99": 0.20000004768371582,
+      "min": 0.20000004768371582,
+      "max": 0.20000004768371582
+    },
+    "note": "Distribution of worker rolling p95 snapshots, not an all-step timing distribution."
+  },
+  "memory": {
+    "browser_heap": {
+      "used_js_heap_size": 16073046,
+      "total_js_heap_size": 33235662,
+      "js_heap_size_limit": 4395630592
+    },
+    "receipt_samples": 220,
+    "receipt_sample_limit": 3000,
+    "receipt_samples_dropped": 0,
+    "harness_states_retained": 219,
+    "harness_state_limit": 15000,
+    "harness_states_dropped": 0,
+    "harness_frame_samples_dropped": 0,
+    "worker_timing_samples_retained": 2048
+  },
+  "request_origins": [
+    "http://127.0.0.1:8295"
+  ],
+  "errors": [],
+  "console_errors": [],
+  "failed_requests": [],
+  "response_errors": [],
+  "unexpected_requests": [],
+  "warnings": [],
+  "limitations": [
+    "Rigid synthetic shoe with uncalibrated materials.",
+    "No shoe-grasp or real-robot skill success claim.",
+    "Browser instrumentation adds overhead; software rendering results do not establish device-GPU performance."
+  ]
+}

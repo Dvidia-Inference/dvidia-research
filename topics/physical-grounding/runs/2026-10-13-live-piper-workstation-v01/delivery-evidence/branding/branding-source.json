@@ -1,0 +1,83 @@
+{
+  "schema": "dvidia.workstation-branding-source/v1",
+  "source": "DVIDIA production website repository",
+  "source_repository_directory": "dvidia",
+  "source_commit": "2924587c04f64691314c02176523fdd1369cacbf",
+  "assets": [
+    {
+      "path": "public/checkout/dvidia-mark.svg",
+      "bytes": 999,
+      "sha256": "3ec30ad989986b55781b4197d0a0ac567f783ec85c60b5936037f9be62403ff0"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 1102,
+      "sha256": "757ab8ea9e6db3f6926a7467054c5b9f227bf2450a674da68704dcbd7d422254"
+    },
+    {
+      "path": "src/components/visor-mark.tsx",
+      "bytes": 1523,
+      "sha256": "04d81841524e57572135272e8979aa9babff0c3ec9ee74b1923c792c6813eefb"
+    },
+    {
+      "path": "src/components/logo-lockup.tsx",
+      "bytes": 1045,
+      "sha256": "f3d342d6ec8b9eb4c7540a609ff168b500070167d9189f5e0af63f8f8de089ec"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 120860,
+      "sha256": "d584fdb7262e612340b6c135c6a56a0fba72b58adf6e38557970ed600124ca8a"
+    },
+    {
+      "path": "src/fonts.css",
+      "bytes": 1246,
+      "sha256": "59ecc2555e767ea7462d30238430a64b1448e2fa8ab5a60ad9056f4f1988117d"
+    },
+    {
+      "path": "public/fonts/ibm-plex-sans-latin-variable-v23.woff2",
+      "bytes": 40240,
+      "sha256": "056e4e2459f57a0033c8c9c844ff19d6e42ac8602027803d4345823bcc939818"
+    },
+    {
+      "path": "public/fonts/OFL-IBM-Plex-Sans.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    }
+  ],
+  "usage": {
+    "mark": "Exact public/checkout/dvidia-mark.svg embedded inline; CSS display size28px, no geometry or color edits.",
+    "favicon": "Exact public/favicon.svg bytes embedded as a data URI.",
+    "wordmark": "DVIDIA text using the unmodified official IBM Plex Sans font,17px,weight500,letter spacing-0.025em,matching logo-lockup.tsx.",
+    "font_license": "SIL Open Font License1.1; entire original copyright and license text retained in visible-on-expansion HTML notices. The single source trailing space uses an HTML character reference; decoded license text matches the original.",
+    "identity_rights": "Existing DVIDIA-owned branding reused for the DVIDIA workstation. This provenance record and generic code license grant no trademark rights."
+  },
+  "modified_workstation_file": {
+    "path": "src/dvidia_training/workstation.html",
+    "bytes": 87996,
+    "sha256": "a9e90c7f0067ae2086c05a2fc187de90cb8c74ce5b6f48f94a236b0fdf5c4931"
+  },
+  "runtime_effect": "Masthead, favicon, and font notices only. Native scene, meshes, physics controller and renderer code unchanged.",
+  "validation": {
+    "status": "passed",
+    "browser_acceptance": "ui-final/acceptance.json",
+    "desktop_screenshot": "ui-final/workstation-1440.png",
+    "mobile_screenshots": [
+      "ui-final/workstation-390.png",
+      "ui-final/workstation-320.png"
+    ],
+    "masthead_screenshots": [
+      "ui-final/masthead-1440.png",
+      "ui-final/masthead-390.png",
+      "ui-final/masthead-320.png"
+    ],
+    "export_inspection": "export-inspection.json",
+    "compiled_model_sha256": "2d5439574717644e1ea301f225cd13e9cc8a1042476628ed6ab7014c42e43e32",
+    "changed_payload_files_relative_to_verified_delivery": [
+      "index.html"
+    ],
+    "export_html_matches_source_bytes": true,
+    "canonical_mark_font_favicon_bytes_exact": true,
+    "font_license_decoded_text_exact": true
+  }
+}

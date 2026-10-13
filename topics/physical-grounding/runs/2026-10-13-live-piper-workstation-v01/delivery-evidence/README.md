@@ -1,0 +1,25 @@
+# Live workstation delivery follow-up
+
+Current source: [0c371381dbbf3a03d9d659680289ad45797e4935](https://github.com/Dvidia-Inference/dvidia-training/tree/0c371381dbbf3a03d9d659680289ad45797e4935). The current **100-file, 55,663,466-byte** export uses the official DVIDIA mark, favicon and IBM Plex Sans from the production website. [Branding source proof](branding/branding-source.json), [current export binding](branding-binding.json) and [final desktop/mobile acceptance](branding/ui-final/acceptance.json) record that correction.
+
+Only the HTML and its integrity entry change from the compressed delivery revision below. All 98 other files remain identical, including the native scene, 84 meshes, compressed bundle, engine, controller and renderer. The embedded IBM Plex Sans font retains its full SIL Open Font License. Final screenshots are in `branding/ui-final/`; earlier screenshots below are historical captures of the previous masthead.
+
+## Earlier delivery revision and unchanged benchmark evidence
+
+Delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Original benchmark source: `79ffdda1c0759bce1201ce3391c40403c385c39b`.
+
+The original individually fetched native meshes made public startup slow. The revised worker loads a single gzip bundle and verifies that it decodes to every original pinned mesh. The scene, original native state, physical parameters, authored controller, MuJoCo WASM and rendered geometry remain unchanged.
+
+- [Original failed public starts](original-public-startup.json): research and Hugging Face checks timed out before native-ready at 120-second and 600-second allowances. This derivative omits absolute local stack-frame paths and records SHA256 hashes of all original inputs.
+- [Subsequent original public completion](original-public-completion.json): a separate research-site session reached native-ready in **552.836 seconds** and passed interaction and desktop/mobile checks. This preserves the prior failures. Full network input hashes and relevant Resource Timing totals are retained in the summary.
+- [Independent package comparison](delivery-package-check.json): all **84 original meshes** decode byte-for-byte from **7,318,481 compressed bytes**, compared with **33,165,477 original bytes**: a **77.93% mesh-payload reduction**. The complete export retains both raw assets and the bundle: **100 files, 55,602,211 bytes**.
+- [Local browser check](runtime-checks/browser/browser-benchmark.json), [raw samples](runtime-checks/browser/browser-raw-samples.json) and [session receipt](runtime-checks/browser/session-receipt.json): **9.213-second local startup**, followed by 20.0043 wall seconds / 20.006 simulated seconds, 52.839 render calls/s and no reported warnings or browser errors. This short check does not replace the original ten-minute benchmark.
+- [Local request trace](runtime-checks/network-local.json): one native bundle request and no individual mesh requests. Some low-level cached-response counters are invalid or negative; do not interpret their sums as total wire traffic. Package-byte claims use the verified compressed file size.
+- [Desktop and mobile acceptance](ui/acceptance.json): target dragging, native response, jaw, nudge, pause/reset and the visible high-target failure remain usable without horizontal overflow at 1440, 390 and 320 pixel widths.
+- [Native fixture](runtime-checks/native-parity.json) and [WASM comparison](runtime-checks/wasm-parity.json): 15,000 steps and 1,500 states pass numerical and loaded-contact checks. **Strict raw-contact parity still fails in 13/1,500 states.**
+- [Delivery source binding](delivery-source-binding.json) binds all 100 exported files and the current runtime source to the delivery revision. It independently confirms that all 42 original archived evidence files remain unchanged.
+- [Original comparison receipt](runtime-checks/export-comparison.json) and [runtime provenance receipt](runtime-checks/runtime-provenance.json) are copied byte-for-byte. The provenance receipt's relative `prior_600_second_evidence` field refers to its original run-directory layout; the original report remains in the separate sealed `evidence/browser/browser-benchmark.json` archive on the research site and `workstation-evidence/v01/browser/browser-benchmark.json` on Hugging Face.
+
+Public-network startup for the revised compressed delivery is **not yet measured in these receipts**. The local startup observations and packaging-byte reduction do not establish a hosted latency improvement. Both original meshes and the compressed bundle remain available for offline use after provisioning and local HTTP serving.
+
+The original physics, browser and parity benchmark evidence remains sealed and unchanged in a separate directory. Original benchmark source bindings, the high-target tracking failure and all fifteen failed development shoe-grasp attempts remain applicable. This delivery release adds no trained policy, grasp qualification or real-robot validation.
