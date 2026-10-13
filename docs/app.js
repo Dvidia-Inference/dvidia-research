@@ -26,13 +26,17 @@ if (search && entries.length) {
   search.addEventListener("search", filterPapers);
   filterPapers();
 }
-const tocLinks = [...document.querySelectorAll('.paper-toc a[href^="#"]')];
-const headings = tocLinks.map((link) => {
+const tocLinks = [...document.querySelectorAll('.paper-toc a[href^="#"], .paper-section-nav a[href^="#"]')];
+const headingGroups = new Map();
+for (const link of tocLinks) {
   let id;
-  try { id = decodeURIComponent(link.hash.slice(1)); } catch { return null; }
+  try { id = decodeURIComponent(link.hash.slice(1)); } catch { continue; }
   const heading = document.getElementById(id);
-  return heading ? { link, heading } : null;
-}).filter(Boolean);
+  if (!heading) continue;
+  if (!headingGroups.has(id)) headingGroups.set(id, { links: [], heading });
+  headingGroups.get(id).links.push(link);
+}
+const headings = [...headingGroups.values()];
 if (headings.length) {
   let pending = false;
   function updateCurrentSection() {
@@ -44,8 +48,10 @@ if (headings.length) {
       else break;
     }
     for (const item of headings) {
-      if (item === current) item.link.setAttribute("aria-current", "location");
-      else item.link.removeAttribute("aria-current");
+      for (const link of item.links) {
+        if (item === current) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      }
     }
   }
   function scheduleSectionUpdate() {

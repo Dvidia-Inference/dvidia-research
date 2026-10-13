@@ -2,27 +2,17 @@
 
 DVIDIA research · 13 October 2026 · Live workstation v0.1
 
-**The PiPER arm now responds to tool targets while MuJoCo runs locally in the browser.** Drag the target, enter coordinates, adjust the native gripper, or nudge a free shoe and watch it settle. A fixed tabletop and rack give the interaction a visible physical setting. Live target error, contact observations and computation timing expose what the simulation is doing.
+## What we built
 
-[Open the live workstation](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/workstation/) · [Open it on Hugging Face](https://dvidia-robot-simulation-lab.static.hf.space/workstation/v01/index.html) · [Source and complete evidence](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/README.md)
+**Move the arm, adjust the gripper, and explore contact in a live physics simulation.** A six-axis PiPER and one rigid shoe share a tabletop workstation. MuJoCo runs locally in the browser; target error, contact observations and computation timing stay visible as you interact.
 
 This is an authored controller operating a native simulated arm. It uses the original catalog's rigid trainer and the pinned PiPER mechanics. **Retained shoe lifting remains unqualified: all fifteen development grasp attempts failed.** No trained shoe policy or physical robot connection is included.
 
 ![DVIDIA live PiPER workstation with the arm, rigid trainer, native target controls and session measurements](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/ui-final/workstation-1440.png)
 
-*Desktop functional acceptance capture of the release with the official DVIDIA masthead. The rendered shoe detail is visual styling over the declared rigid collision proxy. Earlier benchmark screenshots retain their historical masthead.*
+*Historical desktop acceptance capture of the first release with the official DVIDIA masthead. The rendered shoe detail is visual styling over the declared rigid collision proxy. Earlier benchmark screenshots retain their historical masthead.*
 
-## What you can do
-
-Move a colored target axis, type X/Y/Z coordinates in millimeters, or use the height control. The arm solves for a fixed tool orientation and follows with native position actuators. The tool's measured error remains visible when it cannot reach a requested point. The allowed command box bounds inputs; it does not establish that every point is reachable at that orientation.
-
-The gripper control requests 0–35 mm of travel for one side of the coupled mechanism. That quantity is an actuator position, not a calibrated fingertip separation or force. Actual finger travel and native contact observations are available in the diagnostics. Contact count or aggregate normal force alone cannot establish a secure grasp.
-
-The nudge button applies a declared 0.12 N·s impulse to the shoe for one 2 ms physics tick. The shoe's subsequent movement comes from free-body dynamics, gravity and contact. There is no shoe weld or hidden carrying force. Pause and reset let users inspect a state or restore the declared starting conditions. Orbit views and collision-geometry inspection expose the native shapes beneath the visual styling.
-
-A downloadable session receipt records a bounded recent history with runtime measurements and disclosed resets or dropped samples. It is a browser-session diagnostic, rather than a complete training episode or an independently qualified skill.
-
-## Three clocks, one native scene
+### Three clocks, one native scene
 
 | Component | Declared cadence | Responsibility |
 | --- | --- | --- |
@@ -37,7 +27,7 @@ The native Python benchmark and browser worker load the same exported scene XML 
 
 This implementation is a small CPU controller with direct access to simulator state. No large language model, neural world model, remote inference service or learned motion weights are on the control path. It supplies a measurable environment in which a future compact skill policy can be compared with the authored controller.
 
-## A visible shoe, with explicit physical assumptions
+### A visible shoe, with explicit physical assumptions
 
 The workstation starts with one original MIT `trainer-left` asset: a 300 g rigid proxy built from primitive collision pieces. Its dimensions, mass distribution, friction and solver parameters are authored assumptions inherited from the immutable asset catalog. No real shoe or gripper pad was calibrated for this scene.
 
@@ -45,15 +35,23 @@ The native PiPER meshes and collision shapes come from the pinned upstream model
 
 The [earlier asset library](https://research.dvidia.org/papers/shoe-asset-library-v01/) continues to supply all six shoe proxies and recorded scenes for three arms. This live workstation narrows the interaction to one arm and one shoe so that tracking, contact, controller behavior and browser performance can be inspected together. The rigid-block PiPER placement results remain separate from shoe competence.
 
-## Development kept both improvements and failures
+## Try it
 
-Before the frozen run, one development target compared four controller error/increment caps while preserving the original native actuators. The baseline took **4.74 simulated seconds** to first complete a 200 ms dwell within 5 mm and 3°. The selected threefold caps took **1.24 seconds**. The twofold and fourfold variants took 1.64 and 1.32 seconds. All four trajectories remain in the development evidence. This is one tuning case, not a general speedup estimate.
+[Open the live workstation](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/workstation/) · [Open it on Hugging Face](https://dvidia-robot-simulation-lab.static.hf.space/workstation/v01/index.html) · [Source and complete evidence](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/README.md)
 
-A broader development comparison used two deterministic resets for eight target positions. The original caps met the final 5 mm/3° target criterion in **10/16** attempts; the selected caps met it in **14/16**. Both repeats of the high target still failed. These exploratory runs preceded the final canonical-XML and benchmark-scoring revisions. Their attempt records and any invalid diagnostic attempts remain available; they are not the final confirmation result.
+### What you can do
 
-Fifteen approach–close–lift trials varied the shoe grasp location. **0/15 achieved retained lift.** Two candidates briefly produced bilateral contacts, which did not become successful lifting. The complete development traces retain these failures. The native position servo, attainable gripping force and shoe geometry are plausible constraints to investigate; the experiments do not isolate one proven failure cause. We did not lower shoe mass, increase friction, alter native gains or introduce an attachment to turn those failures into an apparent success.
+Move a colored target axis, type X/Y/Z coordinates in millimeters, or use the height control. The arm solves for a fixed tool orientation and follows with native position actuators. The tool's measured error remains visible when it cannot reach a requested point. The allowed command box bounds inputs; it does not establish that every point is reachable at that orientation.
 
-## Frozen tracking and mechanics benchmark
+The gripper control requests 0–35 mm of travel for one side of the coupled mechanism. That quantity is an actuator position, not a calibrated fingertip separation or force. Actual finger travel and native contact observations are available in the diagnostics. Contact count or aggregate normal force alone cannot establish a secure grasp.
+
+The nudge button applies a declared 0.12 N·s impulse to the shoe for one 2 ms physics tick. The shoe's subsequent movement comes from free-body dynamics, gravity and contact. There is no shoe weld or hidden carrying force. Pause and reset let users inspect a state or restore the declared starting conditions. Orbit views and collision-geometry inspection expose the native shapes beneath the visual styling.
+
+A downloadable session receipt records a bounded recent history with runtime measurements and disclosed resets or dropped samples. It is a browser-session diagnostic, rather than a complete training episode or an independently qualified skill.
+
+## What we measured
+
+### Frozen tracking and mechanics benchmark
 
 The frozen protocol contains **20 attempts**: eight tool targets with two resets each, plus jaw close/open travel, an explicit shoe impulse, disabled-table gravity and a **600 simulated second** hold. Each target attempt has a four-second deadline and requires both position error at most 5 mm and orientation error at most 3°. Numerical validity, bounded controls and completed simulation duration remain necessary for any success. The two resets are deterministic repetitions, not independent real-world reliability trials.
 
@@ -74,19 +72,7 @@ Every planned attempt, failure and raw control-interval duration is retained. Na
 
 The independent disabled-table condition tests whether the free shoe falls when its support is removed. The nudge condition checks physical response to the declared disturbance. Successful jaw travel checks actuation; it does not qualify a grip. A stable hold checks that one native state remains numerically usable over the declared horizon, rather than establishing collision avoidance or hardware safety.
 
-## Compare native and browser execution explicitly
-
-Parity evaluation has separate outcomes for state differences, loaded contact observations and strict raw contact counts. It uses the same initial state and a fixed sequence of targets, jaw commands and a nudge.
-
-Earlier development ran **15,000 native steps**, covering 30 simulated seconds and 1,500 sampled states. Its raw contact counts differed in **11/1,500** samples despite near-identical state trajectories. A subsequent development sequence added jaw commands between controller boundaries and recorded **13/1,500** raw-count differences, with matching counts for contacts above the declared **0.001 N** loading threshold. The strict raw-contact check did not pass. Small state errors and matching loaded-contact counts must not be summarized as exact contact parity.
-
-The final [native/WASM comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/parity/wasm-parity.json) completes all **15,000 steps** and compares **1,500 states**, including jaw commands between controller boundaries. Numerical state tolerances pass: maximum TCP coordinate difference is **4.623 × 10⁻¹⁴ m**. Loaded-contact counts above 0.001 N agree in every sampled state. **Strict raw-contact-count parity fails in 13/1,500 states**; the largest differing subthreshold contact force is **4.4332 × 10⁻¹⁰ N**. No solver warning occurs.
-
-The [run status](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/parity/run-status.json) retains the parity command's **exit code 1**. It is a narrow failure of strict contact-count equality, even though numerical trajectories and loaded-contact counts pass their separate checks. This headless WASM comparison runs under Node.js; it is separate from the browser rendering and interaction measurement below.
-
-The final receipt preserves all comparison fields and the exact source revisions. Agreement between two implementations of the same simulated scene would still leave physical material accuracy and real robot response unmeasured.
-
-## Performance, installation and offline use
+### Performance, installation and offline use
 
 Physics runs on the CPU. Rendering requires WebGL2; JavaScript, WebAssembly and DecompressionStream must be available. There is no CUDA training dependency or large model download. A universal minimum CPU or RAM requirement has not been established across devices.
 
@@ -107,6 +93,66 @@ All **61 eligible target commands** have a measured movement response; none is m
 
 Native control-interval timing includes differential IK, ten physics steps, forward kinematics and diagnostic extraction. It excludes browser rendering, network activity, sensing and real actuation. Browser measurements must identify their browser and rendering backend; a software-rendered test cannot be described as hardware GPU throughput. Timing tails and missed 20 ms intervals remain visible with the medians.
 
+### Public cold-start follow-up
+
+The [initial public-deployment observations](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/original-public-startup.json) exposed a startup problem that the local benchmark did not measure. Research-site checks did not reach native-ready within either a **120-second** allowance or an extended **600-second** allowance. The longer check was still requesting a pinned arm mesh at its deadline. Hugging Face checks also timed out at both allowances; their receipts recorded no worker errors, console errors, failed requests or HTTP error responses. These timed-out runs produced no simulated-state or control-response measurements.
+
+A [subsequent research-site run](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/original-public-completion.json), allowed up to 900 seconds, reached native-ready after **552.836 seconds** and passed the interaction and mobile-layout checks. This was a separate network session; it does not replace the earlier failures. One original 4,621,268-byte mesh took **95.116 seconds** to transfer in that session. The earlier **9.216-second** startup measurement belongs to a local HTTP session and did not describe public loading. Neither the failed public starts nor the eventual successful start measures the speed of physics execution after initialization.
+
+The revised worker fetches one gzip bundle containing the **same 84 native mesh files**, verifies the compressed payload and every decoded mesh against their declared hashes, and starts the same scene. The [independent package comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-package-check.json) checks every original mesh byte and all existing manifest fields. Canonical scene XML, compiled native model identity, MuJoCo WASM, renderer geometry and the UI bundle are unchanged; physics and controller settings are unchanged. The individual source meshes remain in the offline export for inspection and reuse.
+
+| Native mesh delivery | Original | Compressed follow-up |
+| --- | ---: | ---: |
+| Mesh payload bytes | 33,165,477 | **7,318,481** |
+| Mesh requests | 84 | **1** |
+| Reduction in mesh payload bytes | — | **77.93%** |
+
+This comparison concerns the native mesh payload, not all startup resources or total wire bytes. A [local request trace](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/network-local.json) observes one bundle request and zero individual mesh requests. At the compressed-delivery revision, keeping both original meshes and the bundle increased the complete offline folder to **100 files totaling 55,602,211 bytes**. The earlier branding revision described below contained 100 files totaling **55,663,466 bytes**. Fewer transfer bytes and requests are packaging improvements; they do not establish a public startup-time reduction until the revised hosted package is measured.
+
+The [revised local browser check](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/browser/browser-benchmark.json) reaches native-ready in **9.213 seconds**, then runs for **20.0043 wall seconds** with **20.006 simulated seconds**, a **1.000085 simulation/wall-time ratio** and **52.839 render calls/s**, without reported warnings or browser errors. This short check uses the recorded Apple M5 / headless Chromium 151 environment. It verifies the new loader and interaction locally; it does not replace the original ten-minute run or describe public-network loading. [Desktop and mobile acceptance](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/ui/acceptance.json) also passes after the delivery change.
+
+The [bundle-loaded native/WASM comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/wasm-parity.json) repeats 15,000 steps and 1,500 sampled states. Numerical and loaded-contact-count checks pass; **strict raw-contact-count parity still fails in 13/1,500 states**. The maximum TCP coordinate difference remains **4.623 × 10⁻¹⁴ m**. No new grasp or placement competence follows from the delivery change.
+
+Historical compressed-delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Its [separate source binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-source-binding.json) records the runtime source and all 100 export hashes. The original physics, parity and ten-minute local browser receipts remain unchanged in the sealed `evidence/` archive. The separate [delivery-evidence directory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/README.md) contains the new package inventory, failed public-startup summaries, eventual baseline completion, local delivery checks and their own provenance.
+
+The branded release introduced the existing official DVIDIA mark and favicon, with the unmodified IBM Plex Sans font and its full SIL Open Font License. [Branding provenance](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/branding-source.json) records the exact production-website source assets and their hashes. [Branding source `0c371381dbbf3a03d9d659680289ad45797e4935`](https://github.com/Dvidia-Inference/dvidia-training/tree/0c371381dbbf3a03d9d659680289ad45797e4935) and its [separate branding binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding-binding.json) identify all **100 export files at that revision**. Only the HTML and its integrity entry differ from the compressed-delivery package; the other 98 files, including the native scene, mesh bundle, controller and engine, are unchanged. [Final desktop/mobile checks](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/ui-final/acceptance.json) pass. The article's lead screenshot documents that branded release; the live page now has a subsequent editorial presentation. Archived screenshots remain evidence of their stated revisions. No additional physics or skill benchmark is implied by this branding correction.
+
+## Where it fails
+
+**The arm has not learned to organize shoes.** The frozen test misses two target attempts, strict raw-contact parity fails, and every development shoe-lift attempt fails. The records below keep those limits visible.
+
+### Development kept both improvements and failures
+
+Before the frozen run, one development target compared four controller error/increment caps while preserving the original native actuators. The baseline took **4.74 simulated seconds** to first complete a 200 ms dwell within 5 mm and 3°. The selected threefold caps took **1.24 seconds**. The twofold and fourfold variants took 1.64 and 1.32 seconds. All four trajectories remain in the development evidence. This is one tuning case, not a general speedup estimate.
+
+A broader development comparison used two deterministic resets for eight target positions. The original caps met the final 5 mm/3° target criterion in **10/16** attempts; the selected caps met it in **14/16**. Both repeats of the high target still failed. These exploratory runs preceded the final canonical-XML and benchmark-scoring revisions. Their attempt records and any invalid diagnostic attempts remain available; they are not the final confirmation result.
+
+Fifteen approach–close–lift trials varied the shoe grasp location. **0/15 achieved retained lift.** Two candidates briefly produced bilateral contacts, which did not become successful lifting. The complete development traces retain these failures. The native position servo, attainable gripping force and shoe geometry are plausible constraints to investigate; the experiments do not isolate one proven failure cause. We did not lower shoe mass, increase friction, alter native gains or introduce an attachment to turn those failures into an apparent success.
+
+### Compare native and browser execution explicitly
+
+Parity evaluation has separate outcomes for state differences, loaded contact observations and strict raw contact counts. It uses the same initial state and a fixed sequence of targets, jaw commands and a nudge.
+
+Earlier development ran **15,000 native steps**, covering 30 simulated seconds and 1,500 sampled states. Its raw contact counts differed in **11/1,500** samples despite near-identical state trajectories. A subsequent development sequence added jaw commands between controller boundaries and recorded **13/1,500** raw-count differences, with matching counts for contacts above the declared **0.001 N** loading threshold. The strict raw-contact check did not pass. Small state errors and matching loaded-contact counts must not be summarized as exact contact parity.
+
+The final [native/WASM comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/parity/wasm-parity.json) completes all **15,000 steps** and compares **1,500 states**, including jaw commands between controller boundaries. Numerical state tolerances pass: maximum TCP coordinate difference is **4.623 × 10⁻¹⁴ m**. Loaded-contact counts above 0.001 N agree in every sampled state. **Strict raw-contact-count parity fails in 13/1,500 states**; the largest differing subthreshold contact force is **4.4332 × 10⁻¹⁰ N**. No solver warning occurs.
+
+The [run status](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/evidence/parity/run-status.json) retains the parity command's **exit code 1**. It is a narrow failure of strict contact-count equality, even though numerical trajectories and loaded-contact counts pass their separate checks. This headless WASM comparison runs under Node.js; it is separate from the browser rendering and interaction measurement in [What we measured](#what-we-measured).
+
+The final receipt preserves all comparison fields and the exact source revisions. Agreement between two implementations of the same simulated scene would still leave physical material accuracy and real robot response unmeasured.
+
+### The next Skillspace gate
+
+This workstation gives a future skill package a concrete environment, exact arm, object identity, controller interface and measurements. A learned policy must still produce a feasible contact sequence and pass retained-lift and placement criteria under held-out variations. The next useful step is to identify a physically feasible shoe/gripper interaction, measure the relevant real contact properties, and keep acquisition and retention failures in the benchmark.
+
+Only then should a distilled shoe skill be compared with the authored baseline for completion, recovery, timing and resource use. Loading the scene or accurately following a tool target does not establish that footage has taught the arm how to organize shoes.
+
+## Reproduce it
+
+### Install and run locally
+
+Physics runs on the CPU. Rendering requires WebGL2; JavaScript, WebAssembly and DecompressionStream must be available. There is no CUDA training dependency or large model download. A universal minimum CPU or RAM requirement has not been established across devices.
+
 The original benchmarked live-workstation export contains **99 files totaling 48,281,487 bytes**. Initial package installation, separately retained benchmark evidence and the source asset cache require additional storage.
 
 The exported folder contains all scene XML, pinned meshes, runtime JavaScript, MuJoCo WASM, compiled renderer geometry, catalog and license notices. Provision the package and assets once, then serve that folder locally for offline sessions. Keep its files together; opening only the HTML from a filesystem URL is not the supported serving path.
@@ -125,43 +171,15 @@ python -c "from dvidia_training.workstation import inspect_export; print(inspect
 dvidia-workstation-benchmark --assets ./robot-assets --source-commit 0c371381dbbf3a03d9d659680289ad45797e4935 --output ./workstation-benchmark
 ```
 
-These commands use the current delivery and branding revision. Reproducing the original source-bound benchmark receipts requires checking out their original `79ffdda1c0759bce1201ce3391c40403c385c39b` revision.
+These commands reproduce the delivery and branding revision linked above. Reproducing the original source-bound benchmark receipts requires checking out their original `79ffdda1c0759bce1201ce3391c40403c385c39b` revision.
 
 `inspect_export` checks bounded local files, original upstream notices and meshes, canonical native state, renderer geometry and hashes. It rejects external XML imports, unknown file paths and symlinks. It checks artifact consistency; recomputing a seal does not authenticate its publisher.
 
-## Public cold-start follow-up
+### Source, evidence and licensing
 
-The [initial public-deployment observations](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/original-public-startup.json) exposed a startup problem that the local benchmark did not measure. Research-site checks did not reach native-ready within either a **120-second** allowance or an extended **600-second** allowance. The longer check was still requesting a pinned arm mesh at its deadline. Hugging Face checks also timed out at both allowances; their receipts recorded no worker errors, console errors, failed requests or HTTP error responses. These timed-out runs produced no simulated-state or control-response measurements.
+The [editorial update binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/editorial-binding.json) records the source and file hashes for the clearer workstation text and layout. The research-site export changes its HTML and integrity entry; its other 98 runtime files remain byte-for-byte unchanged. This presentation update does not rerun or improve the physics benchmark.
 
-A [subsequent research-site run](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/original-public-completion.json), allowed up to 900 seconds, reached native-ready after **552.836 seconds** and passed the interaction and mobile-layout checks. This was a separate network session; it does not replace the earlier failures. One original 4,621,268-byte mesh took **95.116 seconds** to transfer in that session. The earlier **9.216-second** startup measurement belongs to a local HTTP session and did not describe public loading. Neither the failed public starts nor the eventual successful start measures the speed of physics execution after initialization.
-
-The revised worker fetches one gzip bundle containing the **same 84 native mesh files**, verifies the compressed payload and every decoded mesh against their declared hashes, and starts the same scene. The [independent package comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-package-check.json) checks every original mesh byte and all existing manifest fields. Canonical scene XML, compiled native model identity, MuJoCo WASM, renderer geometry and the UI bundle are unchanged; physics and controller settings are unchanged. The individual source meshes remain in the offline export for inspection and reuse.
-
-| Native mesh delivery | Original | Compressed follow-up |
-| --- | ---: | ---: |
-| Mesh payload bytes | 33,165,477 | **7,318,481** |
-| Mesh requests | 84 | **1** |
-| Reduction in mesh payload bytes | — | **77.93%** |
-
-This comparison concerns the native mesh payload, not all startup resources or total wire bytes. A [local request trace](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/network-local.json) observes one bundle request and zero individual mesh requests. At the compressed-delivery revision, keeping both original meshes and the bundle increased the complete offline folder to **100 files totaling 55,602,211 bytes**. The current branding revision described below remains 100 files and totals **55,663,466 bytes**. Fewer transfer bytes and requests are packaging improvements; they do not establish a public startup-time reduction until the revised hosted package is measured.
-
-The [revised local browser check](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/browser/browser-benchmark.json) reaches native-ready in **9.213 seconds**, then runs for **20.0043 wall seconds** with **20.006 simulated seconds**, a **1.000085 simulation/wall-time ratio** and **52.839 render calls/s**, without reported warnings or browser errors. This short check uses the recorded Apple M5 / headless Chromium 151 environment. It verifies the new loader and interaction locally; it does not replace the original ten-minute run or describe public-network loading. [Desktop and mobile acceptance](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/ui/acceptance.json) also passes after the delivery change.
-
-The [bundle-loaded native/WASM comparison](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/runtime-checks/wasm-parity.json) repeats 15,000 steps and 1,500 sampled states. Numerical and loaded-contact-count checks pass; **strict raw-contact-count parity still fails in 13/1,500 states**. The maximum TCP coordinate difference remains **4.623 × 10⁻¹⁴ m**. No new grasp or placement competence follows from the delivery change.
-
-Historical compressed-delivery source: [ba0da582fd46a58be181f8e940db069520045557](https://github.com/Dvidia-Inference/dvidia-training/tree/ba0da582fd46a58be181f8e940db069520045557). Its [separate source binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/delivery-source-binding.json) records the runtime source and all 100 export hashes. The original physics, parity and ten-minute local browser receipts remain unchanged in the sealed `evidence/` archive. The separate [delivery-evidence directory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/README.md) contains the new package inventory, failed public-startup summaries, eventual baseline completion, local delivery checks and their own provenance.
-
-The current release uses the existing official DVIDIA mark and favicon, with the unmodified IBM Plex Sans font and its full SIL Open Font License. [Branding provenance](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/branding-source.json) records the exact production-website source assets and their hashes. [Current source `0c371381dbbf3a03d9d659680289ad45797e4935`](https://github.com/Dvidia-Inference/dvidia-training/tree/0c371381dbbf3a03d9d659680289ad45797e4935) and its [separate branding binding](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding-binding.json) identify all **100 current export files**. Only the HTML and its integrity entry differ from the compressed-delivery package; the other 98 files, including the native scene, mesh bundle, controller and engine, are unchanged. [Final desktop/mobile checks](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/delivery-evidence/branding/ui-final/acceptance.json) pass. The article's lead screenshot shows this official mark; earlier archived screenshots document their earlier revisions. No additional physics or skill benchmark is implied by this branding correction.
-
-## The next Skillspace gate
-
-This workstation gives a future skill package a concrete environment, exact arm, object identity, controller interface and measurements. A learned policy must still produce a feasible contact sequence and pass retained-lift and placement criteria under held-out variations. The next useful step is to identify a physically feasible shoe/gripper interaction, measure the relevant real contact properties, and keep acquisition and retention failures in the benchmark.
-
-Only then should a distilled shoe skill be compared with the authored baseline for completion, recovery, timing and resource use. Loading the scene or accurately following a tool target does not establish that footage has taught the arm how to organize shoes.
-
-## Source, evidence and licensing
-
-The [current publication inventory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/provenance.json) binds 100 current export files, 42 unchanged original evidence files, 30 delivery/branding evidence files and the [original publication inventory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/original-publication-provenance.json). That original inventory is preserved byte-for-byte and describes the earlier publication; the current inventory identifies the source revisions separately.
+The [current publication inventory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/provenance.json) binds 100 current export files, 42 unchanged original evidence files, separately scoped delivery/branding/editorial evidence and the [original publication inventory](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/original-publication-provenance.json). That original inventory is preserved byte-for-byte and describes the earlier publication; the current inventory identifies the source revisions separately.
 
 Original benchmark source: [79ffdda1c0759bce1201ce3391c40403c385c39b](https://github.com/Dvidia-Inference/dvidia-training/tree/79ffdda1c0759bce1201ce3391c40403c385c39b). The [run archive](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-13-live-piper-workstation-v01/README.md) connects the complete benchmark, separate development traces, native/browser comparison and runtime validation receipts.
 
