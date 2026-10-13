@@ -1,0 +1,22 @@
+{
+  "schema": "dvidia.workstation-release-validation/v1",
+  "runtime_source_commit": "79ffdda1c0759bce1201ce3391c40403c385c39b",
+  "publication_source_commit": "3fb1a13480a8f968a986cc68595ee16cfe4e0210",
+  "native_unit_tests": {
+    "passed": 14,
+    "skipped": 0
+  },
+  "javascript_control_tests": {
+    "passed": 4
+  },
+  "publication_plan_tests": {
+    "passed": 11
+  },
+  "existing_space_publisher_tests": {
+    "passed": 25
+  },
+  "ui_acceptance": "ui-acceptance/acceptance.json",
+  "installed_package": "wheel-validation.json",
+  "ci_run_for_frozen_runtime": "https://github.com/Dvidia-Inference/dvidia-training/actions/runs/38362234589",
+  "ci_run_for_frozen_runtime_conclusion": "success"
+}

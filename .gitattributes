@@ -6,3 +6,7 @@
 **/2026-10-11-native-grasp/replay/receipt/** linguist-generated=true -diff
 **/2026-10-11-native-grasp/replay/motion.json linguist-generated=true -diff
 **/2026-10-11-native-grasp/replay/scene.json linguist-generated=true -diff
+
+# Preserve exact generated MuJoCo/Three.js runtime bytes and upstream shaders.
+**/workstation/*.bundle.js -diff linguist-generated=true
+**/workstation/mujoco.wasm binary

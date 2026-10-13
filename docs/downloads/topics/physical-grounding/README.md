@@ -1,5 +1,19 @@
 # Physical grounding
 
+
+## Live PiPER shoe workstation — 13 October 2026
+
+[Live PiPER shoe workstation v0.1](../../reports/Live%20PiPER%20shoe%20workstation%20v01.md)
+adds browser-local MuJoCo physics, a fixed-orientation target controller, native
+jaw commands and a free rigid trainer on a physical worktop. Users can move a
+target, inspect tracking and contact, nudge the shoe and download session
+diagnostics. The [run archive](runs/2026-10-13-live-piper-workstation-v01/README.md)
+keeps frozen benchmarks, exploratory failures and native/browser comparisons
+separate. All fifteen development retained-lift attempts failed. Shoe properties
+remain untested assumptions; no learned shoe policy or hardware qualification is
+established. [Open the live workstation](runs/2026-10-13-live-piper-workstation-v01/workstation/index.html).
+
+
 ## Robotics research pipeline — 9 October 2026
 
 [Robotics research pipeline](../../reports/Robotics%20research%20pipeline.md) connects footage review, synchronized measured state, separate visual and movement training, frozen simulation evaluation and versioned skill installation. Its diagram identifies current simulation components, proposed automatic labeling and learned task decisions, and the outstanding physical qualification gate. The proposed supervisor consumes recent joint, gripper and contact evidence; it does not equate a close command with a successful grasp. The new annotation-labor pilot is a companion to the existing graduation proposal. Both new experiments are **not run**. Existing recorded benchmarks retain their original protocols and claims.

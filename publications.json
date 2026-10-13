@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "live-piper-shoe-workstation-v01",
+      "title": "Live PiPER shoe workstation v0.1",
+      "source": "reports/Live PiPER shoe workstation v01.md",
+      "date": "2026-10-13",
+      "type": "Live browser-native simulation with authored control and separate benchmark evidence",
+      "status": "Live browser physics \u00b7 14/16 targets \u00b7 strict contact parity failed \u00b7 shoe lifting unqualified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A six-axis PiPER and its coupled gripper respond to user targets while MuJoCo runs locally in a browser worker. The final native run retains 20 valid attempts: 14/16 target trials pass, both high-target repeats fail, and jaw, impulse, disabled-table and 600-second hold checks pass. A ten-minute headless Chromium run reports 51.389 render calls per second and a 0.9999795 simulation/wall-time ratio on the tested Apple M5 host; simulated movement response is 61.9 ms p95 across 61 commands. Render calls do not measure GPU presentation. Native/WASM numerical and loaded-contact-count checks pass, while strict raw contact counts differ in 13/1,500 states. All fifteen development shoe-lift attempts fail. Complete development, failure and timing records remain separate. This authored rigid-shoe environment establishes no learned skill, calibrated material model or physical robot qualification."
+    },
+    {
       "slug": "shoe-asset-library-v01",
       "title": "Reusable shoe asset library v0.1",
       "source": "reports/Shoe asset library v01.md",
