@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "shoe-graspability-v03",
+      "title": "Give the gripper a fair test",
+      "source": "reports/Shoe graspability v03.md",
+      "date": "2026-10-14",
+      "type": "Frozen shape, load and attached-tool diagnostic",
+      "status": "24/24 valid · 30 g: 8/12 lifts · 300 g: 0/12 · no net gain from removing rake",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A frozen 24-attempt PiPER diagnostic separates three rigid shapes, 30 g and 300 g loads, and mounted versus absent rake conditions. All attempts are valid; eight of twelve lightweight controls retain a direct lift while every 300 g attempt fails, including the small block. Removing the rake gains one narrow-shoe result and loses one block result, with no net completion gain. A verified settled reference, dense contact traces, unchanged drive fingerprint and independent scoring expose limits in the modeled grasp and force response. Recorded replays and runnable CPU code retain every failure. No autonomous tool removal, retrieval, learned skill or physical hardware qualification is claimed."
+    },
+    {
       "slug": "continuous-shoe-grip-v02",
       "title": "From reaching a shoe to keeping hold",
       "source": "reports/Continuous shoe grip v02.md",
