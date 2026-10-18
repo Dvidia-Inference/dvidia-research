@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 import { createReadStream } from 'node:fs';
 import { readFile, readdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
@@ -16,6 +17,50 @@ const PROTOCOL = 'f5ded43bc66dd512e223ffea76ad51897ffea15bb016fa2c29dcd1b4fb6601
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const json = async path => JSON.parse(await readFile(path));
 const close = (a, b, tolerance = 1e-8) => assert.ok(Math.abs(a - b) < tolerance, `${a} != ${b}`);
+
+test('public downloader identifies its client and still enforces byte bounds', () => {
+  const result = spawnSync('python3', ['-c', String.raw`
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import runpy
+import sys
+from threading import Thread
+
+downloader = runpy.run_path(sys.argv[1])
+requests = []
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        requests.append((self.path, self.headers.get('User-Agent'), self.headers.get('Accept-Encoding')))
+        if self.headers.get('User-Agent') != 'DVIDIA-Native-Contact-Audit-Downloader/1.0':
+            self.send_response(403)
+            self.end_headers()
+            return
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b'audit')
+    def log_message(self, *args):
+        pass
+
+server = HTTPServer(('127.0.0.1', 0), Handler)
+thread = Thread(target=server.serve_forever, daemon=True)
+thread.start()
+url = f'http://127.0.0.1:{server.server_port}/integrity.json'
+try:
+    assert downloader['read_url'](url, 5) == b'audit'
+    try:
+        downloader['read_url'](url, 4)
+    except ValueError as error:
+        assert str(error) == 'Download exceeded its byte bound.'
+    else:
+        raise AssertionError('Oversized responses must fail.')
+    assert requests == [('/integrity.json', downloader['USER_AGENT'], 'identity')] * 2
+finally:
+    server.shutdown()
+    server.server_close()
+    thread.join()
+`, resolve(RUN, 'download-audit.py')], { encoding: 'utf8', timeout: 10_000 });
+  assert.equal(result.status, 0, result.stderr || result.error?.message);
+});
+
 async function files(directory) {
   const result = [];
   for (const entry of await readdir(directory, { withFileTypes: true })) {

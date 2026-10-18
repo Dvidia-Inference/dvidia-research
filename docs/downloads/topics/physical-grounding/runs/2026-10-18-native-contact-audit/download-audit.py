@@ -10,16 +10,21 @@ import argparse
 from hashlib import sha256
 import json
 from pathlib import Path, PurePosixPath
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 BASE_URL = 'https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-18-native-contact-audit/audit/'
 INTEGRITY_SHA256 = 'dc7b6091b1c680b9479ea65157c7d553043af688e159463db6174696ad5949fa'
 MAX_FILE_BYTES = 25 * 1024 * 1024
 MAX_TOTAL_BYTES = 512 * 1024 * 1024
+USER_AGENT = 'DVIDIA-Native-Contact-Audit-Downloader/1.0'
 
 
 def read_url(url, maximum):
-    with urlopen(url, timeout=60) as response:
+    request = Request(url, headers={
+        'User-Agent': USER_AGENT,
+        'Accept-Encoding': 'identity',
+    })
+    with urlopen(request, timeout=60) as response:
         payload = response.read(maximum + 1)
     if len(payload) > maximum:
         raise ValueError('Download exceeded its byte bound.')
