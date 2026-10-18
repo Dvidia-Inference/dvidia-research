@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "goal-images-physical-feedback",
+      "title": "A visual goal still needs physical feedback",
+      "source": "reports/Goal images and physical feedback.md",
+      "date": "2026-10-18",
+      "type": "Research direction and passive native contact audit",
+      "status": "14/14 exact passive replays · 249,502 native ticks · visual models unbenchmarked",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A goal image specifies a destination; physical feedback verifies whether a robot gets there. We describe a bounded decision role for TypeSafe Jev, distinguish it from action-conditioned world-model planning, and propose an independently scored reaching experiment. A separate passive audit reproduces fourteen previously inspected rigid-box arm episodes exactly and records 249,502 native ticks. Millisecond contact gaps hidden between stored observations become visible, while task outcomes remain unchanged. Complete inputs, traces, source snapshots and a verified downloader preserve every case. This is measurement work, not a new policy benchmark, PiPER shoe result or hardware qualification."
+    },
+    {
       "slug": "shoe-graspability-v03",
       "title": "Give the gripper a fair test",
       "source": "reports/Shoe graspability v03.md",
