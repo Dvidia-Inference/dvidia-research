@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "local-goal-verifier-v03",
+      "title": "A local verifier for physical completion",
+      "source": "reports/Local goal verifier v03.md",
+      "date": "2026-10-19",
+      "type": "Local CPU verifier with native, evidence-fault and forgery diagnostics",
+      "status": "Native: 16/16 true complete, 0/48 false complete \u00b7 forged readings: 8/8 false complete",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "An offline audit traces the seven missed Jev completions without claiming an internal model cause. A local deterministic verifier then checks timestamped pose, motion, support, release and uncertainty on 200 fresh cases. It recognizes all 16 native positives and rejects all 48 native negatives; 128 evidence faults yield 120 abstentions and 8 incomplete answers. All 8 consistent forged streams produce physical false completions, exposing the remaining sensor-trust problem. CPU-only p95 is 0.318 ms, excluding the required 200 ms history and sensing. Complete native inputs, every decision, independent review and explicit failure cohorts remain public; no new Jev calls or hardware qualification."
+    },
+    {
       "slug": "image-goal-jev-v02",
       "title": "Jev image-goal verification: the measured follow-up",
       "source": "reports/Image goal Jev measured v02.md",

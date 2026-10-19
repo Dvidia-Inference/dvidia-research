@@ -12,6 +12,11 @@ const DOCS = resolve(ROOT, "docs");
 const TOPICS = ["capture-quality", "skill-relations", "evaluation-provenance", "physical-grounding"];
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const READERS = {
+  "local-goal-verifier-v03": {
+    eyebrow: "Local CPU verifier · Native and sensor-fault diagnostics", deck: "Measure the goal. Question the evidence.",
+    entry: "downloads/topics/physical-grounding/runs/2026-10-19-local-goal-verifier-v03/lab/index.html",
+    action: "Inspect every local decision"
+  },
   "image-goal-jev-v02": {
     eyebrow: "Measured Jev evaluation · Frozen native protocol", deck: "No false finish. Too many missed finishes.",
     entry: "downloads/topics/physical-grounding/runs/2026-10-19-image-goal-jev-v02/lab/index.html",

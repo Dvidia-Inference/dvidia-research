@@ -1,0 +1,42 @@
+{
+  "schema": "dvidia.local-goal-publication-provenance/v1",
+  "benchmark_source_commit": "b4c76b13ccbdaff4f01726bee50fae5fcc1e4e4a",
+  "publication_source_commit": "180e26c2d20220869f834355b92e570c142e323f",
+  "frozen_jev_core_source_commit": "19acf0734d63ecebc07140c8d84302a54baee4c4",
+  "protocol_sha256": "453d671c9b2addcfb90eed095a9b39fea866f5089c432ed951de6a5717c00e6a",
+  "input_integrity_sha256": "850abb8d4699713ae38665cefd9f45447ca2a3cb4c645c9d14a1f3ea4b4eb6b8",
+  "original_results_sha256": "2b3cfb91736bf6fc3c68826fc328878d65246cc8cebf15fe8278d3535f6126f9",
+  "provider_calls": 0,
+  "mode": "local-cpu-verifier",
+  "cohorts": {
+    "blind_spot": 8,
+    "evidence_fault": 128,
+    "native": 64
+  },
+  "timing_scope": "perf_counter_ns around verify_goal only, with parsed observations and trusted goal already in memory. Excludes acquisition, the required 200 ms history accumulation, serialization, I/O, rendering, networking and actuation. Repeated-call microbenchmark, not end-to-end robot latency.",
+  "tests": {
+    "report_tests_passed": 9,
+    "publisher_tests_passed": 12
+  },
+  "independent_review": {
+    "bytes": 4840,
+    "sha256": "94d4846ebdd4658bb6a1d5fccfc33ca32638c3f2c3662574f4b841a989928637"
+  },
+  "ui_qa": {
+    "bytes": 2420,
+    "sha256": "52a49a36c81e1534689de2e3fbc2be78722c92b69b15db9bc4ff722daed960cb"
+  },
+  "quality_status": {
+    "browser_qa_passed": false,
+    "static_qa_passed": true,
+    "browser_qa_status": "blocked-macos-locked",
+    "desktop_mobile_interaction": "pending; no browser screenshot or visual pass claimed"
+  },
+  "asset_notice": "licenses/agilex_piper/LICENSE",
+  "runtime_or_mesh_redistributed": false,
+  "limits": [
+    "Synthetic privileged observations; images are illustrations, not verifier inputs.",
+    "Consistent forgeries cause eight physical false completions; provenance remains unresolved.",
+    "No new Jev requests, trained model, robot-control commands or hardware qualification."
+  ]
+}

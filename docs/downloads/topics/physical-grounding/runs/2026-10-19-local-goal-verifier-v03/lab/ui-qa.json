@@ -1,0 +1,70 @@
+{
+  "schema": "dvidia.local-goal-report-qa/v1",
+  "status": "partial-browser-blocked",
+  "viewer_sha256": "e2e378f7e835ea118f70565521949847d19776a2d8b7efe6c1d358533cd66146",
+  "native_visual_inspection": {
+    "method": "view_image",
+    "cases": [
+      "native-fresh-01-complete",
+      "native-fresh-01-occluded",
+      "native-fresh-01-unreleased"
+    ],
+    "result": "passed",
+    "notes": [
+      "Complete fixture shows the narrow green rigid proxy inside the outlined goal with the gripper clear.",
+      "Occluded fixture has a fixed opaque cover that fully hides the target.",
+      "Unreleased fixture shows closed fingers around the table-supported proxy.",
+      "The native assets remain simplified rigid proxies, not realistic shoe meshes."
+    ]
+  },
+  "static_checks": {
+    "javascript_syntax": "passed via node --check",
+    "embedded_cases": 200,
+    "unique_element_ids": true,
+    "local_links_checked": 324,
+    "existing_local_links": 324,
+    "pending_local_links": [],
+    "filters": {
+      "native": {
+        "all": 64,
+        "positive": 16,
+        "negative": 48,
+        "unknown": 0,
+        "disagree": 0,
+        "freshness": 0
+      },
+      "evidence_fault": {
+        "all": 128,
+        "positive": 128,
+        "negative": 0,
+        "unknown": 120,
+        "disagree": 8,
+        "freshness": 40
+      },
+      "blind_spot": {
+        "all": 8,
+        "positive": 0,
+        "negative": 8,
+        "unknown": 0,
+        "disagree": 8,
+        "freshness": 0
+      }
+    }
+  },
+  "browser": {
+    "status": "unavailable",
+    "inventory_result": "Mac locked; automatic unlock unavailable; no browser surfaces.",
+    "browser_only_result": "Browser is not available: iab",
+    "desktop_visual_check": "not performed",
+    "mobile_visual_check": "not performed",
+    "interactive_controls": "not exercised",
+    "screenshots": []
+  },
+  "publisher_feedback": [
+    "Render threshold operators as mathematical symbols rather than le/gt.",
+    "Preserve focus when replacing the case-button list after selection.",
+    "Describe the goal reference image independently of the current failure scenario."
+  ],
+  "scope": "Static inspection and native-image visual inspection only; not a completed browser, accessibility, or responsive layout audit.",
+  "publisher_feedback_status": "All three recommendations applied and statically verified; browser interaction remains untested."
+}
