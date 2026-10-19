@@ -1,0 +1,90 @@
+{
+  "checks": {
+    "active_trial_marker_cleared": true,
+    "all_receipts_http_200_and_pinned_jev_1_14_0": true,
+    "all_request_hashes_and_payloads_reconstructed_from_frozen_inputs": true,
+    "exact_ordered_trial_inventory_matches_frozen_plan": true,
+    "fixture_and_core_source_hashes_match_frozen_plan": true,
+    "four_rgb_alias_pairs_have_identical_requests_and_unknown_verdicts": true,
+    "independent_counts_brier_and_latency_quantiles_match_published_metrics": true,
+    "input_token_cost_arithmetic_checked": true,
+    "measured_summary_matches_original_metrics_and_hashes": true,
+    "occluded_and_unreleased_observability_references_reviewed": true,
+    "presence_threshold_application_checked": true,
+    "publication_regressions_passed": 13,
+    "results_equal_append_only_attempt_ledger": true,
+    "rgb_requests_have_no_measured_state": true,
+    "stored_probabilities_verdicts_usage_match_provider_receipts": true
+  },
+  "evaluation_plan_sha256": "5f02006190d97bdaca43f139f5bf221cece23bba868a5e9ee0f424618ea87d8f",
+  "findings": {
+    "estimated_input_cost_usd": 0.007644756,
+    "input_tokens": 182018,
+    "output_tokens": 4776,
+    "overall_latency_seconds": {
+      "max": 4.091210667043924,
+      "p50": 1.7764145623659715,
+      "p95": 3.287287432909943
+    },
+    "rgb": {
+      "ambiguous_abstention": [
+        8,
+        16
+      ],
+      "observability_reference_agreement": [
+        24,
+        32
+      ],
+      "physical_false_completion": [
+        0,
+        24
+      ],
+      "physical_positives_called_complete": [
+        0,
+        8
+      ]
+    },
+    "rgb_telemetry": {
+      "observability_reference_agreement": [
+        25,
+        32
+      ],
+      "physical_false_completion": [
+        0,
+        24
+      ],
+      "physical_positives_called_complete": [
+        1,
+        8
+      ]
+    }
+  },
+  "frozen_core_source": "19acf0734d63ecebc07140c8d84302a54baee4c4",
+  "inventory": {
+    "attempts_per_trial": 1,
+    "completed": 64,
+    "conditions": {
+      "rgb": 32,
+      "rgb_telemetry": 32
+    },
+    "errors": 0,
+    "planned": 64,
+    "unrun": 0,
+    "valid": 64
+  },
+  "limitations": [
+    "This review confirms internal provenance, arithmetic and stated evidence semantics; it is not an independently rerun provider experiment.",
+    "Four correlated layouts with authored diagnostic states; 64 calls are not 64 independent real-world tasks.",
+    "RGB and telemetry use different observability reference labels; their accuracy difference is not a general accuracy-gain estimate.",
+    "No false complete verdicts were observed, but telemetry recognized only one of eight physical positives; this does not establish a reliable completion detector.",
+    "Telemetry is privileged simulator state, not a validated robot sensor or camera estimator.",
+    "Latency includes request preparation, upload, network, hosted response and parsing from preloaded images; rendering, camera capture and actuation are excluded.",
+    "Cost is derived from returned input usage and the frozen documented price; it is not a billing receipt.",
+    "No learned controller, direct actuator loop, local Jev execution or real-robot transfer is demonstrated."
+  ],
+  "original_results_sha256": "18c71ad02cd50763b04a90028b46740b98bd91ffa9d6071f5a179d4c22537ae4",
+  "review_scope": "Independent read-only review of the completed frozen provider run; no requests rerun and no protocol or scorer edits.",
+  "reviewed_at": "2026-10-19T04:14:14.525991+00:00",
+  "schema": "dvidia.image-goal-independent-run-review/v1",
+  "status": "passed"
+}

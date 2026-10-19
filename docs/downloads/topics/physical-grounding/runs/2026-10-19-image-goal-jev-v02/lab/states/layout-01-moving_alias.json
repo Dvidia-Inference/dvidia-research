@@ -1,0 +1,94 @@
+{
+  "time_s": 0.6000000000000004,
+  "qpos": [
+    -0.2369099784664237,
+    1.5182589435176175,
+    -1.522793570268259,
+    0.12868043790246853,
+    1.1542398586466955,
+    -0.25843887783415004,
+    0.034999999999986486,
+    -0.03499999999988183,
+    0.3999999772538078,
+    -0.10000010615852632,
+    -0.00010773874568926898,
+    0.9999999964585663,
+    -8.220356940983215e-05,
+    1.803999586086003e-05,
+    3.8467399616078435e-10
+  ],
+  "qvel": [
+    8.686631187521919e-12,
+    1.4272098001291306e-10,
+    -2.829140865406561e-10,
+    -3.8935942917674e-11,
+    3.908648283069296e-10,
+    -7.856295745758307e-12,
+    3.8167501431236443e-13,
+    9.80128835884297e-13,
+    0.12,
+    0.0,
+    0.0,
+    -2.6398105827847618e-09,
+    8.150601161833702e-10,
+    1.2542553142243956e-13
+  ],
+  "ctrl": [
+    -0.23690997846637904,
+    1.5182589435169767,
+    -1.5227935702679674,
+    0.12868043790265263,
+    1.154239858646203,
+    -0.2584388778339991,
+    0.035
+  ],
+  "physical_truth": {
+    "present": true,
+    "complete": false,
+    "physical_conditions_dwell_s": 0.0,
+    "position_error_m": 1.0856805225155038e-07,
+    "yaw_error_rad": 2.1965561156353097e-09,
+    "supported": true,
+    "released": true,
+    "linear_speed_m_s": 0.12,
+    "angular_speed_rad_s": 2.7627744970784057e-09
+  },
+  "current_measurement": {
+    "target_present": true,
+    "target_position_m": [
+      0.3999999772538078,
+      -0.10000010615852632,
+      -0.00010773874568926898
+    ],
+    "position_error_m": 1.0856805225155038e-07,
+    "yaw_error_rad": 2.1965561156353097e-09,
+    "linear_speed_m_s": 0.12,
+    "angular_speed_rad_s": 2.7627744970784057e-09,
+    "table_support_force_n": 0.3624151236609657,
+    "robot_contact_force_n": 0.0,
+    "contacts": [
+      {
+        "other_geom": "workstation_table_top",
+        "normal_force_n": 0.11726300900318075
+      },
+      {
+        "other_geom": "workstation_table_top",
+        "normal_force_n": 0.0709330481077246
+      },
+      {
+        "other_geom": "workstation_table_top",
+        "normal_force_n": 0.06400941277890866
+      },
+      {
+        "other_geom": "workstation_table_top",
+        "normal_force_n": 0.11020965377115166
+      }
+    ],
+    "instantaneous_conditions_met": false
+  },
+  "history": [],
+  "solver_warnings": 0,
+  "object_attachment_constraints_added": 0,
+  "model_equalities": 1,
+  "external_forces_applied": false
+}
