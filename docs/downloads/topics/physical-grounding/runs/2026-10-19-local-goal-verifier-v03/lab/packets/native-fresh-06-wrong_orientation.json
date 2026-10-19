@@ -1,0 +1,1623 @@
+{
+  "schema": "dvidia.local-goal-observations/v1",
+  "units": {
+    "position": "m",
+    "angle": "rad",
+    "time": "s",
+    "linear_speed": "m/s",
+    "angular_speed": "rad/s",
+    "force": "N"
+  },
+  "uncertainty_bounds": {
+    "position_m": 0.0,
+    "yaw_rad": 0.0,
+    "linear_speed_m_s": 0.0,
+    "angular_speed_rad_s": 0.0,
+    "table_support_force_n": 0.0,
+    "robot_contact_force_n": 0.0
+  },
+  "sample_period_s": 0.002,
+  "history_start_s": 0.4000000000000003,
+  "samples": [
+    {
+      "t_s": 0.4020000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051789769,
+        -0.11180002691220724,
+        -0.0001077676827802807
+      ],
+      "yaw_rad": 1.5313743245985572,
+      "linear_speed_m_s": 1.057792509069717e-06,
+      "angular_speed_rad_s": 2.0468233360722066e-06,
+      "table_support_force_n": 0.2942989247886608,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4040000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051790174,
+        -0.11180002691222092,
+        -0.00010776571121526743
+      ],
+      "yaw_rad": 1.531374324598543,
+      "linear_speed_m_s": 9.857825068670907e-07,
+      "angular_speed_rad_s": 1.9175465513546674e-06,
+      "table_support_force_n": 0.29429899802630244,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4060000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051790552,
+        -0.11180002691223372,
+        -0.00010776387386481049
+      ],
+      "yaw_rad": 1.5313743245985296,
+      "linear_speed_m_s": 9.186752286924935e-07,
+      "angular_speed_rad_s": 1.7963551123386275e-06,
+      "table_support_force_n": 0.2942990662744698,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4080000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517909046,
+        -0.11180002691224568,
+        -0.00010776216159117622
+      ],
+      "yaw_rad": 1.5313743245985172,
+      "linear_speed_m_s": 8.561368173369986e-07,
+      "angular_speed_rad_s": 1.6827495010318403e-06,
+      "table_support_force_n": 0.29429912987318435,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4100000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051791233,
+        -0.11180002691225686,
+        -0.00010776056587886297
+      ],
+      "yaw_rad": 1.5313743245985054,
+      "linear_speed_m_s": 7.978561568094964e-07,
+      "angular_speed_rad_s": 1.5762605777112587e-06,
+      "table_support_force_n": 0.2942991891392837,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4120000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517915397,
+        -0.11180002691226733,
+        -0.00010775907879221839
+      ],
+      "yaw_rad": 1.5313743245984943,
+      "linear_speed_m_s": 7.435433224668686e-07,
+      "angular_speed_rad_s": 1.4764477710086945e-06,
+      "table_support_force_n": 0.29429924436800325,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4140000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517918256,
+        -0.11180002691227711,
+        -0.00010775769293594504
+      ],
+      "yaw_rad": 1.5313743245984843,
+      "linear_speed_m_s": 6.929281368446947e-07,
+      "angular_speed_rad_s": 1.3828973744374672e-06,
+      "table_support_force_n": 0.29429929583445075,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4160000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051792092,
+        -0.11180002691228626,
+        -0.00010775640141829731
+      ],
+      "yaw_rad": 1.531374324598475,
+      "linear_speed_m_s": 6.457588240186355e-07,
+      "angular_speed_rad_s": 1.295220940701469e-06,
+      "table_support_force_n": 0.29429934379498085,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4180000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517923407,
+        -0.1118000269122948,
+        -0.00010775519781678598
+      ],
+      "yaw_rad": 1.5313743245984661,
+      "linear_speed_m_s": 6.018007558095028e-07,
+      "angular_speed_rad_s": 1.213053769196861e-06,
+      "table_support_force_n": 0.29429938848847315,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4200000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051792573,
+        -0.1118000269123028,
+        -0.00010775407614621944
+      ],
+      "yaw_rad": 1.5313743245984577,
+      "linear_speed_m_s": 5.608352834079995e-07,
+      "angular_speed_rad_s": 1.1360534816410603e-06,
+      "table_support_force_n": 0.2942994301375239,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4220000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051792789,
+        -0.11180002691231028,
+        -0.00010775303082892242
+      ],
+      "yaw_rad": 1.5313743245984501,
+      "linear_speed_m_s": 5.226586486358177e-07,
+      "angular_speed_rad_s": 1.0638986819740418e-06,
+      "table_support_force_n": 0.29429946894955916,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4240000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517929913,
+        -0.11180002691231727,
+        -0.00010775205666698349
+      ],
+      "yaw_rad": 1.5313743245984428,
+      "linear_speed_m_s": 4.870809695826511e-07,
+      "angular_speed_rad_s": 9.96287692759453e-07,
+      "table_support_force_n": 0.29429950511786507,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4260000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517931795,
+        -0.11180002691232381,
+        -0.00010775114881639343
+      ],
+      "yaw_rad": 1.5313743245984361,
+      "linear_speed_m_s": 4.5392529514121947e-07,
+      "angular_speed_rad_s": 9.329373678068512e-07,
+      "table_support_force_n": 0.29429953882255605,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4280000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051793355,
+        -0.11180002691232993,
+        -0.00010775030276294524
+      ],
+      "yaw_rad": 1.5313743245984297,
+      "linear_speed_m_s": 4.230267242014429e-07,
+      "angular_speed_rad_s": 8.735819730802734e-07,
+      "table_support_force_n": 0.2942995702314739,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4300000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517935187,
+        -0.11180002691233565,
+        -0.00010774951429977546
+      ],
+      "yaw_rad": 1.5313743245984242,
+      "linear_speed_m_s": 3.9423158498280686e-07,
+      "angular_speed_rad_s": 8.179721342349673e-07,
+      "table_support_force_n": 0.294299599501019,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.43200000000000033,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517936713,
+        -0.11180002691234099,
+        -0.00010774877950643584
+      ],
+      "yaw_rad": 1.5313743245984186,
+      "linear_speed_m_s": 3.673966698977442e-07,
+      "angular_speed_rad_s": 7.658738464895397e-07,
+      "table_support_force_n": 0.2942996267769357,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.43400000000000033,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051793814,
+        -0.11180002691234599,
+        -0.00010774809472939017
+      ],
+      "yaw_rad": 1.5313743245984135,
+      "linear_speed_m_s": 3.4238852292048793e-07,
+      "angular_speed_rad_s": 7.170675425810438e-07,
+      "table_support_force_n": 0.2942996521950361,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.43600000000000033,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051793947,
+        -0.11180002691235066,
+        -0.00010774745656383966
+      ],
+      "yaw_rad": 1.5313743245984086,
+      "linear_speed_m_s": 3.1908277533356e-07,
+      "angular_speed_rad_s": 6.713472162191061e-07,
+      "table_support_force_n": 0.2942996758818795,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.43800000000000033,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794071,
+        -0.11180002691235504,
+        -0.00010774686183678599
+      ],
+      "yaw_rad": 1.531374324598404,
+      "linear_speed_m_s": 2.9736352690781713e-07,
+      "angular_speed_rad_s": 6.285195978518382e-07,
+      "table_support_force_n": 0.2942996979554001,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.44000000000000034,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517941864,
+        -0.11180002691235913,
+        -0.00010774630759124807
+      ],
+      "yaw_rad": 1.5313743245984,
+      "linear_speed_m_s": 2.771227690276383e-07,
+      "angular_speed_rad_s": 5.88403379094916e-07,
+      "table_support_force_n": 0.2942997185254972,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.44200000000000034,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794294,
+        -0.11180002691236295,
+        -0.00010774579107155365
+      ],
+      "yaw_rad": 1.5313743245983962,
+      "linear_speed_m_s": 2.5825984727057643e-07,
+      "angular_speed_rad_s": 5.508284837065393e-07,
+      "table_support_force_n": 0.29429973769458223,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.44400000000000034,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517943946,
+        -0.11180002691236653,
+        -0.00010774530970963261
+      ],
+      "yaw_rad": 1.5313743245983924,
+      "linear_speed_m_s": 2.4068096057853356e-07,
+      "angular_speed_rad_s": 5.156353819389039e-07,
+      "table_support_force_n": 0.2942997555580892,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.44600000000000034,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517944884,
+        -0.11180002691236987,
+        -0.00010774486111224366
+      ],
+      "yaw_rad": 1.531374324598389,
+      "linear_speed_m_s": 2.2429869453103623e-07,
+      "angular_speed_rad_s": 4.826744460281394e-07,
+      "table_support_force_n": 0.2942997722049499,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.44800000000000034,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794576,
+        -0.111800026912373,
+        -0.00010774444304907093
+      ],
+      "yaw_rad": 1.5313743245983857,
+      "linear_speed_m_s": 2.0903158641513354e-07,
+      "angular_speed_rad_s": 4.5180534479422295e-07,
+      "table_support_force_n": 0.2942997877180372,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.45000000000000034,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794658,
+        -0.11180002691237592,
+        -0.00010774405344163122
+      ],
+      "yaw_rad": 1.5313743245983826,
+      "linear_speed_m_s": 1.9480371990115048e-07,
+      "angular_speed_rad_s": 4.2289647313707637e-07,
+      "table_support_force_n": 0.2942998021745781,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.45200000000000035,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794734,
+        -0.11180002691237866,
+        -0.00010774369035293657
+      ],
+      "yaw_rad": 1.53137432459838,
+      "linear_speed_m_s": 1.815443473695216e-07,
+      "angular_speed_rad_s": 3.958244174550568e-07,
+      "table_support_force_n": 0.294299815646539,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.45400000000000035,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794805,
+        -0.11180002691238121,
+        -0.00010774335197786069
+      ],
+      "yaw_rad": 1.531374324598377,
+      "linear_speed_m_s": 1.6918753798597068e-07,
+      "angular_speed_rad_s": 3.7047345299581755e-07,
+      "table_support_force_n": 0.2942998282009823,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.45600000000000035,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051794871,
+        -0.1118000269123836,
+        -0.00010774303663416153
+      ],
+      "yaw_rad": 1.5313743245983749,
+      "linear_speed_m_s": 1.5767184961894203e-07,
+      "angular_speed_rad_s": 3.4673507016714057e-07,
+      "table_support_force_n": 0.2942998399004032,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.45800000000000035,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517949325,
+        -0.11180002691238583,
+        -0.00010774274275411506
+      ],
+      "yaw_rad": 1.5313743245983729,
+      "linear_speed_m_s": 1.4694002326845115e-07,
+      "angular_speed_rad_s": 3.2450753153585816e-07,
+      "table_support_force_n": 0.2942998508030386,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.46000000000000035,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.407164105179499,
+        -0.11180002691238791,
+        -0.00010774246887671875
+      ],
+      "yaw_rad": 1.5313743245983709,
+      "linear_speed_m_s": 1.3693869818974178e-07,
+      "angular_speed_rad_s": 3.0369545350852155e-07,
+      "table_support_force_n": 0.2942998609631581,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.46200000000000035,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795044,
+        -0.11180002691238987,
+        -0.00010774221364042596
+      ],
+      "yaw_rad": 1.5313743245983686,
+      "linear_speed_m_s": 1.2761814642821774e-07,
+      "angular_speed_rad_s": 2.8420941560667864e-07,
+      "table_support_force_n": 0.2942998704313358,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.46400000000000036,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795094,
+        -0.1118000269123917,
+        -0.00010774197577637487
+      ],
+      "yaw_rad": 1.531374324598367,
+      "linear_speed_m_s": 1.189320255729237e-07,
+      "angular_speed_rad_s": 2.659655911531424e-07,
+      "table_support_force_n": 0.2942998792546996,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.46600000000000036,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517951407,
+        -0.11180002691239341,
+        -0.00010774175410207864
+      ],
+      "yaw_rad": 1.531374324598365,
+      "linear_speed_m_s": 1.1083714814264576e-07,
+      "angular_speed_rad_s": 2.488854023741258e-07,
+      "table_support_force_n": 0.2942998874771663,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.46800000000000036,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517951845,
+        -0.111800026912395,
+        -0.0001077415475155452
+      ],
+      "yaw_rad": 1.5313743245983633,
+      "linear_speed_m_s": 1.0329326674854435e-07,
+      "angular_speed_rad_s": 2.3289519523978999e-07,
+      "table_support_force_n": 0.2942998951396639,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.47000000000000036,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795225,
+        -0.1118000269123965,
+        -0.0001077413549897971
+      ],
+      "yaw_rad": 1.531374324598362,
+      "linear_speed_m_s": 9.626287407488948e-08,
+      "angular_speed_rad_s": 2.1792593463037054e-07,
+      "table_support_force_n": 0.2942999022803307,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.47200000000000036,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795263,
+        -0.1118000269123979,
+        -0.00010774117556776476
+      ],
+      "yaw_rad": 1.5313743245983604,
+      "linear_speed_m_s": 8.971101619475894e-08,
+      "angular_speed_rad_s": 2.0391291792947596e-07,
+      "table_support_force_n": 0.2942999089347055,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.47400000000000037,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517952983,
+        -0.11180002691239921,
+        -0.00010774100835752757
+      ],
+      "yaw_rad": 1.5313743245983593,
+      "linear_speed_m_s": 8.360511861988955e-08,
+      "angular_speed_rad_s": 1.9079550630335656e-07,
+      "table_support_force_n": 0.29429991513591025,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.47600000000000037,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517953316,
+        -0.11180002691240043,
+        -0.0001077408525278785
+      ],
+      "yaw_rad": 1.531374324598358,
+      "linear_speed_m_s": 7.791482455685406e-08,
+      "angular_speed_rad_s": 1.7851687233067155e-07,
+      "table_support_force_n": 0.29429992091480744,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.47800000000000037,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795363,
+        -0.11180002691240157,
+        -0.00010774070730419116
+      ],
+      "yaw_rad": 1.5313743245983567,
+      "linear_speed_m_s": 7.261184368550617e-08,
+      "angular_speed_rad_s": 1.6702376282523502e-07,
+      "table_support_force_n": 0.29429992630015983,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.48000000000000037,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517953916,
+        -0.11180002691240264,
+        -0.00010774057196456793
+      ],
+      "yaw_rad": 1.5313743245983558,
+      "linear_speed_m_s": 6.766981163509437e-08,
+      "angular_speed_rad_s": 1.562662765984694e-07,
+      "table_support_force_n": 0.2942999313187698,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4820000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795418,
+        -0.11180002691240364,
+        -0.00010774044583625043
+      ],
+      "yaw_rad": 1.5313743245983547,
+      "linear_speed_m_s": 6.306415877217001e-08,
+      "angular_speed_rad_s": 1.461976556855488e-07,
+      "table_support_force_n": 0.2942999359956134,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4840000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795443,
+        -0.11180002691240457,
+        -0.00010774032829227452
+      ],
+      "yaw_rad": 1.5313743245983535,
+      "linear_speed_m_s": 5.877198796935977e-08,
+      "angular_speed_rad_s": 1.3677408937471304e-07,
+      "table_support_force_n": 0.29429994035396795,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4860000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517954665,
+        -0.11180002691240544,
+        -0.00010774021874835275
+      ],
+      "yaw_rad": 1.5313743245983529,
+      "linear_speed_m_s": 5.477196089857547e-08,
+      "angular_speed_rad_s": 1.279545303453632e-07,
+      "table_support_force_n": 0.2942999444155236,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4880000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795488,
+        -0.11180002691240626,
+        -0.0001077401166599692
+      ],
+      "yaw_rad": 1.5313743245983522,
+      "linear_speed_m_s": 5.104419178647554e-08,
+      "angular_speed_rad_s": 1.1970052207383158e-07,
+      "table_support_force_n": 0.2942999482004922,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4900000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795509,
+        -0.11180002691240702,
+        -0.00010774002151967228
+      ],
+      "yaw_rad": 1.5313743245983513,
+      "linear_speed_m_s": 4.757014846747588e-08,
+      "angular_speed_rad_s": 1.1197603717879646e-07,
+      "table_support_force_n": 0.29429995172771195,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4920000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517955276,
+        -0.11180002691240773,
+        -0.00010773993285455146
+      ],
+      "yaw_rad": 1.5313743245983504,
+      "linear_speed_m_s": 4.433256042261818e-08,
+      "angular_speed_rad_s": 1.0474732505855827e-07,
+      "table_support_force_n": 0.2942999550147347,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4940000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517955454,
+        -0.1118000269124084,
+        -0.00010773985022388613
+      ],
+      "yaw_rad": 1.5313743245983498,
+      "linear_speed_m_s": 4.1315332676502805e-08,
+      "angular_speed_rad_s": 9.798276976820349e-08,
+      "table_support_force_n": 0.29429995807791953,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4960000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795562,
+        -0.11180002691240902,
+        -0.00010773977321695428
+      ],
+      "yaw_rad": 1.531374324598349,
+      "linear_speed_m_s": 3.850346593797825e-08,
+      "angular_speed_rad_s": 9.165275598533063e-08,
+      "table_support_force_n": 0.2942999609325103,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.4980000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517955776,
+        -0.1118000269124096,
+        -0.00010773970145099041
+      ],
+      "yaw_rad": 1.5313743245983484,
+      "linear_speed_m_s": 3.5882981947952564e-08,
+      "angular_speed_rad_s": 8.572954365870539e-08,
+      "table_support_force_n": 0.2942999635927118,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5000000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795592,
+        -0.11180002691241014,
+        -0.00010773963456928261
+      ],
+      "yaw_rad": 1.5313743245983478,
+      "linear_speed_m_s": 3.3440853907607414e-08,
+      "angular_speed_rad_s": 8.018715074954997e-08,
+      "table_support_force_n": 0.2942999660717629,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5020000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956053,
+        -0.11180002691241066,
+        -0.000107739572239399
+      ],
+      "yaw_rad": 1.531374324598347,
+      "linear_speed_m_s": 3.116494180981765e-08,
+      "angular_speed_rad_s": 7.500124207526759e-08,
+      "table_support_force_n": 0.2942999683820007,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5040000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956175,
+        -0.11180002691241113,
+        -0.0001077395141515349
+      ],
+      "yaw_rad": 1.531374324598347,
+      "linear_speed_m_s": 2.9043932063761388e-08,
+      "angular_speed_rad_s": 7.01490261748801e-08,
+      "table_support_force_n": 0.29429997053491985,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5060000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795629,
+        -0.11180002691241157,
+        -0.00010773946001697272
+      ],
+      "yaw_rad": 1.5313743245983467,
+      "linear_speed_m_s": 2.7067281091945516e-08,
+      "angular_speed_rad_s": 6.560915889933507e-08,
+      "table_support_force_n": 0.29429997254123474,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5080000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956403,
+        -0.11180002691241199,
+        -0.00010773940956664658
+      ],
+      "yaw_rad": 1.5313743245983462,
+      "linear_speed_m_s": 2.5225163075054747e-08,
+      "angular_speed_rad_s": 6.136165131034395e-08,
+      "table_support_force_n": 0.2942999744109296,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5100000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956503,
+        -0.11180002691241238,
+        -0.00010773936254980446
+      ],
+      "yaw_rad": 1.5313743245983458,
+      "linear_speed_m_s": 2.3508421064408918e-08,
+      "angular_speed_rad_s": 5.738778497122403e-08,
+      "table_support_force_n": 0.2942999761533074,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5120000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956597,
+        -0.11180002691241274,
+        -0.00010773931873276173
+      ],
+      "yaw_rad": 1.5313743245983455,
+      "linear_speed_m_s": 2.1908521366662776e-08,
+      "angular_speed_rad_s": 5.3670031327676837e-08,
+      "table_support_force_n": 0.29429997777703865,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5140000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956686,
+        -0.11180002691241307,
+        -0.00010773927789773937
+      ],
+      "yaw_rad": 1.531374324598345,
+      "linear_speed_m_s": 2.041751118908843e-08,
+      "angular_speed_rad_s": 5.0191977358780154e-08,
+      "table_support_force_n": 0.29429997929020285,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5160000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795677,
+        -0.11180002691241339,
+        -0.00010773923984178126
+      ],
+      "yaw_rad": 1.5313743245983449,
+      "linear_speed_m_s": 1.9027979058009415e-08,
+      "angular_speed_rad_s": 4.6938254920101584e-08,
+      "table_support_force_n": 0.29429998070032926,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5180000000000003,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956847,
+        -0.11180002691241368,
+        -0.00010773920437574532
+      ],
+      "yaw_rad": 1.5313743245983444,
+      "linear_speed_m_s": 1.7733017973035186e-08,
+      "angular_speed_rad_s": 4.3894474316172486e-08,
+      "table_support_force_n": 0.29429998201443547,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5200000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795692,
+        -0.11180002691241396,
+        -0.00010773917132336305
+      ],
+      "yaw_rad": 1.5313743245983442,
+      "linear_speed_m_s": 1.652619113894584e-08,
+      "angular_speed_rad_s": 4.1047163219096413e-08,
+      "table_support_force_n": 0.2942999832390594,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5220000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517956986,
+        -0.11180002691241422,
+        -0.00010773914052036338
+      ],
+      "yaw_rad": 1.5313743245983442,
+      "linear_speed_m_s": 1.5401499841706467e-08,
+      "angular_speed_rad_s": 3.838370801764858e-08,
+      "table_support_force_n": 0.2942999843802945,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5240000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957047,
+        -0.11180002691241446,
+        -0.00010773911181365604
+      ],
+      "yaw_rad": 1.5313743245983438,
+      "linear_speed_m_s": 1.4353353671520259e-08,
+      "angular_speed_rad_s": 3.58922999820278e-08,
+      "table_support_force_n": 0.2942999854438202,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5260000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.407164105179571,
+        -0.11180002691241468,
+        -0.00010773908506057042
+      ],
+      "yaw_rad": 1.5313743245983436,
+      "linear_speed_m_s": 1.337654280789657e-08,
+      "angular_speed_rad_s": 3.356188393378059e-08,
+      "table_support_force_n": 0.29429998643492694,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5280000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795716,
+        -0.11180002691241489,
+        -0.00010773906012814653
+      ],
+      "yaw_rad": 1.5313743245983433,
+      "linear_speed_m_s": 1.2466211952406359e-08,
+      "angular_speed_rad_s": 3.138211076427534e-08,
+      "table_support_force_n": 0.29429998735854807,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5300000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795721,
+        -0.11180002691241508,
+        -0.00010773903689247372
+      ],
+      "yaw_rad": 1.5313743245983433,
+      "linear_speed_m_s": 1.16178364126174e-08,
+      "angular_speed_rad_s": 2.934329263189888e-08,
+      "table_support_force_n": 0.29429998821927705,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5320000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795725,
+        -0.11180002691241527,
+        -0.00010773901523807505
+      ],
+      "yaw_rad": 1.5313743245983429,
+      "linear_speed_m_s": 1.0827199337295482e-08,
+      "angular_speed_rad_s": 2.7436360743615582e-08,
+      "table_support_force_n": 0.2942999890213983,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5340000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957297,
+        -0.11180002691241543,
+        -0.00010773899505733303
+      ],
+      "yaw_rad": 1.5313743245983429,
+      "linear_speed_m_s": 1.0090371012479863e-08,
+      "angular_speed_rad_s": 2.5652826544479484e-08,
+      "table_support_force_n": 0.29429998976890137,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5360000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957335,
+        -0.1118000269124156,
+        -0.00010773897624995482
+      ],
+      "yaw_rad": 1.5313743245983429,
+      "linear_speed_m_s": 9.403689107772346e-09,
+      "angular_speed_rad_s": 2.398474433015297e-08,
+      "table_support_force_n": 0.29429999046550687,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5380000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957374,
+        -0.11180002691241575,
+        -0.0001077389587224735
+      ],
+      "yaw_rad": 1.5313743245983427,
+      "linear_speed_m_s": 8.763740662555921e-09,
+      "angular_speed_rad_s": 2.2424677490437625e-08,
+      "table_support_force_n": 0.294299991114679,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5400000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795741,
+        -0.11180002691241589,
+        -0.00010773894238778369
+      ],
+      "yaw_rad": 1.5313743245983427,
+      "linear_speed_m_s": 8.167344909021762e-09,
+      "angular_speed_rad_s": 2.0965665199380382e-08,
+      "table_support_force_n": 0.2942999917196491,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5420000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795744,
+        -0.11180002691241603,
+        -0.00010773892716470836
+      ],
+      "yaw_rad": 1.5313743245983424,
+      "linear_speed_m_s": 7.611537661344254e-09,
+      "angular_speed_rad_s": 1.9601193018368604e-08,
+      "table_support_force_n": 0.29429999228342674,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5440000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957474,
+        -0.11180002691241615,
+        -0.00010773891297759542
+      ],
+      "yaw_rad": 1.5313743245983424,
+      "linear_speed_m_s": 7.093556471969441e-09,
+      "angular_speed_rad_s": 1.8325163945694385e-08,
+      "table_support_force_n": 0.29429999280881647,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5460000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.407164105179575,
+        -0.11180002691241626,
+        -0.00010773889975594166
+      ],
+      "yaw_rad": 1.5313743245983424,
+      "linear_speed_m_s": 6.610826888040457e-09,
+      "angular_speed_rad_s": 1.7131871911797738e-08,
+      "table_support_force_n": 0.2942999932984328,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5480000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795753,
+        -0.11180002691241638,
+        -0.00010773888743404223
+      ],
+      "yaw_rad": 1.5313743245983422,
+      "linear_speed_m_s": 6.160949717541571e-09,
+      "angular_speed_rad_s": 1.6015977242753034e-08,
+      "table_support_force_n": 0.29429999375471194,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5500000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795756,
+        -0.11180002691241647,
+        -0.00010773887595066407
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 5.741689081289572e-09,
+      "angular_speed_rad_s": 1.4972482788158144e-08,
+      "table_support_force_n": 0.29429999417992253,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5520000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795758,
+        -0.11180002691241657,
+        -0.00010773886524874169
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 5.350961190535375e-09,
+      "angular_speed_rad_s": 1.3996712480734546e-08,
+      "table_support_force_n": 0.29429999457618167,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5540000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.407164105179576,
+        -0.11180002691241665,
+        -0.00010773885527509332
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 4.986824187508521e-09,
+      "angular_speed_rad_s": 1.3084290512645755e-08,
+      "table_support_force_n": 0.29429999494546,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5560000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957624,
+        -0.11180002691241674,
+        -0.00010773884598015666
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 4.647468332592781e-09,
+      "angular_speed_rad_s": 1.2231122399906302e-08,
+      "table_support_force_n": 0.29429999528959433,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5580000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795764,
+        -0.11180002691241682,
+        -0.00010773883731774258
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 4.331207035383189e-09,
+      "angular_speed_rad_s": 1.1433376963464938e-08,
+      "table_support_force_n": 0.2942999956102978,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5600000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795766,
+        -0.11180002691241689,
+        -0.00010773882924480545
+      ],
+      "yaw_rad": 1.531374324598342,
+      "linear_speed_m_s": 4.036468566590956e-09,
+      "angular_speed_rad_s": 1.0687469415560896e-08,
+      "table_support_force_n": 0.2942999959091649,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5620000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957674,
+        -0.11180002691241696,
+        -0.00010773882172122923
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 3.76178810830142e-09,
+      "angular_speed_rad_s": 9.990045837140294e-09,
+      "table_support_force_n": 0.29429999618768293,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5640000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795769,
+        -0.11180002691241703,
+        -0.0001077388147096281
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 3.505800569305363e-09,
+      "angular_speed_rad_s": 9.337968220822054e-09,
+      "table_support_force_n": 0.2942999964472377,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5660000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795771,
+        -0.11180002691241708,
+        -0.00010773880817516053
+      ],
+      "yaw_rad": 1.5313743245983418,
+      "linear_speed_m_s": 3.2672337795137836e-09,
+      "angular_speed_rad_s": 8.72830015805999e-09,
+      "table_support_force_n": 0.29429999668912005,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5680000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795772,
+        -0.11180002691241714,
+        -0.00010773880208535628
+      ],
+      "yaw_rad": 1.5313743245983416,
+      "linear_speed_m_s": 3.044902130217594e-09,
+      "angular_speed_rad_s": 8.158295024197828e-09,
+      "table_support_force_n": 0.2942999969145331,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5700000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795773,
+        -0.1118000269124172,
+        -0.0001077387964099549
+      ],
+      "yaw_rad": 1.5313743245983416,
+      "linear_speed_m_s": 2.8377006930158143e-09,
+      "angular_speed_rad_s": 7.625383251916736e-09,
+      "table_support_force_n": 0.29429999712459937,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5720000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795774,
+        -0.11180002691241724,
+        -0.00010773879112075528
+      ],
+      "yaw_rad": 1.5313743245983413,
+      "linear_speed_m_s": 2.64459981077373e-09,
+      "angular_speed_rad_s": 7.1271604774539506e-09,
+      "table_support_force_n": 0.2942999973203627,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5740000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795775,
+        -0.11180002691241728,
+        -0.00010773878619147561
+      ],
+      "yaw_rad": 1.5313743245983413,
+      "linear_speed_m_s": 2.464639835839073e-09,
+      "angular_speed_rad_s": 6.661377779096719e-09,
+      "table_support_force_n": 0.29429999750279673,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5760000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957763,
+        -0.11180002691241732,
+        -0.0001077387815976228
+      ],
+      "yaw_rad": 1.5313743245983416,
+      "linear_speed_m_s": 2.29692641243398e-09,
+      "angular_speed_rad_s": 6.225931379989693e-09,
+      "table_support_force_n": 0.2942999976728108,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5780000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957774,
+        -0.11180002691241736,
+        -0.00010773877731637045
+      ],
+      "yaw_rad": 1.5313743245983413,
+      "linear_speed_m_s": 2.140626174383297e-09,
+      "angular_speed_rad_s": 5.818853294715744e-09,
+      "table_support_force_n": 0.2942999978312491,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5800000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957785,
+        -0.1118000269124174,
+        -0.0001077387733264457
+      ],
+      "yaw_rad": 1.5313743245983413,
+      "linear_speed_m_s": 1.9949623765947983e-09,
+      "angular_speed_rad_s": 5.4383025021780825e-09,
+      "table_support_force_n": 0.29429999797889916,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5820000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795779,
+        -0.11180002691241743,
+        -0.00010773876960802353
+      ],
+      "yaw_rad": 1.531374324598341,
+      "linear_speed_m_s": 1.859211090228659e-09,
+      "angular_speed_rad_s": 5.082557010942104e-09,
+      "table_support_force_n": 0.2942999981164973,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5840000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957796,
+        -0.11180002691241746,
+        -0.00010773876614262797
+      ],
+      "yaw_rad": 1.5313743245983409,
+      "linear_speed_m_s": 1.7326977777005172e-09,
+      "angular_speed_rad_s": 4.7500059728910304e-09,
+      "table_support_force_n": 0.2942999982447272,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5860000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.407164105179578,
+        -0.11180002691241749,
+        -0.00010773876291304046
+      ],
+      "yaw_rad": 1.5313743245983409,
+      "linear_speed_m_s": 1.6147937557193128e-09,
+      "angular_speed_rad_s": 4.439143065732733e-09,
+      "table_support_force_n": 0.2942999983642268,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5880000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795781,
+        -0.11180002691241751,
+        -0.00010773875990321418
+      ],
+      "yaw_rad": 1.5313743245983409,
+      "linear_speed_m_s": 1.5049131385343156e-09,
+      "angular_speed_rad_s": 4.148558984619192e-09,
+      "table_support_force_n": 0.29429999847558996,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5900000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957813,
+        -0.11180002691241754,
+        -0.00010773875709819444
+      ],
+      "yaw_rad": 1.531374324598341,
+      "linear_speed_m_s": 1.4025098712592381e-09,
+      "angular_speed_rad_s": 3.876935752934711e-09,
+      "table_support_force_n": 0.2942999985793713,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5920000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795782,
+        -0.11180002691241757,
+        -0.00010773875448404424
+      ],
+      "yaw_rad": 1.5313743245983409,
+      "linear_speed_m_s": 1.3070751045724173e-09,
+      "angular_speed_rad_s": 3.6230405988864545e-09,
+      "table_support_force_n": 0.2942999986760867,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5940000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957824,
+        -0.1118000269124176,
+        -0.00010773875204777504
+      ],
+      "yaw_rad": 1.5313743245983409,
+      "linear_speed_m_s": 1.2181346015861015e-09,
+      "angular_speed_rad_s": 3.385720727402029e-09,
+      "table_support_force_n": 0.2942999987662178,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5960000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795783,
+        -0.11180002691241762,
+        -0.00010773874977728218
+      ],
+      "yaw_rad": 1.531374324598341,
+      "linear_speed_m_s": 1.135246434664646e-09,
+      "angular_speed_rad_s": 3.163897853626833e-09,
+      "table_support_force_n": 0.2942999988502121,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.5980000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.40716410517957835,
+        -0.11180002691241764,
+        -0.00010773874766128479
+      ],
+      "yaw_rad": 1.531374324598341,
+      "linear_speed_m_s": 1.0579986928023022e-09,
+      "angular_speed_rad_s": 2.9565636204758948e-09,
+      "table_support_force_n": 0.2942999989284882,
+      "robot_contact_force_n": 0.0
+    },
+    {
+      "t_s": 0.6000000000000004,
+      "object_id": "shoe_trainer_left",
+      "frame_id": "workstation_world",
+      "presence": "present",
+      "position_m": [
+        0.4071641051795784,
+        -0.11180002691241765,
+        -0.00010773874568926967
+      ],
+      "yaw_rad": 1.531374324598341,
+      "linear_speed_m_s": 9.86007557613593e-10,
+      "angular_speed_rad_s": 2.7627748711199715e-09,
+      "table_support_force_n": 0.2942999990014351,
+      "robot_contact_force_n": 0.0
+    }
+  ]
+}

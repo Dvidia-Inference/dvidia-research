@@ -1,0 +1,3036 @@
+{
+  "schema": "dvidia.local-goal-native-scenes/v1",
+  "layouts": [
+    {
+      "id": "fresh-01",
+      "xy_m": [
+        0.408556,
+        -0.08788
+      ],
+      "yaw_rad": 0.108745,
+      "azimuth_deg": 126.478
+    },
+    {
+      "id": "fresh-02",
+      "xy_m": [
+        0.406571,
+        -0.143655
+      ],
+      "yaw_rad": -0.113355,
+      "azimuth_deg": 123.511
+    },
+    {
+      "id": "fresh-03",
+      "xy_m": [
+        0.414032,
+        -0.141474
+      ],
+      "yaw_rad": 0.034271,
+      "azimuth_deg": 128.854
+    },
+    {
+      "id": "fresh-04",
+      "xy_m": [
+        0.397633,
+        -0.158694
+      ],
+      "yaw_rad": 0.034309,
+      "azimuth_deg": 127.189
+    },
+    {
+      "id": "fresh-05",
+      "xy_m": [
+        0.388213,
+        -0.132743
+      ],
+      "yaw_rad": 0.082825,
+      "azimuth_deg": 118.781
+    },
+    {
+      "id": "fresh-06",
+      "xy_m": [
+        0.407164,
+        -0.1118
+      ],
+      "yaw_rad": -0.039422,
+      "azimuth_deg": 150.595
+    },
+    {
+      "id": "fresh-07",
+      "xy_m": [
+        0.407948,
+        -0.092351
+      ],
+      "yaw_rad": -0.031739,
+      "azimuth_deg": 119.514
+    },
+    {
+      "id": "fresh-08",
+      "xy_m": [
+        0.408335,
+        -0.165
+      ],
+      "yaw_rad": 0.052421,
+      "azimuth_deg": 152.644
+    }
+  ],
+  "scenarios": [
+    "complete",
+    "missing_target",
+    "wrong_object",
+    "wrong_position",
+    "wrong_orientation",
+    "unreleased",
+    "moving_alias",
+    "occluded"
+  ],
+  "cases": [
+    {
+      "id": "native-fresh-01-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-complete.json",
+      "current_image": "images/native-fresh-01-complete.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805231593294e-07,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076023173213e-10,
+        "angular_speed_rad_s": 2.7627748443762177e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6411,
+        "target_box_xyxy_normalized": [
+          0.4375,
+          0.5270833333333333,
+          0.68125,
+          0.7354166666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.2665274578612298
+    },
+    {
+      "id": "native-fresh-01-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-missing_target.json",
+      "current_image": "images/native-fresh-01-missing_target.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15849829209037125
+    },
+    {
+      "id": "native-fresh-01-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-wrong_object.json",
+      "current_image": "images/native-fresh-01-wrong_object.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.17898420803248882
+    },
+    {
+      "id": "native-fresh-01-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-wrong_position.json",
+      "current_image": "images/native-fresh-01-wrong_position.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.16999998890967233,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075993569319e-10,
+        "angular_speed_rad_s": 2.762774742577352e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 7505,
+        "target_box_xyxy_normalized": [
+          0.5609375,
+          0.63125,
+          0.828125,
+          0.8583333333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.2103900001384318
+    },
+    {
+      "id": "native-fresh-01-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-wrong_orientation.json",
+      "current_image": "images/native-fresh-01-wrong_orientation.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.085680518097649e-07,
+        "yaw_error_rad": 1.5707963245983403,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007617594025e-10,
+        "angular_speed_rad_s": 2.7627747729594677e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5128,
+        "target_box_xyxy_normalized": [
+          0.471875,
+          0.48333333333333334,
+          0.63125,
+          0.7833333333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1649035830050707
+    },
+    {
+      "id": "native-fresh-01-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-01-unreleased.json",
+      "current_image": "images/native-fresh-01-unreleased.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.004957950284598744,
+        "yaw_error_rad": 0.09322061951319065,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.00014125936596424426,
+        "angular_speed_rad_s": 0.0021096175912210294
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6054,
+        "target_box_xyxy_normalized": [
+          0.4375,
+          0.5333333333333333,
+          0.6875,
+          0.71875
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.3170457920059562
+    },
+    {
+      "id": "native-fresh-01-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-moving_alias.json",
+      "current_image": "images/native-fresh-01-moving_alias.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805231593294e-07,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627748443762177e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6411,
+        "target_box_xyxy_normalized": [
+          0.4375,
+          0.5270833333333333,
+          0.68125,
+          0.7354166666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-01-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.15946629201062024
+    },
+    {
+      "id": "native-fresh-01-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-01",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408556,
+          -0.08788
+        ],
+        "goal_yaw_rad": 0.108745
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-01-occluded.json",
+      "current_image": "images/native-fresh-01-occluded.png",
+      "goal_image": "images/native-fresh-01-complete.png",
+      "state_file": "states/native-fresh-01-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805231593294e-07,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076023173213e-10,
+        "angular_speed_rad_s": 2.7627748443762177e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15053887502290308
+    },
+    {
+      "id": "native-fresh-02-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-complete.json",
+      "current_image": "images/native-fresh-02-complete.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805238756817e-07,
+        "yaw_error_rad": 2.1965562285730655e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076103292645e-10,
+        "angular_speed_rad_s": 2.762774864936268e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6363,
+        "target_box_xyxy_normalized": [
+          0.421875,
+          0.5541666666666667,
+          0.6515625,
+          0.8041666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15307900006882846
+    },
+    {
+      "id": "native-fresh-02-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-missing_target.json",
+      "current_image": "images/native-fresh-02-missing_target.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.14909683307632804
+    },
+    {
+      "id": "native-fresh-02-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-wrong_object.json",
+      "current_image": "images/native-fresh-02-wrong_object.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1677175408694893
+    },
+    {
+      "id": "native-fresh-02-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-wrong_position.json",
+      "current_image": "images/native-fresh-02-wrong_position.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.16999996539197365,
+        "yaw_error_rad": 2.1965562285730655e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076099279125e-10,
+        "angular_speed_rad_s": 2.762774638458862e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 7621,
+        "target_box_xyxy_normalized": [
+          0.5484375,
+          0.65,
+          0.80625,
+          0.9291666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15935041708871722
+    },
+    {
+      "id": "native-fresh-02-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-wrong_orientation.json",
+      "current_image": "images/native-fresh-02-wrong_orientation.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805236916752e-07,
+        "yaw_error_rad": 1.5707963245983396,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075876397346e-10,
+        "angular_speed_rad_s": 2.762774700191106e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5807,
+        "target_box_xyxy_normalized": [
+          0.4265625,
+          0.5354166666666667,
+          0.6265625,
+          0.8229166666666666
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.156012708786875
+    },
+    {
+      "id": "native-fresh-02-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-02-unreleased.json",
+      "current_image": "images/native-fresh-02-unreleased.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.009659729068656857,
+        "yaw_error_rad": 0.09530514903867345,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.0001646147627922026,
+        "angular_speed_rad_s": 0.0017225131983673004
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6060,
+        "target_box_xyxy_normalized": [
+          0.4234375,
+          0.5583333333333333,
+          0.6640625,
+          0.7875
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.30238020909018815
+    },
+    {
+      "id": "native-fresh-02-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-moving_alias.json",
+      "current_image": "images/native-fresh-02-moving_alias.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805238756817e-07,
+        "yaw_error_rad": 2.1965562285730655e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.762774864936268e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6363,
+        "target_box_xyxy_normalized": [
+          0.421875,
+          0.5541666666666667,
+          0.6515625,
+          0.8041666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-02-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.16568733286112547
+    },
+    {
+      "id": "native-fresh-02-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-02",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.406571,
+          -0.143655
+        ],
+        "goal_yaw_rad": -0.113355
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-02-occluded.json",
+      "current_image": "images/native-fresh-02-occluded.png",
+      "goal_image": "images/native-fresh-02-complete.png",
+      "state_file": "states/native-fresh-02-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805238756817e-07,
+        "yaw_error_rad": 2.1965562285730655e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076103292645e-10,
+        "angular_speed_rad_s": 2.762774864936268e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.14938875008374453
+    },
+    {
+      "id": "native-fresh-03-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-complete.json",
+      "current_image": "images/native-fresh-03-complete.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.085680522576776e-07,
+        "yaw_error_rad": 2.1965561453063387e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076224601354e-10,
+        "angular_speed_rad_s": 2.7627746003704696e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6452,
+        "target_box_xyxy_normalized": [
+          0.4125,
+          0.5645833333333333,
+          0.6515625,
+          0.80625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15268887509591877
+    },
+    {
+      "id": "native-fresh-03-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-missing_target.json",
+      "current_image": "images/native-fresh-03-missing_target.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.14757291693240404
+    },
+    {
+      "id": "native-fresh-03-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-wrong_object.json",
+      "current_image": "images/native-fresh-03-wrong_object.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.14345937501639128
+    },
+    {
+      "id": "native-fresh-03-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-wrong_position.json",
+      "current_image": "images/native-fresh-03-wrong_position.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.1699999809046452,
+        "yaw_error_rad": 2.1965561453063387e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007614416437e-10,
+        "angular_speed_rad_s": 2.7627746918713737e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 7740,
+        "target_box_xyxy_normalized": [
+          0.5328125,
+          0.6770833333333334,
+          0.7984375,
+          0.9479166666666666
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1627184171229601
+    },
+    {
+      "id": "native-fresh-03-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-wrong_orientation.json",
+      "current_image": "images/native-fresh-03-wrong_orientation.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805218744015e-07,
+        "yaw_error_rad": 1.57079632459834,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076349602144e-10,
+        "angular_speed_rad_s": 2.7627746284747634e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5768,
+        "target_box_xyxy_normalized": [
+          0.4265625,
+          0.5354166666666667,
+          0.6171875,
+          0.8354166666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.21198462508618832
+    },
+    {
+      "id": "native-fresh-03-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-03-unreleased.json",
+      "current_image": "images/native-fresh-03-unreleased.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.0018213926768696966,
+        "yaw_error_rad": 0.0321548938920233,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 8.342006185597791e-05,
+        "angular_speed_rad_s": 0.003189707161636253
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6096,
+        "target_box_xyxy_normalized": [
+          0.4125,
+          0.5666666666666667,
+          0.6546875,
+          0.8020833333333334
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.3648869169410318
+    },
+    {
+      "id": "native-fresh-03-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-moving_alias.json",
+      "current_image": "images/native-fresh-03-moving_alias.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.085680522576776e-07,
+        "yaw_error_rad": 2.1965561453063387e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627746003704696e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6452,
+        "target_box_xyxy_normalized": [
+          0.4125,
+          0.5645833333333333,
+          0.6515625,
+          0.80625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-03-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.15092491684481502
+    },
+    {
+      "id": "native-fresh-03-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-03",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.414032,
+          -0.141474
+        ],
+        "goal_yaw_rad": 0.034271
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-03-occluded.json",
+      "current_image": "images/native-fresh-03-occluded.png",
+      "goal_image": "images/native-fresh-03-complete.png",
+      "state_file": "states/native-fresh-03-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.085680522576776e-07,
+        "yaw_error_rad": 2.1965561453063387e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076224601354e-10,
+        "angular_speed_rad_s": 2.7627746003704696e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15113783278502524
+    },
+    {
+      "id": "native-fresh-04-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-complete.json",
+      "current_image": "images/native-fresh-04-complete.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.08568052346597e-07,
+        "yaw_error_rad": 2.196556117550763e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007596535428e-10,
+        "angular_speed_rad_s": 2.762774740631486e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6435,
+        "target_box_xyxy_normalized": [
+          0.39375,
+          0.56875,
+          0.634375,
+          0.80625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1486908751539886
+    },
+    {
+      "id": "native-fresh-04-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-missing_target.json",
+      "current_image": "images/native-fresh-04-missing_target.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.14562516706064343
+    },
+    {
+      "id": "native-fresh-04-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-wrong_object.json",
+      "current_image": "images/native-fresh-04-wrong_object.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1439417500514537
+    },
+    {
+      "id": "native-fresh-04-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-wrong_position.json",
+      "current_image": "images/native-fresh-04-wrong_position.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.1699999809087061,
+        "yaw_error_rad": 2.196556110611869e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075932000528e-10,
+        "angular_speed_rad_s": 2.7627747366418353e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 7672,
+        "target_box_xyxy_normalized": [
+          0.515625,
+          0.6791666666666667,
+          0.78125,
+          0.94375
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15392862516455352
+    },
+    {
+      "id": "native-fresh-04-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-wrong_orientation.json",
+      "current_image": "images/native-fresh-04-wrong_orientation.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805227146977e-07,
+        "yaw_error_rad": 1.5707963245983407,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.8600758278845e-10,
+        "angular_speed_rad_s": 2.762774831105213e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5810,
+        "target_box_xyxy_normalized": [
+          0.4109375,
+          0.5375,
+          0.596875,
+          0.8416666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.18532220809720457
+    },
+    {
+      "id": "native-fresh-04-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-04-unreleased.json",
+      "current_image": "images/native-fresh-04-unreleased.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.0004862455797207916,
+        "yaw_error_rad": 0.0006460950707064331,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.00017784434074092785,
+        "angular_speed_rad_s": 0.0007905897147362954
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6025,
+        "target_box_xyxy_normalized": [
+          0.39375,
+          0.5708333333333333,
+          0.634375,
+          0.80625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.36603849986568093
+    },
+    {
+      "id": "native-fresh-04-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-moving_alias.json",
+      "current_image": "images/native-fresh-04-moving_alias.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.08568052346597e-07,
+        "yaw_error_rad": 2.196556117550763e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.762774740631486e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6435,
+        "target_box_xyxy_normalized": [
+          0.39375,
+          0.56875,
+          0.634375,
+          0.80625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-04-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.20214437507092953
+    },
+    {
+      "id": "native-fresh-04-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-04",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.397633,
+          -0.158694
+        ],
+        "goal_yaw_rad": 0.034309
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-04-occluded.json",
+      "current_image": "images/native-fresh-04-occluded.png",
+      "goal_image": "images/native-fresh-04-complete.png",
+      "state_file": "states/native-fresh-04-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.08568052346597e-07,
+        "yaw_error_rad": 2.196556117550763e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007596535428e-10,
+        "angular_speed_rad_s": 2.762774740631486e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.20261191693134606
+    },
+    {
+      "id": "native-fresh-05-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-complete.json",
+      "current_image": "images/native-fresh-05-complete.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805238887924e-07,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007620047699e-10,
+        "angular_speed_rad_s": 2.7627749597055664e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6542,
+        "target_box_xyxy_normalized": [
+          0.40625,
+          0.5583333333333333,
+          0.659375,
+          0.74375
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.20050008408725262
+    },
+    {
+      "id": "native-fresh-05-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-missing_target.json",
+      "current_image": "images/native-fresh-05-missing_target.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.2537514588329941
+    },
+    {
+      "id": "native-fresh-05-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-wrong_object.json",
+      "current_image": "images/native-fresh-05-wrong_object.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.22842062497511506
+    },
+    {
+      "id": "native-fresh-05-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-wrong_position.json",
+      "current_image": "images/native-fresh-05-wrong_position.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.16999998611434738,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076290467912e-10,
+        "angular_speed_rad_s": 2.7627748642796775e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 7453,
+        "target_box_xyxy_normalized": [
+          0.540625,
+          0.6458333333333334,
+          0.8140625,
+          0.84375
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.18164508300833404
+    },
+    {
+      "id": "native-fresh-05-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-wrong_orientation.json",
+      "current_image": "images/native-fresh-05-wrong_orientation.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805225659783e-07,
+        "yaw_error_rad": 1.5707963245983396,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075413036313e-10,
+        "angular_speed_rad_s": 2.7627746935418922e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5141,
+        "target_box_xyxy_normalized": [
+          0.4546875,
+          0.4979166666666667,
+          0.596875,
+          0.8145833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.20235404092818499
+    },
+    {
+      "id": "native-fresh-05-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-05-unreleased.json",
+      "current_image": "images/native-fresh-05-unreleased.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.0007963048902783879,
+        "yaw_error_rad": 0.021337547228718334,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 8.43565121019971e-05,
+        "angular_speed_rad_s": 0.002898028939187413
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6081,
+        "target_box_xyxy_normalized": [
+          0.40625,
+          0.5604166666666667,
+          0.6609375,
+          0.7416666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.37383699999190867
+    },
+    {
+      "id": "native-fresh-05-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-moving_alias.json",
+      "current_image": "images/native-fresh-05-moving_alias.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805238887924e-07,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627749597055664e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6542,
+        "target_box_xyxy_normalized": [
+          0.40625,
+          0.5583333333333333,
+          0.659375,
+          0.74375
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-05-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.20940370904281735
+    },
+    {
+      "id": "native-fresh-05-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-05",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.388213,
+          -0.132743
+        ],
+        "goal_yaw_rad": 0.082825
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-05-occluded.json",
+      "current_image": "images/native-fresh-05-occluded.png",
+      "goal_image": "images/native-fresh-05-complete.png",
+      "state_file": "states/native-fresh-05-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805238887924e-07,
+        "yaw_error_rad": 2.19655632571758e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007620047699e-10,
+        "angular_speed_rad_s": 2.7627749597055664e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.21350820898078382
+    },
+    {
+      "id": "native-fresh-06-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-complete.json",
+      "current_image": "images/native-fresh-06-complete.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805236948894e-07,
+        "yaw_error_rad": 2.196556110611869e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075628500246e-10,
+        "angular_speed_rad_s": 2.7627746266401943e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5436,
+        "target_box_xyxy_normalized": [
+          0.428125,
+          0.5125,
+          0.5875,
+          0.8229166666666666
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.16788149997591972
+    },
+    {
+      "id": "native-fresh-06-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-missing_target.json",
+      "current_image": "images/native-fresh-06-missing_target.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15836825012229383
+    },
+    {
+      "id": "native-fresh-06-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-wrong_object.json",
+      "current_image": "images/native-fresh-06-wrong_object.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.18243145802989602
+    },
+    {
+      "id": "native-fresh-06-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-wrong_position.json",
+      "current_image": "images/native-fresh-06-wrong_position.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.1699999730876159,
+        "yaw_error_rad": 2.196556110611869e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075707049464e-10,
+        "angular_speed_rad_s": 2.7627747041931264e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6810,
+        "target_box_xyxy_normalized": [
+          0.5,
+          0.6666666666666666,
+          0.6859375,
+          1.0
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1523462499026209
+    },
+    {
+      "id": "native-fresh-06-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-wrong_orientation.json",
+      "current_image": "images/native-fresh-06-wrong_orientation.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805207932379e-07,
+        "yaw_error_rad": 1.5707963245983412,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007557613593e-10,
+        "angular_speed_rad_s": 2.7627748711199715e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6455,
+        "target_box_xyxy_normalized": [
+          0.375,
+          0.55625,
+          0.6234375,
+          0.7604166666666666
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.19043029099702835
+    },
+    {
+      "id": "native-fresh-06-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-06-unreleased.json",
+      "current_image": "images/native-fresh-06-unreleased.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.008513920669941128,
+        "yaw_error_rad": 0.11510978876609326,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 9.207327265153755e-05,
+        "angular_speed_rad_s": 0.004068794820441706
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5476,
+        "target_box_xyxy_normalized": [
+          0.4234375,
+          0.5166666666666667,
+          0.60625,
+          0.8125
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.3357307082042098
+    },
+    {
+      "id": "native-fresh-06-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-moving_alias.json",
+      "current_image": "images/native-fresh-06-moving_alias.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805236948894e-07,
+        "yaw_error_rad": 2.196556110611869e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627746266401943e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5436,
+        "target_box_xyxy_normalized": [
+          0.428125,
+          0.5125,
+          0.5875,
+          0.8229166666666666
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-06-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.17148975003510714
+    },
+    {
+      "id": "native-fresh-06-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-06",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407164,
+          -0.1118
+        ],
+        "goal_yaw_rad": -0.039422
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-06-occluded.json",
+      "current_image": "images/native-fresh-06-occluded.png",
+      "goal_image": "images/native-fresh-06-complete.png",
+      "state_file": "states/native-fresh-06-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805236948894e-07,
+        "yaw_error_rad": 2.196556110611869e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075628500246e-10,
+        "angular_speed_rad_s": 2.7627746266401943e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.18684233305975795
+    },
+    {
+      "id": "native-fresh-07-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-complete.json",
+      "current_image": "images/native-fresh-07-complete.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805235504176e-07,
+        "yaw_error_rad": 2.1965561730619143e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075777683889e-10,
+        "angular_speed_rad_s": 2.762774716193186e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6391,
+        "target_box_xyxy_normalized": [
+          0.4453125,
+          0.5208333333333334,
+          0.6875,
+          0.73125
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.16730595915578306
+    },
+    {
+      "id": "native-fresh-07-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-missing_target.json",
+      "current_image": "images/native-fresh-07-missing_target.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.20576712512411177
+    },
+    {
+      "id": "native-fresh-07-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-wrong_object.json",
+      "current_image": "images/native-fresh-07-wrong_object.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1450069157872349
+    },
+    {
+      "id": "native-fresh-07-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-wrong_position.json",
+      "current_image": "images/native-fresh-07-wrong_position.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.1699999738964966,
+        "yaw_error_rad": 2.1965561730619143e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075721217759e-10,
+        "angular_speed_rad_s": 2.762774649774538e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 7412,
+        "target_box_xyxy_normalized": [
+          0.5765625,
+          0.60625,
+          0.840625,
+          0.8333333333333334
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15406808303669095
+    },
+    {
+      "id": "native-fresh-07-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-wrong_orientation.json",
+      "current_image": "images/native-fresh-07-wrong_orientation.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805193015769e-07,
+        "yaw_error_rad": 1.5707963245983403,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007650487993e-10,
+        "angular_speed_rad_s": 2.762774717951395e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5109,
+        "target_box_xyxy_normalized": [
+          0.4765625,
+          0.4791666666666667,
+          0.6390625,
+          0.7770833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.16164912492968142
+    },
+    {
+      "id": "native-fresh-07-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-07-unreleased.json",
+      "current_image": "images/native-fresh-07-unreleased.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.00020623360292834977,
+        "yaw_error_rad": 0.0009504553610887936,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.00010101651592376203,
+        "angular_speed_rad_s": 0.0029717872568436514
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5875,
+        "target_box_xyxy_normalized": [
+          0.4453125,
+          0.5208333333333334,
+          0.6875,
+          0.73125
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.34811041597276926
+    },
+    {
+      "id": "native-fresh-07-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-moving_alias.json",
+      "current_image": "images/native-fresh-07-moving_alias.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805235504176e-07,
+        "yaw_error_rad": 2.1965561730619143e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.762774716193186e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6391,
+        "target_box_xyxy_normalized": [
+          0.4453125,
+          0.5208333333333334,
+          0.6875,
+          0.73125
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-07-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.17904341709800065
+    },
+    {
+      "id": "native-fresh-07-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-07",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.407948,
+          -0.092351
+        ],
+        "goal_yaw_rad": -0.031739
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-07-occluded.json",
+      "current_image": "images/native-fresh-07-occluded.png",
+      "goal_image": "images/native-fresh-07-complete.png",
+      "state_file": "states/native-fresh-07-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805235504176e-07,
+        "yaw_error_rad": 2.1965561730619143e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075777683889e-10,
+        "angular_speed_rad_s": 2.762774716193186e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.15467354096472263
+    },
+    {
+      "id": "native-fresh-08-complete",
+      "cohort": "native",
+      "scenario": "complete",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-complete.json",
+      "current_image": "images/native-fresh-08-complete.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-complete.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805234927955e-07,
+        "yaw_error_rad": 2.196556256328641e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076203576193e-10,
+        "angular_speed_rad_s": 2.7627748307193123e-09
+      },
+      "expected_verdict": "complete",
+      "note": "The free narrow shoe settles at the goal with table support and no robot contact.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5482,
+        "target_box_xyxy_normalized": [
+          0.3765625,
+          0.5416666666666666,
+          0.54375,
+          0.8520833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.14808970806188881
+    },
+    {
+      "id": "native-fresh-08-missing_target",
+      "cohort": "native",
+      "scenario": "missing_target",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-missing_target.json",
+      "current_image": "images/native-fresh-08-missing_target.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-missing_target.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target body is absent from the model; presence is a privileged native lookup.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1457598339766264
+    },
+    {
+      "id": "native-fresh-08-wrong_object",
+      "cohort": "native",
+      "scenario": "wrong_object",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-wrong_object.json",
+      "current_image": "images/native-fresh-08-wrong_object.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-wrong_object.json",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "expected_verdict": "incomplete",
+      "note": "An orange decoy replaces the target body; the requested target is absent.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1475293750409037
+    },
+    {
+      "id": "native-fresh-08-wrong_position",
+      "cohort": "native",
+      "scenario": "wrong_position",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-wrong_position.json",
+      "current_image": "images/native-fresh-08-wrong_position.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-wrong_position.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.16999998284747536,
+        "yaw_error_rad": 2.196556256328641e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007609267131e-10,
+        "angular_speed_rad_s": 2.762774767015277e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts 170 mm along world X from its goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6036,
+        "target_box_xyxy_normalized": [
+          0.440625,
+          0.7,
+          0.621875,
+          1.0
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.1714294170960784
+    },
+    {
+      "id": "native-fresh-08-wrong_orientation",
+      "cohort": "native",
+      "scenario": "wrong_orientation",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-wrong_orientation.json",
+      "current_image": "images/native-fresh-08-wrong_orientation.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-wrong_orientation.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805247535129e-07,
+        "yaw_error_rad": 1.570796324598341,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075919835262e-10,
+        "angular_speed_rad_s": 2.7627747673830424e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "The target starts with a 90 degree yaw error relative to the goal.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 6679,
+        "target_box_xyxy_normalized": [
+          0.3265625,
+          0.5770833333333333,
+          0.5765625,
+          0.8
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.16051816591061652
+    },
+    {
+      "id": "native-fresh-08-unreleased",
+      "cohort": "native",
+      "scenario": "unreleased",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 6.799999999999473,
+      "packet_file": "packets/native-fresh-08-unreleased.json",
+      "current_image": "images/native-fresh-08-unreleased.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-unreleased.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.0006226343876612241,
+        "yaw_error_rad": 0.0018526564583216457,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.0002006044217506633,
+        "angular_speed_rad_s": 0.0009429368231686818
+      },
+      "expected_verdict": "incomplete",
+      "note": "An authored approach and close create real finger contact while the shoe remains table-supported; this is not a lift policy.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5270,
+        "target_box_xyxy_normalized": [
+          0.3765625,
+          0.5416666666666666,
+          0.54375,
+          0.8520833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.31282049999572337
+    },
+    {
+      "id": "native-fresh-08-moving_alias",
+      "cohort": "native",
+      "scenario": "moving_alias",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-moving_alias.json",
+      "current_image": "images/native-fresh-08-moving_alias.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-moving_alias.json",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805234927955e-07,
+        "yaw_error_rad": 2.196556256328641e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627748307193123e-09
+      },
+      "expected_verdict": "incomplete",
+      "note": "A declared reset intervention changes free-body linear velocity to [0.12,0,0] m/s without advancing time. It replaces the last measured sample, retaining its timestamp; no duplicate time or measured impulse is claimed.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 5482,
+        "target_box_xyxy_normalized": [
+          0.3765625,
+          0.5416666666666666,
+          0.54375,
+          0.8520833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": {
+        "paired_case_id": "native-fresh-08-complete",
+        "pose_identical": true,
+        "png_byte_identical": true
+      },
+      "generation_wall_seconds": 0.16724866605363786
+    },
+    {
+      "id": "native-fresh-08-occluded",
+      "cohort": "native",
+      "scenario": "occluded",
+      "layout_id": "fresh-08",
+      "contract": {
+        "object_id": "shoe_trainer_left",
+        "frame_id": "workstation_world",
+        "goal_xy_m": [
+          0.408335,
+          -0.165
+        ],
+        "goal_yaw_rad": 0.052421
+      },
+      "now_s": 0.6000000000000004,
+      "packet_file": "packets/native-fresh-08-occluded.json",
+      "current_image": "images/native-fresh-08-occluded.png",
+      "goal_image": "images/native-fresh-08-complete.png",
+      "state_file": "states/native-fresh-08-occluded.json",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805234927955e-07,
+        "yaw_error_rad": 2.196556256328641e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076203576193e-10,
+        "angular_speed_rad_s": 2.7627748307193123e-09
+      },
+      "expected_verdict": "complete",
+      "note": "An opaque fixed inspection cover hides the shoe from the camera; privileged native telemetry remains available.",
+      "generation_valid": true,
+      "generation_errors": [],
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "alias": null,
+      "generation_wall_seconds": 0.22188700013794005
+    }
+  ],
+  "assets": {
+    "profile": "piper",
+    "repository": "https://github.com/google-deepmind/mujoco_menagerie",
+    "commit": "0059d4335f8156206f63a35662313385f7ad6d74",
+    "files_verified": 90,
+    "bytes_verified": 34562302,
+    "lock_sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+    "simulation_asset_license": "MIT"
+  },
+  "mujoco_version": "3.15.0",
+  "source_fingerprints": {
+    "local_goal_scenes.py": "58e8a01aae646a4e9078ebb1b2e629a23c93ce42198b027696a6e77dea0858b0",
+    "local_goal_verifier.py": "234d6374ae01cfdfd56fbfe1a4e1f27fc58baf8df88f47b02a30ca64bc238da5",
+    "image_goal_scenes.py": "1fe41c3fe4d372b068681caf3f63766285b9238976043a9e15fe4dbadb40b79a",
+    "workstation.py": "2a6aa6686b5b273efcfb21156952df8ceca88d991674cd17df92f2dccc11b701",
+    "reference_sim.py": "c1201d22eb13dd07a236ee63cc4ba68e129f6067e8db61ed41af2d820eb5e3b8",
+    "robot_profiles.py": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d",
+    "asset_library.py": "12520ca13b7806004be37a0d7e0d1e023c90410c1eba899296fdcd5b28fdc7f7",
+    "robot_profiles.lock.json": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+    "asset_catalog.json": "592f363389a96fef7f9223737aa72a2f1a74f400238924bf6790ec5bfd3302b7"
+  },
+  "generation_wall_seconds": 12.960073207970709,
+  "scope": "Fresh seeded authored native states using frozen narrow rigid shoe/PiPER mechanics. No trained policy, hardware sensing, physical calibration or real-world transfer claim.",
+  "oracle": "Frozen image_goal_scenes._measure/observe numeric predicates over all 100 native samples; independent of local_goal_verifier decisions.",
+  "moving_alias_scope": "The latest native observation is replaced after an explicit instantaneous velocity reset at the same timestamp; earlier 99 samples remain unchanged.",
+  "telemetry_scope": "Privileged native poses, identity and forces with explicit zero uncertainty assumptions, not real calibrated sensors.",
+  "rendering": "Native MuJoCo 640x480 RGB and geom-ID segmentation; no image synthesis model."
+}
