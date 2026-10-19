@@ -1,0 +1,2580 @@
+{
+  "schema": "dvidia.image-goal-scenes/v1",
+  "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+  "criteria": {
+    "position_tolerance_m": 0.025,
+    "yaw_tolerance_rad": 0.2617993877991494,
+    "linear_speed_max_m_s": 0.01,
+    "angular_speed_max_rad_s": 0.05,
+    "support_force_min_n": 0.01,
+    "robot_force_max_n": 0.01,
+    "continuous_dwell_s": 0.2
+  },
+  "cases": [
+    {
+      "id": "layout-01-complete",
+      "category": "complete",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-complete.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805225155038e-07,
+        "yaw_error_rad": 2.1965561156353097e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075820885874e-10,
+        "angular_speed_rad_s": 2.7627744970784057e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3999999772538078,
+          -0.10000010615852632,
+          -0.00010773874568926898
+        ],
+        "position_error_m": 1.0856805225155038e-07,
+        "yaw_error_rad": 2.1965561156353097e-09,
+        "linear_speed_m_s": 9.860075820885874e-10,
+        "angular_speed_rad_s": 2.7627744970784057e-09,
+        "table_support_force_n": 0.2942999990014351,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741727623932e-07,
+            "max": 1.0856805225155038e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.196340269667258e-09,
+            "max": 2.1965561156353097e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860075820885874e-10,
+            "max": 1.0577925091606234e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627744970784057e-09,
+            "max": 2.046823336044342e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886606,
+            "max": 0.2942999990014351
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6192,
+        "target_box_xyxy_normalized": [
+          0.4296875,
+          0.51875,
+          0.6578125,
+          0.7625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-complete.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-missing_target",
+      "category": "missing_target",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-missing_target.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-missing_target.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-01-wrong_object",
+      "category": "wrong_object",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-wrong_object.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-wrong_object.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-01-wrong_position",
+      "category": "wrong_position",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-wrong_position.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.1699999772538407,
+        "yaw_error_rad": 2.1965561161782934e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075879684076e-10,
+        "angular_speed_rad_s": 2.7627747009029746e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.5699999772538076,
+          -0.10000010615852632,
+          -0.00010773874568926917
+        ],
+        "position_error_m": 0.1699999772538407,
+        "yaw_error_rad": 2.1965561161782934e-09,
+        "linear_speed_m_s": 9.860075879684076e-10,
+        "angular_speed_rad_s": 2.7627747009029746e-09,
+        "table_support_force_n": 0.29429999900143505,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.1699999772538407,
+            "max": 0.1699999772540272
+          },
+          "yaw_error_rad": {
+            "min": 2.1963402702132865e-09,
+            "max": 2.1965561161782934e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860075879684076e-10,
+            "max": 1.057792509173234e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627747009029746e-09,
+            "max": 2.0468233362534212e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886605,
+            "max": 0.29429999900143505
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 7452,
+        "target_box_xyxy_normalized": [
+          0.5453125,
+          0.6291666666666667,
+          0.8,
+          0.9041666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-wrong_position.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-wrong_orientation",
+      "category": "wrong_orientation",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-wrong_orientation.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805256849158e-07,
+        "yaw_error_rad": 1.5707963245983405,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076309132707e-10,
+        "angular_speed_rad_s": 2.7627746996178486e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.40000010615852655,
+          -0.10000002274619275,
+          -0.00010773874568926942
+        ],
+        "position_error_m": 1.0856805256849158e-07,
+        "yaw_error_rad": 1.5707963245983405,
+        "linear_speed_m_s": 9.860076309132707e-10,
+        "angular_speed_rad_s": 2.7627746996178486e-09,
+        "table_support_force_n": 0.2942999990014349,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741754859924e-07,
+            "max": 1.0856805256849158e-07
+          },
+          "yaw_error_rad": {
+            "min": 1.57079632459834,
+            "max": 1.5707963245985561
+          },
+          "linear_speed_m_s": {
+            "min": 9.860076309132707e-10,
+            "max": 1.057792509120737e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627746996178486e-09,
+            "max": 2.0468233360765137e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886607,
+            "max": 0.2942999990014349
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5574,
+        "target_box_xyxy_normalized": [
+          0.4375,
+          0.5,
+          0.63125,
+          0.7791666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-wrong_orientation.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-unreleased",
+      "category": "unreleased",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-unreleased.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.00574563428980446,
+        "yaw_error_rad": 0.08440615838439973,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 9.969011014506973e-05,
+        "angular_speed_rad_s": 0.003462491733548149
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.40145485082066407,
+          -0.09444160792298799,
+          -0.00010962509298383693
+        ],
+        "position_error_m": 0.00574563428980446,
+        "yaw_error_rad": 0.08440615838439973,
+        "linear_speed_m_s": 9.969011014506973e-05,
+        "angular_speed_rad_s": 0.003462491733548149,
+        "table_support_force_n": 0.2995624074490855,
+        "robot_contact_force_n": 0.7619265340093823,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.00574563428980446,
+            "max": 0.005753664112566862
+          },
+          "yaw_error_rad": {
+            "min": 0.08437097640564,
+            "max": 0.08440615838439973
+          },
+          "linear_speed_m_s": {
+            "min": 9.643102940812748e-05,
+            "max": 9.969011014506973e-05
+          },
+          "angular_speed_rad_s": {
+            "min": 0.003462491733548149,
+            "max": 0.005988177262940627
+          },
+          "table_support_force_n": {
+            "min": 0.2995624074490855,
+            "max": 0.30103792478353864
+          },
+          "robot_contact_force_n": {
+            "min": 0.760598912244461,
+            "max": 0.7619265340093823
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5914,
+        "target_box_xyxy_normalized": [
+          0.4296875,
+          0.5229166666666667,
+          0.665625,
+          0.75
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-unreleased.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-moving_alias",
+      "category": "moving_alias",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-moving_alias.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805225155038e-07,
+        "yaw_error_rad": 2.1965561156353097e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627744970784057e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3999999772538078,
+          -0.10000010615852632,
+          -0.00010773874568926898
+        ],
+        "position_error_m": 1.0856805225155038e-07,
+        "yaw_error_rad": 2.1965561156353097e-09,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627744970784057e-09,
+        "table_support_force_n": 0.3624151236609657,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.0,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 0,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": null,
+            "max": null
+          },
+          "robot_contact_force_n": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6192,
+        "target_box_xyxy_normalized": [
+          0.4296875,
+          0.51875,
+          0.6578125,
+          0.7625
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-moving_alias.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-occluded",
+      "category": "occluded",
+      "layout_id": "layout-01",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-01-occluded.png",
+      "goal_image": "images/layout-01-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805225155038e-07,
+        "yaw_error_rad": 2.1965561156353097e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860075820885874e-10,
+        "angular_speed_rad_s": 2.7627744970784057e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3999999772538078,
+          -0.10000010615852632,
+          -0.00010773874568926898
+        ],
+        "position_error_m": 1.0856805225155038e-07,
+        "yaw_error_rad": 2.1965561156353097e-09,
+        "linear_speed_m_s": 9.860075820885874e-10,
+        "angular_speed_rad_s": 2.7627744970784057e-09,
+        "table_support_force_n": 0.2942999990014351,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741727623932e-07,
+            "max": 1.0856805225155038e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.196340269667258e-09,
+            "max": 2.1965561156353097e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860075820885874e-10,
+            "max": 1.0577925091606234e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627744970784057e-09,
+            "max": 2.046823336044342e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886606,
+            "max": 0.2942999990014351
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-01-occluded.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-complete",
+      "category": "complete",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-complete.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805243386722e-07,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007602226177e-10,
+        "angular_speed_rad_s": 2.7627747344185066e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4299999858101823,
+          -0.16000010763675526,
+          -0.00010773874568926887
+        ],
+        "position_error_m": 1.0856805243386722e-07,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "linear_speed_m_s": 9.86007602226177e-10,
+        "angular_speed_rad_s": 2.7627747344185066e-09,
+        "table_support_force_n": 0.294299999001435,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741745389504e-07,
+            "max": 1.0856805243386722e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.1963403873392906e-09,
+            "max": 2.1965563118397924e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007602226177e-10,
+            "max": 1.0577925091174393e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627747344185066e-09,
+            "max": 2.0468233361619074e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866115,
+            "max": 0.294299999001435
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6084,
+        "target_box_xyxy_normalized": [
+          0.3921875,
+          0.5708333333333333,
+          0.5953125,
+          0.8666666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-complete.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-missing_target",
+      "category": "missing_target",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-missing_target.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-missing_target.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-02-wrong_object",
+      "category": "wrong_object",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-wrong_object.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-wrong_object.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-02-wrong_position",
+      "category": "wrong_position",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-wrong_position.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.1699999858102173,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007596264554e-10,
+        "angular_speed_rad_s": 2.7627749443387563e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.5999999858101832,
+          -0.16000010763675523,
+          -0.00010773874568926928
+        ],
+        "position_error_m": 0.1699999858102173,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "linear_speed_m_s": 9.86007596264554e-10,
+        "angular_speed_rad_s": 2.7627749443387563e-09,
+        "table_support_force_n": 0.29429999900143505,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.1699999858102173,
+            "max": 0.1699999858103543
+          },
+          "yaw_error_rad": {
+            "min": 2.1963403873392906e-09,
+            "max": 2.1965563118397924e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007596264554e-10,
+            "max": 1.0577925091117024e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627749443387563e-09,
+            "max": 2.0468233361806336e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886612,
+            "max": 0.29429999900143505
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6701,
+        "target_box_xyxy_normalized": [
+          0.4765625,
+          0.7229166666666667,
+          0.7015625,
+          1.0
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-wrong_position.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-wrong_orientation",
+      "category": "wrong_orientation",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-wrong_orientation.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805246501234e-07,
+        "yaw_error_rad": 1.5707963245983367,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007540976695e-10,
+        "angular_speed_rad_s": 2.762774938435085e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4300001076367553,
+          -0.16000001418981774,
+          -0.0001077387456892687
+        ],
+        "position_error_m": 1.0856805246501234e-07,
+        "yaw_error_rad": 1.5707963245983367,
+        "linear_speed_m_s": 9.86007540976695e-10,
+        "angular_speed_rad_s": 2.762774938435085e-09,
+        "table_support_force_n": 0.2942999990014351,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.085674174082394e-07,
+            "max": 1.0856805246501234e-07
+          },
+          "yaw_error_rad": {
+            "min": 1.5707963245983363,
+            "max": 1.5707963245985526
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007540976695e-10,
+            "max": 1.0577925091088337e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.762774938435085e-09,
+            "max": 2.04682333632664e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866126,
+            "max": 0.2942999990014351
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6498,
+        "target_box_xyxy_normalized": [
+          0.365625,
+          0.5833333333333334,
+          0.6,
+          0.8458333333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-wrong_orientation.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-unreleased",
+      "category": "unreleased",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-unreleased.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.00112237494618688,
+        "yaw_error_rad": 0.00569434757841164,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.00014160096890228054,
+        "angular_speed_rad_s": 0.0009941703968526277
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.43040182038492686,
+          -0.1610479818214479,
+          -0.00010842273593493796
+        ],
+        "position_error_m": 0.00112237494618688,
+        "yaw_error_rad": 0.00569434757841164,
+        "linear_speed_m_s": 0.00014160096890228054,
+        "angular_speed_rad_s": 0.0009941703968526277,
+        "table_support_force_n": 0.3014209771616913,
+        "robot_contact_force_n": 0.7693653082066636,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.0010952390133150847,
+            "max": 0.00112237494618688
+          },
+          "yaw_error_rad": {
+            "min": 0.005609244269984187,
+            "max": 0.00569434757841164
+          },
+          "linear_speed_m_s": {
+            "min": 0.0001367889163867079,
+            "max": 0.00014160096890228054
+          },
+          "angular_speed_rad_s": {
+            "min": 0.0009941703968526277,
+            "max": 0.0017186694278268843
+          },
+          "table_support_force_n": {
+            "min": 0.3014209771616913,
+            "max": 0.3046279922938624
+          },
+          "robot_contact_force_n": {
+            "min": 0.7684190832360072,
+            "max": 0.7693653082066636
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5816,
+        "target_box_xyxy_normalized": [
+          0.390625,
+          0.5729166666666666,
+          0.5953125,
+          0.8666666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-unreleased.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-moving_alias",
+      "category": "moving_alias",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-moving_alias.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805243386722e-07,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627747344185066e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4299999858101823,
+          -0.16000010763675526,
+          -0.00010773874568926887
+        ],
+        "position_error_m": 1.0856805243386722e-07,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627747344185066e-09,
+        "table_support_force_n": 0.36239906646539655,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.0,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 0,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": null,
+            "max": null
+          },
+          "robot_contact_force_n": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6084,
+        "target_box_xyxy_normalized": [
+          0.3921875,
+          0.5708333333333333,
+          0.5953125,
+          0.8666666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-moving_alias.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-occluded",
+      "category": "occluded",
+      "layout_id": "layout-02",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-02-occluded.png",
+      "goal_image": "images/layout-02-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805243386722e-07,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007602226177e-10,
+        "angular_speed_rad_s": 2.7627747344185066e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4299999858101823,
+          -0.16000010763675526,
+          -0.00010773874568926887
+        ],
+        "position_error_m": 1.0856805243386722e-07,
+        "yaw_error_rad": 2.1965563118397924e-09,
+        "linear_speed_m_s": 9.86007602226177e-10,
+        "angular_speed_rad_s": 2.7627747344185066e-09,
+        "table_support_force_n": 0.294299999001435,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741745389504e-07,
+            "max": 1.0856805243386722e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.1963403873392906e-09,
+            "max": 2.1965563118397924e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007602226177e-10,
+            "max": 1.0577925091174393e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627747344185066e-09,
+            "max": 2.0468233361619074e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866115,
+            "max": 0.294299999001435
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-02-occluded.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-complete",
+      "category": "complete",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-complete.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805227409043e-07,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076492373484e-10,
+        "angular_speed_rad_s": 2.762774894432646e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3799999688429301,
+          -0.07000010400124504,
+          -0.00010773874568926843
+        ],
+        "position_error_m": 1.0856805227409043e-07,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "linear_speed_m_s": 9.860076492373484e-10,
+        "angular_speed_rad_s": 2.762774894432646e-09,
+        "table_support_force_n": 0.2942999990014348,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741726656525e-07,
+            "max": 1.0856805227409043e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.1963403318281394e-09,
+            "max": 2.19655620081749e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860076492373484e-10,
+            "max": 1.0577925090833765e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.762774894432646e-09,
+            "max": 2.046823336032993e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886608,
+            "max": 0.2942999990014348
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6191,
+        "target_box_xyxy_normalized": [
+          0.4359375,
+          0.4875,
+          0.675,
+          0.6854166666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-complete.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-missing_target",
+      "category": "missing_target",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-missing_target.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-missing_target.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-03-wrong_object",
+      "category": "wrong_object",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-wrong_object.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-wrong_object.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-03-wrong_position",
+      "category": "wrong_position",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-wrong_position.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.16999996884296226,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007647555542e-10,
+        "angular_speed_rad_s": 2.762774718512132e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.5499999688429305,
+          -0.07000010400124504,
+          -0.00010773874568926812
+        ],
+        "position_error_m": 0.16999996884296226,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "linear_speed_m_s": 9.86007647555542e-10,
+        "angular_speed_rad_s": 2.762774718512132e-09,
+        "table_support_force_n": 0.2942999990014348,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.16999996884296226,
+            "max": 0.1699999688431964
+          },
+          "yaw_error_rad": {
+            "min": 2.1963403318281394e-09,
+            "max": 2.19655620081749e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007647555542e-10,
+            "max": 1.0577925090868942e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.762774718512132e-09,
+            "max": 2.0468233361579335e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866077,
+            "max": 0.2942999990014348
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 7062,
+        "target_box_xyxy_normalized": [
+          0.5703125,
+          0.5583333333333333,
+          0.828125,
+          0.7666666666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-wrong_position.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-wrong_orientation",
+      "category": "wrong_orientation",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-wrong_orientation.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805243889215e-07,
+        "yaw_error_rad": 1.5707963245983425,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007598072673e-10,
+        "angular_speed_rad_s": 2.7627747152164955e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3800001040012452,
+          -0.07000003115707004,
+          -0.00010773874568926854
+        ],
+        "position_error_m": 1.0856805243889215e-07,
+        "yaw_error_rad": 1.5707963245983425,
+        "linear_speed_m_s": 9.86007598072673e-10,
+        "angular_speed_rad_s": 2.7627747152164955e-09,
+        "table_support_force_n": 0.29429999900143444,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741730644736e-07,
+            "max": 1.0856805243889215e-07
+          },
+          "yaw_error_rad": {
+            "min": 1.570796324598342,
+            "max": 1.570796324598559
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007598072673e-10,
+            "max": 1.0577925090957944e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627747152164955e-09,
+            "max": 2.0468233360100356e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866126,
+            "max": 0.29429999900143444
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 4876,
+        "target_box_xyxy_normalized": [
+          0.4703125,
+          0.44375,
+          0.625,
+          0.7333333333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-wrong_orientation.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-unreleased",
+      "category": "unreleased",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-unreleased.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.0006551670719148867,
+        "yaw_error_rad": 0.003703847249796388,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.00010986191904928065,
+        "angular_speed_rad_s": 0.003368756823804283
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.38020236953882225,
+          -0.0693768704293019,
+          -9.617134314363833e-05
+        ],
+        "position_error_m": 0.0006551670719148867,
+        "yaw_error_rad": 0.003703847249796388,
+        "linear_speed_m_s": 0.00010986191904928065,
+        "angular_speed_rad_s": 0.003368756823804283,
+        "table_support_force_n": 0.2639875277923961,
+        "robot_contact_force_n": 0.7863052928276089,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.0006474789378581962,
+            "max": 0.0006551670719148867
+          },
+          "yaw_error_rad": {
+            "min": 0.003703847249796388,
+            "max": 0.003720938606997237
+          },
+          "linear_speed_m_s": {
+            "min": 0.00010986191904928065,
+            "max": 0.00014294490050929373
+          },
+          "angular_speed_rad_s": {
+            "min": 0.0024920357101732454,
+            "max": 0.0040346175968384084
+          },
+          "table_support_force_n": {
+            "min": 0.25922471284709236,
+            "max": 0.2640607875145524
+          },
+          "robot_contact_force_n": {
+            "min": 0.7857892493442301,
+            "max": 0.7878949274134518
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5657,
+        "target_box_xyxy_normalized": [
+          0.4375,
+          0.48541666666666666,
+          0.675,
+          0.6854166666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-unreleased.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-moving_alias",
+      "category": "moving_alias",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-moving_alias.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805227409043e-07,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.762774894432646e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3799999688429301,
+          -0.07000010400124504,
+          -0.00010773874568926843
+        ],
+        "position_error_m": 1.0856805227409043e-07,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.762774894432646e-09,
+        "table_support_force_n": 0.362350885628384,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.0,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 0,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": null,
+            "max": null
+          },
+          "robot_contact_force_n": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6191,
+        "target_box_xyxy_normalized": [
+          0.4359375,
+          0.4875,
+          0.675,
+          0.6854166666666667
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-moving_alias.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-occluded",
+      "category": "occluded",
+      "layout_id": "layout-03",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-03-occluded.png",
+      "goal_image": "images/layout-03-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805227409043e-07,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076492373484e-10,
+        "angular_speed_rad_s": 2.762774894432646e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.3799999688429301,
+          -0.07000010400124504,
+          -0.00010773874568926843
+        ],
+        "position_error_m": 1.0856805227409043e-07,
+        "yaw_error_rad": 2.19655620081749e-09,
+        "linear_speed_m_s": 9.860076492373484e-10,
+        "angular_speed_rad_s": 2.762774894432646e-09,
+        "table_support_force_n": 0.2942999990014348,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741726656525e-07,
+            "max": 1.0856805227409043e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.1963403318281394e-09,
+            "max": 2.19655620081749e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860076492373484e-10,
+            "max": 1.0577925090833765e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.762774894432646e-09,
+            "max": 2.046823336032993e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886608,
+            "max": 0.2942999990014348
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-03-occluded.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-complete",
+      "category": "complete",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-complete.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805211389336e-07,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076016164131e-10,
+        "angular_speed_rad_s": 2.7627745907984584e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4199999933733547,
+          -0.13000010836562884,
+          -0.00010773874568926879
+        ],
+        "position_error_m": 1.0856805211389336e-07,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "linear_speed_m_s": 9.860076016164131e-10,
+        "angular_speed_rad_s": 2.7627745907984584e-09,
+        "table_support_force_n": 0.294299999001435,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.085674170840469e-07,
+            "max": 1.0856805211389336e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.196340442850442e-09,
+            "max": 2.1965565755177607e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860076016164131e-10,
+            "max": 1.057792509081208e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627745907984584e-09,
+            "max": 2.046823336175752e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866077,
+            "max": 0.294299999001435
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5693,
+        "target_box_xyxy_normalized": [
+          0.3984375,
+          0.5395833333333333,
+          0.5796875,
+          0.8395833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-complete.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-missing_target",
+      "category": "missing_target",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-missing_target.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-missing_target.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-04-wrong_object",
+      "category": "wrong_object",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-wrong_object.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": false,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "supported": false,
+        "released": true,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null
+      },
+      "measured_inputs": {
+        "target_present": false,
+        "target_position_m": null,
+        "position_error_m": null,
+        "yaw_error_rad": null,
+        "linear_speed_m_s": null,
+        "angular_speed_rad_s": null,
+        "table_support_force_n": 0.0,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-wrong_object.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-04-wrong_position",
+      "category": "wrong_position",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-wrong_position.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.16999999337338886,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007605782391e-10,
+        "angular_speed_rad_s": 2.762774742684285e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.5899999933733543,
+          -0.13000010836562884,
+          -0.00010773874568926881
+        ],
+        "position_error_m": 0.16999999337338886,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "linear_speed_m_s": 9.86007605782391e-10,
+        "angular_speed_rad_s": 2.762774742684285e-09,
+        "table_support_force_n": 0.29429999900143494,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.16999999337338886,
+            "max": 0.16999999337348212
+          },
+          "yaw_error_rad": {
+            "min": 2.196340442850442e-09,
+            "max": 2.1965565755177607e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007605782391e-10,
+            "max": 1.0577925090883427e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.762774742684285e-09,
+            "max": 2.0468233361281146e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886607,
+            "max": 0.29429999900143494
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6447,
+        "target_box_xyxy_normalized": [
+          0.4578125,
+          0.7020833333333333,
+          0.6609375,
+          1.0
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-wrong_position.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-wrong_orientation",
+      "category": "wrong_orientation",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-wrong_orientation.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805194707237e-07,
+        "yaw_error_rad": 1.57079632459834,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.86007598437561e-10,
+        "angular_speed_rad_s": 2.7627747672417554e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4200001083656286,
+          -0.13000000662664574,
+          -0.0001077387456892685
+        ],
+        "position_error_m": 1.0856805194707237e-07,
+        "yaw_error_rad": 1.57079632459834,
+        "linear_speed_m_s": 9.86007598437561e-10,
+        "angular_speed_rad_s": 2.7627747672417554e-09,
+        "table_support_force_n": 0.294299999001435,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.0856741703541562e-07,
+            "max": 1.0856805194707237e-07
+          },
+          "yaw_error_rad": {
+            "min": 1.5707963245983396,
+            "max": 1.5707963245985561
+          },
+          "linear_speed_m_s": {
+            "min": 9.86007598437561e-10,
+            "max": 1.0577925091079773e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627747672417554e-09,
+            "max": 2.0468233361383416e-06
+          },
+          "table_support_force_n": {
+            "min": 0.2942989247886607,
+            "max": 0.294299999001435
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 6485,
+        "target_box_xyxy_normalized": [
+          0.359375,
+          0.5645833333333333,
+          0.6015625,
+          0.8
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-wrong_orientation.json",
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-unreleased",
+      "category": "unreleased",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-unreleased.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 0.0010491825564488413,
+        "yaw_error_rad": 0.03690074331083231,
+        "supported": true,
+        "released": false,
+        "linear_speed_m_s": 0.00010064949189093267,
+        "angular_speed_rad_s": 0.002606933470747755
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.42104823526500446,
+          -0.13004457427461588,
+          -0.00011458521544506569
+        ],
+        "position_error_m": 0.0010491825564488413,
+        "yaw_error_rad": 0.03690074331083231,
+        "linear_speed_m_s": 0.00010064949189093267,
+        "angular_speed_rad_s": 0.002606933470747755,
+        "table_support_force_n": 0.3144476609893772,
+        "robot_contact_force_n": 0.790406083741399,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 0.0010350014788722895,
+            "max": 0.0010491825564488413
+          },
+          "yaw_error_rad": {
+            "min": 0.03690074331083231,
+            "max": 0.03691679299236298
+          },
+          "linear_speed_m_s": {
+            "min": 9.490361836146501e-05,
+            "max": 0.00010064949189093267
+          },
+          "angular_speed_rad_s": {
+            "min": 0.002606933470747755,
+            "max": 0.004742951667749043
+          },
+          "table_support_force_n": {
+            "min": 0.3142693700788355,
+            "max": 0.3148922546022384
+          },
+          "robot_contact_force_n": {
+            "min": 0.7881504132862833,
+            "max": 0.790406083741399
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5582,
+        "target_box_xyxy_normalized": [
+          0.396875,
+          0.5416666666666666,
+          0.584375,
+          0.8395833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-unreleased.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-moving_alias",
+      "category": "moving_alias",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-moving_alias.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": false,
+        "physical_conditions_dwell_s": 0.0,
+        "position_error_m": 1.0856805211389336e-07,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627745907984584e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4199999933733547,
+          -0.13000010836562884,
+          -0.00010773874568926879
+        ],
+        "position_error_m": 1.0856805211389336e-07,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "linear_speed_m_s": 0.12,
+        "angular_speed_rad_s": 2.7627745907984584e-09,
+        "table_support_force_n": 0.3623192350084462,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.0,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 0,
+        "target_present_observation_count": 0,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": null,
+            "max": null
+          },
+          "yaw_error_rad": {
+            "min": null,
+            "max": null
+          },
+          "linear_speed_m_s": {
+            "min": null,
+            "max": null
+          },
+          "angular_speed_rad_s": {
+            "min": null,
+            "max": null
+          },
+          "table_support_force_n": {
+            "min": null,
+            "max": null
+          },
+          "robot_contact_force_n": {
+            "min": null,
+            "max": null
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 5693,
+        "target_box_xyxy_normalized": [
+          0.3984375,
+          0.5395833333333333,
+          0.5796875,
+          0.8395833333333333
+        ],
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-moving_alias.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-occluded",
+      "category": "occluded",
+      "layout_id": "layout-04",
+      "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+      "current_image": "images/layout-04-occluded.png",
+      "goal_image": "images/layout-04-complete.png",
+      "physical_truth": {
+        "present": true,
+        "complete": true,
+        "physical_conditions_dwell_s": 0.2,
+        "position_error_m": 1.0856805211389336e-07,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "supported": true,
+        "released": true,
+        "linear_speed_m_s": 9.860076016164131e-10,
+        "angular_speed_rad_s": 2.7627745907984584e-09
+      },
+      "measured_inputs": {
+        "target_present": true,
+        "target_position_m": [
+          0.4199999933733547,
+          -0.13000010836562884,
+          -0.00010773874568926879
+        ],
+        "position_error_m": 1.0856805211389336e-07,
+        "yaw_error_rad": 2.1965565755177607e-09,
+        "linear_speed_m_s": 9.860076016164131e-10,
+        "angular_speed_rad_s": 2.7627745907984584e-09,
+        "table_support_force_n": 0.294299999001435,
+        "robot_contact_force_n": 0.0,
+        "observation_window_s": 0.2,
+        "native_timestep_s": 0.002,
+        "native_observation_count": 100,
+        "target_present_observation_count": 100,
+        "native_window_extrema": {
+          "position_error_m": {
+            "min": 1.085674170840469e-07,
+            "max": 1.0856805211389336e-07
+          },
+          "yaw_error_rad": {
+            "min": 2.196340442850442e-09,
+            "max": 2.1965565755177607e-09
+          },
+          "linear_speed_m_s": {
+            "min": 9.860076016164131e-10,
+            "max": 1.057792509081208e-06
+          },
+          "angular_speed_rad_s": {
+            "min": 2.7627745907984584e-09,
+            "max": 2.046823336175752e-06
+          },
+          "table_support_force_n": {
+            "min": 0.29429892478866077,
+            "max": 0.294299999001435
+          },
+          "robot_contact_force_n": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        }
+      },
+      "visibility": {
+        "visible_target_pixels": 0,
+        "target_box_xyxy_normalized": null,
+        "box_scope": "Visible target pixels only, from native geom-ID segmentation; not an amodal box."
+      },
+      "state_file": "states/layout-04-occluded.json",
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    }
+  ],
+  "aliases": [
+    {
+      "case_id": "layout-01-moving_alias",
+      "pixel_identical_to": "layout-01-complete"
+    },
+    {
+      "case_id": "layout-02-moving_alias",
+      "pixel_identical_to": "layout-02-complete"
+    },
+    {
+      "case_id": "layout-03-moving_alias",
+      "pixel_identical_to": "layout-03-complete"
+    },
+    {
+      "case_id": "layout-04-moving_alias",
+      "pixel_identical_to": "layout-04-complete"
+    }
+  ],
+  "assets": {
+    "profile": "piper",
+    "repository": "https://github.com/google-deepmind/mujoco_menagerie",
+    "commit": "0059d4335f8156206f63a35662313385f7ad6d74",
+    "files_verified": 90,
+    "bytes_verified": 34562302,
+    "lock_sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+    "simulation_asset_license": "MIT"
+  },
+  "protocol_sha256": "d48e363d24cc3c9f3be67ffb87390aa3f9b37272bd28d4b9b22424ccf336fba4",
+  "mujoco_version": "3.15.0",
+  "rendering": "Native MuJoCo RGB and geom segmentation; no image-generation model.",
+  "generation_wall_seconds": 6.2972065838985145,
+  "scope": "Authored native physical-state verification. Four deterministic layouts, not statistical independent real-world scenes or a trained policy benchmark.",
+  "telemetry_scope": "Privileged native state and contact history; not an implemented camera or hardware estimator."
+}
