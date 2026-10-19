@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "image-goal-jev-v02",
+      "title": "Jev image-goal verification: the measured follow-up",
+      "source": "reports/Image goal Jev measured v02.md",
+      "date": "2026-10-19",
+      "type": "Frozen hosted-model evaluation with native physical references",
+      "status": "64/64 valid responses \u00b7 telemetry: 0/24 false complete, 1/8 true complete",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "The first measured run preserves all 64 requests from the image-goal v0.1 protocol. Jev returned valid structured responses for every trial and made no false-completion declaration, but recognized only 1/8 physically complete cases with privileged native telemetry and 0/8 with images alone. All four occluded complete scenes were called incomplete in both conditions. RGB abstention matched 8/16 ambiguous references. Median online latency was 1.776 seconds, p95 3.287 seconds. The release preserves every result, the independent review and the original unrun protocol. This small synthetic diagnostic does not qualify a robot completion gate, actuator loop or learned skill."
+    },
+    {
       "slug": "image-goal-jev-v01",
       "title": "Image-goal verification: native benchmark and Jev protocol",
       "source": "reports/Image goal Jev v01.md",

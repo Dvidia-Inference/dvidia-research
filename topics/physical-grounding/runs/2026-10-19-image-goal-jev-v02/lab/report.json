@@ -1,0 +1,1864 @@
+{
+  "schema": "dvidia.image-goal-public-report/v1",
+  "status": "completed",
+  "model": "jev-1.14.0",
+  "conditions": [
+    "rgb",
+    "rgb_telemetry"
+  ],
+  "cases": [
+    {
+      "id": "layout-01-complete",
+      "category": "complete",
+      "current_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-missing_target",
+      "category": "missing_target",
+      "current_image": "images/b956ae597b88d4b82b67b00d6ad6e41bb75eb184fd320d94e2fa76115857d43d.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-01-wrong_object",
+      "category": "wrong_object",
+      "current_image": "images/83af097bb71ac714e02954029a91edc4fb8f51948e01ed70d31d705dcf593452.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-01-wrong_position",
+      "category": "wrong_position",
+      "current_image": "images/37862bb8c714993723236aa25d806a62229856edb4d17c489a02ea1fd777326a.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-wrong_orientation",
+      "category": "wrong_orientation",
+      "current_image": "images/56253438617f3ff5caf1700673122b6e7260601fad6700f519a8442f3e57bd37.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-unreleased",
+      "category": "unreleased",
+      "current_image": "images/3816b70bacff446c8901713b140fe6d615c880605cdd3ea89089495c641b77d2.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-moving_alias",
+      "category": "moving_alias",
+      "current_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-01-occluded",
+      "category": "occluded",
+      "current_image": "images/747b50dcdcb37d89c0a4a882fff12057e9062bd2c171154d1a6d408ef3e8af0d.png",
+      "goal_image": "images/550516b315cb198407b0ef3be997af97805c11fcfe6b587b1091affd8060e8fb.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-complete",
+      "category": "complete",
+      "current_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-missing_target",
+      "category": "missing_target",
+      "current_image": "images/dd863d7a52be1c7a4675c56c7154e2b572a5960be421b9f2a7ca27a7f2836348.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-02-wrong_object",
+      "category": "wrong_object",
+      "current_image": "images/441dadb181f982e7393eb40642a2a035037f88a13c170b9b227cd6e46f3f4ebc.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-02-wrong_position",
+      "category": "wrong_position",
+      "current_image": "images/f31324821c1b69ed64bc7776437f292b8d20e87e2aa237135cb2b084fd6f0e76.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-wrong_orientation",
+      "category": "wrong_orientation",
+      "current_image": "images/66935db963dd00862c83e0fc8af06939d0f017d7801a328870f0feb49e64a144.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-unreleased",
+      "category": "unreleased",
+      "current_image": "images/9357687d5747c98916e705103aebc6f9b6900f7aef5ed675ca6dd942a19a66e7.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-moving_alias",
+      "category": "moving_alias",
+      "current_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-02-occluded",
+      "category": "occluded",
+      "current_image": "images/3397103762d94870c515de9294b6999ad2c2b1cfc570daa1320b5724bf556fa8.png",
+      "goal_image": "images/a3221e451c24b164f0348f2cb6517d2bd2589a444c3d8d71a9942a98dee0bdf3.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-complete",
+      "category": "complete",
+      "current_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-missing_target",
+      "category": "missing_target",
+      "current_image": "images/d091c877c2762f156c115dc2a2d960d2619c4a47279dbf5bee136aaa8ace6d1d.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-03-wrong_object",
+      "category": "wrong_object",
+      "current_image": "images/78733a16c745bbd647514a3aa15b486f2b799cd413027728fd933b4a72954ab8.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-03-wrong_position",
+      "category": "wrong_position",
+      "current_image": "images/266dcb71e61f8151fa2e56e7e3db4f561ff42830e44d0c7ff25cd7ea59843957.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-wrong_orientation",
+      "category": "wrong_orientation",
+      "current_image": "images/66c3cc6f1378b262837d1b1d81c60d60bd9e3c1d25e59e28626810526d78b494.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-unreleased",
+      "category": "unreleased",
+      "current_image": "images/2679f2897c559ff07190c9bee25b0fbdb9f6cda29847c287cbadf74d342b4c14.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-moving_alias",
+      "category": "moving_alias",
+      "current_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-03-occluded",
+      "category": "occluded",
+      "current_image": "images/0fd28594d7bee6d76cb13dd30e3bfe520918d470fa2bec53ecf84a493aed0556.png",
+      "goal_image": "images/9e077553701f0b54929386b69abc0d4a531f4dd8d0ef8c164dfbd4e11c2eec22.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-complete",
+      "category": "complete",
+      "current_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-missing_target",
+      "category": "missing_target",
+      "current_image": "images/9d747de133583f8a3977332732a609f68eed97879615fdcee73ec0b12d091ecf.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-04-wrong_object",
+      "category": "wrong_object",
+      "current_image": "images/3e75f36cfbb95243a844e72ef822049b103cdf547c446d6e8e5652abf499a236.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": false,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "absent",
+        "rgb_telemetry": "absent"
+      }
+    },
+    {
+      "id": "layout-04-wrong_position",
+      "category": "wrong_position",
+      "current_image": "images/a000a38d4e067649cdcac56ec77942730e0a67093338880d974e90e912b7df48.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-wrong_orientation",
+      "category": "wrong_orientation",
+      "current_image": "images/a827a2f466b93f84ffc40ae11374a03bc7cbb222d194387bca4e1ee48d15887a.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "incomplete",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-unreleased",
+      "category": "unreleased",
+      "current_image": "images/8d0290813f4288bddf5287eaf2d7e5b12e3710a284a5028fe229d57da3c4c736.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-moving_alias",
+      "category": "moving_alias",
+      "current_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": true,
+        "complete": false
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "incomplete"
+      },
+      "expected_presence": {
+        "rgb": "present",
+        "rgb_telemetry": "present"
+      }
+    },
+    {
+      "id": "layout-04-occluded",
+      "category": "occluded",
+      "current_image": "images/29772e10911231b9260ebe8b91a7c7f8f482324bd5002900affc445a0eeb8106.png",
+      "goal_image": "images/76cba333e8bdf56f1b9e6011247095507ede97697ef99ada4b47ea7d1c71d3fa.png",
+      "ground_truth": {
+        "present": true,
+        "complete": true
+      },
+      "expected_verdict": {
+        "rgb": "unknown",
+        "rgb_telemetry": "complete"
+      },
+      "expected_presence": {
+        "rgb": "unknown",
+        "rgb_telemetry": "present"
+      }
+    }
+  ],
+  "results": [
+    {
+      "case_id": "layout-02-wrong_position",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.95,
+      "p_complete": 0.08,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3182.4908750131726,
+        "prepare_ms": 0.23475009948015213,
+        "request_ms": 3181.8517500068992
+      },
+      "estimated_input_cost_usd": 0.00013482000000000001
+    },
+    {
+      "case_id": "layout-02-wrong_orientation",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.1,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 994.5139579940587,
+        "prepare_ms": 0.76916697435081,
+        "request_ms": 993.6145001556724
+      },
+      "estimated_input_cost_usd": 0.00010882200000000001
+    },
+    {
+      "case_id": "layout-01-moving_alias",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.96,
+      "p_complete": 0.53,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 2718.4088330250233,
+        "prepare_ms": 0.5554999224841595,
+        "request_ms": 2717.451874865219
+      },
+      "estimated_input_cost_usd": 0.00010857000000000001
+    },
+    {
+      "case_id": "layout-03-occluded",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.33,
+      "p_complete": 0.03,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3287.357582943514,
+        "prepare_ms": 0.5034168716520071,
+        "request_ms": 3286.266125040129
+      },
+      "estimated_input_cost_usd": 0.000108528
+    },
+    {
+      "case_id": "layout-03-moving_alias",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1148.0347919277847,
+        "prepare_ms": 0.5600000731647015,
+        "request_ms": 1147.1777081023902
+      },
+      "estimated_input_cost_usd": 0.00012558
+    },
+    {
+      "case_id": "layout-03-complete",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.98,
+      "p_complete": 0.62,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 2486.590167041868,
+        "prepare_ms": 0.4127498250454664,
+        "request_ms": 2485.885625006631
+      },
+      "estimated_input_cost_usd": 0.000134946
+    },
+    {
+      "case_id": "layout-03-missing_target",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.11,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3267.311166971922,
+        "prepare_ms": 0.28745783492922783,
+        "request_ms": 3266.3774169050157
+      },
+      "estimated_input_cost_usd": 0.00011999400000000002
+    },
+    {
+      "case_id": "layout-02-unreleased",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2478.5893328953534,
+        "prepare_ms": 0.9951251558959484,
+        "request_ms": 2477.01995796524
+      },
+      "estimated_input_cost_usd": 0.000136542
+    },
+    {
+      "case_id": "layout-04-complete",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.95,
+      "p_complete": 0.48,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 1104.1086250916123,
+        "prepare_ms": 3.0073330271989107,
+        "request_ms": 1100.0217921100557
+      },
+      "estimated_input_cost_usd": 0.00010857000000000001
+    },
+    {
+      "case_id": "layout-03-wrong_orientation",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.95,
+      "p_complete": 0.03,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1491.5459579788148,
+        "prepare_ms": 0.5568331107497215,
+        "request_ms": 1486.1032089684159
+      },
+      "estimated_input_cost_usd": 0.000134904
+    },
+    {
+      "case_id": "layout-04-unreleased",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3029.5940418727696,
+        "prepare_ms": 0.6705839186906815,
+        "request_ms": 3027.2396670188755
+      },
+      "estimated_input_cost_usd": 0.000136374
+    },
+    {
+      "case_id": "layout-03-occluded",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.55,
+      "p_complete": 0.19,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3070.435208035633,
+        "prepare_ms": 1.4129579067230225,
+        "request_ms": 3065.8918330445886
+      },
+      "estimated_input_cost_usd": 0.00013473600000000002
+    },
+    {
+      "case_id": "layout-02-occluded",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.34,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 4091.2106670439243,
+        "prepare_ms": 0.5005421116948128,
+        "request_ms": 4090.230582980439
+      },
+      "estimated_input_cost_usd": 0.00010878
+    },
+    {
+      "case_id": "layout-03-unreleased",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.95,
+      "p_complete": 0.08,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1323.8118330482394,
+        "prepare_ms": 0.5319579504430294,
+        "request_ms": 1323.0945409741253
+      },
+      "estimated_input_cost_usd": 0.00010869600000000002
+    },
+    {
+      "case_id": "layout-02-missing_target",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.21,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2000.8732499554753,
+        "prepare_ms": 0.27983286418020725,
+        "request_ms": 1999.6360829100013
+      },
+      "estimated_input_cost_usd": 0.000120204
+    },
+    {
+      "case_id": "layout-01-wrong_orientation",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.06,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 897.2246248740703,
+        "prepare_ms": 0.7843337953090668,
+        "request_ms": 896.0784170776606
+      },
+      "estimated_input_cost_usd": 0.00013461000000000001
+    },
+    {
+      "case_id": "layout-04-unreleased",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.04,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1624.7847501654178,
+        "prepare_ms": 0.38308301009237766,
+        "request_ms": 1623.7839579116553
+      },
+      "estimated_input_cost_usd": 0.00010873800000000001
+    },
+    {
+      "case_id": "layout-01-unreleased",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.95,
+      "p_complete": 0.04,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1324.4094580877572,
+        "prepare_ms": 0.5739580374211073,
+        "request_ms": 1322.6837920956314
+      },
+      "estimated_input_cost_usd": 0.00010869600000000002
+    },
+    {
+      "case_id": "layout-04-occluded",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.49,
+      "p_complete": 0.11,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2063.4343328420073,
+        "prepare_ms": 1.3204580172896385,
+        "request_ms": 2061.0402920283377
+      },
+      "estimated_input_cost_usd": 0.000134988
+    },
+    {
+      "case_id": "layout-04-occluded",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.24,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2413.660041987896,
+        "prepare_ms": 0.3997501917183399,
+        "request_ms": 2413.0816247779876
+      },
+      "estimated_input_cost_usd": 0.00010869600000000002
+    },
+    {
+      "case_id": "layout-01-complete",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.99,
+      "p_complete": 0.56,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 3371.058833086863,
+        "prepare_ms": 0.4456660244613886,
+        "request_ms": 3370.0631661340594
+      },
+      "estimated_input_cost_usd": 0.000134988
+    },
+    {
+      "case_id": "layout-02-missing_target",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.28,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3286.889916053042,
+        "prepare_ms": 1.0124158579856157,
+        "request_ms": 3285.5893338564783
+      },
+      "estimated_input_cost_usd": 0.000108864
+    },
+    {
+      "case_id": "layout-02-wrong_object",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.08,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1545.6784588750452,
+        "prepare_ms": 1.0344169568270445,
+        "request_ms": 1544.449291890487
+      },
+      "estimated_input_cost_usd": 0.000108864
+    },
+    {
+      "case_id": "layout-02-moving_alias",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.96,
+      "p_complete": 0.44,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 2290.048124967143,
+        "prepare_ms": 1.118208048865199,
+        "request_ms": 2288.8131658546627
+      },
+      "estimated_input_cost_usd": 0.00010882200000000001
+    },
+    {
+      "case_id": "layout-01-wrong_object",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.05,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2425.5559579469264,
+        "prepare_ms": 0.87779201567173,
+        "request_ms": 2424.5866250712425
+      },
+      "estimated_input_cost_usd": 0.00011999400000000002
+    },
+    {
+      "case_id": "layout-02-wrong_position",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.09,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 901.5318751335144,
+        "prepare_ms": 0.8441249374300241,
+        "request_ms": 900.4422919824719
+      },
+      "estimated_input_cost_usd": 0.00010882200000000001
+    },
+    {
+      "case_id": "layout-03-unreleased",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1756.7410841584206,
+        "prepare_ms": 0.3572499845176935,
+        "request_ms": 1756.193415960297
+      },
+      "estimated_input_cost_usd": 0.00013662600000000002
+    },
+    {
+      "case_id": "layout-04-moving_alias",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2369.73608401604,
+        "prepare_ms": 0.49400003626942635,
+        "request_ms": 2369.0995830111206
+      },
+      "estimated_input_cost_usd": 0.00012558
+    },
+    {
+      "case_id": "layout-01-missing_target",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.31,
+      "p_complete": 0.06,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 3866.8453751597553,
+        "prepare_ms": 2.1579167805612087,
+        "request_ms": 3864.315749844536
+      },
+      "estimated_input_cost_usd": 0.00010865400000000001
+    },
+    {
+      "case_id": "layout-02-unreleased",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.94,
+      "p_complete": 0.06,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1074.3652500677854,
+        "prepare_ms": 0.5077500827610493,
+        "request_ms": 1073.6129588913172
+      },
+      "estimated_input_cost_usd": 0.000108864
+    },
+    {
+      "case_id": "layout-01-complete",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.96,
+      "p_complete": 0.49,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 1032.5823749881238,
+        "prepare_ms": 0.348708126693964,
+        "request_ms": 1032.1377089712769
+      },
+      "estimated_input_cost_usd": 0.00010857000000000001
+    },
+    {
+      "case_id": "layout-02-occluded",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.54,
+      "p_complete": 0.07,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1826.8492091447115,
+        "prepare_ms": 0.4908330738544464,
+        "request_ms": 1825.961375143379
+      },
+      "estimated_input_cost_usd": 0.00013515600000000002
+    },
+    {
+      "case_id": "layout-01-wrong_position",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.14,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2018.618166912347,
+        "prepare_ms": 0.4491249565035105,
+        "request_ms": 2017.2732919454575
+      },
+      "estimated_input_cost_usd": 0.00010873800000000001
+    },
+    {
+      "case_id": "layout-03-wrong_position",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.14,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2366.8398750014603,
+        "prepare_ms": 0.5253748968243599,
+        "request_ms": 2366.093291901052
+      },
+      "estimated_input_cost_usd": 0.00010873800000000001
+    },
+    {
+      "case_id": "layout-03-moving_alias",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.95,
+      "p_complete": 0.53,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 939.8637909907848,
+        "prepare_ms": 0.5291251000016928,
+        "request_ms": 939.2509998288006
+      },
+      "estimated_input_cost_usd": 0.00010873800000000001
+    },
+    {
+      "case_id": "layout-01-moving_alias",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.03,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 914.4031659234315,
+        "prepare_ms": 0.24495809338986874,
+        "request_ms": 914.0026248060167
+      },
+      "estimated_input_cost_usd": 0.00012558
+    },
+    {
+      "case_id": "layout-04-wrong_object",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.07,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2740.4377080965787,
+        "prepare_ms": 0.28716702945530415,
+        "request_ms": 2739.7601660341024
+      },
+      "estimated_input_cost_usd": 0.00010869600000000002
+    },
+    {
+      "case_id": "layout-03-wrong_object",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.06,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1521.3580841664225,
+        "prepare_ms": 0.5516668315976858,
+        "request_ms": 1520.605833036825
+      },
+      "estimated_input_cost_usd": 0.000120162
+    },
+    {
+      "case_id": "layout-04-moving_alias",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.96,
+      "p_complete": 0.49,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 1156.7303750198334,
+        "prepare_ms": 0.5011248867958784,
+        "request_ms": 1155.7714159134775
+      },
+      "estimated_input_cost_usd": 0.00010857000000000001
+    },
+    {
+      "case_id": "layout-04-wrong_position",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.95,
+      "p_complete": 0.07,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1503.6018751561642,
+        "prepare_ms": 0.5524158477783203,
+        "request_ms": 1502.6298749726266
+      },
+      "estimated_input_cost_usd": 0.00010869600000000002
+    },
+    {
+      "case_id": "layout-03-wrong_orientation",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.94,
+      "p_complete": 0.05,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1326.0083750355989,
+        "prepare_ms": 1.166959060356021,
+        "request_ms": 1324.471291853115
+      },
+      "estimated_input_cost_usd": 0.000108948
+    },
+    {
+      "case_id": "layout-01-wrong_orientation",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.95,
+      "p_complete": 0.1,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 932.4611669871956,
+        "prepare_ms": 0.3683750983327627,
+        "request_ms": 932.0065418723971
+      },
+      "estimated_input_cost_usd": 0.00010869600000000002
+    },
+    {
+      "case_id": "layout-01-occluded",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.57,
+      "p_complete": 0.14,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1365.4680422041565,
+        "prepare_ms": 0.3877081908285618,
+        "request_ms": 1364.1268748324364
+      },
+      "estimated_input_cost_usd": 0.000135072
+    },
+    {
+      "case_id": "layout-04-missing_target",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.2,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1653.2660420052707,
+        "prepare_ms": 0.7324579637497663,
+        "request_ms": 1652.1456250920892
+      },
+      "estimated_input_cost_usd": 0.000119952
+    },
+    {
+      "case_id": "layout-04-wrong_orientation",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.1,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1194.688000017777,
+        "prepare_ms": 0.36916695535182953,
+        "request_ms": 1194.244333077222
+      },
+      "estimated_input_cost_usd": 0.000134316
+    },
+    {
+      "case_id": "layout-04-wrong_orientation",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.1,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2278.634167043492,
+        "prepare_ms": 0.30079204589128494,
+        "request_ms": 2278.104541124776
+      },
+      "estimated_input_cost_usd": 0.00010861200000000001
+    },
+    {
+      "case_id": "layout-01-unreleased",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.03,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2233.6273330729455,
+        "prepare_ms": 3.380917012691498,
+        "request_ms": 2229.393291985616
+      },
+      "estimated_input_cost_usd": 0.00013599600000000002
+    },
+    {
+      "case_id": "layout-03-wrong_object",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.07,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2546.2215829174966,
+        "prepare_ms": 1.1196669656783342,
+        "request_ms": 2544.7414580266923
+      },
+      "estimated_input_cost_usd": 0.00010882200000000001
+    },
+    {
+      "case_id": "layout-02-complete",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.96,
+      "p_complete": 0.47,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 1983.5017919540405,
+        "prepare_ms": 0.25320821441709995,
+        "request_ms": 1983.035875018686
+      },
+      "estimated_input_cost_usd": 0.00010882200000000001
+    },
+    {
+      "case_id": "layout-02-complete",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.97,
+      "p_complete": 0.51,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 2501.8891249783337,
+        "prepare_ms": 0.3746659494936466,
+        "request_ms": 2501.228667097166
+      },
+      "estimated_input_cost_usd": 0.000135198
+    },
+    {
+      "case_id": "layout-03-wrong_position",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.09,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2420.466334093362,
+        "prepare_ms": 0.2993340604007244,
+        "request_ms": 2419.5830000098795
+      },
+      "estimated_input_cost_usd": 0.00013452600000000002
+    },
+    {
+      "case_id": "layout-01-missing_target",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.15,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 953.6735839210451,
+        "prepare_ms": 0.5322920624166727,
+        "request_ms": 952.9406251385808
+      },
+      "estimated_input_cost_usd": 0.00011999400000000002
+    },
+    {
+      "case_id": "layout-01-occluded",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.41,
+      "p_complete": 0.03,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1033.2432501018047,
+        "prepare_ms": 0.42341696098446846,
+        "request_ms": 1031.1164997983724
+      },
+      "estimated_input_cost_usd": 0.00010865400000000001
+    },
+    {
+      "case_id": "layout-04-wrong_object",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.06,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2681.6896251402795,
+        "prepare_ms": 0.7898749317973852,
+        "request_ms": 2679.975708015263
+      },
+      "estimated_input_cost_usd": 0.000120036
+    },
+    {
+      "case_id": "layout-01-wrong_position",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.12,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 2055.7320828083903,
+        "prepare_ms": 0.5138330161571503,
+        "request_ms": 2054.8945001792163
+      },
+      "estimated_input_cost_usd": 0.00013477800000000003
+    },
+    {
+      "case_id": "layout-04-missing_target",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.23,
+      "p_complete": 0.03,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1899.963374948129,
+        "prepare_ms": 0.2569160424172878,
+        "request_ms": 1899.500791914761
+      },
+      "estimated_input_cost_usd": 0.00010861200000000001
+    },
+    {
+      "case_id": "layout-03-missing_target",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": null,
+        "complete": false
+      },
+      "p_present": 0.23,
+      "p_complete": 0.04,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1024.055042071268,
+        "prepare_ms": 0.3506250213831663,
+        "request_ms": 1023.5898750834167
+      },
+      "estimated_input_cost_usd": 0.00010865400000000001
+    },
+    {
+      "case_id": "layout-03-complete",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": null
+      },
+      "p_present": 0.95,
+      "p_complete": 0.52,
+      "verdict": "unknown",
+      "timing_ms": {
+        "total_ms": 1775.3270829562098,
+        "prepare_ms": 0.7055839523673058,
+        "request_ms": 1773.661875165999
+      },
+      "estimated_input_cost_usd": 0.00010873800000000001
+    },
+    {
+      "case_id": "layout-02-moving_alias",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.97,
+      "p_complete": 0.02,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 925.3842909820378,
+        "prepare_ms": 0.3233749885112047,
+        "request_ms": 924.4233330246061
+      },
+      "estimated_input_cost_usd": 0.00012587400000000002
+    },
+    {
+      "case_id": "layout-04-wrong_position",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.96,
+      "p_complete": 0.05,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1777.5020417757332,
+        "prepare_ms": 0.6570839323103428,
+        "request_ms": 1776.4889169484377
+      },
+      "estimated_input_cost_usd": 0.000134694
+    },
+    {
+      "case_id": "layout-01-wrong_object",
+      "condition": "rgb",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.07,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 883.703958010301,
+        "prepare_ms": 0.6170000415295362,
+        "request_ms": 882.9312911257148
+      },
+      "estimated_input_cost_usd": 0.00010865400000000001
+    },
+    {
+      "case_id": "layout-04-complete",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": true
+      },
+      "p_present": 0.98,
+      "p_complete": 0.73,
+      "verdict": "complete",
+      "timing_ms": {
+        "total_ms": 1399.8680000659078,
+        "prepare_ms": 0.4274582024663687,
+        "request_ms": 1399.2616669274867
+      },
+      "estimated_input_cost_usd": 0.000134862
+    },
+    {
+      "case_id": "layout-02-wrong_object",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": false,
+        "complete": false
+      },
+      "p_present": 0.07,
+      "p_complete": 0.01,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 861.1239169258624,
+        "prepare_ms": 0.3881249576807022,
+        "request_ms": 860.6517501175404
+      },
+      "estimated_input_cost_usd": 0.000120204
+    },
+    {
+      "case_id": "layout-02-wrong_orientation",
+      "condition": "rgb_telemetry",
+      "status": "ok",
+      "decision": {
+        "present": true,
+        "complete": false
+      },
+      "p_present": 0.94,
+      "p_complete": 0.05,
+      "verdict": "incomplete",
+      "timing_ms": {
+        "total_ms": 1713.639167137444,
+        "prepare_ms": 0.2717080060392618,
+        "request_ms": 1713.2446670439094
+      },
+      "estimated_input_cost_usd": 0.00013452600000000002
+    }
+  ],
+  "summary": [
+    {
+      "condition": "rgb",
+      "planned": 32,
+      "attempted": 32,
+      "responses": 32,
+      "errors": 0,
+      "not_run": 0,
+      "completion_accuracy": {
+        "correct": 20,
+        "answered": 24,
+        "planned": 32
+      },
+      "completion_abstentions": 8,
+      "observability_aware_accuracy": {
+        "correct": 24,
+        "planned": 32
+      },
+      "known_verdict_accuracy": {
+        "correct": 16,
+        "planned": 16
+      },
+      "ambiguous_abstention": {
+        "correct": 8,
+        "planned": 16
+      },
+      "false_completion": {
+        "count": 0,
+        "answered_incomplete": 20,
+        "planned_incomplete": 24,
+        "valid_incomplete": 24
+      },
+      "true_completion": {
+        "count": 0,
+        "planned_complete": 8,
+        "answered_complete": 4,
+        "valid_complete": 8
+      },
+      "false_presence": {
+        "count": 0,
+        "answered_absent": 4,
+        "planned_absent": 8,
+        "valid_absent": 8
+      },
+      "known_usage_estimated_input_cost_usd": 0.0034789440000000003,
+      "unknown_cost_attempts": 0,
+      "all_attempt_latency_ms": {
+        "n": 32,
+        "p50": 1585.2316045202315,
+        "p95": 3548.127089440822,
+        "p99": 4021.6574265598324,
+        "max": 4091.2106670439243
+      },
+      "successful_response_latency_ms": {
+        "n": 32,
+        "p50": 1585.2316045202315,
+        "p95": 3548.127089440822,
+        "p99": 4021.6574265598324,
+        "max": 4091.2106670439243
+      }
+    },
+    {
+      "condition": "rgb_telemetry",
+      "planned": 32,
+      "attempted": 32,
+      "responses": 32,
+      "errors": 0,
+      "not_run": 0,
+      "completion_accuracy": {
+        "correct": 25,
+        "answered": 29,
+        "planned": 32
+      },
+      "completion_abstentions": 3,
+      "observability_aware_accuracy": {
+        "correct": 25,
+        "planned": 32
+      },
+      "known_verdict_accuracy": {
+        "correct": 25,
+        "planned": 32
+      },
+      "ambiguous_abstention": {
+        "correct": 0,
+        "planned": 0
+      },
+      "false_completion": {
+        "count": 0,
+        "answered_incomplete": 24,
+        "planned_incomplete": 24,
+        "valid_incomplete": 24
+      },
+      "true_completion": {
+        "count": 1,
+        "planned_complete": 8,
+        "answered_complete": 5,
+        "valid_complete": 8
+      },
+      "false_presence": {
+        "count": 0,
+        "answered_absent": 7,
+        "planned_absent": 8,
+        "valid_absent": 8
+      },
+      "known_usage_estimated_input_cost_usd": 0.0041658120000000005,
+      "unknown_cost_attempts": 0,
+      "all_attempt_latency_ms": {
+        "n": 32,
+        "p50": 1913.8612295500934,
+        "p95": 3220.66000639461,
+        "p99": 3338.8970565912314,
+        "max": 3371.058833086863
+      },
+      "successful_response_latency_ms": {
+        "n": 32,
+        "p50": 1913.8612295500934,
+        "p95": 3220.66000639461,
+        "p99": 3338.8970565912314,
+        "max": 3371.058833086863
+      }
+    }
+  ],
+  "scope": "Synthetic simulation fixtures; passive image-goal judgments; no robot control or trained weights."
+}

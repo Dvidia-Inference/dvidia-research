@@ -1,0 +1,146 @@
+{
+  "schema": "dvidia.image-goal-scenes/v1",
+  "task": "Place the green shoe inside the outlined goal zone, matching the goal image's position and orientation. Completion requires the target shoe to have table support force greater than 0.01 N, robot contact force at most 0.01 N, XY position error at most 25 mm, yaw error at most 15 degrees, linear speed at most 0.01 m/s and angular speed at most 0.05 rad/s, all continuously for at least 200 ms. The goal picture is a visual reference, not proof that these physical conditions hold in the current picture. Answer unknown when the inputs cannot establish the required physical conditions. An orange shoe is a different object. The opaque inspection cover can hide the target.",
+  "criteria": {
+    "position_tolerance_m": 0.025,
+    "yaw_tolerance_rad": 0.2617993877991494,
+    "linear_speed_max_m_s": 0.01,
+    "angular_speed_max_rad_s": 0.05,
+    "support_force_min_n": 0.01,
+    "robot_force_max_n": 0.01,
+    "continuous_dwell_s": 0.2
+  },
+  "layouts": [
+    {
+      "id": "layout-01",
+      "xy_m": [
+        0.4,
+        -0.1
+      ],
+      "yaw_rad": 0.0,
+      "azimuth_deg": 130.0
+    },
+    {
+      "id": "layout-02",
+      "xy_m": [
+        0.43,
+        -0.16
+      ],
+      "yaw_rad": 0.08,
+      "azimuth_deg": 145.0
+    },
+    {
+      "id": "layout-03",
+      "xy_m": [
+        0.38,
+        -0.07
+      ],
+      "yaw_rad": -0.08,
+      "azimuth_deg": 115.0
+    },
+    {
+      "id": "layout-04",
+      "xy_m": [
+        0.42,
+        -0.13
+      ],
+      "yaw_rad": 0.15,
+      "azimuth_deg": 155.0
+    }
+  ],
+  "categories": [
+    "complete",
+    "missing_target",
+    "wrong_object",
+    "wrong_position",
+    "wrong_orientation",
+    "unreleased",
+    "moving_alias",
+    "occluded"
+  ],
+  "case_ids": [
+    "layout-01-complete",
+    "layout-01-missing_target",
+    "layout-01-wrong_object",
+    "layout-01-wrong_position",
+    "layout-01-wrong_orientation",
+    "layout-01-unreleased",
+    "layout-01-moving_alias",
+    "layout-01-occluded",
+    "layout-02-complete",
+    "layout-02-missing_target",
+    "layout-02-wrong_object",
+    "layout-02-wrong_position",
+    "layout-02-wrong_orientation",
+    "layout-02-unreleased",
+    "layout-02-moving_alias",
+    "layout-02-occluded",
+    "layout-03-complete",
+    "layout-03-missing_target",
+    "layout-03-wrong_object",
+    "layout-03-wrong_position",
+    "layout-03-wrong_orientation",
+    "layout-03-unreleased",
+    "layout-03-moving_alias",
+    "layout-03-occluded",
+    "layout-04-complete",
+    "layout-04-missing_target",
+    "layout-04-wrong_object",
+    "layout-04-wrong_position",
+    "layout-04-wrong_orientation",
+    "layout-04-unreleased",
+    "layout-04-moving_alias",
+    "layout-04-occluded"
+  ],
+  "image_size": [
+    640,
+    480
+  ],
+  "physics_timestep_s": 0.002,
+  "settling_s": 0.6,
+  "native_observation_window_s": 0.2,
+  "unreleased_controller": {
+    "stages": [
+      "approach above heel",
+      "descend",
+      "close"
+    ],
+    "stage_duration_s": [
+      3.0,
+      2.0,
+      1.2
+    ],
+    "heel_offset_m": -0.085,
+    "tcp_height_m": [
+      0.2,
+      0.055,
+      0.055
+    ],
+    "jaw_command_m": [
+      0.035,
+      0.035,
+      0.0
+    ],
+    "native_dt_s": 0.002,
+    "control_dt_s": 0.02,
+    "scope": "Authored approach then native finger contact; not a lift or learned manipulation."
+  },
+  "moving_alias_velocity_m_s": [
+    0.12,
+    0.0,
+    0.0
+  ],
+  "synthetic_shoe": {
+    "source": "packaged trainer-left collision primitives",
+    "width_scale": 0.5,
+    "mass_kg": 0.03,
+    "visual_colors": "Green upper for target, orange upper for decoy, cream sole and toe.",
+    "reason": "Declared narrow rigid proxy permits unchanged PiPER finger contact; not a full-size measured shoe."
+  },
+  "scope": "Authored native physical-state verification. Four deterministic layouts, not statistical independent real-world scenes or a trained policy benchmark.",
+  "dwell_scope": "Every 2 ms native sample satisfies all thresholds for 100 consecutive ticks; no continuous-time or hardware certification claim.",
+  "reset_scope": "Each fixture starts from an authored state. The moving alias changes native velocity at the snapshot without advancing time; this is a declared state intervention, not a measured physical impulse.",
+  "telemetry_scope": "Privileged native state and contact history; not an implemented camera or hardware estimator.",
+  "rgb_observability": "Single RGB cannot prove velocity, support force, release force or 200 ms dwell. Complete, moving, occluded and unreleased states require unknown. Even visibly closed fingers do not establish the 0.01 N contact-force threshold. Missing targets, wrong objects and visible pose violations permit incomplete.",
+  "freeze": "Generate and hash this protocol before any model requests; never choose cases or thresholds from model results."
+}

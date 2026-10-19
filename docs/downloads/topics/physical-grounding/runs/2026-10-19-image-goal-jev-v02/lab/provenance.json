@@ -1,0 +1,39 @@
+{
+  "schema": "dvidia.image-goal-publication-provenance/v1",
+  "source_commit": "19acf0734d63ecebc07140c8d84302a54baee4c4",
+  "publication_source_commit": "a3e9afb59f3a9cd7da617cf61416e24fad0a0a5c",
+  "base_training_commit": "191856b8f7b6c68d6be07c254bea37fd15f20e82",
+  "source_commit_scope": "Unchanged native fixture generator, Jev client, frozen request/evaluation protocol and scoring.",
+  "provider_status": "completed",
+  "provider_model": "jev-1.14.0",
+  "native_fixture_files_copied_without_modification": true,
+  "publication_followup": "v02",
+  "protocol_version": "v0.1",
+  "original_unrun_release": "https://dvidia-robot-simulation-lab.static.hf.space/image-goals/v01/index.html",
+  "original_results_sha256": "18c71ad02cd50763b04a90028b46740b98bd91ffa9d6071f5a179d4c22537ae4",
+  "public_results_omissions": [
+    "results[].response"
+  ],
+  "public_results": {
+    "bytes": 414202,
+    "sha256": "5b2af78169e5e2c9344f00b5c0f8397f2e3cb423952d2139498293baf4a3ff9d"
+  },
+  "native_validation": {
+    "bytes": 24154,
+    "sha256": "e586f8e8a9ea1fd42efaaf497a9527992250a62115bf914d59014f9366d9c3fc"
+  },
+  "native_verifier": {
+    "bytes": 17727,
+    "sha256": "514be68c1dbd9ecb797f46615524f2bffa8654a5df3a62b90f4f8cc897414c08"
+  },
+  "independent_run_review": {
+    "bytes": 3570,
+    "sha256": "51f490bd7b2b251d923fa8d869e1034b52c9ae6bdbe46eaefe5ebc8387387f3f"
+  },
+  "learned_policy": false,
+  "hardware_validated": false,
+  "source_url": "https://github.com/Dvidia-Inference/dvidia-training/tree/19acf0734d63ecebc07140c8d84302a54baee4c4",
+  "publication_source_url": "https://github.com/Dvidia-Inference/dvidia-training/tree/a3e9afb59f3a9cd7da617cf61416e24fad0a0a5c",
+  "research_url": "https://research.dvidia.org/papers/image-goal-jev-v02/",
+  "space_url": "https://huggingface.co/spaces/Dvidia/robot-simulation-lab"
+}
