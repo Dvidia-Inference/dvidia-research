@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "sensor-corroboration-v04",
+      "title": "Independent camera and actuator corroboration v0.4",
+      "source": "reports/Sensor corroboration v04.md",
+      "date": "2026-10-19",
+      "type": "Paired synthetic benchmark for camera and drive evidence",
+      "status": "272 cases · 69/112 false completions prevented · 43 remain · 73/80 true completions abstained",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A fresh eight-layout PiPER simulation benchmark adds separately processed RGB and drive checks to a local physical-goal verifier. The checks prevent 69 of 112 false completion readings while leaving 43 replay, identity, orientation, support and sampling blind spots; the conservative gate abstains on 73 of 80 baseline true completions, including all 64 deliberate sensor-fault controls. The measured CPU path is 22.1 ms median and 31.5 ms p95, excluding 200 ms acquisition. All raw channels and results are preserved; this is synthetic evidence, not hardware validation."
+    },
+    {
       "slug": "local-goal-verifier-v03",
       "title": "A local verifier for physical completion",
       "source": "reports/Local goal verifier v03.md",
