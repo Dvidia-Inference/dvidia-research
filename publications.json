@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "image-goal-jev-v01",
+      "title": "Image-goal verification: native benchmark and Jev protocol",
+      "source": "reports/Image goal Jev v01.md",
+      "date": "2026-10-18",
+      "type": "Native diagnostic benchmark and frozen hosted-model protocol",
+      "status": "32 native fixtures \u00b7 4 identical-image pairs \u00b7 64 Jev trials not run",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A frozen PiPER image-goal cohort crosses eight physical conditions with four layouts. Four moving/settled pairs have byte-identical images and different completion labels, exposing when one image cannot establish task completion. Native measurements verify 32 authored fixtures; a paired 64-request Jev protocol distinguishes RGB judgments from privileged simulator telemetry. The provider evaluation has not run because credentials were unavailable: accuracy, false-completion rates and service latency remain unmeasured. Every native state, image, frozen request hash and explicit unrun result is retained. No learned policy or hardware qualification is claimed."
+    },
+    {
       "slug": "goal-images-physical-feedback",
       "title": "A visual goal still needs physical feedback",
       "source": "reports/Goal images and physical feedback.md",
