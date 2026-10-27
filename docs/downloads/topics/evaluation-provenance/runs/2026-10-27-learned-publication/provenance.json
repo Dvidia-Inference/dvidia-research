@@ -1,0 +1,355 @@
+{
+  "github": {
+    "anonymous_download_readback": [
+      {
+        "anonymous_verified": true,
+        "bytes": 301,
+        "file": "SHA256SUMS.txt",
+        "sha256": "b5f4ba47e49531992b9f78720e5a770e70385023e8e446206daf029b1bae648c"
+      },
+      {
+        "anonymous_verified": true,
+        "bytes": 2031879,
+        "file": "piper-placement-v01-model.json",
+        "sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded"
+      },
+      {
+        "anonymous_verified": true,
+        "bytes": 5045590,
+        "file": "dvidia_training-0.1.0-py3-none-any.whl",
+        "sha256": "8f5045218014e1fe697bbcb4ef5f72bb58db7062c05c4297e7857944615e3588"
+      },
+      {
+        "anonymous_verified": true,
+        "bytes": 146869737,
+        "file": "piper-placement-v01-evidence.zip",
+        "method": "36 exact HTTP 206 Content-Range requests; assembled digest matched.",
+        "sha256": "aca3de583e78d53e3d782d2cb2b891216bd063a91dfde8639e7744d89a9d2e0e"
+      }
+    ],
+    "publication_helpers_commit": "fcc795ad5117cab615e4cd4a130e5ac60196af67",
+    "release_url": "https://github.com/Dvidia-Inference/dvidia-training/releases/tag/piper-imitation-v0.1",
+    "tag": "piper-imitation-v0.1",
+    "tag_and_assets_changed_by_hosting_fixes": false,
+    "tag_commit": "be8c21ed555350884e2b34f0206fb9b459b2348c"
+  },
+  "huggingface": {
+    "final_hosting_patch_receipt": {
+      "frontend_inputs": [
+        {
+          "bytes": 2791,
+          "path": "HF-TRANSPORT.md",
+          "sha256": "5c87d55e3ec29e8da6a9a6c0516fb549f695278abb7b36f294698d588eb52e90"
+        },
+        {
+          "bytes": 528329,
+          "path": "viewer/piper_imitation_viewer.bundle.js",
+          "sha256": "64ccf3b1d9391cf4c4b6bb258e6b27700c146244f1e9c82b0601117fb83ea87e"
+        },
+        {
+          "bytes": 23891,
+          "path": "viewer/piper_imitation_viewer.source.js",
+          "sha256": "9358fba0c71f73813f959355b601a294ddff174431617c768e14594d546f6c77"
+        }
+      ],
+      "plan_sha256": "8b28f5e0babfa7deee56aa9b402003ffd724cd26627192f13e350f7ab4d04906",
+      "publication_receipt_sha256": "109c71696501dd3d1f49a408110f378ae668b422541f0fa8eb185c62754d4bee",
+      "repositories": [
+        {
+          "commit": "a6b727b05a18fc01d843c9c8957ad4f6bba2acde",
+          "parent_commit": "10edc19c63f04d1428e051787a601e5b69d8a3f5",
+          "patches": [
+            {
+              "anonymous_verified": true,
+              "before_sha256": "68e763f107acfe141e5a09a9653a39ec678c144febea17e6daa55ef2d0b6848c",
+              "bytes": 4645,
+              "path": "README.md",
+              "sha256": "8afa006a2ade5fec092e09ed8d27c6393f9661699b6cb42bfb0917ebf958fd0e"
+            }
+          ],
+          "repo_id": "Dvidia/piper-block-placement-v01",
+          "repo_type": "model"
+        },
+        {
+          "commit": "73390d05bc8f8b82333f4de060b77076ccd603d3",
+          "parent_commit": "1475273966d98e9d49ccde2692b1de92106675ae",
+          "patches": [
+            {
+              "anonymous_verified": true,
+              "before_sha256": "950710fe9e32a4fe998c266770e768d98cdd1e3930a4235890cca71cf7ea8a47",
+              "bytes": 251,
+              "path": "learned-placement/v01/index.html",
+              "sha256": "6ccbe27230ee3dad92d97622625798d19ea7fdfcf1a3980eafdfb34b7f57a9f7"
+            },
+            {
+              "anonymous_verified": true,
+              "before_sha256": "d990798253beb840e785a07481c898dfa7a450f491d70f3cabd32c7b5e232a4f",
+              "bytes": 74501,
+              "path": "learned-placement/v01/integrity.json",
+              "sha256": "26f6c0135c3ae130486799c629bd312a7c60b3e62969f3c3cc0b5d79bdeb7161"
+            },
+            {
+              "anonymous_verified": true,
+              "before_sha256": "88a8af9965d50e1adafb5ad4b49c6d41839d0378bbae2afa5aaf378cb5fb916e",
+              "bytes": 12824,
+              "path": "learned-placement/v01/viewer/viewer-integrity.json",
+              "sha256": "1c94ccde40e1627690b2ea0b70a78c17bcc49cec657cd6d121949c49831f218d"
+            },
+            {
+              "anonymous_verified": true,
+              "before_sha256": "350efae7d2d1c6e3a74db30cd964d6be0ee117890e2ad68b9f1440ce2ca0a7a4",
+              "bytes": 528329,
+              "path": "learned-placement/v01/viewer/piper_imitation_viewer.bundle.js",
+              "sha256": "64ccf3b1d9391cf4c4b6bb258e6b27700c146244f1e9c82b0601117fb83ea87e"
+            },
+            {
+              "anonymous_verified": true,
+              "before_sha256": "6e31bd0222d85d8b12ae6220659d83564d919ffc9849a28f783b7b6ee6cfbec3",
+              "bytes": 23891,
+              "path": "learned-placement/v01/viewer/piper_imitation_viewer.source.js",
+              "sha256": "9358fba0c71f73813f959355b601a294ddff174431617c768e14594d546f6c77"
+            },
+            {
+              "anonymous_verified": true,
+              "before_sha256": "aff2f332dd4566f6008d8c6a6516c5d4c94a8d9628b1fabce761324b5940edb3",
+              "bytes": 2791,
+              "path": "learned-placement/v01/viewer/HF-TRANSPORT.md",
+              "sha256": "5c87d55e3ec29e8da6a9a6c0516fb549f695278abb7b36f294698d588eb52e90"
+            }
+          ],
+          "repo_id": "Dvidia/robot-simulation-lab",
+          "repo_type": "space"
+        }
+      ],
+      "schema": "dvidia.piper-imitation-linkfix/v1/receipt-v1",
+      "scope": "Fixed hosted frontend projection, derived manifests, and explicit viewer index links.",
+      "viewer_url": "https://dvidia-robot-simulation-lab.static.hf.space/learned-placement/v01/viewer/index.html"
+    },
+    "frontend_source_commit": "fd64e4048a1a3e6e7e8bf4bf4bcc74eb2ef14393",
+    "initial_publication_receipt": {
+      "journal_note": "This release was appended in bounded commits. Its local recovery journal is bound to the reviewed plan and pinned Space baseline. Any ambiguous commit outcome must be reconciled against the remote tree and anonymous file hashes before another batch can proceed.",
+      "repositories": [
+        {
+          "commit": "10edc19c63f04d1428e051787a601e5b69d8a3f5",
+          "repo_id": "Dvidia/piper-block-placement-v01",
+          "repo_type": "model",
+          "url": "https://huggingface.co/Dvidia/piper-block-placement-v01",
+          "verified_files": 38
+        },
+        {
+          "commit": "745045a3e0eefc7b502385e54290c43c8ea06813",
+          "repo_id": "Dvidia/piper-block-placement-demonstrations-v01",
+          "repo_type": "dataset",
+          "url": "https://huggingface.co/datasets/Dvidia/piper-block-placement-demonstrations-v01",
+          "verified_files": 353
+        },
+        {
+          "commit": "1475273966d98e9d49ccde2692b1de92106675ae",
+          "repo_id": "Dvidia/robot-simulation-lab",
+          "repo_type": "space",
+          "url": "https://huggingface.co/spaces/Dvidia/robot-simulation-lab",
+          "verified_files": 441
+        }
+      ],
+      "schema": "dvidia.piper-imitation-publication/receipt-v1"
+    },
+    "initial_transport_derivation": {
+      "changed_paths": [
+        "learned-placement/v01/integrity.json",
+        "learned-placement/v01/viewer/HF-TRANSPORT.md",
+        "learned-placement/v01/viewer/piper_imitation_viewer.bundle.js",
+        "learned-placement/v01/viewer/piper_imitation_viewer.source.js",
+        "learned-placement/v01/viewer/viewer-integrity.json"
+      ],
+      "diff_sha256": "0aaddb9044325371ebf149e28a22da38451538e2f600d83ac053fbfb6ddb2155",
+      "frontend_receipts": {
+        "HF-TRANSPORT.md": {
+          "bytes": 1850,
+          "sha256": "aff2f332dd4566f6008d8c6a6516c5d4c94a8d9628b1fabce761324b5940edb3"
+        },
+        "viewer/piper_imitation_viewer.bundle.js": {
+          "bytes": 527507,
+          "sha256": "350efae7d2d1c6e3a74db30cd964d6be0ee117890e2ad68b9f1440ce2ca0a7a4"
+        },
+        "viewer/piper_imitation_viewer.source.js": {
+          "bytes": 22050,
+          "sha256": "6e31bd0222d85d8b12ae6220659d83564d919ffc9849a28f783b7b6ee6cfbec3"
+        }
+      },
+      "new_publication_integrity_sha256": "d990798253beb840e785a07481c898dfa7a450f491d70f3cabd32c7b5e232a4f",
+      "original_plan_sha256": "1dc526d88d598e607c6b5aa2d4be3d5b264bf82f2c453dc13d7d6fa58f187dc1",
+      "original_publication_integrity_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
+      "original_root_integrity_file_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
+      "original_viewer_integrity_sha256": "68718dd6d59ad837f9294a8dd985d3701ad0006b98d226a80d395d4a4a270c15",
+      "schema": "dvidia.piper-imitation-space-transport-overlay/v1"
+    },
+    "preservation_check": "Full parent/head tree comparison; only the six declared versioned Space paths changed after complete anonymous v03 readback. Dataset unchanged; only the model README changed.",
+    "preserved_existing_space_files": 2591,
+    "repositories": [
+      {
+        "commit": "a6b727b05a18fc01d843c9c8957ad4f6bba2acde",
+        "initial_verified_commit": "10edc19c63f04d1428e051787a601e5b69d8a3f5",
+        "repo_id": "Dvidia/piper-block-placement-v01",
+        "repo_type": "model",
+        "url": "https://huggingface.co/Dvidia/piper-block-placement-v01",
+        "verified_files": 38,
+        "verified_patches": [
+          {
+            "anonymous_verified": true,
+            "before_sha256": "68e763f107acfe141e5a09a9653a39ec678c144febea17e6daa55ef2d0b6848c",
+            "bytes": 4645,
+            "path": "README.md",
+            "sha256": "8afa006a2ade5fec092e09ed8d27c6393f9661699b6cb42bfb0917ebf958fd0e"
+          }
+        ]
+      },
+      {
+        "commit": "745045a3e0eefc7b502385e54290c43c8ea06813",
+        "repo_id": "Dvidia/piper-block-placement-demonstrations-v01",
+        "repo_type": "dataset",
+        "url": "https://huggingface.co/datasets/Dvidia/piper-block-placement-demonstrations-v01",
+        "verified_files": 353
+      },
+      {
+        "commit": "73390d05bc8f8b82333f4de060b77076ccd603d3",
+        "initial_verified_commit": "1475273966d98e9d49ccde2692b1de92106675ae",
+        "repo_id": "Dvidia/robot-simulation-lab",
+        "repo_type": "space",
+        "url": "https://huggingface.co/spaces/Dvidia/robot-simulation-lab",
+        "verified_files": 441,
+        "verified_patches": [
+          {
+            "anonymous_verified": true,
+            "before_sha256": "950710fe9e32a4fe998c266770e768d98cdd1e3930a4235890cca71cf7ea8a47",
+            "bytes": 251,
+            "path": "learned-placement/v01/index.html",
+            "sha256": "6ccbe27230ee3dad92d97622625798d19ea7fdfcf1a3980eafdfb34b7f57a9f7"
+          },
+          {
+            "anonymous_verified": true,
+            "before_sha256": "d990798253beb840e785a07481c898dfa7a450f491d70f3cabd32c7b5e232a4f",
+            "bytes": 74501,
+            "path": "learned-placement/v01/integrity.json",
+            "sha256": "26f6c0135c3ae130486799c629bd312a7c60b3e62969f3c3cc0b5d79bdeb7161"
+          },
+          {
+            "anonymous_verified": true,
+            "before_sha256": "88a8af9965d50e1adafb5ad4b49c6d41839d0378bbae2afa5aaf378cb5fb916e",
+            "bytes": 12824,
+            "path": "learned-placement/v01/viewer/viewer-integrity.json",
+            "sha256": "1c94ccde40e1627690b2ea0b70a78c17bcc49cec657cd6d121949c49831f218d"
+          },
+          {
+            "anonymous_verified": true,
+            "before_sha256": "350efae7d2d1c6e3a74db30cd964d6be0ee117890e2ad68b9f1440ce2ca0a7a4",
+            "bytes": 528329,
+            "path": "learned-placement/v01/viewer/piper_imitation_viewer.bundle.js",
+            "sha256": "64ccf3b1d9391cf4c4b6bb258e6b27700c146244f1e9c82b0601117fb83ea87e"
+          },
+          {
+            "anonymous_verified": true,
+            "before_sha256": "6e31bd0222d85d8b12ae6220659d83564d919ffc9849a28f783b7b6ee6cfbec3",
+            "bytes": 23891,
+            "path": "learned-placement/v01/viewer/piper_imitation_viewer.source.js",
+            "sha256": "9358fba0c71f73813f959355b601a294ddff174431617c768e14594d546f6c77"
+          },
+          {
+            "anonymous_verified": true,
+            "before_sha256": "aff2f332dd4566f6008d8c6a6516c5d4c94a8d9628b1fabce761324b5940edb3",
+            "bytes": 2791,
+            "path": "learned-placement/v01/viewer/HF-TRANSPORT.md",
+            "sha256": "5c87d55e3ec29e8da6a9a6c0516fb549f695278abb7b36f294698d588eb52e90"
+          }
+        ]
+      }
+    ]
+  },
+  "recorded_at_utc": "2026-10-27T06:33:31.914667+00:00",
+  "research_site": {
+    "frontend_source_commit": "cc04b6a",
+    "paper_url": "https://research.dvidia.org/papers/learned-piper-placement-v01/",
+    "site_projection_sha256": "ba5df48eed8ff94546ab6d86997687baba66494342589a58ebd91c47591df722",
+    "transport_derivation": {
+      "browser_verification": "Pending deployment; publication provenance records the final browser result.",
+      "changes": {
+        "viewer/RESEARCH-TRANSPORT.md": {
+          "after": {
+            "bytes": 2275,
+            "sha256": "18701b69aa00525ac7f678dcf9635d42908739b1b0e3d66871ecc359224e1206"
+          },
+          "before": null
+        },
+        "viewer/piper_imitation_viewer.bundle.js": {
+          "after": {
+            "bytes": 528319,
+            "sha256": "d5c1290c0ab081d0814b26d1531ff198130f81cd226652f50e8464f4cc7b23af"
+          },
+          "before": {
+            "bytes": 527055,
+            "sha256": "e4b152f23571eeb9c325f9a034ec22d7af8ab25a1ae2a7869fde769dab5e4aed"
+          }
+        },
+        "viewer/piper_imitation_viewer.source.js": {
+          "after": {
+            "bytes": 23781,
+            "sha256": "1c05ab9c728745e7130c03c3fcec1a53aa8815a38857ef178ecca32391325028"
+          },
+          "before": null
+        },
+        "viewer/viewer-integrity.json": {
+          "after": {
+            "bytes": 12830,
+            "sha256": "093672d163e2b15045bd63efbe253a654462b48dcbd6d723048f8c29131e70fa"
+          },
+          "before": {
+            "bytes": 10466,
+            "sha256": "68718dd6d59ad837f9294a8dd985d3701ad0006b98d226a80d395d4a4a270c15"
+          }
+        }
+      },
+      "parent_full_bundle_integrity_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
+      "parent_site_projection_sha256": "4c9f3657d8c8db5e44b1511a4590aa8e5097a15d844c2022dcd9847a18c7f8bb",
+      "parent_viewer_integrity_sha256": "68718dd6d59ad837f9294a8dd985d3701ad0006b98d226a80d395d4a4a270c15",
+      "schema": "dvidia.piper-imitation-research-transport-projection/v1",
+      "scope": "Browser transport only. Original model, native tapes, scoring, geometry and motion bytes remain unchanged.",
+      "study_source_commit": "be8c21ed555350884e2b34f0206fb9b459b2348c",
+      "tests": {
+        "command": "node --test tests/browser/piper_imitation_transport.mjs",
+        "passed": 15
+      },
+      "transport_source_commit": "cc04b6a"
+    },
+    "transport_projection_commit": "23ef1f5076b1a571cbcbbee61e02e3cfee15f58e",
+    "viewer_url": "https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-27-piper-imitation-v01/viewer/"
+  },
+  "schema": "dvidia.piper-imitation-publication-provenance/v1",
+  "scope": "Artifact consistency, publication revisions and browser smoke checks. No physical robot qualification, hard real-time guarantee or human-video learning.",
+  "study": {
+    "completed_tapes_reexecuted": 0,
+    "frozen_sha256": "8b514fa449e32e1f2da401176f9b7513d2b7b080daf9d3154fc02d8edd5073a3",
+    "model_sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded",
+    "native_attempts": 60,
+    "protocol_sha256": "a7869a80ed801ab0ee85ab699a3d6231a17f4aa70109e519e0e03129ad30969f",
+    "public_bundle_integrity_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
+    "report_sha256": "52ae9f37e845c0949879012fe9e5279192a543dc5f898a8a8d2fe9ab0f51d4fe",
+    "results": {
+      "authored_teacher": "12/12",
+      "hold": "0/12",
+      "learned": "5/12",
+      "open_jaw": "0/12",
+      "shuffled_labels": "0/12"
+    },
+    "source_commit": "be8c21ed555350884e2b34f0206fb9b459b2348c"
+  },
+  "validation": {
+    "browser": {
+      "huggingface_replay": "Corrected namespace index redirect, native mesh loading, playback and failed learned case checked after final hosting patch.",
+      "limits": "Smoke checks, not a network latency, browser compatibility or real-time qualification benchmark.",
+      "research_replay": "Native mesh loading, playback through 20 seconds, timeline scrubbing, failed learned case and teacher/open-jaw comparison checked.",
+      "surface": "Codex in-app browser, 27 October 2026"
+    },
+    "native_implementation_tests": 36,
+    "publication_tests": 25,
+    "transport_tests": 17
+  }
+}
