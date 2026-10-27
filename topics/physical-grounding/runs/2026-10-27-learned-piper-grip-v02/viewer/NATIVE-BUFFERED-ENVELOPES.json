@@ -1,0 +1,20 @@
+{
+  "bounds": "Known expected envelope sizes remain at most 1 MiB. Reject malformed, zero, unsafe, or above-expected Content-Length before native buffering. Content-Length may be absent or describe compressed wire bytes; exact decoded size is checked after buffering. Native buffering cannot enforce a streaming allocation cap on an absent or dishonest Content-Length before the body completes; this is an explicit compatibility experiment, not a claim of identical streaming memory behavior.",
+  "changed_original_paths": [
+    "piper_feedback_viewer.bundle.js",
+    "piper_feedback_viewer.js",
+    "viewer-integrity.json"
+  ],
+  "code_review": "The existing reader loop serially awaits reader.read(); it does not cancel successful streams. On failure or deadline its finally block cancels the unfinished reader without awaiting cancellation. This inspection alone does not establish a browser, reader-loop or server cause.",
+  "diagnostics": "Local native body buffering phase reports 0/expected bytes until the native body finishes, then actual bytes. It cannot report incremental body bytes. No telemetry, credentials or external hosts are added.",
+  "implementation_sha256": {
+    "derive_piper_feedback_buffered_envelopes.py": "6a7cb3622503717b16ed0e42bc66c062b9609f43de067cf970c0023d394ad89e",
+    "piper_feedback_buffered_envelopes.js": "ab1a1fabb1ecf4de9b3e80ffef55d26afc57c3d2cb34f5d87c8c709c1cbc9633"
+  },
+  "observed_transport": "A controlled text-first public load also stalled during HTTP 200 envelope bodies: parts 014/015 reached 122508/349693 bytes and part 016 reached 56972/349693 bytes at 14/26 completion; earlier parts 009\u2013013 timed out partway before existing gzip fallback completed. JSON encoding alone did not establish a fix. No header/decompression/hash cause was demonstrated.",
+  "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+  "parent_viewer_integrity_sha256": "8945f67e406a65e263b0e3bd2edceddbfbf69e1ecae85bcaeae79d30820d73f6",
+  "schema": "dvidia.piper-feedback-native-buffered-envelopes/v1",
+  "status": "Unproven transport hypothesis; requires one separate controlled public cold-load test. Existing fallback behavior is preserved, with no retry-until-success rule.",
+  "strategy": "native-buffered-json/v1: only the existing known same-origin JSON envelopes use Response.arrayBuffer(). Fetch redirects, origin restrictions, 30-second request and 120-second whole-geometry deadlines, shared cancellation, exact post-read byte count, envelope and decoded raw SHA checks, base64 validation and original whole-geometry/mesh checks remain. Other metadata/binary/gzip reads are unchanged."
+}

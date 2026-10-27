@@ -152,6 +152,30 @@ function preferTextTransport() {
   return location.protocol === 'https:' && (location.host === 'research.dvidia.org' ||
     location.host === HF_SPACE_HOST && location.pathname.startsWith(HF_VIEWER_PATH));
 }
+/* Explicit compatibility experiment: native buffering for known JSON envelopes. */
+async function nativeBufferedEnvelope(result, descriptor, signal) {
+  envelopeAssert(descriptor && Number.isInteger(descriptor.bytes) && descriptor.bytes > 0 && descriptor.bytes <= 1048576,
+    'Native envelope size is outside the 1 MiB bound.');
+  const declared = result.headers?.get('content-length');
+  if (declared !== null && declared !== undefined) {
+    envelopeAssert(typeof declared === 'string' && /^[0-9]+$/.test(declared), 'Invalid envelope Content-Length.');
+    const length = Number(declared);
+    envelopeAssert(Number.isSafeInteger(length) && length > 0 && length <= descriptor.bytes && length <= 1048576,
+      'Envelope Content-Length exceeds its declared byte bound.');
+  }
+  envelopeAssert(typeof result.arrayBuffer === 'function', 'Native response buffering is unavailable.');
+  transportPhase(descriptor.href, 'native body buffering', {received: 0, expected: descriptor.bytes});
+  // The browser buffers before this result is exposed. Unlike the streaming
+  // reader, it cannot report incremental bytes or cap an undeclared allocation.
+  // Exact known file size and SHA checks still reject changed completed bytes.
+  const packed = await abortable(result.arrayBuffer(), signal);
+  if (signal?.aborted) throw signal.reason;
+  transportBytes(descriptor.href, packed?.byteLength ?? 0);
+  envelopeAssert(packed && Number.isInteger(packed.byteLength) && packed.byteLength === descriptor.bytes && packed.byteLength <= 1048576,
+    'Native buffered envelope byte count differs from its declared bound.');
+  return packed;
+}
+
 async function envelopedBinary(meta, expected, outerSignal) {
   const descriptor = meta.json_envelope;
   envelopeAssert(typeof expected === 'string' && /^(?:geometry-part-[0-9]{3}|poses-[0-9]{2})\.bin$/.test(expected) && meta.href === expected, 'Unexpected text-transport binary path.');
@@ -159,7 +183,8 @@ async function envelopedBinary(meta, expected, outerSignal) {
   envelopeAssert(Number.isInteger(descriptor.bytes) && descriptor.bytes > 0 && descriptor.bytes <= 1048576 && typeof descriptor.sha256 === 'string' && /^[0-9a-f]{64}$/.test(descriptor.sha256), 'Invalid binary-envelope size or digest.');
   envelopeAssert(Number.isInteger(meta.bytes) && meta.bytes > 0 && meta.bytes <= 786432 && typeof meta.sha256 === 'string' && /^[0-9a-f]{64}$/.test(meta.sha256), 'Decoded binary exceeds the envelope bound.');
   return deadline(descriptor.href, 30000, async signal => {
-    const packed = await bounded((await response(descriptor.href, signal, descriptor.bytes)).body, descriptor.bytes, signal, descriptor.href);
+    const result = await response(descriptor.href, signal, descriptor.bytes);
+    const packed = await nativeBufferedEnvelope(result, descriptor, signal);
     let envelope, text;
     try {
       await verifiedBinary(packed, descriptor, descriptor.href);

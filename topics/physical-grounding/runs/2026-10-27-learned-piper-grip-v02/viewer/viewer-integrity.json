@@ -8,6 +8,10 @@
       "bytes": 1076,
       "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
     },
+    "NATIVE-BUFFERED-ENVELOPES.json": {
+      "bytes": 2696,
+      "sha256": "5dd1e2c9d561f554240b3003769fe3181291eec851a8823145d458538ff43074"
+    },
     "README.md": {
       "bytes": 1391,
       "sha256": "b9402507c0b78a5e258f95d776ba5178684469f5cbc54a635888d9b1d90b929a"
@@ -2901,12 +2905,12 @@
       "sha256": "bec4ebc3b45ccd7d5693e1b52a8269b790ee798640f6290c799ab54bf0b8c796"
     },
     "piper_feedback_viewer.bundle.js": {
-      "bytes": 537642,
-      "sha256": "21c0eec177d68684da6e4d6c01329484d8eeff8a4c548d5516d7cd2216699af0"
+      "bytes": 538425,
+      "sha256": "7e7ad360c076d1565fd281698bfb0359167a374455a94347280f75f7f15a2762"
     },
     "piper_feedback_viewer.js": {
-      "bytes": 38589,
-      "sha256": "7f88d483637423e25c3d7987a60c47f18499e8a8d93f28330060148fd4e63022"
+      "bytes": 40229,
+      "sha256": "69692fdc652cc55239d1ebd5b59d98357942f28fcfd88157b6aff4effc1ae4ea"
     },
     "poses-00.bin": {
       "bytes": 336336,
@@ -3289,6 +3293,26 @@
     "scope": "Hosting transport only. No changes to physics, policy, model, scoring, recorded states, original geometry or evidence. Original sealed viewer remains untouched.",
     "total_geometry_deadline_s": 120,
     "whole_geometry_verification": "Per-chunk SHA256 and byte count, then exact original whole-file SHA256; unchanged original scene mesh/index validation follows."
+  },
+  "native_buffered_envelopes_derivation": {
+    "bounds": "Known expected envelope sizes remain at most 1 MiB. Reject malformed, zero, unsafe, or above-expected Content-Length before native buffering. Content-Length may be absent or describe compressed wire bytes; exact decoded size is checked after buffering. Native buffering cannot enforce a streaming allocation cap on an absent or dishonest Content-Length before the body completes; this is an explicit compatibility experiment, not a claim of identical streaming memory behavior.",
+    "changed_original_paths": [
+      "piper_feedback_viewer.bundle.js",
+      "piper_feedback_viewer.js",
+      "viewer-integrity.json"
+    ],
+    "code_review": "The existing reader loop serially awaits reader.read(); it does not cancel successful streams. On failure or deadline its finally block cancels the unfinished reader without awaiting cancellation. This inspection alone does not establish a browser, reader-loop or server cause.",
+    "diagnostics": "Local native body buffering phase reports 0/expected bytes until the native body finishes, then actual bytes. It cannot report incremental body bytes. No telemetry, credentials or external hosts are added.",
+    "implementation_sha256": {
+      "derive_piper_feedback_buffered_envelopes.py": "6a7cb3622503717b16ed0e42bc66c062b9609f43de067cf970c0023d394ad89e",
+      "piper_feedback_buffered_envelopes.js": "ab1a1fabb1ecf4de9b3e80ffef55d26afc57c3d2cb34f5d87c8c709c1cbc9633"
+    },
+    "observed_transport": "A controlled text-first public load also stalled during HTTP 200 envelope bodies: parts 014/015 reached 122508/349693 bytes and part 016 reached 56972/349693 bytes at 14/26 completion; earlier parts 009\u2013013 timed out partway before existing gzip fallback completed. JSON encoding alone did not establish a fix. No header/decompression/hash cause was demonstrated.",
+    "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+    "parent_viewer_integrity_sha256": "8945f67e406a65e263b0e3bd2edceddbfbf69e1ecae85bcaeae79d30820d73f6",
+    "schema": "dvidia.piper-feedback-native-buffered-envelopes/v1",
+    "status": "Unproven transport hypothesis; requires one separate controlled public cold-load test. Existing fallback behavior is preserved, with no retry-until-success rule.",
+    "strategy": "native-buffered-json/v1: only the existing known same-origin JSON envelopes use Response.arrayBuffer(). Fetch redirects, origin restrictions, 30-second request and 120-second whole-geometry deadlines, shared cancellation, exact post-read byte count, envelope and decoded raw SHA checks, base64 validation and original whole-geometry/mesh checks remain. Other metadata/binary/gzip reads are unchanged."
   },
   "schema": "dvidia.piper-feedback-viewer/v0.2",
   "scope": "Viewer projection consistency only; external native NPZ arrays are not part of this local file inventory.",
