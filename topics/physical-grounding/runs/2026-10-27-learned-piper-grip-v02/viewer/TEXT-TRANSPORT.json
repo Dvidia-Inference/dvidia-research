@@ -1,0 +1,23 @@
+{
+  "changed_original_paths": [
+    "motion.json",
+    "piper_feedback_viewer.bundle.js",
+    "piper_feedback_viewer.js",
+    "scene.json",
+    "viewer-integrity.json"
+  ],
+  "envelopes": 54,
+  "implementation_sha256": {
+    "derive_piper_feedback_text_transport.py": "b8e868e3a4ee8f879f0326ff948b7216d950112bdf981323c836537eea8985d4",
+    "piper_feedback_text_transport.js": "1afb6b868a2f38c3c0512a66bbd3316bf1529ba2072715d1f0a3a23fb5c41105"
+  },
+  "max_decoded_bytes": 786432,
+  "max_envelope_bytes": 1048576,
+  "observed_transport": "Controlled public diagnostics observed HTTP200 geometry binary/gzip bodies stalling after partial transfer while scene.json and motion.json completed. No header, decompression or hash-stage failure was demonstrated in that load. JSON envelopes are an unproven hosting hypothesis until a separate public cold-load test.",
+  "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+  "parent_viewer_integrity_sha256": "b33ef1f1ddc6d6860419a1ee868ccdf1fe6c6222fd1e6942aeff10175afffacf",
+  "preference": "Same-origin JSON first only on the exact existing HTTPS research domain or existing HF Space viewer namespace. Local runs retain binary/gzip behavior; network-unavailable text requests may fall back to original binary/gzip. Malformed or mismatched envelopes fail closed.",
+  "preserved": "All original raw/gzip files, scientific results, policy/model, states, evidence, deadlines, origin checks, case laziness and cancellation. No external hosts, credentials or telemetry added.",
+  "schema": "dvidia.piper-feedback-text-transport/v1",
+  "verification": "Canonical bounded JSON, exact schema/keys, exact base64 length/padding/canonical bits, envelope SHA, then unchanged decoded raw SHA; geometry retains its unchanged whole-file SHA and original mesh bounds."
+}
