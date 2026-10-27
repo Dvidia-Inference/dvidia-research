@@ -1,0 +1,34 @@
+{
+  "attempts": 120,
+  "bundle_bytes": 5866002,
+  "changed_original_paths": [
+    "index.html",
+    "piper_feedback_viewer.bundle.js",
+    "piper_feedback_viewer.js",
+    "viewer-integrity.json"
+  ],
+  "derived_motion_sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4",
+  "first_embedded_case": {
+    "id": "confirmation-00-goal0-nominal",
+    "variant": "feedback"
+  },
+  "implementation_sha256": {
+    "derive_piper_feedback_native_resources.py": "09e4cbb8da5127de8e67737d14f0b423922ae26f922049b0210dfb259674260f",
+    "piper_feedback_native_resources.js": "b436ea5d74bc556d9e43d95534f814230a303b27b28ea9a4e68d7def9750be79"
+  },
+  "largest_script_bytes": 489100,
+  "limits": "SRI is enforced by the browser before a data script executes; this is immutable generated data delivery, not arbitrary policy loading. Download byte caps are declared and pinned by SRI rather than incrementally enforced on native script responses. Main bundle is below 8 MiB, each selected-case script below 1 MiB. Browser gzip support is required. No new hosts, authentication or telemetry. This is experimental until an independent controlled public load.",
+  "motion_publication_change": "Only native evidence URLs and dataset publication metadata may be pinned to the supplied exact commit. Embedded and external motion JSON are byte-identical. The original scientific viewer and original motion remain sealed and untouched.",
+  "native_dataset_revision": "main (explicitly unpinned experimental transport test)",
+  "observed_transport": "Original, chunked, text-first and native-buffered fetch-body strategies have each timed out during controlled public loads. Native buffering reached 22/26 chunks before the 120-second geometry deadline. They are not established fixes. Script/HTML browser-managed resources have loaded reliably in the observed sessions; the precise transport cause remains undiagnosed.",
+  "original_geometry_bytes": 6736872,
+  "original_geometry_sha256": "2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def",
+  "original_motion_sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4",
+  "parent_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+  "replay_count": 28,
+  "schema": "dvidia.piper-feedback-native-resources/v1",
+  "scientific_bytes_unchanged": true,
+  "security": "Compiled main bundle has HTML SHA384 SRI. Case scripts have fixed filenames, at most 1 MiB source and manifest-bound SHA384 SRI. A restrictive native script-src self policy prevents external script targets, including redirects; no inline script is used. Each generated wrapper contains only literals delivered to one fixed callback; only an actively requested exact case identity can be accepted. Every payload checks exact keys, bounded canonical base64, compressed SHA256, bounded gzip expansion and unchanged original raw SHA256. Original whole-geometry and mesh/index bounds remain.",
+  "selected_case_scripts": 27,
+  "strategy": "Embed the exact original gzip geometry, original scene/motion JSON and the first scheduled feedback replay in the compiled native script. Load each other case only on selection using one fixed same-origin generated literal data script with SHA384 SRI, anonymous CORS, no-referrer and a cancellable 30-second deadline. No runtime fetch-body reads are needed for playback."
+}

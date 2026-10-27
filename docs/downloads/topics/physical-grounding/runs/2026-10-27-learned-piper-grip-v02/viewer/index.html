@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; base-uri 'none'">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
@@ -231,8 +232,6 @@
 
       <div class="below"><p class="replay-note" id="replay-note">These are saved simulation frames. Playback does not rerun the policy or physics.</p></div>
 
-      <details class="study-details"><summary>Transfer details</summary><p>Local request state only. No diagnostics are sent.</p><pre id="transport-details" style="white-space:pre-wrap;overflow-wrap:anywhere">Waiting for saved assets…</pre></details>
-
       <details class="study-details">
         <summary>Evaluation details &amp; limits</summary>
         <div class="detail-grid">
@@ -260,6 +259,6 @@
 
     <footer class="footer"><span>DVIDIA · Open research, inspectable evidence.</span><span>PiPER feedback study v0.2 · Simulation only</span></footer>
   </div>
-  <script src="piper_feedback_viewer.bundle.js" defer></script>
+  <script src="piper_feedback_viewer.bundle.js" integrity="sha384-prVT6kTLsvtAzDlRbeLT6JEAvZ6S1lK08wggKmqcoa+2cRRiC/YbBcbLZ2ZbgiP4" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 </body>
 </html>

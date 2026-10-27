@@ -1,28 +1,50 @@
 {
+  "browser_managed_resources_derivation": {
+    "attempts": 120,
+    "bundle_bytes": 5866002,
+    "changed_original_paths": [
+      "index.html",
+      "piper_feedback_viewer.bundle.js",
+      "piper_feedback_viewer.js",
+      "viewer-integrity.json"
+    ],
+    "derived_motion_sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4",
+    "first_embedded_case": {
+      "id": "confirmation-00-goal0-nominal",
+      "variant": "feedback"
+    },
+    "implementation_sha256": {
+      "derive_piper_feedback_native_resources.py": "09e4cbb8da5127de8e67737d14f0b423922ae26f922049b0210dfb259674260f",
+      "piper_feedback_native_resources.js": "b436ea5d74bc556d9e43d95534f814230a303b27b28ea9a4e68d7def9750be79"
+    },
+    "largest_script_bytes": 489100,
+    "limits": "SRI is enforced by the browser before a data script executes; this is immutable generated data delivery, not arbitrary policy loading. Download byte caps are declared and pinned by SRI rather than incrementally enforced on native script responses. Main bundle is below 8 MiB, each selected-case script below 1 MiB. Browser gzip support is required. No new hosts, authentication or telemetry. This is experimental until an independent controlled public load.",
+    "motion_publication_change": "Only native evidence URLs and dataset publication metadata may be pinned to the supplied exact commit. Embedded and external motion JSON are byte-identical. The original scientific viewer and original motion remain sealed and untouched.",
+    "native_dataset_revision": "main (explicitly unpinned experimental transport test)",
+    "observed_transport": "Original, chunked, text-first and native-buffered fetch-body strategies have each timed out during controlled public loads. Native buffering reached 22/26 chunks before the 120-second geometry deadline. They are not established fixes. Script/HTML browser-managed resources have loaded reliably in the observed sessions; the precise transport cause remains undiagnosed.",
+    "original_geometry_bytes": 6736872,
+    "original_geometry_sha256": "2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def",
+    "original_motion_sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4",
+    "parent_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+    "replay_count": 28,
+    "schema": "dvidia.piper-feedback-native-resources/v1",
+    "scientific_bytes_unchanged": true,
+    "security": "Compiled main bundle has HTML SHA384 SRI. Case scripts have fixed filenames, at most 1 MiB source and manifest-bound SHA384 SRI. A restrictive native script-src self policy prevents external script targets, including redirects; no inline script is used. Each generated wrapper contains only literals delivered to one fixed callback; only an actively requested exact case identity can be accepted. Every payload checks exact keys, bounded canonical base64, compressed SHA256, bounded gzip expansion and unchanged original raw SHA256. Original whole-geometry and mesh/index bounds remain.",
+    "selected_case_scripts": 27,
+    "strategy": "Embed the exact original gzip geometry, original scene/motion JSON and the first scheduled feedback replay in the compiled native script. Load each other case only on selection using one fixed same-origin generated literal data script with SHA384 SRI, anonymous CORS, no-referrer and a cancellable 30-second deadline. No runtime fetch-body reads are needed for playback."
+  },
   "files": {
-    "GEOMETRY-TRANSPORT.json": {
-      "bytes": 1604,
-      "sha256": "ff3ad16d058ecfd25722d221673a071bbd3839c3d73542ce9a8623c49beb3249"
+    "BROWSER-MANAGED-RESOURCES.json": {
+      "bytes": 3394,
+      "sha256": "4aaf5b20ab63199b4e1bbbce36e41dc013dc57f8302ebbf25b5f8d4a14fa20d4"
     },
     "LICENSE": {
       "bytes": 1076,
       "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
     },
-    "NATIVE-BUFFERED-ENVELOPES.json": {
-      "bytes": 2696,
-      "sha256": "5dd1e2c9d561f554240b3003769fe3181291eec851a8823145d458538ff43074"
-    },
     "README.md": {
       "bytes": 1391,
       "sha256": "b9402507c0b78a5e258f95d776ba5178684469f5cbc54a635888d9b1d90b929a"
-    },
-    "TEXT-TRANSPORT.json": {
-      "bytes": 1859,
-      "sha256": "3db10e4b2e172574ac55f46df24d180d5b6ced6b91fcbbb9d1893736bb46bbfc"
-    },
-    "TRANSPORT-DIAGNOSTICS.json": {
-      "bytes": 1424,
-      "sha256": "4fef8ebb131f6cbf8a8992b837342b4d396eba31389a1c0e35ac8eb3d5eb02a1"
     },
     "base-model.json": {
       "bytes": 2031879,
@@ -2568,318 +2590,6 @@
       "bytes": 2324,
       "sha256": "b49c20ec464581a3bd3bfea5b6962ae4fe219966fbf998fbdc2c0774d8d042ca"
     },
-    "geometry-part-000.bin": {
-      "bytes": 262144,
-      "sha256": "7f4bc40c819aa19b1ce0b9e94386e2425e058087b7451901b38f0bc11b2066a8"
-    },
-    "geometry-part-000.bin.gz": {
-      "bytes": 197463,
-      "sha256": "5a954ce31fbaf0f6d1a862a19b338dc846bd43fbe3905ba93445c0829ed41c3d"
-    },
-    "geometry-part-000.bin.json": {
-      "bytes": 349693,
-      "sha256": "89ab4b80dff9ffcc89d560624eda74f6f071ae9f4c03068400167ae052129ad3"
-    },
-    "geometry-part-001.bin": {
-      "bytes": 262144,
-      "sha256": "2958a33dd87e8aae7e749f0ac35a91be6ad81a47edbc8f4e0d7c7e2e7e7ff9f7"
-    },
-    "geometry-part-001.bin.gz": {
-      "bytes": 88104,
-      "sha256": "f8ed83a90f977164c1e34ee377a4e4faa79051addff52ae34099c4b2e0e46289"
-    },
-    "geometry-part-001.bin.json": {
-      "bytes": 349693,
-      "sha256": "a25fa1589d7ae988d4d23b9b0ada6f5050da7216bcee387b05110f201a01c783"
-    },
-    "geometry-part-002.bin": {
-      "bytes": 262144,
-      "sha256": "f30da5147fc971c7870da769110f049e643859ed3e87abddd4aa0464cfcae254"
-    },
-    "geometry-part-002.bin.gz": {
-      "bytes": 122342,
-      "sha256": "e4bda6c67303f743bc29c0db30a8ebe0935110793ec8bd2c5b0f06ab46781585"
-    },
-    "geometry-part-002.bin.json": {
-      "bytes": 349693,
-      "sha256": "ffa59a7b7ae623d56c4ccf790c1b60eea81222059d41647e4712ef830835edd3"
-    },
-    "geometry-part-003.bin": {
-      "bytes": 262144,
-      "sha256": "2cad35aa66d8f92f6d2707e0f8626ed5cf88b47b86ef9cb2fbbbb2bd9ba2588c"
-    },
-    "geometry-part-003.bin.gz": {
-      "bytes": 184972,
-      "sha256": "e0d1ea2e4a943c45febb553e04b94d45129b7b5712386957b17426ae7b88e393"
-    },
-    "geometry-part-003.bin.json": {
-      "bytes": 349693,
-      "sha256": "7fedd413d9f05e13d286db3cbb5c5ffe305247d8ea172405fea12e42c3acc1bb"
-    },
-    "geometry-part-004.bin": {
-      "bytes": 262144,
-      "sha256": "a860e5d7edadc2d56595b9b56bf85c2f1589e3c8d4334f14d29f65a7b0ec2bfd"
-    },
-    "geometry-part-004.bin.gz": {
-      "bytes": 91939,
-      "sha256": "35084fb7754c8e1c398d12986e3792b3b2b080d0394fbf0f1c2db8a5b3b8ab8b"
-    },
-    "geometry-part-004.bin.json": {
-      "bytes": 349693,
-      "sha256": "0cc421f73831119307ce93c6f83aebf546c18a1070e4acf0997a5fb6cbc958b2"
-    },
-    "geometry-part-005.bin": {
-      "bytes": 262144,
-      "sha256": "05be55dc158128428034335d980b1486f0aa9f6e4df74b36507a345cda76c51d"
-    },
-    "geometry-part-005.bin.gz": {
-      "bytes": 178540,
-      "sha256": "34470a004295c4126a8083947f9fe2db2d6dd2d290e507c11ef6ca474ffd879a"
-    },
-    "geometry-part-005.bin.json": {
-      "bytes": 349693,
-      "sha256": "d975d62e70764bfb71a5eb3af74aab56118454a5ad493701a407c6c70314e197"
-    },
-    "geometry-part-006.bin": {
-      "bytes": 262144,
-      "sha256": "65f8baf25bdf94b7b7f66e26b6cc296e02e682cffe4d52fc01dfef8305bef458"
-    },
-    "geometry-part-006.bin.gz": {
-      "bytes": 102019,
-      "sha256": "f4291b3e5a5d0df0f053f852b57ec982de33329f721e590a8b2977e04f4e020c"
-    },
-    "geometry-part-006.bin.json": {
-      "bytes": 349693,
-      "sha256": "c619be9575c8bd5f8e32fd0a1576b03f87039e7714b960a6fe1e1fd7e740da6e"
-    },
-    "geometry-part-007.bin": {
-      "bytes": 262144,
-      "sha256": "2d807cb7add25689c1b2417f3f8332a8b25efa48596bb23454ce9d0981e6cbea"
-    },
-    "geometry-part-007.bin.gz": {
-      "bytes": 143950,
-      "sha256": "1f33d6c077e0c122024ea568327f5715fdc0904fe5a3a44be216fac0ec706b4e"
-    },
-    "geometry-part-007.bin.json": {
-      "bytes": 349693,
-      "sha256": "15ac16a3d4d4f34365f80c475e24ff8262571a78fb36682112c5ee900025dc20"
-    },
-    "geometry-part-008.bin": {
-      "bytes": 262144,
-      "sha256": "caa2d8f348656466d4c96d4bdccc787b7a76fe73d739540e1dcab934a925a56b"
-    },
-    "geometry-part-008.bin.gz": {
-      "bytes": 143172,
-      "sha256": "0f54eab4ec41781957ce01b3f45b610c237fc35cbf1b4c328fad76a5225cb098"
-    },
-    "geometry-part-008.bin.json": {
-      "bytes": 349693,
-      "sha256": "b03aa07009a56502f713d80902654e644f382cae85ec17b2740f7c2ab0b530c6"
-    },
-    "geometry-part-009.bin": {
-      "bytes": 262144,
-      "sha256": "59fa3e265ee155e437ddbcf7720b8d4b149d42c095ac8c8e82bd5a3a511e4dd7"
-    },
-    "geometry-part-009.bin.gz": {
-      "bytes": 151998,
-      "sha256": "ce179329c14402307c03eab19352900dbfd45d4d1b0ca6733d15e68f950b697c"
-    },
-    "geometry-part-009.bin.json": {
-      "bytes": 349693,
-      "sha256": "03a712dece2af02fe27ee29b46ffed3b262ec650b1b2668dfc008fd280d30642"
-    },
-    "geometry-part-010.bin": {
-      "bytes": 262144,
-      "sha256": "5aaf533d002b63348d8e1dd289a0140d8e29baced6800f330468818e4a2c7dcc"
-    },
-    "geometry-part-010.bin.gz": {
-      "bytes": 141423,
-      "sha256": "46c782048c51634f5544729be874e4091d489ae65800a53041a660818f3e1646"
-    },
-    "geometry-part-010.bin.json": {
-      "bytes": 349693,
-      "sha256": "fde1cbee669bb8ab050740626f914cd67ba696df11bf1a21d809ed7e43ea9a46"
-    },
-    "geometry-part-011.bin": {
-      "bytes": 262144,
-      "sha256": "8890732a007011d51d86aa3f60d939806b28d237a5c733a5e14528785b94eb83"
-    },
-    "geometry-part-011.bin.gz": {
-      "bytes": 135448,
-      "sha256": "50029235b795f4e554c7dbbd04ac9022750938c89277dc690e511e020dc949c2"
-    },
-    "geometry-part-011.bin.json": {
-      "bytes": 349693,
-      "sha256": "1dfb2af05001a926e30ef4f3ec964d131808b27ab630c960b10ee2f64892db07"
-    },
-    "geometry-part-012.bin": {
-      "bytes": 262144,
-      "sha256": "f51fba45953ee78e325231c7068d7592495741377dc074365f3741a1fafdd03c"
-    },
-    "geometry-part-012.bin.gz": {
-      "bytes": 148530,
-      "sha256": "9ca7c10862182ba4bd3761c704d924c896ab9e85010aaff603522b2b676c2c96"
-    },
-    "geometry-part-012.bin.json": {
-      "bytes": 349693,
-      "sha256": "c135cf73fbed3cf892a0acf2fe872463a4f991fbf6f5abeccd50af3019b18458"
-    },
-    "geometry-part-013.bin": {
-      "bytes": 262144,
-      "sha256": "8aff63a4630e78636b96d359fb9575235e132f21e340455698d4845ce3ba3234"
-    },
-    "geometry-part-013.bin.gz": {
-      "bytes": 199654,
-      "sha256": "9c73757a97f2d24bad06b3f612f667e9578521a1a812396728a5f992824cc05a"
-    },
-    "geometry-part-013.bin.json": {
-      "bytes": 349693,
-      "sha256": "ec2dd51eb3208d2dd32a053c977da25af9317ce664958e164f1a2035fb5e26fc"
-    },
-    "geometry-part-014.bin": {
-      "bytes": 262144,
-      "sha256": "abc7dd8eacada193054c898c3f3f116cb3c9afe7932cac2e2b2f125da278b930"
-    },
-    "geometry-part-014.bin.gz": {
-      "bytes": 225891,
-      "sha256": "703829e5e704abe23e8bd43187393f7f881b91a634524c7e8ae00b51694bdac2"
-    },
-    "geometry-part-014.bin.json": {
-      "bytes": 349693,
-      "sha256": "842441606ae048b3ed52b6ac495f2adbde2887708374553136cf2cfe45fee92e"
-    },
-    "geometry-part-015.bin": {
-      "bytes": 262144,
-      "sha256": "e404bf1846c4fdffcd67c9c5bb750555f694997f0030c03b24e3f1a67ec565e8"
-    },
-    "geometry-part-015.bin.gz": {
-      "bytes": 85030,
-      "sha256": "7b57aeed93e9e4c7ac022ce7ab66e121950159add075c1a8e757086fe8850d72"
-    },
-    "geometry-part-015.bin.json": {
-      "bytes": 349693,
-      "sha256": "2f12b1cbf8f5b40bca935d45bf31e9a13ba5d6a06a7de4b085b36226b53e9212"
-    },
-    "geometry-part-016.bin": {
-      "bytes": 262144,
-      "sha256": "845e286746f76886872c2f74f81ca924183c97e4e6ff9f26abd428135ddc6e0d"
-    },
-    "geometry-part-016.bin.gz": {
-      "bytes": 86130,
-      "sha256": "b16d3d52f138cebd128cd21fa2c4df7ba5b9e2574768c96f914b8b074a657ea7"
-    },
-    "geometry-part-016.bin.json": {
-      "bytes": 349693,
-      "sha256": "3c9e75da7daf5c64805e0f01c73eed6eb3f1a7d223446b6e28d986a44601707f"
-    },
-    "geometry-part-017.bin": {
-      "bytes": 262144,
-      "sha256": "d218d0327d6bddec241e10f59b925fb63ed1e3cc0ede3431e3e13c8743b4a626"
-    },
-    "geometry-part-017.bin.gz": {
-      "bytes": 88457,
-      "sha256": "dcb23f8fd9bd3aceee016d4ab1c0de2309de025ef0a00d04a7fb53ca583cda34"
-    },
-    "geometry-part-017.bin.json": {
-      "bytes": 349693,
-      "sha256": "60d44c6235051106e07e4084861a5093323877bed142640b878daf60056d0c45"
-    },
-    "geometry-part-018.bin": {
-      "bytes": 262144,
-      "sha256": "e4ef106141f889afbe4507248bde742561830db6d8a514904e64019456610d92"
-    },
-    "geometry-part-018.bin.gz": {
-      "bytes": 204199,
-      "sha256": "80e0239cda439f9831b2f2625aba1adb29c4c48116b75dff10ccc2b69948de46"
-    },
-    "geometry-part-018.bin.json": {
-      "bytes": 349693,
-      "sha256": "81aa3f6c40a0be13a5562f429e65b5a2925bc3af3dbfdc418a014283fb9ad72b"
-    },
-    "geometry-part-019.bin": {
-      "bytes": 262144,
-      "sha256": "61c80aac9d08724579fa24cdd0c9727e397052555b02a1778b5820b63d53048b"
-    },
-    "geometry-part-019.bin.gz": {
-      "bytes": 161120,
-      "sha256": "f7c69b56f7dcd2a2a7b4a6feb6166d7d29884baa01ae128677ebdcdb378ec4cf"
-    },
-    "geometry-part-019.bin.json": {
-      "bytes": 349693,
-      "sha256": "88c0a2e6f7ea71129d1003c88df587296c1e740fcb00f5906d5dca24136c0e53"
-    },
-    "geometry-part-020.bin": {
-      "bytes": 262144,
-      "sha256": "13830aec86e7d8587960818624945e07452afe9386568db49476e970062f09f6"
-    },
-    "geometry-part-020.bin.gz": {
-      "bytes": 87326,
-      "sha256": "ea007267534276d363184851def5aa7e38ddfa0980113a8db64f9dd4569153dc"
-    },
-    "geometry-part-020.bin.json": {
-      "bytes": 349693,
-      "sha256": "4faf127980872a2ccf99b46de9952c32bd09dc7fb87f83b0ede29159479634b9"
-    },
-    "geometry-part-021.bin": {
-      "bytes": 262144,
-      "sha256": "41b5bb034dd773e61effd7c1ee20d3604da75485fd4e9289b0ab2d00631525ba"
-    },
-    "geometry-part-021.bin.gz": {
-      "bytes": 95367,
-      "sha256": "20e3f6c243da9c76487b8a8b3023310e06d6e116a80b8693adbe129132b0566f"
-    },
-    "geometry-part-021.bin.json": {
-      "bytes": 349693,
-      "sha256": "e3962b2674beb24dc4ce24e3d27e3a203b45f4e026bcd38eb1d443a513b0ae32"
-    },
-    "geometry-part-022.bin": {
-      "bytes": 262144,
-      "sha256": "c3566b5efe6d619dd4fc9d4b567e86e5f5d36774e6a3747943ffcdf2ed467ccf"
-    },
-    "geometry-part-022.bin.gz": {
-      "bytes": 139518,
-      "sha256": "86eb35ece4d33d24a063117174bbc452e8b98147476c20a9e72ece3234ff31ab"
-    },
-    "geometry-part-022.bin.json": {
-      "bytes": 349693,
-      "sha256": "3da67236ff79baef05192793984f76e65a0f2f6767bdcf75ace1b0a1b6cc597c"
-    },
-    "geometry-part-023.bin": {
-      "bytes": 262144,
-      "sha256": "4fcfd7627939262c09ba565afae2cf964c6670a7b256b2584edb2fc141b2a8a0"
-    },
-    "geometry-part-023.bin.gz": {
-      "bytes": 162402,
-      "sha256": "1eeb6434208e84896ad8c1d2f0a428b9e93a8fef9caada3627ae6acd8ab96b01"
-    },
-    "geometry-part-023.bin.json": {
-      "bytes": 349693,
-      "sha256": "eb1df8f49376e227b6ef45b5d6047626a9280bcaf523abbeffa586b6135184b0"
-    },
-    "geometry-part-024.bin": {
-      "bytes": 262144,
-      "sha256": "dd3da72dd7ea0de434b4bab4d64f94966b4ee9d4fef3e46bec0501b852ea1a9e"
-    },
-    "geometry-part-024.bin.gz": {
-      "bytes": 134688,
-      "sha256": "869965dd72e4d6d1c696e8a66589e000713e60b5ae6881540fc641ef90c5df81"
-    },
-    "geometry-part-024.bin.json": {
-      "bytes": 349693,
-      "sha256": "34133d97d02fa003153717d6d5a960c47021d826ea045beac722cbb3a3ed5e98"
-    },
-    "geometry-part-025.bin": {
-      "bytes": 183272,
-      "sha256": "8ce2eefd48f655ca80ffdb0e5dfac56a0686c80e4107a0aed496bbb46a99a370"
-    },
-    "geometry-part-025.bin.gz": {
-      "bytes": 76286,
-      "sha256": "1f9220421f2ee273b11906985b78bcaef68f4dc935ed969a0433ed82090d6d56"
-    },
-    "geometry-part-025.bin.json": {
-      "bytes": 244529,
-      "sha256": "3904f9947e1316bce75aa9d4c85504f205accf32712cdc46073bc2da04b614b6"
-    },
     "geometry.bin": {
       "bytes": 6736872,
       "sha256": "2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def"
@@ -2889,8 +2599,8 @@
       "sha256": "51365a5a661d8062e28c66abc6bdb843ee410811f84b49d62c5878c265b3631f"
     },
     "index.html": {
-      "bytes": 17773,
-      "sha256": "52ebbb21038b799f7315193131c4207551cd98cc7283225bb1788322e0ff14a6"
+      "bytes": 17766,
+      "sha256": "3885feb330d58938fd01ed4c8c6a1719a355a29b3825dd25faa836c53ebe5d2f"
     },
     "licenses/agilex_piper/LICENSE": {
       "bytes": 1065,
@@ -2901,16 +2611,16 @@
       "sha256": "ab0d218758ec6c298417407962f49179e369236e8f316dbaa7671756d6f8eb77"
     },
     "motion.json": {
-      "bytes": 609981,
-      "sha256": "bec4ebc3b45ccd7d5693e1b52a8269b790ee798640f6290c799ab54bf0b8c796"
+      "bytes": 446355,
+      "sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4"
     },
     "piper_feedback_viewer.bundle.js": {
-      "bytes": 538425,
-      "sha256": "7e7ad360c076d1565fd281698bfb0359167a374455a94347280f75f7f15a2762"
+      "bytes": 5866002,
+      "sha256": "2a026a4bc037e49daf54b295c070dda2fee797ef61575500d9cdb5e266ac3b77"
     },
     "piper_feedback_viewer.js": {
-      "bytes": 40229,
-      "sha256": "69692fdc652cc55239d1ebd5b59d98357942f28fcfd88157b6aff4effc1ae4ea"
+      "bytes": 5369384,
+      "sha256": "3162d299c1ca170e2197903d2e2807135e91c7bcc8c7e3f33738702c8f7c1b43"
     },
     "poses-00.bin": {
       "bytes": 336336,
@@ -2920,10 +2630,6 @@
       "bytes": 180545,
       "sha256": "3b927aa16cdb71127ca97fca183a5482a2fbba55c21b4b4a39039469993d708a"
     },
-    "poses-00.bin.json": {
-      "bytes": 448613,
-      "sha256": "08b1e72d9e8405b75829ca336f87ed981d046f0a6c7af97d0b1d7cd80e13ead5"
-    },
     "poses-01.bin": {
       "bytes": 336336,
       "sha256": "a8b92e4255bc66dcfed3919d029143201e2c6e2286ad624d37c8dc025178960a"
@@ -2931,10 +2637,6 @@
     "poses-01.bin.gz": {
       "bytes": 180661,
       "sha256": "f33d95a56d7c218a47bb095917947c05dae3d3b971cf8b8f48cf90c4b22b8470"
-    },
-    "poses-01.bin.json": {
-      "bytes": 448613,
-      "sha256": "b5e55b41dedd477f5424c31e2ec9b725c50a53756b085cd18342157f026558f3"
     },
     "poses-02.bin": {
       "bytes": 336336,
@@ -2944,10 +2646,6 @@
       "bytes": 180407,
       "sha256": "85f0a2c9d0e12e89829e915841b20682287833fe143a3dbf406e830230754de7"
     },
-    "poses-02.bin.json": {
-      "bytes": 448613,
-      "sha256": "cb43eb0e6973dbfe230af8bc4bc745e5f3adb96b30767f851b3b089c0be25a08"
-    },
     "poses-03.bin": {
       "bytes": 336336,
       "sha256": "de7377a759e9fa9292fb8089e2f11a5dbc3c53b35e1cf8ab0b9e8173e359c4a9"
@@ -2955,10 +2653,6 @@
     "poses-03.bin.gz": {
       "bytes": 179935,
       "sha256": "2e9736a6f3cf1818e35dea14feaee9697606973d6d26ae3de525a0985e82faeb"
-    },
-    "poses-03.bin.json": {
-      "bytes": 448613,
-      "sha256": "7d7b3c2679f874d2ea59251c35fe12aa9ec3a764142bac5c477957170e77600c"
     },
     "poses-04.bin": {
       "bytes": 336336,
@@ -2968,10 +2662,6 @@
       "bytes": 179396,
       "sha256": "f50314f94921aa11519d0f0394e1150fe9ebd1a4bf4c1bdd55e83ae134ae0189"
     },
-    "poses-04.bin.json": {
-      "bytes": 448613,
-      "sha256": "a1fc4ee329de8e8a52ed7670cdfc9f58f341be0c146b6ab635643eca84f7094f"
-    },
     "poses-05.bin": {
       "bytes": 336336,
       "sha256": "d92c99b7eb134531898574a2171b5d417fa74ce766f1ae0e909c41e6a16f737a"
@@ -2979,10 +2669,6 @@
     "poses-05.bin.gz": {
       "bytes": 178573,
       "sha256": "2d23859bd33e087ee1c6741667addbffa86745defa37a99a23c1bdfeed0e8b07"
-    },
-    "poses-05.bin.json": {
-      "bytes": 448613,
-      "sha256": "aa80a73fd2ccfc125250878752a2778c6b050b556dff9f74c304b02a9804cb9f"
     },
     "poses-06.bin": {
       "bytes": 336336,
@@ -2992,10 +2678,6 @@
       "bytes": 181171,
       "sha256": "f2258c64c332b37e0017554484874987306627f6373bd5adf7ce1904a7d035cc"
     },
-    "poses-06.bin.json": {
-      "bytes": 448613,
-      "sha256": "30a784a0c6d77c1b26c5e0364eda0855f5afed5e0e8171caab4e2315f0d7a752"
-    },
     "poses-07.bin": {
       "bytes": 336336,
       "sha256": "4aca0f0df5716ba0d480cbad1208d2b210ee716ec4d92b070c514fc41d81dec2"
@@ -3003,10 +2685,6 @@
     "poses-07.bin.gz": {
       "bytes": 178495,
       "sha256": "e95d662462c33049513c6b1330540cce3e8b4268a69ef7887f7fd059d996f0f8"
-    },
-    "poses-07.bin.json": {
-      "bytes": 448613,
-      "sha256": "602e92525f7ce7628488de66a0760d59ff8fd1a685ba40f705c698ce88322473"
     },
     "poses-08.bin": {
       "bytes": 336336,
@@ -3016,10 +2694,6 @@
       "bytes": 178574,
       "sha256": "041bb137b42f0457721854acb656bb62333d10a2e8870aa547dc60b0f0969e91"
     },
-    "poses-08.bin.json": {
-      "bytes": 448613,
-      "sha256": "01eb501fd13a1a0c6975cf66b6231e6c0b00395edfcff5b75d055ab85fe15000"
-    },
     "poses-09.bin": {
       "bytes": 336336,
       "sha256": "36f9aa7339c4398c9019ded23d49f35e745c73972e3e6dddfddafd95daa43ec6"
@@ -3027,10 +2701,6 @@
     "poses-09.bin.gz": {
       "bytes": 177368,
       "sha256": "f966aca327c25fa8ebe4b3eeec9d7fb093f6c68a7cbc5e99aa8cc08a80e75550"
-    },
-    "poses-09.bin.json": {
-      "bytes": 448613,
-      "sha256": "d810700deb8cd7cb4ea3693a9129ea74e15ee78261e4effff4bed8bddcf5b9ad"
     },
     "poses-10.bin": {
       "bytes": 336336,
@@ -3040,10 +2710,6 @@
       "bytes": 179398,
       "sha256": "58eb52bc0c37216399782fc0c5050a4cda74bb3034e34f1e6c457138fb8ff06d"
     },
-    "poses-10.bin.json": {
-      "bytes": 448613,
-      "sha256": "8f9b99b2cc693af483d46c728c0bd27ffd90e0dd3480d4bb7f1b257941f75911"
-    },
     "poses-11.bin": {
       "bytes": 336336,
       "sha256": "0dbdd3109657221cabea574d6b68057ce993c59029bc8a2d8b692ea3c61ec12e"
@@ -3051,10 +2717,6 @@
     "poses-11.bin.gz": {
       "bytes": 177688,
       "sha256": "914a8d16383c13d8d6c99a9ff55df499f2bdc508f8da42bdda8b079e8f0240a6"
-    },
-    "poses-11.bin.json": {
-      "bytes": 448613,
-      "sha256": "773dcc1921e2cb6c6a2f29efb642546aa61312ba1160c837f2eaec532f7fbd97"
     },
     "poses-12.bin": {
       "bytes": 336336,
@@ -3064,10 +2726,6 @@
       "bytes": 181402,
       "sha256": "2dc06337a96267074af061ad8be1befa6992dc8e9e3a027bdc477f75fc7f70df"
     },
-    "poses-12.bin.json": {
-      "bytes": 448613,
-      "sha256": "afa251ed382fb0816c600ba8482f452727cc9f11e90c8169b1770c1e1784be05"
-    },
     "poses-13.bin": {
       "bytes": 336336,
       "sha256": "124dc58c871c99420504a853e49afcd13cb15c6ac648dcdf48b269e6925d113e"
@@ -3075,10 +2733,6 @@
     "poses-13.bin.gz": {
       "bytes": 181402,
       "sha256": "2dc06337a96267074af061ad8be1befa6992dc8e9e3a027bdc477f75fc7f70df"
-    },
-    "poses-13.bin.json": {
-      "bytes": 448613,
-      "sha256": "afa251ed382fb0816c600ba8482f452727cc9f11e90c8169b1770c1e1784be05"
     },
     "poses-14.bin": {
       "bytes": 336336,
@@ -3088,10 +2742,6 @@
       "bytes": 181663,
       "sha256": "e2e451e2fcf3ac30d40db09bfa599e3e63d285aa36ce51c661b74bceecfa2b2d"
     },
-    "poses-14.bin.json": {
-      "bytes": 448613,
-      "sha256": "209480ade5c0d394a635e9e8456ba2288d8aa3fc5752da3a5a42bfee3c6575c5"
-    },
     "poses-15.bin": {
       "bytes": 336336,
       "sha256": "10dbe4b13e0c1870adaa5ad36e0e690668ec5b2d1842adde8d55c30d157d6639"
@@ -3099,10 +2749,6 @@
     "poses-15.bin.gz": {
       "bytes": 181663,
       "sha256": "e2e451e2fcf3ac30d40db09bfa599e3e63d285aa36ce51c661b74bceecfa2b2d"
-    },
-    "poses-15.bin.json": {
-      "bytes": 448613,
-      "sha256": "209480ade5c0d394a635e9e8456ba2288d8aa3fc5752da3a5a42bfee3c6575c5"
     },
     "poses-16.bin": {
       "bytes": 336336,
@@ -3112,10 +2758,6 @@
       "bytes": 179602,
       "sha256": "8ebde97edf2358d9cd8f592e394a7c0d9f70b74c55f4cb58152dbd93d734f67e"
     },
-    "poses-16.bin.json": {
-      "bytes": 448613,
-      "sha256": "e161de4438eb3713e6d4f42c2ead4eb0b5be0a91119944a42e836245895c268d"
-    },
     "poses-17.bin": {
       "bytes": 336336,
       "sha256": "28feae9b4d32440e4c057f460e700e584628f0a261eeba5271270b5309c754c3"
@@ -3123,10 +2765,6 @@
     "poses-17.bin.gz": {
       "bytes": 178676,
       "sha256": "87a52dee539aa8770e38c783ca483288d8336fcab6bace6bc7e23fccdc0f6fb0"
-    },
-    "poses-17.bin.json": {
-      "bytes": 448613,
-      "sha256": "b8592cc407a4ab816b237998cce998c6a9a47978ee15f82e54403bf33e636b22"
     },
     "poses-18.bin": {
       "bytes": 336336,
@@ -3136,10 +2774,6 @@
       "bytes": 180609,
       "sha256": "ef56bfb6a2e1c6a738190860e37db015f27f126a848b3eab0c235bc3817cf6e6"
     },
-    "poses-18.bin.json": {
-      "bytes": 448613,
-      "sha256": "ec91bdd594e62606543ea1660d512fe2d54d210fe8223ca5ba0db5b26a3e834b"
-    },
     "poses-19.bin": {
       "bytes": 336336,
       "sha256": "9b671a8d32b9a7505262e68a41ffb0355c586933fa51d8ad5d655ea38dbf274c"
@@ -3147,10 +2781,6 @@
     "poses-19.bin.gz": {
       "bytes": 179166,
       "sha256": "6f7150f3e680af32ea216e8778b5f367c5a0e6eebd431a9e138cfd72a5739832"
-    },
-    "poses-19.bin.json": {
-      "bytes": 448613,
-      "sha256": "99e03884a203b70dfb92fb7fb8991c136988045fc93a6786ed5e0ff9ea6511b1"
     },
     "poses-20.bin": {
       "bytes": 336336,
@@ -3160,10 +2790,6 @@
       "bytes": 180461,
       "sha256": "33637f9a1eea354138ba8bb10fe59724ae42d5d5393be44bde91904f8fa0af72"
     },
-    "poses-20.bin.json": {
-      "bytes": 448613,
-      "sha256": "3ac847cac5b59e33b8ec71e91e1bf2180ff14ab4a11c7ac6ce3784e423816ece"
-    },
     "poses-21.bin": {
       "bytes": 336336,
       "sha256": "65c931ef822085072e7faa44c80f6c797d20790483ac1e3f3e7c5916f601c980"
@@ -3171,10 +2797,6 @@
     "poses-21.bin.gz": {
       "bytes": 178636,
       "sha256": "b6ad2a80b4b3adf8ab7d54b7437866b3cc20dca26136eb51dd4c4cf3b5b9eb82"
-    },
-    "poses-21.bin.json": {
-      "bytes": 448613,
-      "sha256": "8e8caf2920999eb0259de9a1321a478002cfe9a5f75a1ceeddc35ac14024f5bc"
     },
     "poses-22.bin": {
       "bytes": 336336,
@@ -3184,10 +2806,6 @@
       "bytes": 181045,
       "sha256": "eeb19fa8f787a63137dffa03a2c92f617999d7f1b321a2914893f5c0e98a944c"
     },
-    "poses-22.bin.json": {
-      "bytes": 448613,
-      "sha256": "60f0db4b04cdc1e7836d5badc5ec2d833dfcbb722ee8f2dc67acc76ebc893a67"
-    },
     "poses-23.bin": {
       "bytes": 336336,
       "sha256": "93b8b5334923f0c135fa6ec057779bbfff6e6a9c67390e3cb4899f0a98663fbf"
@@ -3195,10 +2813,6 @@
     "poses-23.bin.gz": {
       "bytes": 178859,
       "sha256": "c1f59666ea27bebddf8e1ec1b0b77df011bce5a0d32949d2f75276101ac7fbad"
-    },
-    "poses-23.bin.json": {
-      "bytes": 448613,
-      "sha256": "de8aa69d1503206e6e70517b805c79254da24d8536438554bc2c08ba96ff92b2"
     },
     "poses-24.bin": {
       "bytes": 336336,
@@ -3208,10 +2822,6 @@
       "bytes": 179188,
       "sha256": "daeeaeb0dfbc49d04764e3f63600883f97c84bb2d62f80ee5f4e3178f90f7821"
     },
-    "poses-24.bin.json": {
-      "bytes": 448613,
-      "sha256": "a0c9fbdde3bb0651fc09f1651ea0912bebbc395a9be3a912cb4508682634b97f"
-    },
     "poses-25.bin": {
       "bytes": 336336,
       "sha256": "0eb515fa45d4c6449a97ad86d14ad3e503682301bb92c48edfb677833c0f8337"
@@ -3219,10 +2829,6 @@
     "poses-25.bin.gz": {
       "bytes": 177324,
       "sha256": "87d449929c89a8e24a5f804cecf5e74194ee5a9f297b9f541c06c45191c3e984"
-    },
-    "poses-25.bin.json": {
-      "bytes": 448613,
-      "sha256": "01acb1b590c1c41c3da618391215db2fface1df78cbeb4c3614b3e44fc45490c"
     },
     "poses-26.bin": {
       "bytes": 336336,
@@ -3232,10 +2838,6 @@
       "bytes": 179950,
       "sha256": "c58b23d44a8db6a8471941b3b86e10897e444c69485c19ccf37d0ae463536e4e"
     },
-    "poses-26.bin.json": {
-      "bytes": 448613,
-      "sha256": "8358febf6f7ac5187eafb458f3e384454a9dd622fdf8e5a35c462ddea5082e28"
-    },
     "poses-27.bin": {
       "bytes": 336336,
       "sha256": "04c36ae56cb4f3578c2577e3ba8a6724aa7b35f93db2c4f016b049caaa5662d2"
@@ -3243,10 +2845,6 @@
     "poses-27.bin.gz": {
       "bytes": 177745,
       "sha256": "d0effbd74313597840bbc072500c953e0e12bbdbdf6b3ba7fcf17485e5033e1e"
-    },
-    "poses-27.bin.json": {
-      "bytes": 448613,
-      "sha256": "428332c994287b761384649562d86d2420bf609fdb56b7c5e481e1f5ecd40d55"
     },
     "protocol.json": {
       "bytes": 37855,
@@ -3256,63 +2854,126 @@
       "bytes": 1199,
       "sha256": "ea4da6cf7a8a54649702f0eb8d057c8ced12f8fed2329c5e96d92a3316922813"
     },
+    "replay-data-01.js": {
+      "bytes": 483320,
+      "sha256": "f01aa13e8f0a20c7d14296867f40cc30aab734d1626ae5c7c8b54d2bc12c1325"
+    },
+    "replay-data-02.js": {
+      "bytes": 489100,
+      "sha256": "d173cb8d13cae7203533c8f27e4125e6a01f8908c8c9e953a6d48139be262617"
+    },
+    "replay-data-03.js": {
+      "bytes": 480916,
+      "sha256": "82ca664c8754f6de9f3339cb301894798a111151333198590a9167d4b0f87cbf"
+    },
+    "replay-data-04.js": {
+      "bytes": 465484,
+      "sha256": "0de2c51ef672babcb82df254e116ca5889639abc64e29272c51bf019b442ef8d"
+    },
+    "replay-data-05.js": {
+      "bytes": 471324,
+      "sha256": "1d19a4078be1f351e7a8904401440d9d25b854fc5f1ada476eb77dd4dc603fee"
+    },
+    "replay-data-06.js": {
+      "bytes": 484452,
+      "sha256": "56f1d05fe973672f0727d5b2d4f11ef553b2fa4b2ec75ba8a969bcee421ea833"
+    },
+    "replay-data-07.js": {
+      "bytes": 471708,
+      "sha256": "713dd40b157b71f81965cbab53a87700b0cc5f147b8cf44a31fb114185cd88b5"
+    },
+    "replay-data-08.js": {
+      "bytes": 479508,
+      "sha256": "68d29f850798de98dde92f95a1e9088ebe41e2611623c8be72454410c18f0fc0"
+    },
+    "replay-data-09.js": {
+      "bytes": 464192,
+      "sha256": "24b4cb9224129111103066f786a5ff5b1affbe62a3b9c0b596ec26ad425ba5c8"
+    },
+    "replay-data-10.js": {
+      "bytes": 482132,
+      "sha256": "14d86eb8496429097c039020b0405d7a03204acd53d2699336f4a7c824c1f4d8"
+    },
+    "replay-data-11.js": {
+      "bytes": 465352,
+      "sha256": "08f07aa2bff4eee13da256f80665c8561ab7f89a2d1bc23fa3c5d1df9e558984"
+    },
+    "replay-data-12.js": {
+      "bytes": 484476,
+      "sha256": "5f3974b5a1e4df4699c65e0df23ce8242dd646b141fe0c5baf13a1a737e23bec"
+    },
+    "replay-data-13.js": {
+      "bytes": 484476,
+      "sha256": "9c34d9646408d66b209f0e030dd470153cbf314ed9090df695d0cc7b4f65beaf"
+    },
+    "replay-data-14.js": {
+      "bytes": 485260,
+      "sha256": "13cb72600affa7544a91f1e38aadcbaa440910b79439b2976514ab7df59e1913"
+    },
+    "replay-data-15.js": {
+      "bytes": 485260,
+      "sha256": "72983c201db0861e0e897ee7431f80d11ca5264d352501aba9ba56b2f913095b"
+    },
+    "replay-data-16.js": {
+      "bytes": 480948,
+      "sha256": "06c4b28b5524871b27e31d03f8c5d0a2927614ca05322515a1f4217e93575527"
+    },
+    "replay-data-17.js": {
+      "bytes": 466440,
+      "sha256": "16ee7318fb40fd45de43c5d65325283433b5bd502adb8e1327b7bc82e9701c61"
+    },
+    "replay-data-18.js": {
+      "bytes": 483728,
+      "sha256": "0095cd6346cbbcfeebbb948648ff7c809067e5ae3e3b0954417598f4e204dc4d"
+    },
+    "replay-data-19.js": {
+      "bytes": 467752,
+      "sha256": "6b3781ec91075cab8235de06c8065c23517c0fbe9f2db374ad16148e2c625ea8"
+    },
+    "replay-data-20.js": {
+      "bytes": 482428,
+      "sha256": "7d5f13bcd30cdcfa8dc957f02e30424f87d118629977ce1466937141769d01a2"
+    },
+    "replay-data-21.js": {
+      "bytes": 471236,
+      "sha256": "763ebec86466cefc5da2ad86c141767626befb4d4ca6d713ce71d310c9b4c225"
+    },
+    "replay-data-22.js": {
+      "bytes": 484240,
+      "sha256": "15d209da0d8ceedf092f2886efde89fc969f67d50e8097e77dd358281ea1724b"
+    },
+    "replay-data-23.js": {
+      "bytes": 471856,
+      "sha256": "f635f70fc6566e716a9f6be2cb64307076ed57a0fe6f73ad71db85e3dc31defb"
+    },
+    "replay-data-24.js": {
+      "bytes": 479264,
+      "sha256": "eccc515ec981d10d6236aa99ac66435047cf6ef7ccbdbec1cee35dcebbcce752"
+    },
+    "replay-data-25.js": {
+      "bytes": 469388,
+      "sha256": "4c8134857d4776b2604518f3910abec6b2157180bcf6d6f6ede5d23e0690b783"
+    },
+    "replay-data-26.js": {
+      "bytes": 481892,
+      "sha256": "24fe4445741ae3b80ed1e579f931250358b01636ed7d7ffd9bc4fc8c0a5ff797"
+    },
+    "replay-data-27.js": {
+      "bytes": 470588,
+      "sha256": "693e49ab7c71c174da47836a2b9a72b3d79094c7a8522a21ec98c4be18a67b4a"
+    },
     "report.json": {
       "bytes": 366762,
       "sha256": "b2417ba4733afeb8239eb768a3daac827f4faf271a8b4df5384b7454e827e6ec"
     },
     "scene.json": {
-      "bytes": 91427,
-      "sha256": "6110ec304305b89653d1f426894ea603eea207add2a571e65fc1320169cb52ae"
+      "bytes": 49754,
+      "sha256": "1d45baa17b4d1f218525e724a683aed50d85158e47e0c8ca04779d1241f466b1"
     },
     "training-parent.json": {
       "bytes": 227426,
       "sha256": "75779fc36cdfdf790a810d588c45fbb836773e73922e57202790d7a7cdcd0d44"
     }
-  },
-  "geometry_transport_derivation": {
-    "changed_original_paths": [
-      "piper_feedback_viewer.bundle.js",
-      "piper_feedback_viewer.js",
-      "scene.json",
-      "viewer-integrity.json"
-    ],
-    "chunk_bytes": 262144,
-    "chunks": 26,
-    "compressed_deadline_s": 8,
-    "implementation_sha256": {
-      "derive_piper_feedback_geometry_chunks.py": "4825f637ace888ed3365739247c2b2d41800ca682a6cc973ec1c1350155303d6",
-      "piper_feedback_geometry_transport.js": "8ca5d568a5e7a1cdf8fe7e2841168a7c1eecc12d45469a63c466f8b52eb24f81"
-    },
-    "observed_transport": "One initial public research replay load reported the geometry.bin raw fallback exceeding its 30-second deadline. A subsequent intentional reload succeeded with the original viewer. Local gzip/raw bytes and digests agree. The precise network/server cause was not measured; this is bounded cold-transfer robustness, not a claim of universal failure or data corruption.",
-    "original_geometry_bytes": 6736872,
-    "original_geometry_sha256": "2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def",
-    "parallel_fetches": 3,
-    "parent_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
-    "raw_deadline_s": 30,
-    "schema": "dvidia.piper-feedback-geometry-transport/v1",
-    "scope": "Hosting transport only. No changes to physics, policy, model, scoring, recorded states, original geometry or evidence. Original sealed viewer remains untouched.",
-    "total_geometry_deadline_s": 120,
-    "whole_geometry_verification": "Per-chunk SHA256 and byte count, then exact original whole-file SHA256; unchanged original scene mesh/index validation follows."
-  },
-  "native_buffered_envelopes_derivation": {
-    "bounds": "Known expected envelope sizes remain at most 1 MiB. Reject malformed, zero, unsafe, or above-expected Content-Length before native buffering. Content-Length may be absent or describe compressed wire bytes; exact decoded size is checked after buffering. Native buffering cannot enforce a streaming allocation cap on an absent or dishonest Content-Length before the body completes; this is an explicit compatibility experiment, not a claim of identical streaming memory behavior.",
-    "changed_original_paths": [
-      "piper_feedback_viewer.bundle.js",
-      "piper_feedback_viewer.js",
-      "viewer-integrity.json"
-    ],
-    "code_review": "The existing reader loop serially awaits reader.read(); it does not cancel successful streams. On failure or deadline its finally block cancels the unfinished reader without awaiting cancellation. This inspection alone does not establish a browser, reader-loop or server cause.",
-    "diagnostics": "Local native body buffering phase reports 0/expected bytes until the native body finishes, then actual bytes. It cannot report incremental body bytes. No telemetry, credentials or external hosts are added.",
-    "implementation_sha256": {
-      "derive_piper_feedback_buffered_envelopes.py": "6a7cb3622503717b16ed0e42bc66c062b9609f43de067cf970c0023d394ad89e",
-      "piper_feedback_buffered_envelopes.js": "ab1a1fabb1ecf4de9b3e80ffef55d26afc57c3d2cb34f5d87c8c709c1cbc9633"
-    },
-    "observed_transport": "A controlled text-first public load also stalled during HTTP 200 envelope bodies: parts 014/015 reached 122508/349693 bytes and part 016 reached 56972/349693 bytes at 14/26 completion; earlier parts 009\u2013013 timed out partway before existing gzip fallback completed. JSON encoding alone did not establish a fix. No header/decompression/hash cause was demonstrated.",
-    "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
-    "parent_viewer_integrity_sha256": "8945f67e406a65e263b0e3bd2edceddbfbf69e1ecae85bcaeae79d30820d73f6",
-    "schema": "dvidia.piper-feedback-native-buffered-envelopes/v1",
-    "status": "Unproven transport hypothesis; requires one separate controlled public cold-load test. Existing fallback behavior is preserved, with no retry-until-success rule.",
-    "strategy": "native-buffered-json/v1: only the existing known same-origin JSON envelopes use Response.arrayBuffer(). Fetch redirects, origin restrictions, 30-second request and 120-second whole-geometry deadlines, shared cancellation, exact post-read byte count, envelope and decoded raw SHA checks, base64 validation and original whole-geometry/mesh checks remain. Other metadata/binary/gzip reads are unchanged."
   },
   "schema": "dvidia.piper-feedback-viewer/v0.2",
   "scope": "Viewer projection consistency only; external native NPZ arrays are not part of this local file inventory.",
@@ -3335,46 +2996,5 @@
     "pose_exporter_sha256": "1258610a0ea11dbafc6437de79cf73561f3420e3914ce80a9c330b0c3744e0d6",
     "report_sha256": "b2417ba4733afeb8239eb768a3daac827f4faf271a8b4df5384b7454e827e6ec",
     "training_parent_sha256": "75779fc36cdfdf790a810d588c45fbb836773e73922e57202790d7a7cdcd0d44"
-  },
-  "text_transport_derivation": {
-    "changed_original_paths": [
-      "motion.json",
-      "piper_feedback_viewer.bundle.js",
-      "piper_feedback_viewer.js",
-      "scene.json",
-      "viewer-integrity.json"
-    ],
-    "envelopes": 54,
-    "implementation_sha256": {
-      "derive_piper_feedback_text_transport.py": "b8e868e3a4ee8f879f0326ff948b7216d950112bdf981323c836537eea8985d4",
-      "piper_feedback_text_transport.js": "1afb6b868a2f38c3c0512a66bbd3316bf1529ba2072715d1f0a3a23fb5c41105"
-    },
-    "max_decoded_bytes": 786432,
-    "max_envelope_bytes": 1048576,
-    "observed_transport": "Controlled public diagnostics observed HTTP200 geometry binary/gzip bodies stalling after partial transfer while scene.json and motion.json completed. No header, decompression or hash-stage failure was demonstrated in that load. JSON envelopes are an unproven hosting hypothesis until a separate public cold-load test.",
-    "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
-    "parent_viewer_integrity_sha256": "b33ef1f1ddc6d6860419a1ee868ccdf1fe6c6222fd1e6942aeff10175afffacf",
-    "preference": "Same-origin JSON first only on the exact existing HTTPS research domain or existing HF Space viewer namespace. Local runs retain binary/gzip behavior; network-unavailable text requests may fall back to original binary/gzip. Malformed or mismatched envelopes fail closed.",
-    "preserved": "All original raw/gzip files, scientific results, policy/model, states, evidence, deadlines, origin checks, case laziness and cancellation. No external hosts, credentials or telemetry added.",
-    "schema": "dvidia.piper-feedback-text-transport/v1",
-    "verification": "Canonical bounded JSON, exact schema/keys, exact base64 length/padding/canonical bits, envelope SHA, then unchanged decoded raw SHA; geometry retains its unchanged whole-file SHA and original mesh bounds."
-  },
-  "transport_diagnostics_derivation": {
-    "change": "Display local relative asset name, request phase, HTTP status and received/expected bytes. Include the observed stalled phase/bytes in timeout errors. No cookies, authentication, signed URLs or network telemetry are recorded or transmitted.",
-    "changed_original_paths": [
-      "index.html",
-      "piper_feedback_viewer.bundle.js",
-      "piper_feedback_viewer.js",
-      "viewer-integrity.json"
-    ],
-    "implementation_sha256": {
-      "derive_piper_feedback_transport_diagnostics.py": "0c37c7d7079afcd67af1c5032d129e6cfb8df8a31e1f3ec08534a1ad01e6a98b",
-      "piper_feedback_transport_diagnostics.js": "41adc8138c7231d5d58b225edaa5897574a5380a98078f85182b9748f9dba7c0"
-    },
-    "observed_transport": "The original large transfer timed out once and an intentional reload succeeded. The first chunked public cold load also timed out on geometry-part-006.bin after 30 seconds. Chunking alone has not established a public transport fix; exact network/server cause remains unmeasured.",
-    "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
-    "parent_viewer_integrity_sha256": "f950312924b007c8352cd38b7c0abd5ba80f6c229477ee07634c090e41d72c3b",
-    "preserved": "All deadlines, cancellation, SHA/byte bounds and exact origin restrictions; every scientific/model/state/geometry file unchanged.",
-    "schema": "dvidia.piper-feedback-local-transport-diagnostics/v1"
   }
 }
