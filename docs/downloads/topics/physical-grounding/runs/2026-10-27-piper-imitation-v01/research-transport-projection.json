@@ -1,0 +1,50 @@
+{
+  "browser_verification": "Pending deployment; publication provenance records the final browser result.",
+  "changes": {
+    "viewer/RESEARCH-TRANSPORT.md": {
+      "after": {
+        "bytes": 2275,
+        "sha256": "18701b69aa00525ac7f678dcf9635d42908739b1b0e3d66871ecc359224e1206"
+      },
+      "before": null
+    },
+    "viewer/piper_imitation_viewer.bundle.js": {
+      "after": {
+        "bytes": 528319,
+        "sha256": "d5c1290c0ab081d0814b26d1531ff198130f81cd226652f50e8464f4cc7b23af"
+      },
+      "before": {
+        "bytes": 527055,
+        "sha256": "e4b152f23571eeb9c325f9a034ec22d7af8ab25a1ae2a7869fde769dab5e4aed"
+      }
+    },
+    "viewer/piper_imitation_viewer.source.js": {
+      "after": {
+        "bytes": 23781,
+        "sha256": "1c05ab9c728745e7130c03c3fcec1a53aa8815a38857ef178ecca32391325028"
+      },
+      "before": null
+    },
+    "viewer/viewer-integrity.json": {
+      "after": {
+        "bytes": 12830,
+        "sha256": "093672d163e2b15045bd63efbe253a654462b48dcbd6d723048f8c29131e70fa"
+      },
+      "before": {
+        "bytes": 10466,
+        "sha256": "68718dd6d59ad837f9294a8dd985d3701ad0006b98d226a80d395d4a4a270c15"
+      }
+    }
+  },
+  "parent_full_bundle_integrity_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
+  "parent_site_projection_sha256": "4c9f3657d8c8db5e44b1511a4590aa8e5097a15d844c2022dcd9847a18c7f8bb",
+  "parent_viewer_integrity_sha256": "68718dd6d59ad837f9294a8dd985d3701ad0006b98d226a80d395d4a4a270c15",
+  "schema": "dvidia.piper-imitation-research-transport-projection/v1",
+  "scope": "Browser transport only. Original model, native tapes, scoring, geometry and motion bytes remain unchanged.",
+  "study_source_commit": "be8c21ed555350884e2b34f0206fb9b459b2348c",
+  "tests": {
+    "command": "node --test tests/browser/piper_imitation_transport.mjs",
+    "passed": 15
+  },
+  "transport_source_commit": "cc04b6a"
+}

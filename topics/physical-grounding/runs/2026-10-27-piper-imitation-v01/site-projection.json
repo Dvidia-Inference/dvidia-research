@@ -1,7 +1,4 @@
 {
-  "schema": "dvidia.piper-imitation-site-projection/v1",
-  "scope": "Recorded viewer, all 60 confirmation tapes and result/model/audit metadata; full training and development traces remain in the linked GitHub/Hugging Face bundle.",
-  "full_bundle_integrity_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
   "files": {
     "audit.json": {
       "bytes": 4939,
@@ -39,6 +36,10 @@
       "bytes": 2903305,
       "sha256": "52ae9f37e845c0949879012fe9e5279192a543dc5f898a8a8d2fe9ab0f51d4fe"
     },
+    "research-transport-projection.json": {
+      "bytes": 1909,
+      "sha256": "bf3d88a50a53cb85377bf494ad497805533331d625569c7b3ab62c1de781cae4"
+    },
     "viewer/LICENSE": {
       "bytes": 1076,
       "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
@@ -46,6 +47,10 @@
     "viewer/README.md": {
       "bytes": 715,
       "sha256": "04848111e7888d5fc359aff9054639b7f5c16fad5a07202ac754d12e802400a1"
+    },
+    "viewer/RESEARCH-TRANSPORT.md": {
+      "bytes": 2275,
+      "sha256": "18701b69aa00525ac7f678dcf9635d42908739b1b0e3d66871ecc359224e1206"
     },
     "viewer/attempts/confirmation-00-goal0-hold.json.gz": {
       "bytes": 348140,
@@ -324,8 +329,12 @@
       "sha256": "0b10b5e6989ad166e2083465bd07ba8c1b433056ec2d4535418043743699c3d1"
     },
     "viewer/piper_imitation_viewer.bundle.js": {
-      "bytes": 527055,
-      "sha256": "e4b152f23571eeb9c325f9a034ec22d7af8ab25a1ae2a7869fde769dab5e4aed"
+      "bytes": 528319,
+      "sha256": "d5c1290c0ab081d0814b26d1531ff198130f81cd226652f50e8464f4cc7b23af"
+    },
+    "viewer/piper_imitation_viewer.source.js": {
+      "bytes": 23781,
+      "sha256": "1c05ab9c728745e7130c03c3fcec1a53aa8815a38857ef178ecca32391325028"
     },
     "viewer/protocol.json": {
       "bytes": 12271,
@@ -344,8 +353,11 @@
       "sha256": "6f620c195264db569f56caa88a9834e2c5fe06127173ca3bb06548cd1d015212"
     },
     "viewer/viewer-integrity.json": {
-      "bytes": 10466,
-      "sha256": "68718dd6d59ad837f9294a8dd985d3701ad0006b98d226a80d395d4a4a270c15"
+      "bytes": 12830,
+      "sha256": "093672d163e2b15045bd63efbe253a654462b48dcbd6d723048f8c29131e70fa"
     }
-  }
+  },
+  "full_bundle_integrity_sha256": "50e22f90426ed09585b4ed61c296c7e40774c2d742dc83f2bd71d279246c7da0",
+  "schema": "dvidia.piper-imitation-site-projection/v1",
+  "scope": "Recorded viewer, all 60 confirmation tapes and result/model/audit metadata; full training and development traces remain in the linked GitHub/Hugging Face bundle. Browser transport is a separately recorded derived frontend; native evidence is unchanged."
 }
