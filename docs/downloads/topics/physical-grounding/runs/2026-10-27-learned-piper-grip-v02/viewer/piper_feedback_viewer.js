@@ -13,6 +13,42 @@ let selectionEpoch = 0, loadingCase = false;
 const caseCache = new Map();
 const focus = new THREE.Vector3(.25, 0, .25);
 
+/* Local DOM diagnostics only: relative asset names, phases and byte counts. */
+const transportRequests = new Map();
+function transportPaint() {
+  const target = $('transport-details');
+  if (!target) return;
+  const rows = [...transportRequests.entries()];
+  const active = rows.filter(([, value]) => !['complete', 'failed'].includes(value.phase));
+  const recent = rows.filter(([, value]) => ['complete', 'failed'].includes(value.phase)).slice(-9);
+  target.textContent = [...active, ...recent].map(([href, value]) =>
+    `${href} · ${value.phase}${value.failedPhase ? ` after ${value.failedPhase}` : ''} · HTTP ${value.status ?? 'pending'} · ${value.received}/${value.expected ?? '?'} bytes`).join('\n') || 'No active requests.';
+}
+function transportBegin(href, expected) {
+  localHref(href);
+  transportRequests.set(href, {phase: 'awaiting headers', status: null, received: 0, expected: expected ?? null});
+  if (transportRequests.size > 256) transportRequests.delete(transportRequests.keys().next().value);
+  transportPaint();
+}
+function transportPhase(href, phase, changes = {}) {
+  if (!href) return;
+  const value = transportRequests.get(href) || {status: null, received: 0, expected: null};
+  transportRequests.set(href, {...value, ...changes, phase}); transportPaint();
+}
+function transportBytes(href, received) {
+  if (href && transportRequests.has(href)) { transportRequests.get(href).received = received; transportPaint(); }
+}
+function transportSummary(href) {
+  let rows = transportRequests.has(href) ? [[href, transportRequests.get(href)]] :
+    [...transportRequests.entries()].filter(([, value]) => !['complete', 'failed'].includes(value.phase)).slice(0, 3);
+  return rows.length ? ' Transfer detail: ' + rows.map(([name, value]) =>
+    `${name}: ${value.phase}, HTTP ${value.status ?? 'pending'}, ${value.received}/${value.expected ?? '?'} bytes`).join('; ') + '.' : '';
+}
+function transportFailed(href) {
+  const value = transportRequests.get(href);
+  if (value && value.phase !== 'complete') transportPhase(href, 'failed', {failedPhase: value.phase});
+}
+
 function assert(condition, message) { if (!condition) throw new Error(message); }
 function vector(value, size, label) { assert(Array.isArray(value) && value.length === size && value.every(finite), `Invalid ${label}.`); }
 function integer(value, low, high, label) { assert(Number.isInteger(value) && value >= low && value <= high, `Invalid ${label}.`); }
@@ -36,10 +72,12 @@ function trustedResponseUrl(final, requested) {
   if (!requested.href.startsWith(HF_BINARY_ROOT)) return false;
   return final.href === requested.href || (final.protocol === 'https:' && final.host === 'us.aws.cdn.hf.co');
 }
-async function response(href, signal) {
+async function response(href, signal, expectedBytes) {
+  transportBegin(href, expectedBytes);
   const requestedUrl = studyUrl(href);
   const sameOrigin = requestedUrl.origin === location.origin;
   const result = await abortable(fetch(requestedUrl, {credentials: sameOrigin ? 'same-origin' : 'omit', referrerPolicy: 'no-referrer', redirect: sameOrigin ? 'error' : 'follow', signal}), signal);
+  transportPhase(href, 'reading body', {status: Number.isInteger(result.status) ? result.status : null});
   const final = new URL(result.url);
   assert(trustedResponseUrl(final, requestedUrl), 'Unexpected study download origin.');
   assert(result.ok, `Could not load ${href} (${result.status}).`);
@@ -61,8 +99,9 @@ async function deadline(href, milliseconds, operation, outerSignal) {
   const propagate = () => controller.abort(outerSignal.reason);
   if (outerSignal?.aborted) throw outerSignal.reason;
   outerSignal?.addEventListener('abort', propagate, {once: true});
-  const timer = setTimeout(() => controller.abort(new Error(`Timed out loading ${href} after ${milliseconds / 1000} s. Check the connection or open the complete download locally.`)), milliseconds);
+  const timer = setTimeout(() => controller.abort(new Error(`Timed out loading ${href} after ${milliseconds / 1000} s.${transportSummary(href)} Check the connection or open the complete download locally.`)), milliseconds);
   try { return await abortable(operation(controller.signal), controller.signal); }
+  catch (error) { transportFailed(href); throw error; }
   finally {
     clearTimeout(timer);
     outerSignal?.removeEventListener('abort', propagate);
@@ -70,13 +109,13 @@ async function deadline(href, milliseconds, operation, outerSignal) {
     controller.abort();
   }
 }
-async function bounded(stream, limit, signal) {
+async function bounded(stream, limit, signal, transportHref) {
   assert(stream, 'Study response is empty.');
   const reader = stream.getReader(), chunks = []; let size = 0, finished = false;
   try {
     for (;;) {
       const part = await abortable(reader.read(), signal); if (part.done) { finished = true; break; }
-      size += part.value.byteLength;
+      size += part.value.byteLength; transportBytes(transportHref, size);
       if (size > limit) throw new Error('Study file exceeds its byte bound.');
       chunks.push(part.value);
     }
@@ -90,13 +129,20 @@ async function bounded(stream, limit, signal) {
   return bytes.buffer;
 }
 async function json(href) {
-  return deadline(href, 30000, async signal => JSON.parse(new TextDecoder().decode(await bounded((await response(href, signal)).body, MAX_BYTES, signal))));
+  return deadline(href, 30000, async signal => {
+    const bytes = await bounded((await response(href, signal)).body, MAX_BYTES, signal, href);
+    const value = JSON.parse(new TextDecoder().decode(bytes));
+    transportPhase(href, 'complete');
+    return value;
+  });
 }
-async function verifiedBinary(bytes, meta) {
+async function verifiedBinary(bytes, meta, transportHref = meta.href) {
+  transportPhase(transportHref, 'verifying', {received: bytes.byteLength, expected: meta.bytes});
   assert(bytes.byteLength === meta.bytes, 'Binary byte count changed.');
   assert(globalThis.crypto?.subtle, 'SHA-256 verification requires HTTPS or a localhost server.');
   const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(n => n.toString(16).padStart(2, '0')).join('');
   assert(hash === meta.sha256, 'Study binary SHA256 changed.');
+  transportPhase(transportHref, 'complete');
   return bytes;
 }
 async function binary(meta, expected, outerSignal) {
@@ -107,10 +153,11 @@ async function binary(meta, expected, outerSignal) {
     integer(meta.compressed_bytes, 0, MAX_BYTES, 'compressed byte count');
     try {
       return await deadline(meta.compressed_href, 8000, async signal => {
-        const compressed = await bounded((await response(meta.compressed_href, signal)).body, meta.compressed_bytes, signal);
+        const compressed = await bounded((await response(meta.compressed_href, signal, meta.compressed_bytes)).body, meta.compressed_bytes, signal, meta.compressed_href);
         assert(compressed.byteLength === meta.compressed_bytes, 'Compressed byte count changed.');
-        const bytes = await bounded(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'), {signal}), meta.bytes, signal);
-        return verifiedBinary(bytes, meta);
+        transportPhase(meta.compressed_href, 'decompressing', {received: 0, expected: meta.bytes});
+        const bytes = await bounded(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'), {signal}), meta.bytes, signal, meta.compressed_href);
+        return verifiedBinary(bytes, meta, meta.compressed_href);
       }, outerSignal);
     } catch (error) {
       if (outerSignal?.aborted) throw error;
@@ -118,13 +165,13 @@ async function binary(meta, expected, outerSignal) {
       // A blocked or stalled compressed response cannot strand the replay.
     }
   }
-  return deadline(meta.href, 30000, async signal => verifiedBinary(await bounded((await response(meta.href, signal)).body, meta.bytes, signal), meta), outerSignal);
+  return deadline(meta.href, 30000, async signal => verifiedBinary(await bounded((await response(meta.href, signal, meta.bytes)).body, meta.bytes, signal, meta.href), meta), outerSignal);
 }
 async function verifiedJson(meta) {
   assert(meta && /^frames-[0-9]{2}\.json$/.test(meta.href), 'Unexpected frame metadata file.');
   integer(meta.bytes, 1, 8 * 1024 * 1024, 'frame metadata byte count');
   return deadline(meta.href, 30000, async signal => {
-    const bytes = await verifiedBinary(await bounded((await response(meta.href, signal)).body, meta.bytes, signal), meta);
+    const bytes = await verifiedBinary(await bounded((await response(meta.href, signal, meta.bytes)).body, meta.bytes, signal, meta.href), meta);
     return JSON.parse(new TextDecoder().decode(bytes));
   });
 }

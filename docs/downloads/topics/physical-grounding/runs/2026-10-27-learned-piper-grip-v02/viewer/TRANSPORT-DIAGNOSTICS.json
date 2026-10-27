@@ -1,0 +1,18 @@
+{
+  "change": "Display local relative asset name, request phase, HTTP status and received/expected bytes. Include the observed stalled phase/bytes in timeout errors. No cookies, authentication, signed URLs or network telemetry are recorded or transmitted.",
+  "changed_original_paths": [
+    "index.html",
+    "piper_feedback_viewer.bundle.js",
+    "piper_feedback_viewer.js",
+    "viewer-integrity.json"
+  ],
+  "implementation_sha256": {
+    "derive_piper_feedback_transport_diagnostics.py": "0c37c7d7079afcd67af1c5032d129e6cfb8df8a31e1f3ec08534a1ad01e6a98b",
+    "piper_feedback_transport_diagnostics.js": "41adc8138c7231d5d58b225edaa5897574a5380a98078f85182b9748f9dba7c0"
+  },
+  "observed_transport": "The original large transfer timed out once and an intentional reload succeeded. The first chunked public cold load also timed out on geometry-part-006.bin after 30 seconds. Chunking alone has not established a public transport fix; exact network/server cause remains unmeasured.",
+  "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+  "parent_viewer_integrity_sha256": "f950312924b007c8352cd38b7c0abd5ba80f6c229477ee07634c090e41d72c3b",
+  "preserved": "All deadlines, cancellation, SHA/byte bounds and exact origin restrictions; every scientific/model/state/geometry file unchanged.",
+  "schema": "dvidia.piper-feedback-local-transport-diagnostics/v1"
+}

@@ -12,6 +12,10 @@
       "bytes": 1391,
       "sha256": "b9402507c0b78a5e258f95d776ba5178684469f5cbc54a635888d9b1d90b929a"
     },
+    "TRANSPORT-DIAGNOSTICS.json": {
+      "bytes": 1424,
+      "sha256": "4fef8ebb131f6cbf8a8992b837342b4d396eba31389a1c0e35ac8eb3d5eb02a1"
+    },
     "base-model.json": {
       "bytes": 2031879,
       "sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded"
@@ -2773,8 +2777,8 @@
       "sha256": "51365a5a661d8062e28c66abc6bdb843ee410811f84b49d62c5878c265b3631f"
     },
     "index.html": {
-      "bytes": 17519,
-      "sha256": "ed433017bc5cb69be3cd24626dda57df280bd71353248820430f4d9f8204573b"
+      "bytes": 17773,
+      "sha256": "52ebbb21038b799f7315193131c4207551cd98cc7283225bb1788322e0ff14a6"
     },
     "licenses/agilex_piper/LICENSE": {
       "bytes": 1065,
@@ -2789,12 +2793,12 @@
       "sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4"
     },
     "piper_feedback_viewer.bundle.js": {
-      "bytes": 533730,
-      "sha256": "4e18a876f35dd300da24d024e01df767f5a6a11c4c250d32f437a378b0849066"
+      "bytes": 535309,
+      "sha256": "f63883b2cc753537a0e73bb98a2f846d649d4de28bd5912e5b42884353fe4455"
     },
     "piper_feedback_viewer.js": {
-      "bytes": 31871,
-      "sha256": "893ade98ace11c52f388b599cb60c14ae852fa21c4ab8e93c7e251ee3ef937ed"
+      "bytes": 34759,
+      "sha256": "4b0fd94e5eff2f113595bfe62a693e4b546242ecd6b4eb5d962b3bf51b1fa35c"
     },
     "poses-00.bin": {
       "bytes": 336336,
@@ -3087,5 +3091,23 @@
     "pose_exporter_sha256": "1258610a0ea11dbafc6437de79cf73561f3420e3914ce80a9c330b0c3744e0d6",
     "report_sha256": "b2417ba4733afeb8239eb768a3daac827f4faf271a8b4df5384b7454e827e6ec",
     "training_parent_sha256": "75779fc36cdfdf790a810d588c45fbb836773e73922e57202790d7a7cdcd0d44"
+  },
+  "transport_diagnostics_derivation": {
+    "change": "Display local relative asset name, request phase, HTTP status and received/expected bytes. Include the observed stalled phase/bytes in timeout errors. No cookies, authentication, signed URLs or network telemetry are recorded or transmitted.",
+    "changed_original_paths": [
+      "index.html",
+      "piper_feedback_viewer.bundle.js",
+      "piper_feedback_viewer.js",
+      "viewer-integrity.json"
+    ],
+    "implementation_sha256": {
+      "derive_piper_feedback_transport_diagnostics.py": "0c37c7d7079afcd67af1c5032d129e6cfb8df8a31e1f3ec08534a1ad01e6a98b",
+      "piper_feedback_transport_diagnostics.js": "41adc8138c7231d5d58b225edaa5897574a5380a98078f85182b9748f9dba7c0"
+    },
+    "observed_transport": "The original large transfer timed out once and an intentional reload succeeded. The first chunked public cold load also timed out on geometry-part-006.bin after 30 seconds. Chunking alone has not established a public transport fix; exact network/server cause remains unmeasured.",
+    "original_scientific_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+    "parent_viewer_integrity_sha256": "f950312924b007c8352cd38b7c0abd5ba80f6c229477ee07634c090e41d72c3b",
+    "preserved": "All deadlines, cancellation, SHA/byte bounds and exact origin restrictions; every scientific/model/state/geometry file unchanged.",
+    "schema": "dvidia.piper-feedback-local-transport-diagnostics/v1"
   }
 }
