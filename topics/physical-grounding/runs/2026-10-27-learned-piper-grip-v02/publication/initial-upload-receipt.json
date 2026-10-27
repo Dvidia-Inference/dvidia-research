@@ -1,0 +1,390 @@
+{
+  "anonymous_readback": true,
+  "bindings": {
+    "frozen_sha256": "b49c20ec464581a3bd3bfea5b6962ae4fe219966fbf998fbdc2c0774d8d042ca",
+    "protocol_sha256": "c35622d4ddc7e6868fd609a5665e931d45788345cd9ed2238fbb9ebac5b24fc9",
+    "report_sha256": "b2417ba4733afeb8239eb768a3daac827f4faf271a8b4df5384b7454e827e6ec"
+  },
+  "continuation": {
+    "boundary": {
+      "bytes": 893447,
+      "sha256": "0673c9981ae206b85c920dc35c6c6c7522101c843fbe69c0b227842789c36a55"
+    },
+    "dataset_metadata_transition": {
+      "added_line_utf8": "contracts/dvidia_training-0.1.0-py3-none-any.whl filter=lfs diff=lfs merge=lfs -text\n",
+      "after": {
+        "entry": {
+          "blob": "aa826edb94e0cf4f54e1ae874476b9ef17dd89e9",
+          "lfs_sha256": null,
+          "size": 2589
+        },
+        "receipt": {
+          "bytes": 2589,
+          "sha256": "fb4fba77e9c8f67de7ec0789b9c81113a09062e8b89240af8ccbd4df35130a37"
+        },
+        "utf8": "*.7z filter=lfs diff=lfs merge=lfs -text\n*.arrow filter=lfs diff=lfs merge=lfs -text\n*.avro filter=lfs diff=lfs merge=lfs -text\n*.bin filter=lfs diff=lfs merge=lfs -text\n*.bz2 filter=lfs diff=lfs merge=lfs -text\n*.ckpt filter=lfs diff=lfs merge=lfs -text\n*.ftz filter=lfs diff=lfs merge=lfs -text\n*.gz filter=lfs diff=lfs merge=lfs -text\n*.h5 filter=lfs diff=lfs merge=lfs -text\n*.joblib filter=lfs diff=lfs merge=lfs -text\n*.lfs.* filter=lfs diff=lfs merge=lfs -text\n*.lz4 filter=lfs diff=lfs merge=lfs -text\n*.mds filter=lfs diff=lfs merge=lfs -text\n*.mlmodel filter=lfs diff=lfs merge=lfs -text\n*.model filter=lfs diff=lfs merge=lfs -text\n*.msgpack filter=lfs diff=lfs merge=lfs -text\n*.npy filter=lfs diff=lfs merge=lfs -text\n*.npz filter=lfs diff=lfs merge=lfs -text\n*.onnx filter=lfs diff=lfs merge=lfs -text\n*.ot filter=lfs diff=lfs merge=lfs -text\n*.parquet filter=lfs diff=lfs merge=lfs -text\n*.pb filter=lfs diff=lfs merge=lfs -text\n*.pickle filter=lfs diff=lfs merge=lfs -text\n*.pkl filter=lfs diff=lfs merge=lfs -text\n*.pt filter=lfs diff=lfs merge=lfs -text\n*.pth filter=lfs diff=lfs merge=lfs -text\n*.rar filter=lfs diff=lfs merge=lfs -text\n*.safetensors filter=lfs diff=lfs merge=lfs -text\nsaved_model/**/* filter=lfs diff=lfs merge=lfs -text\n*.tar.* filter=lfs diff=lfs merge=lfs -text\n*.tar filter=lfs diff=lfs merge=lfs -text\n*.tflite filter=lfs diff=lfs merge=lfs -text\n*.tgz filter=lfs diff=lfs merge=lfs -text\n*.wasm filter=lfs diff=lfs merge=lfs -text\n*.xz filter=lfs diff=lfs merge=lfs -text\n*.zip filter=lfs diff=lfs merge=lfs -text\n*.zst filter=lfs diff=lfs merge=lfs -text\n*tfevents* filter=lfs diff=lfs merge=lfs -text\n# Audio files - uncompressed\n*.pcm filter=lfs diff=lfs merge=lfs -text\n*.sam filter=lfs diff=lfs merge=lfs -text\n*.raw filter=lfs diff=lfs merge=lfs -text\n# Audio files - compressed\n*.aac filter=lfs diff=lfs merge=lfs -text\n*.flac filter=lfs diff=lfs merge=lfs -text\n*.mp3 filter=lfs diff=lfs merge=lfs -text\n*.ogg filter=lfs diff=lfs merge=lfs -text\n*.wav filter=lfs diff=lfs merge=lfs -text\n# Image files - uncompressed\n*.bmp filter=lfs diff=lfs merge=lfs -text\n*.gif filter=lfs diff=lfs merge=lfs -text\n*.png filter=lfs diff=lfs merge=lfs -text\n*.tiff filter=lfs diff=lfs merge=lfs -text\n# Image files - compressed\n*.jpg filter=lfs diff=lfs merge=lfs -text\n*.jpeg filter=lfs diff=lfs merge=lfs -text\n*.webp filter=lfs diff=lfs merge=lfs -text\n# Video files - compressed\n*.mp4 filter=lfs diff=lfs merge=lfs -text\n*.webm filter=lfs diff=lfs merge=lfs -text\ncontracts/dvidia_training-0.1.0-py3-none-any.whl filter=lfs diff=lfs merge=lfs -text\n"
+      },
+      "before": {
+        "commit": "98c1a037a0eded23ec3a2a758c07f85273172236",
+        "entry": {
+          "blob": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+          "lfs_sha256": null,
+          "size": 2504
+        },
+        "receipt": {
+          "bytes": 2504,
+          "sha256": "9e75dd981de037ec3769f24f790e126bc5a160b6871f510214e68dc70649aeeb"
+        },
+        "utf8": "*.7z filter=lfs diff=lfs merge=lfs -text\n*.arrow filter=lfs diff=lfs merge=lfs -text\n*.avro filter=lfs diff=lfs merge=lfs -text\n*.bin filter=lfs diff=lfs merge=lfs -text\n*.bz2 filter=lfs diff=lfs merge=lfs -text\n*.ckpt filter=lfs diff=lfs merge=lfs -text\n*.ftz filter=lfs diff=lfs merge=lfs -text\n*.gz filter=lfs diff=lfs merge=lfs -text\n*.h5 filter=lfs diff=lfs merge=lfs -text\n*.joblib filter=lfs diff=lfs merge=lfs -text\n*.lfs.* filter=lfs diff=lfs merge=lfs -text\n*.lz4 filter=lfs diff=lfs merge=lfs -text\n*.mds filter=lfs diff=lfs merge=lfs -text\n*.mlmodel filter=lfs diff=lfs merge=lfs -text\n*.model filter=lfs diff=lfs merge=lfs -text\n*.msgpack filter=lfs diff=lfs merge=lfs -text\n*.npy filter=lfs diff=lfs merge=lfs -text\n*.npz filter=lfs diff=lfs merge=lfs -text\n*.onnx filter=lfs diff=lfs merge=lfs -text\n*.ot filter=lfs diff=lfs merge=lfs -text\n*.parquet filter=lfs diff=lfs merge=lfs -text\n*.pb filter=lfs diff=lfs merge=lfs -text\n*.pickle filter=lfs diff=lfs merge=lfs -text\n*.pkl filter=lfs diff=lfs merge=lfs -text\n*.pt filter=lfs diff=lfs merge=lfs -text\n*.pth filter=lfs diff=lfs merge=lfs -text\n*.rar filter=lfs diff=lfs merge=lfs -text\n*.safetensors filter=lfs diff=lfs merge=lfs -text\nsaved_model/**/* filter=lfs diff=lfs merge=lfs -text\n*.tar.* filter=lfs diff=lfs merge=lfs -text\n*.tar filter=lfs diff=lfs merge=lfs -text\n*.tflite filter=lfs diff=lfs merge=lfs -text\n*.tgz filter=lfs diff=lfs merge=lfs -text\n*.wasm filter=lfs diff=lfs merge=lfs -text\n*.xz filter=lfs diff=lfs merge=lfs -text\n*.zip filter=lfs diff=lfs merge=lfs -text\n*.zst filter=lfs diff=lfs merge=lfs -text\n*tfevents* filter=lfs diff=lfs merge=lfs -text\n# Audio files - uncompressed\n*.pcm filter=lfs diff=lfs merge=lfs -text\n*.sam filter=lfs diff=lfs merge=lfs -text\n*.raw filter=lfs diff=lfs merge=lfs -text\n# Audio files - compressed\n*.aac filter=lfs diff=lfs merge=lfs -text\n*.flac filter=lfs diff=lfs merge=lfs -text\n*.mp3 filter=lfs diff=lfs merge=lfs -text\n*.ogg filter=lfs diff=lfs merge=lfs -text\n*.wav filter=lfs diff=lfs merge=lfs -text\n# Image files - uncompressed\n*.bmp filter=lfs diff=lfs merge=lfs -text\n*.gif filter=lfs diff=lfs merge=lfs -text\n*.png filter=lfs diff=lfs merge=lfs -text\n*.tiff filter=lfs diff=lfs merge=lfs -text\n# Image files - compressed\n*.jpg filter=lfs diff=lfs merge=lfs -text\n*.jpeg filter=lfs diff=lfs merge=lfs -text\n*.webp filter=lfs diff=lfs merge=lfs -text\n# Video files - compressed\n*.mp4 filter=lfs diff=lfs merge=lfs -text\n*.webm filter=lfs diff=lfs merge=lfs -text\n"
+      },
+      "group_index": 4,
+      "path": ".gitattributes",
+      "repo_id": "Dvidia/piper-block-placement-feedback-demonstrations-v02",
+      "repo_type": "dataset",
+      "wheel": {
+        "bytes": 5250154,
+        "path": "contracts/dvidia_training-0.1.0-py3-none-any.whl",
+        "sha256": "4af950dfa1a1498e2a5bcc5a1f4c2c5d471e1b5db07545902ca9efd05240fe9e"
+      }
+    },
+    "history": {
+      "dataset": {
+        "continuation_commits": [
+          "2879676f4b8f6a8284836b324b98f7f191dc22ea",
+          "7cf58d8ecfb84464acd54ed7d27321a8f4c8a2b9",
+          "354f2d6d46f34b516f8455bbf576f8d2857d2f56",
+          "67f2db2fbc23e91ff9b724b7493a44ad97cf219e",
+          "139eb4f9441b015af1a8b4bdd1f933d62950788b",
+          "614852484a1b2f5430c9d97664b7ba678cafaca5",
+          "af117f00e1e69c2e34b2f646222673ba1c41ce5f",
+          "a87b795adb7f83ca0e607b8102d664f8b236ab44",
+          "3cc2714423893c475e9b3c786aa2f0b15cdc067f",
+          "fa0fc5450c2150788713b48c1dbeae7397365abd",
+          "bb91d1bf86f3bae6172e53d78a24ac82a01108e8",
+          "85941ef99c892b549bc117b2f2e6a1ea380b99c4",
+          "f3746a8a41b40c9ed2f6d270480de33ce05471f6",
+          "c521ddd536b40f22540e9c30906d3229a0861a15",
+          "cf91bc2e0c36bc9c8f53c117382f7c1bb0b4796c",
+          "52c7e49feeb52bbdae075c89e7f115e1edd1a418",
+          "854f2e2adda6e0356978f7bd7e9800e0ef4a0d05",
+          "38d593aa8a861edcc0dfde696eb00b2a66554ad4",
+          "e98a7e5d4587b37145f4e3668a6d94f5b3f6326f",
+          "077a54bc72bb852a9caec8634a7a83023fe21aea"
+        ],
+        "original_prefix_commits": [
+          "1dcf16bf702fed949c1d092da61bca21703e4c78",
+          "9bd274f2b4a397b9b8d68c0c9e5cb997990c09f3",
+          "149dd0beb233a1b179a72c987784c6feb15cc952",
+          "40ab944ddb46c3ee9c024d73b2380508eb47bcbf",
+          "f244c2d43bf976bff2c649546fa2c1564a7bac96",
+          "1f3ec8c12e1562a1bbcadd67f497f0d866115973",
+          "c08f4fcec6ef51f8ce949d447c73d556df4b5412",
+          "c3a2bbfac2997a877d0ce4bbbfe1a565dc88dea9",
+          "1c7f682ac75f77a565b9b0ebb1cb425d70555bd9",
+          "4c4956d26385e143cd17f8046f47158d6f1a1dd3",
+          "ac645a4b31dc1cbeb50a75ef85a7dda3bea2a8db",
+          "681ea9121c0f0d22b34dd69b589658426c51b53b",
+          "f84ecdf5656fd3cc3a914229fbb2c204b01a7bea",
+          "9218a555a6a6fb7ec2cd94a0a01ef0ce5fe632f4",
+          "de9ac952ef9eda5fb0f3988b41d44c6d9c3f2d2e",
+          "e2f002bdc90dd6340bce7d488dd33078f02f1d03",
+          "4dbd85c0385364ce3ca92ab00f186e94a907ea0b",
+          "eee21acb78218586b437202b76d3d4a6070d5362",
+          "46aec6e010782e7a89993b2b38c421ee9e190006",
+          "5dc2130c173890d1a4f46d582b084c698efd01b7",
+          "790db4d1019094b84c9fa6fe6c8d8e2d0527b5ac",
+          "c54161000fc1aeccd90a5efb9d1a449dbf3712a6",
+          "29c1612050351a8b861e30fdf25f5924bfc2a710",
+          "e08d1d8151dbdcb8ce236ba0b4cc23727b86c5f7",
+          "7b3f81634ad1b10979ebb979f9396d446ae3f328",
+          "98f50f8f867981cc703ae1f70701c2951eb55a6e",
+          "13d6ff8d7a551fc725c35c204dc8fd32e7c89361",
+          "385e919047414e56056fa05362725a5c0670c413",
+          "9bb5d33bd5cff1dca413475fa19fe51edc26bba7",
+          "8380ca01454211893fc364feb75c787dc664f180",
+          "2e7a7551d9887b0add79558a957d0a61eb1816e3",
+          "8daf305c5a68d1a9e7e0b992924b4d0222cf1120",
+          "110e1458838817bc1d22fba0e5472a6664f122c8",
+          "82ec51a67c320b0f7fa757c483656dc760f0293f",
+          "ce6b75aed70a2edd0477241c6421cb813d705c0f",
+          "7216c19f472df42f7adcd940595136cadaf7603e",
+          "5eefd184721af098117f889554a8112e24f68ebd",
+          "b998772191011d633963e51f32cfa0fdcfe1caa9",
+          "f205db24b9ed1a97810404a542d5e96a62a42fa6",
+          "73fe9047e9ed6bd87059d52d4d0d946bb3f2ad6a",
+          "6cbbc2a2eddb0aec2a40f7f09cf533603a87d5f5",
+          "fba19838eb04837707a94c8e4aa697dd45097443",
+          "ba9543cb43a9b6253e71feb21e06e4babd4d3431",
+          "f0d641081b9b466a969fc00ac2f4d16a548cdac3",
+          "b552f0b6714495fc0bf45c3aa1f1ae0f8fe10cac",
+          "d7c7bd186055d68f2098932ec49079a8f1eef80d",
+          "c1b76358d87b9891f7f5296195507fb0dd73eafa",
+          "c430c6ab72a350c94b37ecddf4fd81659de983a3",
+          "8ae7b32a58fb7a9828b83a0063746c1e7ad1c0f9",
+          "21bd6bdf6f5a2bf31426c6d4b57499abcbdb5a5b",
+          "dcd7ad185fe859c6700bdbd2778d324f601579de",
+          "717e5d2c842985a6f14c849e6b80466ec2ce1a87",
+          "04c93609cde902a889659f9d3af43face362d12b",
+          "38a93108c013d2f00f68896cedb3d7c3cf353860",
+          "85c46ee96e87c6ac29a907c7f62ff5ac3f099bbc",
+          "088f8fd1c0d6a03a985136494eced808dbbe58a5",
+          "002ae5d72056d0f6e7d21fc6dc41fbb0b674856d",
+          "1b6821ead412f0adae9d1e6d3eae7dc7818cdbe4",
+          "59ffc62d0a3aa690e3596c3b7b9909593c622a3f",
+          "39b650eef1fd5010d25ce96e2916447a289ee362",
+          "4fe2218e4673ff6e6fc1935dc8bc22b9e10fadac",
+          "52b3be66bba40393e32a06db8c70c3e635a811af",
+          "c41c5b77b7c3bff8c12d51faba16bb6860f30855",
+          "71310e8ee671f972de1d40cd4d92249105185c35",
+          "fe397d5b287125147c8c78500893533d995f0142",
+          "c7599b1fea21ddb5e34c9dd2f786e1c5b2642caa",
+          "790d50f05ac3b8b18bc44a2a18edba7b740b0550",
+          "18cd9f0bc84697463db38508359ce2dd974f9ab2",
+          "70b6f6f2f1c8569fe0ae2b75e2ace0a6e6f7ab92",
+          "f5684e9627800bb26954d85d71daa83e03507632",
+          "c49f2092298d672d9d536e9f1c46f7f0b9d12cfe",
+          "8cdfb182c19985d260e22b7f69127436ddae1b86",
+          "08a03dfd42a2231a27e0e02bcea0508945621027",
+          "cfbb1f44c29279d96c65690b3a22ebbd5b022729",
+          "db98becb66f18a1a0a810681bd3e1cea8b22d2b7",
+          "e6aab453c938a2d02adf0c6ecf8947aa8455c4ca",
+          "1a38d31f0b6aa93608bf6ca5e68b4a623c0fc0aa",
+          "ac8a00628986e1cc025d7d6625da53e2dfcc5ae7",
+          "27a21b1f913cc0b2d9f9cdb985b5ba7754fa8543",
+          "b3f47a0c6a88704cdb3b677b66b90c30edf35d4b",
+          "81172a43b433dd6ecf2d6b133864d7e07d05159f",
+          "e41c547f8f37c635b865b002af83452f507bb042",
+          "96378a0ceebd100bd573ed9923b4491c2ac92aed",
+          "a2d7d0051422e57bc3981e07e067d28ddbb785cc",
+          "d8e134d100ab0ee60d12a094a30cef674e6c1e37",
+          "261898c8ad4f31cce2d71fc38ec002ccc4c82785",
+          "b3b6a527611ef879fdfba01e295a01e73225607d",
+          "acd60ba861afbdfc4b5f5d34304ab2c397f36288",
+          "fa6968bda76bd238c5e80fbd937d451b91fcf734",
+          "2e486090368aca031fa655396bba66c8a96579cc",
+          "01697a96310325d1a206f7b68ff98512aa13c904",
+          "878359cf04b6ec08582d1a7beff7a475ac7dcbcb",
+          "5711ea886bec7c9bda0b2613af6878ed4e0aaabc",
+          "f89781315bd007a4a143a59846d3c096ba9611b1",
+          "0d3bb3a31bea8d065a7cec8b4cd1190f3bc9085e",
+          "546c77b3f4f91a7c0260275728ac8b4b3c360f95",
+          "7582fe05250610b966294ad44f2647b25cd32753",
+          "380451c029344d24ff836eb23819f9e87522ed6f",
+          "81d6ceebcc8a9b3cb0428c8745ad1ba73174df8a",
+          "8dd4bb356964e659024ea19b73f786ae2ee96ad0",
+          "d413f66796184b9e781b9c0ba843b758fcf57127",
+          "aaf872e748e3ca5890690b461d365ef775224b6a",
+          "9c2d9772c2a935975a1334cc152afc0edabf44c9",
+          "b64873b1fa2aff245ee41a5d355b56aff0fe2a8c",
+          "4e49909cfde945d6f494e1da2e3f6176bf7462f4",
+          "94aad6aa95d00e4408c7ffd87a30f9552e8017e6",
+          "a43afe7697823510ba76845e58d732161eaff0e7",
+          "7178f664de639512f7a2ff56bb870cff747d4d91",
+          "ff6d89cd4d149501269fa71e485533c66cc81641",
+          "d170f073b4ea64f6ab55adfdc651cad15ce79448",
+          "9fa875d9cdd440d1747942c0ac99b71b979946b5",
+          "8b3b831df21755b1ce79158994844b99572fbca1",
+          "33b13e1e81bca9797d3afb784432e7781a598c1b",
+          "f0e827c0b031e057bbbafa17895c61944830a72d",
+          "6047965e1731048bca06424dd42b0149c52e0029",
+          "626acdad36b8d5a6b322469640a7ff4c8cd3e5cd",
+          "55b8dc4bfebef6f2fcb0976459e23f14c786d6fd",
+          "e1215a801fab099d51af0f79d2d71f74deccca22",
+          "9e5e3563c2a0397ed499366cb14fcf563bd0be2e",
+          "98c1a037a0eded23ec3a2a758c07f85273172236"
+        ]
+      },
+      "model": {
+        "continuation_commits": [],
+        "original_prefix_commits": [
+          "85a18e6a0d81b82d0d1927966138d7c594915606",
+          "4aa5000d76a3eb2647368816ffe494d696839e1a",
+          "d7483b8215613d63bec0eb75431021536fc4bbd3",
+          "542a0c49c617082b8c4b55ae89d146ffec15da47"
+        ]
+      },
+      "space": {
+        "continuation_commits": [
+          "d41727919929bbca6d6aa8ba2b47434f6480f149",
+          "94a3669586b16a81f462de5ed56247f6d3fad87e",
+          "df2b479901b0e06707bfb3a2ac98235fb0312f00",
+          "efac18056ce907cf6b18cb7172ad1add0b0878d4",
+          "7d459a29bc7403004b823fcc472e856c360fc732",
+          "374ccd9824d6ae87f901f479d237b52b9b9bac10",
+          "22fd98e6425302a8ed3aaad2b5b386ea3e344ccb",
+          "8c6e2e72ee0a8067a8afa07c1537bbc6c03e1983"
+        ],
+        "original_prefix_commits": []
+      }
+    },
+    "immutable_original_journal": {
+      "bytes": 798310,
+      "sha256": "c25349f23e26fd129c10130327f3c2e62650b3a333e1c5c2bb820aa142ec541f"
+    },
+    "implementation": {
+      "files": {
+        "capture_piper_feedback_baselines.py": {
+          "bytes": 13247,
+          "sha256": "c0281ea7ee52e2b97870e1e54926c2a5330acb4efed829f57b992f3af835dd99"
+        },
+        "prepare.py": {
+          "bytes": 11742,
+          "sha256": "68f7ae7c3267c572b1d3cf4fb72a24b6a612aceb060a1846198c2b22031825c1"
+        },
+        "publish.py": {
+          "bytes": 12862,
+          "sha256": "c4063f5a1dae99c93384690f97b6ffab5ef6d667201b38069dafe33a1266f976"
+        },
+        "publish_piper_feedback.py": {
+          "bytes": 59685,
+          "sha256": "d03938435a6fb35609feade18c49b0401f7ff131c35ce0ad606ad1b8a56b766a"
+        },
+        "publish_piper_feedback_continuation.py": {
+          "bytes": 46757,
+          "sha256": "c2c100cdc0749b3ffe5b8029855fe5eba8f8ed1e8e35e422352a31c992b7874b"
+        },
+        "publish_piper_feedback_dataset_metadata.py": {
+          "bytes": 22773,
+          "sha256": "0bef74505cd5454c6a85d65be63d4dc825c057a67790b09a5f260dd0588074cd"
+        },
+        "publish_piper_feedback_hosting.py": {
+          "bytes": 23597,
+          "sha256": "1ee3878050cabae1c581fc624d722ed9c81f87542e1096012742b2c2a8aad54b"
+        },
+        "publish_piper_imitation.py": {
+          "bytes": 51507,
+          "sha256": "5eca896a837b0720ac4a1f14a66581a30a86ee1f4c53726c53e2f39f247ef7c2"
+        },
+        "publish_piper_imitation_batches.py": {
+          "bytes": 54378,
+          "sha256": "67eca03d306e74012a461c77b1860bf774612cf17de390e5704d19982173f5d4"
+        },
+        "publish_prerequisites.py": {
+          "bytes": 31817,
+          "sha256": "711f781ad2cc4ae4a06e29f5c4a9f30ec336380df7f6f0eb249b1eee19f55fe0"
+        }
+      },
+      "schema": "dvidia.piper-feedback-continuation/v1/implementation"
+    },
+    "journal": {
+      "bytes": 619361,
+      "sha256": "e6ffad3028b8f62099b5515969935ea99771242ad3d6b0fc30a2c192894fd1e8"
+    },
+    "model_metadata_acknowledgment": {
+      "added_line_utf8": "contracts/dvidia_training-0.1.0-py3-none-any.whl filter=lfs diff=lfs merge=lfs -text\n",
+      "after": {
+        "commit": "542a0c49c617082b8c4b55ae89d146ffec15da47",
+        "entry": {
+          "blob": "62961c4fa938aabfe8f54b74d89c5bff465044af",
+          "lfs_sha256": null,
+          "size": 1604
+        },
+        "receipt": {
+          "bytes": 1604,
+          "sha256": "09b23f80096ee7cc33df5d876b3f2c2b386fd643361180576f0561d848305266"
+        },
+        "utf8": "*.7z filter=lfs diff=lfs merge=lfs -text\n*.arrow filter=lfs diff=lfs merge=lfs -text\n*.bin filter=lfs diff=lfs merge=lfs -text\n*.bz2 filter=lfs diff=lfs merge=lfs -text\n*.ckpt filter=lfs diff=lfs merge=lfs -text\n*.ftz filter=lfs diff=lfs merge=lfs -text\n*.gz filter=lfs diff=lfs merge=lfs -text\n*.h5 filter=lfs diff=lfs merge=lfs -text\n*.joblib filter=lfs diff=lfs merge=lfs -text\n*.lfs.* filter=lfs diff=lfs merge=lfs -text\n*.mlmodel filter=lfs diff=lfs merge=lfs -text\n*.model filter=lfs diff=lfs merge=lfs -text\n*.msgpack filter=lfs diff=lfs merge=lfs -text\n*.npy filter=lfs diff=lfs merge=lfs -text\n*.npz filter=lfs diff=lfs merge=lfs -text\n*.onnx filter=lfs diff=lfs merge=lfs -text\n*.ot filter=lfs diff=lfs merge=lfs -text\n*.parquet filter=lfs diff=lfs merge=lfs -text\n*.pb filter=lfs diff=lfs merge=lfs -text\n*.pickle filter=lfs diff=lfs merge=lfs -text\n*.pkl filter=lfs diff=lfs merge=lfs -text\n*.pt filter=lfs diff=lfs merge=lfs -text\n*.pth filter=lfs diff=lfs merge=lfs -text\n*.rar filter=lfs diff=lfs merge=lfs -text\n*.safetensors filter=lfs diff=lfs merge=lfs -text\nsaved_model/**/* filter=lfs diff=lfs merge=lfs -text\n*.tar.* filter=lfs diff=lfs merge=lfs -text\n*.tar filter=lfs diff=lfs merge=lfs -text\n*.tflite filter=lfs diff=lfs merge=lfs -text\n*.tgz filter=lfs diff=lfs merge=lfs -text\n*.wasm filter=lfs diff=lfs merge=lfs -text\n*.xz filter=lfs diff=lfs merge=lfs -text\n*.zip filter=lfs diff=lfs merge=lfs -text\n*.zst filter=lfs diff=lfs merge=lfs -text\n*tfevents* filter=lfs diff=lfs merge=lfs -text\ncontracts/dvidia_training-0.1.0-py3-none-any.whl filter=lfs diff=lfs merge=lfs -text\n"
+      },
+      "anonymous_readbacks": true,
+      "before": {
+        "commit": "635be790e1551ae5f74a4f0f364857f51350a4c1",
+        "entry": {
+          "blob": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+          "lfs_sha256": null,
+          "size": 1519
+        },
+        "receipt": {
+          "bytes": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        "utf8": "*.7z filter=lfs diff=lfs merge=lfs -text\n*.arrow filter=lfs diff=lfs merge=lfs -text\n*.bin filter=lfs diff=lfs merge=lfs -text\n*.bz2 filter=lfs diff=lfs merge=lfs -text\n*.ckpt filter=lfs diff=lfs merge=lfs -text\n*.ftz filter=lfs diff=lfs merge=lfs -text\n*.gz filter=lfs diff=lfs merge=lfs -text\n*.h5 filter=lfs diff=lfs merge=lfs -text\n*.joblib filter=lfs diff=lfs merge=lfs -text\n*.lfs.* filter=lfs diff=lfs merge=lfs -text\n*.mlmodel filter=lfs diff=lfs merge=lfs -text\n*.model filter=lfs diff=lfs merge=lfs -text\n*.msgpack filter=lfs diff=lfs merge=lfs -text\n*.npy filter=lfs diff=lfs merge=lfs -text\n*.npz filter=lfs diff=lfs merge=lfs -text\n*.onnx filter=lfs diff=lfs merge=lfs -text\n*.ot filter=lfs diff=lfs merge=lfs -text\n*.parquet filter=lfs diff=lfs merge=lfs -text\n*.pb filter=lfs diff=lfs merge=lfs -text\n*.pickle filter=lfs diff=lfs merge=lfs -text\n*.pkl filter=lfs diff=lfs merge=lfs -text\n*.pt filter=lfs diff=lfs merge=lfs -text\n*.pth filter=lfs diff=lfs merge=lfs -text\n*.rar filter=lfs diff=lfs merge=lfs -text\n*.safetensors filter=lfs diff=lfs merge=lfs -text\nsaved_model/**/* filter=lfs diff=lfs merge=lfs -text\n*.tar.* filter=lfs diff=lfs merge=lfs -text\n*.tar filter=lfs diff=lfs merge=lfs -text\n*.tflite filter=lfs diff=lfs merge=lfs -text\n*.tgz filter=lfs diff=lfs merge=lfs -text\n*.wasm filter=lfs diff=lfs merge=lfs -text\n*.xz filter=lfs diff=lfs merge=lfs -text\n*.zip filter=lfs diff=lfs merge=lfs -text\n*.zst filter=lfs diff=lfs merge=lfs -text\n*tfevents* filter=lfs diff=lfs merge=lfs -text\n"
+      },
+      "path": ".gitattributes",
+      "provenance": [
+        {
+          "attributes_entry": {
+            "blob": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+            "lfs_sha256": null,
+            "size": 1519
+          },
+          "commit": "85a18e6a0d81b82d0d1927966138d7c594915606",
+          "index": 0,
+          "parent_commit": "635be790e1551ae5f74a4f0f364857f51350a4c1"
+        },
+        {
+          "attributes_entry": {
+            "blob": "62961c4fa938aabfe8f54b74d89c5bff465044af",
+            "lfs_sha256": null,
+            "size": 1604
+          },
+          "commit": "4aa5000d76a3eb2647368816ffe494d696839e1a",
+          "index": 1,
+          "parent_commit": "85a18e6a0d81b82d0d1927966138d7c594915606"
+        },
+        {
+          "attributes_entry": {
+            "blob": "62961c4fa938aabfe8f54b74d89c5bff465044af",
+            "lfs_sha256": null,
+            "size": 1604
+          },
+          "commit": "d7483b8215613d63bec0eb75431021536fc4bbd3",
+          "index": 2,
+          "parent_commit": "4aa5000d76a3eb2647368816ffe494d696839e1a"
+        },
+        {
+          "attributes_entry": {
+            "blob": "62961c4fa938aabfe8f54b74d89c5bff465044af",
+            "lfs_sha256": null,
+            "size": 1604
+          },
+          "commit": "542a0c49c617082b8c4b55ae89d146ffec15da47",
+          "index": 3,
+          "parent_commit": "d7483b8215613d63bec0eb75431021536fc4bbd3"
+        }
+      ],
+      "repo_id": "Dvidia/piper-block-placement-feedback-v02",
+      "wheel": {
+        "bytes": 5250154,
+        "path": "contracts/dvidia_training-0.1.0-py3-none-any.whl",
+        "sha256": "4af950dfa1a1498e2a5bcc5a1f4c2c5d471e1b5db07545902ca9efd05240fe9e"
+      }
+    },
+    "plan": {
+      "bytes": 1237319,
+      "sha256": "a67d8a3434190a6587332a2f0bc6474eb7dbb26005f3de1a47aeb587edef9d6e"
+    },
+    "schema": "dvidia.piper-feedback-continuation/v1",
+    "verification": "Original publicly verified scientific payload prefix revalidated by unchanged exact Git/LFS object IDs; the single historical model LFS-rule metadata delta is explicitly acknowledged when present. Every continuation payload and the sole declared dataset LFS-rule delta, when present, were anonymously read back at their exact committed revision."
+  },
+  "physical_robot_ready": false,
+  "plan_sha256": "7922d89393d8e0fb23e16ca18d1bfc282cf84bdbc3fe2d0c9426f919be90e89e",
+  "repositories": [
+    {
+      "commit": "542a0c49c617082b8c4b55ae89d146ffec15da47",
+      "repo_id": "Dvidia/piper-block-placement-feedback-v02",
+      "repo_type": "model",
+      "url": "https://huggingface.co/Dvidia/piper-block-placement-feedback-v02",
+      "verified_files": 45
+    },
+    {
+      "commit": "077a54bc72bb852a9caec8634a7a83023fe21aea",
+      "repo_id": "Dvidia/piper-block-placement-feedback-demonstrations-v02",
+      "repo_type": "dataset",
+      "url": "https://huggingface.co/datasets/Dvidia/piper-block-placement-feedback-demonstrations-v02",
+      "verified_files": 2337
+    },
+    {
+      "commit": "8c6e2e72ee0a8067a8afa07c1537bbc6c03e1983",
+      "repo_id": "Dvidia/robot-simulation-lab",
+      "repo_type": "space",
+      "url": "https://huggingface.co/spaces/Dvidia/robot-simulation-lab",
+      "verified_files": 711
+    }
+  ],
+  "schema": "dvidia.piper-feedback-publication/v0.2/receipt",
+  "source_commit": "087cd48309c8af8ed8c984101da91d36287e255a",
+  "source_integrity_sha256": "5fdfab544a424d44b5be2d7a87356dbe0a7cd47eeaf97050625b30189d5464f9",
+  "space_baseline_commit": "73390d05bc8f8b82333f4de060b77076ccd603d3",
+  "space_baseline_files_preserved": 3032,
+  "viewer_url": "https://dvidia-robot-simulation-lab.static.hf.space/learned-placement/v02/viewer/index.html"
+}

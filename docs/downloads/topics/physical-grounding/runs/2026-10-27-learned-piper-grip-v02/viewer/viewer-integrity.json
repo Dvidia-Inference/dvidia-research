@@ -1,26 +1,27 @@
 {
   "browser_managed_resources_derivation": {
     "attempts": 120,
-    "bundle_bytes": 5866002,
+    "bundle_bytes": 5869998,
     "changed_original_paths": [
       "index.html",
+      "motion.json",
       "piper_feedback_viewer.bundle.js",
       "piper_feedback_viewer.js",
       "viewer-integrity.json"
     ],
-    "derived_motion_sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4",
+    "derived_motion_sha256": "1d26235d14c56528aec06c45c09f36941900dc36df162baf8760527ebed5b045",
     "first_embedded_case": {
       "id": "confirmation-00-goal0-nominal",
       "variant": "feedback"
     },
     "implementation_sha256": {
-      "derive_piper_feedback_native_resources.py": "09e4cbb8da5127de8e67737d14f0b423922ae26f922049b0210dfb259674260f",
+      "derive_piper_feedback_native_resources.py": "27edbd5365c223affc8274339dfbd1ee60061fc1af155906d60b833fb4530508",
       "piper_feedback_native_resources.js": "b436ea5d74bc556d9e43d95534f814230a303b27b28ea9a4e68d7def9750be79"
     },
     "largest_script_bytes": 489100,
     "limits": "SRI is enforced by the browser before a data script executes; this is immutable generated data delivery, not arbitrary policy loading. Download byte caps are declared and pinned by SRI rather than incrementally enforced on native script responses. Main bundle is below 8 MiB, each selected-case script below 1 MiB. Browser gzip support is required. No new hosts, authentication or telemetry. This is experimental until an independent controlled public load.",
     "motion_publication_change": "Only native evidence URLs and dataset publication metadata may be pinned to the supplied exact commit. Embedded and external motion JSON are byte-identical. The original scientific viewer and original motion remain sealed and untouched.",
-    "native_dataset_revision": "main (explicitly unpinned experimental transport test)",
+    "native_dataset_revision": "52cfbdabb550beee7af4e2af41e3e8c534c59baf",
     "observed_transport": "Original, chunked, text-first and native-buffered fetch-body strategies have each timed out during controlled public loads. Native buffering reached 22/26 chunks before the 120-second geometry deadline. They are not established fixes. Script/HTML browser-managed resources have loaded reliably in the observed sessions; the precise transport cause remains undiagnosed.",
     "original_geometry_bytes": 6736872,
     "original_geometry_sha256": "2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def",
@@ -29,14 +30,14 @@
     "replay_count": 28,
     "schema": "dvidia.piper-feedback-native-resources/v1",
     "scientific_bytes_unchanged": true,
-    "security": "Compiled main bundle has HTML SHA384 SRI. Case scripts have fixed filenames, at most 1 MiB source and manifest-bound SHA384 SRI. A restrictive native script-src self policy prevents external script targets, including redirects; no inline script is used. Each generated wrapper contains only literals delivered to one fixed callback; only an actively requested exact case identity can be accepted. Every payload checks exact keys, bounded canonical base64, compressed SHA256, bounded gzip expansion and unchanged original raw SHA256. Original whole-geometry and mesh/index bounds remain.",
+    "security": "Compiled main bundle has HTML SHA384 SRI and a SHA256 cache-identity query, so a different dataset pin cannot reuse a stale bundle URL. Case scripts have fixed filenames, at most 1 MiB source and manifest-bound SHA384 SRI. A restrictive native script-src self policy prevents external script targets, including redirects; no inline script is used. Each generated wrapper contains only literals delivered to one fixed callback; only an actively requested exact case identity can be accepted. Every payload checks exact keys, bounded canonical base64, compressed SHA256, bounded gzip expansion and unchanged original raw SHA256. Original whole-geometry and mesh/index bounds remain.",
     "selected_case_scripts": 27,
     "strategy": "Embed the exact original gzip geometry, original scene/motion JSON and the first scheduled feedback replay in the compiled native script. Load each other case only on selection using one fixed same-origin generated literal data script with SHA384 SRI, anonymous CORS, no-referrer and a cancellable 30-second deadline. No runtime fetch-body reads are needed for playback."
   },
   "files": {
     "BROWSER-MANAGED-RESOURCES.json": {
-      "bytes": 3394,
-      "sha256": "4aaf5b20ab63199b4e1bbbce36e41dc013dc57f8302ebbf25b5f8d4a14fa20d4"
+      "bytes": 3493,
+      "sha256": "d14dcd446fb9a762156f5ab5be63c3ed405865770d64b0e7741b78e6efb7c731"
     },
     "LICENSE": {
       "bytes": 1076,
@@ -2599,8 +2600,8 @@
       "sha256": "51365a5a661d8062e28c66abc6bdb843ee410811f84b49d62c5878c265b3631f"
     },
     "index.html": {
-      "bytes": 17766,
-      "sha256": "3885feb330d58938fd01ed4c8c6a1719a355a29b3825dd25faa836c53ebe5d2f"
+      "bytes": 17838,
+      "sha256": "4e176df44278ba7373a7bd35298425bffa7de6e6bff2b1a74876c58dec219123"
     },
     "licenses/agilex_piper/LICENSE": {
       "bytes": 1065,
@@ -2611,16 +2612,16 @@
       "sha256": "ab0d218758ec6c298417407962f49179e369236e8f316dbaa7671756d6f8eb77"
     },
     "motion.json": {
-      "bytes": 446355,
-      "sha256": "a8e72d6989f2e985f45ea0ccd400e941c2ee46d56c6e0a79f7f40f8254c023b4"
+      "bytes": 609985,
+      "sha256": "1d26235d14c56528aec06c45c09f36941900dc36df162baf8760527ebed5b045"
     },
     "piper_feedback_viewer.bundle.js": {
-      "bytes": 5866002,
-      "sha256": "2a026a4bc037e49daf54b295c070dda2fee797ef61575500d9cdb5e266ac3b77"
+      "bytes": 5869998,
+      "sha256": "c861d9974c143be15399a2c497f7e08d055a549529c3dad51a71448b511683a5"
     },
     "piper_feedback_viewer.js": {
-      "bytes": 5369384,
-      "sha256": "3162d299c1ca170e2197903d2e2807135e91c7bcc8c7e3f33738702c8f7c1b43"
+      "bytes": 5373380,
+      "sha256": "1e71f0c8ea3f35bfc4972f721e73793127a2d48b25641e92326ee706da9596eb"
     },
     "poses-00.bin": {
       "bytes": 336336,

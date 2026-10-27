@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-27",
+  "feedback_jaw_interruption_successes_per_12": 0,
+  "github": {
+    "assets": [
+      {
+        "anonymous_readback": true,
+        "bytes": 12058977,
+        "path": "dvidia-piper-feedback-v02-kit.zip",
+        "sha256": "3d77f8eba81e85b7b3b02d4da4a39785fb283fa8dfc72eee0b3b58bd466e7ab4",
+        "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/piper-feedback-v0.2/dvidia-piper-feedback-v02-kit.zip"
+      },
+      {
+        "anonymous_readback": true,
+        "bytes": 5250154,
+        "path": "dvidia_training-0.1.0-py3-none-any.whl",
+        "sha256": "4af950dfa1a1498e2a5bcc5a1f4c2c5d471e1b5db07545902ca9efd05240fe9e",
+        "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/piper-feedback-v0.2/dvidia_training-0.1.0-py3-none-any.whl"
+      },
+      {
+        "anonymous_readback": true,
+        "bytes": 205,
+        "path": "SHA256SUMS.txt",
+        "sha256": "c1c8577f303273ec0613b7966c3d7a9e60cced91a47f29b9eb5498a740ac0b8c",
+        "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/piper-feedback-v0.2/SHA256SUMS.txt"
+      }
+    ],
+    "main_readme_commit": "669d561ec64cb183919e985723d9dc1c40b95aaf",
+    "release_url": "https://github.com/Dvidia-Inference/dvidia-training/releases/tag/piper-feedback-v0.2",
+    "repository": "Dvidia-Inference/dvidia-training",
+    "source_commit": "b35c80819e655f3ca03ca509756d19d9e75a562c",
+    "tag": "piper-feedback-v0.2"
+  },
+  "huggingface": {
+    "dataset": {
+      "commit": "52cfbdabb550beee7af4e2af41e3e8c534c59baf",
+      "initial_scientific_commit": "077a54bc72bb852a9caec8634a7a83023fe21aea",
+      "readme_path_mapping": {
+        "README.md": "docs/publication/source-README.md"
+      },
+      "repo_id": "Dvidia/piper-block-placement-feedback-demonstrations-v02",
+      "url": "https://huggingface.co/datasets/Dvidia/piper-block-placement-feedback-demonstrations-v02"
+    },
+    "model": {
+      "commit": "542a0c49c617082b8c4b55ae89d146ffec15da47",
+      "repo_id": "Dvidia/piper-block-placement-feedback-v02",
+      "repo_type": "model",
+      "url": "https://huggingface.co/Dvidia/piper-block-placement-feedback-v02",
+      "verified_files": 45
+    },
+    "space": {
+      "commit": "9eaeeae67def2697ca664b54a754e915f0741c78",
+      "initial_projection_commit": "8c6e2e72ee0a8067a8afa07c1537bbc6c03e1983",
+      "repo_id": "Dvidia/robot-simulation-lab",
+      "viewer_url": "https://dvidia-robot-simulation-lab.static.hf.space/learned-placement/v02/viewer/index.html"
+    }
+  },
+  "physical_robot_ready": false,
+  "receipt_files": {
+    "dataset-card-receipt.json": {
+      "bytes": 1260,
+      "sha256": "be56224c87c755d3d0c5f220ef267ba1f65b71df69ffecd6da1b63f1fdb0aa94"
+    },
+    "github-assets.json": {
+      "bytes": 1489,
+      "sha256": "5abc5b0cb7fbd1f2e0bb2ae3cf1e9449207c7d0d5be428dd554c93b4af6399cf"
+    },
+    "github-readme-receipt.json": {
+      "bytes": 552,
+      "sha256": "93de76df4266a1cf5b75ddcdc16d8562a65de06ffaa0cf30a742185b1fdc4560"
+    },
+    "initial-upload-receipt.json": {
+      "bytes": 25435,
+      "sha256": "25204ef6b5996893a2934caedb8b7a76403cfc16d27b24a6240abab42840138e"
+    },
+    "native-space-receipt.json": {
+      "bytes": 11080,
+      "sha256": "933c22622d009d6da1f3e2d202af8c15c25e4a81bf4e634cfae41a6e6f8888f7"
+    }
+  },
+  "research": {
+    "complete_study_integrity_sha256": "5fdfab544a424d44b5be2d7a87356dbe0a7cd47eeaf97050625b30189d5464f9",
+    "derived_viewer_integrity_sha256": "11b6ceae739efb38902ea17beb05b948cda8b2773b641b269d70fa8b3bbb21ce",
+    "original_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+    "paper_url": "https://research.dvidia.org/papers/learned-piper-grip-v02/",
+    "scope": "Complete evidence remains in the dataset; the smaller derived replay is identical across these two hosts.",
+    "viewer_url": "https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-27-learned-piper-grip-v02/viewer/index.html"
+  },
+  "schema": "dvidia.piper-feedback-cross-publication/v1",
+  "scope": "Frozen simulation research; hosting and card overlays preserve scientific bytes. No physical qualification. Browser replay uses saved states; fresh physics runs through the local CLI.",
+  "strict_successes_per_24": {
+    "blind": 8,
+    "feedback": 6,
+    "feedforward": 5,
+    "open_jaw": 0,
+    "teacher": 24
+  }
+}
