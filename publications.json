@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "learned-piper-placement-v01",
+      "title": "Learning PiPER block placement from synthetic demonstrations",
+      "source": "reports/Learned PiPER placement v01.md",
+      "date": "2026-10-27",
+      "type": "Learned feedforward primitive from synthetic demonstrations",
+      "status": "Learned 5/12 · teacher 12/12 · three controls 0/12 each · simulation only",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A compact feedforward joint-and-jaw primitive trained on 32 successful synthetic demonstrations completes 5/12 frozen PiPER placement attempts from unseen starting positions. The authored teacher completes 12/12; three controls complete 0/12 each. All twelve learned terminal poses pass settling checks, while seven fail the full native contact-history gates. Complete tapes, failed development candidates, an independent audit and an installable local runner preserve the reliability gap. This is privileged-state reference distillation for a fixed rigid block and two trained goals, not human-video learning, learned feedback or physical robot qualification."
+    },
+    {
       "slug": "sensor-corroboration-v04",
       "title": "Independent camera and actuator corroboration v0.4",
       "source": "reports/Sensor corroboration v04.md",

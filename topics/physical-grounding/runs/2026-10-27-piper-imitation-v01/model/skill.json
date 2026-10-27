@@ -1,0 +1,87 @@
+{
+  "schema": "dvidia.learned-simulation-skill/v1",
+  "id": "piper-block-placement-v01",
+  "publisher": "DVIDIA",
+  "license": "MIT",
+  "release_stage": "research",
+  "model_file": "model.json",
+  "model_sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded",
+  "model_schema": "dvidia.piper-motor-primitive/v2",
+  "feature_contract": "initial_object_xy_known_goal_elapsed_time__live_q_only_for_native_cap/v1",
+  "supervision_origin": "synthetic_authored_controller",
+  "embodiment": "piper",
+  "profile_lock_sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+  "simulation_only": true,
+  "physical_robot_ready": false,
+  "learned_contact_recovery": false,
+  "native_control": {
+    "arm": "six joint position targets, radians",
+    "jaw": "one coupled jaw position target, metres",
+    "control_dt_s": 0.02,
+    "timestep_s": 0.001,
+    "authored_native_servos": true
+  },
+  "scope": {
+    "object": "one 40 g rigid block",
+    "start_x_m": [
+      0.284,
+      0.314
+    ],
+    "start_y_m": [
+      -0.045,
+      -0.015
+    ],
+    "known_goal_xy_m": [
+      [
+        0.35,
+        0.08
+      ],
+      [
+        0.4,
+        -0.08
+      ]
+    ],
+    "goal_z_m": 0.08,
+    "novel_goals_tested": false,
+    "novel_objects_tested": false,
+    "disturbance_recovery_tested": false
+  },
+  "confirmation": {
+    "scheduled": 12,
+    "valid": 12,
+    "successes": 5,
+    "failures": 7,
+    "reasons": {
+      "success": 5,
+      "native_outcome_failed": 7
+    },
+    "descriptive_wilson_95_interval": [
+      0.19326031365875665,
+      0.6804886874504503
+    ],
+    "inference_compute": {
+      "samples": 12000,
+      "p50_s": 0.00014808354899287224,
+      "p95_s": 0.0010386524023488148,
+      "p99_s": 0.0032591192470863496,
+      "maximum_s": 0.12923712516203523
+    },
+    "control_step_compute": {
+      "samples": 12000,
+      "p50_s": 0.002158749382942915,
+      "p95_s": 0.014440981671214097,
+      "p99_s": 0.03255935212131595,
+      "maximum_s": 0.5332735842093825
+    },
+    "episode_wall": {
+      "samples": 12,
+      "p50_s": 3.391443145694211,
+      "p95_s": 14.094288227381174,
+      "p99_s": 21.14088054546156,
+      "maximum_s": 22.90252862498164
+    },
+    "missed_20ms_compute_boundaries": 344,
+    "process_peak_rss_bytes": 736444416
+  },
+  "report_sha256": "52ae9f37e845c0949879012fe9e5279192a543dc5f898a8a8d2fe9ab0f51d4fe"
+}
