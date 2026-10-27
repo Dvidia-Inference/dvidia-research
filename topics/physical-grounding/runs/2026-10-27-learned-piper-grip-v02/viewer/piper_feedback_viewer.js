@@ -56,12 +56,16 @@ async function abortable(promise, signal) {
   try { return await Promise.race([promise, aborted]); }
   finally { signal.removeEventListener('abort', listener); }
 }
-async function deadline(href, milliseconds, operation) {
+async function deadline(href, milliseconds, operation, outerSignal) {
   const controller = new AbortController();
+  const propagate = () => controller.abort(outerSignal.reason);
+  if (outerSignal?.aborted) throw outerSignal.reason;
+  outerSignal?.addEventListener('abort', propagate, {once: true});
   const timer = setTimeout(() => controller.abort(new Error(`Timed out loading ${href} after ${milliseconds / 1000} s. Check the connection or open the complete download locally.`)), milliseconds);
   try { return await abortable(operation(controller.signal), controller.signal); }
   finally {
     clearTimeout(timer);
+    outerSignal?.removeEventListener('abort', propagate);
     // Also release an unread response when status or origin checks fail early.
     controller.abort();
   }
@@ -95,7 +99,7 @@ async function verifiedBinary(bytes, meta) {
   assert(hash === meta.sha256, 'Study binary SHA256 changed.');
   return bytes;
 }
-async function binary(meta, expected) {
+async function binary(meta, expected, outerSignal) {
   assert(meta && meta.href === expected, 'Unexpected binary file.');
   integer(meta.bytes, 0, MAX_BYTES, 'binary byte count');
   if (typeof DecompressionStream === 'function' && meta.compressed_href) {
@@ -107,13 +111,14 @@ async function binary(meta, expected) {
         assert(compressed.byteLength === meta.compressed_bytes, 'Compressed byte count changed.');
         const bytes = await bounded(new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'), {signal}), meta.bytes, signal);
         return verifiedBinary(bytes, meta);
-      });
+      }, outerSignal);
     } catch (error) {
+      if (outerSignal?.aborted) throw error;
       // The raw bytes have their own deadline and must pass the same digest.
       // A blocked or stalled compressed response cannot strand the replay.
     }
   }
-  return deadline(meta.href, 30000, async signal => verifiedBinary(await bounded((await response(meta.href, signal)).body, meta.bytes, signal), meta));
+  return deadline(meta.href, 30000, async signal => verifiedBinary(await bounded((await response(meta.href, signal)).body, meta.bytes, signal), meta), outerSignal);
 }
 async function verifiedJson(meta) {
   assert(meta && /^frames-[0-9]{2}\.json$/.test(meta.href), 'Unexpected frame metadata file.');
@@ -123,6 +128,54 @@ async function verifiedJson(meta) {
     return JSON.parse(new TextDecoder().decode(bytes));
   });
 }
+/* Hosting-only transport: reconstruct the original geometry bytes exactly. */
+async function geometryChunks(meta) {
+  if (!meta.chunks) return binary(meta, 'geometry.bin');
+  assert(meta.href === 'geometry.bin', 'Unexpected whole geometry file.');
+  integer(meta.bytes, 1, MAX_BYTES, 'whole geometry byte count');
+  assert(Array.isArray(meta.chunks) && meta.chunks.length > 0 && meta.chunks.length <= 256, 'Invalid geometry chunk count.');
+  let total = 0;
+  meta.chunks.forEach((chunk, index) => {
+    assert(chunk.href === `geometry-part-${String(index).padStart(3, '0')}.bin`, 'Unexpected geometry chunk order.');
+    assert(chunk.compressed_href === chunk.href + '.gz', 'Unexpected compressed geometry chunk.');
+    integer(chunk.bytes, 1, 262144, 'geometry chunk byte count');
+    integer(chunk.compressed_bytes, 1, 263168, 'compressed geometry chunk byte count');
+    assert(typeof chunk.sha256 === 'string' && /^[0-9a-f]{64}$/.test(chunk.sha256), 'Invalid geometry chunk digest.');
+    total += chunk.bytes;
+  });
+  assert(total === meta.bytes, 'Geometry chunks do not cover the original byte count.');
+  return deadline('chunked geometry', 120000, async signal => {
+    let next = 0, completed = 0;
+    const pieces = new Array(meta.chunks.length), group = new AbortController();
+    const stop = () => group.abort(signal.reason);
+    signal.addEventListener('abort', stop, {once: true});
+    try {
+      const worker = async () => {
+        for (;;) {
+          if (group.signal.aborted) throw group.signal.reason;
+          const index = next++;
+          if (index >= meta.chunks.length) return;
+          pieces[index] = await binary(meta.chunks[index], meta.chunks[index].href, group.signal);
+          if (group.signal.aborted) throw group.signal.reason;
+          completed++;
+          $('loading').textContent = `Loading saved geometry · ${completed}/${meta.chunks.length} pieces verified…`;
+        }
+      };
+      await Promise.all(Array.from({length: Math.min(3, meta.chunks.length)}, worker));
+      const joined = new Uint8Array(meta.bytes);
+      let offset = 0;
+      for (const piece of pieces) { joined.set(new Uint8Array(piece), offset); offset += piece.byteLength; }
+      return await verifiedBinary(joined.buffer, meta);
+    } catch (error) {
+      group.abort(error);
+      throw error;
+    } finally {
+      signal.removeEventListener('abort', stop);
+      group.abort();
+    }
+  });
+}
+
 function validate(geometry) {
   assert(model.schema === 'dvidia.piper-feedback-scene/v0.2' && metadata.schema === 'dvidia.piper-feedback-viewer/v0.2', 'Unsupported study replay format.');
   integer(metadata.body_count, 1, 128, 'body count');
@@ -366,7 +419,7 @@ function fail(error) {
 async function main() {
   assert(location.protocol !== 'file:', 'Saved replay files need a local or hosted HTTP URL.');
   [model, metadata] = await Promise.all([json('scene.json'), json('motion.json')]); evidence();
-  const geometry = await binary(model.geometry_binary, 'geometry.bin');
+  const geometry = await geometryChunks(model.geometry_binary);
   validate(geometry); initWorld(geometry);
   $('case-select').replaceChildren();
   for (const id of [...new Set(metadata.cases.map(item => item.id))]) { const option = document.createElement('option'); option.value = id; option.textContent = caseLabel(metadata.cases.find(item => item.id === id)); $('case-select').append(option); }

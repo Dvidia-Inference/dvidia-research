@@ -1,3 +1,5 @@
 # DVIDIA learned grip v0.2 recorded projection
 
 This directory contains the recorded browser replay, compact original metadata, diagnostic reports, and local-installation contract/wheel. It is not the complete 1.8 GB evidence dataset. Dense native arrays and all failed development/training attempts remain in the public Hugging Face dataset linked from the paper and replay. `experiment-integrity.json` is the original complete-study file manifest, not a claim that all those files are duplicated here. `viewer/viewer-integrity.json` seals the smaller recorded projection.
+
+The viewer now uses a separate [geometry transport derivation](viewer/GEOMETRY-TRANSPORT.json): 26 individually verified small pieces reconstruct the exact original geometry. Its derived viewer seal records the unchanged parent seal. This responds to an observed initial public download timeout followed by a successful reload; it changes no simulation, policy, score, pose or original geometry bytes. The original viewer remains available in research commit 443b1f036bc705a23b3e5a67ccf43a14f7be6e38 and the sealed training run.

@@ -1,0 +1,25 @@
+{
+  "changed_original_paths": [
+    "piper_feedback_viewer.bundle.js",
+    "piper_feedback_viewer.js",
+    "scene.json",
+    "viewer-integrity.json"
+  ],
+  "chunk_bytes": 262144,
+  "chunks": 26,
+  "compressed_deadline_s": 8,
+  "implementation_sha256": {
+    "derive_piper_feedback_geometry_chunks.py": "4825f637ace888ed3365739247c2b2d41800ca682a6cc973ec1c1350155303d6",
+    "piper_feedback_geometry_transport.js": "8ca5d568a5e7a1cdf8fe7e2841168a7c1eecc12d45469a63c466f8b52eb24f81"
+  },
+  "observed_transport": "One initial public research replay load reported the geometry.bin raw fallback exceeding its 30-second deadline. A subsequent intentional reload succeeded with the original viewer. Local gzip/raw bytes and digests agree. The precise network/server cause was not measured; this is bounded cold-transfer robustness, not a claim of universal failure or data corruption.",
+  "original_geometry_bytes": 6736872,
+  "original_geometry_sha256": "2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def",
+  "parallel_fetches": 3,
+  "parent_viewer_integrity_sha256": "2731ec8df376fde096ed2ff30540fd4de1fabd698fb1a1be650345d5bdf73d04",
+  "raw_deadline_s": 30,
+  "schema": "dvidia.piper-feedback-geometry-transport/v1",
+  "scope": "Hosting transport only. No changes to physics, policy, model, scoring, recorded states, original geometry or evidence. Original sealed viewer remains untouched.",
+  "total_geometry_deadline_s": 120,
+  "whole_geometry_verification": "Per-chunk SHA256 and byte count, then exact original whole-file SHA256; unchanged original scene mesh/index validation follows."
+}
