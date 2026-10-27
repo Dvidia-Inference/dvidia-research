@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "learned-piper-grip-v02",
+      "title": "Learning grip feedback with a frozen PiPER arm reference",
+      "source": "reports/Learned PiPER grip v02.md",
+      "date": "2026-10-27",
+      "type": "Learned jaw adapter with matched blind controls and retained negative studies",
+      "status": "Jaw feedback 6/24 · blind 8/24 · feedforward 5/24 · teacher 24/24 · no demonstrated feedback advantage",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "After five seven-command residual candidates each failed all 16 development cases, a separate 25-node learned jaw adapter preserves the frozen six-axis PiPER arm references. Trained on 64 synthetic teacher episodes and 64,000 causal labels, it completes 6/24 frozen confirmation cases, versus 8/24 for its matched blind control, 5/24 feedforward, 24/24 authored teacher and 0/24 open jaws. Feedback succeeds in 0/12 interrupted cases; 14/24 terminal-only passes conceal strict task failures. All 120 confirmation attempts are valid, and an independent numeric audit reconstructs 360 retained attempts. CPU inference p95 is 0.501 ms; this establishes no live-feedback advantage, recovered grip, human-video learning or hardware qualification."
+    },
+    {
       "slug": "learned-piper-placement-v01",
       "title": "Learning PiPER block placement from synthetic demonstrations",
       "source": "reports/Learned PiPER placement v01.md",

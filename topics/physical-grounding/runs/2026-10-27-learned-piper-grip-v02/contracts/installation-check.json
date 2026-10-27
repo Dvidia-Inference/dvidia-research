@@ -1,0 +1,35 @@
+{
+  "schema": "dvidia.piper-feedback-installation-check/v1",
+  "kind": "known-confirmation-scene installation check, excluded from the 120-attempt benchmark",
+  "wheel": {
+    "path": "dvidia_training-0.1.0-py3-none-any.whl",
+    "bytes": 5250154,
+    "sha256": "4af950dfa1a1498e2a5bcc5a1f4c2c5d471e1b5db07545902ca9efd05240fe9e"
+  },
+  "source_parity_files": 177,
+  "installed_package": "dvidia-training 0.1.0, Python 3.12, NumPy 2.5.3, MuJoCo 3.15.0",
+  "working_directory": "outside source checkout",
+  "architecture": "learned_absolute_jaw_over_frozen_six_joint_path",
+  "valid": true,
+  "success": true,
+  "case": {
+    "id": "installed-feedback-goal0-nominal",
+    "start_xy": [
+      0.286,
+      -0.031
+    ],
+    "goal_xy": [
+      0.35,
+      0.08
+    ],
+    "seed": 271517,
+    "condition": "nominal",
+    "pulses": []
+  },
+  "install_manifest_sha256": "bae22d10bab2e341fafceeeb1e60d33525a266d4573257b0e570681ab7e05628",
+  "complete_evidence": {
+    "path": "installation-smoke.zip",
+    "bytes": 5602814,
+    "sha256": "eea9ea33422a932bfff8aa5a5e9754a406b5b17e0c930e96850dc484ac7e4710"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "dvidia.piper-feedback-score/v1",
+  "valid": true,
+  "success": true,
+  "reason": "success",
+  "strict_v01": {
+    "success": true,
+    "reason": "success",
+    "reference_xy_m": [
+      0.4,
+      -0.08
+    ],
+    "terminal_reference_success": true,
+    "native_outcome_success": true,
+    "native_outcome_valid": true,
+    "terminal_dwell_s": 4.879999999999999,
+    "required_dwell_s": 0.25,
+    "terminal_xy_error_m": 0.013308950925830992,
+    "trace_lift_dwell_s": 1.58,
+    "required_lift_dwell_s": 0.1,
+    "sample_interval_s": 0.02,
+    "trajectory_complete": true,
+    "native_metrics_source": "simulator-authored episode record; not authenticated sensor input"
+  },
+  "native_recomputed": {
+    "success": true,
+    "lift_seen": true,
+    "grasp_seen": true,
+    "carry_complete": true,
+    "retention_lost": false,
+    "unexpected_contact_native_ticks": 0,
+    "max_object_lift_m": 0.07973378306957904,
+    "max_pad_normal_force_n": 1.3824885681251773,
+    "dwell_seconds": 4.891999999999968,
+    "lift_dwell_seconds": 0.0,
+    "max_carry_contact_loss_seconds": 0.0,
+    "carry_contact_loss_events": 0,
+    "first_success_time_seconds": 15.357999999996927
+  },
+  "native_metrics_mismatches": [],
+  "terminal_only": {
+    "success": true,
+    "dwell_s": 4.892,
+    "terminal_xy_error_m": 0.013308950925830992,
+    "scope": "Terminal-only geometry/release/settling/dwell; excludes lift, carry and retention history."
+  },
+  "grip_events": [],
+  "grip_summary": {
+    "loss_events": 0,
+    "restored_events": 0,
+    "unresolved_events": 0,
+    "supported_events": 0,
+    "airborne_events": 0,
+    "qualification_latency_s": []
+  },
+  "native_diagnostics": {
+    "premature_open_jaw": {
+      "count": 0,
+      "total_s": 0.0,
+      "maximum_s": 0.0,
+      "intervals": []
+    },
+    "support_touchdown_before_destination": {
+      "count": 0,
+      "total_s": 0.0,
+      "maximum_s": 0.0,
+      "intervals": []
+    }
+  },
+  "false_alarms": {
+    "status": "not_applicable",
+    "reason": "Continuous residual policy has no declared discrete alarm events."
+  },
+  "evidence_scope": "Recomputed simulator-authored numeric evidence; no physics rerun, source attestation or hardware sensing.",
+  "restoration_scope": "Loaded contact restored for 100 ms after sustained loss; does not establish task recovery or airborne regrasp."
+}

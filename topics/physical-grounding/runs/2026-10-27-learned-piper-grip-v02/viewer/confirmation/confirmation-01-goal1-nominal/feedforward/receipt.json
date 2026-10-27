@@ -1,0 +1,51 @@
+{
+  "files": {
+    "episode.json.gz": "9198180445bc67d010b170c7a58362b522ad92cb6a523c9757599f099b4815b8",
+    "native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+    "native.npz": "b02fc71d7ed21f22d9db521e15db060a9a8706e753535124253cd445e12a2de4",
+    "score.json": "82ebe0ed4eff0346e1a3f0c824cf04d32e7e23a68883ea8e95245fc71ca0204c",
+    "started.json": "4c204ce9e0927cb21cc06b7c5c0639a0349b67632d19baa5abc86e26b140e02d"
+  },
+  "case_id": "confirmation-01-goal1-nominal",
+  "variant": "feedforward",
+  "binding": {
+    "case": {
+      "id": "confirmation-01-goal1-nominal",
+      "start_xy": [
+        0.292,
+        -0.017
+      ],
+      "goal_xy": [
+        0.4,
+        -0.08
+      ],
+      "seed": 271003,
+      "condition": "nominal",
+      "pulses": []
+    },
+    "variant": "feedforward",
+    "collect_labels": false,
+    "expert_probability": 1.0,
+    "protocol_sha256": "c35622d4ddc7e6868fd609a5665e931d45788345cd9ed2238fbb9ebac5b24fc9",
+    "base_model_raw_sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded",
+    "base_model_sha256": "524d4c3e45c7708d72e75125420cbdd1d9878568514e32464fea31de21a1bd01",
+    "model_raw_sha256": null,
+    "model_sha256": null,
+    "runtime_sha256": {
+      "piper_learned_grip_benchmark.py": "fc2fb376507bb0036aa1ed300f9f07f4a4bcdc55eacf7e7e1798fdce1af8db9b",
+      "piper_grip_adapter.py": "e9c480ca6ebd21d4e00b4f4136f623dd9b7cda402dc8ec9669fb4982267e0aa7",
+      "piper_feedback_benchmark.py": "76fd214eb5033019b42c034e7c504c1610cca7e9a924edeb9f84d52ad29aa264",
+      "piper_feedback_model.py": "b0cdaa4e9adc302649eab9365f619a8825f05f2d752688245a6b7b7f8a665845",
+      "piper_feedback_env.py": "0dbae423231968a81bdeed52226d8dffaf8df622013ed3a360d7217148f1bcac",
+      "piper_feedback_score.py": "863a272828208c631de4cf57647e973eb3e4f5e99eb7a1eacb4eaa68dc42eb0e",
+      "piper_motor_primitive.py": "02a45b88913db6f223e4d9975eac64d4942a92739c5817c6ede4cc9fa332ed1c",
+      "piper_imitation.py": "849f66512c58441a240cd20230fcc58691234ddd254c5bbcbfd76abc21b14868",
+      "piper_imitation_score.py": "0cd4663abfdd7f14f2f33d93e9a2bd45122b998d6160d45b8afcc880512cba2b",
+      "piper_task.py": "e66a44a8df4e7a8ee42e4f3866f889f8797cdfb8e2688a146e09b75d2c76664f",
+      "reference_task.py": "bbc768ccc202b8dd41cbd235b206e6478806ce47c1f30ae15dc662c0c1edcc3e",
+      "reference_sim.py": "c1201d22eb13dd07a236ee63cc4ba68e129f6067e8db61ed41af2d820eb5e3b8",
+      "robot_profiles.py": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d",
+      "robot_profiles.lock.json": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe"
+    }
+  }
+}

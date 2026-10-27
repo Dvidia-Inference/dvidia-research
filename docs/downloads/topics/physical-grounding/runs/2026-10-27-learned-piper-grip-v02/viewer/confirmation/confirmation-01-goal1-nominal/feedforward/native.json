@@ -1,0 +1,695 @@
+{
+  "schema": "dvidia.piper-feedback-native/v1",
+  "scope": "Read-only native simulator sidecar; not policy observations or authenticated hardware sensing.",
+  "sample_timing": "Post-physics/post-scoring native ticks; schedule uses the pre-step tick and half-open [start,end) intervals.",
+  "native_timestep_s": 0.001,
+  "rows": 20000,
+  "fields": [
+    {
+      "name": "t_seconds",
+      "width": 1
+    },
+    {
+      "name": "native_tick",
+      "width": 1
+    },
+    {
+      "name": "object_position_m",
+      "width": 3
+    },
+    {
+      "name": "object_quaternion_wxyz",
+      "width": 4
+    },
+    {
+      "name": "object_linear_velocity_m_s",
+      "width": 3
+    },
+    {
+      "name": "object_angular_velocity_rad_s",
+      "width": 3
+    },
+    {
+      "name": "tcp_position_m",
+      "width": 3
+    },
+    {
+      "name": "tcp_quaternion_wxyz",
+      "width": 4
+    },
+    {
+      "name": "object_minus_tcp_local_m",
+      "width": 3
+    },
+    {
+      "name": "grasp_contact_counts",
+      "width": 2
+    },
+    {
+      "name": "pad_normal_forces_n",
+      "width": 2
+    },
+    {
+      "name": "table_object_contact_count",
+      "width": 1
+    },
+    {
+      "name": "unexpected_contact_count",
+      "width": 1
+    },
+    {
+      "name": "gripper_joint_position_m",
+      "width": 2
+    },
+    {
+      "name": "joint_position_rad",
+      "width": 6
+    },
+    {
+      "name": "arm_actuator_controls_rad",
+      "width": 6
+    },
+    {
+      "name": "requested_jaw_target_m",
+      "width": 1
+    },
+    {
+      "name": "normal_rate_limited_jaw_target_m",
+      "width": 1
+    },
+    {
+      "name": "applied_jaw_target_m",
+      "width": 1
+    },
+    {
+      "name": "pulse_active",
+      "width": 1
+    },
+    {
+      "name": "pulse_minimum_opening_m",
+      "width": 1
+    },
+    {
+      "name": "pulse_closing_tail",
+      "width": 1
+    }
+  ],
+  "side_order": [
+    "left",
+    "right"
+  ],
+  "joint_order": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6"
+  ],
+  "jaw_order": [
+    "joint7",
+    "joint8"
+  ],
+  "pulses": [],
+  "pulse_tick_schedule": [],
+  "pulse_actuation": "Applied jaw target=max(normal rate-limited target,pulse floor), additionally slew limited in both directions at the unchanged jaw target rate. A closing tail can outlast its scheduled pulse.",
+  "jaw_target_rate_m_s": 0.05,
+  "contact_names": {
+    "geoms": [
+      {
+        "geom_id": 0,
+        "geom_name": "task_floor",
+        "body_id": 0,
+        "body_name": "world"
+      },
+      {
+        "geom_id": 1,
+        "geom_name": "task_table",
+        "body_id": 0,
+        "body_name": "world"
+      },
+      {
+        "geom_id": 2,
+        "geom_name": null,
+        "body_id": 1,
+        "body_name": "base_link"
+      },
+      {
+        "geom_id": 3,
+        "geom_name": null,
+        "body_id": 1,
+        "body_name": "base_link"
+      },
+      {
+        "geom_id": 4,
+        "geom_name": null,
+        "body_id": 2,
+        "body_name": "link1"
+      },
+      {
+        "geom_id": 5,
+        "geom_name": null,
+        "body_id": 2,
+        "body_name": "link1"
+      },
+      {
+        "geom_id": 6,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 7,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 8,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 9,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 10,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 11,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 12,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 13,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 14,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 15,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 16,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 17,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 18,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 19,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 20,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 21,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 22,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 23,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 24,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 25,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 26,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 27,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 28,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 29,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 30,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 31,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 32,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 33,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 34,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 35,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 36,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 37,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 38,
+        "geom_name": null,
+        "body_id": 3,
+        "body_name": "link2"
+      },
+      {
+        "geom_id": 39,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 40,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 41,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 42,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 43,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 44,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 45,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 46,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 47,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 48,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 49,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 50,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 51,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 52,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 53,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 54,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 55,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 56,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 57,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 58,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 59,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 60,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 61,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 62,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 63,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 64,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 65,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 66,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 67,
+        "geom_name": null,
+        "body_id": 4,
+        "body_name": "link3"
+      },
+      {
+        "geom_id": 68,
+        "geom_name": null,
+        "body_id": 5,
+        "body_name": "link4"
+      },
+      {
+        "geom_id": 69,
+        "geom_name": null,
+        "body_id": 5,
+        "body_name": "link4"
+      },
+      {
+        "geom_id": 70,
+        "geom_name": null,
+        "body_id": 5,
+        "body_name": "link4"
+      },
+      {
+        "geom_id": 71,
+        "geom_name": null,
+        "body_id": 5,
+        "body_name": "link4"
+      },
+      {
+        "geom_id": 72,
+        "geom_name": null,
+        "body_id": 5,
+        "body_name": "link4"
+      },
+      {
+        "geom_id": 73,
+        "geom_name": null,
+        "body_id": 5,
+        "body_name": "link4"
+      },
+      {
+        "geom_id": 74,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 75,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 76,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 77,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 78,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 79,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 80,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 81,
+        "geom_name": null,
+        "body_id": 6,
+        "body_name": "link5"
+      },
+      {
+        "geom_id": 82,
+        "geom_name": null,
+        "body_id": 7,
+        "body_name": "link6"
+      },
+      {
+        "geom_id": 83,
+        "geom_name": null,
+        "body_id": 7,
+        "body_name": "link6"
+      },
+      {
+        "geom_id": 84,
+        "geom_name": null,
+        "body_id": 8,
+        "body_name": "link7"
+      },
+      {
+        "geom_id": 85,
+        "geom_name": null,
+        "body_id": 8,
+        "body_name": "link7"
+      },
+      {
+        "geom_id": 86,
+        "geom_name": null,
+        "body_id": 8,
+        "body_name": "link7"
+      },
+      {
+        "geom_id": 87,
+        "geom_name": null,
+        "body_id": 9,
+        "body_name": "link8"
+      },
+      {
+        "geom_id": 88,
+        "geom_name": null,
+        "body_id": 9,
+        "body_name": "link8"
+      },
+      {
+        "geom_id": 89,
+        "geom_name": null,
+        "body_id": 9,
+        "body_name": "link8"
+      },
+      {
+        "geom_id": 90,
+        "geom_name": "task_block_geom",
+        "body_id": 10,
+        "body_name": "task_block"
+      },
+      {
+        "geom_id": 91,
+        "geom_name": "task_target",
+        "body_id": 11,
+        "body_name": "task_target_frame"
+      }
+    ],
+    "pad_geom_ids": {
+      "left": [
+        85,
+        86
+      ],
+      "right": [
+        88,
+        89
+      ]
+    },
+    "block_geom_id": 90,
+    "table_geom_id": 1,
+    "floor_geom_id": 0
+  },
+  "unchanged": [
+    "six arm actuator targets",
+    "native gains and force caps",
+    "physics and contacts",
+    "native success/retention scoring",
+    "policy observation fields"
+  ],
+  "recovery_policy": null,
+  "physical_robot_ready": false
+}

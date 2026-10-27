@@ -1,0 +1,99 @@
+{
+  "schema": "dvidia.piper-learned-grip-skill/v0.2",
+  "publisher": "DVIDIA",
+  "version": "0.2",
+  "physical_robot_ready": false,
+  "kind": "simulation research jaw adapter over frozen six-axis arm path",
+  "source_commit": "296ac0b509e924fe6e0c136b4a73c449b432ba9d",
+  "robot": "agilex_piper",
+  "robot_assets_commit": "0059d4335f8156206f63a35662313385f7ad6d74",
+  "actuators": {
+    "arm_joint_targets": 6,
+    "arm_units": "radians",
+    "jaw_commands": 1,
+    "jaw_units": "single-finger slide target metres, [0,.035], not full gap"
+  },
+  "control_dt_s": 0.02,
+  "native_dt_s": 0.001,
+  "engine": "MuJoCo 3.15.0 CPU",
+  "inputs": "privileged causal 56-feature grip/context measurements, no camera or human-video learning",
+  "teacher_at_student_inference": false,
+  "models": {
+    "base": {
+      "path": "base-model.json",
+      "sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded"
+    },
+    "feedback": {
+      "path": "candidates/jaw4/model.json",
+      "sha256": "cc2ffa5ab78a7501a175d385aa4ace65df284b5e9eae5ce9536f7b124065c9fe"
+    },
+    "blind": {
+      "path": "candidates/blind4/model.json",
+      "sha256": "31e49a6206d1c1e4dcc61cefd3a44d0eac09a24020c8a2e952f7d410b91f49a0"
+    }
+  },
+  "wheel": {
+    "path": "contracts/dvidia_training-0.1.0-py3-none-any.whl",
+    "sha256": "4af950dfa1a1498e2a5bcc5a1f4c2c5d471e1b5db07545902ca9efd05240fe9e"
+  },
+  "scope": {
+    "block_mass_kg": 0.04,
+    "friction": 0.8,
+    "start_x_m": [
+      0.284,
+      0.314
+    ],
+    "start_y_m": [
+      -0.045,
+      -0.015
+    ],
+    "trained_goals_xy_m": [
+      [
+        0.35,
+        0.08
+      ],
+      [
+        0.4,
+        -0.08
+      ]
+    ]
+  },
+  "confirmation": {
+    "feedback": {
+      "scheduled": 24,
+      "successes": 6,
+      "valid": 24
+    },
+    "blind": {
+      "scheduled": 24,
+      "successes": 8,
+      "valid": 24
+    },
+    "feedforward": {
+      "scheduled": 24,
+      "successes": 5,
+      "valid": 24
+    },
+    "teacher": {
+      "scheduled": 24,
+      "successes": 24,
+      "valid": 24
+    },
+    "open_jaw": {
+      "scheduled": 24,
+      "successes": 0,
+      "valid": 24
+    }
+  },
+  "limitations": [
+    "Synthetic authored-expert jaw labels and privileged simulator sensing; not human video or hardware.",
+    "Only the jaw is controlled by the new learned adapter; all six arm commands remain the frozen v0.1 primitive.",
+    "Same rigid 40 g block, two trained destinations and narrow starting region as v0.1.",
+    "Development starts were reused after five full-residual candidates each failed all 16 development cases.",
+    "Interventions affect acquisition; airborne regrasp and general slip recovery are not established.",
+    "Native servos, joint/jaw caps and gravity compensation remain authored.",
+    "Timing excludes sensing, network transport and physical actuators; no hard real-time guarantee."
+  ],
+  "frozen_sha256": "b49c20ec464581a3bd3bfea5b6962ae4fe219966fbf998fbdc2c0774d8d042ca",
+  "audit_sha256": "029bb4e3eb39afe2f1933a7935842dacf2f27f2e204ecf985a7ba3e988576366"
+}

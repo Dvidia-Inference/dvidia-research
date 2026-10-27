@@ -12,6 +12,11 @@ const DOCS = resolve(ROOT, "docs");
 const TOPICS = ["capture-quality", "skill-relations", "evaluation-provenance", "physical-grounding"];
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const READERS = {
+  "learned-piper-grip-v02": {
+    eyebrow: "Learned grip feedback · Frozen simulation study", deck: "Keep the arm references. Measure the grip.",
+    entry: "downloads/topics/physical-grounding/runs/2026-10-27-learned-piper-grip-v02/viewer/index.html",
+    action: "Inspect the paired grip attempts"
+  },
   "learned-piper-placement-v01": {
     eyebrow: "Learning from demonstrations · Frozen simulation study", deck: "Learn the motion. Measure the whole task.",
     entry: "downloads/topics/physical-grounding/runs/2026-10-27-piper-imitation-v01/viewer/index.html",

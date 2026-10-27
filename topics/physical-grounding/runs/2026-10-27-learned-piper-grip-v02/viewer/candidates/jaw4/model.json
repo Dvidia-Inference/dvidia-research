@@ -1,0 +1,704 @@
+{
+  "arm_command_contract": "original MotorPrimitivePolicy six joint targets unchanged",
+  "base_sha256": "524d4c3e45c7708d72e75125420cbdd1d9878568514e32464fea31de21a1bd01",
+  "blind": false,
+  "feature_contract": "grip56-context-current-lag40-lag120-no-joint-control/v1",
+  "feature_names": [
+    "reset_object_x_m/.5",
+    "reset_object_y_m/.5",
+    "fixed_goal_x_m/.5",
+    "fixed_goal_y_m/.5",
+    "elapsed_seconds/20",
+    "frozen_nominal_jaw_m/.035",
+    "lag40_actual_age_s/.12",
+    "lag120_actual_age_s/.12",
+    "current:object_minus_tcp_x_m/.05",
+    "current:object_minus_tcp_y_m/.05",
+    "current:object_minus_tcp_z_m/.05",
+    "current:target_minus_object_x_m/.2",
+    "current:target_minus_object_y_m/.2",
+    "current:target_minus_object_z_m/.2",
+    "current:object_linear_velocity_x_m_s/.2",
+    "current:object_linear_velocity_y_m_s/.2",
+    "current:object_linear_velocity_z_m_s/.2",
+    "current:jaw_left_m/.035",
+    "current:jaw_right_m/.035",
+    "current:log1p_left_force_n/3",
+    "current:log1p_right_force_n/3",
+    "current:left_finger_contacts/2",
+    "current:right_finger_contacts/2",
+    "current:table_contacts/2",
+    "lag40:object_minus_tcp_x_m/.05",
+    "lag40:object_minus_tcp_y_m/.05",
+    "lag40:object_minus_tcp_z_m/.05",
+    "lag40:target_minus_object_x_m/.2",
+    "lag40:target_minus_object_y_m/.2",
+    "lag40:target_minus_object_z_m/.2",
+    "lag40:object_linear_velocity_x_m_s/.2",
+    "lag40:object_linear_velocity_y_m_s/.2",
+    "lag40:object_linear_velocity_z_m_s/.2",
+    "lag40:jaw_left_m/.035",
+    "lag40:jaw_right_m/.035",
+    "lag40:log1p_left_force_n/3",
+    "lag40:log1p_right_force_n/3",
+    "lag40:left_finger_contacts/2",
+    "lag40:right_finger_contacts/2",
+    "lag40:table_contacts/2",
+    "lag120:object_minus_tcp_x_m/.05",
+    "lag120:object_minus_tcp_y_m/.05",
+    "lag120:object_minus_tcp_z_m/.05",
+    "lag120:target_minus_object_x_m/.2",
+    "lag120:target_minus_object_y_m/.2",
+    "lag120:target_minus_object_z_m/.2",
+    "lag120:object_linear_velocity_x_m_s/.2",
+    "lag120:object_linear_velocity_y_m_s/.2",
+    "lag120:object_linear_velocity_z_m_s/.2",
+    "lag120:jaw_left_m/.035",
+    "lag120:jaw_right_m/.035",
+    "lag120:log1p_left_force_n/3",
+    "lag120:log1p_right_force_n/3",
+    "lag120:left_finger_contacts/2",
+    "lag120:right_finger_contacts/2",
+    "lag120:table_contacts/2"
+  ],
+  "jaw_classes_m": [
+    0.0,
+    0.035
+  ],
+  "nodes": [
+    {
+      "feature": 5,
+      "left": 1,
+      "open_probability": 0.5472585495489195,
+      "right": 12,
+      "samples": 64000,
+      "threshold": 0.7829212543326245,
+      "weight_sum": 114392.0
+    },
+    {
+      "feature": 10,
+      "left": 2,
+      "open_probability": 0.008488896041197297,
+      "right": 9,
+      "samples": 10000,
+      "threshold": -0.03860040430526057,
+      "weight_sum": 49712.0
+    },
+    {
+      "feature": 17,
+      "left": 3,
+      "open_probability": 0.0018069661661162689,
+      "right": 6,
+      "samples": 9687,
+      "threshold": 0.975692620145751,
+      "weight_sum": 48147.0
+    },
+    {
+      "feature": 13,
+      "left": 4,
+      "open_probability": 0.00031959092361776926,
+      "right": 5,
+      "samples": 9387,
+      "threshold": 0.000538777101081675,
+      "weight_sum": 46935.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.0,
+      "right": -1,
+      "samples": 9161,
+      "threshold": 0.0,
+      "weight_sum": 45805.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.01327433628318584,
+      "right": -1,
+      "samples": 226,
+      "threshold": 0.0,
+      "weight_sum": 1130.0
+    },
+    {
+      "feature": 8,
+      "left": 7,
+      "open_probability": 0.0594059405940594,
+      "right": 8,
+      "samples": 300,
+      "threshold": -0.07834379745305986,
+      "weight_sum": 1212.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 1.0,
+      "right": -1,
+      "samples": 68,
+      "threshold": 0.0,
+      "weight_sum": 68.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.0034965034965034965,
+      "right": -1,
+      "samples": 232,
+      "threshold": 0.0,
+      "weight_sum": 1144.0
+    },
+    {
+      "feature": 52,
+      "left": 10,
+      "open_probability": 0.21405750798722045,
+      "right": 11,
+      "samples": 313,
+      "threshold": 0.10815390553745509,
+      "weight_sum": 1565.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.0,
+      "right": -1,
+      "samples": 244,
+      "threshold": 0.0,
+      "weight_sum": 1220.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.9710144927536232,
+      "right": -1,
+      "samples": 69,
+      "threshold": 0.0,
+      "weight_sum": 345.0
+    },
+    {
+      "feature": 55,
+      "left": 13,
+      "open_probability": 0.96134817563389,
+      "right": 18,
+      "samples": 54000,
+      "threshold": 0.25,
+      "weight_sum": 64680.0
+    },
+    {
+      "feature": 10,
+      "left": 14,
+      "open_probability": 0.41815856777493604,
+      "right": 15,
+      "samples": 782,
+      "threshold": -0.11407319466087246,
+      "weight_sum": 3910.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.0,
+      "right": -1,
+      "samples": 440,
+      "threshold": 0.0,
+      "weight_sum": 2200.0
+    },
+    {
+      "feature": 42,
+      "left": 16,
+      "open_probability": 0.956140350877193,
+      "right": 17,
+      "samples": 342,
+      "threshold": -0.04920301732430925,
+      "weight_sum": 1710.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.765625,
+      "right": -1,
+      "samples": 64,
+      "threshold": 0.0,
+      "weight_sum": 320.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 1.0,
+      "right": -1,
+      "samples": 278,
+      "threshold": 0.0,
+      "weight_sum": 1390.0
+    },
+    {
+      "feature": 5,
+      "left": 19,
+      "open_probability": 0.9962975152213263,
+      "right": 22,
+      "samples": 53218,
+      "threshold": 0.9941788668343675,
+      "weight_sum": 60770.0
+    },
+    {
+      "feature": 33,
+      "left": 20,
+      "open_probability": 0.9551569506726457,
+      "right": 21,
+      "samples": 1664,
+      "threshold": 0.9999978374586744,
+      "weight_sum": 3568.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.9819927971188476,
+      "right": -1,
+      "samples": 1508,
+      "threshold": 0.0,
+      "weight_sum": 3332.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.576271186440678,
+      "right": -1,
+      "samples": 156,
+      "threshold": 0.0,
+      "weight_sum": 236.0
+    },
+    {
+      "feature": 55,
+      "left": 23,
+      "open_probability": 0.9988636760952414,
+      "right": 24,
+      "samples": 51554,
+      "threshold": 0.75,
+      "weight_sum": 57202.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.9708029197080292,
+      "right": -1,
+      "samples": 274,
+      "threshold": 0.0,
+      "weight_sum": 1370.0
+    },
+    {
+      "feature": -1,
+      "left": -1,
+      "open_probability": 0.9995522281129101,
+      "right": -1,
+      "samples": 51280,
+      "threshold": 0.0,
+      "weight_sum": 55832.0
+    }
+  ],
+  "physical_robot_ready": false,
+  "schema": "dvidia.piper-learned-grip-adapter/v1",
+  "scope": "New simulation-only learned absolute-jaw adapter, preserving frozen v0.1 arm commands exactly. Synthetic authored-expert labels and privileged causal grip measurements. Requires a new protocol and fresh confirmation; no camera or physical robot qualification.",
+  "training": {
+    "algorithm": "numpy-weighted-binned-binary-cart",
+    "brier_mse": 0.0023278422252574044,
+    "classification_error": 0.001078125,
+    "dataset_sha256": "9407b915158222655b0f051a6c5edc8e4d6227a65659b3ef630577b4d816f6c3",
+    "jaw_mae_m": 3.773437500000001e-05,
+    "max_bins": 31,
+    "max_depth": 4,
+    "min_leaf": 64,
+    "parent_artifacts": {
+      "base_model_raw_sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded",
+      "episodes": [
+        {
+          "case_id": "train-00-goal0-nominal",
+          "episode_sha256": "66455516b626a65a79dc8eed94ef883121f9fdff2a447e6c0fae9431e8cad6e3",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-00-goal0-jaw_interruption",
+          "episode_sha256": "ed0f2fd9b5664915ace250e09b0cdddbb48104f50d2b38bc4bdd8c102411e2a2",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-00-goal1-nominal",
+          "episode_sha256": "9b80bab4fdf78d5a5aca9c8b413d113dd7e88131ae67ed4ceb8098adb159dfe0",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-00-goal1-jaw_interruption",
+          "episode_sha256": "7f8426da67dbe6163abb2d48e2be885e4b4d3e94b83a0adb6d93c765bc6014e0",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-01-goal0-nominal",
+          "episode_sha256": "4aad719103573148ce00e6d2d85cbd5f9f9fdf773a27153a31a122384736286e",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-01-goal0-jaw_interruption",
+          "episode_sha256": "fa242ad07eded7f6b1d88b49955a922e95db2fbd0bbe5a65e687a1c1e0152734",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-01-goal1-nominal",
+          "episode_sha256": "1e13954390ea3c9b831ca555de86ee8845e6f1e5ce713498937345cd5a4253a5",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-01-goal1-jaw_interruption",
+          "episode_sha256": "ab964bc640a39e23626d12fc67c1e12cb12f1e4ddc33269d84039165b495572d",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-02-goal0-nominal",
+          "episode_sha256": "dd0a489ade9375601ca4d0232cccdd348371f5d7dc1eb408320856bcc4e193d1",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-02-goal0-jaw_interruption",
+          "episode_sha256": "2c4901f031b912ad2eeaeef8bced48fb0b83000d365a2a1468a1844296c61828",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-02-goal1-nominal",
+          "episode_sha256": "406d5f155844de78ff2927724f6853330bef3eaf9cea001afe8a56f8d27306b4",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-02-goal1-jaw_interruption",
+          "episode_sha256": "b0dc5836e5cf4fdb89af93cffc7e87505b5c0f6ce7c61951a83efd8f41b25c47",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-03-goal0-nominal",
+          "episode_sha256": "3f50ed0b245237c0fa47a2cbe2bec1cb167e36cb9877c0cd616d4e9141a6e363",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-03-goal0-jaw_interruption",
+          "episode_sha256": "6f9cad0dbde10d0151888261d27b213a5bc0b5e4cc067b3578e9c33db0afe1d1",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-03-goal1-nominal",
+          "episode_sha256": "d64a71e493a7182a8cba92b107f30939bac194b894465fa9bcd6fadcc96b914c",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-03-goal1-jaw_interruption",
+          "episode_sha256": "a1c1191cc2894af14c6dad925081f89e42599b40c185d590f3dc004cea478683",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-04-goal0-nominal",
+          "episode_sha256": "8ffbb41f52f2e5b2cc1daa5b58782437c70d657b222a803140a31b3ee39b4892",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-04-goal0-jaw_interruption",
+          "episode_sha256": "81cbebd0d6176d8fa8dea578c264019222927450027404bffea5c827503d040a",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-04-goal1-nominal",
+          "episode_sha256": "b9da7f08e7b6dc7e66556d565ceb621018ae486a5d304dc4ca3a1b49cd564d79",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-04-goal1-jaw_interruption",
+          "episode_sha256": "b33c3a344131d673b6e315657ff7b39b11f388d9a183b8209cc9ebeaf9530f9f",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-05-goal0-nominal",
+          "episode_sha256": "6734a07169e6716f124e61ee79a95d357e15caa340c1dc4eeb1f7cc93e35cf20",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-05-goal0-jaw_interruption",
+          "episode_sha256": "1ad770c79fc5b20696e9780df154f028fb2fdccea802a0cb58d82f9695993405",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-05-goal1-nominal",
+          "episode_sha256": "6178234c07077811dd7363e5ecedb8c92ce9985ce88f53c9753bb2feacfd8623",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-05-goal1-jaw_interruption",
+          "episode_sha256": "8f52c5e951fb6c1b8f41c898e39007703eb6afff53319ab1fd746d056fe0a0db",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-06-goal0-nominal",
+          "episode_sha256": "9b00e3af8772bf8b04da36c04130352590f6030b38826bfc6ab9a08934bbc291",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-06-goal0-jaw_interruption",
+          "episode_sha256": "0f1bc700b2e34fe0d0d29ad7cc1daefd569d68621d7f8a40bd279b5832380957",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-06-goal1-nominal",
+          "episode_sha256": "7bebb5b0768f531b1f7b50bd225cf2d387f47445da8ba77481d3a6fdec019a63",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-06-goal1-jaw_interruption",
+          "episode_sha256": "e1b50a71d32011c9e25f42c54f2b58a87294de8454c65fa111259c455dfb5875",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-07-goal0-nominal",
+          "episode_sha256": "fdbfdd5ee192528742cb5b76f84958f4f5be3f28457547aba7067a458a2da20f",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-07-goal0-jaw_interruption",
+          "episode_sha256": "736e19b5a58e7a13ac9a526004b36d2d861ab870f2a7ce9f417a99128642cbc4",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-07-goal1-nominal",
+          "episode_sha256": "a57be0fd1a5c8a49e1ab4aad17f41ed261a16c6ab2a5775fbf0b387022bca693",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-07-goal1-jaw_interruption",
+          "episode_sha256": "19be50748d3daaac7414cd52abdcf7b3b14558f3b2b991c8ac1266012595dfad",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-08-goal0-nominal",
+          "episode_sha256": "77cbc69a94044100b63e2096f45c588cdf8ab54e60949257ff478288869bcca3",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-08-goal0-jaw_interruption",
+          "episode_sha256": "3b3eb39ac74f757384ab28acb15110d34f63a48ad3f06ab3d1cbd659bfafdf19",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-08-goal1-nominal",
+          "episode_sha256": "1c3e1d3198ce1d584209d98459038733b68afae92215ae013fa14ea5ce7b599a",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-08-goal1-jaw_interruption",
+          "episode_sha256": "e730a483fb7f8a42b9fb5f0085fcf8a400419c8088ceeedea434f85b6901b909",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-09-goal0-nominal",
+          "episode_sha256": "4a7cf07cc8a3e06508505e9af09908a6079d10c8a0234324eefa0360739b982d",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-09-goal0-jaw_interruption",
+          "episode_sha256": "e7c9311baa230e2293ab19c68c561736fb8b5352ee67b34dbf3ad1c30cb18543",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-09-goal1-nominal",
+          "episode_sha256": "e9fae38c5c8405ce45a6c3eeedfbc106a31afb038234f13a128b8696166b68e6",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-09-goal1-jaw_interruption",
+          "episode_sha256": "9130665f44ec02436ef47e83bc51b7fcd76781b1886a3893c8c754bc883eb351",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-10-goal0-nominal",
+          "episode_sha256": "3f711f9fb8ca4bba2bcfaec1af79055f0f8bccd4a86b41aa2bffef5d22180d86",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-10-goal0-jaw_interruption",
+          "episode_sha256": "2b7a84ba81333b88761ec1688f7b1e6000d722de6637423c1b538f282e58fc63",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-10-goal1-nominal",
+          "episode_sha256": "49db7ea1021edd00a38cd5e64037806d562345557b79004e32ae7110317e1e0e",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-10-goal1-jaw_interruption",
+          "episode_sha256": "0e25cb3759c89749ab471a1dc2bbe08a53949fd52e6d000a9e9817c90cbbfcfa",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-11-goal0-nominal",
+          "episode_sha256": "5cd3218f95b2c3d8a0ee885cd9371176653b804903e2dd5eefce09615012d94c",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-11-goal0-jaw_interruption",
+          "episode_sha256": "ffc50ce657f4e0ef80fefe85c3099dc82309156c6747e5f3e514e152cc975b70",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-11-goal1-nominal",
+          "episode_sha256": "0f2e42bfcdba71288770b0158df38c15b83ff5f53d3e1fd1a93d06d9ae93dd97",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-11-goal1-jaw_interruption",
+          "episode_sha256": "54332fa5e4d492bee520db0327917d29edf907ded1ea9ce35160ecb0e71bd0d4",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-12-goal0-nominal",
+          "episode_sha256": "392357bde891ca55b7e53c9ce930b86557f94aa0b75234282a46932d1bdf3d16",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-12-goal0-jaw_interruption",
+          "episode_sha256": "e85dfafbc9352e21c1bf6d4bfca44a4713722adf71acfdc3e8c9b0d66285990d",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-12-goal1-nominal",
+          "episode_sha256": "d531ae1ddffa335668941560a4b0c0a2a15de777167e60bc206a8787304c2893",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-12-goal1-jaw_interruption",
+          "episode_sha256": "7932aa16278f4b69de4d0e7d2683288bbf3cb782ca5785145a2bdf5f547178ee",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-13-goal0-nominal",
+          "episode_sha256": "23f03b7805dde4d7deddb1e80111951f94268300aad1471813fc5e2de288d5d2",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-13-goal0-jaw_interruption",
+          "episode_sha256": "f8076a49cefb94dc706709d9820f9352916d0f5b4e2800ba0bef3957d1ed669a",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-13-goal1-nominal",
+          "episode_sha256": "b478a650f4b855c30d42264097589def0258a35240ff941afe18add09b138eba",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-13-goal1-jaw_interruption",
+          "episode_sha256": "9b0fd563b00df0d05d3b9f5a0f0db66d74585f059f174f0f8afd015b5481a929",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-14-goal0-nominal",
+          "episode_sha256": "88cd010ff22d5b0ac25c0b0c44e0e015f27ffdfc978ee1714aeebe35160e0bbd",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-14-goal0-jaw_interruption",
+          "episode_sha256": "70b9a8bc456b57a01974dc9d08b994c4063fd780c370da0289ba0232d9a2d0bd",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-14-goal1-nominal",
+          "episode_sha256": "1ff7a9c8ebd6dcb0414b755daed11bd22ff58b1936a4656dcd044f06fbd26acd",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-14-goal1-jaw_interruption",
+          "episode_sha256": "71c8f724eed55fee13204097fc3537e719d23e48afeacda340b77481b267e172",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-15-goal0-nominal",
+          "episode_sha256": "060ddfacb66127f0a88dad4483d939fb2b756d9804d761c1039d7ae3e7817185",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-15-goal0-jaw_interruption",
+          "episode_sha256": "f2a783ca4db21eba9094e0c54062985b733cea33068c63131bc754b545268864",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-15-goal1-nominal",
+          "episode_sha256": "6c8a1514c4070fdc66d7143232d2c471b008588bbc46840a718c781053d6c5c6",
+          "samples": 1000
+        },
+        {
+          "case_id": "train-15-goal1-jaw_interruption",
+          "episode_sha256": "36e3b9e8fe247a67bb3f7f992aa87d1a0ab53e8600ff4e9599ce9b26a583a0e6",
+          "samples": 1000
+        }
+      ],
+      "protocol_sha256": "9c05b440ca2a84b63361bd5d9aa719a173da472d0aab82ecbda47bc893bb1036"
+    },
+    "sample_count": 64000,
+    "scene_count": 64,
+    "train_groups": [
+      "train-00-goal0-nominal",
+      "train-00-goal0-jaw_interruption",
+      "train-00-goal1-nominal",
+      "train-00-goal1-jaw_interruption",
+      "train-01-goal0-nominal",
+      "train-01-goal0-jaw_interruption",
+      "train-01-goal1-nominal",
+      "train-01-goal1-jaw_interruption",
+      "train-02-goal0-nominal",
+      "train-02-goal0-jaw_interruption",
+      "train-02-goal1-nominal",
+      "train-02-goal1-jaw_interruption",
+      "train-03-goal0-nominal",
+      "train-03-goal0-jaw_interruption",
+      "train-03-goal1-nominal",
+      "train-03-goal1-jaw_interruption",
+      "train-04-goal0-nominal",
+      "train-04-goal0-jaw_interruption",
+      "train-04-goal1-nominal",
+      "train-04-goal1-jaw_interruption",
+      "train-05-goal0-nominal",
+      "train-05-goal0-jaw_interruption",
+      "train-05-goal1-nominal",
+      "train-05-goal1-jaw_interruption",
+      "train-06-goal0-nominal",
+      "train-06-goal0-jaw_interruption",
+      "train-06-goal1-nominal",
+      "train-06-goal1-jaw_interruption",
+      "train-07-goal0-nominal",
+      "train-07-goal0-jaw_interruption",
+      "train-07-goal1-nominal",
+      "train-07-goal1-jaw_interruption",
+      "train-08-goal0-nominal",
+      "train-08-goal0-jaw_interruption",
+      "train-08-goal1-nominal",
+      "train-08-goal1-jaw_interruption",
+      "train-09-goal0-nominal",
+      "train-09-goal0-jaw_interruption",
+      "train-09-goal1-nominal",
+      "train-09-goal1-jaw_interruption",
+      "train-10-goal0-nominal",
+      "train-10-goal0-jaw_interruption",
+      "train-10-goal1-nominal",
+      "train-10-goal1-jaw_interruption",
+      "train-11-goal0-nominal",
+      "train-11-goal0-jaw_interruption",
+      "train-11-goal1-nominal",
+      "train-11-goal1-jaw_interruption",
+      "train-12-goal0-nominal",
+      "train-12-goal0-jaw_interruption",
+      "train-12-goal1-nominal",
+      "train-12-goal1-jaw_interruption",
+      "train-13-goal0-nominal",
+      "train-13-goal0-jaw_interruption",
+      "train-13-goal1-nominal",
+      "train-13-goal1-jaw_interruption",
+      "train-14-goal0-nominal",
+      "train-14-goal0-jaw_interruption",
+      "train-14-goal1-nominal",
+      "train-14-goal1-jaw_interruption",
+      "train-15-goal0-nominal",
+      "train-15-goal0-jaw_interruption",
+      "train-15-goal1-nominal",
+      "train-15-goal1-jaw_interruption"
+    ],
+    "weight_sum": 114392.0,
+    "weighted_classification_error": 0.002876075250017484
+  }
+}

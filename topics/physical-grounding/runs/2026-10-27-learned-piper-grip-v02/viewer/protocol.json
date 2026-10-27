@@ -1,0 +1,1809 @@
+{
+  "schema": "dvidia.piper-feedback-study/v0.2",
+  "base_model_raw_sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded",
+  "cases": {
+    "train": [
+      {
+        "id": "train-00-goal0-nominal",
+        "start_xy": [
+          0.285,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271000,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-00-goal0-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271000,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.2,
+            "end_s": 11.52,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-00-goal1-nominal",
+        "start_xy": [
+          0.285,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271001,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-00-goal1-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271001,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.28,
+            "end_s": 11.68,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-01-goal0-nominal",
+        "start_xy": [
+          0.285,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271002,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-01-goal0-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271002,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.9,
+            "end_s": 11.3,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-01-goal1-nominal",
+        "start_xy": [
+          0.285,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271003,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-01-goal1-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271003,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.82,
+            "end_s": 11.14,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-02-goal0-nominal",
+        "start_xy": [
+          0.285,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271004,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-02-goal0-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271004,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.72,
+            "end_s": 11.04,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-02-goal1-nominal",
+        "start_xy": [
+          0.285,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271005,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-02-goal1-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271005,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.8,
+            "end_s": 11.2,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-03-goal0-nominal",
+        "start_xy": [
+          0.285,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271006,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-03-goal0-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271006,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.4,
+            "end_s": 10.8,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-03-goal1-nominal",
+        "start_xy": [
+          0.285,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271007,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-03-goal1-jaw_interruption",
+        "start_xy": [
+          0.285,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271007,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.32,
+            "end_s": 10.64,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-04-goal0-nominal",
+        "start_xy": [
+          0.295,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271008,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-04-goal0-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271008,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.12,
+            "end_s": 11.44,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-04-goal1-nominal",
+        "start_xy": [
+          0.295,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271009,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-04-goal1-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271009,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.2,
+            "end_s": 11.6,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-05-goal0-nominal",
+        "start_xy": [
+          0.295,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271010,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-05-goal0-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271010,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.9,
+            "end_s": 11.3,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-05-goal1-nominal",
+        "start_xy": [
+          0.295,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271011,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-05-goal1-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271011,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.82,
+            "end_s": 11.14,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-06-goal0-nominal",
+        "start_xy": [
+          0.295,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271012,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-06-goal0-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271012,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.76,
+            "end_s": 11.08,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-06-goal1-nominal",
+        "start_xy": [
+          0.295,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271013,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-06-goal1-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271013,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.84,
+            "end_s": 11.24,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-07-goal0-nominal",
+        "start_xy": [
+          0.295,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271014,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-07-goal0-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271014,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.46,
+            "end_s": 10.86,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-07-goal1-nominal",
+        "start_xy": [
+          0.295,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271015,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-07-goal1-jaw_interruption",
+        "start_xy": [
+          0.295,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271015,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.38,
+            "end_s": 10.7,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-08-goal0-nominal",
+        "start_xy": [
+          0.305,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271016,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-08-goal0-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271016,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.08,
+            "end_s": 11.4,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-08-goal1-nominal",
+        "start_xy": [
+          0.305,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271017,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-08-goal1-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271017,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.16,
+            "end_s": 11.56,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-09-goal0-nominal",
+        "start_xy": [
+          0.305,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271018,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-09-goal0-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271018,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.9,
+            "end_s": 11.3,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-09-goal1-nominal",
+        "start_xy": [
+          0.305,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271019,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-09-goal1-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271019,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.82,
+            "end_s": 11.14,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-10-goal0-nominal",
+        "start_xy": [
+          0.305,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271020,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-10-goal0-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271020,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.76,
+            "end_s": 11.08,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-10-goal1-nominal",
+        "start_xy": [
+          0.305,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271021,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-10-goal1-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271021,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.84,
+            "end_s": 11.24,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-11-goal0-nominal",
+        "start_xy": [
+          0.305,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271022,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-11-goal0-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271022,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.5,
+            "end_s": 10.9,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-11-goal1-nominal",
+        "start_xy": [
+          0.305,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271023,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-11-goal1-jaw_interruption",
+        "start_xy": [
+          0.305,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271023,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.42,
+            "end_s": 10.74,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-12-goal0-nominal",
+        "start_xy": [
+          0.313,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271024,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-12-goal0-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.044
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271024,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.06,
+            "end_s": 11.38,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-12-goal1-nominal",
+        "start_xy": [
+          0.313,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271025,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-12-goal1-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.044
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271025,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.14,
+            "end_s": 11.54,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-13-goal0-nominal",
+        "start_xy": [
+          0.313,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271026,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-13-goal0-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.034
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271026,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.9,
+            "end_s": 11.3,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-13-goal1-nominal",
+        "start_xy": [
+          0.313,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271027,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-13-goal1-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.034
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271027,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.82,
+            "end_s": 11.14,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-14-goal0-nominal",
+        "start_xy": [
+          0.313,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271028,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-14-goal0-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.024
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271028,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.76,
+            "end_s": 11.08,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      },
+      {
+        "id": "train-14-goal1-nominal",
+        "start_xy": [
+          0.313,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271029,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-14-goal1-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.024
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271029,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.84,
+            "end_s": 11.24,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-15-goal0-nominal",
+        "start_xy": [
+          0.313,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271030,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-15-goal0-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.016
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271030,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.54,
+            "end_s": 10.94,
+            "minimum_opening_m": 0.031
+          }
+        ]
+      },
+      {
+        "id": "train-15-goal1-nominal",
+        "start_xy": [
+          0.313,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271031,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "train-15-goal1-jaw_interruption",
+        "start_xy": [
+          0.313,
+          -0.016
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271031,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.46,
+            "end_s": 10.78,
+            "minimum_opening_m": 0.029
+          }
+        ]
+      }
+    ],
+    "development": [
+      {
+        "id": "development-00-goal0-nominal",
+        "start_xy": [
+          0.29,
+          -0.039
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271000,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-00-goal0-jaw_interruption",
+        "start_xy": [
+          0.29,
+          -0.039
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271000,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.46,
+            "end_s": 10.82,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-00-goal1-nominal",
+        "start_xy": [
+          0.29,
+          -0.039
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271001,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-00-goal1-jaw_interruption",
+        "start_xy": [
+          0.29,
+          -0.039
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271001,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.46,
+            "end_s": 10.82,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-01-goal0-nominal",
+        "start_xy": [
+          0.29,
+          -0.019
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271002,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-01-goal0-jaw_interruption",
+        "start_xy": [
+          0.29,
+          -0.019
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271002,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.4,
+            "end_s": 10.76,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-01-goal1-nominal",
+        "start_xy": [
+          0.29,
+          -0.019
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271003,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-01-goal1-jaw_interruption",
+        "start_xy": [
+          0.29,
+          -0.019
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271003,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.4,
+            "end_s": 10.76,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-02-goal0-nominal",
+        "start_xy": [
+          0.31,
+          -0.039
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271004,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-02-goal0-jaw_interruption",
+        "start_xy": [
+          0.31,
+          -0.039
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271004,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.58,
+            "end_s": 10.94,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-02-goal1-nominal",
+        "start_xy": [
+          0.31,
+          -0.039
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271005,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-02-goal1-jaw_interruption",
+        "start_xy": [
+          0.31,
+          -0.039
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271005,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.58,
+            "end_s": 10.94,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-03-goal0-nominal",
+        "start_xy": [
+          0.31,
+          -0.019
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271006,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-03-goal0-jaw_interruption",
+        "start_xy": [
+          0.31,
+          -0.019
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271006,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.48,
+            "end_s": 10.84,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      },
+      {
+        "id": "development-03-goal1-nominal",
+        "start_xy": [
+          0.31,
+          -0.019
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271007,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "development-03-goal1-jaw_interruption",
+        "start_xy": [
+          0.31,
+          -0.019
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271007,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.48,
+            "end_s": 10.84,
+            "minimum_opening_m": 0.03
+          }
+        ]
+      }
+    ],
+    "confirmation": [
+      {
+        "id": "confirmation-00-goal0-nominal",
+        "start_xy": [
+          0.286,
+          -0.031
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271000,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-00-goal0-jaw_interruption",
+        "start_xy": [
+          0.286,
+          -0.031
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271000,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.86,
+            "end_s": 11.24,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-00-goal1-nominal",
+        "start_xy": [
+          0.286,
+          -0.031
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271001,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-00-goal1-jaw_interruption",
+        "start_xy": [
+          0.286,
+          -0.031
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271001,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.86,
+            "end_s": 11.24,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-01-goal0-nominal",
+        "start_xy": [
+          0.292,
+          -0.017
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271002,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-01-goal0-jaw_interruption",
+        "start_xy": [
+          0.292,
+          -0.017
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271002,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.42,
+            "end_s": 10.8,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-01-goal1-nominal",
+        "start_xy": [
+          0.292,
+          -0.017
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271003,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-01-goal1-jaw_interruption",
+        "start_xy": [
+          0.292,
+          -0.017
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271003,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.42,
+            "end_s": 10.8,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-02-goal0-nominal",
+        "start_xy": [
+          0.298,
+          -0.042
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271004,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-02-goal0-jaw_interruption",
+        "start_xy": [
+          0.298,
+          -0.042
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271004,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.5,
+            "end_s": 10.88,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-02-goal1-nominal",
+        "start_xy": [
+          0.298,
+          -0.042
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271005,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-02-goal1-jaw_interruption",
+        "start_xy": [
+          0.298,
+          -0.042
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271005,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.5,
+            "end_s": 10.88,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-03-goal0-nominal",
+        "start_xy": [
+          0.302,
+          -0.027
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271006,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-03-goal0-jaw_interruption",
+        "start_xy": [
+          0.302,
+          -0.027
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271006,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.84,
+            "end_s": 11.22,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-03-goal1-nominal",
+        "start_xy": [
+          0.302,
+          -0.027
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271007,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-03-goal1-jaw_interruption",
+        "start_xy": [
+          0.302,
+          -0.027
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271007,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.84,
+            "end_s": 11.22,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-04-goal0-nominal",
+        "start_xy": [
+          0.312,
+          -0.037
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271008,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-04-goal0-jaw_interruption",
+        "start_xy": [
+          0.312,
+          -0.037
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271008,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.1,
+            "end_s": 11.48,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-04-goal1-nominal",
+        "start_xy": [
+          0.312,
+          -0.037
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271009,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-04-goal1-jaw_interruption",
+        "start_xy": [
+          0.312,
+          -0.037
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271009,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 11.1,
+            "end_s": 11.48,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-05-goal0-nominal",
+        "start_xy": [
+          0.306,
+          -0.021
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271010,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-05-goal0-jaw_interruption",
+        "start_xy": [
+          0.306,
+          -0.021
+        ],
+        "goal_xy": [
+          0.35,
+          0.08
+        ],
+        "seed": 271010,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.5,
+            "end_s": 10.88,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      },
+      {
+        "id": "confirmation-05-goal1-nominal",
+        "start_xy": [
+          0.306,
+          -0.021
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271011,
+        "condition": "nominal",
+        "pulses": []
+      },
+      {
+        "id": "confirmation-05-goal1-jaw_interruption",
+        "start_xy": [
+          0.306,
+          -0.021
+        ],
+        "goal_xy": [
+          0.4,
+          -0.08
+        ],
+        "seed": 271011,
+        "condition": "jaw_interruption",
+        "pulses": [
+          {
+            "start_s": 10.5,
+            "end_s": 10.88,
+            "minimum_opening_m": 0.0305
+          }
+        ]
+      }
+    ]
+  },
+  "variants": [
+    "feedback",
+    "blind",
+    "feedforward",
+    "teacher",
+    "open_jaw"
+  ],
+  "control_dt_s": 0.02,
+  "native_dt_s": 0.001,
+  "timeout_s": 20,
+  "grouping": "Both destinations and conditions for each exact initial XY stay in one split.",
+  "novelty": "All starts differ from every v0.1 train/development/confirmation start; goals remain trained.",
+  "intervention": "Explicit jaw-actuator minimum-opening pulse and rate-limited closure tail; no state/force writes. Literal schedule derives only from the frozen v0.1 reference closing transition (<33 mm at 20 ms samples from 7 to 14 s), plus split-specific offsets; no confirmation physics is used to schedule it.",
+  "primary_endpoint": "Unchanged strict v0.1 full native task success. Native reconstruction and terminal-only outcomes are separate.",
+  "selection": "Adaptively reused development only; retain every new candidate and attempt. Confirmation untouched until model/source freeze.",
+  "training": "Reuse all 64 original teacher episodes and original causal labels, without physical recollection. Original protocol/runtime bindings remain intact in prior-studies/study01.",
+  "dagger": "No further correction collection; parent mixed-policy data is retained but excluded from this model family.",
+  "physical_robot_ready": false,
+  "limitations": [
+    "Synthetic authored-expert jaw labels and privileged simulator sensing; not human video or hardware.",
+    "Only the jaw is controlled by the new learned adapter; all six arm commands remain the frozen v0.1 primitive.",
+    "Same rigid 40 g block, two trained destinations and narrow starting region as v0.1.",
+    "Development starts were reused after five full-residual candidates each failed all 16 development cases.",
+    "Interventions affect acquisition; airborne regrasp and general slip recovery are not established.",
+    "Native servos, joint/jaw caps and gravity compensation remain authored.",
+    "Timing excludes sensing, network transport and physical actuators; no hard real-time guarantee."
+  ],
+  "architecture": "jaw-only binary CART over a frozen six-joint learned primitive",
+  "training_parent_manifest_sha256": "75779fc36cdfdf790a810d588c45fbb836773e73922e57202790d7a7cdcd0d44"
+}

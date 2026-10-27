@@ -1,0 +1,883 @@
+{
+  "all_critical_cases_explained_by_finger_table": true,
+  "both_fingers_table_cases": 8,
+  "cases": [
+    {
+      "case_id": "confirmation-00-goal0-nominal",
+      "condition": "nominal",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-00-goal0-nominal/feedback/episode.json.gz": "7c6874e02566abfe323825c1169326afb6e99722f45d85a14782586dd035d1bc",
+        "confirmation/confirmation-00-goal0-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-00-goal0-nominal/feedback/native.npz": "738a980d94a7a371fd8ef87729371ba0f60fd0b619e6c1239e2ce0596dd0bf7e",
+        "confirmation/confirmation-00-goal0-nominal/feedback/score.json": "976c0e9ebc207ed967b9b3bedfa9fede595641689e407312f8db42f448ad6742"
+      },
+      "success": true,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-00-goal0-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-00-goal0-jaw_interruption/feedback/episode.json.gz": "c03b1c734c6a4691bb4f6f41859c6c7218a0ed7a0c71ec63095687421aec8edb",
+        "confirmation/confirmation-00-goal0-jaw_interruption/feedback/native.json": "131652175612c0e3f25d6fab44ba57639ceff961edcfb217a975d72a177782ac",
+        "confirmation/confirmation-00-goal0-jaw_interruption/feedback/native.npz": "ae61366a33688218848435ef91f5bde5b1a5bc08a299cf927af93beb3498ff05",
+        "confirmation/confirmation-00-goal0-jaw_interruption/feedback/score.json": "a1ed2327a03b88b027d071a12598861d540c297518ddac5ee164b751138c83ed"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-00-goal1-nominal",
+      "condition": "nominal",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-00-goal1-nominal/feedback/episode.json.gz": "751d6dbf006f82361e25353165e153416e6dca8f3e238d1ebb12fe8613b921df",
+        "confirmation/confirmation-00-goal1-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-00-goal1-nominal/feedback/native.npz": "913da6a48a236240fda1b92bb68d037802e41eba868ec2ffaf0465c5de5a0f1f",
+        "confirmation/confirmation-00-goal1-nominal/feedback/score.json": "d90e7f852c6686c6292117ad565c10a1d84df75f93a9d271cebb150eeeefd1f1"
+      },
+      "success": true,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-00-goal1-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-00-goal1-jaw_interruption/feedback/episode.json.gz": "d7183e9d7ef4e8ae45e88fb0ac7e2a28ec6044b1306e3f1c817f41a522ce9e09",
+        "confirmation/confirmation-00-goal1-jaw_interruption/feedback/native.json": "131652175612c0e3f25d6fab44ba57639ceff961edcfb217a975d72a177782ac",
+        "confirmation/confirmation-00-goal1-jaw_interruption/feedback/native.npz": "b538849f52b561dc04d49876f0a94febe398a3420f59cc14445420ac8c00648b",
+        "confirmation/confirmation-00-goal1-jaw_interruption/feedback/score.json": "44caeb78a20b5a4aab55780b5e4650cae3c6f53f51aa03b6977f6a5ad21f9afd"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-01-goal0-nominal",
+      "condition": "nominal",
+      "critical_pairs": [
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 126
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-01-goal0-nominal/feedback/episode.json.gz": "ff27e8b50453c30d7a70272adf35a2280651adae9e282b9dd4f77d7d97959b10",
+        "confirmation/confirmation-01-goal0-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-01-goal0-nominal/feedback/native.npz": "073f653580441f8b72b2f621e254aa417a7faed457aaacee2db4dbbf9cba35f3",
+        "confirmation/confirmation-01-goal0-nominal/feedback/score.json": "02fb12fe0f27f1b896b4c2b14ab220b8ac417323e1f3db301230612253d3063d"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 126
+    },
+    {
+      "case_id": "confirmation-01-goal0-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 115
+        },
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 99
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-01-goal0-jaw_interruption/feedback/episode.json.gz": "47dad97d42de1299c2ddf03355bdff15353a397940f454d362b82ef9701a66be",
+        "confirmation/confirmation-01-goal0-jaw_interruption/feedback/native.json": "ae97a927c345507fbda7b84e7b83ff14d333c3183b8756e886597477559c54c3",
+        "confirmation/confirmation-01-goal0-jaw_interruption/feedback/native.npz": "b6f796bbd69154bb6fccf9a2a52fb2d1559af93ede75ef09cf505555e3c49780",
+        "confirmation/confirmation-01-goal0-jaw_interruption/feedback/score.json": "a93bdd40464fe488c89d71545c5b435f399dbf3b58eb2d1a9fe77cd428380aa3"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 115
+    },
+    {
+      "case_id": "confirmation-01-goal1-nominal",
+      "condition": "nominal",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 45
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-01-goal1-nominal/feedback/episode.json.gz": "4ed0ae2190636950978aa131e550ec9707b38690281db116786fe0e5bbb7cb83",
+        "confirmation/confirmation-01-goal1-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-01-goal1-nominal/feedback/native.npz": "7c944b9f51129e3f75c67007b0879207323765ae2d421b9145de05962279ebab",
+        "confirmation/confirmation-01-goal1-nominal/feedback/score.json": "23b2a13b46838ea13c66f04208e5433f26dfa01f81df148d62a7e148f3b9af89"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 45
+    },
+    {
+      "case_id": "confirmation-01-goal1-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 77
+        },
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 69
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-01-goal1-jaw_interruption/feedback/episode.json.gz": "504e089604cca3315bd3c4d60ac721f06f0b47b1efa89a5583eaa05e11da6653",
+        "confirmation/confirmation-01-goal1-jaw_interruption/feedback/native.json": "ae97a927c345507fbda7b84e7b83ff14d333c3183b8756e886597477559c54c3",
+        "confirmation/confirmation-01-goal1-jaw_interruption/feedback/native.npz": "0dd6e0632bec5e20c16039d5587c2671bd0ccff1c6222e2ca68a4210380fca7b",
+        "confirmation/confirmation-01-goal1-jaw_interruption/feedback/score.json": "0975ed9f467e24cbe92e881d053d07f0e514330f65a8ed623261b0b8c90a5533"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 77
+    },
+    {
+      "case_id": "confirmation-02-goal0-nominal",
+      "condition": "nominal",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 19
+        },
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 10
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-02-goal0-nominal/feedback/episode.json.gz": "bbf731b780e072775e57039c56e5236dcb5c017a535cd59fee93ab2e4b4e3ad7",
+        "confirmation/confirmation-02-goal0-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-02-goal0-nominal/feedback/native.npz": "4b431bb416503692c68726d7a97edc9be83eba594e04cb60915836c81d9d621c",
+        "confirmation/confirmation-02-goal0-nominal/feedback/score.json": "e9483e7791d952ce8aaa87966d6f0fa74bd40f0610ff2d8bf7ac8cf83fc2a079"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 19
+    },
+    {
+      "case_id": "confirmation-02-goal0-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 19
+        },
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 10
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-02-goal0-jaw_interruption/feedback/episode.json.gz": "272791ec62b2cc66e2c97de253f33d3873ef3042194907efb1def653e12ca23d",
+        "confirmation/confirmation-02-goal0-jaw_interruption/feedback/native.json": "87762f6aff51559900247d5db5eaea6f3757efb1f9daeb2535977227d56becdf",
+        "confirmation/confirmation-02-goal0-jaw_interruption/feedback/native.npz": "3ba4b84514ebc77e3c3014ee8c4bfbf01608deb81afefb13316b3c29235f64a5",
+        "confirmation/confirmation-02-goal0-jaw_interruption/feedback/score.json": "e9483e7791d952ce8aaa87966d6f0fa74bd40f0610ff2d8bf7ac8cf83fc2a079"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 19
+    },
+    {
+      "case_id": "confirmation-02-goal1-nominal",
+      "condition": "nominal",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 38
+        },
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 17
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-02-goal1-nominal/feedback/episode.json.gz": "ef89b7a37bb0910a7bebbe4cfd908704acd208a850d47811e72a3b23a2e87ac2",
+        "confirmation/confirmation-02-goal1-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-02-goal1-nominal/feedback/native.npz": "95c4b8595fafdd1c0e37c52ea4520710bc057f3c462b28f7bad6e7b4303c727a",
+        "confirmation/confirmation-02-goal1-nominal/feedback/score.json": "3bfcdb965d8ab4a6dd4cbe901b049368b3b09fe9aa6c2466d2ac73f596bda00c"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 38
+    },
+    {
+      "case_id": "confirmation-02-goal1-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 38
+        },
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 17
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-02-goal1-jaw_interruption/feedback/episode.json.gz": "59fa156c5002b6f07f22671f7dc32dc6760c1a9fc2f59c16ac1cb3a90f1695fd",
+        "confirmation/confirmation-02-goal1-jaw_interruption/feedback/native.json": "87762f6aff51559900247d5db5eaea6f3757efb1f9daeb2535977227d56becdf",
+        "confirmation/confirmation-02-goal1-jaw_interruption/feedback/native.npz": "f2051aeb6b8bb5154c292877e3b804db16b32bf78de7edcbbb0e4033629ad695",
+        "confirmation/confirmation-02-goal1-jaw_interruption/feedback/score.json": "3bfcdb965d8ab4a6dd4cbe901b049368b3b09fe9aa6c2466d2ac73f596bda00c"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 38
+    },
+    {
+      "case_id": "confirmation-03-goal0-nominal",
+      "condition": "nominal",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-03-goal0-nominal/feedback/episode.json.gz": "8f7635e05196d35d5d57c03fcd772b246a1c02fbf43a720bde833332e0be4d88",
+        "confirmation/confirmation-03-goal0-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-03-goal0-nominal/feedback/native.npz": "bd4dad32d6d01627331e104cf18e8c4d023e3da87a54feef70afdfc1cbe6970b",
+        "confirmation/confirmation-03-goal0-nominal/feedback/score.json": "6bf4c91b343c0649b2f4795f251078014a474ffcb83516197885f0faef41839c"
+      },
+      "success": true,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-03-goal0-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-03-goal0-jaw_interruption/feedback/episode.json.gz": "668934a5fa66af6810ddc2b70e7d109815353a0ef4358e1e4ce1e315abed7c20",
+        "confirmation/confirmation-03-goal0-jaw_interruption/feedback/native.json": "1a880c76be1c92235a591ad4a52f5d9e923f92adda27b34116c1f5c1065c64b7",
+        "confirmation/confirmation-03-goal0-jaw_interruption/feedback/native.npz": "2e92722465da2be9e061e192618b899d49bf40c0da06e63980fc73de78ad4d59",
+        "confirmation/confirmation-03-goal0-jaw_interruption/feedback/score.json": "207daee2ba0d3972e732812321654d22cd9ef7b283442a6c419f248ecec6dd72"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-03-goal1-nominal",
+      "condition": "nominal",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-03-goal1-nominal/feedback/episode.json.gz": "5f00147870044aae7cb70bff300da0a935408cfa62bfda2203860138fee25110",
+        "confirmation/confirmation-03-goal1-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-03-goal1-nominal/feedback/native.npz": "7e04604057485939804bfc8b012d114f5bad2fa47f0412460bc9a57fa0ae341c",
+        "confirmation/confirmation-03-goal1-nominal/feedback/score.json": "8cf3a4c3772454309ee38aad4a0dde57227afc1c9644723fde0bf474927e179e"
+      },
+      "success": true,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-03-goal1-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-03-goal1-jaw_interruption/feedback/episode.json.gz": "9c280ac5a57b0de69d5f93f44665a73bc64e91b75eb337768778d8c45c5f32d8",
+        "confirmation/confirmation-03-goal1-jaw_interruption/feedback/native.json": "1a880c76be1c92235a591ad4a52f5d9e923f92adda27b34116c1f5c1065c64b7",
+        "confirmation/confirmation-03-goal1-jaw_interruption/feedback/native.npz": "5421987aaf15b2f71b83a667a6b6b7b3eb091893a0cefa6699184c897135932f",
+        "confirmation/confirmation-03-goal1-jaw_interruption/feedback/score.json": "2535ceec32453a42f0e35e44d6bcd5cdd12d740c07dee11978fff436c691ea0f"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-04-goal0-nominal",
+      "condition": "nominal",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-04-goal0-nominal/feedback/episode.json.gz": "1118c1b8e63ec584ba5cd96aba48b3b6f77bbc8aa0babbf8cf92ec28091bfa62",
+        "confirmation/confirmation-04-goal0-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-04-goal0-nominal/feedback/native.npz": "3d119e7073b7704f4c1031a93407b453778dc699f257a4971003dfc2d4119256",
+        "confirmation/confirmation-04-goal0-nominal/feedback/score.json": "097a0cac587c68cd6d43abcdebfa359db7a64ae7fc608f11844d7f94584b2a7a"
+      },
+      "success": true,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-04-goal0-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-04-goal0-jaw_interruption/feedback/episode.json.gz": "8d99e45b26bc51757515cc9c14fa7088caf50c1b027dcb0eee43e63137c0537d",
+        "confirmation/confirmation-04-goal0-jaw_interruption/feedback/native.json": "77d139a1f7bdb42824879286e12fb37d08d215fa8dea70fbb8f742fd0e5dad06",
+        "confirmation/confirmation-04-goal0-jaw_interruption/feedback/native.npz": "e5c975abfb22f0d4abcf048d3079891fae924b13553a8905315ef0aa548287ab",
+        "confirmation/confirmation-04-goal0-jaw_interruption/feedback/score.json": "22050d7ab4a312aae822702fa82d534819bfb21727e3e691dd2324f0f2ac877b"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-04-goal1-nominal",
+      "condition": "nominal",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-04-goal1-nominal/feedback/episode.json.gz": "4d2e097c0229c02a1a1a526a52934c3b697f37b6a7d50f95a2ac5877754252cc",
+        "confirmation/confirmation-04-goal1-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-04-goal1-nominal/feedback/native.npz": "b8278ba1a3dbc5f3e6e28d3b57dad7ff5486cbcae13af3d875a535d53d9a1760",
+        "confirmation/confirmation-04-goal1-nominal/feedback/score.json": "f0d3dbb076112e41d0e05c5cfd8896faeeff869f9d1c3b00b73922c28fb33290"
+      },
+      "success": true,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-04-goal1-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [],
+      "inputs": {
+        "confirmation/confirmation-04-goal1-jaw_interruption/feedback/episode.json.gz": "1f3f8a7c4d7b02a2abd11f2c646733e820327ba27b884d3e733112bac9ca0b84",
+        "confirmation/confirmation-04-goal1-jaw_interruption/feedback/native.json": "77d139a1f7bdb42824879286e12fb37d08d215fa8dea70fbb8f742fd0e5dad06",
+        "confirmation/confirmation-04-goal1-jaw_interruption/feedback/native.npz": "5985a8ae7d750b4bfe91ff00eb79954bf3b6fb9076b079b758c70b657e4e4b38",
+        "confirmation/confirmation-04-goal1-jaw_interruption/feedback/score.json": "cf94a46cd19d25dcd23d4eaa030d85b6fd4269d741c1f014baaf64a8d2eeb102"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 0
+    },
+    {
+      "case_id": "confirmation-05-goal0-nominal",
+      "condition": "nominal",
+      "critical_pairs": [
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 97
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-05-goal0-nominal/feedback/episode.json.gz": "67d64e1358256c460b6bb1eeda86858c21d62dbb5393b394d3987da8b174ab86",
+        "confirmation/confirmation-05-goal0-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-05-goal0-nominal/feedback/native.npz": "98278ff2461ba5363d95a973bcb33c891097d4afe7cf4c4cfe32f2bb73570b7a",
+        "confirmation/confirmation-05-goal0-nominal/feedback/score.json": "cb919875fa0720358e71162095818ede8be51ffbf4ffaa09d7c9a009f7061d9c"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 97
+    },
+    {
+      "case_id": "confirmation-05-goal0-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 84
+        },
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 76
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-05-goal0-jaw_interruption/feedback/episode.json.gz": "dbf7db4d64033cc975ea3175cc4be45dbe568b8470abdc343282bdc5c84a90c8",
+        "confirmation/confirmation-05-goal0-jaw_interruption/feedback/native.json": "87762f6aff51559900247d5db5eaea6f3757efb1f9daeb2535977227d56becdf",
+        "confirmation/confirmation-05-goal0-jaw_interruption/feedback/native.npz": "b10b6824ac1dae1b7d8be50277cf67adcda8863bdea41fdd120b81f3ac98bb1b",
+        "confirmation/confirmation-05-goal0-jaw_interruption/feedback/score.json": "53a9eb35fb0d21878d05f45e76ee43949bd771c3bb4957a8a09b402266f07208"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 84
+    },
+    {
+      "case_id": "confirmation-05-goal1-nominal",
+      "condition": "nominal",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 56
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-05-goal1-nominal/feedback/episode.json.gz": "89ccfe7f0c264c65dff3a86d1d0eddce8aa59f0563879042d3e885ad6ed9d77b",
+        "confirmation/confirmation-05-goal1-nominal/feedback/native.json": "83cfbb859d53d46cff9d2ca7d44952ce2b15a386243ba5d7303ff650bfefe051",
+        "confirmation/confirmation-05-goal1-nominal/feedback/native.npz": "2237c40f0c63cef37f18fea1c567425a147a66c501265f6595479f7d0dbd8876",
+        "confirmation/confirmation-05-goal1-nominal/feedback/score.json": "f8b02cc5b3ce3727b7d4e958bf4b77c10739cbdcdd26c56b23121e2ab0c6b756"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 56
+    },
+    {
+      "case_id": "confirmation-05-goal1-jaw_interruption",
+      "condition": "jaw_interruption",
+      "critical_pairs": [
+        {
+          "finger_side": "left",
+          "geom_ids": [
+            1,
+            85
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 8,
+              "body_name": "link7",
+              "geom_id": 85,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 62
+        },
+        {
+          "finger_side": "right",
+          "geom_ids": [
+            1,
+            88
+          ],
+          "geoms": [
+            {
+              "body_id": 0,
+              "body_name": "world",
+              "geom_id": 1,
+              "geom_name": "task_table"
+            },
+            {
+              "body_id": 9,
+              "body_name": "link8",
+              "geom_id": 88,
+              "geom_name": null
+            }
+          ],
+          "kind": "finger_table",
+          "pair_native_ticks": 57
+        }
+      ],
+      "inputs": {
+        "confirmation/confirmation-05-goal1-jaw_interruption/feedback/episode.json.gz": "5bb554a103e549202869f9eb5465cf8c8d38d4e2b0d0d36150f771dec03bbba7",
+        "confirmation/confirmation-05-goal1-jaw_interruption/feedback/native.json": "87762f6aff51559900247d5db5eaea6f3757efb1f9daeb2535977227d56becdf",
+        "confirmation/confirmation-05-goal1-jaw_interruption/feedback/native.npz": "451111b2ac89ab886c84b998f93ed14bf2da53b2a94b00ec39894ebf58243f91",
+        "confirmation/confirmation-05-goal1-jaw_interruption/feedback/score.json": "534e7cb01b0414b052a6720b348871972b92daedf10f298aa859dcbaa25bcc24"
+      },
+      "success": false,
+      "unexpected_contact_native_ticks": 62
+    }
+  ],
+  "counting": "Pair counts are native ticks with normal force >.01 N. Different pairs can overlap at one native tick; sums are not independent collision events.",
+  "critical_contact_cases": 12,
+  "finger_table_union_cases": 12,
+  "frozen_task_source_sha256": "e66a44a8df4e7a8ee42e4f3866f889f8797cdfb8e2688a146e09b75d2c76664f",
+  "inputs": {
+    "audit.json": "029bb4e3eb39afe2f1933a7935842dacf2f27f2e204ecf985a7ba3e988576366",
+    "frozen.json": "b49c20ec464581a3bd3bfea5b6962ae4fe219966fbf998fbdc2c0774d8d042ca",
+    "protocol.json": "c35622d4ddc7e6868fd609a5665e931d45788345cd9ed2238fbb9ebac5b24fc9",
+    "report.json": "b2417ba4733afeb8239eb768a3daac827f4faf271a8b4df5384b7454e827e6ec"
+  },
+  "interpretation": "Finger-table contact motivates testing reference-path clearance separately from acquisition timing. This diagnostic alone does not establish a corrected path or a successful recovery.",
+  "left_finger_table_cases": 10,
+  "model_retrained": false,
+  "network": false,
+  "pair_summary": {
+    "1:85": {
+      "case_ids": [
+        "confirmation-01-goal0-jaw_interruption",
+        "confirmation-01-goal1-nominal",
+        "confirmation-01-goal1-jaw_interruption",
+        "confirmation-02-goal0-nominal",
+        "confirmation-02-goal0-jaw_interruption",
+        "confirmation-02-goal1-nominal",
+        "confirmation-02-goal1-jaw_interruption",
+        "confirmation-05-goal0-jaw_interruption",
+        "confirmation-05-goal1-nominal",
+        "confirmation-05-goal1-jaw_interruption"
+      ],
+      "finger_side": "left",
+      "geom_ids": [
+        1,
+        85
+      ],
+      "geoms": [
+        {
+          "body_id": 0,
+          "body_name": "world",
+          "geom_id": 1,
+          "geom_name": "task_table"
+        },
+        {
+          "body_id": 8,
+          "body_name": "link7",
+          "geom_id": 85,
+          "geom_name": null
+        }
+      ],
+      "kind": "finger_table",
+      "pair_native_ticks": 529
+    },
+    "1:88": {
+      "case_ids": [
+        "confirmation-01-goal0-nominal",
+        "confirmation-01-goal0-jaw_interruption",
+        "confirmation-01-goal1-jaw_interruption",
+        "confirmation-02-goal0-nominal",
+        "confirmation-02-goal0-jaw_interruption",
+        "confirmation-02-goal1-nominal",
+        "confirmation-02-goal1-jaw_interruption",
+        "confirmation-05-goal0-nominal",
+        "confirmation-05-goal0-jaw_interruption",
+        "confirmation-05-goal1-jaw_interruption"
+      ],
+      "finger_side": "right",
+      "geom_ids": [
+        1,
+        88
+      ],
+      "geoms": [
+        {
+          "body_id": 0,
+          "body_name": "world",
+          "geom_id": 1,
+          "geom_name": "task_table"
+        },
+        {
+          "body_id": 9,
+          "body_name": "link8",
+          "geom_id": 88,
+          "geom_name": null
+        }
+      ],
+      "kind": "finger_table",
+      "pair_native_ticks": 602
+    }
+  },
+  "physics_run": false,
+  "right_finger_table_cases": 10,
+  "scheduled": 24,
+  "schema": "dvidia.piper-grip-clearance-analysis/v1",
+  "scope": "Named native contact-pair counters under the frozen task rules, not a physics rerun or closest-distance/mesh-accuracy validation.",
+  "script_sha256": "ff7c9ba4a951a7cd3cebf479db2b3d65f625787448e9c7668fd2267db77383d7",
+  "variant": "feedback"
+}
