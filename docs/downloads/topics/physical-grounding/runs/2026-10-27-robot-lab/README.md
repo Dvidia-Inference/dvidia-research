@@ -55,3 +55,14 @@ model, simulator and asset terms remain applicable.
 commit, exact file hashes and anonymous readback. The update preserves all 3,771
 pre-existing files except the root card, which receives one additional concept
 section. It adds no model weights, live inference endpoint or hardware control.
+
+[Chat implementation follow-up](huggingface-followup.json) records the second
+documentation-only update. The [interface screenshot](chat-interface.png) shows
+the local built prototype with an actual simulator camera and a still-incomplete
+checkpoint transfer. Development and built desktop browser workflows were
+verified after the initial browser-control interruption; no policy action ran.
+
+[Final documentation and screenshot revision](huggingface-final.json) adds the
+verified desktop interface image and updates the implementation status. All
+three files pass anonymous readback at the recorded immutable Hub commit; all
+3,774 other existing Space files remain unchanged.

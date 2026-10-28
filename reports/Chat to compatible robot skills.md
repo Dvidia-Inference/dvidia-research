@@ -2,6 +2,8 @@
 
 DVIDIA research · 27 October 2026 · Product architecture and local runtime note
 
+Original writing: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Referenced models, code and assets retain their own terms.
+
 The intended interface is a conversation: attach a photo, describe a desired
 outcome, and let DVIDIA find an executable skill for the available robot. The
 conversation should carry the workflow from observation through installation,
@@ -17,6 +19,30 @@ a successful task. The [runtime receipt](../topics/physical-grounding/runs/2026-
 and [evidence notes](../topics/physical-grounding/runs/2026-10-27-robot-lab/README.md)
 preserve that boundary. A companion [Hugging Face concept card](https://huggingface.co/spaces/Dvidia/robot-simulation-lab/blob/main/docs/robot-chat-v01/concept.md)
 tracks the same documentation scope; it does not host OpenVLA inference.
+
+## Implementation follow-up — 28 October 2026
+
+The local prototype now implements the photo/outcome composer and conversation
+cards. A unique compatible unblocked task starts verified installation and real
+scene preparation; the user sees the simulator camera before choosing Run in
+simulation. Connection settings, object corrections and action/neuron inspection
+are expandable. This is a typed tool workflow with conservative lexical
+retrieval; the conversation does not add a general language planner.
+
+Nineteen focused chat/client/planner tests and 42 worker tests pass. New
+regressions reject reversed spatial destinations and wrong target colors.
+Installation cancellation races and explicit stop-tracking recovery are handled.
+Browser control initially timed out, then recovered in a fresh tab. Development
+and built desktop previews verified real photo detection, an unsupported
+dishwashing reply, actual task-5 camera capture, unique compatible retrieval and
+live installation progress. Browser error logs were empty. Phone-sized layout
+acceptance remains pending. The repaired downloader has resumed the real
+checkpoint transfer, but no completed installation, learned action or steering
+result is established. The 26 October receipt below remains unchanged.
+
+![Local conversational prototype showing actual simulator input and an incomplete policy download](../topics/physical-grounding/runs/2026-10-27-robot-lab/chat-interface.png)
+
+The screenshot shows installation progress, not robot execution.
 
 ## One conversation carries the task
 
@@ -35,7 +61,7 @@ evidence. The product should present these as progress in one conversation:
 | Outcome and inspectable trace | Success, failure or cancellation with actions and observations |
 | “Try this intervention” | An experimental rerun with the same initial simulator state |
 
-This is the proposed simplification of the current staged Robot lab interface.
+This is the conversational simplification implemented in the local prototype.
 Detailed connection settings, manifests, action vectors and channel controls can
 live in expandable cards. The conversation remains an interface to typed tools;
 assistant prose cannot mark an artifact installed or a task completed.
