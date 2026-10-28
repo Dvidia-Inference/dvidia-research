@@ -26,6 +26,14 @@ All four covers are **AI-generated editorial illustrations**, not footage, measu
 
 ## Latest studies
 
+[From a conversation to compatible robot skills](reports/Chat%20to%20compatible%20robot%20skills.md)
+connects a photo and desired outcome to scene review, compatible skill retrieval,
+verified installation and inspectable simulation through a proposed chat workflow.
+Real local object detection and one native LIBERO reset are verified; OpenVLA
+weights remain incomplete, and no learned or steered robot actions have run.
+[Inspect the runtime receipt](topics/physical-grounding/runs/2026-10-27-robot-lab/README.md)
+and [Hugging Face concept card](https://huggingface.co/spaces/Dvidia/robot-simulation-lab/blob/main/docs/robot-chat-v01/concept.md).
+
 
 [Live PiPER shoe workstation v0.1](reports/Live%20PiPER%20shoe%20workstation%20v01.md)
 lets readers drag a tool target, adjust the gripper and nudge a free rigid shoe

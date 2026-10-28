@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>From a conversation to compatible robot skills · DVIDIA Research</title><meta name="description" content="A conversation can carry a photo and desired outcome through scene review, skill retrieval, compatible installation, simulation and inspectable action traces. The local prototype uses ten LIBERO-10 task manifests sharing a pinned OpenVLA checkpoint. Real SSDlite inference and a repeatable native task-5 reset are recorded; the checkpoint transfer stopped after an 8 MiB partial file, so learned policy actions and activation-steered behavior remain unrun. The note separates observed evidence, candidate relevance, executable compatibility and measured completion, and defines staged evaluation for the chat workflow and raw MLP channel interventions. General household planning and hardware execution remain unqualified."><meta name="theme-color" content="#faf9f6"><link rel="canonical" href="https://research.dvidia.org/papers/chat-to-robot-skills/"><link rel="alternate" type="application/rss+xml" title="DVIDIA Research" href="../../feed.xml"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../styles.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"From a conversation to compatible robot skills","description":"A conversation can carry a photo and desired outcome through scene review, skill retrieval, compatible installation, simulation and inspectable action traces. The local prototype uses ten LIBERO-10 task manifests sharing a pinned OpenVLA checkpoint. Real SSDlite inference and a repeatable native task-5 reset are recorded; the checkpoint transfer stopped after an 8 MiB partial file, so learned policy actions and activation-steered behavior remain unrun. The note separates observed evidence, candidate relevance, executable compatibility and measured completion, and defines staged evaluation for the chat workflow and raw MLP channel interventions. General household planning and hardware execution remain unqualified.","url":"https://research.dvidia.org/papers/chat-to-robot-skills/","publisher":{"@type":"Organization","name":"DVIDIA","url":"https://dvidia.org"},"datePublished":"2026-10-27"}</script><script src="../../app.js" defer></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a><aside class="site-sidebar" aria-label="Research navigation"><a class="brand" href="../../index.html"><span class="brand-name">DVIDIA</span><span class="brand-subtitle">Research notebook</span></a><nav class="site-nav" id="site-navigation" aria-label="Main"><div class="nav-section"><span class="nav-label">Notebook</span><a href="../../index.html">Research journal</a><a href="../../index.html#progress">Progress</a></div><div class="nav-section"><span class="nav-label">Publications</span><a href="index.html" aria-current="page">From a conversation to compatible robot skills</a><a href="../learned-piper-grip-v02/index.html">Learning grip feedback with a frozen PiPER arm reference</a><a href="../learned-piper-placement-v01/index.html">Learning PiPER block placement from synthetic demonstrations</a><a href="../sensor-corroboration-v04/index.html">Independent camera and actuator corroboration v0.4</a><a href="../local-goal-verifier-v03/index.html">A local verifier for physical completion</a><a href="../image-goal-jev-v02/index.html">Jev image-goal verification: the measured follow-up</a><a href="../image-goal-jev-v01/index.html">Image-goal verification: native benchmark and Jev protocol</a><a href="../goal-images-physical-feedback/index.html">A visual goal still needs physical feedback</a><a href="../shoe-graspability-v03/index.html">Give the gripper a fair test</a><a href="../continuous-shoe-grip-v02/index.html">From reaching a shoe to keeping hold</a><a href="../skill-prerequisites-v01/index.html">Skill prerequisites: access, reach and recovery</a><a href="../live-piper-shoe-workstation-v01/index.html">Live PiPER shoe workstation v0.1</a><a href="../shoe-asset-library-v01/index.html">Reusable shoe asset library v0.1</a><a href="../piper-reliability-v05/index.html">PiPER placement reliability v0.5</a><a href="../piper-contact-recovery-v04/index.html">PiPER contact recovery v0.4</a><a href="../piper-contact-history-v03/index.html">PiPER contact history v0.3</a><a href="../piper-grip-validation-and-recovery/index.html">PiPER grip validation and recovery</a><a href="../native-grasp-task-benchmark/index.html">Native grasp task benchmark</a><a href="../hardware-matched-robot-simulation/index.html">Hardware matched robot simulation</a><a href="../dvidia-observation-lab/index.html">DVIDIA Observation Lab pilot</a><a href="../robotics-research-pipeline/index.html">Robotics research pipeline</a><a href="../skillspace-footage-training/index.html">Skillspace footage training pipeline</a><a href="../skill-capsule-acquisition/index.html">Skill capsule acquisition and optimization</a><a href="../skillspace-arm-benchmarks/index.html">Skillspace arm benchmarks and evolution</a><a href="../skillspace-arm-installation/index.html">Installing a Skillspace on a simulated arm</a><a href="../offline-cable-training-environment/index.html">Offline cable training environment</a><a href="../fast-accurate-robot-training-simulation/index.html">Fast accurate robot training simulation</a><a href="../grok-robotics-research-on-x/index.html">Grok robotics research on X</a><a href="../spatially-grounded-downloadable-robot-skills/index.html">Spatially grounded downloadable robot skills</a><a href="../clef-and-grounded-video-observations/index.html">Clef and grounded video observations</a><a href="../from-skillspace-to-robot-skill/index.html">From Skillspace to robot skill</a><a href="../physical-skill-research-agenda/index.html">Turn physical footage into testable evidence</a></div><div class="nav-section"><span class="nav-label">Questions</span><a href="../../topics/capture-quality/index.html">Capture quality</a><a href="../../topics/skill-relations/index.html">Skill relations</a><a href="../../topics/evaluation-provenance/index.html">Evaluation and provenance</a><a href="../../topics/physical-grounding/index.html">Physical grounding</a></div><div class="nav-section"><span class="nav-label">Follow the work</span><a href="../../feed.xml">RSS feed</a><a href="https://github.com/Dvidia-Inference/dvidia-research">GitHub</a><a href="https://huggingface.co/Dvidia">Hugging Face</a><a href="https://x.com/iammrriver">X · @iammrriver</a><a href="mailto:hello@dvidia.org">hello@dvidia.org</a></div></nav><details class="mobile-navigation"><summary>Contents</summary><nav aria-label="Mobile"><div class="nav-section"><span class="nav-label">Notebook</span><a href="../../index.html">Research journal</a><a href="../../index.html#progress">Progress</a></div><div class="nav-section"><span class="nav-label">Publications</span><a href="index.html" aria-current="page">From a conversation to compatible robot skills</a><a href="../learned-piper-grip-v02/index.html">Learning grip feedback with a frozen PiPER arm reference</a><a href="../learned-piper-placement-v01/index.html">Learning PiPER block placement from synthetic demonstrations</a><a href="../sensor-corroboration-v04/index.html">Independent camera and actuator corroboration v0.4</a><a href="../local-goal-verifier-v03/index.html">A local verifier for physical completion</a><a href="../image-goal-jev-v02/index.html">Jev image-goal verification: the measured follow-up</a><a href="../image-goal-jev-v01/index.html">Image-goal verification: native benchmark and Jev protocol</a><a href="../goal-images-physical-feedback/index.html">A visual goal still needs physical feedback</a><a href="../shoe-graspability-v03/index.html">Give the gripper a fair test</a><a href="../continuous-shoe-grip-v02/index.html">From reaching a shoe to keeping hold</a><a href="../skill-prerequisites-v01/index.html">Skill prerequisites: access, reach and recovery</a><a href="../live-piper-shoe-workstation-v01/index.html">Live PiPER shoe workstation v0.1</a><a href="../shoe-asset-library-v01/index.html">Reusable shoe asset library v0.1</a><a href="../piper-reliability-v05/index.html">PiPER placement reliability v0.5</a><a href="../piper-contact-recovery-v04/index.html">PiPER contact recovery v0.4</a><a href="../piper-contact-history-v03/index.html">PiPER contact history v0.3</a><a href="../piper-grip-validation-and-recovery/index.html">PiPER grip validation and recovery</a><a href="../native-grasp-task-benchmark/index.html">Native grasp task benchmark</a><a href="../hardware-matched-robot-simulation/index.html">Hardware matched robot simulation</a><a href="../dvidia-observation-lab/index.html">DVIDIA Observation Lab pilot</a><a href="../robotics-research-pipeline/index.html">Robotics research pipeline</a><a href="../skillspace-footage-training/index.html">Skillspace footage training pipeline</a><a href="../skill-capsule-acquisition/index.html">Skill capsule acquisition and optimization</a><a href="../skillspace-arm-benchmarks/index.html">Skillspace arm benchmarks and evolution</a><a href="../skillspace-arm-installation/index.html">Installing a Skillspace on a simulated arm</a><a href="../offline-cable-training-environment/index.html">Offline cable training environment</a><a href="../fast-accurate-robot-training-simulation/index.html">Fast accurate robot training simulation</a><a href="../grok-robotics-research-on-x/index.html">Grok robotics research on X</a><a href="../spatially-grounded-downloadable-robot-skills/index.html">Spatially grounded downloadable robot skills</a><a href="../clef-and-grounded-video-observations/index.html">Clef and grounded video observations</a><a href="../from-skillspace-to-robot-skill/index.html">From Skillspace to robot skill</a><a href="../physical-skill-research-agenda/index.html">Turn physical footage into testable evidence</a></div><div class="nav-section"><span class="nav-label">Questions</span><a href="../../topics/capture-quality/index.html">Capture quality</a><a href="../../topics/skill-relations/index.html">Skill relations</a><a href="../../topics/evaluation-provenance/index.html">Evaluation and provenance</a><a href="../../topics/physical-grounding/index.html">Physical grounding</a></div><div class="nav-section"><span class="nav-label">Follow the work</span><a href="../../feed.xml">RSS feed</a><a href="https://github.com/Dvidia-Inference/dvidia-research">GitHub</a><a href="https://huggingface.co/Dvidia">Hugging Face</a><a href="https://x.com/iammrriver">X · @iammrriver</a><a href="mailto:hello@dvidia.org">hello@dvidia.org</a></div></nav></details></aside><main class="page-shell" id="main"><article class="paper"><header class="paper-header"><p class="eyebrow">Product architecture and local runtime verification</p><h1>From a conversation to compatible robot skills</h1><p class="paper-meta"><time datetime="2026-10-27">27 October 2026</time> · DVIDIA</p><p class="paper-status">Photo inference and one native reset verified · OpenVLA actions and steering not run</p><p class="paper-actions"><a href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/reports/Chat%20to%20compatible%20robot%20skills.md">Source & history</a> · <a href="../../downloads/reports/Chat%20to%20compatible%20robot%20skills.md" download>Download Markdown</a></p></header><section class="paper-abstract" aria-label="Abstract"><h2>Abstract</h2><p>A conversation can carry a photo and desired outcome through scene review, skill retrieval, compatible installation, simulation and inspectable action traces. The local prototype uses ten LIBERO-10 task manifests sharing a pinned OpenVLA checkpoint. Real SSDlite inference and a repeatable native task-5 reset are recorded; the checkpoint transfer stopped after an 8 MiB partial file, so learned policy actions and activation-steered behavior remain unrun. The note separates observed evidence, candidate relevance, executable compatibility and measured completion, and defines staged evaluation for the chat workflow and raw MLP channel interventions. General household planning and hardware execution remain unqualified.</p></section><details class="paper-toc"><summary>In this paper</summary><nav aria-label="Table of contents"><ol><li><a href="#implementation-follow-up-28-october-2026">Implementation follow-up — 28 October 2026</a></li><li><a href="#one-conversation-carries-the-task">One conversation carries the task</a></li><li><a href="#retrieve-by-intended-change-then-check-compatibility">Retrieve by intended change, then check compatibility</a></li><li><a href="#execution-belongs-to-the-local-worker">Execution belongs to the local worker</a></li><li><a href="#what-has-actually-run">What has actually run</a></li><li><a href="#neuron-exploration-is-a-separate-measured-intervention">Neuron exploration is a separate measured intervention</a></li><li><a href="#staged-evaluation-and-release-gates">Staged evaluation and release gates</a></li></ol></nav></details><div class="paper-body"><p>DVIDIA research · 27 October 2026 · Product architecture and local runtime note</p>
+<p>Original writing: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Referenced models, code and assets retain their own terms.</p>
+<p>The intended interface is a conversation: attach a photo, describe a desired
+outcome, and let DVIDIA find an executable skill for the available robot. The
+conversation should carry the workflow from observation through installation,
+simulation and review. A user should not need to assemble those tools manually.</p>
+<p>The current prototype connects photo analysis and conservative skill retrieval
+to a separate local worker for ten LIBERO-10 task descriptions sharing one
+revision-pinned OpenVLA checkpoint. <strong>Real local object detection and one native
+simulator reset are verified. OpenVLA model inference, learned robot actions and
+activation-steered robot actions have not been executed.</strong> The checkpoint
+transfer stopped after an 8 MiB partial download; this is not an installation or
+a successful task. The <a href="../../downloads/topics/physical-grounding/runs/2026-10-27-robot-lab/runtime-receipt.json">runtime receipt</a>
+and <a href="../../downloads/topics/physical-grounding/runs/2026-10-27-robot-lab/README.md">evidence notes</a>
+preserve that boundary. A companion <a href="https://huggingface.co/spaces/Dvidia/robot-simulation-lab/blob/main/docs/robot-chat-v01/concept.md">Hugging Face concept card</a>
+tracks the same documentation scope; it does not host OpenVLA inference.</p>
+<h2 id="implementation-follow-up-28-october-2026">Implementation follow-up — 28 October 2026</h2>
+<p>The local prototype now implements the photo/outcome composer and conversation
+cards. A unique compatible unblocked task starts verified installation and real
+scene preparation; the user sees the simulator camera before choosing Run in
+simulation. Connection settings, object corrections and action/neuron inspection
+are expandable. This is a typed tool workflow with conservative lexical
+retrieval; the conversation does not add a general language planner.</p>
+<p>Nineteen focused chat/client/planner tests and 42 worker tests pass. New
+regressions reject reversed spatial destinations and wrong target colors.
+Installation cancellation races and explicit stop-tracking recovery are handled.
+Browser control initially timed out, then recovered in a fresh tab. Development
+and built desktop previews verified real photo detection, an unsupported
+dishwashing reply, actual task-5 camera capture, unique compatible retrieval and
+live installation progress. Browser error logs were empty. Phone-sized layout
+acceptance remains pending. The repaired downloader has resumed the real
+checkpoint transfer, but no completed installation, learned action or steering
+result is established. The 26 October receipt below remains unchanged.</p>
+<p><figure><img src="../../downloads/topics/physical-grounding/runs/2026-10-27-robot-lab/chat-interface.png" alt="Local conversational prototype showing actual simulator input and an incomplete policy download" loading="lazy"><figcaption>Local conversational prototype showing actual simulator input and an incomplete policy download</figcaption></figure></p>
+<p>The screenshot shows installation progress, not robot execution.</p>
+<h2 id="one-conversation-carries-the-task">One conversation carries the task</h2>
+<p>A useful request is “Put the book in the back compartment of the caddy,” with a
+photo attached. DVIDIA needs to identify the intended object and destination,
+look for a compatible behavior, check its prerequisites and expose any missing
+evidence. The product should present these as progress in one conversation:</p>
+<div class="table-scroll" role="region" aria-label="Research table" tabindex="0"><table><thead><tr><th>Conversation event</th><th>What it represents</th></tr></thead><tbody><tr><td>Photo and desired outcome</td><td>User input, including explicit corrections</td></tr><tr><td>“I found a book; please identify its destination”</td><td>A grounded question when the evidence is insufficient</td></tr><tr><td>Skill card with prerequisites and compatibility</td><td>A candidate, with reasons it can or cannot run</td></tr><tr><td>Download progress and verified installation</td><td>Actual artifact state, including interruption and retry</td></tr><tr><td>Simulator preview and run progress</td><td>A real task reset followed by actual policy actions when available</td></tr><tr><td>Outcome and inspectable trace</td><td>Success, failure or cancellation with actions and observations</td></tr><tr><td>“Try this intervention”</td><td>An experimental rerun with the same initial simulator state</td></tr></tbody></table></div>
+<p>This is the conversational simplification implemented in the local prototype.
+Detailed connection settings, manifests, action vectors and channel controls can
+live in expandable cards. The conversation remains an interface to typed tools;
+assistant prose cannot mark an artifact installed or a task completed.</p>
+<p>“Tidy this room” expresses a valid desired outcome but leaves important
+decisions unresolved: where toys belong, which clothes are dirty, whether a
+container is reachable and whether the robot has the required behaviors. A photo
+does not answer all of these questions. The first version should ask for missing
+destinations or state evidence and report unsupported tasks. General household
+task decomposition and automatic selection of multi-skill sequences are future
+work. No dishwashing, laundry or toy-sorting competence is established by this
+prototype.</p>
+<h2 id="retrieve-by-intended-change-then-check-compatibility">Retrieve by intended change, then check compatibility</h2>
+<p>The architecture connects five distinct decisions:</p>
+<pre><code class="language-text">Photo + desired outcome
+    -&gt; observations with source and uncertainty
+    -&gt; candidate skills with prerequisites and effects
+    -&gt; compatible artifact + verified installation
+    -&gt; actual simulator state + policy execution
+    -&gt; measured outcome + inspectable trace
+</code></pre>
+<p>An object name is a useful search clue, but the intended change determines
+whether a skill is relevant. A mug-placement task does not satisfy a request to
+wash a mug. A drawer task that closes the drawer adds an unwanted effect if the
+user asked for it to remain open. The current browser planner uses bounded
+lexical matching and aliases; it checks object identities, destinations,
+relations, state changes and negation, then rejects incompatible profiles. It is
+not a learned affordance estimator or a general language planner.</p>
+<p>This separation is motivated by <a href="https://say-can.github.io/">SayCan</a>, which
+combines language-based skill relevance with state-dependent affordances. Our
+current rule-based filter does not reproduce SayCan&#39;s learned value functions
+or its reported performance. The design implication is to keep goal relevance,
+observed prerequisites and runtime compatibility independently inspectable.</p>
+<p>Every executable candidate currently carries a skill ID, instruction, required
+objects, effects, prerequisites, profile ID, checkpoint repository, immutable
+revision and benchmark task ID. The present profile is
+<code>libero-panda-openvla-v1</code>: a Franka Panda simulation using seven-dimensional OSC
+pose actions. Its checkpoint is
+<a href="https://huggingface.co/openvla/openvla-7b-finetuned-libero-10/tree/80970322773f81baa2e22fe495d0487b93a05cfa"><code>openvla/openvla-7b-finetuned-libero-10</code></a>.
+The ten task entries share the same checkpoint; downloading each task does not
+create ten separate learned policies.</p>
+<p>The <a href="../../downloads/topics/physical-grounding/runs/2026-10-27-robot-lab/skill-manifest.example.json">example v1 manifest</a>
+is documentation only and contains no installed artifact.</p>
+<p>A broader skill registry will also need versioned observation and action
+schemas, units, control rate, gripper convention, tested operating envelope,
+required sensors, adapter versions and task-specific evaluation receipts.
+Hardware compatibility would require its own tested adapter and qualification.
+Those extended registry fields are a proposed contract, not an implemented
+universal skill package.</p>
+<h2 id="execution-belongs-to-the-local-worker">Execution belongs to the local worker</h2>
+<p>The browser communicates with an isolated loopback worker using the typed
+<code>dvidia.robot-lab.v1</code> protocol and an in-memory capability. The worker performs
+real detector calls, artifact verification, native resets, model loading and
+bounded runs. It contains no physical robot driver. Checkpoint size, revision
+and digests are verified before atomic activation; partial files never count as
+an installed skill. The runtime loads explicit classes from pinned OpenVLA
+source rather than executing a checkpoint&#39;s remote class mapping.</p>
+<p>An arbitrary household photo is planning input. It is not an executable LIBERO
+state. Before a run, the user must select a supported benchmark task and capture
+its real simulator camera and initial state. Task metadata is marked as
+simulator evidence, distinct from image detections and user corrections. A run
+is bound to that task, scene, seed and installed checkpoint. Completion must
+come from the simulator&#39;s task-success signal.</p>
+<p><a href="https://github.com/openvla/openvla">OpenVLA</a> supplies a language-conditioned
+robot action policy. The selected <a href="https://huggingface.co/openvla/openvla-7b-finetuned-libero-10">checkpoint card</a>
+describes a LIBERO-10 fine-tune; it is a concrete starting point for this
+benchmark-specific experiment, not a generally installable housekeeping model.
+The runtime uses <code>predict_action</code> with the <code>libero_10</code> normalization statistics.
+Code, checkpoint and underlying model terms need separate review; the upstream
+MIT labels do not replace the applicable Llama 2 terms or third-party asset
+licenses.</p>
+<h2 id="what-has-actually-run">What has actually run</h2>
+<p>The retained receipt was recorded on 26 October 2026 and is published here as a
+historical engineering result. It is not a fresh benchmark of this note&#39;s date.</p>
+<div class="table-scroll" role="region" aria-label="Research table" tabindex="0"><table><thead><tr><th>Component</th><th>Recorded evidence</th><th>Limit</th></tr></thead><tbody><tr><td>Local runtime</td><td>Python 3.12.9, Torch 2.6.0 and MPS detected on an Apple Silicon Mac</td><td>Full OpenVLA memory fit and latency unverified</td></tr><tr><td>Real photo inference</td><td>Verified TorchVision SSDlite checkpoint; cup 0.9957, person 0.8254 and dining table 0.4730 on one editorial image</td><td>Confidence scores are detector outputs, not measured accuracy; no dirt, color, ownership or task-state judgment</td></tr><tr><td>Native task reset</td><td>LIBERO-10 task 5, seed 7, book/caddy camera image and flattened-state digest</td><td>Zero policy actions; ten no-op settling steps only</td></tr><tr><td>Reset repeatability</td><td>Worker-thread and independent main-thread reset digests match</td><td>Matching initial state does not establish deterministic inference or rollouts</td></tr><tr><td>Artifact installation</td><td>Interrupted transfer retained 8 MiB of a roughly 15.1 GB checkpoint</td><td>No activated checkpoint</td></tr><tr><td>Policy and steering</td><td>Transport and hook fixtures tested</td><td>No learned rollout, task result or behavioral steering measurement</td></tr></tbody></table></div>
+<p>The reset digest is
+<code>b133849e34e709aaecf9f42e1a281d9dc53dfeeebf01d5e41077914b8d12893e</code>.
+The macOS worker uses MuJoCo&#39;s official offscreen CGL context to avoid initializing
+GLFW/AppKit from an HTTP worker thread. This changes context selection, not the
+physics or observed state. Only the task-5 asset closure was provisioned for the
+recorded runtime check; other task assets remain locally unverified.</p>
+<p><figure><img src="../../downloads/topics/physical-grounding/runs/2026-10-27-robot-lab/libero-task5-reset.png" alt="Actual LIBERO task-5 reset camera, before any policy action" loading="lazy"><figcaption>Actual LIBERO task-5 reset camera, before any policy action</figcaption></figure></p>
+<p>The photograph used for detector testing was an editorial illustration from the
+app, not a physical robot camera capture. The simulator image above is an actual
+rendered reset. Neither is evidence that a robot performed the requested action.</p>
+<h2 id="neuron-exploration-is-a-separate-measured-intervention">Neuron exploration is a separate measured intervention</h2>
+<p><a href="https://github.com/lyramakesmusic/neuron-explorer">Lyra&#39;s neuron explorer</a>
+inspired the interaction: inspect model units, change a unit&#39;s activation and
+retain the resulting behavior. Its text-model experiments do not by themselves
+establish a robot control method. The directly relevant robotics precedent is
+<a href="https://vla-mech-interp.github.io/">Mechanistic Interpretability for Steering Vision Language Action Models</a>,
+which studies semantic activation directions and interventions in OpenVLA and
+π₀. Its <a href="https://github.com/Physical-AI-Safety-Institute/mechanistic-steering-vlas">research code</a>
+is a methodological reference; the DVIDIA worker uses an original hook and does
+not vendor that toolkit.</p>
+<p>The implemented hook observes a zero-based intermediate Llama MLP channel at the
+input to <code>down_proj</code>. It records the last token&#39;s value on each autoregressive
+forward pass and can add a bounded raw dose to that channel. The displayed
+per-action value averages the pre-intervention values across generation passes.
+This is <strong>a raw channel intervention</strong>, not an identified “careful,” “fast” or
+“move left” neuron. It is also not an implementation-equivalent reproduction of
+the paper&#39;s semantic cluster interventions. Hook cleanup and cancellation have
+unit coverage; their effects on a loaded robot policy remain unmeasured.</p>
+<p>Before behavioral claims, compare an unsteered baseline and intervention on the
+same checkpoint, task, seed, preprocessing and exact reset digest. Record all
+action dimensions, end-effector motion, activation summaries, cameras,
+completion and failures. Current portable Pillow preprocessing is explicitly a
+numerical variant of upstream&#39;s TensorFlow path, so published OpenVLA benchmark
+scores are not a performance reference for this Mac configuration.</p>
+<h2 id="staged-evaluation-and-release-gates">Staged evaluation and release gates</h2>
+<ol>
+<li><strong>Conversation and retrieval:</strong> freeze a small set of supported and
+unsupported requests, including ambiguous destinations, negation and desired
+state changes. Independently label compatible candidates. Report retrieval
+precision and recall, unsupported-task handling and clarification behavior.
+An interaction that looks correct is not evidence of execution.</li>
+<li><strong>Installation and one-action diagnostic:</strong> finish the revision-pinned
+transfer, verify every artifact, load the full model and execute one real
+action on the recorded task-5 reset. Record peak memory, load/inference time,
+actual action vector and failure status. Stop if memory or rendering is
+insufficient; a substitute controller does not satisfy this gate.</li>
+<li><strong>Baseline simulation:</strong> run bounded unsteered episodes on a frozen set of
+seeds. Retain every attempt and the actual LIBERO success signal. Report
+strict completion, step counts, latency and invalid attempts separately.</li>
+<li><strong>Causal channel study:</strong> choose units and doses using development scenes,
+then freeze them. Compare paired baseline, sham-hook, positive/negative-dose
+and randomly selected channel controls on held-out seeds. Measure task
+completion alongside motion changes; do not select only successful videos.</li>
+<li><strong>Skill sequencing and household transfer:</strong> introduce separately qualified
+skills, evidence refresh after each action, explicit recovery and destination
+rules. Hardware execution needs independent adapter, sensing and task
+qualification. This stage is not implemented or run.</li>
+</ol>
+<p>Stages 2–5 remain unrun. The first deliverable is an honest conversation that
+connects to real tools and makes missing capability understandable. The research
+question is whether that interface can select a skill whose measured behavior
+achieves the user&#39;s intended change, and whether controlled interventions alter
+that behavior reproducibly without degrading completion.</p>
+</div></article><footer class="site-footer"><p>Published by DVIDIA · <a href="mailto:hello@dvidia.org">hello@dvidia.org</a></p><p><a href="https://github.com/Dvidia-Inference/dvidia-research">Source and revisions</a> · <a href="https://huggingface.co/Dvidia">Hugging Face</a> · <a href="../../feed.xml">RSS</a> · <a href="https://x.com/iammrriver">@iammrriver</a></p><p>Writing: <a href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/LICENSE">CC BY 4.0</a>. Original code: <a href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/LICENSE-CODE">MIT</a>. External work retains its own terms.</p></footer></main></body></html>

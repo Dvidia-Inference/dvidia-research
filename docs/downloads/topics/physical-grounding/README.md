@@ -1,5 +1,16 @@
 # Physical grounding
 
+## Chat to compatible robot skills — 27 October 2026
+
+[From a conversation to compatible robot skills](../../reports/Chat%20to%20compatible%20robot%20skills.md)
+proposes one conversation from photo and desired outcome to grounded skill
+selection, installation, simulation and trace inspection. The local prototype
+records real object detection and one repeated native task-5 reset. An interrupted
+8 MiB partial checkpoint is not an installation; OpenVLA actions, steering
+measurements, general household planning and hardware execution remain unrun.
+[The runtime archive](runs/2026-10-27-robot-lab/README.md) preserves the exact
+receipt, actual reset image and a documentation-only skill manifest.
+
 
 ## Live PiPER shoe workstation — 13 October 2026
 
