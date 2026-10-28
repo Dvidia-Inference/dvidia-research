@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "chat-to-robot-skills",
+      "title": "From a conversation to compatible robot skills",
+      "source": "reports/Chat to compatible robot skills.md",
+      "date": "2026-10-27",
+      "type": "Product architecture and local runtime verification",
+      "status": "Photo inference and one native reset verified · OpenVLA actions and steering not run",
+      "topics": [
+        "physical-grounding",
+        "skill-relations",
+        "evaluation-provenance"
+      ],
+      "abstract": "A conversation can carry a photo and desired outcome through scene review, skill retrieval, compatible installation, simulation and inspectable action traces. The local prototype uses ten LIBERO-10 task manifests sharing a pinned OpenVLA checkpoint. Real SSDlite inference and a repeatable native task-5 reset are recorded; the checkpoint transfer stopped after an 8 MiB partial file, so learned policy actions and activation-steered behavior remain unrun. The note separates observed evidence, candidate relevance, executable compatibility and measured completion, and defines staged evaluation for the chat workflow and raw MLP channel interventions. General household planning and hardware execution remain unqualified."
+    },
+    {
       "slug": "learned-piper-grip-v02",
       "title": "Learning grip feedback with a frozen PiPER arm reference",
       "source": "reports/Learned PiPER grip v02.md",

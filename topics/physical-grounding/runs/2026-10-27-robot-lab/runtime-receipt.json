@@ -1,0 +1,152 @@
+{
+  "recordedAt": "2026-10-26T07:00:08.623063+00:00",
+  "scope": "Local Mac runtime verification; no OpenVLA weights or learned rollout",
+  "profileId": "libero-panda-openvla-v1",
+  "model": {
+    "checkpoint": "openvla/openvla-7b-finetuned-libero-10",
+    "revision": "80970322773f81baa2e22fe495d0487b93a05cfa",
+    "weightsInstalled": false,
+    "inferenceExecuted": false,
+    "steeredRobotActionsExecuted": false
+  },
+  "sources": {
+    "openvlaRevision": "c8f03f48af692657d3060c19588038c7220e9af9",
+    "liberoRevision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "liberoAssetScope": "Only task 5 study/book/caddy asset closure was fetched; other task assets unverified"
+  },
+  "runtime": {
+    "python": "3.12.9",
+    "mpsAvailable": true,
+    "torch": "2.6.0",
+    "torchvision": "0.21.0",
+    "numpy": "1.26.4",
+    "Pillow": "13.0.0",
+    "transformers": "4.40.1",
+    "tokenizers": "0.19.1",
+    "timm": "0.9.10",
+    "accelerate": "0.30.1",
+    "huggingface-hub": "0.23.0",
+    "safetensors": "0.4.5",
+    "mujoco": "3.1.1",
+    "robosuite": "1.4.1",
+    "bddl": "1.0.1",
+    "gym": "0.25.2",
+    "cloudpickle": "2.1.0",
+    "easydict": "1.9",
+    "imageio": "2.38.1",
+    "PyYAML": "6.0.3",
+    "sentencepiece": "0.2.2",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "scipy": "1.17.1",
+    "mpsContext": "Host graphics access; sandboxed process reports unavailable",
+    "future": "1.0.0",
+    "matplotlib": "3.10.8",
+    "contourpy": "1.3.2"
+  },
+  "sourceClasses": {
+    "verified": true,
+    "classes": [
+      "OpenVLAConfig",
+      "OpenVLAForActionPrediction",
+      "PrismaticProcessor"
+    ],
+    "modelInstantiated": false
+  },
+  "photoDetection": {
+    "verified": true,
+    "image": "public/skill-cup.jpg",
+    "imageSize": [
+      1024,
+      768
+    ],
+    "detector": "TorchVision SSDlite320 MobileNetV3 COCO",
+    "checkpointSha256": "a79551df90c79834bcd3bb3845ef9d966b5449a3a9b2833ae8404778ca5d65d2",
+    "elapsedSeconds": 22.981,
+    "objects": [
+      {
+        "id": "detected-0",
+        "label": "cup",
+        "confidence": 0.9956732392311096,
+        "box": [
+          0.39903393387794495,
+          0.47789963086446124,
+          0.6025710105895996,
+          0.7762130896250407
+        ],
+        "source": "detector"
+      },
+      {
+        "id": "detected-1",
+        "label": "person",
+        "confidence": 0.8253621459007263,
+        "box": [
+          0.4701840579509735,
+          0.1547549068927765,
+          1,
+          0.7927147547403971
+        ],
+        "source": "detector"
+      },
+      {
+        "id": "detected-2",
+        "label": "dining table",
+        "confidence": 0.4729897677898407,
+        "box": [
+          0,
+          0.5605224768320719,
+          1,
+          0.9700164794921875
+        ],
+        "source": "detector"
+      }
+    ],
+    "limitations": "Coarse detector hypotheses, no color/dirt/ownership/task-state inference"
+  },
+  "simulatorReset": {
+    "verified": true,
+    "taskId": 5,
+    "seed": 7,
+    "instruction": "pick up the book and place it in the back compartment of the caddy",
+    "resetHash": "b133849e34e709aaecf9f42e1a281d9dc53dfeeebf01d5e41077914b8d12893e",
+    "image": "docs/evidence/robot-lab-libero-reset-20261026.png",
+    "imageSize": [
+      256,
+      256
+    ],
+    "actualState": [
+      -0.29572729160672406,
+      0.013003376967992303,
+      1.1680005404829354,
+      0.9995841690598055,
+      0.0017969395174486705,
+      -0.02877830619454855,
+      0.0002628040344518339,
+      0.03872207014699441,
+      -0.038723508260440485
+    ],
+    "elapsedSeconds": 15.78,
+    "threaded": true,
+    "policyActionsExecuted": 0,
+    "settlingNoopSteps": 10,
+    "renderer": "Official mujoco.cgl.GLContext via original constructor adapter for robosuite1.4.1",
+    "independentMainThreadResetHash": "b133849e34e709aaecf9f42e1a281d9dc53dfeeebf01d5e41077914b8d12893e",
+    "repeatResetHashMatched": true,
+    "cameraVisuallyInspected": true,
+    "initialMacFailureResolved": "GLFW initialized AppKit off the main thread; official offscreen CGL adapter removes that path"
+  },
+  "workerTests": {
+    "command": "python -m unittest discover -s robot-lab/tests -q",
+    "python": "3.12.9",
+    "passed": 30,
+    "failed": 0,
+    "fixtureScope": "Unit/protocol/transport/hook tests include explicit synthetic fixtures; separate simulator and detector results are actual runtime measurements"
+  },
+  "workerSourceSha256": {
+    "runtime.py": "5ff4db2097335304e755a82c299a3521830b3f3e9bc545f95dbea5f1161df07f",
+    "server.py": "acc0f9e5f2ad873df47feae801094696463df66ce9d388a9fe057516a4d74e76",
+    "artifacts.py": "0567fd4c4ccf369e8fef2574e643daa7df32b6a05e0a06c2ee7941cade05ebe6",
+    "catalog.py": "dbc9916f9ec403507e1f305eb31d7c7b4f3be4e67807d85fa7aedb347e45f595",
+    "requirements.txt": "d30b0762abaedf377dcac22270a87a895f1e587c6d241bcb9705011b05d25eac"
+  }
+}

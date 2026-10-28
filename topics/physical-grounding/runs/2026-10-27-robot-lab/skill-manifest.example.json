@@ -1,0 +1,26 @@
+{
+  "id": "openvla-libero10-5",
+  "title": "Put book into caddy",
+  "description": "OpenVLA LIBERO-10 task 5; one shared learned checkpoint.",
+  "instruction": "pick up the book and place it in the back compartment of the caddy",
+  "objects": [
+    "book",
+    "caddy"
+  ],
+  "effects": [
+    "book in back compartment of caddy"
+  ],
+  "prerequisites": [
+    "LIBERO-10 matching task reset",
+    "Franka Panda simulation with 7D OSC pose actions",
+    "Reachable task objects in benchmark arrangement"
+  ],
+  "profileId": "libero-panda-openvla-v1",
+  "checkpoint": "openvla/openvla-7b-finetuned-libero-10",
+  "revision": "80970322773f81baa2e22fe495d0487b93a05cfa",
+  "license": "MIT (OpenVLA code and checkpoint); LIBERO MIT; Llama 2 terms apply",
+  "taskId": 5,
+  "installed": false,
+  "compatible": false,
+  "blocker": "Documentation example; runtime compatibility has not been checked"
+}
