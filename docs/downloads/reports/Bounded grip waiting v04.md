@@ -45,3 +45,12 @@ Original DVIDIA code and report: MIT. This release contains compact summaries an
 
 
 [Anonymous pinned download proof](https://research.dvidia.org/downloads/topics/evaluation-provenance/runs/2026-10-30-usd-and-grip-publication/grip-wait-anonymous-readback.json) verifies all 22 compact dataset files. [GitHub compact evidence release](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/piper-grip-wait-v0.4-recovery).
+
+
+## Engineering follow-up: preserve the action evidence
+
+[DVIDIA Training 0.1.2](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/training-v0.1.2) adds an in-memory recording API and Terminal tools for causal PiPER action demonstrations. Provided camera references, sensor acquisition/arrival times, requested and issued actions, ramped targets and applied controls remain separate. Checks bind native channel order and ranges, finger-slide units, calibration identities, missing observations and interrupted attempts. Target exports retain outcomes and provenance outside the explicit model-input fields.
+
+All 203 required default-branch tests pass, including 27 recorder tests; 18 local HTTP tests required a separate run with loopback access. An independently reviewed format and isolated installed-wheel CLI smoke cover consistency and refusal behavior. These are software tests, not additional manipulation trials or a learned controller result. The included example is synthetic metadata with no real pixels, and target export refuses it by default.
+
+The tool accepts supplied records; it does not capture live sensors, infer motor labels from video, decode or validate RGB-D, execute physics or send robot commands. The next step is a synchronized simulation producer and reviewed corrective demonstrations before the proposed action-learning experiment. [Format and usage guide](https://github.com/Dvidia-Inference/dvidia-training/blob/training-v0.1.2/docs/action-demonstrations.md) · [Current execution map](https://github.com/Dvidia-Inference/dvidia-training/blob/training-v0.1.2/docs/roadmap.md).
