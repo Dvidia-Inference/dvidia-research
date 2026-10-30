@@ -1,0 +1,31 @@
+{
+  "anonymous_full_readback": true,
+  "derivation": "Compact public projection of preserved original receipt; omitted internal commit inventories and local recovery records are bound by the source receipt SHA-256. No original receipt was changed.",
+  "physical_robot_ready": false,
+  "repositories": [
+    {
+      "commit": "ac71909a4df97b7e99a28e3270140d0810f08993",
+      "repo_id": "Dvidia/piper-grip-clock-v03",
+      "repo_type": "model",
+      "verified_bytes": 8854932,
+      "verified_files": 50
+    },
+    {
+      "commit": "26a2f09a4b250181e23d294dcc282632ff61362e",
+      "repo_id": "Dvidia/piper-grip-clock-demonstrations-v03",
+      "repo_type": "dataset",
+      "verified_bytes": 4357964929,
+      "verified_files": 6239
+    }
+  ],
+  "reviewed_plan": {
+    "bytes": 2178589,
+    "sha256": "8739170ba043975e4bea6a61322c69bec3458711309853e7f89ab386c8c819a0"
+  },
+  "schema": "dvidia.grip-clock-publication/v0.3/public-native-evidence-proof",
+  "scope": "Every model and dataset byte was anonymously read and matched at these original exact revisions. Later catalog cards are covered separately; no claim that all bytes were redownloaded at later heads.",
+  "source_receipt": {
+    "bytes": 2143748,
+    "sha256": "9cae52dfa3226d0625b381f8e6085f8cd715b4191dd7c8b16023cac7eff05c6f"
+  }
+}

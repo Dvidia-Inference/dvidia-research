@@ -1,0 +1,214 @@
+{
+  "schema": "dvidia.piper-action-capture-hub-reconciliation/v1",
+  "reconciler_source": {
+    "bytes": 7763,
+    "sha256": "9de3036a4cc6f773e7e6e30781a2e8138d97862c10fb668950cd1f1a8e3f0842"
+  },
+  "inputs": {
+    "plan02": {
+      "bytes": 1012656,
+      "sha256": "0ca2c22ed282b02ae9d1a2c54466dc2643c66dde5c00e302f1b331bfe3951ff4"
+    },
+    "journal02": {
+      "bytes": 633,
+      "sha256": "19d033ca6faea0488a0f15f980b91e37125ddbfa5761ff9872077d118e509d4f"
+    }
+  },
+  "remote_mutations": false,
+  "authenticated_requests": false,
+  "accepted_space": {
+    "repo": "Dvidia/robot-simulation-lab",
+    "commit": "fad813975694b8688a959bf135babb685b4f2858",
+    "parent": "aebd46af39c4158bd042c62617b6aecfa5a57861",
+    "title": "DVIDIA PiPER action capture v01 recovery 0ca2c22ed282b02ae9d1a2c54466dc2643c66dde5c00e302f1b331bfe3951ff4",
+    "files": [
+      {
+        "path": "action-capture/v01/LICENSE",
+        "bytes": 1076,
+        "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
+      },
+      {
+        "path": "action-capture/v01/README.md",
+        "bytes": 529,
+        "sha256": "67391a62ada72b755926a5aa3caddadc4e79c6c00751b6600a57c8548acb3610"
+      },
+      {
+        "path": "action-capture/v01/audits/interrupted-prefix-audit.json",
+        "bytes": 1644,
+        "sha256": "e9b57bb05ea880e9818cbaf11b4530027d0aea59b7f2898b4435a99368be2b64"
+      },
+      {
+        "path": "action-capture/v01/audits/nominal-full-audit.json",
+        "bytes": 1669,
+        "sha256": "472a88f44af3a9df8c1a2993a459c42045a02f8602636ccfd23072c8dce9a502"
+      },
+      {
+        "path": "action-capture/v01/audits/nominal-repeat-audit.json",
+        "bytes": 1669,
+        "sha256": "0f9aaf9383220e90b8fabb3c49ffe2bbec24bce1f05ffea0747e3dc7bac85250"
+      },
+      {
+        "path": "action-capture/v01/audits/repeat-comparison.json",
+        "bytes": 764,
+        "sha256": "ce9adee707286594869ae5393929df0f71a73ae51ba694ff7fbde5ba935f543c"
+      },
+      {
+        "path": "action-capture/v01/derivation-receipt.json",
+        "bytes": 422476,
+        "sha256": "af0803af5d26e9acd010458844ff26cdebf95b62d39940cbbf4dca54a9f8bc8c"
+      },
+      {
+        "path": "action-capture/v01/development/README.md",
+        "bytes": 374,
+        "sha256": "c5d6a4faa7dce16ac89d9360f6ca237cf38145a891f5d9f6f6046b5be6876ef2"
+      },
+      {
+        "path": "action-capture/v01/development/smoke02-warning.log",
+        "bytes": 8579,
+        "sha256": "817738a9f4082890e169fe280b0867c1e9df203fd3ad7af78045e0cb29a13ecd"
+      },
+      {
+        "path": "action-capture/v01/evidence/development/privileged-smoke/capture.json",
+        "bytes": 6579,
+        "sha256": "0de01ff6d8e105e09b8c07ec1ca9748c807fdba03f3be755d7c71d10aef2e88f"
+      },
+      {
+        "path": "action-capture/v01/evidence/development/sandbox-refusal/capture.json",
+        "bytes": 1785,
+        "sha256": "836b7aebfcb24f95e5ddaf51b8474de74f6c3174cca315c34b64538606e43f58"
+      },
+      {
+        "path": "action-capture/v01/index.html",
+        "bytes": 21165,
+        "sha256": "f206baa5b5ca3e5972c0887648c9db206f91dd62796e73c9c6f4e33e410a6c14"
+      },
+      {
+        "path": "action-capture/v01/licenses/agilex_piper-MIT.txt",
+        "bytes": 1065,
+        "sha256": "e32d78fd3761052ab0b2bb42fef8a7a9ad3f298d315d305333c349d2aff1f134"
+      },
+      {
+        "path": "action-capture/v01/licenses/mujoco-Apache-2.0.txt",
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "action-capture/v01/licenses/mujoco-third-party.txt",
+        "bytes": 227883,
+        "sha256": "aec5167579b94d6926340175b4f764b5159f4933657556d89bbfb8238d3b3eb8"
+      },
+      {
+        "path": "action-capture/v01/manifest.json",
+        "bytes": 3941,
+        "sha256": "83af05a5e89b789ff0399eb9a3ccdc15b0b396fd70e6df2a9b3602acbe0747e5"
+      },
+      {
+        "path": "action-capture/v01/media/interrupted-prefix.mp4",
+        "bytes": 3682,
+        "sha256": "3b5ee6330a7175db5ed776a6e99001301e40521362de7191e6aaa7dfdbb32c77"
+      },
+      {
+        "path": "action-capture/v01/media/nominal-full.mp4",
+        "bytes": 213565,
+        "sha256": "fca479dcb3a71b0058a07e42c4fa76700b56825a860b731bb548d042fee0ac7f"
+      },
+      {
+        "path": "action-capture/v01/media/nominal-repeat.mp4",
+        "bytes": 213565,
+        "sha256": "fca479dcb3a71b0058a07e42c4fa76700b56825a860b731bb548d042fee0ac7f"
+      },
+      {
+        "path": "action-capture/v01/paper.md",
+        "bytes": 6221,
+        "sha256": "c5c9f0b03b89cd21d9ba0eea5524aec5e30e0efb8927b5ea898fdf3090f3631e"
+      },
+      {
+        "path": "action-capture/v01/posters/interrupted-prefix.png",
+        "bytes": 11701,
+        "sha256": "ae99a9962d8a0b0ccba1fc94c732466733303132e59f2645d0f2e74b117348ce"
+      },
+      {
+        "path": "action-capture/v01/posters/nominal-full.png",
+        "bytes": 13091,
+        "sha256": "2127ab743c8f3ff7359f500aed828a4d0aaedd183a8166686e32ee9f73c51c31"
+      },
+      {
+        "path": "action-capture/v01/posters/nominal-repeat.png",
+        "bytes": 13091,
+        "sha256": "2127ab743c8f3ff7359f500aed828a4d0aaedd183a8166686e32ee9f73c51c31"
+      },
+      {
+        "path": "action-capture/v01/protocol.json",
+        "bytes": 2699,
+        "sha256": "e50091c260f483ff5fe2a6f3393df13aea2d48c7301b0dee1a3d6605dc2737ef"
+      },
+      {
+        "path": "action-capture/v01/report.js",
+        "bytes": 18050,
+        "sha256": "2e1bf7f13d4a79afde2f37a883fae9eb95dcbc9cba82e5124292d564a3a3136d"
+      },
+      {
+        "path": "action-capture/v01/summary.json",
+        "bytes": 5819,
+        "sha256": "1aea3ba59d60d53ec428a99b5828b90b49310a95791aa82e3e565a0cd6190547"
+      },
+      {
+        "path": "action-capture/v01/viewer-data.json",
+        "bytes": 1917090,
+        "sha256": "ac7487f80e95c165f2c03ec94b948c805daa186ff615c45826ed96a6a62d3a52"
+      }
+    ],
+    "anonymous_force_download": true
+  },
+  "server_deviation": {
+    "old_baseline_condition_passed": false,
+    "description": "Hub appended two exact path-scoped LFS rules to .gitattributes in the accepted commit.",
+    "old_attributes": {
+      "bytes": 41841,
+      "sha256": "f427576d03cb462ce4fec9686640b293db14878be56389a0cdd4f2e2d67576d0"
+    },
+    "new_attributes": {
+      "bytes": 41999,
+      "sha256": "e30ebf01c3e522690b87114ef8a41a70ab6dd14cbb726d5724d0bedf178ca5fe"
+    },
+    "appended_utf8": "action-capture/v01/media/nominal-full.mp4 filter=lfs diff=lfs merge=lfs -text\naction-capture/v01/media/nominal-repeat.mp4 filter=lfs diff=lfs merge=lfs -text\n",
+    "old_attribute_bytes_preserved_as_prefix": true,
+    "other_existing_objects_unchanged": 4121,
+    "all_new_payload_identities_verified": true
+  },
+  "dataset": {
+    "repo": "Dvidia/piper-action-capture-v01",
+    "commit": "ccfc321014afc5d85cede6ec23e65c40aa9a733f",
+    "completion": "reused-previously-accepted",
+    "new_dataset_writes": false,
+    "files_previously_force_downloaded": 23,
+    "pinned_byte_proof": {
+      "bytes": 4411,
+      "sha256": "1bce3a4dcd8991dce90b7416ff7862b2e9ddf547602eddbc54f108100b5ecfaa"
+    }
+  },
+  "original_intents_retained": {
+    "journal01": {
+      "bytes": 958051,
+      "sha256": "c97e8bd4fac0aa2c0cd7a81ecdf2d343f177cf708f802e348989a6226c0c55f2"
+    },
+    "journal02": {
+      "bytes": 633,
+      "sha256": "19d033ca6faea0488a0f15f980b91e37125ddbfa5761ff9872077d118e509d4f"
+    },
+    "journal01_pending": {
+      "index": 0,
+      "parent": "aebd46af39c4158bd042c62617b6aecfa5a57861",
+      "title": "DVIDIA PiPER action capture v01 8248c72bbbfed36aa315809f15bfaf5c7e128222bc71885b6940a24971e86ba8 space 0"
+    },
+    "journal02_pending": {
+      "parent": "aebd46af39c4158bd042c62617b6aecfa5a57861",
+      "title": "DVIDIA PiPER action capture v01 recovery 0ca2c22ed282b02ae9d1a2c54466dc2643c66dde5c00e302f1b331bfe3951ff4",
+      "files": 27
+    },
+    "rewritten": false
+  },
+  "all_50_file_bytes_verified_at_pinned_revisions": true,
+  "qualified_robot_skill": false,
+  "physical_robot_ready": false
+}

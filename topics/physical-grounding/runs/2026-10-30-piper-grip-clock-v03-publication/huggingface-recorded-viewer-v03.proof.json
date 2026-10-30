@@ -1,0 +1,141 @@
+{
+  "all_confirmation_results": 512,
+  "dataset_revision": "28d43b02dd3233c98d98e8c6188f451ae83493bb",
+  "derivation": "Compact public projection of preserved original receipt; omitted internal commit inventories and local recovery records are bound by the source receipt SHA-256. No original receipt was changed.",
+  "display_only_overlay": {
+    "anonymous_full_changed_file_readback": true,
+    "changed_files": [
+      {
+        "bytes": 9917,
+        "path": "learned-placement/v03/viewer/index.html",
+        "sha256": "f8027825f5d46df7e9d17dd365437198c7f278cdbb1dc4f71f2d1517d4f950c9"
+      },
+      {
+        "bytes": 3919497,
+        "path": "learned-placement/v03/viewer/motion.json",
+        "sha256": "c6a5a550e931c120ed3e47282f8aaf96c72970bc93eb40aed5941d979f8e8f9a"
+      },
+      {
+        "bytes": 6349320,
+        "path": "learned-placement/v03/viewer/piper_grip_clock_viewer.bundle.js",
+        "sha256": "925f6c186ff3348b9dac7eaa4eee4706967f5b9ce8353920d04643c3162e8f45"
+      },
+      {
+        "bytes": 28884,
+        "path": "learned-placement/v03/viewer/piper_grip_clock_viewer.js",
+        "sha256": "d2f7d16d5b91f6f66350324e1271a7509d8756ac0c73f5e0563e604a6fb035ea"
+      },
+      {
+        "bytes": 5823109,
+        "path": "learned-placement/v03/viewer/replay-resources.json",
+        "sha256": "9c2f8a074c21fb02a427dae2142a6f7879ce047c65e4e84b708bbd82d564c3a0"
+      },
+      {
+        "bytes": 53779,
+        "path": "learned-placement/v03/viewer/scene.json",
+        "sha256": "92950299286c88bc47a5f3796ac5c2c1c47c5ceb5ef25a51bbb1a7e2b6c9ff3b"
+      },
+      {
+        "bytes": 37301,
+        "path": "learned-placement/v03/viewer/viewer-integrity.json",
+        "sha256": "5a9db77fe09df2c8cccc31fff1d7c9ba2beddb552013fc4d10114a3bc4920a1c"
+      }
+    ],
+    "commit": "2999bf26158dd5176574f25372f8f57f288fca14",
+    "display_source_commit": "17e66fe22b585500914159ca280b2c8667c0d807",
+    "original_273_file_proof_reused_at": "82cbf2e84000d3b9d3fe9e86aabb64ce546b372b",
+    "parent_commit": "82cbf2e84000d3b9d3fe9e86aabb64ce546b372b",
+    "preserved_other_git_lfs_objects": 4415,
+    "reviewed_plan": {
+      "bytes": 975168,
+      "sha256": "fdc18c20243acff54aeebb78f264bfcda838495a3fc15332fadc263bc95ebbda"
+    },
+    "scope": "Seven display/provenance files were anonymously read back after replacing a recursive base64 validation pattern. Other Space object identities were preserved; the complete archive was not redownloaded at this overlay head.",
+    "source_anonymous_readback": {
+      "bytes": 2657,
+      "sha256": "198125567c506fd986befe402d126d8f1c12fab8da54301159dea4d476c81c1d"
+    },
+    "source_receipt": {
+      "bytes": 424,
+      "sha256": "7705c95c549ef4af903bb96420b7b365fac4648b0946d21dac4187d303a610ef"
+    },
+    "verified_bytes": 16221807,
+    "verified_files": 7
+  },
+  "namespace": "learned-placement/v03/",
+  "original_base_publication": {
+    "anonymous_full_readback": true,
+    "commits": [
+      {
+        "anonymous_readback": true,
+        "commit": "8aabc09e609de61e8d5915ba50b78db467f944b6",
+        "files": 100,
+        "index": 0,
+        "parent": "fad813975694b8688a959bf135babb685b4f2858",
+        "reconciled": false
+      },
+      {
+        "anonymous_readback": true,
+        "commit": "b63d3cf8c2e880b24b04cf4f9a4b5f02dec28291",
+        "files": 100,
+        "index": 1,
+        "parent": "8aabc09e609de61e8d5915ba50b78db467f944b6",
+        "reconciled": true
+      },
+      {
+        "anonymous_readback": true,
+        "commit": "82cbf2e84000d3b9d3fe9e86aabb64ce546b372b",
+        "files": 73,
+        "index": 2,
+        "parent": "b63d3cf8c2e880b24b04cf4f9a4b5f02dec28291",
+        "reconciled": false
+      }
+    ],
+    "limitation": "These original bytes had a browser startup stack-overflow bug; byte integrity did not establish browser usability.",
+    "parent_commit": "fad813975694b8688a959bf135babb685b4f2858",
+    "repository": {
+      "commit": "82cbf2e84000d3b9d3fe9e86aabb64ce546b372b",
+      "preserved_baseline_files": 4149,
+      "repo_id": "Dvidia/robot-simulation-lab",
+      "repo_type": "space",
+      "verified_bytes": 137601023,
+      "verified_files": 273
+    },
+    "reviewed_plan": {
+      "bytes": 83323,
+      "sha256": "f6c6e4cfb36faee7b7c75a3b1b35f28ddab4abe10df8df00c1a0c0215e1c4b0d"
+    },
+    "source_receipt": {
+      "bytes": 76371,
+      "sha256": "cca27dc588c94b1136ea964d1ca80265c4da0ddb991bbdbd381183a448f7012d"
+    }
+  },
+  "physical_robot_ready": false,
+  "recorded_replay_cases": 258,
+  "replay_selection": {
+    "blind_clock": 128,
+    "clock": 128,
+    "fixed": 1,
+    "teacher": 1
+  },
+  "schema": "dvidia.grip-clock-publication/v0.3/public-recorded-viewer-proof",
+  "scientific_invariance": {
+    "all_257_lazy_replay_scripts_byte_identical": true,
+    "all_scientific_numeric_outcomes_geometry_poses_frames_unchanged": true,
+    "delta_source": {
+      "bytes": 44123,
+      "sha256": "16151fd3c0dc4cf436e12ad79cb68168de68eb67aaafb53809cf852171b01bc4"
+    },
+    "first_replay_frames_poses_payload_identical": true,
+    "geometry_raw_and_compressed_bytes_identical": true,
+    "independent_qa_source": {
+      "bytes": 48535,
+      "sha256": "c2734d4251bb22adc5f2442d86c6953cd00a3255b26b87528f13b4f40843336f"
+    },
+    "recorded_frames": 258258,
+    "report_protocol_frozen_scientific_sources_byte_identical": true,
+    "scene_motion_only_changed_field": "$.source.browser_source_sha256"
+  },
+  "scope": "Recorded geometry/pose projection with separate base byte-verification and browser display-repair revisions. No dynamics stepping, new outcomes, training or hardware qualification.",
+  "viewer_url": "https://dvidia-robot-simulation-lab.static.hf.space/learned-placement/v03/viewer/index.html"
+}

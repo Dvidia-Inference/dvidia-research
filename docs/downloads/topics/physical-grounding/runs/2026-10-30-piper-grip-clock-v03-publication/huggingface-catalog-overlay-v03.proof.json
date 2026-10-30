@@ -1,0 +1,103 @@
+{
+  "anonymous_changed_file_readback": true,
+  "derivation": "Compact public projection of preserved original receipt; omitted internal commit inventories and local recovery records are bound by the source receipt SHA-256. No original receipt was changed.",
+  "full_unchanged_git_lfs_identities_preserved": true,
+  "original_full_byte_receipt": {
+    "bytes": 2143748,
+    "sha256": "9cae52dfa3226d0625b381f8e6085f8cd715b4191dd7c8b16023cac7eff05c6f"
+  },
+  "physical_robot_ready": false,
+  "repositories": [
+    {
+      "changed_files": {
+        "README.md": {
+          "bytes": 3620,
+          "sha256": "dd71cbd15433154a826a4140c9ce321964db6a7eb5dcb6b45d61811bed372b00"
+        },
+        "integrity.json": {
+          "bytes": 8118,
+          "sha256": "36d3631912fb3c0fdbcd859eced9d5628ff74c730ce299670cce142940cd6427"
+        },
+        "metadata/catalog-overlay.json": {
+          "bytes": 1174,
+          "sha256": "415b13d91818cec8fa4f93c48a2903b36d881fd5cc35dfeb8ee5ba26b51e8bd0"
+        },
+        "metadata/original-README.md": {
+          "bytes": 3613,
+          "sha256": "de0ecf7b3a45999e2d9156098eff9496197189c8226dec5e86240c8bd9d97a54"
+        },
+        "metadata/original-integrity.json": {
+          "bytes": 7142,
+          "sha256": "b1b158a56efbe2c1215a1f520b78871903c01bbc281070cce357a3eb42e620b0"
+        }
+      },
+      "changed_paths": [
+        "README.md",
+        "integrity.json",
+        "metadata/original-README.md",
+        "metadata/original-integrity.json",
+        "metadata/catalog-overlay.json"
+      ],
+      "commit": "a0b94a3f6ad8d0c88f2a7aee258d69531a3a03f8",
+      "original_files": 50,
+      "parent_commit": "ac71909a4df97b7e99a28e3270140d0810f08993",
+      "reconciled": false,
+      "repo_id": "Dvidia/piper-grip-clock-v03",
+      "repo_type": "model",
+      "resulting_files": 53,
+      "unchanged_git_lfs_files": 48,
+      "unchanged_git_lfs_sha256": "739932320143fea93b0a0ef19aa417f518f6e0aee118d0f2d130d260d64b3643"
+    },
+    {
+      "changed_files": {
+        "README.md": {
+          "bytes": 2599,
+          "sha256": "9a2cb21d6d7dee9cd3aa867f1f9d0204bccb6217eecdcd20b2b16d452c4d9ca8"
+        },
+        "integrity.json": {
+          "bytes": 1203427,
+          "sha256": "bfbbd6f1bbf32538d26a2d2f3f035c294d5dfdd576df14448caadad9088d9c64"
+        },
+        "metadata/catalog-overlay.json": {
+          "bytes": 1194,
+          "sha256": "3334fb4fc996a17c9d0dcd51daca171facda66650fb40a0d83c10cc659374257"
+        },
+        "metadata/original-README.md": {
+          "bytes": 2592,
+          "sha256": "53649d85a6a8ae34479085a417b50dc0198a9d57deffc99950ff6e6474306684"
+        },
+        "metadata/original-integrity.json": {
+          "bytes": 1202445,
+          "sha256": "6987c6d00ae1855f65873f1e36efe0abb3bfff42e52782c8e7184a7e8e130685"
+        }
+      },
+      "changed_paths": [
+        "README.md",
+        "integrity.json",
+        "metadata/original-README.md",
+        "metadata/original-integrity.json",
+        "metadata/catalog-overlay.json"
+      ],
+      "commit": "28d43b02dd3233c98d98e8c6188f451ae83493bb",
+      "original_files": 6239,
+      "parent_commit": "26a2f09a4b250181e23d294dcc282632ff61362e",
+      "reconciled": false,
+      "repo_id": "Dvidia/piper-grip-clock-demonstrations-v03",
+      "repo_type": "dataset",
+      "resulting_files": 6242,
+      "unchanged_git_lfs_files": 6237,
+      "unchanged_git_lfs_sha256": "16cb68ad574e48d286f5cafddf3c66df4c7459771557b3958dbc3b0d79d72965"
+    }
+  ],
+  "reviewed_plan": {
+    "bytes": 4201,
+    "sha256": "2560207073a0a50148c005a8506cc02ef07108243244cc419bc41b2350b71a4c"
+  },
+  "schema": "dvidia.grip-clock-publication/v0.3/public-catalog-overlay-proof",
+  "scientific_file_bytes_changed": false,
+  "scope": "Only catalog metadata changed: the piper tag collision was corrected to agilex-piper, originals were preserved under metadata/, and integrity metadata was updated. Five changed files per repository were anonymously read back; all other Git/LFS identities were preserved. The complete archive was not redownloaded at the overlay heads.",
+  "source_receipt": {
+    "bytes": 3526,
+    "sha256": "8be3864164619c5da0fc3ce80395a167c25b0cfdd8ce4aef47eeacab407a01d1"
+  }
+}

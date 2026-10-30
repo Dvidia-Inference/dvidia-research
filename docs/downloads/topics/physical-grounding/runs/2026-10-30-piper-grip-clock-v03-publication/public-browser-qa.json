@@ -1,0 +1,24 @@
+{
+  "schema": "dvidia.clock-viewer-browser-qa/v1",
+  "url": "https://dvidia-robot-simulation-lab.static.hf.space/learned-placement/v03/viewer/index.html",
+  "revision": "2999bf26158dd5176574f25372f8f57f288fca14",
+  "observed": [
+    "Original browser startup failed with Maximum call stack size exceeded",
+    "Repaired public page starts and visually renders the PiPER mesh",
+    "First scheduled clock case retains Did not complete",
+    "Late Start32 goal2 post-grip blind replay loads through its separate script",
+    "Final blind frame at20s has19.54s progress,0.46s debt and no next command",
+    "Public replay playback advances saved joints and physical time",
+    "Source links pin the dataset revision; totals remain512 outcomes and258 visual replays"
+  ],
+  "not_tested": [
+    "Mobile browser",
+    "Every replay through the browser",
+    "New physics or inference in browser",
+    "Physical hardware"
+  ],
+  "screenshots": [
+    "before-display-repair.jpg",
+    "public-repaired-viewer.jpg"
+  ]
+}

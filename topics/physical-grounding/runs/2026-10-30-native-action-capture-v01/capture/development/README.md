@@ -1,0 +1,1 @@
+Development evidence only: the sandbox CoreGraphics refusal and earlier privileged 0.1-second smoke predate the registered protocol and frozen producer revision. They are retained separately, not included in the three registered case denominator. The earlier smoke did not capture its depth warning into structured metadata; the original warning log is retained separately.

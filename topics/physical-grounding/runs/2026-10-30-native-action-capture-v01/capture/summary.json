@@ -1,0 +1,134 @@
+{
+  "cases": [
+    {
+      "frame_bytes": 90103917,
+      "frame_files": 2002,
+      "id": "nominal-full",
+      "native_success": true,
+      "recorded_task_result": "unverified",
+      "renderer_warnings": [
+        "ARB_clip_control unavailable while mjDEPTH_ZEROFAR requested, depth accuracy will be limited"
+      ],
+      "snapshots": 1001,
+      "status": "complete",
+      "steps": 1000,
+      "timing": {
+        "boundaries_over_20ms": 11,
+        "boundary_max_seconds": 0.08277391688898206,
+        "boundary_p95_seconds": 0.015319783031009136,
+        "boundary_samples": 1000,
+        "capture_wall_seconds": 13.515884791035205,
+        "percentile_method": "Linear interpolation at (n-1)*p in sorted observations.",
+        "render_p50_seconds": 0.00844949996098876,
+        "render_p95_seconds": 0.009863624814897776,
+        "render_samples": 1001,
+        "scope": "Shared host; simulation pauses for rendering. Capture wall excludes final capture.json/integrity sealing. Not a hard real-time or minimum-hardware result."
+      }
+    },
+    {
+      "frame_bytes": 90103917,
+      "frame_files": 2002,
+      "id": "nominal-repeat",
+      "native_success": true,
+      "recorded_task_result": "unverified",
+      "renderer_warnings": [
+        "ARB_clip_control unavailable while mjDEPTH_ZEROFAR requested, depth accuracy will be limited"
+      ],
+      "snapshots": 1001,
+      "status": "complete",
+      "steps": 1000,
+      "timing": {
+        "boundaries_over_20ms": 6,
+        "boundary_max_seconds": 0.10027779079973698,
+        "boundary_p95_seconds": 0.014807785348966715,
+        "boundary_samples": 1000,
+        "capture_wall_seconds": 13.298202250152826,
+        "percentile_method": "Linear interpolation at (n-1)*p in sorted observations.",
+        "render_p50_seconds": 0.008302291855216026,
+        "render_p95_seconds": 0.009457749780267477,
+        "render_samples": 1001,
+        "scope": "Shared host; simulation pauses for rendering. Capture wall excludes final capture.json/integrity sealing. Not a hard real-time or minimum-hardware result."
+      }
+    },
+    {
+      "frame_bytes": 265934,
+      "frame_files": 6,
+      "id": "interrupted-prefix",
+      "native_success": false,
+      "recorded_task_result": "unknown",
+      "renderer_warnings": [
+        "ARB_clip_control unavailable while mjDEPTH_ZEROFAR requested, depth accuracy will be limited"
+      ],
+      "snapshots": 3,
+      "status": "interrupted",
+      "steps": 2,
+      "timing": {
+        "boundaries_over_20ms": 1,
+        "boundary_max_seconds": 0.02917774999514222,
+        "boundary_p95_seconds": 0.02841168544255197,
+        "boundary_samples": 2,
+        "capture_wall_seconds": 0.7309118341654539,
+        "percentile_method": "Linear interpolation at (n-1)*p in sorted observations.",
+        "render_p50_seconds": 0.024105791933834553,
+        "render_p95_seconds": 0.07382895397022365,
+        "render_samples": 3,
+        "scope": "Shared host; simulation pauses for rendering. Capture wall excludes final capture.json/integrity sealing. Not a hard real-time or minimum-hardware result."
+      }
+    }
+  ],
+  "depth_warning": "CGL reported ARB_clip_control unavailable while mjDEPTH_ZEROFAR was requested. Depth precision is limited; exact repeated arrays do not establish depth accuracy.",
+  "excluded_build_artifacts": {
+    "names": [
+      "__pycache__/audit_recording.cpython-312.pyc",
+      "local-preview.png",
+      "preview-dependency-download.log",
+      "preview-installed-native-smoke.log",
+      "preview-installed-test.log",
+      "preview-wheel-build.log",
+      "preview-wheel-build02.log"
+    ],
+    "reason": "Local build/install consoles, UI preview screenshot and Python bytecode are not registered capture evidence; portable preview proof, requirements and wheel manifest are included separately."
+  },
+  "missing_tracker_channels": 4,
+  "physical_robot_ready": false,
+  "preview": {
+    "status": "source preview, distinct from the stable data-only SDK 0.1.2",
+    "version": "0.1.3.dev1",
+    "wheel": {
+      "bytes": 5494221,
+      "sha256": "4ff5542d104c9b35f486fff80d4d2eced529be7a4295391535bccf459cff07bb"
+    }
+  },
+  "protocol": {
+    "bytes": 2699,
+    "sha256": "e50091c260f483ff5fe2a6f3393df13aea2d48c7301b0dee1a3d6605dc2737ef"
+  },
+  "repeat": {
+    "identical_rgb_and_depth_frame_pairs": 1001,
+    "max_difference": 0.0,
+    "maximum_absolute_difference_by_named_channel": {
+      "gripper_joint_position_m": 0.0,
+      "gripper_joint_velocity_m_s": 0.0,
+      "joint_position_rad": 0.0,
+      "joint_velocity_rad_s": 0.0,
+      "tcp_position_estimate_m": 0.0,
+      "tcp_quaternion_estimate_wxyz": 0.0
+    },
+    "same_commands": true,
+    "same_controls": true,
+    "snapshot_pairs": 1001
+  },
+  "schema": "dvidia.piper-action-capture-public-kit/v0.1",
+  "scope": "Engineering action/RGB-D capture validation, not a manipulation improvement or learned-skill benchmark.",
+  "source_sha256": {
+    "action_demonstration.py": "439c7cce558571221660cd51e7dba1675203237706ea8ea0f97f2fcf9a6a24c5",
+    "piper_action_capture.py": "ee20549f9bd239a2314c28947a0c69dd7c2b11150475685747a2c7dc0f8b399e",
+    "piper_task.py": "e66a44a8df4e7a8ee42e4f3866f889f8797cdfb8e2688a146e09b75d2c76664f",
+    "reference_sim.py": "c1201d22eb13dd07a236ee63cc4ba68e129f6067e8db61ed41af2d820eb5e3b8",
+    "reference_task.py": "bbc768ccc202b8dd41cbd235b206e6478806ce47c1f30ae15dc662c0c1edcc3e",
+    "robot_profiles.lock.json": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+    "robot_profiles.py": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d"
+  },
+  "timing_scope": "Shared host and paused simulation clock; final capture.json/integrity sealing excluded from capture wall. No hard real-time or minimum-hardware claim.",
+  "trained_skill": false
+}
