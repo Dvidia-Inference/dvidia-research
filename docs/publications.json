@@ -6,6 +6,32 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "openusd-workstation-v01",
+      "title": "A validated OpenUSD workstation for local robot simulation",
+      "source": "reports/OpenUSD workstation v01.md",
+      "date": "2026-10-30",
+      "type": "Bounded USD scene conversion and frozen passive physics checks",
+      "status": "45/45 physics checks · 36 normal cases and nine negative controls · simulation infrastructure",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A real OpenUSD parser maps original rigid-object geometry, explicit mass, centred inertia, gravity and friction into a local PiPER/MuJoCo workstation. All 36 normal drop/sliding cases and nine negative controls pass a frozen CPU benchmark; 27/27 normal drops also satisfy an independent settling goal. Complete inputs, source, recorded native poses, failed-effect controls and explicit conversion limits remain inspectable. This is a bounded scene bridge, not arbitrary USD import, learned manipulation, calibrated shoe physics or hardware transfer."
+    },
+    {
+      "slug": "bounded-grip-waiting-v04",
+      "title": "Bounded grip waiting: progress without an indefinite stall",
+      "source": "reports/Bounded grip waiting v04.md",
+      "date": "2026-10-30",
+      "type": "Authored acquisition supervisor and recovered paired confirmation study",
+      "status": "Bounded 42/128 · learned clock 32/128 · fixed 44/128 · teacher 41/128 · comparisons inconclusive",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A finite 200 ms acquisition supervisor preserves frozen PiPER arm and jaw references while replacing indefinite learned waiting. A recovered study retains 508 scored confirmation attempts and four explicitly unknown interruptions across 512 scheduled requests; primary analysis conservatively imputes unknowns as failures. Strict completions are 42 bounded, 32 learned clock, 44 fixed and 41 teacher per 128 scheduled attempts. Both adjusted paired intervals include zero. All 556 complete development and confirmation attempts audit without mismatches; 22 explicit aborts prevent indefinite acquisition stalls, while retention and critical-contact failures remain. Compact summaries bind the locally retained raw archive; no new model, human-video skill or physical qualification is claimed."
+    },
+    {
       "slug": "learned-piper-grip-v02",
       "title": "Learning grip feedback with a frozen PiPER arm reference",
       "source": "reports/Learned PiPER grip v02.md",

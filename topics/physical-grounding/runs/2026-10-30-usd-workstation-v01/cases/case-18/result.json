@@ -1,0 +1,61 @@
+{
+  "valid": true,
+  "checks": {
+    "finite": true,
+    "complete_cadence": true,
+    "robot_contact_absent": true,
+    "freefall_accuracy": true,
+    "resting_height": true,
+    "stopped": true,
+    "supported": true,
+    "no_native_warning": true
+  },
+  "success": true,
+  "metrics": {
+    "early_position_error_m": 0.00024525053501131544,
+    "final_height_m": 0.019892244575303024,
+    "final_speed_m_s": 2.8996469814013484e-11
+  },
+  "case": {
+    "id": "case-18",
+    "seed": 301729,
+    "kind": "drop",
+    "mass_kg": 0.08,
+    "friction": 0.5,
+    "height_m": 0.2,
+    "control": "normal"
+  },
+  "native_goal": {
+    "position": true,
+    "linear_speed": true,
+    "angular_speed": true,
+    "table_contact": true,
+    "no_robot_contact": true,
+    "instantaneous": true,
+    "settled_s": 1.6589999999998903,
+    "success": true
+  },
+  "wall_seconds": 0.6065622912719846,
+  "native_warnings": [],
+  "compiled_property_checks": {
+    "object_mass": true,
+    "object_inertia": true,
+    "object_center_of_mass": true,
+    "object_inertia_axes": true,
+    "object_gravity_compensation_disabled": true,
+    "object_size": true,
+    "table_size": true,
+    "object_position": true,
+    "object_orientation": true,
+    "table_position": true,
+    "table_orientation": true,
+    "gravity": true,
+    "object_friction": true,
+    "table_friction": true,
+    "free_object": true,
+    "native_dimensions": true
+  },
+  "native_timestep_s": 0.001,
+  "control": "normal",
+  "native_model_sha256": "8b8dc2f83985f2685a975851e6e295d2f974fef49e66989984b1f64697c56737"
+}

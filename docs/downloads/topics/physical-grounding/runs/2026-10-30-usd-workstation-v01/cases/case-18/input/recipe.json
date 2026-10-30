@@ -1,0 +1,30 @@
+{
+  "schema": "dvidia.usd-workstation-recipe/v1",
+  "stage": "workstation.usda",
+  "stage_sha256": "70fad8443fa41dd78c5abbaf6abf100a0c965d55c107f8a624679f47dbce1f71",
+  "robot_profile": "piper",
+  "catalog_sha256": "592f363389a96fef7f9223737aa72a2f1a74f400238924bf6790ec5bfd3302b7",
+  "robot_lock_sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+  "timestep_s": 0.001,
+  "reset": {
+    "seed": 301729,
+    "object_xy_jitter_m": [
+      0.0,
+      0.0
+    ],
+    "object_yaw_jitter_rad": 0.0
+  },
+  "goal": {
+    "object_center_m": [
+      0.55,
+      0.15,
+      0.02
+    ],
+    "position_tolerance_m": 0.025,
+    "max_linear_speed_m_s": 0.01,
+    "max_angular_speed_rad_s": 0.05,
+    "settle_s": 0.25,
+    "require_table_contact": true,
+    "forbid_robot_contact": true
+  }
+}

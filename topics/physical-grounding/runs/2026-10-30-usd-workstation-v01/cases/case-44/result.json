@@ -1,0 +1,60 @@
+{
+  "valid": true,
+  "checks": {
+    "finite": true,
+    "complete_cadence": true,
+    "robot_contact_absent": true,
+    "initial_velocity": true,
+    "missing_friction_detected": true,
+    "no_native_warning": true
+  },
+  "success": true,
+  "metrics": {
+    "displacement_m": 0.3999509009462619,
+    "ideal_stopping_distance_m": null,
+    "stopping_distance_error_m": null,
+    "final_speed_m_s": 0.39990189999581244
+  },
+  "case": {
+    "id": "case-44",
+    "seed": 301729,
+    "kind": "slide",
+    "mass_kg": 0.16,
+    "friction": 0.0,
+    "height_m": 0.0,
+    "control": "friction_disabled"
+  },
+  "native_goal": {
+    "position": false,
+    "linear_speed": false,
+    "angular_speed": true,
+    "table_contact": true,
+    "no_robot_contact": true,
+    "instantaneous": false,
+    "settled_s": 0.0,
+    "success": false
+  },
+  "wall_seconds": 0.6393786668777466,
+  "native_warnings": [],
+  "compiled_property_checks": {
+    "object_mass": true,
+    "object_inertia": true,
+    "object_center_of_mass": true,
+    "object_inertia_axes": true,
+    "object_gravity_compensation_disabled": true,
+    "object_size": true,
+    "table_size": true,
+    "object_position": true,
+    "object_orientation": true,
+    "table_position": true,
+    "table_orientation": true,
+    "gravity": true,
+    "object_friction": true,
+    "table_friction": true,
+    "free_object": true,
+    "native_dimensions": true
+  },
+  "native_timestep_s": 0.001,
+  "control": "friction_disabled",
+  "native_model_sha256": "9569a3e1335d81abc993d0593cca64be9829675d2e59b2e86c6672f292d4eb1c"
+}

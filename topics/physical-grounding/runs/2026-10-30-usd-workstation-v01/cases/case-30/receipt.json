@@ -1,0 +1,131 @@
+{
+  "schema": "dvidia.usd-native-scene/v1",
+  "recipe": {
+    "schema": "dvidia.usd-workstation-recipe/v1",
+    "stage": "workstation.usda",
+    "stage_sha256": "356e728edf9932cff8a68ad157060d7c34374849dc98f77690d588f196aa6b28",
+    "robot_profile": "piper",
+    "catalog_sha256": "592f363389a96fef7f9223737aa72a2f1a74f400238924bf6790ec5bfd3302b7",
+    "robot_lock_sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+    "timestep_s": 0.001,
+    "reset": {
+      "seed": 301729,
+      "object_xy_jitter_m": [
+        0.0,
+        0.0
+      ],
+      "object_yaw_jitter_rad": 0.0
+    },
+    "goal": {
+      "object_center_m": [
+        0.55,
+        0.15,
+        0.02
+      ],
+      "position_tolerance_m": 0.025,
+      "max_linear_speed_m_s": 0.01,
+      "max_angular_speed_rad_s": 0.05,
+      "settle_s": 0.25,
+      "require_table_contact": true,
+      "forbid_robot_contact": true
+    }
+  },
+  "recipe_sha256": "9b17d05fc2e06298a923051f45756aaa05704d774ffa33a91ea028be8acb073d",
+  "usd": {
+    "stage_sha256": "356e728edf9932cff8a68ad157060d7c34374849dc98f77690d588f196aa6b28",
+    "units": "m-kg-s",
+    "up_axis": "Z",
+    "gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "table": {
+      "prim": "/World/Table",
+      "center_m": [
+        0.45,
+        0.0,
+        -0.04
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "half_size_m": [
+        0.6,
+        0.4,
+        0.04
+      ],
+      "sliding_friction": 0.5
+    },
+    "object": {
+      "prim": "/World/Object",
+      "center_m": [
+        0.55,
+        0.15,
+        0.22
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "half_size_m": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "sliding_friction": 0.5,
+      "mass_kg": 0.1599999964237213,
+      "diagonal_inertia_kg_m2": [
+        4.266666655894369e-05,
+        4.266666655894369e-05,
+        4.266666655894369e-05
+      ]
+    }
+  },
+  "robot": {
+    "profile": "piper",
+    "repository": "https://github.com/google-deepmind/mujoco_menagerie",
+    "commit": "0059d4335f8156206f63a35662313385f7ad6d74",
+    "files_verified": 90,
+    "bytes_verified": 34562302,
+    "lock_sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe",
+    "simulation_asset_license": "MIT"
+  },
+  "mapping": {
+    "geometry": "USD Cube dimensions and local pose to MuJoCo box",
+    "mass_inertia": "explicit USD mass and centred diagonal inertia, unchanged",
+    "friction": "equal USD static/dynamic coefficient to isotropic MuJoCo sliding friction; native max combination",
+    "contact": "condim=3; torsional/rolling friction zero; solref=[0.02,1]; solimp=[0.9,0.95,0.001,0.5,2]",
+    "restitution": "authored zero required; solver response is an assumption, not calibrated restitution",
+    "robot": "pinned native MJCF; no USD articulation import"
+  },
+  "scope": {
+    "simulation_only": true,
+    "physics_calibrated": false,
+    "learned_skill": false,
+    "physical_robot_ready": false
+  },
+  "compiled_checks": {
+    "object_mass": true,
+    "object_inertia": true,
+    "object_center_of_mass": true,
+    "object_inertia_axes": true,
+    "object_gravity_compensation_disabled": true,
+    "object_size": true,
+    "table_size": true,
+    "object_position": true,
+    "object_orientation": true,
+    "table_position": true,
+    "table_orientation": true,
+    "gravity": true,
+    "object_friction": true,
+    "table_friction": true,
+    "free_object": true,
+    "native_dimensions": true
+  }
+}
