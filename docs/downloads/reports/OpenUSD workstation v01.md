@@ -47,7 +47,7 @@ The next environment iteration can vary object placement and physical assumption
 
 The recorded 3D view uses native saved body poses; it does not run browser physics or send robot commands. The public kit includes every authored input, recorded trajectory, result, source snapshot and license notice. Its read-only audit reconstructs saved score calculations and checks pose/trace consistency; 10 ms snapshots cannot independently verify unrecorded 1 ms goal intervals or authenticate physical truth.
 
-[Open the recorded workstation](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-30-usd-workstation-v01/) · [Reproduction guide](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-30-usd-workstation-v01/docs/usd-workstation-v01.md) · [Source and releases](https://github.com/Dvidia-Inference/dvidia-training) · [Hugging Face](https://huggingface.co/Dvidia)
+[Open the recorded workstation on Hugging Face](https://dvidia-robot-simulation-lab.static.hf.space/usd-workstation/v01/index.html) · [Reproduction guide](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-10-30-usd-workstation-v01/docs/usd-workstation-v01.md) · [Source and releases](https://github.com/Dvidia-Inference/dvidia-training) · [Hugging Face](https://huggingface.co/Dvidia)
 
 Original scene and bridge: MIT. PiPER assets retain their MIT license. Dependencies retain their own licenses. Follow [@iammrriver](https://x.com/iammrriver) · hello@dvidia.org.
 
