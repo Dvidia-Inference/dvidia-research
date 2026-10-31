@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-control-profile-v01",
+      "title": "Profiling the PiPER contact path",
+      "source": "reports/PiPER control profiling v01.md",
+      "date": "2026-10-31",
+      "type": "Single-scenario CPU profile and paired allocation comparison",
+      "status": "Four ABBA timing runs · 5/5 dense pairs exactly matched · simulation only",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "Four paired ABBA runs measured 15.70% lower mean wall compute and 12.60% lower mean process CPU compute after reducing allocations in the PiPER contact scan. A supplemental streaming audit exactly matched five baseline/candidate diagnostic pairs, including 200,010 recorded state snapshots, contacts and independently recomputed scorer state. The original reader-limit failure is retained. This is one synthetic scenario on a shared host; it establishes no new task learning, general performance gain, real-time response or hardware qualification."
+    },
+    {
       "slug": "arm-interfaces-v01",
       "title": "Arm interfaces and simulation-only skill installation",
       "source": "reports/Arm interfaces v01.md",
