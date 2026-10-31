@@ -6,18 +6,32 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "task-environments-v02",
+      "title": "Constructing task environments with independent completion checks",
+      "source": "reports/Task environments v02.md",
+      "date": "2026-10-31",
+      "type": "Bounded multi-object OpenUSD task environment and verifier validation",
+      "status": "6 accepted fixtures \u00b7 6 rejected native controls \u00b7 4 rejected layouts \u00b7 simulation infrastructure",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "A versioned recipe authors a static table, an open-top bin and one to four original rigid object instances around a pinned native PiPER. A frozen roster retains six accepted completion fixtures, six correctly rejected native counterexamples and four invalid layouts refused before stepping. An independent audit reconstructs all 13,262 physics observations and 1,337 replay frames with zero mismatches. The twelve native cases simulate 13.25 seconds in 16.550 wall seconds including construction and evidence outputs. PiPER holds home commands; rigid shoe mechanics remain assumptions. This establishes bounded environment and completion-verifier behavior, not learned manipulation, arbitrary USD import, camera accuracy or hardware transfer."
+    },
+    {
       "slug": "native-action-capture-v01",
       "title": "Native PiPER action capture: images, measurements and issued commands",
       "source": "reports/Native PiPER action capture v01.md",
       "date": "2026-10-30",
       "type": "Native capture engineering validation and local preview tools",
-      "status": "Two identical 1,000-interval captures · two-step unknown prefix · tracker missing, training refused",
+      "status": "Two identical 1,000-interval captures \u00b7 two-step unknown prefix \u00b7 tracker missing, training refused",
       "topics": [
         "physical-grounding",
         "capture-quality",
         "evaluation-provenance"
       ],
-      "abstract": "A native capture preview pairs genuine 160×120 RGB and metric-depth arrays with measured arm/finger state, causal authored decisions, issued references and final native controls. Two 20-second repeats of one fixed synthetic start match all 1,001 frame pairs and measured motion; a declared interruption retains two complete intervals with an unknown outcome. Independent decoding and byte readback cover all 2,005 registered camera observations. Four object-tracker channels remain missing, so strict training export refuses. Thirty-seven focused tests and a fresh installed-wheel native smoke pass. Depth precision, corrective demonstration quality, hard real-time performance, learned transfer and hardware qualification remain unproven."
+      "abstract": "A native capture preview pairs genuine 160\u00d7120 RGB and metric-depth arrays with measured arm/finger state, causal authored decisions, issued references and final native controls. Two 20-second repeats of one fixed synthetic start match all 1,001 frame pairs and measured motion; a declared interruption retains two complete intervals with an unknown outcome. Independent decoding and byte readback cover all 2,005 registered camera observations. Four object-tracker channels remain missing, so strict training export refuses. Thirty-seven focused tests and a fresh installed-wheel native smoke pass. Depth precision, corrective demonstration quality, hard real-time performance, learned transfer and hardware qualification remain unproven."
     },
     {
       "slug": "openusd-workstation-v01",
@@ -25,7 +39,7 @@
       "source": "reports/OpenUSD workstation v01.md",
       "date": "2026-10-30",
       "type": "Bounded USD scene conversion and frozen passive physics checks",
-      "status": "45/45 physics checks · 36 normal cases and nine negative controls · simulation infrastructure",
+      "status": "45/45 physics checks \u00b7 36 normal cases and nine negative controls \u00b7 simulation infrastructure",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
@@ -38,7 +52,7 @@
       "source": "reports/Bounded grip waiting v04.md",
       "date": "2026-10-30",
       "type": "Authored acquisition supervisor and recovered paired confirmation study",
-      "status": "Bounded 42/128 · learned clock 32/128 · fixed 44/128 · teacher 41/128 · comparisons inconclusive",
+      "status": "Bounded 42/128 \u00b7 learned clock 32/128 \u00b7 fixed 44/128 \u00b7 teacher 41/128 \u00b7 comparisons inconclusive",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
@@ -51,13 +65,13 @@
       "source": "reports/Learned PiPER grip clock v03.md",
       "date": "2026-10-27",
       "type": "Learned acquisition clock with matched blind and fixed-timing controls",
-      "status": "Clock 44/128 · blind 26/128 · fixed 72/128 · feedback advantage inconclusive",
+      "status": "Clock 44/128 \u00b7 blind 26/128 \u00b7 fixed 72/128 \u00b7 feedback advantage inconclusive",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "A compact progress clock trained from 64 synthetic teacher episodes coordinates a frozen PiPER arm and jaw reference while acquiring a rigid block. All 512 confirmation attempts are valid: the learned clock completes 44/128 strict placements, its matched blind control 26/128, fixed timing 72/128 and the sampled teacher 67/128. The paired XY-group full-minus-blind interval spans −8.5 to +36.6 percentage points, while the learned clock trails fixed timing. An independent audit reconstructs all 768 main-study attempts with zero mismatches; separate pilot attempts remain public. Policy-call CPU p95 is 1.916 ms, with 728 full steps exceeding 20 ms on the shared host. No reliable feedback benefit, continuous learned recovery, human-video action learning or hardware qualification is established."
+      "abstract": "A compact progress clock trained from 64 synthetic teacher episodes coordinates a frozen PiPER arm and jaw reference while acquiring a rigid block. All 512 confirmation attempts are valid: the learned clock completes 44/128 strict placements, its matched blind control 26/128, fixed timing 72/128 and the sampled teacher 67/128. The paired XY-group full-minus-blind interval spans \u22128.5 to +36.6 percentage points, while the learned clock trails fixed timing. An independent audit reconstructs all 768 main-study attempts with zero mismatches; separate pilot attempts remain public. Policy-call CPU p95 is 1.916 ms, with 728 full steps exceeding 20 ms on the shared host. No reliable feedback benefit, continuous learned recovery, human-video action learning or hardware qualification is established."
     },
     {
       "slug": "learned-piper-grip-v02",
@@ -65,7 +79,7 @@
       "source": "reports/Learned PiPER grip v02.md",
       "date": "2026-10-27",
       "type": "Learned jaw adapter with matched blind controls and retained negative studies",
-      "status": "Jaw feedback 6/24 · blind 8/24 · feedforward 5/24 · teacher 24/24 · no demonstrated feedback advantage",
+      "status": "Jaw feedback 6/24 \u00b7 blind 8/24 \u00b7 feedforward 5/24 \u00b7 teacher 24/24 \u00b7 no demonstrated feedback advantage",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -79,7 +93,7 @@
       "source": "reports/Learned PiPER placement v01.md",
       "date": "2026-10-27",
       "type": "Learned feedforward primitive from synthetic demonstrations",
-      "status": "Learned 5/12 · teacher 12/12 · three controls 0/12 each · simulation only",
+      "status": "Learned 5/12 \u00b7 teacher 12/12 \u00b7 three controls 0/12 each \u00b7 simulation only",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -93,7 +107,7 @@
       "source": "reports/Sensor corroboration v04.md",
       "date": "2026-10-19",
       "type": "Paired synthetic benchmark for camera and drive evidence",
-      "status": "272 cases · 69/112 false completions prevented · 43 remain · 73/80 true completions abstained",
+      "status": "272 cases \u00b7 69/112 false completions prevented \u00b7 43 remain \u00b7 73/80 true completions abstained",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
@@ -106,7 +120,7 @@
       "source": "reports/Local goal verifier v03.md",
       "date": "2026-10-19",
       "type": "Local CPU verifier with native, evidence-fault and forgery diagnostics",
-      "status": "Native: 16/16 true complete, 0/48 false complete · forged readings: 8/8 false complete",
+      "status": "Native: 16/16 true complete, 0/48 false complete \u00b7 forged readings: 8/8 false complete",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -120,7 +134,7 @@
       "source": "reports/Image goal Jev measured v02.md",
       "date": "2026-10-19",
       "type": "Frozen hosted-model evaluation with native physical references",
-      "status": "64/64 valid responses · telemetry: 0/24 false complete, 1/8 true complete",
+      "status": "64/64 valid responses \u00b7 telemetry: 0/24 false complete, 1/8 true complete",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -134,7 +148,7 @@
       "source": "reports/Image goal Jev v01.md",
       "date": "2026-10-18",
       "type": "Native diagnostic benchmark and frozen hosted-model protocol",
-      "status": "32 native fixtures · 4 identical-image pairs · 64 Jev trials not run",
+      "status": "32 native fixtures \u00b7 4 identical-image pairs \u00b7 64 Jev trials not run",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -148,7 +162,7 @@
       "source": "reports/Goal images and physical feedback.md",
       "date": "2026-10-18",
       "type": "Research direction and passive native contact audit",
-      "status": "14/14 exact passive replays · 249,502 native ticks · visual models unbenchmarked",
+      "status": "14/14 exact passive replays \u00b7 249,502 native ticks \u00b7 visual models unbenchmarked",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -162,7 +176,7 @@
       "source": "reports/Shoe graspability v03.md",
       "date": "2026-10-14",
       "type": "Frozen shape, load and attached-tool diagnostic",
-      "status": "24/24 valid · 30 g: 8/12 lifts · 300 g: 0/12 · no net gain from removing rake",
+      "status": "24/24 valid \u00b7 30 g: 8/12 lifts \u00b7 300 g: 0/12 \u00b7 no net gain from removing rake",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -176,13 +190,13 @@
       "source": "reports/Continuous shoe grip v02.md",
       "date": "2026-10-13",
       "type": "Frozen native comparison with independent contact audit",
-      "status": "20/20 valid · 2/10 completed under both policies · 9 contact-loss alarms verified",
+      "status": "20/20 valid \u00b7 2/10 completed under both policies \u00b7 9 contact-loss alarms verified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "A frozen twenty-attempt native MuJoCo comparison adds continuous acquisition checks and bounded lowering to the mounted-rake PiPER controller. Both policies complete the same 2/10 fresh cases: no gains or losses. Nine bilateral-contact-loss alarms follow a trace-verified native origin by 20–52 ms, median 30 ms; three acquisition failures are separate. Twelve supported lowering responses produce no additional completion. A non-finger-support gap remains unmonitored. Complete recorded trajectories, independent audit and development failures are public. Authored policies, synthetic contact and privileged observations establish no learned skill or physical robot qualification."
+      "abstract": "A frozen twenty-attempt native MuJoCo comparison adds continuous acquisition checks and bounded lowering to the mounted-rake PiPER controller. Both policies complete the same 2/10 fresh cases: no gains or losses. Nine bilateral-contact-loss alarms follow a trace-verified native origin by 20\u201352 ms, median 30 ms; three acquisition failures are separate. Twelve supported lowering responses produce no additional completion. A non-finger-support gap remains unmonitored. Complete recorded trajectories, independent audit and development failures are public. Authored policies, synthetic contact and privileged observations establish no learned skill or physical robot qualification."
     },
     {
       "slug": "skill-prerequisites-v01",
@@ -190,7 +204,7 @@
       "source": "reports/Skill prerequisites v01.md",
       "date": "2026-10-13",
       "type": "Two native environments with authored policies and recorded benchmark evidence",
-      "status": "16/16 valid · 2 lid contacts avoided · 3/4 retrieval checkpoints · 0/4 retained tool lifts",
+      "status": "16/16 valid \u00b7 2 lid contacts avoided \u00b7 3/4 retrieval checkpoints \u00b7 0/4 retained tool lifts",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -204,7 +218,7 @@
       "source": "reports/Live PiPER shoe workstation v01.md",
       "date": "2026-10-13",
       "type": "Live browser-native simulation with authored control and separate benchmark evidence",
-      "status": "Live browser physics · 14/16 targets · strict contact parity failed · shoe lifting unqualified",
+      "status": "Live browser physics \u00b7 14/16 targets \u00b7 strict contact parity failed \u00b7 shoe lifting unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -218,7 +232,7 @@
       "source": "reports/Shoe asset library v01.md",
       "date": "2026-10-12",
       "type": "Versioned native scene assets and frozen passive-contact benchmark",
-      "status": "Six shoe proxies · three arms · support 27/27, disabled table 0/27 · manipulation unqualified",
+      "status": "Six shoe proxies \u00b7 three arms \u00b7 support 27/27, disabled table 0/27 \u00b7 manipulation unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -232,7 +246,7 @@
       "source": "reports/PiPER reliability v05.md",
       "date": "2026-10-12",
       "type": "Frozen paired reliability experiment with complete native evidence",
-      "status": "23/36 revised grasp · 15/36 v0.4 · 8 gained, none lost · hardware unqualified",
+      "status": "23/36 revised grasp \u00b7 15/36 v0.4 \u00b7 8 gained, none lost \u00b7 hardware unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -246,13 +260,13 @@
       "source": "reports/PiPER contact recovery v04.md",
       "date": "2026-10-11",
       "type": "Paired carry-recovery and supported-acquisition experiment with complete confirmation receipt",
-      "status": "All modes 4/12 · two resumed tasks faster · controls 0/48 · hardware unqualified",
+      "status": "All modes 4/12 \u00b7 two resumed tasks faster \u00b7 controls 0/48 \u00b7 hardware unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "A fresh frozen 84-attempt PiPER comparison completes 4/12 placements for v0.3 history, v0.4 carry-only and v0.4 full; all 48 matched open-jaw and hold controls fail. Two completed post-hold placements finish 2.440 and 2.640 simulated seconds sooner with unchanged 220/240 ms settling holds. Four low-friction failures reach refusal 2.88–2.90 seconds sooner without becoming successes. Fresh nominal-friction 60 g layouts expose two held-but-too-low resume failures in every mode; neither reaches speed restoration. Six earlier acquisition failures are traced to insufficient support under the pinned position servo and side pinch, not the actuator force cap. All native mechanics and outcome criteria remain unchanged. Complete trajectories and 84,000 raw computation windows are retained; none exceeds 20 ms on this host. Source-snapshotted development remains separate. Privileged authored simulation establishes no learned skill, true-slip accuracy or physical qualification."
+      "abstract": "A fresh frozen 84-attempt PiPER comparison completes 4/12 placements for v0.3 history, v0.4 carry-only and v0.4 full; all 48 matched open-jaw and hold controls fail. Two completed post-hold placements finish 2.440 and 2.640 simulated seconds sooner with unchanged 220/240 ms settling holds. Four low-friction failures reach refusal 2.88\u20132.90 seconds sooner without becoming successes. Fresh nominal-friction 60 g layouts expose two held-but-too-low resume failures in every mode; neither reaches speed restoration. Six earlier acquisition failures are traced to insufficient support under the pinned position servo and side pinch, not the actuator force cap. All native mechanics and outcome criteria remain unchanged. Complete trajectories and 84,000 raw computation windows are retained; none exceeds 20 ms on this host. Source-snapshotted development remains separate. Privileged authored simulation establishes no learned skill, true-slip accuracy or physical qualification."
     },
     {
       "slug": "piper-contact-history-v03",
@@ -260,7 +274,7 @@
       "source": "reports/PiPER contact history v03.md",
       "date": "2026-10-11",
       "type": "Paired probe-only and contact-history experiment with complete confirmation receipt",
-      "status": "History 6/12 · baseline and probe-only 4/12 · controls 0/48 · hardware unqualified",
+      "status": "History 6/12 \u00b7 baseline and probe-only 4/12 \u00b7 controls 0/48 \u00b7 hardware unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -274,7 +288,7 @@
       "source": "reports/PiPER grip validation and recovery.md",
       "date": "2026-10-11",
       "type": "Paired authored controller experiment and complete confirmation receipt",
-      "status": "Moderate-friction regression · baseline 4/6, guarded 2/6 · hardware unqualified",
+      "status": "Moderate-friction regression \u00b7 baseline 4/6, guarded 2/6 \u00b7 hardware unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -288,7 +302,7 @@
       "source": "reports/Native grasp task benchmark.md",
       "date": "2026-10-11",
       "type": "Native contact task implementation and authored baseline",
-      "status": "6/6 simulated placements · controls 0/12 · real-time and hardware unqualified",
+      "status": "6/6 simulated placements \u00b7 controls 0/12 \u00b7 real-time and hardware unqualified",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
@@ -302,13 +316,13 @@
       "source": "reports/Hardware matched robot simulation.md",
       "date": "2026-10-11",
       "type": "Pinned mechanics implementation and CPU numerical benchmark",
-      "status": "Pinned CPU mechanics · PiPER contact pilot · physical fidelity unmeasured",
+      "status": "Pinned CPU mechanics \u00b7 PiPER contact pilot \u00b7 physical fidelity unmeasured",
       "topics": [
         "physical-grounding",
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "A separate UR5e/Robotiq reference preserves pinned geometry, inertias, moving-link collision proxies and coupled gripper structure: fourteen modeled coordinates and seven commands. Eighteen deterministic unloaded motion/closure runs are numerically valid; at a 1 ms step, CPU physics throughput measures 40.80–47.29 simulated seconds per measured stepping wall second on one host, excluding loading, sensing, rendering, policy and real actuation. Adjacent timestep comparisons and a matched static overlap expose numerical sensitivity and collision participation. A pure-Python paired trace scorer measures joint, tool and jaw mismatch without automatic qualification. Left/right five-finger references are separately audited; LeRobot collection with an original DVIDIA policy is proposed. Serial calibration, physical response, shoe task learning and bimanual execution remain unmeasured. An offline 3D mesh replay now exposes the recorded arm/gripper poses without rerunning physics. PiPER and SO-101 now have pinned CPU profiles with 6/6 valid unloaded numerical attempts each and explicit native command units. PiPER also has a frozen authored rigid-block contact pilot: nominal placement 2/2, low-friction placement 0/1, open-jaw 0/3 and hold 0/3, with all nine attempts numerically valid. One of 9,000 computation windows exceeds 20 ms; hardware real-time response is unqualified. SO-101 object tasks, learned policies and physical qualification remain open. YAM, OpenArm, ARX X5 and PAROL6 remain upcoming."
+      "abstract": "A separate UR5e/Robotiq reference preserves pinned geometry, inertias, moving-link collision proxies and coupled gripper structure: fourteen modeled coordinates and seven commands. Eighteen deterministic unloaded motion/closure runs are numerically valid; at a 1 ms step, CPU physics throughput measures 40.80\u201347.29 simulated seconds per measured stepping wall second on one host, excluding loading, sensing, rendering, policy and real actuation. Adjacent timestep comparisons and a matched static overlap expose numerical sensitivity and collision participation. A pure-Python paired trace scorer measures joint, tool and jaw mismatch without automatic qualification. Left/right five-finger references are separately audited; LeRobot collection with an original DVIDIA policy is proposed. Serial calibration, physical response, shoe task learning and bimanual execution remain unmeasured. An offline 3D mesh replay now exposes the recorded arm/gripper poses without rerunning physics. PiPER and SO-101 now have pinned CPU profiles with 6/6 valid unloaded numerical attempts each and explicit native command units. PiPER also has a frozen authored rigid-block contact pilot: nominal placement 2/2, low-friction placement 0/1, open-jaw 0/3 and hold 0/3, with all nine attempts numerically valid. One of 9,000 computation windows exceeds 20 ms; hardware real-time response is unqualified. SO-101 object tasks, learned policies and physical qualification remain open. YAM, OpenArm, ARX X5 and PAROL6 remain upcoming."
     },
     {
       "slug": "dvidia-observation-lab",
@@ -316,7 +330,7 @@
       "source": "reports/DVIDIA Observation Lab pilot.md",
       "date": "2026-10-11",
       "type": "Local observation workflow and engineering feasibility pilot",
-      "status": "Local review release · motion and actuator source pilots · hardware unqualified",
+      "status": "Local review release \u00b7 motion and actuator source pilots \u00b7 hardware unqualified",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
@@ -330,7 +344,7 @@
       "source": "reports/Robotics research pipeline.md",
       "date": "2026-10-09",
       "type": "Architecture proposal and staged validation roadmap",
-      "status": "Architecture proposal · current simulation alpha · hardware unqualified",
+      "status": "Architecture proposal \u00b7 current simulation alpha \u00b7 hardware unqualified",
       "topics": [
         "capture-quality",
         "skill-relations",
@@ -345,7 +359,7 @@
       "source": "reports/Skillspace footage training pipeline.md",
       "date": "2026-10-08",
       "type": "Product implementation and measured synthetic pilot",
-      "status": "Public CPU package · one native scene qualified · simulation-only",
+      "status": "Public CPU package \u00b7 one native scene qualified \u00b7 simulation-only",
       "topics": [
         "capture-quality",
         "physical-grounding",
@@ -359,7 +373,7 @@
       "source": "reports/Skill capsule acquisition and optimization.md",
       "date": "2026-10-07",
       "type": "Learned movement artifact and installation prototype",
-      "status": "Simulation-only · teacher/student 7/8 · no overall speedup",
+      "status": "Simulation-only \u00b7 teacher/student 7/8 \u00b7 no overall speedup",
       "topics": [
         "physical-grounding",
         "skill-relations",
@@ -373,7 +387,7 @@
       "source": "reports/Skillspace arm benchmarks and evolution.md",
       "date": "2026-10-07",
       "type": "Paired simulation benchmark and product assessment",
-      "status": "Mixed held-out result · 30/32 baseline, 29/32 updated",
+      "status": "Mixed held-out result \u00b7 30/32 baseline, 29/32 updated",
       "topics": [
         "physical-grounding",
         "skill-relations",
@@ -387,7 +401,7 @@
       "source": "reports/Installing a Skillspace on a simulated arm.md",
       "date": "2026-10-07",
       "type": "Product prototype and native contact qualification",
-      "status": "Public skill link to authored adapter · 6/6 scene placements",
+      "status": "Public skill link to authored adapter \u00b7 6/6 scene placements",
       "topics": [
         "physical-grounding",
         "skill-relations",
@@ -401,7 +415,7 @@
       "source": "reports/Offline cable training environment.md",
       "date": "2026-10-07",
       "type": "Product prototype and local qualification",
-      "status": "CPU simulation-only · Controller search and frozen evaluation executed",
+      "status": "CPU simulation-only \u00b7 Controller search and frozen evaluation executed",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
@@ -414,12 +428,12 @@
       "source": "reports/Fast accurate robot training simulation.md",
       "date": "2026-10-07",
       "type": "Decision report and local experiment",
-      "status": "54 CPU fixture trials · GPU and physical transfer untested",
+      "status": "54 CPU fixture trials \u00b7 GPU and physical transfer untested",
       "topics": [
         "physical-grounding",
         "evaluation-provenance"
       ],
-      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance–accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
+      "abstract": "A design for an offline, self-hosted training environment that turns demonstrations into calibrated practice and qualified robot skills. We examine contact, deformation, sensor feedback and the performance\u2013accuracy tradeoff, then report 54 deterministic native MuJoCo CPU fixture trials. Fine endpoint agreement did not establish accurate contact transients, and coarse timesteps missed collisions. Minimum GPU memory, rope accuracy and physical transfer remain unmeasured."
     },
     {
       "slug": "grok-robotics-research-on-x",
@@ -427,7 +441,7 @@
       "source": "reports/Grok robotics research on X.md",
       "date": "2026-10-07",
       "type": "Source review and thesis comparison",
-      "status": "Primary sources checked · Experiments proposed",
+      "status": "Primary sources checked \u00b7 Experiments proposed",
       "topics": [
         "skill-relations",
         "physical-grounding"
@@ -440,7 +454,7 @@
       "source": "reports/Spatially grounded downloadable robot skills.md",
       "date": "2026-10-07",
       "type": "Research synthesis and proposed experiments",
-      "status": "Source review · DVIDIA experiments not run",
+      "status": "Source review \u00b7 DVIDIA experiments not run",
       "topics": [
         "skill-relations",
         "physical-grounding",
@@ -454,7 +468,7 @@
       "source": "reports/Clef and grounded video observations.md",
       "date": "2026-10-06",
       "type": "Engineering feasibility pilot",
-      "status": "Five licensed excerpts · Accuracy evaluation outstanding",
+      "status": "Five licensed excerpts \u00b7 Accuracy evaluation outstanding",
       "topics": [
         "capture-quality",
         "evaluation-provenance",
@@ -473,7 +487,7 @@
         "evaluation-provenance",
         "skill-relations"
       ],
-      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot’s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
+      "abstract": "An Argus review and a proposal to connect original recordings, reviewed episodes, immutable datasets, training runs, held-out evaluation and robot-tested releases. The review separates video annotation from action supervision and defines compatibility beyond a robot\u2019s degree-of-freedom count. A proposed 40-episode annotation pilot and evidence-based graduation criteria remain unrun."
     },
     {
       "slug": "physical-skill-research-agenda",

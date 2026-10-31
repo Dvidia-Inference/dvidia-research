@@ -1,0 +1,135 @@
+{
+  "ablations_at_end": {
+    "any_instance_only": false,
+    "body_origin_only": false,
+    "geometry_only": false,
+    "without_dwell": false,
+    "without_speed": false
+  },
+  "ablations_ever_accept": {
+    "any_instance_only": false,
+    "body_origin_only": false,
+    "geometry_only": false,
+    "without_dwell": false,
+    "without_speed": false
+  },
+  "body_count": 11,
+  "case": {
+    "control": "normal",
+    "duration_s": 1.5,
+    "expected_goal_success": false,
+    "id": "case-06",
+    "label": "Stationary block on the table outside the bin",
+    "name": "outside-bin"
+  },
+  "checks": {
+    "complete_native_duration": true,
+    "finite_body_poses": true,
+    "goal_known": true,
+    "matches_declared_goal": true,
+    "no_native_warning": true
+  },
+  "checks_passed": true,
+  "expected_goal_success": false,
+  "first_goal_success_s": null,
+  "frame_count": 151,
+  "interventions": {
+    "authored_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "control": "normal",
+    "effective_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "external_forces_during_stepping": false,
+    "initial_qpos": [
+      0.0,
+      1.57,
+      -1.3485,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.35,
+      -0.2,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_qvel": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scope": "Declared verifier counterexample fixture; no learned robot control",
+    "state_overwrite_during_stepping": false
+  },
+  "learned_skill": false,
+  "native_goal": {
+    "instantaneous": false,
+    "objects": {
+      "outside": {
+        "angular_speed": true,
+        "bin_floor_contact": false,
+        "contained": false,
+        "instantaneous": false,
+        "linear_speed": true,
+        "released": true
+      }
+    },
+    "reason": null,
+    "settled_s": 0.0,
+    "success": false,
+    "time_s": 1.4999999999999456,
+    "unknown": false
+  },
+  "native_goal_success": false,
+  "native_model_sha256": "bf459d139cb8f687509777596b96e1d862e12bafd633bedb256bd447918df513",
+  "native_warnings": [],
+  "per_step_trace": {
+    "bytes": 1248949,
+    "compression": "gzip",
+    "file": "goal-trace.jsonl.gz",
+    "samples": 1501,
+    "sha256": "0b908759339112f463068ad6cbaa467b17ab027a95be44fe3b477d8b3ea84262"
+  },
+  "physical_robot_ready": false,
+  "physics_calibrated": false,
+  "pose_identity": {
+    "bytes": 46508,
+    "sha256": "af2c8cd38324c814151b2e28e7e0ac8841a8ffc63a06a94773dc14f5c873c6c9"
+  },
+  "record_dt_s": 0.01,
+  "registered_benchmark": true,
+  "runtime": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.9"
+  },
+  "schema": "dvidia.task-scene-benchmark/v2",
+  "scope": "Passive, original rigid task-scene and independent completion checks. The native PiPER holds home; no learned grasp, image-based perception, shoe deformation or physical-robot transfer is evaluated.",
+  "simulated_seconds": 1.4999999999999456,
+  "simulated_seconds_per_wall_second": 0.9672675063275619,
+  "timestep_s": 0.001,
+  "valid": true,
+  "wall_seconds_through_case_output": 1.5507602500729263
+}

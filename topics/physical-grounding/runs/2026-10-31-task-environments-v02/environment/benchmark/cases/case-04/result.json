@@ -1,0 +1,156 @@
+{
+  "ablations_at_end": {
+    "any_instance_only": true,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": true,
+    "without_speed": true
+  },
+  "ablations_ever_accept": {
+    "any_instance_only": true,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": true,
+    "without_speed": true
+  },
+  "body_count": 12,
+  "case": {
+    "control": "normal",
+    "duration_s": 1.5,
+    "expected_goal_success": true,
+    "id": "case-04",
+    "label": "Rotated bin frame and two objects",
+    "name": "rotated-bin"
+  },
+  "checks": {
+    "complete_native_duration": true,
+    "finite_body_poses": true,
+    "goal_known": true,
+    "matches_declared_goal": true,
+    "no_native_warning": true
+  },
+  "checks_passed": true,
+  "expected_goal_success": true,
+  "first_goal_success_s": 0.4890000000000004,
+  "frame_count": 151,
+  "interventions": {
+    "authored_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "control": "normal",
+    "effective_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "external_forces_during_stepping": false,
+    "initial_qpos": [
+      0.0,
+      1.57,
+      -1.3485,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6792063756731488,
+      0.13092042544978363,
+      0.08,
+      0.9800665778412416,
+      0.0,
+      0.0,
+      0.19866933079506122,
+      0.6363703580191973,
+      0.232237134790101,
+      0.08,
+      0.9800665778412416,
+      0.0,
+      0.0,
+      0.19866933079506122
+    ],
+    "initial_qvel": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scope": "Declared verifier counterexample fixture; no learned robot control",
+    "state_overwrite_during_stepping": false
+  },
+  "learned_skill": false,
+  "native_goal": {
+    "instantaneous": true,
+    "objects": {
+      "block": {
+        "angular_speed": true,
+        "bin_floor_contact": true,
+        "contained": true,
+        "instantaneous": true,
+        "linear_speed": true,
+        "released": true
+      },
+      "shoe": {
+        "angular_speed": true,
+        "bin_floor_contact": true,
+        "contained": true,
+        "instantaneous": true,
+        "linear_speed": true,
+        "released": true
+      }
+    },
+    "reason": null,
+    "settled_s": 1.2609999999999455,
+    "success": true,
+    "time_s": 1.4999999999999456,
+    "unknown": false
+  },
+  "native_goal_success": true,
+  "native_model_sha256": "c99809dbdf9097867f27378650d46f3103c1073234561108a099dbf0d354bd04",
+  "native_warnings": [],
+  "per_step_trace": {
+    "bytes": 2221951,
+    "compression": "gzip",
+    "file": "goal-trace.jsonl.gz",
+    "samples": 1501,
+    "sha256": "a097dba383f3e395bc3ba03de7ed9d10b6ee1e6c03a37a17289b669e97fbae37"
+  },
+  "physical_robot_ready": false,
+  "physics_calibrated": false,
+  "pose_identity": {
+    "bytes": 50736,
+    "sha256": "2b812c88490c4481429b6e218adde30c3a56ac0797d650bc34ba6c67f14af531"
+  },
+  "record_dt_s": 0.01,
+  "registered_benchmark": true,
+  "runtime": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.9"
+  },
+  "schema": "dvidia.task-scene-benchmark/v2",
+  "scope": "Passive, original rigid task-scene and independent completion checks. The native PiPER holds home; no learned grasp, image-based perception, shoe deformation or physical-robot transfer is evaluated.",
+  "simulated_seconds": 1.4999999999999456,
+  "simulated_seconds_per_wall_second": 1.106214336929974,
+  "timestep_s": 0.001,
+  "valid": true,
+  "wall_seconds_through_case_output": 1.3559759170748293
+}

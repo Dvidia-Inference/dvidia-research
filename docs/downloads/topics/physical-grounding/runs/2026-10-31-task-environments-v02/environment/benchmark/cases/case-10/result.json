@@ -1,0 +1,136 @@
+{
+  "ablations_at_end": {
+    "any_instance_only": false,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": true,
+    "without_speed": false
+  },
+  "ablations_ever_accept": {
+    "any_instance_only": false,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": true,
+    "without_speed": false
+  },
+  "body_count": 11,
+  "case": {
+    "control": "normal",
+    "duration_s": 0.1,
+    "expected_goal_success": false,
+    "id": "case-10",
+    "label": "Supported release observed for too little time",
+    "name": "short-dwell"
+  },
+  "checks": {
+    "complete_native_duration": true,
+    "dwell_omission_false_completion_exposed": true,
+    "finite_body_poses": true,
+    "goal_known": true,
+    "matches_declared_goal": true,
+    "no_native_warning": true
+  },
+  "checks_passed": true,
+  "expected_goal_success": false,
+  "first_goal_success_s": null,
+  "frame_count": 11,
+  "interventions": {
+    "authored_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "control": "normal",
+    "effective_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "external_forces_during_stepping": false,
+    "initial_qpos": [
+      0.0,
+      1.57,
+      -1.3485,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.61,
+      0.2,
+      0.015,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_qvel": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scope": "Declared verifier counterexample fixture; no learned robot control",
+    "state_overwrite_during_stepping": false
+  },
+  "learned_skill": false,
+  "native_goal": {
+    "instantaneous": true,
+    "objects": {
+      "block": {
+        "angular_speed": true,
+        "bin_floor_contact": true,
+        "contained": true,
+        "instantaneous": true,
+        "linear_speed": true,
+        "released": true
+      }
+    },
+    "reason": null,
+    "settled_s": 0.09900000000000007,
+    "success": false,
+    "time_s": 0.10000000000000007,
+    "unknown": false
+  },
+  "native_goal_success": false,
+  "native_model_sha256": "e6489a87ef794ccab32cb9f64064fee7849396ecaff3fc862860a051e0ae584a",
+  "native_warnings": [],
+  "per_step_trace": {
+    "bytes": 78760,
+    "compression": "gzip",
+    "file": "goal-trace.jsonl.gz",
+    "samples": 101,
+    "sha256": "275b59aef919134eda4c8561b7675289f0246a87341de2c9fdd3b3cb8efa2599"
+  },
+  "physical_robot_ready": false,
+  "physics_calibrated": false,
+  "pose_identity": {
+    "bytes": 3388,
+    "sha256": "5f6ca98e85de910547f21175bfbd1d8fd19d0056006ae962829239c604dc1252"
+  },
+  "record_dt_s": 0.01,
+  "registered_benchmark": true,
+  "runtime": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.9"
+  },
+  "schema": "dvidia.task-scene-benchmark/v2",
+  "scope": "Passive, original rigid task-scene and independent completion checks. The native PiPER holds home; no learned grasp, image-based perception, shoe deformation or physical-robot transfer is evaluated.",
+  "simulated_seconds": 0.10000000000000007,
+  "simulated_seconds_per_wall_second": 0.10068280135776556,
+  "timestep_s": 0.001,
+  "valid": true,
+  "wall_seconds_through_case_output": 0.993218292016536
+}

@@ -1,0 +1,945 @@
+{
+  "schema": "dvidia.task-environments-hub-publication/v2",
+  "plan": {
+    "bytes": 1105413,
+    "sha256": "41f1a82e0e98863ced5ca0bbc95380eadc3d2301d12e93afa1eaa9b3e1fd1d8c"
+  },
+  "repositories": [
+    {
+      "kind": "dataset",
+      "repo": "Dvidia/task-environments-v02",
+      "commit": "7e8faf14bc3053c635314d45300d73cbfa20b007",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 42,
+          "sha256": "9d4a6a595899c9bc8076c8e848145fcfb92dccdb49557bab21fe1a4011f7fad7"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1076,
+          "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
+        },
+        {
+          "path": "README.md",
+          "bytes": 2256,
+          "sha256": "61c219e95b3d2457fd4c81fbce7270c95f0b90defe4765a48b8d4f634be57d63"
+        },
+        {
+          "path": "archive-receipt.json",
+          "bytes": 608,
+          "sha256": "cfe86ff7542f0268008f66d4f316c305c033f872e14eb2fac4d1d35f18fc1cf1"
+        },
+        {
+          "path": "audit.json",
+          "bytes": 5688,
+          "sha256": "1e481f3c7d336397f2616c691d431d50659fc3096f1d3301c30bf9c2003f5b38"
+        },
+        {
+          "path": "environment.json",
+          "bytes": 415,
+          "sha256": "988a38f84d49a84f799a4e2e3035ce5ab295998b5f776c59c03cadb6447f6709"
+        },
+        {
+          "path": "guide.md",
+          "bytes": 6859,
+          "sha256": "8eb876f4807199994dae73b9682b41bbaa4081c2a8e4184ad16beb8edf18e6ce"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 28021,
+          "sha256": "ce8f93cbb1bf613364fdbef92ae1a7d3bfa47eca3b2484a10f59b9ee58a5c38a"
+        },
+        {
+          "path": "task-environments-v02.zip",
+          "bytes": 7097540,
+          "sha256": "eb9f34b66535c289232df79cd0411be4dcca0bee94279cdf79196229514b7e16"
+        }
+      ]
+    },
+    {
+      "kind": "space",
+      "repo": "Dvidia/robot-simulation-lab",
+      "commit": "b2da910371e81d6956b243ef9d345496521ac774",
+      "files": [
+        {
+          "path": "task-environments/v02/LICENSE",
+          "bytes": 1076,
+          "sha256": "ab47d245880a661fdca3c6a4cb91671031302deee50d64f8d2d6df86832962e1"
+        },
+        {
+          "path": "task-environments/v02/README.md",
+          "bytes": 1818,
+          "sha256": "0f394ae9f3d808de9ce0795c872361aecb817152c0833d8e8dd465fda807bd79"
+        },
+        {
+          "path": "task-environments/v02/audit.json",
+          "bytes": 5688,
+          "sha256": "1e481f3c7d336397f2616c691d431d50659fc3096f1d3301c30bf9c2003f5b38"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/goal-trace.jsonl.gz",
+          "bytes": 172043,
+          "sha256": "f6e4425a5ba7d01e367286f3511cc7067e9b59df2add468340083d84b6a43f4e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/input/recipe.json",
+          "bytes": 1707,
+          "sha256": "cd9690d4918803a95ee828defa8adf8658d6c8fdfb73cdd6b6b485c5bba107c2"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/input/scene-receipt.json",
+          "bytes": 4192,
+          "sha256": "0105920a41505628861ff32e29b1b83732966c1d2f5e3cfafec35c7b11c7a03b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/input/workstation.usda",
+          "bytes": 5094,
+          "sha256": "1b2b61e299909e943b98e9d828138b2b1914d0180221b33562e0d6c6f36a4550"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/interventions.json",
+          "bytes": 658,
+          "sha256": "e3541179b6e060119f84c4ae3e6f6d0cbad87d29f66a48381e45d6d186f33a06"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/model.json",
+          "bytes": 79188,
+          "sha256": "7327a2537d8bb11a8fab093eef6c3a5dfd1af1c51d3c3eff1b1bf935b765eace"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/native-receipt.json",
+          "bytes": 7871,
+          "sha256": "491fd5db60743be18812ac446d54a8f2ce3e65869192a3ae5a8aa7da6d4d219f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/poses.bin.gz",
+          "bytes": 2274,
+          "sha256": "267168a003643e6a59d72c557c87b59c3c6d2fb09d6b44cae435719ca8f18477"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/result.json",
+          "bytes": 3284,
+          "sha256": "937babf6280469212dfe45c0a88c091c68ed810d38f747bf76a665d280a97e60"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/started.json",
+          "bytes": 1748,
+          "sha256": "23b0f57d03f4b2ceeb9cca7caf310383a5f71bd0b457ba3d2ccbad9922daf379"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-00/trajectory.json",
+          "bytes": 174835,
+          "sha256": "4d0ab012adb3607ff23a446428c7cbf490816c236bc74c67f18e22eef4cdbcc3"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/goal-trace.jsonl.gz",
+          "bytes": 168869,
+          "sha256": "f1aa58113798c7599ef00ca8500e96ce1d49304c8f34d4284c43b8c728616cc8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/input/recipe.json",
+          "bytes": 1723,
+          "sha256": "0855bb4b2cfd9afc7e6904038fb155a6b1ef2e1000b181ce8cb07a7f624b6ca8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/input/scene-receipt.json",
+          "bytes": 4863,
+          "sha256": "4aeb41c25619b95a294be3a93d6a5ad9006260ef2df87e49205fd4418a9dc71e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/input/workstation.usda",
+          "bytes": 6235,
+          "sha256": "116101abf35311753610ba17cc630e699b87a3e46e5f96e104b5544965456e45"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/interventions.json",
+          "bytes": 658,
+          "sha256": "e3541179b6e060119f84c4ae3e6f6d0cbad87d29f66a48381e45d6d186f33a06"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/model.json",
+          "bytes": 80299,
+          "sha256": "275022676add03462d1f5aa20cc419c146df3a0aaaa5dbd11696270d3230b400"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/native-receipt.json",
+          "bytes": 8632,
+          "sha256": "ea1213e552d73a420f674bbb7204880fa3fbc7b9fd701a76e20fcf55b872c7dc"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/poses.bin.gz",
+          "bytes": 2286,
+          "sha256": "d9a04a56db4076f5ab9b16377fe80efe3d13e8b01b045ba68ac0f2452fb2b74d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/result.json",
+          "bytes": 3299,
+          "sha256": "4d51da7e12f02c558d1b9eeec547665b5580697bc92784689d2c5b3067842974"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/started.json",
+          "bytes": 1762,
+          "sha256": "6aae2c5b65a81f57c45a39b85a77ae78f4ff6801fe9b5aa7ceba03ccfac8fa60"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-01/trajectory.json",
+          "bytes": 174547,
+          "sha256": "9ad0a7ebfbdcbfa25f58870c00d7701b65f4f663b884d4bb9996a7ae2993818a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/goal-trace.jsonl.gz",
+          "bytes": 305061,
+          "sha256": "1bee887172c11debe4fa4fd376304bac218b639dad3169f2e45dea4a634da0c5"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/input/recipe.json",
+          "bytes": 2039,
+          "sha256": "41d548b89bd65ba5f516e7301a9c4f5c0384a7e27d96db37065157362ff8e9d7"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/input/scene-receipt.json",
+          "bytes": 5088,
+          "sha256": "37b4a672243d933da04e38ab44ecd36d5d9878b7ebd88ee5e32f19207a64107a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/input/workstation.usda",
+          "bytes": 6496,
+          "sha256": "342f3c4e59f37bb3f7e5f25e43e3962d6c44eed92b7e24a6a3b3efa8809b72bc"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/interventions.json",
+          "bytes": 791,
+          "sha256": "57582f767c620885d7d2dfdd0e2806887cc4f417510560eaf95f1f39f2f41363"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/model.json",
+          "bytes": 79878,
+          "sha256": "f338450592c362ae47c357e37bfce4980d23b42144709d88b106c42891452e3b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/native-receipt.json",
+          "bytes": 9203,
+          "sha256": "dd4e9a97ec4fb832980a43533f925bf90765d3ccec1a5176e622d3b03db44f6c"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/poses.bin.gz",
+          "bytes": 3533,
+          "sha256": "41598ac8bc5de92cced413e326fdf55f2cb7ecf8e1746815482561dd6ec14b5f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/result.json",
+          "bytes": 3640,
+          "sha256": "a6ad7cc3f831abf02aabedd1be8a0d27f3306c43e6bc00ba2e633f2d1ff5777d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/started.json",
+          "bytes": 1740,
+          "sha256": "f295da4ffecb16b40731d269191988ef3efd264cfc4b84fd6e9d6bf7d648387e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-02/trajectory.json",
+          "bytes": 328748,
+          "sha256": "d4c7dbeeb539e30decb2aefe06d8861c459b9891a50ef3e965be8d9328728f77"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/goal-trace.jsonl.gz",
+          "bytes": 321750,
+          "sha256": "8b6bda34d4cee3f9d7b9ae4173fbc789b072477c9d16a2edbae8a3fa8d5c2ad3"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/input/recipe.json",
+          "bytes": 2060,
+          "sha256": "472ed7fceb9b58d16cd4a46b1e745395bb0361f4b851952ccdeaeb562bf2fda9"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/input/scene-receipt.json",
+          "bytes": 5765,
+          "sha256": "35b380fa29b52b3e394b4aa881384d4d498c3fbe21d970924684c9bbb171d2a3"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/input/workstation.usda",
+          "bytes": 7644,
+          "sha256": "1411ac61954971540607a02d2314b04ffd0de6c506ec9b941d37d56b9e565f19"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/interventions.json",
+          "bytes": 795,
+          "sha256": "878df68ce2177af9494445103b7d46e8b91f20d05543f239ca9e3fb8db0e59e8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/model.json",
+          "bytes": 80992,
+          "sha256": "bc03221861669dd4bfe01a38348b3cb83df244a5682a801dfb411546cc180e62"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/native-receipt.json",
+          "bytes": 9977,
+          "sha256": "b8e52b85dddad14f461eb6d4409bd889ccffd449903a836c319bab4f04ac8d56"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/poses.bin.gz",
+          "bytes": 3953,
+          "sha256": "83c327c23cf980b4fb395c904ef3ec0659ed2ee11bfa0a91689391c25ea58d64"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/result.json",
+          "bytes": 3648,
+          "sha256": "d02bdeb3ae25b186f0f59f255328ba3d1aa7bdeb49a433778f94c862d7c2c93f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/started.json",
+          "bytes": 1746,
+          "sha256": "dbe5e5ae7976cefbe95be5eecbf7b23ae09bb5bdc5d22248380377823169694f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-03/trajectory.json",
+          "bytes": 329082,
+          "sha256": "5c20ad07d15a01ff8d61550ad381c838eff6369c40b3185af33a829ce7d9a930"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/goal-trace.jsonl.gz",
+          "bytes": 315215,
+          "sha256": "749c2ecf68d39508b3b7808d71e4ced0cd589997739be64ce46e62d05db47183"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/input/recipe.json",
+          "bytes": 2100,
+          "sha256": "e10e09e6639253171868b233be06060fe0ba967be473785bf45c494d72ec918d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/input/scene-receipt.json",
+          "bytes": 6129,
+          "sha256": "838fd4b81793113a0b851fd9e513967449029bb9543c0c4ef4cf8d759bf025f9"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/input/workstation.usda",
+          "bytes": 8036,
+          "sha256": "9ad7a7e143c00a3d6bc5ff673ec66af78c3399db3988b904ed2685f34e32ec5d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/interventions.json",
+          "bytes": 897,
+          "sha256": "c05cbda3e3ef7f07327e24bbdd833bfd85e1cedb3ee809ab09c8b09ae37263dc"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/model.json",
+          "bytes": 81254,
+          "sha256": "00c88906b425b24eefa598eddbb65618ccf835fb2dcb5da36c625b09a5026332"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/native-receipt.json",
+          "bytes": 10381,
+          "sha256": "e80f6e9c87846a27da6ee0c9703e06ae6f74b5e7652c6d1bcca27ec21a9af9fd"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/poses.bin.gz",
+          "bytes": 3595,
+          "sha256": "56a9e8b39d80ed73b9b41c0eb8571c00cbbcf3d22f44c3af5a8021f3ffa28e84"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/result.json",
+          "bytes": 3752,
+          "sha256": "8663184981118d029e5734820c3838c6b44ddc42d305cb4e7faf7105f129d276"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/started.json",
+          "bytes": 1746,
+          "sha256": "16302c4e88d73ea3cddac59dd547cf59205e2296d0e304abc93fb2d276bdcace"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-04/trajectory.json",
+          "bytes": 330974,
+          "sha256": "04c3d853e20cc9044b26e24bec4ea3de76af665a2a9666c5888c4181fd20114b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/goal-trace.jsonl.gz",
+          "bytes": 589492,
+          "sha256": "e00c8a7070bfa9f1810f8f4fc894a8ebf6850b56645970dcb184fb05b6a7f2ed"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/input/recipe.json",
+          "bytes": 2734,
+          "sha256": "203d7f35037d1c97f6f1f31e1a4a101426d85dd2db7286709c9d53a33ff6415a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/input/scene-receipt.json",
+          "bytes": 6922,
+          "sha256": "8cc2fda6da24c85fb2425100bfa86c4bf0e870dacda33fc178d33170ff155fcb"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/input/workstation.usda",
+          "bytes": 9353,
+          "sha256": "d919265df0b6311a538d23a270fe6f315944e796037a4c154bb27545e51fe5b5"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/interventions.json",
+          "bytes": 1077,
+          "sha256": "df2e900328db3a9240f9b862aaad1f1f1d4102b7cf8c5c819b1a25649115240e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/model.json",
+          "bytes": 81291,
+          "sha256": "517d44ef6b7a40bae7e3c43bf91890a9a63c5a5b0eec9665b8e323857359e18b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/native-receipt.json",
+          "bytes": 11962,
+          "sha256": "8e76d3b041c95722b684175ab3613710bd5e7bd66019ea9da22d4ac083c24096"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/poses.bin.gz",
+          "bytes": 6577,
+          "sha256": "d4e4b9037394e5e9c397e27bda3c11007a226217e5b7ff09243e0a01ce21289c"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/result.json",
+          "bytes": 4403,
+          "sha256": "a0b79d8573f8af28a3f167b21bf1530cfe288046567a22a22daea3bd8ee1ab18"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/started.json",
+          "bytes": 1745,
+          "sha256": "995bdae52df3c0fe6637762f5c8bbdf300fbbac427c984b34b2d29dba83e70d6"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-05/trajectory.json",
+          "bytes": 631932,
+          "sha256": "22c3a0d5f1b6dd8e247131b89ad6a4f0f22f01a70562b4b5ec44ef5db94b8b3e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/goal-trace.jsonl.gz",
+          "bytes": 176722,
+          "sha256": "6ec21cc41a2e6d0fa97071f099ded369e46fe8b782c71856445b11a65c2cfb21"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/input/recipe.json",
+          "bytes": 1709,
+          "sha256": "93cf34c584480ccf95a237cfb7829886b217a64fcd87f252dcefe3b4d48b9b67"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/input/scene-receipt.json",
+          "bytes": 4196,
+          "sha256": "3a2bc160d4c5cc4e36f69760e9d5aad1d2b6d0af0e33857100947511dd334604"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/input/workstation.usda",
+          "bytes": 5098,
+          "sha256": "fee14bdd0f11a081d8d35fc979c0cbfd5a19678c023b241c15521bca9227ac18"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/interventions.json",
+          "bytes": 658,
+          "sha256": "e81b7a1acd3521eeff8937d7e3f225e5c005702cf5114caf63ef3bbff5fff7cf"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/model.json",
+          "bytes": 79194,
+          "sha256": "f018124fde1cbd317565cd92f5c5a45a7c8d8da9509e7f34da427c39feb18b09"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/native-receipt.json",
+          "bytes": 7881,
+          "sha256": "2cbddb118f9440702f314d061c2fd8d9578134b8a9802191bbcaee716bfd0bf2"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/poses.bin.gz",
+          "bytes": 2517,
+          "sha256": "0b6b9dddf6b8133d0dd82011392bcd84cbcf5115484f1555f405d7c6fa07de71"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/result.json",
+          "bytes": 3287,
+          "sha256": "96e730fd6d7418351322ab6eac90714ab7c915700e30932dfc55d4c81277d4e7"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/started.json",
+          "bytes": 1759,
+          "sha256": "c7d5afee8561e36f7b567ee8f3f8c849021d98f018ea304c74200ff196f1c076"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-06/trajectory.json",
+          "bytes": 174320,
+          "sha256": "1cecde7d2bac3f5ae70cce4c627e09d61012728027e82dbac671b21de151b8e3"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/goal-trace.jsonl.gz",
+          "bytes": 28593,
+          "sha256": "b9762fc0ae8da01ab3f4bbc3b3bda06ad7a9ea600836758d3f952d67f609498d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/input/recipe.json",
+          "bytes": 1709,
+          "sha256": "05c0faad7c60a71a4d33834da962df91a3bed0e5359bd2ba4ae5096fd99dbe49"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/input/scene-receipt.json",
+          "bytes": 4194,
+          "sha256": "01d6bccd7956437e4893187b6563804aea53c0241fd75c05f5bba60a2f27caea"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/input/workstation.usda",
+          "bytes": 5096,
+          "sha256": "7f29681ef28fa803bdc8b1d50cb0f79b20768c07901f7c917015316ccd6fdf08"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/interventions.json",
+          "bytes": 657,
+          "sha256": "4f4a0cc96d27aeeae9e59c9873794e5aa7b7dc7bd98ebece46a739d44c68f795"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/model.json",
+          "bytes": 79188,
+          "sha256": "3f532abf1eeb504a2c78630ffbffdd7686df75a5bbe759b07da9fa480803f30f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/native-receipt.json",
+          "bytes": 7875,
+          "sha256": "3ef2057e272de7c773c3f42c405a85cce7a1ac26ad7000053b0f57b0b827f91a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/poses.bin.gz",
+          "bytes": 757,
+          "sha256": "e3edafd409c7ac789855461b2218eae5e243b7a5e5dd746ceae5c577f17726ec"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/result.json",
+          "bytes": 3352,
+          "sha256": "7139e5f4dac1c2432c3d633971b186d2840015e85a83a20a57e43db39ef2ad79"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/started.json",
+          "bytes": 1782,
+          "sha256": "017bdd5cda1cd295a9ea0cf041f78c25ade51463430b0b9028e7f54065bb244b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-07/trajectory.json",
+          "bytes": 55310,
+          "sha256": "3205c5787a6384761dd8d586c10e1aa0c7589cb6bbd985ee4bca63f7d491c2a7"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/goal-trace.jsonl.gz",
+          "bytes": 4557,
+          "sha256": "e89a0031a59fb7aa84c39ca36a046fdde0d4136d029d3e1ebfc6e8a2fad66dbe"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/input/recipe.json",
+          "bytes": 1707,
+          "sha256": "a917207994c2b479ead99537edea1efb37d973312c8dc552f45616fa12d39526"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/input/scene-receipt.json",
+          "bytes": 4192,
+          "sha256": "2d0484ce6e5cc100fcdf04874be43278565aa4d0120bd55a7eaf5602e55fa7ee"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/input/workstation.usda",
+          "bytes": 5094,
+          "sha256": "e33da5d389758888715a054895846047487e43a2b1e409155d49b67d45b73f93"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/interventions.json",
+          "bytes": 655,
+          "sha256": "31b9a0a74249e0dd25f7cc2bca649beed6373b57528c89729686358a16db507a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/model.json",
+          "bytes": 79188,
+          "sha256": "9de4dd07c939ddc6511e0203cd04a8a583cac352c40ec1ef992e61a9400fce39"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/native-receipt.json",
+          "bytes": 7871,
+          "sha256": "b0c3d9241776242da3c07569aba7a7d6ba587cdaba5e34390248b4ba5b350dac"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/poses.bin.gz",
+          "bytes": 338,
+          "sha256": "20264d7b05dd1d09cf8df281dfc15c3c935753821aa083dc534e58188750a25b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/result.json",
+          "bytes": 3338,
+          "sha256": "8606420f21a6496df3ec6c742001a40b88864a33b25d9218ff661acd50952a98"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/started.json",
+          "bytes": 1770,
+          "sha256": "b216d1001417dae897f16f0048e29c8c5e280dfb06237edf76b2a80bc270b179"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-08/trajectory.json",
+          "bytes": 46443,
+          "sha256": "d4cd757efea2bd2c6274565c323735cca0b6a46e16d007c5f13ffd726661bc9d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/goal-trace.jsonl.gz",
+          "bytes": 19370,
+          "sha256": "9453c0cb128737f52e6a04cf258165af8c54833a391683de072dfc9c048fc3b1"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/input/recipe.json",
+          "bytes": 1708,
+          "sha256": "243b5e7d0349016bef67ba3cf4473a37c6cda58e5d50c70b64ff52c25b5dac25"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/input/scene-receipt.json",
+          "bytes": 4118,
+          "sha256": "0ad657f38fb3c432c57fa9894e065f09770e7372e168e4dd82408c0de502ff7a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/input/workstation.usda",
+          "bytes": 5087,
+          "sha256": "6fc1d12ac64e69863decf5ab822b6c175eb25ef2ce08560af6913c35de3c0efc"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/interventions.json",
+          "bytes": 669,
+          "sha256": "7f3378a8ab747d497992638a044f49af1f4ee88e614eac623844efe9294214ad"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/model.json",
+          "bytes": 79188,
+          "sha256": "3c66311be7e2f6ce0f2d4762d1598abd25b40f6de0d9b00beafd09d0c4fa7faf"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/native-receipt.json",
+          "bytes": 7798,
+          "sha256": "18de78b0fbd83a06d7af1faa68243c4c7992bb6120e5b5c4c567b177e2f4a602"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/poses.bin.gz",
+          "bytes": 617,
+          "sha256": "3ce9ddb6ba17abbc09886beac1522942f12385e3bb3de81000cc513c278444ae"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/result.json",
+          "bytes": 3339,
+          "sha256": "26603189076b0902acd42927c16abb1fe3d8dc3eb2ab156fdcb40ad15b66f53b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/started.json",
+          "bytes": 1759,
+          "sha256": "4115babec29b9b44f38c064135877655223f7be87d00158d89c3221800a37fcd"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-09/trajectory.json",
+          "bytes": 18116,
+          "sha256": "56770cae6f2fcf7a06d82ec2093e8966928ccf494ddd7abf2cde7ac58a96f2af"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/goal-trace.jsonl.gz",
+          "bytes": 10887,
+          "sha256": "9ebbb255250b8cc27cf00a399b930467ad94e5895ca24c01c8585053f9460fa0"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/input/recipe.json",
+          "bytes": 1708,
+          "sha256": "05b3460b8e9c37650ee6b4ba565ccbce82646ca9fc89982d98bedfee24374293"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/input/scene-receipt.json",
+          "bytes": 4193,
+          "sha256": "87b9928b4814d31e600bb9edc3294b95e2c5dbeaa0892e56254a845f81f86cca"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/input/workstation.usda",
+          "bytes": 5095,
+          "sha256": "545792e2a5ac8f9d78c22618e9e78b7dcf99c80bd9e4131c83d6f91a6dabb70d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/interventions.json",
+          "bytes": 659,
+          "sha256": "8f4dcded650e14829fbfdcff4422a1f5feb0620e427fb4aae7ff53c4c7b46571"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/model.json",
+          "bytes": 79188,
+          "sha256": "ca2674403a2506160c90a71e9924cbb07b177453de36474c1eeec6e465eb64bf"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/native-receipt.json",
+          "bytes": 7873,
+          "sha256": "f25d62557099392b42941f2932752c8195de7e017d9474951ec0b3201c386cd3"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/poses.bin.gz",
+          "bytes": 353,
+          "sha256": "3267be7ca802dd0020ae2db6d6a54b0fa79c7ac1a3fc4c9c367bf9441c9e5721"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/result.json",
+          "bytes": 3343,
+          "sha256": "7df8aa39c8a59601887b206713f17b8409b6a6190e465d98790b84bde47dcfa0"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/started.json",
+          "bytes": 1760,
+          "sha256": "ae6686c10c28de4d3fa01adc370e069c34d03799970d7491daba1b949b95966d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-10/trajectory.json",
+          "bytes": 12074,
+          "sha256": "d7992582e9b1ad23e4ce3142f9ebacfaf063784a7dc4cf054b3181ca5ad554f8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/goal-trace.jsonl.gz",
+          "bytes": 334840,
+          "sha256": "0000b0dd4e3a644d3fb2722b29de4add47d4d6d04cfc7522e01f20940c64f457"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/input/recipe.json",
+          "bytes": 2029,
+          "sha256": "b82cbdf3395d2426ef6fafbdcab6365473d5ba5adf1b0a9253312bc01de5dcc8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/input/scene-receipt.json",
+          "bytes": 5082,
+          "sha256": "db90efdb2ef8c0b80fe3900676ba2c296ee67e517cb4f78a1d12ad8b442b5576"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/input/workstation.usda",
+          "bytes": 6492,
+          "sha256": "0ff52806bf6d3f10158b9fd9a57c72e42d3d3c08feffd1f6e5db98cfdc5d7a16"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/interventions.json",
+          "bytes": 777,
+          "sha256": "6e18867bdbbc9926bb5db5f4ea236acfe33e7a03b2ed39aea55a8bc4eaa7cddf"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/model.json",
+          "bytes": 79890,
+          "sha256": "5c3f6f76c9228aa9b664698740aada3ad26f0536e69e1cab618b9403b62f8c16"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/native-receipt.json",
+          "bytes": 9195,
+          "sha256": "a5321ceadf88c5987f01343f090c3fe2696f5b24f7969913ff9099ff9e5e20dc"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/poses.bin.gz",
+          "bytes": 4340,
+          "sha256": "1a33b4beec20ceb2481d6e6fa3dc40b63ccd87075b7e496a243bee1d400c9c8f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/result.json",
+          "bytes": 3698,
+          "sha256": "915e64c3c27f7dfd30fb10874c9a30cae0d0e27d0154f11ecc054d1f88d69aaf"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/started.json",
+          "bytes": 1768,
+          "sha256": "40450bdd9dfc628fd8b0011d40a795a742d9c083183b9322e42033219b6601cf"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-11/trajectory.json",
+          "bytes": 324976,
+          "sha256": "381e1a40a198fcfa6478a1529fdd2216c8464d66857456c82ad5f928f387b897"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-12/input/recipe.json",
+          "bytes": 2028,
+          "sha256": "fdfe9c1da6a426a58b8cf655ca55baf6959dbf9f1fd88db85008e5c7ca184f69"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-12/result.json",
+          "bytes": 207,
+          "sha256": "efff575df45be607f77bb88b3c9cd88645421b34cf577abc460d950f08c4c66b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-12/started.json",
+          "bytes": 1758,
+          "sha256": "bb3f1a7af3ab1e3c44606ae6d41ce66740ae1a69cec4794f4a42841c9d2e0fa9"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-13/input/recipe.json",
+          "bytes": 1706,
+          "sha256": "9fc2f440738d07386b845cb34e4c270b0905731321b11e16ed571318e4a2cd3b"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-13/result.json",
+          "bytes": 202,
+          "sha256": "68cf5b9c09fc727270e200cf8c3bee2fa0d3ff8e5476bbea2bff0b13c579d4ee"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-13/started.json",
+          "bytes": 1742,
+          "sha256": "2a6ec960ba6b848a4622cde8e50c7bb04528c47293de283ef5d8385b1e22a294"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-14/input/recipe.json",
+          "bytes": 1705,
+          "sha256": "b2939416a48b7d220fc52a634dde66ae190281ca8a262f28e4b97151625dee0a"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-14/result.json",
+          "bytes": 226,
+          "sha256": "a17c1a14e8fd29403c3a2e85d8115b8f7a092946f59f05eab88df8ac38f98b17"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-14/started.json",
+          "bytes": 1759,
+          "sha256": "1a4c75e7b92ad72a956a6026a4da6a8472254cf625847795e603d025636126c2"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-15/input/recipe.json",
+          "bytes": 2040,
+          "sha256": "3d92e61bcb8a27307246ec07c4d63eb53ffc9c7ab01bbc817b8346e8c48be578"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-15/result.json",
+          "bytes": 225,
+          "sha256": "437ac05df7b86c781ea7fd324d1325e28296e7fdb163fbff328530b08ffb02a3"
+        },
+        {
+          "path": "task-environments/v02/benchmark/cases/case-15/started.json",
+          "bytes": 1760,
+          "sha256": "74da6602fff67cba9c6e57d894d6939a3f0b75a55b88f35ee56e0cc258e8b1e0"
+        },
+        {
+          "path": "task-environments/v02/benchmark/completion.json",
+          "bytes": 351,
+          "sha256": "69db4428558dd6981f6be2e59a67bdabb42c24226e6f6f7dc76445fadb0c284e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/execution-intent.json",
+          "bytes": 329,
+          "sha256": "d793b05fe31101221c3fa91c6f044f5b24ecdce76c3703a4e4b829819560e14e"
+        },
+        {
+          "path": "task-environments/v02/benchmark/geometry/2e9a97f9a4c776895f0f6888475f9bb161e659e426d2c5bf339022f25b267def.bin.gz",
+          "bytes": 3574720,
+          "sha256": "51365a5a661d8062e28c66abc6bdb843ee410811f84b49d62c5878c265b3631f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/index.json",
+          "bytes": 2989349,
+          "sha256": "16e1a52089c7f8dd3559295ad011f422a02b1005368734105b2042ee61972062"
+        },
+        {
+          "path": "task-environments/v02/benchmark/input-inventory.json",
+          "bytes": 6290,
+          "sha256": "fdd77dd104cd9ba4021e7e822b66f6c6f3797545db149b87215710d455a03dd7"
+        },
+        {
+          "path": "task-environments/v02/benchmark/preparation-seal.json",
+          "bytes": 289,
+          "sha256": "f25ef1bf15d7fbb3504c3eb3cf99599756bd416e7dc95e17450aaa2139c4c558"
+        },
+        {
+          "path": "task-environments/v02/benchmark/protocol.json",
+          "bytes": 6747,
+          "sha256": "7414b6576ce2e57b77622f9173f39b9ecf320ee445ae6390d8714848659923e2"
+        },
+        {
+          "path": "task-environments/v02/benchmark/report.json",
+          "bytes": 51494,
+          "sha256": "dd21b59e184542f0d39489b64acaa590ebd42d7f4457bc2a6e995f99aa9aa77f"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/asset_catalog.json",
+          "bytes": 37117,
+          "sha256": "592f363389a96fef7f9223737aa72a2f1a74f400238924bf6790ec5bfd3302b7"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/asset_library.py",
+          "bytes": 9837,
+          "sha256": "347bfdeb61e22eb3f65e317c18f94d3b2076d05def77630ebbb6e7dde427c2a7"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/asset_preview.py",
+          "bytes": 16887,
+          "sha256": "12f4806162504a3c8773b10b516d6b7abb05f670a1f5817be144ea98fc1d25d8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/reference_assets.lock.json",
+          "bytes": 10029,
+          "sha256": "941eb6f9fd474635a590b82c66b59a9d5124d8e0d9ddc203006f5b921d8d2861"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/reference_replay.py",
+          "bytes": 26037,
+          "sha256": "f73731434d55bac150db16c7205d341a70b95ce13e582e7a23d11dee31b27a19"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/reference_sim.py",
+          "bytes": 24336,
+          "sha256": "c1201d22eb13dd07a236ee63cc4ba68e129f6067e8db61ed41af2d820eb5e3b8"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/robot_profiles.lock.json",
+          "bytes": 35002,
+          "sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/robot_profiles.py",
+          "bytes": 26493,
+          "sha256": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/task_scene.py",
+          "bytes": 37808,
+          "sha256": "17034a12980fd69960adbb7b4be427bdde89222d6c69b75ddd51f90f99d48ba9"
+        },
+        {
+          "path": "task-environments/v02/benchmark/source/task_scene_benchmark.py",
+          "bytes": 30586,
+          "sha256": "6c6a3db8edec4ab95d17aa7a58d5dfff668fe72783c036ec55f251c5315eb4d5"
+        },
+        {
+          "path": "task-environments/v02/docs/task-environments-v02.md",
+          "bytes": 6859,
+          "sha256": "8eb876f4807199994dae73b9682b41bbaa4081c2a8e4184ad16beb8edf18e6ce"
+        },
+        {
+          "path": "task-environments/v02/environment.json",
+          "bytes": 415,
+          "sha256": "988a38f84d49a84f799a4e2e3035ce5ab295998b5f776c59c03cadb6447f6709"
+        },
+        {
+          "path": "task-environments/v02/index.html",
+          "bytes": 15816,
+          "sha256": "a13e447692b9f216767427245b930a7aebda1473ac5aba5da37f0c027658a445"
+        },
+        {
+          "path": "task-environments/v02/licenses/agilex_piper/LICENSE",
+          "bytes": 1065,
+          "sha256": "e32d78fd3761052ab0b2bb42fef8a7a9ad3f298d315d305333c349d2aff1f134"
+        },
+        {
+          "path": "task-environments/v02/licenses/agilex_piper/README.md",
+          "bytes": 1681,
+          "sha256": "ab0d218758ec6c298417407962f49179e369236e8f316dbaa7671756d6f8eb77"
+        },
+        {
+          "path": "task-environments/v02/manifest.json",
+          "bytes": 28021,
+          "sha256": "ce8f93cbb1bf613364fdbef92ae1a7d3bfa47eca3b2484a10f59b9ee58a5c38a"
+        },
+        {
+          "path": "task-environments/v02/recipe.json",
+          "bytes": 1707,
+          "sha256": "cd9690d4918803a95ee828defa8adf8658d6c8fdfb73cdd6b6b485c5bba107c2"
+        },
+        {
+          "path": "task-environments/v02/reference_replay.third-party.txt",
+          "bytes": 1199,
+          "sha256": "ea4da6cf7a8a54649702f0eb8d057c8ced12f8fed2329c5e96d92a3316922813"
+        },
+        {
+          "path": "task-environments/v02/task_scene_viewer.bundle.js",
+          "bytes": 562901,
+          "sha256": "d73f2c1aafbcf9b7ee51983b0dec927c214d17c6f7c41d8a78b4914167d8d0c1"
+        },
+        {
+          "path": "task-environments/v02/tools/task_scene_audit.py",
+          "bytes": 25293,
+          "sha256": "d1640bc14164c179d90baa44e8777dce2dce13d81edde17fa39e6519ba74ddfc"
+        }
+      ]
+    }
+  ],
+  "anonymous_full_readback": true,
+  "physical_robot_ready": false
+}

@@ -1,0 +1,135 @@
+{
+  "ablations_at_end": {
+    "any_instance_only": true,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": true,
+    "without_speed": true
+  },
+  "ablations_ever_accept": {
+    "any_instance_only": true,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": true,
+    "without_speed": true
+  },
+  "body_count": 11,
+  "case": {
+    "control": "normal",
+    "duration_s": 1.5,
+    "expected_goal_success": true,
+    "id": "case-01",
+    "label": "Original rigid shoe surrogate released over the bin",
+    "name": "shoe-drop"
+  },
+  "checks": {
+    "complete_native_duration": true,
+    "finite_body_poses": true,
+    "goal_known": true,
+    "matches_declared_goal": true,
+    "no_native_warning": true
+  },
+  "checks_passed": true,
+  "expected_goal_success": true,
+  "first_goal_success_s": 0.4890000000000004,
+  "frame_count": 151,
+  "interventions": {
+    "authored_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "control": "normal",
+    "effective_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "external_forces_during_stepping": false,
+    "initial_qpos": [
+      0.0,
+      1.57,
+      -1.3485,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.65,
+      0.2,
+      0.08,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_qvel": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scope": "Declared verifier counterexample fixture; no learned robot control",
+    "state_overwrite_during_stepping": false
+  },
+  "learned_skill": false,
+  "native_goal": {
+    "instantaneous": true,
+    "objects": {
+      "shoe": {
+        "angular_speed": true,
+        "bin_floor_contact": true,
+        "contained": true,
+        "instantaneous": true,
+        "linear_speed": true,
+        "released": true
+      }
+    },
+    "reason": null,
+    "settled_s": 1.2609999999999455,
+    "success": true,
+    "time_s": 1.4999999999999456,
+    "unknown": false
+  },
+  "native_goal_success": true,
+  "native_model_sha256": "ab37a773d4cc05a4f04d587b3933fa3a8223e0b64d84995d233350df58a60121",
+  "native_warnings": [],
+  "per_step_trace": {
+    "bytes": 1246688,
+    "compression": "gzip",
+    "file": "goal-trace.jsonl.gz",
+    "samples": 1501,
+    "sha256": "88470099e2e324f5797273a6575a8a26420d335a9cbdfa12371b30aaf64e7205"
+  },
+  "physical_robot_ready": false,
+  "physics_calibrated": false,
+  "pose_identity": {
+    "bytes": 46508,
+    "sha256": "9448688ddaedf2f96ad6ec21456240ec6deb78627e27164a2d2566e1e293328d"
+  },
+  "record_dt_s": 0.01,
+  "registered_benchmark": true,
+  "runtime": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.9"
+  },
+  "schema": "dvidia.task-scene-benchmark/v2",
+  "scope": "Passive, original rigid task-scene and independent completion checks. The native PiPER holds home; no learned grasp, image-based perception, shoe deformation or physical-robot transfer is evaluated.",
+  "simulated_seconds": 1.4999999999999456,
+  "simulated_seconds_per_wall_second": 1.1527294470370593,
+  "timestep_s": 0.001,
+  "valid": true,
+  "wall_seconds_through_case_output": 1.3012593751773238
+}

@@ -1,0 +1,201 @@
+{
+  "files": {
+    "recipe.json": {
+      "bytes": 1709,
+      "sha256": "93cf34c584480ccf95a237cfb7829886b217a64fcd87f252dcefe3b4d48b9b67"
+    },
+    "workstation.usda": {
+      "bytes": 5098,
+      "sha256": "fee14bdd0f11a081d8d35fc979c0cbfd5a19678c023b241c15521bca9227ac18"
+    }
+  },
+  "schema": "dvidia.task-scene-authored/v1",
+  "scope": "bounded original rigid geometry; no learning or hardware execution",
+  "source_sha256": {
+    "asset_library.py": "347bfdeb61e22eb3f65e317c18f94d3b2076d05def77630ebbb6e7dde427c2a7",
+    "reference_sim.py": "c1201d22eb13dd07a236ee63cc4ba68e129f6067e8db61ed41af2d820eb5e3b8",
+    "robot_profiles.py": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d",
+    "task_scene.py": "17034a12980fd69960adbb7b4be427bdde89222d6c69b75ddd51f90f99d48ba9"
+  },
+  "usd": {
+    "bin": [
+      {
+        "center_m": [
+          0.65,
+          0.2,
+          0.0075
+        ],
+        "name": "floor",
+        "prim": "/World/Bin_floor",
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size_m": [
+          0.39,
+          0.28,
+          0.015
+        ],
+        "sliding_friction": 0.6000000238418579
+      },
+      {
+        "center_m": [
+          0.4625,
+          0.2,
+          0.095
+        ],
+        "name": "left",
+        "prim": "/World/Bin_left",
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size_m": [
+          0.015,
+          0.28,
+          0.16
+        ],
+        "sliding_friction": 0.6000000238418579
+      },
+      {
+        "center_m": [
+          0.8375,
+          0.2,
+          0.095
+        ],
+        "name": "right",
+        "prim": "/World/Bin_right",
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size_m": [
+          0.015,
+          0.28,
+          0.16
+        ],
+        "sliding_friction": 0.6000000238418579
+      },
+      {
+        "center_m": [
+          0.65,
+          0.0675,
+          0.095
+        ],
+        "name": "front",
+        "prim": "/World/Bin_front",
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size_m": [
+          0.36,
+          0.015,
+          0.16
+        ],
+        "sliding_friction": 0.6000000238418579
+      },
+      {
+        "center_m": [
+          0.65,
+          0.3325,
+          0.095
+        ],
+        "name": "back",
+        "prim": "/World/Bin_back",
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size_m": [
+          0.36,
+          0.015,
+          0.16
+        ],
+        "sliding_friction": 0.6000000238418579
+      }
+    ],
+    "gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "objects": {
+      "outside": {
+        "center_of_mass_m": [
+          0.0,
+          0.0,
+          0.019999999552965164
+        ],
+        "diagonal_inertia_kg_m2": [
+          1.0666666639735922e-05,
+          1.0666666639735922e-05,
+          1.0666666639735922e-05
+        ],
+        "mass_kg": 0.03999999910593033,
+        "pieces": [
+          {
+            "mass_fraction": 1.0,
+            "name": "piece_0",
+            "position_m": [
+              0.0,
+              0.0,
+              0.02
+            ],
+            "size_m": [
+              0.04,
+              0.04,
+              0.04
+            ]
+          }
+        ],
+        "position_m": [
+          0.35,
+          -0.2,
+          0.0
+        ],
+        "prim": "/World/Object_outside",
+        "quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sliding_friction": 0.5
+      }
+    },
+    "stage_sha256": "fee14bdd0f11a081d8d35fc979c0cbfd5a19678c023b241c15521bca9227ac18",
+    "table": {
+      "center_m": [
+        0.4,
+        0.0,
+        -0.04
+      ],
+      "prim": "/World/Table",
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size_m": [
+        1.2,
+        1.0,
+        0.08
+      ],
+      "sliding_friction": 0.800000011920929
+    },
+    "units": "m-kg-s",
+    "up_axis": "Z"
+  }
+}

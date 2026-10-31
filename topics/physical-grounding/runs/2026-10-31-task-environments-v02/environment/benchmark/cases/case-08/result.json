@@ -1,0 +1,136 @@
+{
+  "ablations_at_end": {
+    "any_instance_only": false,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": false,
+    "without_speed": false
+  },
+  "ablations_ever_accept": {
+    "any_instance_only": false,
+    "body_origin_only": true,
+    "geometry_only": true,
+    "without_dwell": false,
+    "without_speed": false
+  },
+  "body_count": 11,
+  "case": {
+    "control": "gravity_disabled",
+    "duration_s": 0.5,
+    "expected_goal_success": false,
+    "id": "case-08",
+    "label": "Contained and stationary without floor support",
+    "name": "unsupported"
+  },
+  "checks": {
+    "complete_native_duration": true,
+    "finite_body_poses": true,
+    "geometry_only_false_completion_exposed": true,
+    "goal_known": true,
+    "matches_declared_goal": true,
+    "no_native_warning": true
+  },
+  "checks_passed": true,
+  "expected_goal_success": false,
+  "first_goal_success_s": null,
+  "frame_count": 51,
+  "interventions": {
+    "authored_gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.8100004196167
+    ],
+    "control": "gravity_disabled",
+    "effective_gravity_m_s2": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "external_forces_during_stepping": false,
+    "initial_qpos": [
+      0.0,
+      1.57,
+      -1.3485,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.65,
+      0.2,
+      0.06,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "initial_qvel": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scope": "Declared verifier counterexample fixture; no learned robot control",
+    "state_overwrite_during_stepping": false
+  },
+  "learned_skill": false,
+  "native_goal": {
+    "instantaneous": false,
+    "objects": {
+      "block": {
+        "angular_speed": true,
+        "bin_floor_contact": false,
+        "contained": true,
+        "instantaneous": false,
+        "linear_speed": true,
+        "released": true
+      }
+    },
+    "reason": null,
+    "settled_s": 0.0,
+    "success": false,
+    "time_s": 0.5000000000000003,
+    "unknown": false
+  },
+  "native_goal_success": false,
+  "native_model_sha256": "a56cf7565486123f07ba952c0180f33254aadfb4809fc0670aebe079ff7786d5",
+  "native_warnings": [],
+  "per_step_trace": {
+    "bytes": 305032,
+    "compression": "gzip",
+    "file": "goal-trace.jsonl.gz",
+    "samples": 501,
+    "sha256": "9e557fa3ba260fc2d4502d7c511e8de6ff6187eb8310d9925efc5e18ef63a431"
+  },
+  "physical_robot_ready": false,
+  "physics_calibrated": false,
+  "pose_identity": {
+    "bytes": 15708,
+    "sha256": "9e7b3b2669d15afae29d773a39fe9ce8640b6f0333141864df43e14a0b907812"
+  },
+  "record_dt_s": 0.01,
+  "registered_benchmark": true,
+  "runtime": {
+    "mujoco": "3.15.0",
+    "numpy": "2.5.3",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.9"
+  },
+  "schema": "dvidia.task-scene-benchmark/v2",
+  "scope": "Passive, original rigid task-scene and independent completion checks. The native PiPER holds home; no learned grasp, image-based perception, shoe deformation or physical-robot transfer is evaluated.",
+  "simulated_seconds": 0.5000000000000003,
+  "simulated_seconds_per_wall_second": 0.37873882666055125,
+  "timestep_s": 0.001,
+  "valid": true,
+  "wall_seconds_through_case_output": 1.3201709589920938
+}
