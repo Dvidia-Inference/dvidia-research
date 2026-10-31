@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-probe-evidence-v01",
+      "title": "Testing before trusting a PiPER grip",
+      "source": "reports/PiPER probe evidence v01.md",
+      "date": "2026-10-31",
+      "type": "Paired closed-loop evidence-gated probe and timer simulation study",
+      "status": "24/24 valid · evidence 6/12 (0 false) · timer 12/12 (8 false) · simulation only",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A frozen 12-scene CPU study compares an authored native-evidence short-lift gate with a fixed-timer gate; both stop in a measured-position hold without full transport. All 24 attempts are valid, with 480,000 recorded 1 ms native rows and 24,000 commands; independent readback confirms the retained source and evidence unchanged. Evidence admitted 6/12 with zero false initial qualifications; the timer admitted 12/12 with eight false qualifications. Four evidence admissions and ten timer attempts were later invalidated, including two initially correct timer admissions. Two per variant remain in an admission hold. Final planning gates are 2/12 ready for simulated transport and 10/12 requiring another test lift. This finite closed-loop method comparison uses privileged simulator state and an arbitrary synthetic force ceiling; it is not an isolated classifier effect, learned policy, placement result or hardware qualification."
+    },
+    {
       "slug": "piper-control-profile-v01",
       "title": "Profiling the PiPER contact path",
       "source": "reports/PiPER control profiling v01.md",

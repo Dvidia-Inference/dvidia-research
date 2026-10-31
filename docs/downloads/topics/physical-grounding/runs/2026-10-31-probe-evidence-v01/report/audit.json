@@ -1,0 +1,3286 @@
+{
+  "all_retained_attempts": 24,
+  "counts": {
+    "evidence": {
+      "admission_events": 6,
+      "attempts": 12,
+      "correct_initial_qualification": 6,
+      "critical_native_ticks": 0,
+      "ever_admitted": 6,
+      "false_initial_qualification": 0,
+      "final_both_qualified": 2,
+      "final_controller_qualified": 2,
+      "final_native_qualified": 2,
+      "later_invalidated_after_correct_admission": 4,
+      "positive_20ms_checks_without_fresh_native_window": 0,
+      "probes": 17,
+      "retries": 5,
+      "valid": 12,
+      "warnings": 0
+    },
+    "timer": {
+      "admission_events": 12,
+      "attempts": 12,
+      "correct_initial_qualification": 4,
+      "critical_native_ticks": 0,
+      "ever_admitted": 12,
+      "false_initial_qualification": 8,
+      "final_both_qualified": 2,
+      "final_controller_qualified": 2,
+      "final_native_qualified": 2,
+      "later_invalidated_after_correct_admission": 2,
+      "positive_20ms_checks_without_fresh_native_window": 8,
+      "probes": 12,
+      "retries": 0,
+      "valid": 12,
+      "warnings": 0
+    }
+  },
+  "frozen_raw_files": {
+    "frozen.json": {
+      "bytes": 148,
+      "sha256": "cfb5760e93a2e97780f7ff28a254b912b6b2c1e39cc45f0487e478bab46f6258"
+    },
+    "inspection.json": {
+      "bytes": 4518,
+      "sha256": "6656aa7554046295839660014ac226bdc869ebe81c8677b92537fa4f8b9b01ee"
+    },
+    "m40-f15-p0-evidence/episode.json.gz": {
+      "bytes": 761709,
+      "sha256": "17cb911b20b6e58777c575f3e794364066ffdcbc0ad55af46941dfcd9162e268"
+    },
+    "m40-f15-p0-evidence/evaluation.json": {
+      "bytes": 9491,
+      "sha256": "d511e7da960e869d16927db1d8762487fae9a54908448b8d047af674c8a4bad9"
+    },
+    "m40-f15-p0-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f15-p0-evidence/native.npz": {
+      "bytes": 4069375,
+      "sha256": "8308a811ddcafddf825f504c10d95023eaf8fb1670b2a85aa445ff897228f3eb"
+    },
+    "m40-f15-p0-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "76e97b17f6f80235dd9168ce28d025219e81095ad57543dfecb1d7c5d184ad27"
+    },
+    "m40-f15-p0-evidence/summary.json": {
+      "bytes": 67968,
+      "sha256": "1e9a2805359b6243b7d6e6252b7363e156fc1edde72ef0fb60a82586487c12d1"
+    },
+    "m40-f15-p0-timer/episode.json.gz": {
+      "bytes": 742694,
+      "sha256": "3aba6438f2292bc382f27fdd8795a408ade9c16f6271572eaff2099a5f92eb78"
+    },
+    "m40-f15-p0-timer/evaluation.json": {
+      "bytes": 9848,
+      "sha256": "55affafb33a18ab51ee0266fdc2e656db1c912df626932601b4515fa665c162c"
+    },
+    "m40-f15-p0-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f15-p0-timer/native.npz": {
+      "bytes": 3953458,
+      "sha256": "a8edf2926bbd96c9717cf6f4b84f93d4e2144221e456d9226fb699a90dfd317c"
+    },
+    "m40-f15-p0-timer/started.json": {
+      "bytes": 142,
+      "sha256": "50da3c75720febf26ff0dd9f3a3b4a8f4414e9e6af30550ec56941ab477015e5"
+    },
+    "m40-f15-p0-timer/summary.json": {
+      "bytes": 68664,
+      "sha256": "376fce8ded868a09d956725558fdf6832d92550b6d5fb16a9844a3d3db527b65"
+    },
+    "m40-f15-p1-evidence/episode.json.gz": {
+      "bytes": 761387,
+      "sha256": "5f88a9ad3117ae680d743f01713adbeb0ab904d911376260021b89aab4207968"
+    },
+    "m40-f15-p1-evidence/evaluation.json": {
+      "bytes": 9487,
+      "sha256": "8c128b78d222dfb5674305c28305a7114e9b5c5560b9cf972b7037ff23967fa5"
+    },
+    "m40-f15-p1-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f15-p1-evidence/native.npz": {
+      "bytes": 4069341,
+      "sha256": "6158244bf9ff113b3e6b49bbd27e06cd2da1542cf25aeefcf1556e50c26a9553"
+    },
+    "m40-f15-p1-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "4878f193575c56c47c64e12bec0cde232c0862dc459db2648176e32063b8a5dd"
+    },
+    "m40-f15-p1-evidence/summary.json": {
+      "bytes": 66536,
+      "sha256": "7f6fad40351ce6d47eb62b246e9e441e2f8d213c4125b48428693c59577a1702"
+    },
+    "m40-f15-p1-timer/episode.json.gz": {
+      "bytes": 744788,
+      "sha256": "ec3e593e81d1d7b10d895a631c619a7c12d5769fb2049ddc2c84a2ea7dd2f391"
+    },
+    "m40-f15-p1-timer/evaluation.json": {
+      "bytes": 9849,
+      "sha256": "5a998fed55d3fb8b82c61b51f4c5b8fd1f785e15b8cf007b5b6ebb1869facc74"
+    },
+    "m40-f15-p1-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f15-p1-timer/native.npz": {
+      "bytes": 3955366,
+      "sha256": "9412228af7578067e7ef81220996afdca7f35cfaa64cd20250c2afc81b27d863"
+    },
+    "m40-f15-p1-timer/started.json": {
+      "bytes": 142,
+      "sha256": "f6a134a4cc1f4a091a72f4237476b912547b7da1743c882aac27acf6a9163a9c"
+    },
+    "m40-f15-p1-timer/summary.json": {
+      "bytes": 67220,
+      "sha256": "49d7a16d05c686e7078bd34ccc749c35cd68d778ed8c0b5db53d38fa79be962f"
+    },
+    "m40-f55-p0-evidence/episode.json.gz": {
+      "bytes": 760064,
+      "sha256": "16cac9ba05abe026da432afcec574a93dad0940575cb12bfb3a3bff974c8e3d7"
+    },
+    "m40-f55-p0-evidence/evaluation.json": {
+      "bytes": 9304,
+      "sha256": "ab933cf4ded06914abb3736a7d1d6932c486814e2217b35b600c56719fcaddd8"
+    },
+    "m40-f55-p0-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f55-p0-evidence/native.npz": {
+      "bytes": 3944019,
+      "sha256": "277b4c2598a2ed92c379ce089eac26f5955b7ab50a9dc8e125515b28ff68374c"
+    },
+    "m40-f55-p0-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "b06576cebbe6f9336e19da7a1bbf92a67fc1b58000b566103286e73de5054232"
+    },
+    "m40-f55-p0-evidence/summary.json": {
+      "bytes": 66689,
+      "sha256": "1df813c85ba3e59f4fcd34dc149f15ed1ba6713bc316de5f925ec5ac9844dce8"
+    },
+    "m40-f55-p0-timer/episode.json.gz": {
+      "bytes": 759383,
+      "sha256": "356ebc6b0ac90cf61ada28c02e0cdfaddc11b733eebd15171d613dd133706289"
+    },
+    "m40-f55-p0-timer/evaluation.json": {
+      "bytes": 9292,
+      "sha256": "7dd72b36cd0773aafa7f88d55ce939315468256c6b1c6c43b1f87ea29160347b"
+    },
+    "m40-f55-p0-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f55-p0-timer/native.npz": {
+      "bytes": 3944019,
+      "sha256": "277b4c2598a2ed92c379ce089eac26f5955b7ab50a9dc8e125515b28ff68374c"
+    },
+    "m40-f55-p0-timer/started.json": {
+      "bytes": 142,
+      "sha256": "3d7f269d225ac8fbc72965458e64899818b58df4e69f5cc0575ebf5459ee7e23"
+    },
+    "m40-f55-p0-timer/summary.json": {
+      "bytes": 66636,
+      "sha256": "a86b055038ec9c5132c0a6f571d14268f4c8c289c56cf17b013bc3a273f04a45"
+    },
+    "m40-f55-p1-evidence/episode.json.gz": {
+      "bytes": 760825,
+      "sha256": "215beadf4468ea2465b807791ca174222f418e7d00aa1e71c1c33f07c5012cf7"
+    },
+    "m40-f55-p1-evidence/evaluation.json": {
+      "bytes": 9508,
+      "sha256": "146670342d243097c5f0fcc3b2a6ec486cac6ee5b0430edab88775a9e9022fc0"
+    },
+    "m40-f55-p1-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f55-p1-evidence/native.npz": {
+      "bytes": 3976120,
+      "sha256": "f524da38d90c66e35e8984479c0955913799b833da1e59893c848d7be49d6d9e"
+    },
+    "m40-f55-p1-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "58e4cea77781dbe0d5df4f92ede1e37cc056fe443ef6fdba821410f33343d09e"
+    },
+    "m40-f55-p1-evidence/summary.json": {
+      "bytes": 66575,
+      "sha256": "11eb58c170a31471a8faf381bbd0adcccebe6d0e5f4e652285ea739511a3cca0"
+    },
+    "m40-f55-p1-timer/episode.json.gz": {
+      "bytes": 760984,
+      "sha256": "bda7c4f2c524c817615dc53cc33048d51a1bc955e0b0017d0bfa1a0b34fecca1"
+    },
+    "m40-f55-p1-timer/evaluation.json": {
+      "bytes": 9496,
+      "sha256": "3e1d4ab8cd1d4fc6abf22e94925fd9657107a32e5ca74c446be12c4f93bc596b"
+    },
+    "m40-f55-p1-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f55-p1-timer/native.npz": {
+      "bytes": 3976120,
+      "sha256": "f524da38d90c66e35e8984479c0955913799b833da1e59893c848d7be49d6d9e"
+    },
+    "m40-f55-p1-timer/started.json": {
+      "bytes": 142,
+      "sha256": "a50152ff437f3177476492df34fc5bd209ae7e101fbb43edfb0cacc252e84d85"
+    },
+    "m40-f55-p1-timer/summary.json": {
+      "bytes": 66504,
+      "sha256": "0138eaa2676c6a4bdd51fd048410ca040f983d29f1b5b89458c591aedc326bac"
+    },
+    "m40-f80-p0-evidence/episode.json.gz": {
+      "bytes": 761052,
+      "sha256": "c633a28c8a39971806db52e6c93890a55489c3bf10786082dad5aea9dd725b38"
+    },
+    "m40-f80-p0-evidence/evaluation.json": {
+      "bytes": 9303,
+      "sha256": "b41fefa638c5c775a411144964c72ee9087de1eb3aa47f945280e4f5845b5502"
+    },
+    "m40-f80-p0-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f80-p0-evidence/native.npz": {
+      "bytes": 3959325,
+      "sha256": "ae708cb5611a49d4a30a7099d766b7b47f1530cf30bb4ef2f936540d68aa9594"
+    },
+    "m40-f80-p0-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "efd6a748255936ed84b2c33050efb01eb25589a6230512a59c2ab2221441b708"
+    },
+    "m40-f80-p0-evidence/summary.json": {
+      "bytes": 66695,
+      "sha256": "4f3f8c416c296b2e9977147e3a9a216d0c77786ce49eb6af0f98ef19c709a293"
+    },
+    "m40-f80-p0-timer/episode.json.gz": {
+      "bytes": 760665,
+      "sha256": "85b12cc0a3b29d3dbce17db01a4b1c331602f527c2fb841d73c15fe51c82e8ca"
+    },
+    "m40-f80-p0-timer/evaluation.json": {
+      "bytes": 9291,
+      "sha256": "d853b12154ad9e34be1b4cb78f599404b980e81e2a07d2df372171db42a071fa"
+    },
+    "m40-f80-p0-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f80-p0-timer/native.npz": {
+      "bytes": 3959325,
+      "sha256": "ae708cb5611a49d4a30a7099d766b7b47f1530cf30bb4ef2f936540d68aa9594"
+    },
+    "m40-f80-p0-timer/started.json": {
+      "bytes": 142,
+      "sha256": "7264be0201dc1642668644078ea9f45dadd72996256141f1d0798a5dba48bfbf"
+    },
+    "m40-f80-p0-timer/summary.json": {
+      "bytes": 66634,
+      "sha256": "2c5025aa1fb0fe95083566236dc8241adc3f7798ee0efd8a3869680e9052b1eb"
+    },
+    "m40-f80-p1-evidence/episode.json.gz": {
+      "bytes": 761352,
+      "sha256": "e9c5de6444ed01625c262727b6ecbef91e4c64835fd5a75737b7c51229b84f95"
+    },
+    "m40-f80-p1-evidence/evaluation.json": {
+      "bytes": 9503,
+      "sha256": "d64d483435270de761cdb9e2d36df281df1d13044e5183e52bc60801fd86bf90"
+    },
+    "m40-f80-p1-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f80-p1-evidence/native.npz": {
+      "bytes": 3983542,
+      "sha256": "a346d40bc00be642fa93d0ea8c2b1dc51e90274c6e421b935efd240ffd880fbf"
+    },
+    "m40-f80-p1-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "8026603874ec56f59abd3181990334bc13f2d484992b04b399392b0c48e66bdd"
+    },
+    "m40-f80-p1-evidence/summary.json": {
+      "bytes": 66560,
+      "sha256": "0608c8e5bd78332e233abc4885d3bc1d4e7bd526c634bab3b432367cf0e4c6cf"
+    },
+    "m40-f80-p1-timer/episode.json.gz": {
+      "bytes": 762347,
+      "sha256": "704ee94d02ed7579ac4436959ef057b733d898e19d852d80b24194c2ead083f0"
+    },
+    "m40-f80-p1-timer/evaluation.json": {
+      "bytes": 9491,
+      "sha256": "baeef902b25d5228db6c34281dff147021ce4b7c8f34c70e951c2a53dea54815"
+    },
+    "m40-f80-p1-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m40-f80-p1-timer/native.npz": {
+      "bytes": 3983542,
+      "sha256": "a346d40bc00be642fa93d0ea8c2b1dc51e90274c6e421b935efd240ffd880fbf"
+    },
+    "m40-f80-p1-timer/started.json": {
+      "bytes": 142,
+      "sha256": "09493829cc6b131b26352ec5d0bdd01fa0dcc1435eab992f85edd4cc81cfcfb1"
+    },
+    "m40-f80-p1-timer/summary.json": {
+      "bytes": 66489,
+      "sha256": "6831e516b61fb9a859afdc3f0dcc1ea5332b6f2b230e7d948d398c4aa82d6932"
+    },
+    "m60-f15-p0-evidence/episode.json.gz": {
+      "bytes": 761688,
+      "sha256": "a82cccf03428b0ea8444f320a3316778288e1882c40b6a5d8b351ccf6c63a3a2"
+    },
+    "m60-f15-p0-evidence/evaluation.json": {
+      "bytes": 9488,
+      "sha256": "d14dd9b7eca1fe6fb0ecfd4816b91c04f824a23a03ecfadf6e4e5eab2b235ae7"
+    },
+    "m60-f15-p0-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f15-p0-evidence/native.npz": {
+      "bytes": 4075640,
+      "sha256": "0adba5985373c42047d23a437ec61e91d98988b9c4442e2754a0d183f65c6601"
+    },
+    "m60-f15-p0-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "b319f2bfd9fd1c52bb1bf23c0f948febe22ce469730f6fdd8ec14982a33654fc"
+    },
+    "m60-f15-p0-evidence/summary.json": {
+      "bytes": 67966,
+      "sha256": "52a1006430eab7efa43c32280f37a32a0ed1b11f595477e3ec103890b3b881e4"
+    },
+    "m60-f15-p0-timer/episode.json.gz": {
+      "bytes": 743524,
+      "sha256": "01c7b11b352df11a249e80260faa72a36addc4a7793953be87252765ec1a08c7"
+    },
+    "m60-f15-p0-timer/evaluation.json": {
+      "bytes": 9848,
+      "sha256": "d98e7ba6bc904088dd2356f86d53a278557b74e050ecbd0f78769ea0a0047708"
+    },
+    "m60-f15-p0-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f15-p0-timer/native.npz": {
+      "bytes": 3959725,
+      "sha256": "3f5c7c0a237b5873c69970c2e44f367706a57a588e811c4e6ba3b958f4893148"
+    },
+    "m60-f15-p0-timer/started.json": {
+      "bytes": 142,
+      "sha256": "154ebc7a76e78280f6f2b070626f1f63113158015a2d5dfbe5ca1046e11a6be3"
+    },
+    "m60-f15-p0-timer/summary.json": {
+      "bytes": 68660,
+      "sha256": "7df741649b2d6714bebc6e80617153419ff9e53e2a935e40fff7eecc3d25286e"
+    },
+    "m60-f15-p1-evidence/episode.json.gz": {
+      "bytes": 760786,
+      "sha256": "536b2e987c1367c3e1383849f440312b624cf8a3c1e78f35f0704c21cab121de"
+    },
+    "m60-f15-p1-evidence/evaluation.json": {
+      "bytes": 9489,
+      "sha256": "9d34a3151f1ee613b30fda92e010f5d332f92c724f0075a6c15dddee48c90439"
+    },
+    "m60-f15-p1-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f15-p1-evidence/native.npz": {
+      "bytes": 4071822,
+      "sha256": "2cf51140187213010584df882782b0938bc2a2b40805561fd335186c330fe5d8"
+    },
+    "m60-f15-p1-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "a5a85eb726bd26c8acd575433c4a1e8437520a277b87b07e81407e1b8846d4a4"
+    },
+    "m60-f15-p1-evidence/summary.json": {
+      "bytes": 66534,
+      "sha256": "c8ce06242d2a9925514e61c8c397fc16ccd306a72739f8651fb499e2326186a6"
+    },
+    "m60-f15-p1-timer/episode.json.gz": {
+      "bytes": 743833,
+      "sha256": "0df193f19b831f77caa5c0bd0ae1c7583887fa6cfc2c80947477702870604ca9"
+    },
+    "m60-f15-p1-timer/evaluation.json": {
+      "bytes": 9847,
+      "sha256": "f044c921bd4b9151f1a4bcc2c83f94e987f4be71e0f23b7bb3f5942ac043b989"
+    },
+    "m60-f15-p1-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f15-p1-timer/native.npz": {
+      "bytes": 3959705,
+      "sha256": "66edc54c70709eb8fe768ca19ca26346af3e0ea0a5d02fb99ed9b91402f053a2"
+    },
+    "m60-f15-p1-timer/started.json": {
+      "bytes": 142,
+      "sha256": "bdc0eacea800bff60371afc1521f0a728cad1ae32f5a261f72ff986a908ecb2e"
+    },
+    "m60-f15-p1-timer/summary.json": {
+      "bytes": 67216,
+      "sha256": "2a07706d41e2398653d0a98a6e1e497c41f9e3cd8d6c89f5832ccfa2d5b57254"
+    },
+    "m60-f55-p0-evidence/episode.json.gz": {
+      "bytes": 749987,
+      "sha256": "df5dee77926dd74e9899c48da927e6e6af43dd0e00125382795ac0630fcd3d3f"
+    },
+    "m60-f55-p0-evidence/evaluation.json": {
+      "bytes": 9492,
+      "sha256": "02d591645e6b7fc8a7221c8da6b4d6781c94d00665c6b139e3fd411387fa48a7"
+    },
+    "m60-f55-p0-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f55-p0-evidence/native.npz": {
+      "bytes": 4060137,
+      "sha256": "1e260385acb84e79db31a438667ae5ec2c94275f0e95db02700f1755a2c280bf"
+    },
+    "m60-f55-p0-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "0ae1e8069c31395a740d7db2710e098f21784d403d42ad02462250b1656f53cc"
+    },
+    "m60-f55-p0-evidence/summary.json": {
+      "bytes": 68176,
+      "sha256": "4c4a2f4357ffda25a4b3e880a96cebc579468cdb4e8aa5d09c8ce22c8d562553"
+    },
+    "m60-f55-p0-timer/episode.json.gz": {
+      "bytes": 753040,
+      "sha256": "8e1d6ce1bbc70a7c4ca98bc2a91f2be813adbacfd01157103eb522bc345551da"
+    },
+    "m60-f55-p0-timer/evaluation.json": {
+      "bytes": 9851,
+      "sha256": "4bb837a13a56df6c513e5171fb3ae7c9da5403ddd5eb13c307985bccc2820f51"
+    },
+    "m60-f55-p0-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f55-p0-timer/native.npz": {
+      "bytes": 4063403,
+      "sha256": "85053e0991298e6e2b313918af637970a1b5dc99d73d7f943bec0859738f5fd1"
+    },
+    "m60-f55-p0-timer/started.json": {
+      "bytes": 142,
+      "sha256": "391fb5526ea4811ea7371263d14c9a81a40722c76e5a880d6bfa2a53f5e91d6e"
+    },
+    "m60-f55-p0-timer/summary.json": {
+      "bytes": 68664,
+      "sha256": "5fe762872a61064717bb63c335d3eef1a968712b29267094403ef35cae718e58"
+    },
+    "m60-f55-p1-evidence/episode.json.gz": {
+      "bytes": 762243,
+      "sha256": "10b9d4b73e7c2af1f8dfe3f067b4153c812bd70e7bfad360bd8db8d53363dce4"
+    },
+    "m60-f55-p1-evidence/evaluation.json": {
+      "bytes": 9487,
+      "sha256": "6c7b0e4cd678395d81bfa05f827525266496d9138f51d3b238476b35daa1077e"
+    },
+    "m60-f55-p1-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f55-p1-evidence/native.npz": {
+      "bytes": 4093917,
+      "sha256": "bb3be190ab4defea8f08cde6516dcf845fe3689d6d09bb52ec2054860b6f8891"
+    },
+    "m60-f55-p1-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "8f7ba19687455c242df9f85e2d7f5aa04a0d83c0d3583f51ea229e80966658e5"
+    },
+    "m60-f55-p1-evidence/summary.json": {
+      "bytes": 66544,
+      "sha256": "a6c47064a0bb3f162d633601d5b0dcdc10a8217528e9e04087f1de88ce4bd115"
+    },
+    "m60-f55-p1-timer/episode.json.gz": {
+      "bytes": 750828,
+      "sha256": "2362f4c920979cfbadf62f9fc8a85c60e2b9ecf4b62995fe6e94068e7b355771"
+    },
+    "m60-f55-p1-timer/evaluation.json": {
+      "bytes": 9851,
+      "sha256": "358eed33163b65eda09221b2d873e6ec23a7d4d1e264a8904e56749269cc1fbe"
+    },
+    "m60-f55-p1-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f55-p1-timer/native.npz": {
+      "bytes": 4052153,
+      "sha256": "f2714322a2d7380fd6788aa5f6e26c62bd79bbf7ce6b52c1ef30cb22e5bd9ad7"
+    },
+    "m60-f55-p1-timer/started.json": {
+      "bytes": 142,
+      "sha256": "26a9480bd4ee3009a78bf29bf89c3970f64f4e9a694d798d60b04d2ad30bcd3d"
+    },
+    "m60-f55-p1-timer/summary.json": {
+      "bytes": 67217,
+      "sha256": "4855fb80966e4704ede308cfc5c1267f8e0722e7a86baea195f9568487bac01f"
+    },
+    "m60-f80-p0-evidence/episode.json.gz": {
+      "bytes": 767708,
+      "sha256": "dd3d92fd5b8e69f495c63bd0c9439e9c49d739544cdd3a46931876e2fab51c23"
+    },
+    "m60-f80-p0-evidence/evaluation.json": {
+      "bytes": 9506,
+      "sha256": "3576bdf977c8d848d1791d32d9971f873535d748a6c3c1782918740f19fa9383"
+    },
+    "m60-f80-p0-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f80-p0-evidence/native.npz": {
+      "bytes": 4029092,
+      "sha256": "64a07b13ec0afa0ea77a88f409ab9eb560ddd7023c37217c57a10d30d91ac258"
+    },
+    "m60-f80-p0-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "012c71d7cd5b1f691e9a5b18c9e2e342f0c73e749acd8249ff658d5980c73103"
+    },
+    "m60-f80-p0-evidence/summary.json": {
+      "bytes": 68307,
+      "sha256": "c214524a7fe26ccc82e99269515a5a30388ac6fe9129fc6b3688f144015eb80b"
+    },
+    "m60-f80-p0-timer/episode.json.gz": {
+      "bytes": 765195,
+      "sha256": "4bdc29348b7a03bdf005d70af6ab59042711d82f30bab681ce3b1753b68f2850"
+    },
+    "m60-f80-p0-timer/evaluation.json": {
+      "bytes": 9862,
+      "sha256": "ee146985c18ac2ef372da1b605649895fb449fbaeae7af9227be30c169c033ca"
+    },
+    "m60-f80-p0-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f80-p0-timer/native.npz": {
+      "bytes": 4023657,
+      "sha256": "56ad62f09a48c53484419f1b97dda4c10424eff9470668bebafdfb148934d73b"
+    },
+    "m60-f80-p0-timer/started.json": {
+      "bytes": 142,
+      "sha256": "49ee0a309755701d24e2a2e24220ca0a5594791b122bfcf28fb32f3c08dfe292"
+    },
+    "m60-f80-p0-timer/summary.json": {
+      "bytes": 68644,
+      "sha256": "efc3fdee7997381766b2e48eef57aaf1cbc50aaa76e8070f184bf5ff4817bf09"
+    },
+    "m60-f80-p1-evidence/episode.json.gz": {
+      "bytes": 765224,
+      "sha256": "e0e2ff0ea013e8158d353fae6a983666a6eacb376b372090109d84a79fe324eb"
+    },
+    "m60-f80-p1-evidence/evaluation.json": {
+      "bytes": 9502,
+      "sha256": "f75792ec463157ff98b85423f269764b0d3a245140d5606e05a2608f4b1480e8"
+    },
+    "m60-f80-p1-evidence/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f80-p1-evidence/native.npz": {
+      "bytes": 4030169,
+      "sha256": "32d989c3dfb84f60a42aa9691a69e1848cfbe51064cf82302c1e87e6b6c83bf2"
+    },
+    "m60-f80-p1-evidence/started.json": {
+      "bytes": 145,
+      "sha256": "07ab074a21f35827c59598d0045e76bc27faab3760e42bc8061eeedefc78f939"
+    },
+    "m60-f80-p1-evidence/summary.json": {
+      "bytes": 66871,
+      "sha256": "b59932869152cee0510b3fc1acf532bd99d768a18957a7e8867f104b334f9201"
+    },
+    "m60-f80-p1-timer/episode.json.gz": {
+      "bytes": 763812,
+      "sha256": "1fb943858eed790eb4d8a5c17b823e0fc7f94406a641fbc24ff4acfcb0e34938"
+    },
+    "m60-f80-p1-timer/evaluation.json": {
+      "bytes": 9861,
+      "sha256": "126d04b52a65c2106c8a7ea7aa6c4fc403460d0cf9c47001c1593ad37aa61faa"
+    },
+    "m60-f80-p1-timer/native.json": {
+      "bytes": 13763,
+      "sha256": "19cc1d5998901cbc12da2916add3096763081e9decbfc7193981bfabc4b871e0"
+    },
+    "m60-f80-p1-timer/native.npz": {
+      "bytes": 4020847,
+      "sha256": "590b94ea4f2d85e183fcd57df7d465f369b8aece3aed159ab94187c882aab430"
+    },
+    "m60-f80-p1-timer/started.json": {
+      "bytes": 142,
+      "sha256": "1837a1e8b3d6cc9815f3b338611283437febe971a7b05efc836e8034b737f83e"
+    },
+    "m60-f80-p1-timer/summary.json": {
+      "bytes": 67222,
+      "sha256": "3d5757a400971ef44f2048130d6ffb5aa7cd22f32275466909b2bb672b15de25"
+    },
+    "protocol.json": {
+      "bytes": 33486,
+      "sha256": "3444323580e6e571f9fa9f12c49a52320274ac2e78676441fb43cbdf361420b1"
+    },
+    "report.json": {
+      "bytes": 1884672,
+      "sha256": "e080030d50c9d9fafff2767c2b69c2965d8bbcdadd70c16676af6ae21f247fec"
+    },
+    "sources/piper_probe.py": {
+      "bytes": 18725,
+      "sha256": "82b47a1d5ce0e6d13bd0b8d97f49809c13dda6d202529b44e69cdf70c547442c"
+    },
+    "sources/piper_probe_benchmark.py": {
+      "bytes": 21591,
+      "sha256": "3450c4663a4b5b59cc5117d0db86c4d549253f114030e90036fa3adaa0e49e7e"
+    },
+    "sources/probe_evidence.py": {
+      "bytes": 22073,
+      "sha256": "c00114752dd5da475762660fefdfd1e77e64ce07661e0d23221fe2b6ac9a3431"
+    },
+    "started.json": {
+      "bytes": 148,
+      "sha256": "b26b833f1823a8a84945fb5bd85f6946377d712dbab8c19b146095c5b5ce4f25"
+    }
+  },
+  "frozen_source_files": {
+    "__init__.py": {
+      "bytes": 106,
+      "sha256": "4c0db7cec4588f99f061f7783bbfba210e246205654a1dcb6c8c03c252254dcb"
+    },
+    "__main__.py": {
+      "bytes": 42,
+      "sha256": "78bb668b0d74bf68d7ff0fa4cf72353b4681394e975c8b0d7989a779aa6d0ac8"
+    },
+    "action_demonstration.py": {
+      "bytes": 36303,
+      "sha256": "439c7cce558571221660cd51e7dba1675203237706ea8ea0f97f2fcf9a6a24c5"
+    },
+    "arm_benchmark.py": {
+      "bytes": 32993,
+      "sha256": "b45bce3072d6a3c0c5b67307b31c184907cd0c8f08f910c004fea79a4cb44412"
+    },
+    "arm_distill.py": {
+      "bytes": 24992,
+      "sha256": "14640f91ec9c91d10a405fa56eb21bda8b55b285854ce2b5859a71d1ffd06ea1"
+    },
+    "arm_entrypoints.py": {
+      "bytes": 502,
+      "sha256": "c6b6400ad7aa8bf415277961dbca641ef9061871634b0127231b0990a820e4d2"
+    },
+    "arm_env.py": {
+      "bytes": 27576,
+      "sha256": "e4af9b75364a568284b1e6d96469deacf498dd87a60b067fa5e310fe15c54c00"
+    },
+    "arm_interface_benchmark.py": {
+      "bytes": 24648,
+      "sha256": "2b70e624264bed0c003d4836fee192f9b16d22dc59a91dd9dd54180abf4ed857"
+    },
+    "arm_interface_cli.py": {
+      "bytes": 4807,
+      "sha256": "75baae1e7ecbc7d33cf3d2a1d0a29f5dfc8b96bcd5f0503cb6e642ea8add7874"
+    },
+    "arm_interfaces.py": {
+      "bytes": 19021,
+      "sha256": "f5fd3952b194bc7d12dfefad25aa4bb6057a1bade90d593242b2c5099fb3570d"
+    },
+    "arm_native_offline_check.py": {
+      "bytes": 2877,
+      "sha256": "d71c194941688e76845907c31e139d58eecc3951ebe73f51dd796467da02edb0"
+    },
+    "arm_pack.py": {
+      "bytes": 7433,
+      "sha256": "acf1987de08f205cd3bf36b2b9154481f1e5e6f8948960e4da39790d820dc845"
+    },
+    "arm_policy.py": {
+      "bytes": 12249,
+      "sha256": "d6d53d87703fb8608390092309285afb6a2c8fd3103a7abd77668be85469eab3"
+    },
+    "arm_qualify.py": {
+      "bytes": 3492,
+      "sha256": "e89dffc46994a5b9c41c30f76d295910ef3e15a361bdd67ec8fcbfeb02d5382f"
+    },
+    "arm_runner.py": {
+      "bytes": 14492,
+      "sha256": "affb5812b6a395f6cca9cb4e900af2ef28162e7ff1e52a51bd29b789daa98df1"
+    },
+    "arm_skill_install.py": {
+      "bytes": 6350,
+      "sha256": "105fff2f7d220e106243dc9cdd0bf71c411a0ca40648a985c0425ad403398507"
+    },
+    "asset_benchmark.py": {
+      "bytes": 36360,
+      "sha256": "922cce190521b2b6a404bcece90e0f9f84b007d4987011d25ff5c8f6f914c40e"
+    },
+    "asset_cli.py": {
+      "bytes": 4787,
+      "sha256": "1d2780937df6c633674999208ee05ea821028b0c418d56c0269b8b4f3490e860"
+    },
+    "asset_library.py": {
+      "bytes": 9837,
+      "sha256": "347bfdeb61e22eb3f65e317c18f94d3b2076d05def77630ebbb6e7dde427c2a7"
+    },
+    "asset_preview.py": {
+      "bytes": 16887,
+      "sha256": "12f4806162504a3c8773b10b516d6b7abb05f670a1f5817be144ea98fc1d25d8"
+    },
+    "capsule_installer.py": {
+      "bytes": 9948,
+      "sha256": "60bb1652cae830fd03ae6eaa5e10150c957be13e1dc630a5631c1a2692ae37ec"
+    },
+    "cli.py": {
+      "bytes": 13819,
+      "sha256": "192ec6a0852c7fd5dd3ae912815dae2fc7c9cfb93b97c85d528060e00a975b17"
+    },
+    "continuous_grip.py": {
+      "bytes": 20653,
+      "sha256": "c9a3e2ed8f0beb9974e346899ca36ce3c7a0957a09dc234c47ba97a6d6e097da"
+    },
+    "coverage.py": {
+      "bytes": 22649,
+      "sha256": "d7d742ff9750d044f5c4d11f9c3bf9499f48c8852a3cef22de192b42eb384fbf"
+    },
+    "doctor.py": {
+      "bytes": 11175,
+      "sha256": "23b56b20626c02fe88d1aae89b9e7c701cd7acb800eadbe5002695f4f9fdb6c0"
+    },
+    "embodiment_calibration.py": {
+      "bytes": 14701,
+      "sha256": "0531be511b3bc549576a33930394d33b673c146d5e52c29198096632ea7478c5"
+    },
+    "embodiment_cli.py": {
+      "bytes": 8994,
+      "sha256": "cd8aa0f8bc1ffc15509b1a0f155ef9ac2056d96425f803ce034b365931daf6e1"
+    },
+    "env.py": {
+      "bytes": 26684,
+      "sha256": "929c1d8c3c4cafe0054c633ee5f3e51c551dd6b26ae014ab1ea9219b58eca8e4"
+    },
+    "episode_tape.py": {
+      "bytes": 31209,
+      "sha256": "abae9a4bd0080c7f638c5c82c050fb1364a20769998c054354b918233669f5d2"
+    },
+    "footage_benchmark.py": {
+      "bytes": 31006,
+      "sha256": "a2c08b4836b92ee8c98c56dd5d56a788d7b71e591be63a8181584693312418bd"
+    },
+    "footage_data.py": {
+      "bytes": 29758,
+      "sha256": "c54828b712afb1c7e89dc764b34dec1fe1ab28517c3ec589ba0977a2146c450d"
+    },
+    "footage_example.py": {
+      "bytes": 8751,
+      "sha256": "4a7ea616c3b0ae6a79cf97e162ea1488b4ed2853cccbcf6da52a4fe4a120ee38"
+    },
+    "footage_pipeline.py": {
+      "bytes": 21761,
+      "sha256": "195278556a2b40dc628dbe528ec653c8b705a4ff45fa8d1074bf5341daec4dfd"
+    },
+    "footage_train.py": {
+      "bytes": 35675,
+      "sha256": "2457a37a10016df6f359433f224c006b8c67f920b671383cbcfd5cfa78fc626b"
+    },
+    "graspability.py": {
+      "bytes": 14493,
+      "sha256": "735239a7071cbfd3258d09f260bb2bd82b7a0a4577013cae594bfb8542ea03ee"
+    },
+    "graspability_benchmark.py": {
+      "bytes": 13035,
+      "sha256": "47687b0a214140d16cb29611b7f933945398cf4ba82064dfa58b30cbef4f2308"
+    },
+    "graspability_protocol.py": {
+      "bytes": 13905,
+      "sha256": "6df01c6b7441859573052510d2b7e95d207d93f9a02a383771a9174bfb6b43e5"
+    },
+    "grip_benchmark.py": {
+      "bytes": 9670,
+      "sha256": "236ebcd0df1547bf0146675289d57c535d67a3aa2c051456bc9e8b4542bf59ac"
+    },
+    "grip_protocol.py": {
+      "bytes": 14153,
+      "sha256": "762c5011cb242ded7355dd3d9b97dd465c0e14e7ef3977ed12e0037017fd0532"
+    },
+    "hinged_shoebox.py": {
+      "bytes": 18501,
+      "sha256": "9e9189b28bb0f97d699039168e8c5022df3afb34aadb0d9f8a04dc4592aaf2e9"
+    },
+    "image_goal_benchmark.py": {
+      "bytes": 19367,
+      "sha256": "38fa1de5da6ee9f8e0ab60bc77d2561e82de0dad17dcc1d067b5816d8633996a"
+    },
+    "image_goal_report.py": {
+      "bytes": 35302,
+      "sha256": "7823e510a8cbcd6a521a5a65bd652e2acd01893c6dfe7d899db2a1427ccb979e"
+    },
+    "image_goal_scenes.py": {
+      "bytes": 21128,
+      "sha256": "1fe41c3fe4d372b068681caf3f63766285b9238976043a9e15fe4dbadb40b79a"
+    },
+    "installer.py": {
+      "bytes": 7649,
+      "sha256": "d3a2c5a4913920c52beef89df9954494b89fd0becb08bb4847264dae48d3761c"
+    },
+    "jev_client.py": {
+      "bytes": 18651,
+      "sha256": "f5dad86c692144a1cf85bfeecf68b99318ea8d9df08e0fe5d47d144f80a380ee"
+    },
+    "local_goal_benchmark.py": {
+      "bytes": 18500,
+      "sha256": "d1cf4990ba0239418855ea851416e37d3f3fd5c5e38bc0fb6183e432ba4e3ecf"
+    },
+    "local_goal_scenes.py": {
+      "bytes": 17063,
+      "sha256": "58e8a01aae646a4e9078ebb1b2e629a23c93ce42198b027696a6e77dea0858b0"
+    },
+    "local_goal_verifier.py": {
+      "bytes": 17253,
+      "sha256": "234d6374ae01cfdfd56fbfe1a4e1f27fc58baf8df88f47b02a30ca64bc238da5"
+    },
+    "local_goal_verifier_report.py": {
+      "bytes": 29619,
+      "sha256": "71b884f9aec766a1ccbb7aa65cb893709a2a98d29451e027ca9e245114daf8b5"
+    },
+    "material_appearance.py": {
+      "bytes": 19887,
+      "sha256": "e7bd6c4a6b7ad7961dbc09f9be9f12483d90c7af5920b80261e4094ced62cb5a"
+    },
+    "material_appearance_benchmark.py": {
+      "bytes": 15167,
+      "sha256": "96dff1233131162ba9ad497e790798bfdc02336a1e821d46db7fa487c8acc5fe"
+    },
+    "motion.py": {
+      "bytes": 13201,
+      "sha256": "5ffa58aba23f7379c4be311c89acc0bf312ba7c0505a86d7e708988ef457083c"
+    },
+    "motion_benchmark.py": {
+      "bytes": 24556,
+      "sha256": "d371dcabd905948670e9d9e49bdb4c2c7abb3f8a761d4daf33b68ca73e72919d"
+    },
+    "motion_cli.py": {
+      "bytes": 3930,
+      "sha256": "fbdb97be70c94dd07d899c6baa38cf9b821b4b29e1e8afb529e1a5f7f63c1823"
+    },
+    "motion_studio.py": {
+      "bytes": 15415,
+      "sha256": "21ee0bea8ef04221f3bb229eac4b2873d0171c3ecf318cb4c169e74fb324358b"
+    },
+    "motion_video.py": {
+      "bytes": 34814,
+      "sha256": "16f09081c79891b32aa6c907d8f511ac98cce7d87280e2f75c992ff6f7f15f9d"
+    },
+    "motor_benchmark.py": {
+      "bytes": 42486,
+      "sha256": "535ee01df0a60ade43f845cd55119f0eac061f8fe16b136f8fb0b1d2565ba976"
+    },
+    "motor_memory.py": {
+      "bytes": 17817,
+      "sha256": "acb836c4b139ccd0a58b1e7e438638e390feeca793abe61570840b111d780806"
+    },
+    "motor_metrics.py": {
+      "bytes": 27803,
+      "sha256": "a981953181472fc735dc9b6722b598dab1a5457d77b93270691543c7d19e4c1b"
+    },
+    "native_offline_check.py": {
+      "bytes": 2539,
+      "sha256": "f550f650a1e7fdaeff38c0aec07782df7cf456e20663c7fba6cede8510e9120e"
+    },
+    "observation_models.py": {
+      "bytes": 12512,
+      "sha256": "9f0af51577ed060728de4dea6f6004d640376fca365b8d747d93f7c0a66bf01a"
+    },
+    "observation_pipeline.py": {
+      "bytes": 13127,
+      "sha256": "d202417692c04078e7800476393bb9381b36a4cedfa78cbd937e558e3e7a27b2"
+    },
+    "observation_studio.py": {
+      "bytes": 10140,
+      "sha256": "256c6eef1baa909abd7adb000ee021a6512fdca9ed14d76223486efedcf1a707"
+    },
+    "observations.py": {
+      "bytes": 9973,
+      "sha256": "77324107aa8e7cf1c5dac217881ae83710627e81ade2b6b1a41c604b1b34253c"
+    },
+    "pack.py": {
+      "bytes": 4681,
+      "sha256": "885e973907499a505fef4d28ac6bb5eb2b2dbba498efc94d9e6c8125b9bd52f9"
+    },
+    "piper_action_capture.py": {
+      "bytes": 28719,
+      "sha256": "ee20549f9bd239a2314c28947a0c69dd7c2b11150475685747a2c7dc0f8b399e"
+    },
+    "piper_contact_benchmark.py": {
+      "bytes": 53158,
+      "sha256": "6ebd44c3704cda8679335f988df0dcc7817b3f8da314b7a4fe8b3939215728bb"
+    },
+    "piper_contact_memory.py": {
+      "bytes": 14507,
+      "sha256": "f608d6647046f6fa02d8ad5e87fad10853837520a6a0fae2043c7ad260a06c4c"
+    },
+    "piper_contact_recovery.py": {
+      "bytes": 11322,
+      "sha256": "81058659b332f4d1233fb88d9e3d84fd935f5a9fe9d418b040a4a536b5291f6c"
+    },
+    "piper_feedback_benchmark.py": {
+      "bytes": 32430,
+      "sha256": "76fd214eb5033019b42c034e7c504c1610cca7e9a924edeb9f84d52ad29aa264"
+    },
+    "piper_feedback_env.py": {
+      "bytes": 11247,
+      "sha256": "0dbae423231968a81bdeed52226d8dffaf8df622013ed3a360d7217148f1bcac"
+    },
+    "piper_feedback_model.py": {
+      "bytes": 24816,
+      "sha256": "b0cdaa4e9adc302649eab9365f619a8825f05f2d752688245a6b7b7f8a665845"
+    },
+    "piper_feedback_score.py": {
+      "bytes": 18866,
+      "sha256": "863a272828208c631de4cf57647e973eb3e4f5e99eb7a1eacb4eaa68dc42eb0e"
+    },
+    "piper_feedback_skill.py": {
+      "bytes": 13737,
+      "sha256": "1824dbb7a2f47a01051419020b15393c841b2e7ec3aa5ed2801943495a5e729e"
+    },
+    "piper_feedback_viewer.py": {
+      "bytes": 22599,
+      "sha256": "0e2a20f94bf67057db7664b1fa7ea96145c8cedb01ae147b8ca18fd0b9c1e3e5"
+    },
+    "piper_grasp_strategy.py": {
+      "bytes": 7329,
+      "sha256": "a2cbf9f954f6428894bd11cb42f228fe86f2ae88ba62e431f78bc33c7f3db36b"
+    },
+    "piper_grip_adapter.py": {
+      "bytes": 23655,
+      "sha256": "e9c480ca6ebd21d4e00b4f4136f623dd9b7cda402dc8ec9669fb4982267e0aa7"
+    },
+    "piper_grip_benchmark.py": {
+      "bytes": 43360,
+      "sha256": "7ab72a8cbe77d4db96d3fa45087571e3e1d64f40fe92b6f37032936701f318e1"
+    },
+    "piper_grip_clock.py": {
+      "bytes": 12262,
+      "sha256": "0ae71aab4d5a5a74c10820f729fd0a1f2ffc938ce9ab0507f4d1bc0077ce592c"
+    },
+    "piper_grip_clock_benchmark.py": {
+      "bytes": 24655,
+      "sha256": "1dc5733a75689479d11a67f4e69a1c6c2da29be8eb3d54cea6a3b8bea4685193"
+    },
+    "piper_grip_clock_cli.py": {
+      "bytes": 35377,
+      "sha256": "bffb4a8b1fc2259f8a0126c5435ae2eff80f7e630c3cf1c43509fbafdfb2494b"
+    },
+    "piper_grip_clock_env.py": {
+      "bytes": 17141,
+      "sha256": "4fea7289c1aeea209e6c4ab2090d88271ba1663e836b24a77fb3f39749858c99"
+    },
+    "piper_grip_clock_model.py": {
+      "bytes": 21700,
+      "sha256": "4ef0464b0e4f1339156f4531dff76c85826594af60f2fbc5d949363744c34ba9"
+    },
+    "piper_grip_clock_skill.py": {
+      "bytes": 5827,
+      "sha256": "4044ba290b525a915200e69db727c3b62cdf4204be0b2de565f68fe0844a5de3"
+    },
+    "piper_grip_clock_viewer.py": {
+      "bytes": 40217,
+      "sha256": "133bffbb0857ca6e3e6440d39d2f389d94550c4e3aae8c1741da9f1fac9407d2"
+    },
+    "piper_grip_guard.py": {
+      "bytes": 15452,
+      "sha256": "90895566cad8d5a3c158a14d3165fa1866cb3d7a4a3eecac3ca0ca8ab3e88dfb"
+    },
+    "piper_grip_wait_v04.py": {
+      "bytes": 12558,
+      "sha256": "41889e7c88d8d95441ba212442778b7e235e1e7ec42d941219a93d6e4762b6d6"
+    },
+    "piper_grip_wait_v04_benchmark.py": {
+      "bytes": 22925,
+      "sha256": "8a84270289e08802ec690079cdccf775252460f2e97202c1696e2ee6900ff460"
+    },
+    "piper_imitation.py": {
+      "bytes": 25561,
+      "sha256": "849f66512c58441a240cd20230fcc58691234ddd254c5bbcbfd76abc21b14868"
+    },
+    "piper_imitation_benchmark.py": {
+      "bytes": 29643,
+      "sha256": "0ef4649f8e84fc74166fa1acc4d7348aae885ffec238e4b4d714ccf2ca54993f"
+    },
+    "piper_imitation_driver.py": {
+      "bytes": 4532,
+      "sha256": "b739dc1d75ed5140b0c07fca406a15d861e00208ea58f3113641b3b7256bd699"
+    },
+    "piper_imitation_release.py": {
+      "bytes": 9967,
+      "sha256": "63c7c036bfdd08275a3b6b9664e34f23b2bd2e36153289e5a47e3b2f1e56fff4"
+    },
+    "piper_imitation_score.py": {
+      "bytes": 11462,
+      "sha256": "0cd4663abfdd7f14f2f33d93e9a2bd45122b998d6160d45b8afcc880512cba2b"
+    },
+    "piper_imitation_viewer.py": {
+      "bytes": 14275,
+      "sha256": "1258610a0ea11dbafc6437de79cf73561f3420e3914ce80a9c330b0c3744e0d6"
+    },
+    "piper_learned_grip_benchmark.py": {
+      "bytes": 22768,
+      "sha256": "fc2fb376507bb0036aa1ed300f9f07f4a4bcdc55eacf7e7e1798fdce1af8db9b"
+    },
+    "piper_learned_skill.py": {
+      "bytes": 8713,
+      "sha256": "8d5ab88ff6819920c8fdf8caf1cbf5f6eb2d5e5a597db8da01119a815800d960"
+    },
+    "piper_motor_primitive.py": {
+      "bytes": 17476,
+      "sha256": "02a45b88913db6f223e4d9975eac64d4942a92739c5817c6ede4cc9fa332ed1c"
+    },
+    "piper_probe.py": {
+      "bytes": 18725,
+      "sha256": "82b47a1d5ce0e6d13bd0b8d97f49809c13dda6d202529b44e69cdf70c547442c"
+    },
+    "piper_probe_benchmark.py": {
+      "bytes": 21591,
+      "sha256": "3450c4663a4b5b59cc5117d0db86c4d549253f114030e90036fa3adaa0e49e7e"
+    },
+    "piper_reacquisition.py": {
+      "bytes": 12346,
+      "sha256": "b1eaffd7f9d80f21d3b9371e1adbe8b9c730a834745d8160c558937d35691e21"
+    },
+    "piper_recovery_benchmark.py": {
+      "bytes": 45299,
+      "sha256": "081ec18d90c91fe910c957ab3485444cfe2376ef7277be92823806c7c0e290bd"
+    },
+    "piper_reliability_benchmark.py": {
+      "bytes": 50695,
+      "sha256": "07672ae3f791c15df364580d7f9dc1758c23e5744374a6580720c4883b69aba9"
+    },
+    "piper_task.py": {
+      "bytes": 34355,
+      "sha256": "e66a44a8df4e7a8ee42e4f3866f889f8797cdfb8e2688a146e09b75d2c76664f"
+    },
+    "piper_task_benchmark.py": {
+      "bytes": 36515,
+      "sha256": "d1294fac93bb42a26a654c6fd0950718e528cbf3cd96ffcd53118da0a1646776"
+    },
+    "policies.py": {
+      "bytes": 1552,
+      "sha256": "f52071d8af4ffa215c0c5ac57a7591e12e9e17b834b4bfb2a1705e7e0a7f5154"
+    },
+    "prerequisite_benchmark.py": {
+      "bytes": 15254,
+      "sha256": "c78efb24263300c56f50413aa65333e4fbf1b99403aa816de9bf4cb5656a3811"
+    },
+    "probe_evidence.py": {
+      "bytes": 22073,
+      "sha256": "c00114752dd5da475762660fefdfd1e77e64ce07661e0d23221fe2b6ac9a3431"
+    },
+    "qualify.py": {
+      "bytes": 5487,
+      "sha256": "2f9566f9c550723cbf96342e075e68dc291446c4fbd3935cec9d333371ab1457"
+    },
+    "reaction.py": {
+      "bytes": 13714,
+      "sha256": "46ac1fd0e603bb6a500037fccf41b393bb2165ee2da7819895b0cc497f216e6e"
+    },
+    "reaction_benchmark.py": {
+      "bytes": 29257,
+      "sha256": "54d22a9e2d457fc7c248f4515788659b5e24a44e967659405e75e2f25880af13"
+    },
+    "reaction_convergence.py": {
+      "bytes": 13375,
+      "sha256": "efaa222d7a4b0102b0f8f14dfbca1d100abf7ee1a15a37bd4f8d8bedaac83b62"
+    },
+    "reaction_metrics.py": {
+      "bytes": 25686,
+      "sha256": "7cae6fd429ca63bad5d2323f6cc022f9c735c775821ed6f16809f2b339dc52ee"
+    },
+    "reaction_native.py": {
+      "bytes": 11683,
+      "sha256": "4fa13b7446fcacfa6333b9904e6b9e34fb0f95bf3a8681e68a15be48e74984e4"
+    },
+    "reference_assets.lock.json": {
+      "bytes": 10029,
+      "sha256": "941eb6f9fd474635a590b82c66b59a9d5124d8e0d9ddc203006f5b921d8d2861"
+    },
+    "reference_replay.py": {
+      "bytes": 26037,
+      "sha256": "f73731434d55bac150db16c7205d341a70b95ce13e582e7a23d11dee31b27a19"
+    },
+    "reference_sim.py": {
+      "bytes": 24336,
+      "sha256": "c1201d22eb13dd07a236ee63cc4ba68e129f6067e8db61ed41af2d820eb5e3b8"
+    },
+    "reference_task.py": {
+      "bytes": 34166,
+      "sha256": "bbc768ccc202b8dd41cbd235b206e6478806ce47c1f30ae15dc662c0c1edcc3e"
+    },
+    "reference_task_benchmark.py": {
+      "bytes": 22900,
+      "sha256": "a04ab0918b1931601cc3861ab3b9b55ddac52a29c23d2e61ee8e467a87d461cf"
+    },
+    "reference_task_replay.py": {
+      "bytes": 26021,
+      "sha256": "8a95050a384a080f66ff7cbbbfa1b8de8a389ec4fbfa4207149098f89ef3cdd3"
+    },
+    "robot_profiles.lock.json": {
+      "bytes": 35002,
+      "sha256": "4b2ee2ca675aceb2f826983cb3082a3e08e9aa0ff419b23078abcff08ebcc6fe"
+    },
+    "robot_profiles.py": {
+      "bytes": 26493,
+      "sha256": "fb90782a6a9979e282182118ae0e3e29d00f101255cc57378dd3f692672bb13d"
+    },
+    "sensor_goal_benchmark.py": {
+      "bytes": 19363,
+      "sha256": "d676f67cdf9ea5ead8a118c88bb8e3cdc3ef085d35505055a29d6fc05b6bd917"
+    },
+    "sensor_goal_observers.py": {
+      "bytes": 18998,
+      "sha256": "53e96c99ffae058c701c9ccc0b5339317262909637acc14b351bec9e6cca99f7"
+    },
+    "sensor_goal_scenes.py": {
+      "bytes": 17416,
+      "sha256": "9aac1531180364a380d01fcbb52375cd1f1e4aea18fa6f93d581a316b14f5af1"
+    },
+    "sensor_goal_verifier.py": {
+      "bytes": 8516,
+      "sha256": "7d54a444e4a4a79c0b5a554fc0883ad88f091deb43ad0759d3a70e2e4a9dd90e"
+    },
+    "sensor_goal_verifier_report.py": {
+      "bytes": 38263,
+      "sha256": "960469041ce3928056292d6881e50f5b5591a1fdc5ffdaf17d3448d94a7b04cc"
+    },
+    "skill_capsule.py": {
+      "bytes": 35346,
+      "sha256": "ecb7dbd60d3a11f40bf65c4520f024b449c0d63f9ae27c601c9c9fe17b32e6a0"
+    },
+    "skill_release.py": {
+      "bytes": 37715,
+      "sha256": "f08f0d9405c73534bf75881e5f55db1fe4ff36bc086d9b04d11a7a9c479f07d2"
+    },
+    "skillspace.py": {
+      "bytes": 20417,
+      "sha256": "34b651609358ae9a58b9a610545ce7b85b83fb3d6c699613414ff8e0ea457b3c"
+    },
+    "skillspace_video.py": {
+      "bytes": 16395,
+      "sha256": "cdd21bce67fbb5059c9b8338c1d16b68b4fc9e4943151453a4607159402c61f1"
+    },
+    "studio.py": {
+      "bytes": 13590,
+      "sha256": "48813b43c14e93d7de72890428455f13ac6a7080105d28bb50c1ff04496414d4"
+    },
+    "task_feasibility.py": {
+      "bytes": 12156,
+      "sha256": "d08c3d279e031aa87426938a8dfd86ebcd4dac83c100cbd6a5c36c07c9741510"
+    },
+    "task_scene.py": {
+      "bytes": 37808,
+      "sha256": "17034a12980fd69960adbb7b4be427bdde89222d6c69b75ddd51f90f99d48ba9"
+    },
+    "task_scene_audit.py": {
+      "bytes": 25293,
+      "sha256": "d1640bc14164c179d90baa44e8777dce2dce13d81edde17fa39e6519ba74ddfc"
+    },
+    "task_scene_benchmark.py": {
+      "bytes": 30586,
+      "sha256": "6c6a3db8edec4ab95d17aa7a58d5dfff668fe72783c036ec55f251c5315eb4d5"
+    },
+    "task_scene_studio.py": {
+      "bytes": 14449,
+      "sha256": "6dcf0f42e05f5749c66d9d7e08b3ec7437edddee43382d1ba7bf7e421e5791c1"
+    },
+    "tool_reach.py": {
+      "bytes": 15519,
+      "sha256": "812072388b518fb11999dafddd15655f3c750fa84fe09047c55a78c2b509e68f"
+    },
+    "training_studio.py": {
+      "bytes": 21625,
+      "sha256": "c42cf037abd60a2cb14b0cbb8edb7b6d262e524f62cc17018cb653b2214760ad"
+    },
+    "transition_cli.py": {
+      "bytes": 2869,
+      "sha256": "b21e3b44fb84577c7da95bc3844e61417a214882bf045b07f2e3984aaa1c96f4"
+    },
+    "transition_model.py": {
+      "bytes": 21249,
+      "sha256": "5315c65f547d0876bca190f68b17548fbdbc10819b44d28405d4de8a76ac4ef7"
+    },
+    "transition_pilot.py": {
+      "bytes": 42363,
+      "sha256": "cafb5e31bd9a07f224339e1f636abccc5f8aecd1efce0ecb4413bbb79441217c"
+    },
+    "usd_scene.py": {
+      "bytes": 23550,
+      "sha256": "8b6891deb214f2397249181390350336593a89adbc73cf0c30bcdfe885171470"
+    },
+    "usd_scene_benchmark.py": {
+      "bytes": 18366,
+      "sha256": "b64d739362079635f89b9f448359565f09711d74a95aeeebaba0ea7bb3f79f39"
+    },
+    "video_goal_analysis.py": {
+      "bytes": 3354,
+      "sha256": "9f3c696a20813312f065e8458421d0ab3282d87ba17e0b3bb5d7db12f44cee58"
+    },
+    "video_goal_benchmark.py": {
+      "bytes": 25739,
+      "sha256": "69ecc7d9512abe04cc815dbb77c126cb671dd88b5c51a2643c1d8794fd3703ec"
+    },
+    "video_goal_bridge.py": {
+      "bytes": 16009,
+      "sha256": "c7794ff3fd18876774e8aaad425ba93ff798a84355b27216d9d51c33f610441a"
+    },
+    "video_goal_install.py": {
+      "bytes": 23422,
+      "sha256": "dbdb70f85f494f05e30b58ec3a53bf7c834b9cf8696fea0a26b3caffb718bef4"
+    },
+    "video_goal_install_benchmark.py": {
+      "bytes": 17749,
+      "sha256": "fe8833f924fd1d06058033fcd1a39d2677fe6f159c2c0bf1c78d14c74036dab7"
+    },
+    "video_goal_studio.py": {
+      "bytes": 27901,
+      "sha256": "6a7731eb60c8d018b9f2d1760f7f990eeaef4917899ae58b4967c6fd6a9146b4"
+    },
+    "viewer.py": {
+      "bytes": 15258,
+      "sha256": "2fc396aaace350c0fa795fdd907dff96179fcb919116d3d5f1a7b3fa9392376d"
+    },
+    "workstation.py": {
+      "bytes": 32834,
+      "sha256": "2a6aa6686b5b273efcfb21156952df8ceca88d991674cd17df92f2dccc11b701"
+    },
+    "workstation_benchmark.py": {
+      "bytes": 11013,
+      "sha256": "9468ad25ca2e173fef9966bfd0f7cb291e81e69ec0d876be8ede23ea5ec45090"
+    }
+  },
+  "interpretation": "Independent predicate reconstruction from the same saved native data; no rerun of physics, no receipt derivation imported. Eight timer admissions lacked a100ms native window at that decision. Four initially valid evidence admissions later lost the hold; these are different outcomes. Both variants finish2/12 qualified. Closed-loop trajectories can differ. No accuracy, speed, stopping-distance, hardware or recovery-success generalization.",
+  "native_rows": 480000,
+  "passed": true,
+  "protocol_sha256": "3444323580e6e571f9fa9f12c49a52320274ac2e78676441fb43cbdf361420b1",
+  "raw_files_unchanged": true,
+  "rows": [
+    {
+      "controller_final_qualified": true,
+      "controller_final_status": "qualified_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": true,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012273660922341607,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00012078951904801694,
+            "tcp_maximum_excursion_m": 0.00012078951904801694,
+            "tcp_path_length_m": 0.00017997286813552392
+          },
+          "reason": "sampled_probe_evidence",
+          "t_seconds": 11.859999999998866,
+          "type": "evidence_qualified"
+        }
+      ],
+      "id": "m40-f80-p0-evidence",
+      "maximum_per_finger_force_n": 0.4363619978425447,
+      "native_final_qualified": true,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.112,
+              "controller_invalidation": null,
+              "first_native_condition_failure_at_or_after_admission_s": null,
+              "first_native_failure_conditions": [],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 6.67905458139171e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012273660922341607,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00012078951904801694,
+                "tcp_maximum_excursion_m": 0.00012078951904801694,
+                "tcp_path_length_m": 0.00017997286813552392
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007532218543967073,
+              "t_seconds": 11.859999999998866,
+              "type": "evidence_qualified"
+            }
+          ],
+          "disposition": "qualified_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 11.847999999998873,
+          "maximum_native_continuous_window_s": 8.252,
+          "native_qualified_at_episode_end_from_same_origin": true,
+          "native_qualified_at_recorded_end": true,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": null,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": true,
+      "controller_final_status": "timer_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": true,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012273660922341607,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00012078951904801694,
+            "tcp_maximum_excursion_m": 0.00012078951904801694,
+            "tcp_path_length_m": 0.00017997286813552392
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 11.859999999998866,
+          "type": "timer_admitted"
+        }
+      ],
+      "id": "m40-f80-p0-timer",
+      "maximum_per_finger_force_n": 0.4363619978425447,
+      "native_final_qualified": true,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.112,
+              "controller_invalidation": null,
+              "first_native_condition_failure_at_or_after_admission_s": null,
+              "first_native_failure_conditions": [],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 6.67905458139171e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012273660922341607,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00012078951904801694,
+                "tcp_maximum_excursion_m": 0.00012078951904801694,
+                "tcp_path_length_m": 0.00017997286813552392
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007532218543967073,
+              "t_seconds": 11.859999999998866,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "timer_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 11.847999999998873,
+          "maximum_native_continuous_window_s": 8.252,
+          "native_qualified_at_episode_end_from_same_origin": true,
+          "native_qualified_at_recorded_end": true,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": null,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012099993749698941,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011844159383215787,
+            "tcp_maximum_excursion_m": 0.00011844159383215787,
+            "tcp_path_length_m": 0.0001817951543223711
+          },
+          "reason": "sampled_probe_evidence",
+          "t_seconds": 12.119999999998722,
+          "type": "evidence_qualified"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012747585357682982,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011920532253309834,
+            "tcp_maximum_excursion_m": 0.00011920532253309834,
+            "tcp_path_length_m": 0.00011921614598808492
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 19.660000000001045,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m40-f80-p1-evidence",
+      "maximum_per_finger_force_n": 0.43420801943664356,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.108,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 7.540000000002323,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 14.00000000001711,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 19.660000000001045
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 19.646000000001028,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 6.737348125573079e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012099993749698941,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00011844159383215787,
+                "tcp_maximum_excursion_m": 0.00011844159383215787,
+                "tcp_path_length_m": 0.0001817951543223711
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007467673108706274,
+              "t_seconds": 12.119999999998722,
+              "type": "evidence_qualified"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 12.111999999998726,
+          "maximum_native_continuous_window_s": 7.633,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 19.660000000001045,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012099993749698941,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011844159383215787,
+            "tcp_maximum_excursion_m": 0.00011844159383215787,
+            "tcp_path_length_m": 0.0001817951543223711
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 12.119999999998722,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012747585357682982,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011920532253309834,
+            "tcp_maximum_excursion_m": 0.00011920532253309834,
+            "tcp_path_length_m": 0.00011921614598808492
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 19.660000000001045,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m40-f80-p1-timer",
+      "maximum_per_finger_force_n": 0.43420801943664356,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.108,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 7.540000000002323,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 14.00000000001711,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 19.660000000001045
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 19.646000000001028,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 6.737348125573079e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012099993749698941,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00011844159383215787,
+                "tcp_maximum_excursion_m": 0.00011844159383215787,
+                "tcp_path_length_m": 0.0001817951543223711
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007467673108706274,
+              "t_seconds": 12.119999999998722,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 12.111999999998726,
+          "maximum_native_continuous_window_s": 7.633,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 19.660000000001045,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": true,
+      "controller_final_status": "qualified_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": true,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012292735833633784,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0001206756522408492,
+            "tcp_maximum_excursion_m": 0.0001206756522408492,
+            "tcp_path_length_m": 0.00017986410432063366
+          },
+          "reason": "sampled_probe_evidence",
+          "t_seconds": 11.859999999998866,
+          "type": "evidence_qualified"
+        }
+      ],
+      "id": "m40-f55-p0-evidence",
+      "maximum_per_finger_force_n": 0.4231959237120895,
+      "native_final_qualified": true,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.112,
+              "controller_invalidation": null,
+              "first_native_condition_failure_at_or_after_admission_s": null,
+              "first_native_failure_conditions": [],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 7.791101631589082e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012292735833633784,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.0001206756522408492,
+                "tcp_maximum_excursion_m": 0.0001206756522408492,
+                "tcp_path_length_m": 0.00017986410432063366
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007515660517470005,
+              "t_seconds": 11.859999999998866,
+              "type": "evidence_qualified"
+            }
+          ],
+          "disposition": "qualified_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 11.847999999998873,
+          "maximum_native_continuous_window_s": 8.252,
+          "native_qualified_at_episode_end_from_same_origin": true,
+          "native_qualified_at_recorded_end": true,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": null,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": true,
+      "controller_final_status": "timer_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": true,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012292735833633784,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0001206756522408492,
+            "tcp_maximum_excursion_m": 0.0001206756522408492,
+            "tcp_path_length_m": 0.00017986410432063366
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 11.859999999998866,
+          "type": "timer_admitted"
+        }
+      ],
+      "id": "m40-f55-p0-timer",
+      "maximum_per_finger_force_n": 0.4231959237120895,
+      "native_final_qualified": true,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.112,
+              "controller_invalidation": null,
+              "first_native_condition_failure_at_or_after_admission_s": null,
+              "first_native_failure_conditions": [],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 7.791101631589082e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012292735833633784,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.0001206756522408492,
+                "tcp_maximum_excursion_m": 0.0001206756522408492,
+                "tcp_path_length_m": 0.00017986410432063366
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007515660517470005,
+              "t_seconds": 11.859999999998866,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "timer_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 11.847999999998873,
+          "maximum_native_continuous_window_s": 8.252,
+          "native_qualified_at_episode_end_from_same_origin": true,
+          "native_qualified_at_recorded_end": true,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": null,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012024032434218293,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011836893195872432,
+            "tcp_maximum_excursion_m": 0.00011836893195872432,
+            "tcp_path_length_m": 0.0001817142933492089
+          },
+          "reason": "sampled_probe_evidence",
+          "t_seconds": 12.119999999998722,
+          "type": "evidence_qualified"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001274151929957465,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011912724335770157,
+            "tcp_maximum_excursion_m": 0.00011912724335770157,
+            "tcp_path_length_m": 0.00011913806176195323
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 19.440000000000776,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m40-f55-p1-evidence",
+      "maximum_per_finger_force_n": 0.42208156129209806,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.107,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 7.320000000002054,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 5.000000000006111,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 19.440000000000776
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 19.43500000000077,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 8.277658826951754e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012024032434218293,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00011836893195872432,
+                "tcp_maximum_excursion_m": 0.00011836893195872432,
+                "tcp_path_length_m": 0.0001817142933492089
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007447450652606782,
+              "t_seconds": 12.119999999998722,
+              "type": "evidence_qualified"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 12.112999999998726,
+          "maximum_native_continuous_window_s": 7.421,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 19.440000000000776,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00012024032434218293,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011836893195872432,
+            "tcp_maximum_excursion_m": 0.00011836893195872432,
+            "tcp_path_length_m": 0.0001817142933492089
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 12.119999999998722,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001274151929957465,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00011912724335770157,
+            "tcp_maximum_excursion_m": 0.00011912724335770157,
+            "tcp_path_length_m": 0.00011913806176195323
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 19.440000000000776,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m40-f55-p1-timer",
+      "maximum_per_finger_force_n": 0.42208156129209806,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.107,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 7.320000000002054,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 5.000000000006111,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 19.440000000000776
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 19.43500000000077,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 8.277658826951754e-05,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00012024032434218293,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00011836893195872432,
+                "tcp_maximum_excursion_m": 0.00011836893195872432,
+                "tcp_path_length_m": 0.0001817142933492089
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007447450652606782,
+              "t_seconds": 12.119999999998722,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 12.112999999998726,
+          "maximum_native_continuous_window_s": 7.421,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 19.440000000000776,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 7.322430326982032e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0003309049812589859,
+            "tcp_maximum_excursion_m": 0.0003491423325712582,
+            "tcp_path_length_m": 0.00037055149370162407
+          },
+          "reason": "retry_budget_exhausted:object_not_following",
+          "t_seconds": 14.519999999997392,
+          "type": "abort"
+        }
+      ],
+      "id": "m40-f15-p0-evidence",
+      "maximum_per_finger_force_n": 0.41359392448841503,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [],
+          "disposition": "interrupted",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.619999999999,
+          "start_time_s": 11.259999999999199
+        },
+        {
+          "admissions": [],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 1,
+          "recorded_end_time_s": 14.519999999997392,
+          "start_time_s": 14.159999999997591
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 3.6418494939623746e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 7.537086181323409e-05,
+            "tcp_maximum_excursion_m": 8.071965272436278e-05,
+            "tcp_path_length_m": 9.24924759734883e-05
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 11.859999999998866,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 1.9181063532901967e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 1.4448360318716898e-05,
+            "tcp_maximum_excursion_m": 1.4448360318716898e-05,
+            "tcp_path_length_m": 2.6388552048321805e-05
+          },
+          "reason": "support_returned",
+          "t_seconds": 11.879999999998855,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m40-f15-p0-timer",
+      "maximum_per_finger_force_n": 0.41359392448841503,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.0,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.019999999999988916,
+                "native_conditions_at_invalidation": [
+                  "unsupported",
+                  "minimum_rise",
+                  "maximum_local_drift"
+                ],
+                "native_failure_to_controller_observation_ms": 19.999999999988916,
+                "reason": "support_returned",
+                "t_seconds": 11.879999999998855
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 11.859999999998866,
+              "first_native_failure_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "instantaneous_failed_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "local_drift_m": 0.008522383220012121,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 3.6418494939623746e-05,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 7.537086181323409e-05,
+                "tcp_maximum_excursion_m": 8.071965272436278e-05,
+                "tcp_path_length_m": 9.24924759734883e-05
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 1.460637601981285e-05,
+              "t_seconds": 11.859999999998866,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.879999999998855,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 7.255026972353108e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0003328933764744595,
+            "tcp_maximum_excursion_m": 0.00035140144310809405,
+            "tcp_path_length_m": 0.0003729162925784713
+          },
+          "reason": "retry_budget_exhausted:object_not_following",
+          "t_seconds": 14.759999999997259,
+          "type": "abort"
+        }
+      ],
+      "id": "m40-f15-p1-evidence",
+      "maximum_per_finger_force_n": 0.4131767187007152,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [],
+          "disposition": "interrupted",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.879999999998855,
+          "start_time_s": 11.519999999999055
+        },
+        {
+          "admissions": [],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 1,
+          "recorded_end_time_s": 14.759999999997259,
+          "start_time_s": 14.399999999997458
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 3.431986700869478e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 7.52089426804848e-05,
+            "tcp_maximum_excursion_m": 8.103579274276184e-05,
+            "tcp_path_length_m": 9.293055962326496e-05
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 12.119999999998722,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 1.9197271598486312e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 1.3948994258525138e-05,
+            "tcp_maximum_excursion_m": 1.3948994258525138e-05,
+            "tcp_path_length_m": 2.6594992128920383e-05
+          },
+          "reason": "support_returned",
+          "t_seconds": 12.139999999998711,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m40-f15-p1-timer",
+      "maximum_per_finger_force_n": 0.4131767187007152,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.0,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.019999999999988916,
+                "native_conditions_at_invalidation": [
+                  "unsupported",
+                  "minimum_rise",
+                  "maximum_local_drift"
+                ],
+                "native_failure_to_controller_observation_ms": 19.999999999988916,
+                "reason": "support_returned",
+                "t_seconds": 12.139999999998711
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 12.119999999998722,
+              "first_native_failure_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "instantaneous_failed_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "local_drift_m": 0.00846021855622449,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 3.431986700869478e-05,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 7.52089426804848e-05,
+                "tcp_maximum_excursion_m": 8.103579274276184e-05,
+                "tcp_path_length_m": 9.293055962326496e-05
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 1.4977609086530563e-05,
+              "t_seconds": 12.119999999998722,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 12.139999999998711,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001966694351881885,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00019045626111778848,
+            "tcp_maximum_excursion_m": 0.00019045626111778848,
+            "tcp_path_length_m": 0.00023844944405489223
+          },
+          "reason": "sampled_probe_evidence",
+          "t_seconds": 11.879999999998855,
+          "type": "evidence_qualified"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00018253598113371163,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00017284669795370608,
+            "tcp_maximum_excursion_m": 0.00017284669795370608,
+            "tcp_path_length_m": 0.0001728575237331312
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 13.379999999998024,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f80-p0-evidence",
+      "maximum_per_finger_force_n": 0.4418565825371023,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.11,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 1.4999999999991687,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 0.0,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 13.379999999998024
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 13.379999999998024,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 0.00015077534253828703,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.0001966694351881885,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00019045626111778848,
+                "tcp_maximum_excursion_m": 0.00019045626111778848,
+                "tcp_path_length_m": 0.00023844944405489223
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.007166254249920664,
+              "t_seconds": 11.879999999998855,
+              "type": "evidence_qualified"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 11.86999999999886,
+          "maximum_native_continuous_window_s": 1.609,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 13.379999999998024,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001694775398463175,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00016321721300188176,
+            "tcp_maximum_excursion_m": 0.00016321721300188176,
+            "tcp_path_length_m": 0.0002280074883691666
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 11.859999999998866,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001837364235849542,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00017413859718435202,
+            "tcp_maximum_excursion_m": 0.00017413859718435202,
+            "tcp_path_length_m": 0.00017414867709677017
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 13.119999999998168,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f80-p0-timer",
+      "maximum_per_finger_force_n": 0.4418565825371023,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.09,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 1.2599999999993017,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 11.99999999999335,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 13.119999999998168
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 13.107999999998174,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 0.00014772786707598664,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.0001694775398463175,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.00016321721300188176,
+                "tcp_maximum_excursion_m": 0.00016321721300188176,
+                "tcp_path_length_m": 0.0002280074883691666
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 0.007090410168968012,
+              "t_seconds": 11.859999999998866,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 11.86999999999886,
+          "maximum_native_continuous_window_s": 1.337,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 13.119999999998168,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0002041261330632707,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0001982465393244392,
+            "tcp_maximum_excursion_m": 0.0001982465393244392,
+            "tcp_path_length_m": 0.00024348297442032074
+          },
+          "reason": "sampled_probe_evidence",
+          "t_seconds": 12.1599999999987,
+          "type": "evidence_qualified"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001927498265071831,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0001818865692242252,
+            "tcp_maximum_excursion_m": 0.0001818865692242252,
+            "tcp_path_length_m": 0.00018189530282157124
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 13.25999999999809,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f80-p1-evidence",
+      "maximum_per_finger_force_n": 0.42960123953180485,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.12,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 1.0999999999993904,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 13.99999999999224,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 13.25999999999809
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 13.245999999998098,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 0.00022524544442972835,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.0002041261330632707,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.0001982465393244392,
+                "tcp_maximum_excursion_m": 0.0001982465393244392,
+                "tcp_path_length_m": 0.00024348297442032074
+              },
+              "native_prefix_qualified": true,
+              "rise_m": 0.0070733526044056555,
+              "t_seconds": 12.1599999999987,
+              "type": "evidence_qualified"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 12.139999999998711,
+          "maximum_native_continuous_window_s": 1.205,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 13.25999999999809,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00016826747144781107,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0001624077679002934,
+            "tcp_maximum_excursion_m": 0.0001624077679002934,
+            "tcp_path_length_m": 0.0002315137899038693
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 12.119999999998722,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.0001951166677939197,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00018519175490046446,
+            "tcp_maximum_excursion_m": 0.00018519175490046446,
+            "tcp_path_length_m": 0.0001851986613488863
+          },
+          "reason": "probe_height_not_retained",
+          "t_seconds": 12.939999999998268,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f80-p1-timer",
+      "maximum_per_finger_force_n": 0.42960123953180485,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.08,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.8199999999995455,
+                "native_conditions_at_invalidation": [
+                  "minimum_rise"
+                ],
+                "native_failure_to_controller_observation_ms": 0.0,
+                "reason": "probe_height_not_retained",
+                "t_seconds": 12.939999999998268
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 12.939999999998268,
+              "first_native_failure_conditions": [
+                "minimum_rise"
+              ],
+              "instantaneous_failed_conditions": [],
+              "local_drift_m": 0.0002198815081696292,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 0.00016826747144781107,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 0.0001624077679002934,
+                "tcp_maximum_excursion_m": 0.0001624077679002934,
+                "tcp_path_length_m": 0.0002315137899038693
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 0.006934519811901879,
+              "t_seconds": 12.119999999998722,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": true,
+          "first_native_qualified_before_recorded_end_s": 12.139999999998711,
+          "maximum_native_continuous_window_s": 0.899,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 12.939999999998268,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.000160586281440483,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00027131123539915876,
+            "tcp_maximum_excursion_m": 0.00031035889602164994,
+            "tcp_path_length_m": 0.00035782624166083533
+          },
+          "reason": "relative_slip",
+          "t_seconds": 11.639999999998988,
+          "type": "abort"
+        }
+      ],
+      "id": "m60-f55-p0-evidence",
+      "maximum_per_finger_force_n": 0.5073976423671309,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.639999999998988,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 7.057501075315547e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 4.962672106111302e-05,
+            "tcp_maximum_excursion_m": 6.547498329730352e-05,
+            "tcp_path_length_m": 0.0001154848624033125
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 11.859999999998866,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 6.78596350086016e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 5.3548835337619507e-05,
+            "tcp_maximum_excursion_m": 5.3548835337619507e-05,
+            "tcp_path_length_m": 6.056048429697074e-05
+          },
+          "reason": "support_returned",
+          "t_seconds": 11.879999999998855,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f55-p0-timer",
+      "maximum_per_finger_force_n": 0.5073976423671309,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.0,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.019999999999988916,
+                "native_conditions_at_invalidation": [
+                  "unsupported",
+                  "minimum_rise",
+                  "maximum_local_drift"
+                ],
+                "native_failure_to_controller_observation_ms": 19.999999999988916,
+                "reason": "support_returned",
+                "t_seconds": 11.879999999998855
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 11.859999999998866,
+              "first_native_failure_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "instantaneous_failed_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "local_drift_m": 0.007487107296924141,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 7.057501075315547e-05,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 4.962672106111302e-05,
+                "tcp_maximum_excursion_m": 6.547498329730352e-05,
+                "tcp_path_length_m": 0.0001154848624033125
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 8.001039264043941e-05,
+              "t_seconds": 11.859999999998866,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.879999999998855,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 0.00013070335343007958,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.00027006485164431115,
+            "tcp_maximum_excursion_m": 0.0003027750236896016,
+            "tcp_path_length_m": 0.0003418996406748849
+          },
+          "reason": "retry_budget_exhausted:object_not_following",
+          "t_seconds": 14.819999999997226,
+          "type": "abort"
+        }
+      ],
+      "id": "m60-f55-p1-evidence",
+      "maximum_per_finger_force_n": 0.5295512655468166,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [],
+          "disposition": "interrupted",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.899999999998844,
+          "start_time_s": 11.519999999999055
+        },
+        {
+          "admissions": [],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 1,
+          "recorded_end_time_s": 14.819999999997226,
+          "start_time_s": 14.439999999997436
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 8.93682172869552e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 4.9763474781107845e-05,
+            "tcp_maximum_excursion_m": 6.598664739126207e-05,
+            "tcp_path_length_m": 0.000118474514652767
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 12.119999999998722,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 7.685404892571619e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 5.7114321089185936e-05,
+            "tcp_maximum_excursion_m": 5.7114321089185936e-05,
+            "tcp_path_length_m": 6.41183272105254e-05
+          },
+          "reason": "support_returned",
+          "t_seconds": 12.139999999998711,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f55-p1-timer",
+      "maximum_per_finger_force_n": 0.5203671281867778,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.0,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.019999999999988916,
+                "native_conditions_at_invalidation": [
+                  "unsupported",
+                  "minimum_rise",
+                  "maximum_local_drift"
+                ],
+                "native_failure_to_controller_observation_ms": 19.999999999988916,
+                "reason": "support_returned",
+                "t_seconds": 12.139999999998711
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 12.119999999998722,
+              "first_native_failure_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "instantaneous_failed_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "local_drift_m": 0.007362371953658857,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 8.93682172869552e-05,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 4.9763474781107845e-05,
+                "tcp_maximum_excursion_m": 6.598664739126207e-05,
+                "tcp_path_length_m": 0.000118474514652767
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 0.00010547429082137516,
+              "t_seconds": 12.119999999998722,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 12.139999999998711,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 4.317688467630736e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0003341476324467096,
+            "tcp_maximum_excursion_m": 0.00034862710737275463,
+            "tcp_path_length_m": 0.0003658588397045837
+          },
+          "reason": "retry_budget_exhausted:object_not_following",
+          "t_seconds": 14.499999999997403,
+          "type": "abort"
+        }
+      ],
+      "id": "m60-f15-p0-evidence",
+      "maximum_per_finger_force_n": 0.4237453496650803,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [],
+          "disposition": "interrupted",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.619999999999,
+          "start_time_s": 11.259999999999199
+        },
+        {
+          "admissions": [],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 1,
+          "recorded_end_time_s": 14.499999999997403,
+          "start_time_s": 14.139999999997602
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 2.0211463690623282e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 7.515602613441235e-05,
+            "tcp_maximum_excursion_m": 7.957392462230155e-05,
+            "tcp_path_length_m": 8.821740317424411e-05
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 11.859999999998866,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 1.3004271019702272e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 1.1587798047106166e-05,
+            "tcp_maximum_excursion_m": 1.3132700762414727e-05,
+            "tcp_path_length_m": 2.2395656947204117e-05
+          },
+          "reason": "support_returned",
+          "t_seconds": 11.879999999998855,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f15-p0-timer",
+      "maximum_per_finger_force_n": 0.42447869108779335,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.0,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.019999999999988916,
+                "native_conditions_at_invalidation": [
+                  "unsupported",
+                  "minimum_rise",
+                  "maximum_local_drift"
+                ],
+                "native_failure_to_controller_observation_ms": 19.999999999988916,
+                "reason": "support_returned",
+                "t_seconds": 11.879999999998855
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 11.859999999998866,
+              "first_native_failure_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "instantaneous_failed_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "local_drift_m": 0.008975309460188324,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 2.0211463690623282e-05,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 7.515602613441235e-05,
+                "tcp_maximum_excursion_m": 7.957392462230155e-05,
+                "tcp_path_length_m": 8.821740317424411e-05
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 8.275602415674932e-06,
+              "t_seconds": 11.859999999998866,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.879999999998855,
+          "start_time_s": 11.259999999999199
+        }
+      ],
+      "variant": "timer"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 3.497899448949359e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 0.0003370101443421991,
+            "tcp_maximum_excursion_m": 0.0003508113157475043,
+            "tcp_path_length_m": 0.0003672441672720915
+          },
+          "reason": "retry_budget_exhausted:object_not_following",
+          "t_seconds": 14.759999999997259,
+          "type": "abort"
+        }
+      ],
+      "id": "m60-f15-p1-evidence",
+      "maximum_per_finger_force_n": 0.4321593038315339,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [],
+          "disposition": "interrupted",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 0,
+          "recorded_end_time_s": 11.879999999998855,
+          "start_time_s": 11.519999999999055
+        },
+        {
+          "admissions": [],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 0,
+          "probe_index": 1,
+          "recorded_end_time_s": 14.759999999997259,
+          "start_time_s": 14.399999999997458
+        }
+      ],
+      "variant": "evidence"
+    },
+    {
+      "controller_final_qualified": false,
+      "controller_final_status": "invalidated_hold",
+      "critical_native_ticks": 0,
+      "final_both_qualified": false,
+      "finite_native_arrays": true,
+      "force_ceiling_exceeded": false,
+      "force_ceiling_n": 10.0,
+      "hold_requests": [
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 1.8914636600881004e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 7.543119588277478e-05,
+            "tcp_maximum_excursion_m": 8.01773293716744e-05,
+            "tcp_path_length_m": 8.888434490453704e-05
+          },
+          "reason": "fixed_probe_clock_only",
+          "t_seconds": 12.119999999998722,
+          "type": "timer_admitted"
+        },
+        {
+          "native_motion_100ms_after_hold": {
+            "complete_100ms": true,
+            "object_endpoint_displacement_m": 1.31555039860344e-05,
+            "observed_interval_s": 0.1,
+            "requested_interval_s": 0.1,
+            "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+            "tcp_endpoint_displacement_m": 1.116221398933655e-05,
+            "tcp_maximum_excursion_m": 1.308771572689679e-05,
+            "tcp_path_length_m": 2.259561072204839e-05
+          },
+          "reason": "support_returned",
+          "t_seconds": 12.139999999998711,
+          "type": "hold_invalidated"
+        }
+      ],
+      "id": "m60-f15-p1-timer",
+      "maximum_per_finger_force_n": 0.4261470439697772,
+      "native_final_qualified": false,
+      "native_rows": 20000,
+      "native_warnings": [],
+      "probes": [
+        {
+          "admissions": [
+            {
+              "continuous_native_window_s": 0.0,
+              "controller_invalidation": {
+                "elapsed_after_admission_s": 0.019999999999988916,
+                "native_conditions_at_invalidation": [
+                  "unsupported",
+                  "minimum_rise",
+                  "maximum_local_drift"
+                ],
+                "native_failure_to_controller_observation_ms": 19.999999999988916,
+                "reason": "support_returned",
+                "t_seconds": 12.139999999998711
+              },
+              "first_native_condition_failure_at_or_after_admission_s": 12.119999999998722,
+              "first_native_failure_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "instantaneous_failed_conditions": [
+                "unsupported",
+                "minimum_rise",
+                "maximum_local_drift"
+              ],
+              "local_drift_m": 0.00883769167310178,
+              "native_motion_100ms_after_admission_hold": {
+                "complete_100ms": true,
+                "object_endpoint_displacement_m": 1.8914636600881004e-05,
+                "observed_interval_s": 0.1,
+                "requested_interval_s": 0.1,
+                "scope": "Native motion after a position-hold request, not measured stopping distance or physical response.",
+                "tcp_endpoint_displacement_m": 7.543119588277478e-05,
+                "tcp_maximum_excursion_m": 8.01773293716744e-05,
+                "tcp_path_length_m": 8.888434490453704e-05
+              },
+              "native_prefix_qualified": false,
+              "rise_m": 8.637551943926902e-06,
+              "t_seconds": 12.119999999998722,
+              "type": "timer_admitted"
+            }
+          ],
+          "disposition": "invalidated_hold",
+          "ever_native_qualified_before_recorded_end": false,
+          "first_native_qualified_before_recorded_end_s": null,
+          "maximum_native_continuous_window_s": 0.0,
+          "native_qualified_at_episode_end_from_same_origin": false,
+          "native_qualified_at_recorded_end": false,
+          "positive_20ms_checks_without_fresh_native_window": 1,
+          "probe_index": 0,
+          "recorded_end_time_s": 12.139999999998711,
+          "start_time_s": 11.519999999999055
+        }
+      ],
+      "variant": "timer"
+    }
+  ],
+  "schema": "dvidia.piper-probe-independent-readback/v1",
+  "script": {
+    "bytes": 19533,
+    "sha256": "491ac28f8e9026eb0673b15356dbc7fa164402e873a5da3c5e2e9303fd3733d7"
+  },
+  "self_tests": {
+    "checks": [
+      "99_vs100_native_ticks",
+      "strict_force_threshold_and_gap",
+      "3mm_drift"
+    ],
+    "passed": true
+  },
+  "source_commit": "a6a1d15db905214da52eb3942ebead3f85254762",
+  "source_files_unchanged": true
+}
