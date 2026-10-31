@@ -1,0 +1,23 @@
+{
+  "schema": "dvidia.task-environment-reader/v2",
+  "scope": "Display recovery only; scientific evidence unchanged",
+  "source_commit": "17c7472da3c3471f6568ec1e6c31fa5eb02d75f2",
+  "artifact_root": "../v02/",
+  "original_space_revision": "b2da910371e81d6956b243ef9d345496521ac774",
+  "original_manifest": {
+    "bytes": 28021,
+    "sha256": "ce8f93cbb1bf613364fdbef92ae1a7d3bfa47eca3b2484a10f59b9ee58a5c38a"
+  },
+  "changes": [
+    "clear stale results on failed selection",
+    "explicit retry control",
+    "three bounded idempotent GET attempts",
+    "64MiB verified shared-geometry cache"
+  ],
+  "tests": {
+    "url_boundary": 4,
+    "recovery_and_cache": 6
+  },
+  "learned_skill": false,
+  "physical_robot_ready": false
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "dvidia.task-environment-github-readback/v2",
+  "repo": "Dvidia-Inference/dvidia-training",
+  "tag": "task-environments-v0.2-preview",
+  "commit": "713dcbaccbc4d8d0b11ef1ec387a09ed4fcd5e3b",
+  "prerelease": true,
+  "anonymous_full_readback": true,
+  "transport": "system curl HTTP1.1, TLS verified, no curl config/auth headers",
+  "transport_attempts": [
+    {
+      "url": "https://api.github.com/repos/Dvidia-Inference/dvidia-training/releases/tags/task-environments-v0.2-preview",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 12343
+    },
+    {
+      "url": "https://api.github.com/repos/Dvidia-Inference/dvidia-training/git/ref/tags/task-environments-v0.2-preview",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 448
+    },
+    {
+      "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/task-environments-v0.2-preview/task-environments-v02-public01-20261031.zip",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 7097540
+    },
+    {
+      "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/task-environments-v0.2-preview/task-environments-v02-public01-20261031.receipt.json",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 608
+    },
+    {
+      "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/task-environments-v0.2-preview/dvidia_training-0.1.3.dev2-py3-none-any.whl",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 5685053
+    },
+    {
+      "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/task-environments-v0.2-preview/smoke.json",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 883
+    },
+    {
+      "url": "https://github.com/Dvidia-Inference/dvidia-training/releases/download/task-environments-v0.2-preview/anonymous-readback.json",
+      "attempt": 1,
+      "exit_code": 0,
+      "bytes": 39792
+    }
+  ],
+  "assets": [
+    {
+      "name": "task-environments-v02-public01-20261031.zip",
+      "bytes": 7097540,
+      "sha256": "eb9f34b66535c289232df79cd0411be4dcca0bee94279cdf79196229514b7e16"
+    },
+    {
+      "name": "task-environments-v02-public01-20261031.receipt.json",
+      "bytes": 608,
+      "sha256": "cfe86ff7542f0268008f66d4f316c305c033f872e14eb2fac4d1d35f18fc1cf1"
+    },
+    {
+      "name": "dvidia_training-0.1.3.dev2-py3-none-any.whl",
+      "bytes": 5685053,
+      "sha256": "deb5882926f9e1b3245657d716b435d391f302ca4ca9467d12d3f551ef5eaa18"
+    },
+    {
+      "name": "smoke.json",
+      "bytes": 883,
+      "sha256": "d41cb2d08ce8fd2fe4584efc7d5fb5020c28142dffe357852ee299600273efa5"
+    },
+    {
+      "name": "anonymous-readback.json",
+      "bytes": 39792,
+      "sha256": "d072a4184150e1d4164b9bc77981ebe5e6f26a8b74ac62ccf734e1aec131c82f"
+    }
+  ]
+}
