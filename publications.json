@@ -6,6 +6,20 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "arm-interfaces-v01",
+      "title": "Arm interfaces and simulation-only skill installation",
+      "source": "reports/Arm interfaces v01.md",
+      "date": "2026-10-31",
+      "type": "Native interface contracts and bounded CPU mechanics benchmark",
+      "status": "54/54 numerically valid · 21,654 state rows · 0 audit mismatches · simulation only",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance",
+        "skill-relations"
+      ],
+      "abstract": "Three pinned native simulation interfaces describe PiPER, SO-101, and UR5e with Robotiq 2F-85, preserving each arm and gripper command’s native units. A frozen 54-attempt roster covers three motion cases, three command periods, and two deterministic repeats; 21,654 state rows and 1,260 commands are retained, with zero audit mismatches. Twenty-one offline computation windows exceed their nominal command period; this is not a hardware timing measure. A data-only lift gate uses caller-declared bounds and is not connected to the controller. The existing PiPER policy remains 5/12 versus its authored teacher at 12/12; no new learning, cross-arm transfer, or physical qualification is claimed."
+    },
+    {
       "slug": "task-environments-v02",
       "title": "Constructing task environments with independent completion checks",
       "source": "reports/Task environments v02.md",

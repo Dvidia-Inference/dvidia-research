@@ -40,6 +40,25 @@ test("publication attribution remains intentionally empty", async () => {
   assert.throws(() => validatePublications({ ...catalog, contributor: { name: "Someone" } }), /intentionally unset/);
 });
 
+test("arm interface publication separates mechanics evidence from learned and physical claims", async () => {
+  const catalog = JSON.parse(await readFile(resolve(ROOT, "publications.json"), "utf8"));
+  const paper = catalog.publications.find(item => item.slug === "arm-interfaces-v01");
+  assert.ok(paper);
+  assert.equal(paper.source, "reports/Arm interfaces v01.md");
+  assert.match(paper.abstract, /54-attempt/);
+  assert.match(paper.abstract, /no new learning, cross-arm transfer, or physical qualification/i);
+  const source = await readFile(resolve(ROOT, paper.source), "utf8");
+  for (const phrase of ["21,654 state rows", "1,260 issued commands", "zero mismatches",
+    "not a hardware deadline-miss count", "The existing PiPER learned block policy remains 5/12",
+    "caller assertions", "not wired into the existing learned block controller",
+    "feat/arm-interfaces-v01", "arm-interfaces-v0.1-preview", "arm-interfaces-v01",
+    "12.003 mm endpoint error", "e8b03e4d718dde277d467f7fcca97b5540620fbf03b737b5a34ec3ff4b4ae8f9"]) {
+    assert.ok(source.includes(phrase), `Missing publication scope/evidence: ${phrase}`);
+  }
+  assert.match(source, /huggingface\.co\/docs\/lerobot\/so100/);
+  assert.match(source, /control\.ros\.org\/jazzy\/doc\/ros2_control/);
+});
+
 test("publication dates support new research entries and reject impossible calendar days", async () => {
   const catalog = JSON.parse(await readFile(resolve(ROOT, "publications.json")));
   const withDate = date => ({ ...catalog, publications: catalog.publications.map((p, i) => i ? p : { ...p, date }) });
