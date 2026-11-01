@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-rgbd-tracker-v01",
+      "title": "A small RGB-D cube tracker passes at 320 pixels, not 160",
+      "source": "reports/PiPER RGBD tracker v01.md",
+      "date": "2026-11-01",
+      "type": "Frozen camera-only known-block perception benchmark",
+      "status": "320 fixtures · 16/16 clear estimates at 320 px · no learned skill or hardware qualification",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A local NumPy tracker estimates one upright orange cube from rendered RGB-D and declared calibration. Sixteen held-out pose groups produce 320 correlated fixtures across two resolutions and ten conditions. At 320×240, all 16 clear scenes return estimates, with 1.98 mm position-error p95, 6.36° yaw-error p95 and 7.58 ms estimator wall-time p95. At 160×120, coverage and yaw gates fail. All 256 negative fixtures abstain; partial occlusion returns no estimates in 32 cases and remains unsupported. Independent readback verifies 2,578 files and recomputes all metrics without running the estimator or simulator. No action-learning export or physical control is enabled."
+    },
+    {
       "slug": "piper-incremental-hold-v03",
       "title": "Incremental PiPER hold correction exhausted its bound after 320 ms",
       "source": "reports/PiPER incremental hold v03.md",
