@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-incremental-hold-v03",
+      "title": "Incremental PiPER hold correction exhausted its bound after 320 ms",
+      "source": "reports/PiPER incremental hold v03.md",
+      "date": "2026-11-01",
+      "type": "Frozen four-controller comparison informed by independent design review",
+      "status": "32/32 valid · 0/8 active stationary holds per controller · simulation only",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A fixed eight-scene CPU comparison tests one bounded incremental pose-hold candidate against three unchanged controls. All 32 attempts are valid. The candidate admits four grasps and terminally refuses each after 320 ms when its proposed cumulative correction exceeds 0.03 rad. One native five-second stationary-grip result includes fallback; no variant achieves a five-second stationary grip with continued controller qualification. Four lower-friction scenes lack admission under every variant. EGM-inspired fresh-context review catches a joint-margin clipping edge case before execution; Harness² inspires a bounded propose/test/retain-lessons workflow. No upstream framework is executed, model trained or controller promoted."
+    },
+    {
       "slug": "piper-retention-v02",
       "title": "Checking grip retention without changing the squeeze",
       "source": "reports/PiPER retention v02.md",
