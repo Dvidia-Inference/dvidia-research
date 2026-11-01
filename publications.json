@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-retention-v02",
+      "title": "Checking grip retention without changing the squeeze",
+      "source": "reports/PiPER retention v02.md",
+      "date": "2026-11-01",
+      "type": "Three authored hold controllers with separate native grip and TCP-pose endpoints",
+      "status": "36/36 valid · 5 s grip 2/12, 4/12, 4/12 · grip + TCP stationarity 2/12, 0/12, 0/12 · simulation only",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A frozen twelve-scene CPU study compares measured-joint, issued-joint and bounded Cartesian hold requests without increasing the issued jaw target. All 36 attempts are valid, retaining 720,000 native 1 ms rows and 36,000 commands. Each variant admits four scenes with no false initial qualification; eight lower-friction scenes lack admission under all three. Five-second native grip retention is 2/12, 4/12 and 4/12 respectively, but grip plus common TCP stationarity is 2/12, 0/12 and 0/12. Issued targets retain grips while moving the tool beyond 4 mm. Cartesian terminally refuses all four admitted holds after a position-bound failure; its later native grip retention includes the fallback trajectory. No controller is promoted. This finite authored-control comparison establishes no learned skill, placement improvement, hardware performance or physical qualification."
+    },
+    {
       "slug": "piper-probe-evidence-v01",
       "title": "Testing before trusting a PiPER grip",
       "source": "reports/PiPER probe evidence v01.md",
