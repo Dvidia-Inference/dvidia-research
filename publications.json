@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "reference-action-v01",
+      "title": "Fast local fits still fail complete placement",
+      "source": "reports/Reference action v01.md",
+      "date": "2026-11-09",
+      "type": "Local model integration and native development experiment",
+      "status": "Two CPU fits · 0/4 placements per model · unqualified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "Two compact PiPER endpoint models train on the same 96,000 demonstrated action samples in 5.231 and 5.098 seconds. Saved-model recorded-context outputs match exactly. A separate eight-attempt native development experiment yields zero strict placements for both absolute and reference-relative decoders. Absolute control reaches one lift; relative control reaches none and records more critical contacts. All outcomes and sixteen earlier infrastructure refusals are retained. This engineering follow-up establishes a usable local learning and evaluation bridge, not a qualified skill, unseen-start superiority or ordinary video-to-action transfer."
+    },
+    {
       "slug": "camera-to-action-v01",
       "title": "A local camera-to-action learner reaches 5/64 strict placements",
       "source": "reports/Camera to action v01.md",

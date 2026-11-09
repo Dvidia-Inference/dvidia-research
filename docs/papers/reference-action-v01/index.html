@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fast local fits still fail complete placement · DVIDIA Research</title><meta name="description" content="Two compact PiPER endpoint models train on the same 96,000 demonstrated action samples in 5.231 and 5.098 seconds. Saved-model recorded-context outputs match exactly. A separate eight-attempt native development experiment yields zero strict placements for both absolute and reference-relative decoders. Absolute control reaches one lift; relative control reaches none and records more critical contacts. All outcomes and sixteen earlier infrastructure refusals are retained. This engineering follow-up establishes a usable local learning and evaluation bridge, not a qualified skill, unseen-start superiority or ordinary video-to-action transfer."><meta name="theme-color" content="#faf9f6"><link rel="canonical" href="https://research.dvidia.org/papers/reference-action-v01/"><link rel="alternate" type="application/rss+xml" title="DVIDIA Research" href="../../feed.xml"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../styles.css?v=editorial-v1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Fast local fits still fail complete placement","description":"Two compact PiPER endpoint models train on the same 96,000 demonstrated action samples in 5.231 and 5.098 seconds. Saved-model recorded-context outputs match exactly. A separate eight-attempt native development experiment yields zero strict placements for both absolute and reference-relative decoders. Absolute control reaches one lift; relative control reaches none and records more critical contacts. All outcomes and sixteen earlier infrastructure refusals are retained. This engineering follow-up establishes a usable local learning and evaluation bridge, not a qualified skill, unseen-start superiority or ordinary video-to-action transfer.","url":"https://research.dvidia.org/papers/reference-action-v01/","publisher":{"@type":"Organization","name":"DVIDIA","url":"https://dvidia.org"},"datePublished":"2026-11-09"}</script><script src="../../app.js?v=editorial-v1" defer></script></head>
+<body class="workstation-reader"><a class="skip-link" href="#main">Skip to content</a><aside class="site-sidebar" aria-label="Research navigation"><a class="brand" href="../../index.html"><span class="brand-name">DVIDIA</span><span class="brand-subtitle">Research notebook</span></a><nav class="site-nav" id="site-navigation" aria-label="Main"><div class="nav-section paper-section-nav"><span class="nav-label">In this study</span><a href="#what-changed">What changed</a><a href="#training-and-recorded-context-checks">Training and recorded-context checks</a><a href="#eight-actual-control-attempts">Eight actual control attempts</a><a href="#failures-before-the-control-experiment">Failures before the control experiment</a><a href="#where-the-actions-diverge">Where the actions diverge</a></div><div class="nav-section"><span class="nav-label">Explore</span><a href="../../index.html">Research journal</a><a href="../../topics/physical-grounding/index.html">Physical grounding</a><a href="https://huggingface.co/Dvidia">Hugging Face</a><a href="https://github.com/Dvidia-Inference/dvidia-research">GitHub</a></div></nav><details class="mobile-navigation"><summary>Contents</summary><nav aria-label="Mobile"><div class="nav-section paper-section-nav"><span class="nav-label">In this study</span><a href="#what-changed">What changed</a><a href="#training-and-recorded-context-checks">Training and recorded-context checks</a><a href="#eight-actual-control-attempts">Eight actual control attempts</a><a href="#failures-before-the-control-experiment">Failures before the control experiment</a><a href="#where-the-actions-diverge">Where the actions diverge</a></div><div class="nav-section"><span class="nav-label">Explore</span><a href="../../index.html">Research journal</a><a href="../../topics/physical-grounding/index.html">Physical grounding</a><a href="https://huggingface.co/Dvidia">Hugging Face</a><a href="https://github.com/Dvidia-Inference/dvidia-research">GitHub</a></div></nav></details></aside><main class="page-shell" id="main"><article class="paper"><header class="paper-header"><p class="eyebrow">Reference actions · Research candidates</p><h1>Fast local fits still fail complete placement</h1><p class="paper-meta"><time datetime="2026-11-09">9 November 2026</time> · DVIDIA</p><p class="paper-deck">Fast predictions still need precise, complete actions.</p><p class="paper-status">Two CPU fits · 0/4 placements per model · unqualified</p><p class="paper-actions"><a href="../../downloads/topics/physical-grounding/runs/2026-11-09-reference-action-v01/viewer/index.html">Inspect all eight recorded attempts ↗</a> · <a href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/reports/Reference%20action%20v01.md">Source & history</a> · <a href="../../downloads/reports/Reference%20action%20v01.md" download>Download Markdown</a></p></header><details class="paper-summary"><summary>Study abstract and scope</summary><section class="paper-abstract" aria-label="Abstract"><h2>Abstract</h2><p>Two compact PiPER endpoint models train on the same 96,000 demonstrated action samples in 5.231 and 5.098 seconds. Saved-model recorded-context outputs match exactly. A separate eight-attempt native development experiment yields zero strict placements for both absolute and reference-relative decoders. Absolute control reaches one lift; relative control reaches none and records more critical contacts. All outcomes and sixteen earlier infrastructure refusals are retained. This engineering follow-up establishes a usable local learning and evaluation bridge, not a qualified skill, unseen-start superiority or ordinary video-to-action transfer.</p></section></details><div class="paper-body"><p>Two small PiPER controllers each trained on 96,000 demonstrated action samples
+in about five seconds on a local CPU. Both then failed all four scheduled
+placement attempts. Fast fitting and accurate recorded-action prediction have
+not yet produced a reliable downloadable skill.</p>
+<p>This is a separate engineering follow-up to the <a href="../camera-to-action-v01/index.html">camera-to-action study</a>.
+It leaves that study&#39;s frozen <strong>5/64</strong> result and failed qualification unchanged.
+The new candidates remain <strong>simulation-only, unqualified research models</strong>.</p>
+<h2 id="what-changed">What changed</h2>
+<p>The original learner predicts joint and gripper targets. This follow-up learns
+an endpoint consistent with the actuator&#39;s existing rate limits. It compares
+an absolute endpoint with an endpoint relative to the preceding applied servo
+reference. Both use the same 269 causal features, two 64-unit hidden layers,
+initial weights, training data, optimizer budget and actuator constraints.</p>
+<p>The preceding reference is stored as float64. It is the reference actually
+applied to the servo, not a measured joint position or the teacher&#39;s next
+command. In correction recordings, teacher suggestions remain distinct from
+executed commands. Initial visual position is explicitly historical; unavailable
+current observations keep their masks and ages. No teacher phase, current
+teacher command, native object/contact truth or future frame enters the policy.</p>
+<p>For network output <code>g</code>, reset reference <code>r₀</code>, preceding reference <code>r</code>, and
+per-command scale <code>D</code>, the decoders are <code>r₀ + Dg</code> and <code>r + Dg</code>. The common scale
+is 0.03 rad for each arm joint and 0.001 m for one gripper finger. Both optimize
+the same physically scaled, unprojected endpoint loss. At execution they use
+the original bounds and exact twenty 1 ms reference updates. These limit
+commands; they do not guarantee safe contact or bound actual joint motion.</p>
+<p><a href="https://github.com/Dvidia-Inference/dvidia-training/pull/36">Source and API</a>
+retain a separate model schema. The existing installer does not yet accept
+this format. Neither model is a hardware controller or a qualified skill.</p>
+<h2 id="training-and-recorded-context-checks">Training and recorded-context checks</h2>
+<p>Exactly two real fits used the same <strong>64 teacher and 32 mixed-control training
+recordings</strong>, covering 32 starting-position groups. Each fit used seed 17,
+50 epochs, batch size 512 and Adam learning rate 0.003. Normalization used
+training data only. No development or confirmation recording entered fitting.</p>
+<div class="table-scroll" role="region" aria-label="Research table" tabindex="0"><table><thead><tr><th>Measurement</th><th style="text-align:right">Absolute endpoint</th><th style="text-align:right">Reference-relative endpoint</th></tr></thead><tbody><tr><td>Fit time</td><td style="text-align:right">5.231 s</td><td style="text-align:right">5.098 s</td></tr><tr><td>Model JSON size</td><td style="text-align:right">539,345 bytes</td><td style="text-align:right">538,021 bytes</td></tr><tr><td>Recorded-context callback p95</td><td style="text-align:right">0.205 ms</td><td style="text-align:right">0.207 ms</td></tr><tr><td>Saved/reloaded outputs</td><td style="text-align:right">1,000/1,000 exact matches</td><td style="text-align:right">1,000/1,000 exact matches</td></tr></tbody></table></div>
+<p>The callback check reused the first training demonstration&#39;s observations and
+previous references. Predictions never advanced the simulator or fed the next
+input. This is <strong>open-loop compatibility evidence</strong>, not task success. Its
+callback timing excludes camera processing, rendering, physics and data loading.
+Whole-process peak RSS for this integration was 1,345,404,928 bytes. The shared
+host ran arm64 macOS 26.5.2, Python 3.12.9 and NumPy 2.5.3 with one declared BLAS
+thread. These are offline measurements, not a hardware response-time guarantee.</p>
+<h2 id="eight-actual-control-attempts">Eight actual control attempts</h2>
+<p>A separate, fixed engineering roster used the first two original development
+starting positions, each with both destinations and both retained models. These
+are reused development scenes, not fresh confirmation. There was no teacher
+intervention, fallback, model selection, tuning or replacement of a failed case.</p>
+<p>All eight attempts completed 20 simulated seconds: <strong>8,000 motor intervals,
+4,008 RGB-D pairs and 160,000 native physics ticks</strong> in total. Independent
+readback verified the saved inventories and recomputed native scores without
+running physics or model inference.</p>
+<div class="table-scroll" role="region" aria-label="Research table" tabindex="0"><table><thead><tr><th>Native outcome</th><th style="text-align:right">Absolute endpoint</th><th style="text-align:right">Reference-relative endpoint</th></tr></thead><tbody><tr><td>Recorded attempts</td><td style="text-align:right">4/4</td><td style="text-align:right">4/4</td></tr><tr><td>Grasp observed</td><td style="text-align:right">3/4</td><td style="text-align:right">4/4</td></tr><tr><td>Lift observed</td><td style="text-align:right">1/4</td><td style="text-align:right">0/4</td></tr><tr><td>Carry completed</td><td style="text-align:right">0/4</td><td style="text-align:right">0/4</td></tr><tr><td>Strict placement</td><td style="text-align:right"><strong>0/4</strong></td><td style="text-align:right"><strong>0/4</strong></td></tr><tr><td>Episodes with critical contacts</td><td style="text-align:right">2/4</td><td style="text-align:right">4/4</td></tr><tr><td>Critical-contact 1 ms ticks</td><td style="text-align:right">7,606</td><td style="text-align:right">19,751</td></tr><tr><td>Callback including disk guard, p95</td><td style="text-align:right">0.295 ms</td><td style="text-align:right">0.284 ms</td></tr><tr><td>Full offline control boundary, p95</td><td style="text-align:right">22.363 ms</td><td style="text-align:right">22.049 ms</td></tr></tbody></table></div>
+<p>A grasp flag is not a completed test lift or a secure transported object. Native
+metric consistency passed for all eight recordings, while all four relative
+trajectories also failed the strict trajectory contract with
+<code>invalid_state_value</code>: finite tool coordinates crossed its fixed ±0.5 m
+component envelope. The first rejected components were x=0.501866 m,
+x=0.503337 m, z=0.504985 m and x=0.500157 m, in relative-model roster order.
+These were not NaNs or physics warnings. Outer native consistency does not
+override a strict trajectory failure; no score was relaxed to make them pass.</p>
+<p><a href="../../downloads/topics/physical-grounding/runs/2026-11-09-reference-action-v01/viewer/index.html">Inspect every attempt</a>
+using actual camera frames, measured joints, issued commands, applied references
+and observation availability. The viewer includes <strong>all eight</strong> attempts in
+registered order. It displays RGB at 2.5 Hz from the original 25 Hz capture and
+retains all 50 Hz decisions. Its <a href="../../downloads/topics/physical-grounding/runs/2026-11-09-reference-action-v01/viewer/readback.json">independent readback</a>
+binds the displayed evidence. This small comparison has no fixed or blind
+comparator and does not establish superiority, a population success rate or
+hardware performance.</p>
+<h2 id="failures-before-the-control-experiment">Failures before the control experiment</h2>
+<p>Two earlier eight-attempt batches stopped before any learned control. The first
+was blocked by a subprocess guard rejecting MuJoCo&#39;s read-only macOS startup
+check. The second passed that check but could not create a CoreGraphics context
+inside the default execution sandbox. All sixteen refusals remain retained.</p>
+<p>A separate static 48×64 frame check reproduced the graphics refusal and then
+succeeded with scoped graphics access. The final eight-attempt batch used the
+same source, weights, scenes, physics, scorer and resource guards as the second
+batch, with the corrected execution access. No failed evidence was overwritten.
+The renderer also warned that <code>ARB_clip_control</code> was unavailable with the
+requested depth mode. Its stated depth-accuracy limitation remains a limitation;
+we have not established that it caused the task failures.</p>
+<h2 id="where-the-actions-diverge">Where the actions diverge</h2>
+<p>Comparing the eight saved attempts with four teacher recordings from exactly the same development starts isolates two gaps. The teachers achieved sustained lift by 11.836–12.056 seconds. The strongest absolute candidate did not qualify its lift until 18.991 seconds; its finger reference began sustained closure 6.76 seconds later than the matching teacher. Another absolute attempt never closed below the diagnostic 30 mm threshold. Absolute joint tracking RMS was 0.0140–0.0200 rad versus 0.0197–0.0206 rad for the teachers, so missing progress is already present in the commands; this is not explained solely by the simulated actuators failing to follow them. All four relative candidates contacted the table with finger links before closing, at 7.344–7.574 seconds. Their first recorded critical-contact snapshots placed the tool 4.54–7.04 mm lower than the matched teacher. Millimetre-scale approach accuracy matters before grip waiting can help.</p>
+<p>The next bounded experiment should test a short-horizon acquisition policy that learns tool-pose/gripper subgoals and completion progress through approach, closure and test lift, against the unchanged endpoint controller under matched data and correction budgets. Score contact-free approach, loaded grasp, sustained lift, stalls and false progress independently before adding transport. Any authored IK or progress scaffold must be disclosed, and teacher phase labels or native contact truth must remain outside evaluation inputs. This is a proposed experiment, not a demonstrated fix: the comparison reused saved development recordings without new fitting, model calls, teacher intervention or simulation, and it establishes no causal treatment effect or qualification.</p>
+<p><a href="../../downloads/topics/physical-grounding/runs/2026-11-09-reference-action-v01/path-diagnosis.json">Read the matched-teacher diagnostic</a>.
+The proposed larger 164-attempt screen has not run, and no candidate has been
+promoted. The unchanged model files, cards and compact receipts are available
+in the <a href="https://github.com/Dvidia-Inference/dvidia-training/tree/8774265fdf2a4516520cdf36ff2eb41dcd04dfda/benchmarks/camera-action-reference-model-integration-v01">GitHub benchmark</a>.</p>
+<p>Original code, generated model weights and synthetic records use MIT with
+upstream simulator and PiPER notices retained. No human footage or physical
+robot commands were used. Research writing follows this site&#39;s CC BY 4.0 license.</p>
+</div></article><footer class="site-footer"><p>Published by DVIDIA · <a href="mailto:hello@dvidia.org">hello@dvidia.org</a></p><p><a href="https://github.com/Dvidia-Inference/dvidia-research">Source and revisions</a> · <a href="https://huggingface.co/Dvidia">Hugging Face</a> · <a href="../../feed.xml">RSS</a> · <a href="https://x.com/iammrriver">@iammrriver</a></p><p>Writing: <a href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/LICENSE">CC BY 4.0</a>. Original code: <a href="https://github.com/Dvidia-Inference/dvidia-research/blob/main/LICENSE-CODE">MIT</a>. External work retains its own terms.</p></footer></main></body></html>

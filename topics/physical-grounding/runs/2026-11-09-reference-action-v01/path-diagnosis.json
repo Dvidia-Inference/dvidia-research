@@ -1,0 +1,479 @@
+{
+  "additional_source_bindings": {
+    "development-00-goal0-absolute": {
+      "native_episode_sha256": "53421d8fa8e37fe01fcdfd56e6e68cdd27aca6a15fe2bfb090b6f1edacb41c2c",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-00-goal0-delta": {
+      "native_episode_sha256": "3f91710eb25b61a0fb6c64fa050cc8406f8d11b2eeff3a65dee1502eb2c5fd8f",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-00-goal1-absolute": {
+      "native_episode_sha256": "0bdfdb41bf019c8a8eb56971142a2556a58401a07aa7a33307d6804a78c6308f",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-00-goal1-delta": {
+      "native_episode_sha256": "c38becb927b94c6c7478c76253f86ee4a656f8d8ab1c482258fdfb5ef4dfa8b2",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-01-goal0-absolute": {
+      "native_episode_sha256": "a343b13eb717ad56c9f0230fdb1b4e4294264878c138d28c18480fc13d87c986",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-01-goal0-delta": {
+      "native_episode_sha256": "51b909802d8da08157c87cc1d1dffac6eea4b28a8f9448669b5cc02797e961ae",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-01-goal1-absolute": {
+      "native_episode_sha256": "6ff7b0ce962146a7a4c771a3f53e3abfb0e835c4fb30b885250d4d05480b7606",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    },
+    "development-01-goal1-delta": {
+      "native_episode_sha256": "42e5e034ee6c8a6d4cf58cdf7efe2d7545f4554d2e0253b6eca42d477e623da0",
+      "native_metadata_sha256": "d9c53d07cff4a12cd1d515b3570f20630b1345738e067da3139039e410c5a385"
+    }
+  },
+  "full_analysis_sha256": "13defd906154dbcc3cc76ddc2888a9df8ee8c4e60ac501463a446b6cb02acec0",
+  "interpretation": [
+    "All four matching teachers qualified a sustained lift by 11.836\u201312.056 s and achieved strict placement.",
+    "Absolute development-01-goal1 qualified a lift at 18.991 s after its applied finger reference first remained below 30 mm at 17.72 s, 6.76 s later than its teacher. Absolute development-01-goal0 never crossed this closing threshold.",
+    "Absolute joint RMS tracking error was 0.0140\u20130.0200 rad, versus 0.0197\u20130.0206 rad in matching teachers. Loads and references differ; this cannot establish equal actuator quality, but stalled commanded progress is not explained solely by weak target tracking.",
+    "All four relative runs made critical table contact at 7.344\u20137.574 s while fingers were approximately 34.7\u201334.8 mm open. The first 50 Hz critical snapshots identify task_table contact with link7 and/or link8; TCP height was 4.54\u20137.04 mm below the matched teacher.",
+    "These observations motivate a learned local pose and progress comparison. They do not prove that phase supervision, an output representation or a correction rule will solve the failures."
+  ],
+  "limitations": [
+    "Same-time teacher anchors describe deviations; students have no recorded phase variable and cannot be assigned teacher phases as fact.",
+    "Thresholds are post-hoc descriptive:0.05rad maximum-joint and10mm TCP difference sustained across five50Hz sampled points. They are not acceptance gates.",
+    "Applied jaw below30mm is a one-finger reference threshold, not total jaw opening or proof of grip; contact, loading and lift are separately reported.",
+    "Joint tracking compares applied reference with measured joints at the same interval end; contact constraints and controller loads differ, so this is not an actuator calibration experiment.",
+    "Teacher phase labels and native truth are used only for offline diagnosis, not learner observations.",
+    "Shared starts do not establish arbitrary video transfer, new-arm compatibility or physical safety."
+  ],
+  "native_audit_sha256": "098c3c7b8c678790cc089dbec50d5c7c874e0a54da72844e48c49222683f9d7f",
+  "native_result_sha256": "597277fd6c4671a7d2791aa861beb5da896573fcbf51f8db08e30d4bc501284e",
+  "physical_robot_ready": false,
+  "proposed_next_experiment": {
+    "claim_boundary": "No candidate or treatment was run or selected by this diagnosis; a separately registered comparison is required.",
+    "fairness": "Fix training starts, example budget, correction budget and evaluation roster before fitting; distinguish any authored IK or progress scaffold from learned control. Phase labels and native contact truth may supervise training or diagnose results, but may not enter evaluation inputs.",
+    "measurement": "Measure contact-free aligned approach, loaded bilateral grasp, sustained table-free lift, timing, stalls, false progress and clearance violations before extending to carry and release. Causal camera/encoder estimates can be uncertain; do not equate a predicted completion flag with independently scored contact truth.",
+    "status": "proposed_not_run",
+    "treatment": "A bounded short-horizon acquisition policy that explicitly predicts tool-pose/gripper subgoals and completion progress for approach, close and test lift, compared with the unchanged endpoint controller."
+  },
+  "qualified_skill": false,
+  "schema": "dvidia.reference-action-development-path-diagnosis/v1",
+  "scope": "Offline descriptive analysis of eight saved student trajectories and exactly four matching original development teacher recordings; no confirmation records, new fitting, model calls, teacher intervention or simulation.",
+  "source_commit": "78ea4fbb4b2733e7738eb425eeecd7cb67a52195",
+  "source_derivative_sha256": "18dfaafc04bf51768cd01d2b7f8b6ced7fac14d7edf3289bcbc8cec42e2889e4",
+  "student_cases": [
+    {
+      "applied_minus_measured_joint_rms_rad": 0.0186109561552025,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 11.6,
+      "first_bilateral_contact_s": 12.16,
+      "first_critical_contact": {
+        "first_control_snapshot_seconds": 12.499999999998511,
+        "first_native_tick_seconds": 12.404,
+        "matched_teacher_tcp_z_m": 0.16958692057182284,
+        "measured_left_finger_m": 0.020598185824451356,
+        "scope": "First 50 Hz state reporting critical contact; this can occur after an earlier brief 1 ms contact. Pair labels do not identify every earlier native contact.",
+        "table_robot_pairs": [
+          [
+            "task_table",
+            "link7"
+          ]
+        ],
+        "tcp_orientation_difference_from_matched_teacher_rad": 0.40375595310990153,
+        "tcp_z_m": 0.07651672168001449
+      },
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 11.7,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 1.4,
+      "first_persistent_tcp_difference_over_10mm_s": 0.7,
+      "id": "development-00-goal0-absolute",
+      "loaded_bilateral_100ms_qualified_s": null,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.020104881158995103,
+      "teacher_case_id": "development-00-goal0-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.034589194047558856,
+        "student_next_applied_left_finger_m": 0.034544781088829045,
+        "student_tcp_minus_block_m": [
+          0.004556715642450582,
+          -0.000891744796602284,
+          0.002869387502067583
+        ],
+        "time_s": 10.64
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.0887845320564452,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 10.96,
+      "first_bilateral_contact_s": 11.654,
+      "first_critical_contact": {
+        "first_control_snapshot_seconds": 7.360000000000793,
+        "first_native_tick_seconds": 7.344,
+        "matched_teacher_tcp_z_m": 0.08216098899746793,
+        "measured_left_finger_m": 0.03477562026328776,
+        "scope": "First 50 Hz state reporting critical contact; this can occur after an earlier brief 1 ms contact. Pair labels do not identify every earlier native contact.",
+        "table_robot_pairs": [
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link8"
+          ],
+          [
+            "task_table",
+            "link8"
+          ]
+        ],
+        "tcp_orientation_difference_from_matched_teacher_rad": 0.05050198247320056,
+        "tcp_z_m": 0.07757141893736598
+      },
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 11.56,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 2.34,
+      "first_persistent_tcp_difference_over_10mm_s": 1.14,
+      "id": "development-00-goal0-delta",
+      "loaded_bilateral_100ms_qualified_s": 12.259,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.020104881158995103,
+      "teacher_case_id": "development-00-goal0-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.034962318563648884,
+        "student_next_applied_left_finger_m": 0.03313883943110702,
+        "student_tcp_minus_block_m": [
+          0.0029097086970731323,
+          -0.004534872999564073,
+          -0.00516346893267107
+        ],
+        "time_s": 10.64
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.0199700259860191,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 10.3,
+      "first_bilateral_contact_s": 10.801,
+      "first_critical_contact": {
+        "first_control_snapshot_seconds": 10.899999999999398,
+        "first_native_tick_seconds": 10.899,
+        "matched_teacher_tcp_z_m": 0.0818646591018556,
+        "measured_left_finger_m": 0.020038540485999654,
+        "scope": "First 50 Hz state reporting critical contact; this can occur after an earlier brief 1 ms contact. Pair labels do not identify every earlier native contact.",
+        "table_robot_pairs": [
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link7"
+          ]
+        ],
+        "tcp_orientation_difference_from_matched_teacher_rad": 0.044568873504458754,
+        "tcp_z_m": 0.07534325592267584
+      },
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 10.4,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 1.78,
+      "first_persistent_tcp_difference_over_10mm_s": 0.58,
+      "id": "development-00-goal1-absolute",
+      "loaded_bilateral_100ms_qualified_s": 11.034,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.019666245212800953,
+      "teacher_case_id": "development-00-goal1-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.023292699840583728,
+        "student_next_applied_left_finger_m": 0.01435402870178223,
+        "student_tcp_minus_block_m": [
+          0.00029428391843416835,
+          -0.0038664203857624313,
+          0.004471814138625976
+        ],
+        "time_s": 10.64
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.08846997284623258,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 11.48,
+      "first_bilateral_contact_s": 12.073,
+      "first_critical_contact": {
+        "first_control_snapshot_seconds": 7.420000000000813,
+        "first_native_tick_seconds": 7.409,
+        "matched_teacher_tcp_z_m": 0.08249870479219393,
+        "measured_left_finger_m": 0.03473698829152097,
+        "scope": "First 50 Hz state reporting critical contact; this can occur after an earlier brief 1 ms contact. Pair labels do not identify every earlier native contact.",
+        "table_robot_pairs": [
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link8"
+          ],
+          [
+            "task_table",
+            "link8"
+          ]
+        ],
+        "tcp_orientation_difference_from_matched_teacher_rad": 0.06952260856964124,
+        "tcp_z_m": 0.07755880944609146
+      },
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 12.0,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 4.6,
+      "first_persistent_tcp_difference_over_10mm_s": 2.14,
+      "id": "development-00-goal1-delta",
+      "loaded_bilateral_100ms_qualified_s": null,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.019666245212800953,
+      "teacher_case_id": "development-00-goal1-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.03477029794491075,
+        "student_next_applied_left_finger_m": 0.03481083365750968,
+        "student_tcp_minus_block_m": [
+          0.005088624138431974,
+          -0.002308413988377167,
+          -0.0016225066057250076
+        ],
+        "time_s": 10.64
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.014007568749701492,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": null,
+      "first_bilateral_contact_s": null,
+      "first_critical_contact": null,
+      "first_measured_left_finger_below_30mm_for_five_samples_s": null,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 1.36,
+      "first_persistent_tcp_difference_over_10mm_s": 0.6,
+      "id": "development-01-goal0-absolute",
+      "loaded_bilateral_100ms_qualified_s": null,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.020617563963146263,
+      "teacher_case_id": "development-01-goal0-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.035000007722876245,
+        "student_next_applied_left_finger_m": 0.035,
+        "student_tcp_minus_block_m": [
+          -0.005248521295870445,
+          -0.002097655683085786,
+          0.0921401175512518
+        ],
+        "time_s": 10.86
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.03146300419927837,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 11.52,
+      "first_bilateral_contact_s": 11.973,
+      "first_critical_contact": {
+        "first_control_snapshot_seconds": 7.460000000000826,
+        "first_native_tick_seconds": 7.454,
+        "matched_teacher_tcp_z_m": 0.08249673654260048,
+        "measured_left_finger_m": 0.034817099546300294,
+        "scope": "First 50 Hz state reporting critical contact; this can occur after an earlier brief 1 ms contact. Pair labels do not identify every earlier native contact.",
+        "table_robot_pairs": [
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link7"
+          ]
+        ],
+        "tcp_orientation_difference_from_matched_teacher_rad": 0.04822802496585092,
+        "tcp_z_m": 0.07795271862862262
+      },
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 11.9,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 2.26,
+      "first_persistent_tcp_difference_over_10mm_s": 1.3,
+      "id": "development-01-goal0-delta",
+      "loaded_bilateral_100ms_qualified_s": null,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.020617563963146263,
+      "teacher_case_id": "development-01-goal0-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.035005771784548695,
+        "student_next_applied_left_finger_m": 0.03496219695231411,
+        "student_tcp_minus_block_m": [
+          -0.004686137743318719,
+          -0.014310468371111044,
+          0.007896057615335836
+        ],
+        "time_s": 10.86
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.01881046018774333,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 17.72,
+      "first_bilateral_contact_s": 18.238,
+      "first_critical_contact": null,
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 17.82,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 1.64,
+      "first_persistent_tcp_difference_over_10mm_s": 0.48,
+      "id": "development-01-goal1-absolute",
+      "loaded_bilateral_100ms_qualified_s": 18.431,
+      "strict_success": false,
+      "sustained_lift_qualified_s": 18.991,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.020033035526246846,
+      "teacher_case_id": "development-01-goal1-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.03499601944706981,
+        "student_next_applied_left_finger_m": 0.035,
+        "student_tcp_minus_block_m": [
+          -0.0048689268189966994,
+          0.0016935148764068292,
+          0.03219506075453704
+        ],
+        "time_s": 10.86
+      }
+    },
+    {
+      "applied_minus_measured_joint_rms_rad": 0.03818060317604543,
+      "exact_initial_state_and_task_config_match": true,
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 11.82,
+      "first_bilateral_contact_s": 12.555,
+      "first_critical_contact": {
+        "first_control_snapshot_seconds": 7.580000000000866,
+        "first_native_tick_seconds": 7.574,
+        "matched_teacher_tcp_z_m": 0.08502419946602456,
+        "measured_left_finger_m": 0.03475973786986259,
+        "scope": "First 50 Hz state reporting critical contact; this can occur after an earlier brief 1 ms contact. Pair labels do not identify every earlier native contact.",
+        "table_robot_pairs": [
+          [
+            "task_table",
+            "link7"
+          ],
+          [
+            "task_table",
+            "link7"
+          ]
+        ],
+        "tcp_orientation_difference_from_matched_teacher_rad": 0.06150156661395149,
+        "tcp_z_m": 0.0779857930592863
+      },
+      "first_measured_left_finger_below_30mm_for_five_samples_s": 12.5,
+      "first_persistent_measured_joint_difference_over_0_05rad_s": 2.78,
+      "first_persistent_tcp_difference_over_10mm_s": 6.5,
+      "id": "development-01-goal1-delta",
+      "loaded_bilateral_100ms_qualified_s": 13.228,
+      "strict_success": false,
+      "sustained_lift_qualified_s": null,
+      "teacher_applied_minus_measured_joint_rms_rad": 0.020033035526246846,
+      "teacher_case_id": "development-01-goal1-teacher",
+      "teacher_close_timestamp_snapshot": {
+        "student_measured_left_finger_m": 0.034812255916172256,
+        "student_next_applied_left_finger_m": 0.03479379169596358,
+        "student_tcp_minus_block_m": [
+          0.006282891380526623,
+          -0.0021775531683349003,
+          -0.0014460341162761542
+        ],
+        "time_s": 10.86
+      }
+    }
+  ],
+  "teacher_cases": [
+    {
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 10.74,
+      "first_bilateral_contact_s": 11.075,
+      "id": "development-00-goal0-teacher",
+      "joint_tracking_rms_rad": 0.020104881158995103,
+      "loaded_bilateral_100ms_qualified_s": 11.174,
+      "phase_first_seconds": {
+        "approach": 0.0,
+        "close": 10.64,
+        "descend": 6.62,
+        "lift": 11.34,
+        "place": 12.92,
+        "release": 13.52,
+        "retreat": 14.22,
+        "transfer": 11.96,
+        "verify": 14.98
+      },
+      "strict_success": true,
+      "sustained_lift_qualified_s": 11.836
+    },
+    {
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 10.74,
+      "first_bilateral_contact_s": 11.075,
+      "id": "development-00-goal1-teacher",
+      "joint_tracking_rms_rad": 0.019666245212800953,
+      "loaded_bilateral_100ms_qualified_s": 11.174,
+      "phase_first_seconds": {
+        "approach": 0.0,
+        "close": 10.64,
+        "descend": 6.62,
+        "lift": 11.34,
+        "place": 13.24,
+        "release": 13.84,
+        "retreat": 14.54,
+        "transfer": 11.96,
+        "verify": 15.34
+      },
+      "strict_success": true,
+      "sustained_lift_qualified_s": 11.836
+    },
+    {
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 10.96,
+      "first_bilateral_contact_s": 11.298,
+      "id": "development-01-goal0-teacher",
+      "joint_tracking_rms_rad": 0.020617563963146263,
+      "loaded_bilateral_100ms_qualified_s": 11.397,
+      "phase_first_seconds": {
+        "approach": 0.0,
+        "close": 10.86,
+        "descend": 6.66,
+        "lift": 11.56,
+        "place": 13.16,
+        "release": 13.76,
+        "retreat": 14.46,
+        "transfer": 12.18,
+        "verify": 15.22
+      },
+      "strict_success": true,
+      "sustained_lift_qualified_s": 12.056
+    },
+    {
+      "first_applied_left_finger_below_30mm_for_five_intervals_s": 10.96,
+      "first_bilateral_contact_s": 11.298,
+      "id": "development-01-goal1-teacher",
+      "joint_tracking_rms_rad": 0.020033035526246846,
+      "loaded_bilateral_100ms_qualified_s": 11.397,
+      "phase_first_seconds": {
+        "approach": 0.0,
+        "close": 10.86,
+        "descend": 6.66,
+        "lift": 11.56,
+        "place": 13.46,
+        "release": 14.06,
+        "retreat": 14.76,
+        "transfer": 12.18,
+        "verify": 15.58
+      },
+      "strict_success": true,
+      "sustained_lift_qualified_s": 12.056
+    }
+  ]
+}

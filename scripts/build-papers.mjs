@@ -12,6 +12,12 @@ const DOCS = resolve(ROOT, "docs");
 const TOPICS = ["capture-quality", "skill-relations", "evaluation-provenance", "physical-grounding"];
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const READERS = {
+  "reference-action-v01": {
+    eyebrow: "Reference actions · Research candidates",
+    deck: "Fast predictions still need precise, complete actions.",
+    action: "Inspect all eight recorded attempts",
+    entry: "downloads/topics/physical-grounding/runs/2026-11-09-reference-action-v01/viewer/index.html",
+  },
   "camera-to-action-v01": {
     eyebrow: "Camera-to-action · Research candidate", deck: "Learning the command is only part of completing the task.",
     entry: "downloads/topics/physical-grounding/runs/2026-11-01-camera-to-action-v01/viewer-v02/index.html",

@@ -563,6 +563,11 @@ This is an engineering-tool preview, not a qualified skill. A new registered
 learning experiment must measure whether the representation changes improve
 grasp timing, transport and complete placement.
 
+A [separate model follow-up](https://research.dvidia.org/papers/reference-action-v01/) now reports
+two real CPU fits and all eight native development attempts. Both candidates
+complete zero of four strict placements; neither is promoted. It retains the
+earlier infrastructure refusals and leaves this frozen study unchanged.
+
 ## Source and reuse
 
 [The reviewed delivery source](https://github.com/Dvidia-Inference/dvidia-training/tree/d89b24c82b7534a439bbaa3cac3ef5c9d3b80088)
