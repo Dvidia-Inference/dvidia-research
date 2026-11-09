@@ -35,6 +35,10 @@ commands; they do not guarantee safe contact or bound actual joint motion.
 retain a separate model schema. The existing installer does not yet accept
 this format. Neither model is a hardware controller or a qualified skill.
 
+Download both [research candidates on Hugging Face](https://huggingface.co/Dvidia/piper-reference-actions-v01),
+with model cards and benchmark evidence, for use through the custom Python API.
+Both remain unqualified simulation models.
+
 ## Training and recorded-context checks
 
 Exactly two real fits used the same **64 teacher and 32 mixed-control training
