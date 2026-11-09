@@ -62,6 +62,31 @@
       "bytes": 18762,
       "sha256": "613f6d2c66cd3b7cbe59467ddd0ae9559e154a3dab787a2b01245a326758301c",
       "source_path": "runs/camera-action-v01-proofs-20261101/final-summary-20261101/summary.md"
+    },
+    "training-cache-validation.json": {
+      "bytes": 13491,
+      "derived_from": {
+        "executed_script": {
+          "bytes": 17276,
+          "sha256": "a820eb77b7d5a80dd79686f86369b29fd7a39b8bb34328e636a2de31d51318c2"
+        },
+        "github_anonymous_readback": {
+          "bytes": 2212,
+          "sha256": "dd1cb64ae175cf80968e67efee652ca298569368c44c3d32646d1ee9a0c57212"
+        },
+        "peer_review": {
+          "sha256": "4190b26ace73e8d0d498e04e3223ae20c913eb93b7bc4ad49310de0dfdc39326"
+        },
+        "validation_result": {
+          "bytes": 16921,
+          "sha256": "14379c3288d16f380cade39a067f6a9315449cd7bd07f0a828243b237eff52ee"
+        }
+      },
+      "sha256": "a6046a4a1d19fd562943d393dd68b75e5e520ffc7ffaf63a9a597b36706fb6ca",
+      "source_commit": "77624ca66ace1b3aa81d076fefc294fca9015711",
+      "source_path": "benchmarks/camera-action-export-cache-v01/full-training-results.json",
+      "source_url": "https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/full-training-results.json",
+      "transformation": "Byte-identical reviewed public receipt from the pinned benchmark-only commit; all source, protocol, model and dataset identities retained. No local paths. Cache validation changes no frozen study results or qualification."
     }
   },
   "full_study_audited": true,

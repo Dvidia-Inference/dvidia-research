@@ -480,6 +480,29 @@ and sidecars. [Retained measurements and prior attempts](https://github.com/Dvid
 disclose a rerun after a Windows file-cleanup portability fix. These shared-host
 runs are not a controlled before/after comparison of implementation speed.
 
+A [complete training-data follow-up](https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/README.md#complete-training-dataset-follow-up)
+then checked all **64 teacher and 32 mixed-control training recordings**:
+96,000 samples across 32 starting-position groups. The two caches took
+**160.671 s to construct once**, including strict source validation. Three
+subsequent validated loads of both caches plus ordered combination took
+**0.347, 0.280 and 0.279 s**. Separate blind projections and comparisons with the
+four original sealed model dataset/provenance identities took **0.596, 0.491
+and 0.490 s**; all **12/12 identity checks passed**. The full training source
+inventory contains 577,056 files / 18,971,932,592 bytes; derived caches total
+108,804,852 bytes. Whole-process peak RSS was 1,631,633,408 bytes.
+
+The [reviewed full-training receipt](../topics/physical-grounding/runs/2026-11-01-camera-to-action-v01/final/training-cache-validation.json)
+binds the four model hashes, source and protocol, original executed script and
+all measurements. This was one shared-host offline preparation run with no
+matched strict-export baseline, so it establishes no whole-pipeline speedup
+ratio. The roughly 0.28 s repeated load-and-combine measurement excludes model
+fitting and the separately reported identity checks. No development or
+confirmation recordings were exported, no policy or physics ran, and the
+learned **5/64 result remains unqualified**. The [portable reproduction helper](https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/validate_full_training.py)
+changes only host paths into required CLI inputs; its [provenance](https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/full-training-script-provenance.json)
+distinguishes it from the measured original. This benchmark-only follow-up
+leaves the released `cc6746a` code, dev5 wheel and preview release unchanged.
+
 An [action-reference preflight](https://github.com/Dvidia-Inference/dvidia-training/blob/cc6746a95669cfd69a49e32a3e6c2e5a42ce2546/docs/camera-action-v02-preflight.md)
 checks whether alternative target representations preserve the existing
 actuator reference trajectory. All **4,242 bounded numerical cases**, each
@@ -490,7 +513,7 @@ the original repeated updates. This check establishes numerical equivalence
 under its declared tolerance, not simulated task success or physical actuator
 accuracy. It reads no v0.1 recordings and trains no policy.
 
-These changes have [separate reviewed source in PR 33](https://github.com/Dvidia-Inference/dvidia-training/pull/33),
+The cache runtime and numerical preflight have [separate reviewed source in PR 33](https://github.com/Dvidia-Inference/dvidia-training/pull/33),
 pinned at `cc6746a95669cfd69a49e32a3e6c2e5a42ce2546`, and remain outside the
 frozen v0.1 runtime. The [cache preview release](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/camera-action-cache-v0.1-preview)
 is public as a non-latest prerelease. Anonymous downloads verified all six
@@ -498,7 +521,7 @@ assets against their recorded SHA-256 identities: the dev5 wheel, preparation
 benchmark, public CLI proof, numerical protocol, numerical report and checksum
 list. Fresh offline macOS wheel installation also passed.
 
-All 36 exact-head CI checks passed. In the pull-request workflow, the six
+All 36 CI checks for the released `cc6746a` head passed. In that pull-request workflow, the six
 Visual jobs—`ubuntu-latest`, `macos-latest` and `windows-latest`, each with
 Python 3.12 and 3.13—passed both pinned-cache verification and the existing
 footage, visual-training and local-studio tests.

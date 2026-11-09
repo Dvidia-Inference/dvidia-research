@@ -93,13 +93,15 @@ remote publication and public readback remain separate pending steps.
   manufacture qualification. Test the UI and Terminal against the same run record.
 - [x] Build original model/data cards from the same sealed report, clearly
   labeling the dataset and controller as synthetic and simulation only.
-- [ ] Build deterministic per-episode archives and verify every decompressed
+- [x] Build deterministic per-episode archives and verify every decompressed
   member against the original manifests. Include failures and interrupted prefixes.
-- [ ] Complete privacy/credential scanning, portable paths and exact license
+- [x] Complete privacy/credential scanning, portable paths and exact license
   notices. Keep individual contributor identity blank as requested.
-- [ ] Stage a plan-bound GitHub/Hugging Face publication. Use private APFS clones
+- [x] Stage the local plan-bound Hugging Face publication. Use private APFS clones
   or bounded copies with independent inodes; never hardlink mutable originals.
   Protect the 30 GiB disk reserve and verify all payload hashes before credentials.
+- [ ] Complete the reviewed GitHub source release and verify its exact revision
+  and anonymously downloaded asset identities.
 - [ ] Anonymous readback must pin the actual published revision, reject remote
   size mismatches before download, hash each full payload and remove only owned
   temporary caches. Scope optional Xet caches explicitly; preserve shared caches.
@@ -152,9 +154,46 @@ has learned the task. Final publication must keep that distinction visible.
 
 - The d89b24c publishing-only fix preserves the ab9082e installed execution attribution; all 19 runtime files and six resources match, with fresh archive/wheel/CLI checks passed.
 - All five generated cards match saved-report, inspected-report and reversed-gate ordering byte-for-byte. Prior failed preparation and original card proofs remain local and unchanged.
+- Local preparation completed all 452 episode archives, retaining 86,762,380,708
+  raw evidence bytes. The complete public payload has 475 files and 36,280,988,200
+  bytes including its manifest and checksum list. All 148 cached archives were
+  retained, with their source bytes and archive members reverified during reuse.
+- The payload source remains `d89b24c82b7534a439bbaa3cac3ef5c9d3b80088`.
+  Its manifest SHA-256 is `8d1c4c276354ca0ad3dd2b54737860950e89cf5082f0fffff59a60e79ba0eafc`.
+  The separate maintainer publisher at `f4fa271a3f77a3c7508d51208f196957f72d8c6c`
+  admits the 16 canonical registered negative-control filenames; this path-only
+  fix changes no payload bytes, simulation, model or qualification.
+- The full local publisher scan passed all 475 file identities, credential
+  scanning, checksum consistency and model-card/report bindings. Staged plan
+  SHA-256: `cfbb6a789b60dd83d4924f3714c92f6acc7bc11f97b6f1077f4b1ca1c95a5e30`;
+  inventory SHA-256: `3cbbe485bb3e3e9840b0d0c1a0efdddd2644470e5bff32bb78dc6903dce43e79`.
+  Local validation receipt SHA-256:
+  `633dd41303e49a5005e8fdc1d1ef03749502a5686aca12b9905f387b193026fd`.
+  This local stage accessed no credentials or network and did not upload files.
+  Remote publication and complete revision-pinned anonymous readback remain pending.
 - Latest full site regression: 80/81 passed inside the sandbox; the only failure
   was the existing localhost-binding test. All three tests in that file passed
   separately with localhost access, so every case has a passing result across
   those runs. This is not a claim of 81 passing in one execution.
 - The research-only Cloudflare dry run passed with 5,593 assets and no bindings.
   It did not deploy or alter the official site's account services.
+
+### Full training-cache validation follow-up
+
+- Reviewed benchmark-only source is published in PR 33 at exact
+  `77624ca66ace1b3aa81d076fefc294fca9015711`; the runtime remains `cc6746a` and
+  the released dev5 wheel/tag were not changed.
+- All 96 training recordings (64 teacher + 32 mixed) yielded 96,000 samples.
+  Four original model dataset/provenance references matched on each of three
+  cache loads: 12/12 checks. One-time construction took 160.671 s; validated
+  load plus combination took 0.347 / 0.280 / 0.279 s. Golden checks and blind
+  projection are timed separately; no model/physics execution or held-out
+  recording export occurred.
+- Public receipt `final/training-cache-validation.json` is byte-identical to
+  the reviewed GitHub receipt, SHA-256
+  `a6046a4a1d19fd562943d393dd68b75e5e520ffc7ffaf63a9a597b36706fb6ca`.
+  Independent review SHA-256:
+  `4190b26ace73e8d0d498e04e3223ae20c913eb93b7bc4ad49310de0dfdc39326`.
+- This is local data-preparation evidence; qualified remains false. The final
+  Hugging Face payload and revision-pinned readback remain separate pending
+  publication steps, and no source-release receipt is asserted here.

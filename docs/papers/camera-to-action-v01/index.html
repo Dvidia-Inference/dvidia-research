@@ -370,6 +370,27 @@ hits validate the pinned derived arrays; they do not reverify all raw images
 and sidecars. <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/cc6746a95669cfd69a49e32a3e6c2e5a42ce2546/benchmarks/camera-action-export-cache-v01/README.md">Retained measurements and prior attempts</a>
 disclose a rerun after a Windows file-cleanup portability fix. These shared-host
 runs are not a controlled before/after comparison of implementation speed.</p>
+<p>A <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/README.md#complete-training-dataset-follow-up">complete training-data follow-up</a>
+then checked all <strong>64 teacher and 32 mixed-control training recordings</strong>:
+96,000 samples across 32 starting-position groups. The two caches took
+<strong>160.671 s to construct once</strong>, including strict source validation. Three
+subsequent validated loads of both caches plus ordered combination took
+<strong>0.347, 0.280 and 0.279 s</strong>. Separate blind projections and comparisons with the
+four original sealed model dataset/provenance identities took <strong>0.596, 0.491
+and 0.490 s</strong>; all <strong>12/12 identity checks passed</strong>. The full training source
+inventory contains 577,056 files / 18,971,932,592 bytes; derived caches total
+108,804,852 bytes. Whole-process peak RSS was 1,631,633,408 bytes.</p>
+<p>The <a href="../../downloads/topics/physical-grounding/runs/2026-11-01-camera-to-action-v01/final/training-cache-validation.json">reviewed full-training receipt</a>
+binds the four model hashes, source and protocol, original executed script and
+all measurements. This was one shared-host offline preparation run with no
+matched strict-export baseline, so it establishes no whole-pipeline speedup
+ratio. The roughly 0.28 s repeated load-and-combine measurement excludes model
+fitting and the separately reported identity checks. No development or
+confirmation recordings were exported, no policy or physics ran, and the
+learned <strong>5/64 result remains unqualified</strong>. The <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/validate_full_training.py">portable reproduction helper</a>
+changes only host paths into required CLI inputs; its <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/77624ca66ace1b3aa81d076fefc294fca9015711/benchmarks/camera-action-export-cache-v01/full-training-script-provenance.json">provenance</a>
+distinguishes it from the measured original. This benchmark-only follow-up
+leaves the released <code>cc6746a</code> code, dev5 wheel and preview release unchanged.</p>
 <p>An <a href="https://github.com/Dvidia-Inference/dvidia-training/blob/cc6746a95669cfd69a49e32a3e6c2e5a42ce2546/docs/camera-action-v02-preflight.md">action-reference preflight</a>
 checks whether alternative target representations preserve the existing
 actuator reference trajectory. All <strong>4,242 bounded numerical cases</strong>, each
@@ -379,14 +400,14 @@ Closed-form floating-point projection is not universally bitwise identical to
 the original repeated updates. This check establishes numerical equivalence
 under its declared tolerance, not simulated task success or physical actuator
 accuracy. It reads no v0.1 recordings and trains no policy.</p>
-<p>These changes have <a href="https://github.com/Dvidia-Inference/dvidia-training/pull/33">separate reviewed source in PR 33</a>,
+<p>The cache runtime and numerical preflight have <a href="https://github.com/Dvidia-Inference/dvidia-training/pull/33">separate reviewed source in PR 33</a>,
 pinned at <code>cc6746a95669cfd69a49e32a3e6c2e5a42ce2546</code>, and remain outside the
 frozen v0.1 runtime. The <a href="https://github.com/Dvidia-Inference/dvidia-training/releases/tag/camera-action-cache-v0.1-preview">cache preview release</a>
 is public as a non-latest prerelease. Anonymous downloads verified all six
 assets against their recorded SHA-256 identities: the dev5 wheel, preparation
 benchmark, public CLI proof, numerical protocol, numerical report and checksum
 list. Fresh offline macOS wheel installation also passed.</p>
-<p>All 36 exact-head CI checks passed. In the pull-request workflow, the six
+<p>All 36 CI checks for the released <code>cc6746a</code> head passed. In that pull-request workflow, the six
 Visual jobs—<code>ubuntu-latest</code>, <code>macos-latest</code> and <code>windows-latest</code>, each with
 Python 3.12 and 3.13—passed both pinned-cache verification and the existing
 footage, visual-training and local-studio tests.
