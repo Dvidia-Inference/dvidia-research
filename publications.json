@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "camera-to-action-v01",
+      "title": "A local camera-to-action learner reaches 5/64 strict placements",
+      "source": "reports/Camera to action v01.md",
+      "date": "2026-11-01",
+      "type": "Completed simulation learning study · research candidate",
+      "status": "5/64 learned · 9/64 blind · 31/64 fixed · 64/64 teacher · not qualified",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A registered local study trains a small CPU model to predict seven PiPER motor targets from synchronized simulated RGB-D and measured robot state. After one mixed-control correction round, frozen confirmation yields 5/64 strict learner placements, 9/64 for its matched blind baseline, 31/64 for the fixed primitive and 64/64 for the authored teacher. Both paired superiority gates fail; all 16 negative controls behave as registered. Learner inference p95 is 0.447 ms, while full-boundary p95 is 36.432 ms on the measured shared Apple M5 host. The model remains a simulation-only research candidate. Independent full-study audit verifies all 452 registered attempts and 2,384,532 files with zero errors; this confirms evidence consistency without qualifying the skill. Ordinary human-video action recovery, reliable task completion and physical transfer remain open."
+    },
+    {
       "slug": "piper-rgbd-tracker-v01",
       "title": "A small RGB-D cube tracker passes at 320 pixels, not 160",
       "source": "reports/PiPER RGBD tracker v01.md",

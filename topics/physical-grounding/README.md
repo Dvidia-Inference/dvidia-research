@@ -1,5 +1,9 @@
 # Physical grounding
 
+## Camera-to-action learning — 1 November 2026
+
+[The completed camera-to-action study](../../reports/Camera%20to%20action%20v01.md) connects synchronized simulated camera observations and measured robot state to seven directly learned motor targets. Frozen strict placements are **5/64 learned, 9/64 blind, 31/64 fixed and 64/64 teacher**. The model fails qualification and remains a simulation-only research candidate; independent full-study audit verified all 452 registered attempts and 2,384,532 files with zero errors. [Inspect actual RGB frames, command traces and missing masks](runs/2026-11-01-camera-to-action-v01/viewer-v02/index.html); the [original diagnostic archive](runs/2026-11-01-camera-to-action-v01/viewer/index.html) remains unchanged. Ordinary video action recovery, reliable completion and physical transfer remain open.
+
 
 ## Live PiPER shoe workstation — 13 October 2026
 

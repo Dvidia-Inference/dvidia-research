@@ -1,0 +1,161 @@
+{
+  "schema": "dvidia.camera-action-installed-smoke-proof/v1",
+  "source_commit": "ab9082e1ee2b2cc91c7c5fd3f1358727b3789c66",
+  "verification_passed": true,
+  "task_success": false,
+  "cli_exit_code": 1,
+  "registered_benchmark_member": false,
+  "attempts": 1,
+  "retries": 0,
+  "working_directory": "[local temporary directory outside checkout]",
+  "installed_runtime_files_checked": 21,
+  "registered_runtime_files_checked": 19,
+  "installation_identity": {
+    "bytes": 23617,
+    "sha256": "8a6ad32e6bb9c49cda3f7fe61eb03d902d310ee687d34173f1f7b80aef711841"
+  },
+  "model_identity": {
+    "bytes": 543977,
+    "sha256": "d176b391b61b5e331bcfe1676107c53f4c0ae6110414dfed4b07d57cbb883b0e"
+  },
+  "execution_binding_identity": {
+    "bytes": 443,
+    "sha256": "483f8b936334b1c92c7620e9ad26bb539cfa9c3d678778cc8894cdc89c2c09e8"
+  },
+  "auditor_identity": {
+    "bytes": 55314,
+    "sha256": "ab58c9e04ec220bb16a3bd264de32dac91bc0db864921eab3c87b0f35f006b26"
+  },
+  "numeric_scorer_path": "[fresh installed environment]/site-packages/dvidia_training/piper_feedback_score.py",
+  "audit": {
+    "id": "installed-camera-smoke",
+    "case": {
+      "id": "installed-camera-goal0",
+      "group_id": "installed-camera-example",
+      "seed": 311499,
+      "object_position_m": [
+        0.3,
+        -0.03,
+        0.082
+      ],
+      "goal_position_m": [
+        0.35,
+        0.08,
+        0.08
+      ]
+    },
+    "controller": "student",
+    "negative_control": null,
+    "status": "complete",
+    "complete": true,
+    "strict_success": false,
+    "score": {
+      "schema": "dvidia.piper-feedback-score/v1",
+      "valid": true,
+      "success": false,
+      "reason": "native_outcome_failed",
+      "strict_v01": {
+        "success": false,
+        "reason": "native_outcome_failed",
+        "reference_xy_m": [
+          0.35,
+          0.08
+        ],
+        "terminal_reference_success": false,
+        "native_outcome_success": false,
+        "native_outcome_valid": true,
+        "terminal_dwell_s": 0.0,
+        "required_dwell_s": 0.25,
+        "terminal_xy_error_m": 0.008450858613966062,
+        "trace_lift_dwell_s": 1.8399999999999999,
+        "required_lift_dwell_s": 0.1,
+        "sample_interval_s": 0.02,
+        "trajectory_complete": true,
+        "native_metrics_source": "simulator-authored episode record; not authenticated sensor input"
+      },
+      "native_recomputed": {
+        "success": false,
+        "lift_seen": true,
+        "grasp_seen": true,
+        "carry_complete": true,
+        "retention_lost": false,
+        "unexpected_contact_native_ticks": 0,
+        "max_object_lift_m": 0.11309882057336736,
+        "max_pad_normal_force_n": 1.0069052231765776,
+        "dwell_seconds": 0.0,
+        "lift_dwell_seconds": 0.0,
+        "max_carry_contact_loss_seconds": 0.0,
+        "carry_contact_loss_events": 0,
+        "first_success_time_seconds": null
+      },
+      "native_metrics_mismatches": [],
+      "terminal_only": {
+        "success": false,
+        "dwell_s": 0.0,
+        "terminal_xy_error_m": 0.00845085861396606,
+        "scope": "Terminal-only geometry/release/settling/dwell; excludes lift, carry and retention history."
+      },
+      "grip_events": [],
+      "grip_summary": {
+        "loss_events": 0,
+        "restored_events": 0,
+        "unresolved_events": 0,
+        "supported_events": 0,
+        "airborne_events": 0,
+        "qualification_latency_s": []
+      },
+      "native_diagnostics": {
+        "premature_open_jaw": {
+          "count": 0,
+          "total_s": 0.0,
+          "maximum_s": 0.0,
+          "intervals": []
+        },
+        "support_touchdown_before_destination": {
+          "count": 0,
+          "total_s": 0.0,
+          "maximum_s": 0.0,
+          "intervals": []
+        }
+      },
+      "false_alarms": {
+        "status": "not_applicable",
+        "reason": "Continuous residual policy has no declared discrete alarm events."
+      },
+      "evidence_scope": "Recomputed simulator-authored numeric evidence; no physics rerun, source attestation or hardware sensing.",
+      "restoration_scope": "Loaded contact restored for 100 ms after sustained loss; does not establish task recovery or airborne regrasp."
+    },
+    "initial_anchor_available": true,
+    "initial_anchor_binding_valid": true,
+    "initial_anchor_error_m": 0.0002604652363248258,
+    "recorded_complete_intervals": 1000,
+    "critical_contact_ticks": 0,
+    "provenance_ok": true,
+    "files_verified": 5010,
+    "native_ticks": 20000,
+    "native_score_recomputed": true,
+    "available_position_error_p95_m": 0.0002604652362152106,
+    "integrity_sha256": "e0118653e60aca610bcc94b33ac19c65d183458cdd29782425d4cb8d9fc7e35b",
+    "receipt_sha256": "f7517d4c0fccf906c269a5e8edc3bbe272d1f4e04743339086aa8ad9d3e73a35",
+    "perception": {
+      "decisions": 1000,
+      "available": 672,
+      "missing": 328,
+      "longest_missing_seconds": 6.2
+    }
+  },
+  "notes": [
+    "One out-of-study installed execution; not added to the 64-case confirmation denominator.",
+    "Execution completed; the independent task scorer reports failure. No retry or qualification promotion.",
+    "Auditor imports numeric scoring from the fresh installed wheel; no environment, estimator or policy execution."
+  ],
+  "public_copy": {
+    "original_bytes": 5263,
+    "original_sha256": "770622dfd7b30c7f71cf762a35d05386d50598ec1bec9bdd8db5a0b1b837ee25",
+    "redacted_fields": [
+      "working_directory",
+      "numeric_scorer_path"
+    ],
+    "scope": "Only two private local path values replaced. All original numeric evidence, identities, outcomes and runtime counts remain unchanged."
+  }
+}

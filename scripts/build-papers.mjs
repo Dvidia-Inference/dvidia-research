@@ -12,6 +12,11 @@ const DOCS = resolve(ROOT, "docs");
 const TOPICS = ["capture-quality", "skill-relations", "evaluation-provenance", "physical-grounding"];
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const READERS = {
+  "camera-to-action-v01": {
+    eyebrow: "Camera-to-action · Research candidate", deck: "Learning the command is only part of completing the task.",
+    entry: "downloads/topics/physical-grounding/runs/2026-11-01-camera-to-action-v01/viewer-v02/index.html",
+    action: "Inspect recorded camera and actuator evidence"
+  },
   "task-environments-v02": {
     eyebrow: "Task environments · Local simulation preview", deck: "Arrange the scene. Define the finish. Keep the failures.",
     entry: "https://dvidia-robot-simulation-lab.static.hf.space/task-environments/v02-reader02/index.html",

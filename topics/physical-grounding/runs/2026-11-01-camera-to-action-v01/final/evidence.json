@@ -1,0 +1,75 @@
+{
+  "audit_files_verified": 2384532,
+  "audit_scope": "452 registered attempt and saved native-score reconstructions, including 12 early refusals; 440 full 20-second recordings. No physics, estimator or model execution.",
+  "files": {
+    "cache-preview-release.json": {
+      "bytes": 9045,
+      "derived_from": {
+        "release_receipt": {
+          "bytes": 4050,
+          "sha256": "9095974008cb10501d58ee8cc5eb87613facf051af1c8cdb7fdeab0fb37f7546"
+        },
+        "visual_cache_job_readback": {
+          "bytes": 4207,
+          "sha256": "b333af3d5b1b784479e8d7fc5cd6e396533bf7700c61bb5686b6b394cd8cf102"
+        }
+      },
+      "sha256": "cac0f10bbeed53a878a3aee650819e51b85bd0300eec0d997c64ebc303ae32bd",
+      "source_path": "camera-action-cache-preview/github-release-readback",
+      "transformation": "Public release identities and anonymous asset checks augmented with six exact visual/cache CI job readbacks; no local paths included."
+    },
+    "card-receipt.json": {
+      "bytes": 8195,
+      "sha256": "b4b976be7f33e0d40e3aead02a30bdfed32a3c0491bfbf7aee7afde1f4b73fa3",
+      "source_path": "runs/camera-action-v01-proofs-20261101/final-cards-d89b24c-20261109/card-receipt.json"
+    },
+    "delivery-check.json": {
+      "bytes": 6217,
+      "derived_from": {
+        "bytes": 10877,
+        "sha256": "e9f0380b609564d181fdef4fb12821699a6e0537c09fc42e1ed9bfa7c8ec3a32"
+      },
+      "sha256": "68fe5e594e0c81b29d7474f29c726f3f8d6415e1b2a961833c91832b09072780",
+      "source_path": "runs/camera-action-v01-proofs-20261101/delivery-d89b24c/verification.json",
+      "transformation": "Selected public delivery fields; source and wheel identities and runtime/resource verification retained; private paths omitted."
+    },
+    "full-study-audit.json": {
+      "bytes": 1540145,
+      "sha256": "2774959f8e1a5be7283cea129da0ffea000d8375eb445140c8c7a60ab15efed8",
+      "source_path": "runs/camera-action-v01-proofs-20261101/full-study-audit-resumed-20261109.json"
+    },
+    "installed-smoke-audit.json": {
+      "bytes": 5638,
+      "derived_from": {
+        "bytes": 5263,
+        "sha256": "770622dfd7b30c7f71cf762a35d05386d50598ec1bec9bdd8db5a0b1b837ee25"
+      },
+      "sha256": "ed0b411aaa1bafe94a6411851a42adcb4695b927801a02967fb2aedb21c1811a",
+      "source_path": "runs/camera-action-v01-proofs-20261101/final-installed-smoke-audit.json",
+      "transformation": "Only working_directory and numeric_scorer_path replaced; numeric evidence unchanged."
+    },
+    "report.json": {
+      "bytes": 3049,
+      "sha256": "0234118aea1d67ac0e2747fa5ab401e862654cb5396b2dddb0826511bf09bcbd",
+      "source_path": "runs/camera-action-v01-20261101/report.json"
+    },
+    "summary.json": {
+      "bytes": 970142,
+      "sha256": "569a967597e6e0e94a7e9cfbda3837bce568dd250c695e82d25b7a9a1e3049dd",
+      "source_path": "runs/camera-action-v01-proofs-20261101/final-summary-20261101/summary.json"
+    },
+    "summary.md": {
+      "bytes": 18762,
+      "sha256": "613f6d2c66cd3b7cbe59467ddd0ae9559e154a3dab787a2b01245a326758301c",
+      "source_path": "runs/camera-action-v01-proofs-20261101/final-summary-20261101/summary.md"
+    }
+  },
+  "full_study_audited": true,
+  "model_executed": false,
+  "physical_robot_ready": false,
+  "physics_executed": false,
+  "published": false,
+  "qualified": false,
+  "schema": "dvidia.camera-action-final-research-evidence/v1",
+  "status": "complete_research_candidate_independently_audited"
+}

@@ -1,0 +1,234 @@
+{
+  "schema": "dvidia.camera-action-phase-coverage/v1",
+  "protocol_sha256": "576851e321034a0f6d3cb4d0818b3a5ca97975fcc6f2c7fa30b07ffd203a2d76",
+  "diagnostic_audit_sha256": "89f73f51a1ee6e39fb190e32e4f4e0c3aa987285041b71aaef766281602602e3",
+  "analysis_source_sha256": "e5957cf24236fa844d8ea10b746863fea1d9de5b7d1fa3b78188bbc8a9fdfa58",
+  "cases": 4,
+  "starting_position_groups": 2,
+  "total_motor_decisions": 4000,
+  "phases": {
+    "approach": {
+      "decisions": 1328,
+      "available": 1328
+    },
+    "descend": {
+      "decisions": 822,
+      "available": 72
+    },
+    "close": {
+      "decisions": 140,
+      "available": 0
+    },
+    "lift": {
+      "decisions": 124,
+      "available": 0
+    },
+    "transfer": {
+      "decisions": 225,
+      "available": 0
+    },
+    "place": {
+      "decisions": 120,
+      "available": 0
+    },
+    "release": {
+      "decisions": 140,
+      "available": 0
+    },
+    "retreat": {
+      "decisions": 157,
+      "available": 100
+    },
+    "verify": {
+      "decisions": 944,
+      "available": 944
+    }
+  },
+  "manipulation_phases": [
+    "close",
+    "lift",
+    "transfer",
+    "place",
+    "release"
+  ],
+  "manipulation_decisions": 749,
+  "manipulation_available": 0,
+  "results": [
+    {
+      "case_id": "development-00-goal0",
+      "source_group": "development-00",
+      "phases": {
+        "approach": {
+          "decisions": 331,
+          "available": 331
+        },
+        "descend": {
+          "decisions": 201,
+          "available": 21
+        },
+        "close": {
+          "decisions": 35,
+          "available": 0
+        },
+        "lift": {
+          "decisions": 31,
+          "available": 0
+        },
+        "transfer": {
+          "decisions": 48,
+          "available": 0
+        },
+        "place": {
+          "decisions": 30,
+          "available": 0
+        },
+        "release": {
+          "decisions": 35,
+          "available": 0
+        },
+        "retreat": {
+          "decisions": 38,
+          "available": 17
+        },
+        "verify": {
+          "decisions": 251,
+          "available": 251
+        }
+      },
+      "integrity_sha256": "819e7fb552cd744da0c0d583212663c20107f5ecfc9593530a34fb8a28835ca8"
+    },
+    {
+      "case_id": "development-00-goal1",
+      "source_group": "development-00",
+      "phases": {
+        "approach": {
+          "decisions": 331,
+          "available": 331
+        },
+        "descend": {
+          "decisions": 201,
+          "available": 21
+        },
+        "close": {
+          "decisions": 35,
+          "available": 0
+        },
+        "lift": {
+          "decisions": 31,
+          "available": 0
+        },
+        "transfer": {
+          "decisions": 64,
+          "available": 0
+        },
+        "place": {
+          "decisions": 30,
+          "available": 0
+        },
+        "release": {
+          "decisions": 35,
+          "available": 0
+        },
+        "retreat": {
+          "decisions": 40,
+          "available": 33
+        },
+        "verify": {
+          "decisions": 233,
+          "available": 233
+        }
+      },
+      "integrity_sha256": "7bb6093d94c92a8b54be2b70ed95c252831e58e7d9d770e0169fb51694084399"
+    },
+    {
+      "case_id": "development-01-goal0",
+      "source_group": "development-01",
+      "phases": {
+        "approach": {
+          "decisions": 333,
+          "available": 333
+        },
+        "descend": {
+          "decisions": 210,
+          "available": 15
+        },
+        "close": {
+          "decisions": 35,
+          "available": 0
+        },
+        "lift": {
+          "decisions": 31,
+          "available": 0
+        },
+        "transfer": {
+          "decisions": 49,
+          "available": 0
+        },
+        "place": {
+          "decisions": 30,
+          "available": 0
+        },
+        "release": {
+          "decisions": 35,
+          "available": 0
+        },
+        "retreat": {
+          "decisions": 38,
+          "available": 15
+        },
+        "verify": {
+          "decisions": 239,
+          "available": 239
+        }
+      },
+      "integrity_sha256": "9d8aa7059aacbc475e0b857e86ad3a549f592563bca18e2edd9a3eb774d6cdc9"
+    },
+    {
+      "case_id": "development-01-goal1",
+      "source_group": "development-01",
+      "phases": {
+        "approach": {
+          "decisions": 333,
+          "available": 333
+        },
+        "descend": {
+          "decisions": 210,
+          "available": 15
+        },
+        "close": {
+          "decisions": 35,
+          "available": 0
+        },
+        "lift": {
+          "decisions": 31,
+          "available": 0
+        },
+        "transfer": {
+          "decisions": 64,
+          "available": 0
+        },
+        "place": {
+          "decisions": 30,
+          "available": 0
+        },
+        "release": {
+          "decisions": 35,
+          "available": 0
+        },
+        "retreat": {
+          "decisions": 41,
+          "available": 35
+        },
+        "verify": {
+          "decisions": 221,
+          "available": 221
+        }
+      },
+      "integrity_sha256": "2b67ffefa0dae0be055270095871b2c54b4feb49a804c9826f6e002bd02a0d9d"
+    }
+  ],
+  "evidence_scope": "Offline teacher phase analysis only; phases are excluded from learner inputs. Repeated 50 Hz decisions share 25 Hz camera frames.",
+  "physics_executed": false,
+  "estimator_executed": false,
+  "physical_robot_ready": false
+}

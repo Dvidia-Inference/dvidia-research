@@ -1,0 +1,95 @@
+{
+  "artifacts": {
+    "models/corrected/blind/model.json": {
+      "bytes": 540371,
+      "sha256": "c3593d83b5505127a31304c8965914e01661d419dfc6c76a17a6c9bbac418806"
+    },
+    "models/corrected/full/model.json": {
+      "bytes": 543977,
+      "sha256": "d176b391b61b5e331bcfe1676107c53f4c0ae6110414dfed4b07d57cbb883b0e"
+    },
+    "models/initial/blind/model.json": {
+      "bytes": 517296,
+      "sha256": "d30b0ae10a4fbdc34a73122a34d73fd9246ee4b87c90c2b3b1eb3a98888d707e"
+    },
+    "models/initial/full/model.json": {
+      "bytes": 521715,
+      "sha256": "1d1f80376c89995513b518b36c4f8eca9e78efec3d3e68a10ee9988e84f4f038"
+    },
+    "stages/corrections.json": {
+      "bytes": 121259,
+      "sha256": "ae0a5653f728f147f929325c60318cb3d164c6d97d846fb96ac07ee9d27ad5cb"
+    },
+    "stages/demonstrations.json": {
+      "bytes": 284278,
+      "sha256": "5d57eac599f1686d2bdb15bb53ceebe09e899ec71dfe87039aa85de7f853c06b"
+    },
+    "stages/development-corrected.json": {
+      "bytes": 117435,
+      "sha256": "f99a1d2a3ee7afaa37de8f1d48fed1e66f572c21f8620fde386e1e3323728506"
+    },
+    "stages/development-initial.json": {
+      "bytes": 116513,
+      "sha256": "59a31a9a1ed797a6a4d1f2b8ece13f93c6359eae430a168037c46e2da20f2e83"
+    },
+    "stages/diagnostic.json": {
+      "bytes": 14710,
+      "sha256": "9b96d3e75aaf6012c5fcb6cba5baa8479da2f7f90b844f61edad8ddd54dc3f01"
+    },
+    "stages/train-corrected.json": {
+      "bytes": 294426,
+      "sha256": "9b37a37d7b49fceb595f776d59579986f7579c7135f810b8d706199d5e4d6ddc"
+    },
+    "stages/train-initial.json": {
+      "bytes": 197969,
+      "sha256": "86be5d9c17af43c35e97677d819b1433faed54ccf930078afc0f785139acc6a9"
+    }
+  },
+  "candidates": [
+    {
+      "critical_contact_ticks": 25368,
+      "order": 0,
+      "prediction_loss": 0.00011331751004871413,
+      "stage": "initial",
+      "strict_successes": 0
+    },
+    {
+      "critical_contact_ticks": 0,
+      "order": 1,
+      "prediction_loss": 0.00017347599825870777,
+      "stage": "corrected",
+      "strict_successes": 1
+    }
+  ],
+  "chronology_independently_verified": false,
+  "confirmation_outcomes_read": false,
+  "fixed_model": {
+    "bytes": 2031879,
+    "sha256": "2976a605575d9edefb5db366e72c5e006c0ce85a5531ad3d61512436864c8ded"
+  },
+  "freeze": {
+    "bytes": 3414,
+    "sha256": "88ef3ae4f5639dc00c2570debf099dc33d52445c9600d3d681aa634c4ddb4087"
+  },
+  "model_executed": false,
+  "passed": true,
+  "physics_executed": false,
+  "protocol": {
+    "bytes": 156941,
+    "sha256": "576851e321034a0f6d3cb4d0818b3a5ca97975fcc6f2c7fa30b07ffd203a2d76"
+  },
+  "qualification_changed": false,
+  "saved_frozen_before_confirmation_flag": true,
+  "schema": "dvidia.camera-action-development-selection-check/v1",
+  "scope": "Recompute registered selection from sealed development summary and bound model validation loss. No confirmation outcomes or physical execution.",
+  "script": {
+    "bytes": 3484,
+    "sha256": "711cdee0fc78be6b0dfd115e0d98dd587242427d0be05f83d3a591e031b778f7"
+  },
+  "selected_stage": "corrected",
+  "selection_changed": false,
+  "summary": {
+    "bytes": 287619,
+    "sha256": "ae3790c8afcbbe6740ae7b0c736798a871c10a89d6eb80e5773ca0a0c158ea3d"
+  }
+}
