@@ -448,8 +448,11 @@ original diagnostic viewer is unchanged. This five-recording display is an
 inspectable subset, not the full 452-attempt archive or an aggregate success
 claim.
 
-**Publication review and remote readback remain pending.** The source and
-cards below are frozen locally; public model/data delivery is a separate step.
+**The GitHub software preview is public and anonymously verified.**
+[Download the preview release](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/camera-to-action-v0.1-preview)
+for the wheel and verified audit summaries. Publication of the approximately
+36.28 GB frozen dataset archive on Hugging Face remains incomplete; this
+software preview does not supply that full archive or qualify the skill.
 
 This study supplies a reproducible camera-and-action learning loop whose first
 bounded synthetic task candidate fails qualification. It cannot establish arbitrary video-to-skill transfer,
@@ -598,10 +601,18 @@ simulation-only research-candidate labels. The five cards render identically
 from saved, inspected and reversed gate ordering; no evidence or qualification
 value changed to resolve the publication mismatch.
 
-The intended dataset destination is
+The [GitHub preview release](https://github.com/Dvidia-Inference/dvidia-training/releases/tag/camera-to-action-v0.1-preview)
+is a public, non-latest prerelease at the exact delivery source above. Its five
+assets are the installation wheel, full-study audit, JSON summary, Markdown
+summary and checksum list. Anonymous downloads matched their recorded byte
+identities; the [release verification receipt](https://research.dvidia.org/downloads/topics/physical-grounding/runs/2026-11-01-camera-to-action-v01/final/github-preview-release.json)
+binds the tag, source commit and all five asset hashes.
+
+The intended full dataset destination remains
 [Hugging Face · Dvidia/piper-camera-action-v01](https://huggingface.co/datasets/Dvidia/piper-camera-action-v01).
-**Publication and anonymous revision-pinned readback are still pending** at this
-checkpoint; this destination is not asserted to contain the final release yet.
-No download here is labeled a qualified skill.
+The approximately 36.28 GB frozen archive has **not completed publication and
+anonymous revision-pinned readback**. The GitHub assets do not include that
+archive, raw recordings or the original model bundle. No download here is
+labeled a qualified skill.
 
 Original DVIDIA code and generated records use MIT; PiPER and simulator notices retain their upstream terms. The viewer includes actual native renderer output and no private human footage, credentials, model weights or redistributed robot meshes. Research writing follows this site's CC BY 4.0 license.
