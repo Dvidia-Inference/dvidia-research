@@ -197,3 +197,25 @@ has learned the task. Final publication must keep that distinction visible.
 - This is local data-preparation evidence; qualified remains false. The final
   Hugging Face payload and revision-pinned readback remain separate pending
   publication steps, and no source-release receipt is asserted here.
+
+### Exact-reference preparation follow-up
+
+- Reviewed source and benchmark evidence published in PR 35 at
+  `f2676d3176f6a8cd1a05833d461ba40562f283f1`; five changed evidence/docs files
+  anonymously verified at that commit. Source helper bytes remain those of
+  `a9340b7d00bdd0618421027807faad247f9be99d`.
+- One metadata-only run checks exact prior-reference ancestry and recorded
+  normal endpoints across 96,000 training rows. All parent and combined dataset
+  identities are preserved. Construction 10.798 s; 10,832,870 derived bytes; paired
+  verified loads 0.303/0.258/0.233 s. Separate combination and identity timings
+  are retained. No image/native-trace/model/held-out reads or fits were run.
+- Public receipt `final/training-reference-validation.json` is the exact
+  original result, SHA-256
+  `68908bb9111ca92c4d672c25aa58c55417b4197f60a50d89bc96cd4e46bd799e`.
+- A separate 128-case synthetic initialization check verifies 64 bitwise equal
+  reset outputs before projection. These are not registered real observations
+  or task successes. The proposed learning experiment remains unrun.
+- Python 3.13 CI caught an AST-formatting difference in the test oracle. A
+  test-only fix explicitly retains empty fields; original failed CI logs are
+  preserved. Do not assert final cross-platform success until final-head CI
+  completes. Frozen study/runtime/wheel and 5/64 unqualified result unchanged.

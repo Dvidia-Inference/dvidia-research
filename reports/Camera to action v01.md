@@ -463,7 +463,7 @@ measurements. None of those interventions was tested in this frozen study.
 
 ## Engineering follow-up — 9 November 2026
 
-Two bounded engineering checks prepare the next experiment without changing
+These bounded engineering checks prepare the next experiment without changing
 this study's 452 attempts, selected model or 5/64 result.
 
 An optional [verified derived-data cache](https://github.com/Dvidia-Inference/dvidia-training/blob/cc6746a95669cfd69a49e32a3e6c2e5a42ce2546/docs/camera-action-export-cache-v01.md)
@@ -529,6 +529,35 @@ footage, visual-training and local-studio tests.
 retains the exact tag, commit, asset hashes and individual job links. These
 software checks do not establish reproduction of the frozen native study on
 all platforms or physical robot qualification.
+
+The next control comparison also needs the exact preceding servo reference.
+The existing normalized float32 features cannot reconstruct that float64
+quantity. A separate training-only export now preserves each episode's reset
+reference and preceding **actually applied** reference, together with the next
+feasible reference toward its teacher label. In mixed-control episodes that
+label is a teacher suggestion; it is not represented as the executed action.
+
+One [metadata-only validation](../topics/physical-grounding/runs/2026-11-01-camera-to-action-v01/final/training-reference-validation.json) covered all **96,000 training samples** and
+preserved the original parent and combined dataset identities. Construction
+took **10.798 s** and produced 10,832,870 bytes. Three verified paired loads took
+**0.303, 0.258 and 0.233 s**; combination and dataset identity checks are timed
+separately. The validator read 294 registered metadata files. It checked final
+reference endpoints against the recorded commands, inheriting raw verification
+from the pinned parent caches; it did not reread images or native microstep
+traces, train a model, or run physics. Whole-process peak RSS was
+1,238,597,632 bytes on a shared macOS arm64 host with Python 3.12.9 and NumPy 2.5.3.
+
+A separate synthetic initialization check uses identical network weights and
+a common output scale for absolute and reference-relative predictions. All
+**64 reset-context comparisons were bitwise equal before clipping**. Later
+predictions differ by the preceding-reference offset, as intended. These are
+synthetic input vectors, not real reset observations or learned task results.
+Together, [the reviewed source in PR 35](https://github.com/Dvidia-Inference/dvidia-training/pull/35)
+prepares a fair control-representation experiment. It does not establish that
+small corrections improve grasping; that requires the separately registered
+training and closed-loop comparison. The frozen 5/64 result is unchanged.
+The [exact source and reproduction instructions](https://github.com/Dvidia-Inference/dvidia-training/blob/f2676d3176f6a8cd1a05833d461ba40562f283f1/benchmarks/camera-action-reference-export-v01/README.md)
+separate the original measured helper from its portable version.
 
 This is an engineering-tool preview, not a qualified skill. A new registered
 learning experiment must measure whether the representation changes improve
