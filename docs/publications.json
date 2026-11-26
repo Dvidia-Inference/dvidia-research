@@ -6,6 +6,19 @@
   "contributor": null,
   "publications": [
     {
+      "slug": "piper-tidy-table-v01",
+      "title": "Can PiPER remember a tidy table and restore it?",
+      "source": "reports/PiPER tidy table v01.md",
+      "date": "2026-11-25",
+      "type": "Registered tabletop simulation benchmark",
+      "status": "10/16 changed tables restored · 8/8 tidy tables left alone",
+      "topics": [
+        "physical-grounding",
+        "evaluation-provenance"
+      ],
+      "abstract": "A single approved overhead image supplies a target arrangement for three coloured cubes. A simulated PiPER restores 10 of 16 changed tables and leaves all eight already-tidy tables alone, including four permitted swaps. Median time to first measured arm motion is 242 ms on an Apple M5. Six multi-move shuffles fail during a right-side grasp approach."
+    },
+    {
       "slug": "reference-action-v01",
       "title": "Fast local fits still fail complete placement",
       "source": "reports/Reference action v01.md",
